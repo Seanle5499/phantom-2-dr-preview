@@ -1,0 +1,310 @@
+{%- comment -%}
+  FloraFresh Gummies — Italian hero (for /pages/ffg-it).
+  Self-contained product-style hero usable on a PAGE template (no product context).
+  The buy flow is handled entirely by the florafresh-subscribe snippet, which
+  fetches product data client-side via /products/{handle}.js and adds to the
+  global cart drawer. Product handle + Italian UI are passed in below.
+{%- endcomment -%}
+
+{%- assign ffg_handle = 'florafresh-vaginal-probiotics-gummies' -%}
+{%- assign uid = section.id | replace: '-', '' -%}
+
+<style>
+  .ffg-hero-{{ uid }} {
+    --ffg-pink: #F4C4C7;
+    --ffg-plum: #6B2030;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 18px 8px;
+    font-family: "PPNeueMontreal", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #121212;
+  }
+  .ffg-hero-{{ uid }} * { box-sizing: border-box; }
+  .ffg-hero-{{ uid }} .ffg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+  /* Gallery */
+  .ffg-hero-{{ uid }} .ffg-gallery { position: sticky; top: 16px; }
+  .ffg-hero-{{ uid }} .ffg-main {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #faf2f3;
+  }
+  .ffg-hero-{{ uid }} .ffg-main img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .ffg-hero-{{ uid }} .ffg-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.85);
+    color: var(--ffg-plum);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    z-index: 2;
+  }
+  .ffg-hero-{{ uid }} .ffg-nav:hover { background: #fff; }
+  .ffg-hero-{{ uid }} .ffg-prev { left: 10px; }
+  .ffg-hero-{{ uid }} .ffg-next { right: 10px; }
+  .ffg-hero-{{ uid }} .ffg-thumbs {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ffg-plum) transparent;
+  }
+  .ffg-hero-{{ uid }} .ffg-thumbs::-webkit-scrollbar { height: 5px; }
+  .ffg-hero-{{ uid }} .ffg-thumbs::-webkit-scrollbar-track { background: transparent; }
+  .ffg-hero-{{ uid }} .ffg-thumbs::-webkit-scrollbar-thumb {
+    background: var(--ffg-pink);
+    border-radius: 4px;
+  }
+  .ffg-hero-{{ uid }} .ffg-thumb {
+    flex: 0 0 calc((100% - 32px) / 5);
+    scroll-snap-align: start;
+    border: 2px solid transparent;
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    background: #faf2f3;
+    line-height: 0;
+  }
+  .ffg-hero-{{ uid }} .ffg-thumb img { width: 100%; height: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+  .ffg-hero-{{ uid }} .ffg-thumb.is-active { border-color: var(--ffg-plum); }
+  /* Info */
+  .ffg-hero-{{ uid }} .ffg-rating {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; color: #555; margin-bottom: 10px;
+  }
+  .ffg-hero-{{ uid }} .ffg-stars { color: #ffcc00; letter-spacing: 1px; font-size: 14px; }
+  .ffg-hero-{{ uid }} .ffg-title {
+    font-size: 30px; line-height: 1.15; font-weight: 800;
+    margin: 0 0 10px; color: #121212;
+  }
+  .ffg-hero-{{ uid }} .ffg-sub { font-size: 16px; margin: 0 0 16px; color: #333; }
+  .ffg-hero-{{ uid }} .ffg-bullets { list-style: none; margin: 0 0 22px; padding: 0; }
+  .ffg-hero-{{ uid }} .ffg-bullets li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 15.5px; line-height: 1.45; margin-bottom: 10px; color: #121212;
+  }
+  .ffg-hero-{{ uid }} .ffg-bullets li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--ffg-plum);
+    font-weight: 800;
+  }
+  /* Product-details accordion (under the buy button) */
+  .ffg-hero-{{ uid }} .ffg-acc { margin-top: 30px; }
+  .ffg-hero-{{ uid }} .ffg-acc-item { border-bottom: 1px solid #e6e6e6; }
+  .ffg-hero-{{ uid }} .ffg-acc-item:first-child { border-top: 1px solid #e6e6e6; }
+  .ffg-hero-{{ uid }} .ffg-acc-item > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 2px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #121212;
+  }
+  .ffg-hero-{{ uid }} .ffg-acc-item > summary::-webkit-details-marker { display: none; }
+  .ffg-hero-{{ uid }} .ffg-acc-item > summary::after {
+    content: "+";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--ffg-plum);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .ffg-hero-{{ uid }} .ffg-acc-item[open] > summary::after { content: "−"; }
+  .ffg-hero-{{ uid }} .ffg-acc-body {
+    padding: 0 2px 18px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333;
+  }
+  .ffg-hero-{{ uid }} .ffg-acc-body ul { margin: 0; padding-left: 20px; }
+  .ffg-hero-{{ uid }} .ffg-acc-body li { margin-bottom: 7px; }
+  .ffg-hero-{{ uid }} .ffg-acc-body p { margin: 0 0 10px; }
+  .ffg-hero-{{ uid }} .ffg-acc-body p:last-child { margin-bottom: 0; }
+  @media (max-width: 749px) {
+    .ffg-hero-{{ uid }} { padding: 12px 14px 4px; }
+    .ffg-hero-{{ uid }} .ffg-grid { grid-template-columns: 1fr; gap: 22px; }
+    .ffg-hero-{{ uid }} .ffg-gallery { position: static; }
+    .ffg-hero-{{ uid }} .ffg-title { font-size: 24px; }
+    .ffg-hero-{{ uid }} .ffg-acc-item > summary { font-size: 15px; }
+  }
+</style>
+
+<div class="ffg-hero-{{ uid }}" data-ffg-hero>
+  <div class="ffg-grid">
+
+    <div class="ffg-gallery">
+      <div class="ffg-main">
+        <button type="button" class="ffg-nav ffg-prev" data-ffg-prev aria-label="Precedente">&#8249;</button>
+        <img data-ffg-main
+             src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/FF-IT-01.webp?v=1780109940"
+             alt="FloraFresh Caramelle Gommose Probiotiche Vaginali" />
+        <button type="button" class="ffg-nav ffg-next" data-ffg-next aria-label="Successivo">&#8250;</button>
+      </div>
+      <div class="ffg-thumbs" data-ffg-thumbs>
+        {%- assign ffg_imgs = 'FF-IT-01.webp?v=1780109940,FF-IT-02.webp?v=1780109939,FF-IT-03.webp?v=1780109939,FF-IT-04.webp?v=1780109939,FF-IT-05.webp?v=1780109939,FF-IT-06.webp?v=1780109939,FF-IT-07.webp?v=1780109939,FF-IT-08.webp?v=1780109939' | split: ',' -%}
+        {%- for img in ffg_imgs -%}
+          <button type="button" class="ffg-thumb{% if forloop.first %} is-active{% endif %}" data-ffg-thumb
+                  data-src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/{{ img }}">
+            <img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/{{ img }}" alt="FloraFresh {{ forloop.index }}" loading="lazy" />
+          </button>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="ffg-info">
+      <div class="ffg-rating">
+        <span class="ffg-stars">★★★★★</span>
+        <span>4.8/5 | 7.139+ Donne Felici</span>
+      </div>
+      <h1 class="ffg-title">FloraFresh – Caramelle Gommose Probiotiche Vaginali</h1>
+      <p class="ffg-sub">Formulate con cura per un odore e un pH sani.</p>
+      <ul class="ffg-bullets">
+        <li>Producono acido L-lattico per <strong>ripristinare il pH perfetto</strong></li>
+        <li>Combattono i <strong>problemi ricorrenti di vaginosi batterica e candida</strong></li>
+        <li>Favoriscono il <strong>naturale</strong> equilibrio dell'idratazione</li>
+        <li>Senza zucchero, vegane e senza glutine</li>
+      </ul>
+
+      {% render 'florafresh-subscribe', product_handle: ffg_handle, lang: 'it' %}
+
+      <div class="ffg-acc">
+        <details class="ffg-acc-item">
+          <summary>Cosa le rende migliori per me?</summary>
+          <div class="ffg-acc-body">
+            <ul>
+              <li>100% naturali e senza zucchero (niente schifezze, solo risultati).</li>
+              <li>Zero ingredienti artificiali.</li>
+              <li>Certificate pulite e sicure (non OGM, senza glutine).</li>
+              <li>Formula vegana (a base vegetale).</li>
+            </ul>
+          </div>
+        </details>
+        <details class="ffg-acc-item">
+          <summary>Quanto prodotto ricevo?</summary>
+          <div class="ffg-acc-body">
+            <ul>
+              <li>60 caramelle gommose premium</li>
+              <li>Fornitura completa per 30 giorni</li>
+              <li>Prodotte in uno stabilimento registrato FDA</li>
+            </ul>
+          </div>
+        </details>
+        <details class="ffg-acc-item">
+          <summary>Quali miglioramenti posso aspettarmi?</summary>
+          <div class="ffg-acc-body">
+            <ul>
+              <li>Equilibrio ottimale del pH</li>
+              <li>Odore naturale e fresco</li>
+              <li>Flora sana</li>
+              <li>Idratazione migliore ed equilibrata</li>
+            </ul>
+          </div>
+        </details>
+        <details class="ffg-acc-item">
+          <summary>Come le assumo per il massimo beneficio?</summary>
+          <div class="ffg-acc-body">
+            <ul>
+              <li>Assumi 2 caramelle gommose al giorno con acqua</li>
+              <li>Da consumare preferibilmente durante i pasti per il massimo assorbimento</li>
+              <li>Conserva in luogo fresco e asciutto per mantenerne l'efficacia</li>
+            </ul>
+          </div>
+        </details>
+        <details class="ffg-acc-item">
+          <summary>Informazioni sulla spedizione</summary>
+          <div class="ffg-acc-body">
+            <p><strong>Spedizione</strong></p>
+            <p>Tutti gli ordini vengono evasi e spediti in media entro <strong>1-2 giorni lavorativi</strong>.</p>
+            <p>La spedizione richiede in media 4-12 giorni lavorativi a seconda della destinazione.</p>
+            <p>Tutti gli ordini includono le informazioni di tracciamento una volta spediti.</p>
+            <p><strong>Resi</strong></p>
+            <p>Non sei soddisfatta del tuo acquisto? Nessun problema! Puoi restituirlo entro 30 giorni dalla consegna per un rimborso completo o un cambio, senza fare domande. Per avviare un reso, contatta il nostro servizio clienti all'indirizzo support@wellnessnest.co</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var root = document.currentScript.previousElementSibling;
+  if (!root || !root.hasAttribute('data-ffg-hero')) {
+    var heroes = document.querySelectorAll('[data-ffg-hero]');
+    root = heroes[heroes.length - 1];
+  }
+  if (!root) return;
+
+  var mainImg = root.querySelector('[data-ffg-main]');
+  var thumbsWrap = root.querySelector('[data-ffg-thumbs]');
+  var thumbs  = Array.prototype.slice.call(root.querySelectorAll('[data-ffg-thumb]'));
+  var idx = 0;
+
+  function show(i) {
+    if (i < 0) i = thumbs.length - 1;
+    if (i >= thumbs.length) i = 0;
+    idx = i;
+    var src = thumbs[i].getAttribute('data-src');
+    if (mainImg && src) mainImg.src = src;
+    thumbs.forEach(function (t, n) { t.classList.toggle('is-active', n === i); });
+    // keep the active thumb visible in the swipeable strip (no page jump)
+    if (thumbsWrap) {
+      var t = thumbs[i];
+      var left = t.offsetLeft - (thumbsWrap.clientWidth - t.clientWidth) / 2;
+      thumbsWrap.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+    }
+  }
+
+  thumbs.forEach(function (t, n) {
+    t.addEventListener('click', function () { show(n); });
+  });
+  var prev = root.querySelector('[data-ffg-prev]');
+  var next = root.querySelector('[data-ffg-next]');
+  if (prev) prev.addEventListener('click', function () { show(idx - 1); });
+  if (next) next.addEventListener('click', function () { show(idx + 1); });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "FFG IT Hero",
+  "settings": [],
+  "presets": [
+    { "name": "FFG IT Hero" }
+  ]
+}
+{% endschema %}

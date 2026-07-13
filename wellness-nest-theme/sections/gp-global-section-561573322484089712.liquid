@@ -1,0 +1,208 @@
+
+    {% render 'gp-head', isThemeSection: true %}
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-561573322484089712.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-561573322484089712.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-561573322484089712.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-561573322484089712.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-561573322484089712.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-561573322484089712.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-561573322484089712.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-561573322484089712.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-561573322484089712.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-561573322484089712.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-561573322484089712.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-561573322484089712.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-561573322484089712.gps.gpsil [style*="--bl:"]{border-left:var(--bl)}.gps-561573322484089712.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-561573322484089712.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-561573322484089712.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-561573322484089712.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-561573322484089712.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-561573322484089712.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-561573322484089712.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-561573322484089712.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-561573322484089712.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-561573322484089712.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-561573322484089712.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-561573322484089712.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-561573322484089712.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-561573322484089712.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-561573322484089712.gps.gpsil [style*="--tdt:"]{text-decoration-thickness:var(--tdt)}.gps-561573322484089712.gps.gpsil [style*="--tdl:"]{text-decoration-line:var(--tdl)}.gps-561573322484089712.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-561573322484089712.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-561573322484089712.gps.gpsil [style*="--ml:"]{margin-left:var(--ml)}.gps-561573322484089712.gps.gpsil [style*="--mr:"]{margin-right:var(--mr)}.gps-561573322484089712.gps.gpsil [style*="--mt:"]{margin-top:var(--mt)}.gps-561573322484089712.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-561573322484089712.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-561573322484089712.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-561573322484089712.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-561573322484089712.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-561573322484089712.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-561573322484089712.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-561573322484089712.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-561573322484089712.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-561573322484089712.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-561573322484089712.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-561573322484089712.gps.gpsil [style*="--w:"]{width:var(--w)}.gps-561573322484089712.gps.gpsil [style*="--line-clamp:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp)}@media only screen and (max-width:1024px){.gps-561573322484089712.gps.gpsil [style*="--bga-tablet:"]{background-attachment:var(--bga-tablet)}.gps-561573322484089712.gps.gpsil [style*="--bgc-tablet:"]{background-color:var(--bgc-tablet)}.gps-561573322484089712.gps.gpsil [style*="--bgi-tablet:"]{background-image:var(--bgi-tablet)}.gps-561573322484089712.gps.gpsil [style*="--bgp-tablet:"]{background-position:var(--bgp-tablet)}.gps-561573322484089712.gps.gpsil [style*="--bgr-tablet:"]{background-repeat:var(--bgr-tablet)}.gps-561573322484089712.gps.gpsil [style*="--bgs-tablet:"]{background-size:var(--bgs-tablet)}.gps-561573322484089712.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-561573322484089712.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-561573322484089712.gps.gpsil [style*="--pb-tablet:"]{padding-bottom:var(--pb-tablet)}.gps-561573322484089712.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-561573322484089712.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-561573322484089712.gps.gpsil [style*="--pt-tablet:"]{padding-top:var(--pt-tablet)}.gps-561573322484089712.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}.gps-561573322484089712.gps.gpsil [style*="--line-clamp-tablet:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-tablet)}}@media only screen and (max-width:767px){.gps-561573322484089712.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-561573322484089712.gps.gpsil [style*="--gtc-mobile:"]{grid-template-columns:var(--gtc-mobile)}.gps-561573322484089712.gps.gpsil [style*="--jc-mobile:"]{justify-content:var(--jc-mobile)}.gps-561573322484089712.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-561573322484089712.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-561573322484089712.gps.gpsil [style*="--pc-mobile:"]{place-content:var(--pc-mobile)}.gps-561573322484089712.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-561573322484089712.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-561573322484089712.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-561573322484089712.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-561573322484089712.gps.gpsil [style*="--ta-mobile:"]{text-align:var(--ta-mobile)}.gps-561573322484089712.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}.gps-561573322484089712.gps.gpsil [style*="--line-clamp-mobile:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-mobile)}}.gps-561573322484089712 .gp-g-paragraph-2{font-family:var(--g-p2-ff);font-size:var(--g-p2-size);font-style:var(--g-p2-fs);font-weight:var(--g-p2-weight);letter-spacing:var(--g-p2-ls);line-height:var(--g-p2-lh)}.gps-561573322484089712 .gp-relative{position:relative}.gps-561573322484089712 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-561573322484089712 .gp-mb-0{margin-bottom:0}.gps-561573322484089712 .gp-flex{display:flex}.gps-561573322484089712 .gp-grid{display:grid}.gps-561573322484089712 .\!gp-hidden{display:none!important}.gps-561573322484089712 .gp-hidden{display:none}.gps-561573322484089712 .gp-max-w-full{max-width:100%}.gps-561573322484089712 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-561573322484089712 .gp-flex-col{flex-direction:column}.gps-561573322484089712 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-561573322484089712 .gp-duration-200{transition-duration:.2s}.gps-561573322484089712 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-561573322484089712 .tablet\:\!gp-hidden{display:none!important}.gps-561573322484089712 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-561573322484089712 .mobile\:\!gp-hidden{display:none!important}.gps-561573322484089712 .mobile\:gp-hidden{display:none}}.gps-561573322484089712 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}</style>
+    <style {% if section.settings.section_preload == "false" %} class="gps-link" type="text/disabled-css" {% endif %}>@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+</style>
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"},"tablet":{"attachment":"scroll","color":"#FAFAFA","image":{"height":0,"src":"","width":0},"loop":"","position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color","video":"","videoHtml5":""}},"uid":"gXdNrzN63f"}' data-id="gXdNrzN63f" id="gXdNrzN63f" data-same-height-subgrid-container class="gXdNrzN63f gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:var(--g-s-2xl);--pb:16px;--pt-mobile:16px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--pt-tablet:var(--g-s-l);--pb-tablet:16px;--cg:32px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgc-tablet:#FAFAFA;--bgi:url();--bgi-tablet:url();--bgp:50% 50%;--bgp-tablet:50% 50%;--bgs:cover;--bgs-tablet:cover;--bgr:no-repeat;--bgr-tablet:no-repeat;--bga:scroll;--bga-tablet:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gLWJwhoOHU gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gcc7EyOsPi"}' data-id="gcc7EyOsPi" id="gcc7EyOsPi" data-same-height-subgrid-container class="gcc7EyOsPi gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--mb-mobile:var(--g-s-l);--pl-mobile:16px;--pr-mobile:16px;--cg:8px;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gUYGPbPfnG gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"g-LAnApRVf"}' data-id="g-LAnApRVf" id="g-LAnApRVf" data-same-height-subgrid-container class="g-LAnApRVf gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--cg:8px;--gtc:minmax(0, 3fr) minmax(0, 3fr) minmax(0, 3fr) minmax(0, 3fr);--gtc-mobile:minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto);--w:50%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start;--pc-mobile:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start;--jc-mobile:center"
+      class="geRBzD5abQ gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gOHTuiJO7L"
+        class="gOHTuiJO7L"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:500;--size:12px;--size-tablet:10px;--size-mobile:10px;--lh:180%;--lh-tablet:180%;--lh-mobile:120%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p><a href="https://wellnessnest.co/policies/refund-policy">{{ section.settings.ggOHTuiJO7L_text | replace: '$locationOrigin', locationOrigin }}</a></p>
+        </div>
+      </div>
+    </div>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:start;--jc-mobile:center"
+      class="gdWyuoPbBe gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gGP70YOU39"
+        class="gGP70YOU39"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:500;--size:12px;--size-tablet:10px;--size-mobile:10px;--lh:180%;--lh-tablet:180%;--lh-mobile:120%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p><a href="https://wellnessnest.co/policies/privacy-policy">{{ section.settings.ggGP70YOU39_text | replace: '$locationOrigin', locationOrigin }}</a></p>
+        </div>
+      </div>
+    </div>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:start;--jc-mobile:center"
+      class="g-el5QajDH gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gE_PlDU2yn"
+        class="gE_PlDU2yn"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:500;--size:12px;--size-tablet:10px;--size-mobile:10px;--lh:180%;--lh-tablet:180%;--lh-mobile:120%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p><a href="https://wellnessnest.co/policies/shipping-policy">{{ section.settings.ggE_PlDU2yn_text | replace: '$locationOrigin', locationOrigin }}</a></p>
+        </div>
+      </div>
+    </div>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:start;--jc-mobile:center"
+      class="giPM8kCEf4 gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gqwX_bXhM3"
+        class="gqwX_bXhM3"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:500;--size:12px;--size-tablet:10px;--size-mobile:10px;--lh:180%;--lh-tablet:180%;--lh-mobile:120%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p><a href="https://wellnessnest.co/policies/terms-of-service">{{ section.settings.ggqwX_bXhM3_text | replace: '$locationOrigin', locationOrigin }}</a></p>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gM94MYyiOz"
+        class="gM94MYyiOz"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:1200px;--w-mobile:1200px;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:500;--size:12px;--size-tablet:10px;--size-mobile:10px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p>{{ section.settings.ggM94MYyiOz_text | replace: '$locationOrigin', locationOrigin }}</p>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gxyOio35Ht"
+        class="gxyOio35Ht"
+        style="--ta:center;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-2  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:rgb(255, 255, 255);word-break:break-word;--bgc:#3D2465;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pt:15px;--pb:15px;overflow:hidden;--tdl:"
+        >
+          <p>{{ section.settings.ggxyOio35Ht_text | replace: '$locationOrigin', locationOrigin }}</p>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    "presets": [{ "name": "Footer - Trang" }],
+    "name": "Footer - Trang",
+    "tag": "section",
+    "class": "gps-561573322484089712 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=561573322484089712)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggOHTuiJO7L_text","label":"ggOHTuiJO7L_text","default":"Refund policy"},{"type":"html","id":"ggGP70YOU39_text","label":"ggGP70YOU39_text","default":"Privacy policy"},{"type":"html","id":"ggE_PlDU2yn_text","label":"ggE_PlDU2yn_text","default":"Shipping policy"},{"type":"html","id":"ggqwX_bXhM3_text","label":"ggqwX_bXhM3_text","default":"Terms of service"},{"type":"html","id":"ggM94MYyiOz_text","label":"ggM94MYyiOz_text","default":"<strong>GlobalEcomCom LLC&nbsp;</strong></p><p><strong>US Address: </strong>1942 Broadway ste 314c, Boulder Colorado 80302, United States&nbsp;</p><p><strong>Phone: </strong>(+1) 8559075279&nbsp;</p><p><strong>Email: </strong><a href=\"mailto:support@wellnessnest.co\" target=\"_blank\">support@wellnessnest.co</a></p><p>The statements made on this website have not been evaluated by the FDA (U.S. Food &amp; Drug Administration). The products sold on this website are not intended to diagnose, treat, cure, or prevent any disease. The information provided by this website or this company is not a substitute for a face-to-face consultation with your physician, and should not be construed as individual medical advice. Pregnant women: Please consult your doctor before using this product. If you have any concerns please consult your doctor or healthcare professional at all times. Wellness Nest is in no way affiliated or associated with Facebook®"},{"type":"html","id":"ggxyOio35Ht_text","label":"ggxyOio35Ht_text","default":"© WellnessNest – All rights reserved"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

@@ -1,0 +1,195 @@
+
+    {% render 'gp-head', isThemeSection: true %}
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-549990947778200773.gps.gpsil [style*="--as:"]{align-self:var(--as)}.gps-549990947778200773.gps.gpsil [style*="--aspect:"]{aspect-ratio:var(--aspect)}.gps-549990947778200773.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-549990947778200773.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-549990947778200773.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-549990947778200773.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-549990947778200773.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-549990947778200773.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-549990947778200773.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-549990947778200773.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-549990947778200773.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-549990947778200773.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-549990947778200773.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-549990947778200773.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-549990947778200773.gps.gpsil [style*="--bl:"]{border-left:var(--bl)}.gps-549990947778200773.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-549990947778200773.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-549990947778200773.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-549990947778200773.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-549990947778200773.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-549990947778200773.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-549990947778200773.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-549990947778200773.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-549990947778200773.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-549990947778200773.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-549990947778200773.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-549990947778200773.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-549990947778200773.gps.gpsil [style*="--h:"]{height:var(--h)}.gps-549990947778200773.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-549990947778200773.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-549990947778200773.gps.gpsil [style*="--tdt:"]{text-decoration-thickness:var(--tdt)}.gps-549990947778200773.gps.gpsil [style*="--tdl:"]{text-decoration-line:var(--tdl)}.gps-549990947778200773.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-549990947778200773.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-549990947778200773.gps.gpsil [style*="--mt:"]{margin-top:var(--mt)}.gps-549990947778200773.gps.gpsil [style*="--objf:"]{-o-object-fit:var(--objf);object-fit:var(--objf)}.gps-549990947778200773.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-549990947778200773.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-549990947778200773.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-549990947778200773.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-549990947778200773.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-549990947778200773.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-549990947778200773.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-549990947778200773.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-549990947778200773.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-549990947778200773.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-549990947778200773.gps.gpsil [style*="--tt:"]{text-transform:var(--tt)}.gps-549990947778200773.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-549990947778200773.gps.gpsil [style*="--w:"]{width:var(--w)}.gps-549990947778200773.gps.gpsil [style*="--line-clamp:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp)}@media only screen and (max-width:1024px){.gps-549990947778200773.gps.gpsil [style*="--aspect-tablet:"]{aspect-ratio:var(--aspect-tablet)}.gps-549990947778200773.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-549990947778200773.gps.gpsil [style*="--h-tablet:"]{height:var(--h-tablet)}.gps-549990947778200773.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-549990947778200773.gps.gpsil [style*="--mb-tablet:"]{margin-bottom:var(--mb-tablet)}.gps-549990947778200773.gps.gpsil [style*="--mt-tablet:"]{margin-top:var(--mt-tablet)}.gps-549990947778200773.gps.gpsil [style*="--op-tablet:"]{opacity:var(--op-tablet)}.gps-549990947778200773.gps.gpsil [style*="--pb-tablet:"]{padding-bottom:var(--pb-tablet)}.gps-549990947778200773.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-549990947778200773.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-549990947778200773.gps.gpsil [style*="--pt-tablet:"]{padding-top:var(--pt-tablet)}.gps-549990947778200773.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}.gps-549990947778200773.gps.gpsil [style*="--line-clamp-tablet:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-tablet)}}@media only screen and (max-width:767px){.gps-549990947778200773.gps.gpsil [style*="--aspect-mobile:"]{aspect-ratio:var(--aspect-mobile)}.gps-549990947778200773.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-549990947778200773.gps.gpsil [style*="--h-mobile:"]{height:var(--h-mobile)}.gps-549990947778200773.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-549990947778200773.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-549990947778200773.gps.gpsil [style*="--mt-mobile:"]{margin-top:var(--mt-mobile)}.gps-549990947778200773.gps.gpsil [style*="--op-mobile:"]{opacity:var(--op-mobile)}.gps-549990947778200773.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-549990947778200773.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-549990947778200773.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-549990947778200773.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-549990947778200773.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}.gps-549990947778200773.gps.gpsil [style*="--line-clamp-mobile:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-mobile)}}.gps-549990947778200773 .gp-g-paragraph-1{font-family:var(--g-p1-ff);font-size:var(--g-p1-size);font-style:var(--g-p1-fs);font-weight:var(--g-p1-weight);letter-spacing:var(--g-p1-ls);line-height:var(--g-p1-lh)}.gps-549990947778200773 .gp-relative{position:relative}.gps-549990947778200773 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-549990947778200773 .gp-mb-0{margin-bottom:0}.gps-549990947778200773 .gp-inline-block{display:inline-block}.gps-549990947778200773 .gp-flex{display:flex}.gps-549990947778200773 .gp-grid{display:grid}.gps-549990947778200773 .gp-contents{display:contents}.gps-549990947778200773 .\!gp-hidden{display:none!important}.gps-549990947778200773 .gp-hidden{display:none}.gps-549990947778200773 .gp-h-auto{height:auto}.gps-549990947778200773 .gp-h-full{height:100%}.gps-549990947778200773 .gp-w-full{width:100%}.gps-549990947778200773 .gp-max-w-full{max-width:100%}.gps-549990947778200773 .gp-flex-none{flex:none}.gps-549990947778200773 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-549990947778200773 .gp-flex-col{flex-direction:column}.gps-549990947778200773 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-549990947778200773 .gp-duration-200{transition-duration:.2s}.gps-549990947778200773 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-549990947778200773 .tablet\:\!gp-hidden{display:none!important}.gps-549990947778200773 .tablet\:gp-hidden{display:none}.gps-549990947778200773 .tablet\:gp-h-auto{height:auto}.gps-549990947778200773 .tablet\:gp-flex-none{flex:none}}@media (max-width:767px){.gps-549990947778200773 .mobile\:\!gp-hidden{display:none!important}.gps-549990947778200773 .mobile\:gp-hidden{display:none}.gps-549990947778200773 .mobile\:gp-h-auto{height:auto}.gps-549990947778200773 .mobile\:gp-flex-none{flex:none}}.gps-549990947778200773 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}</style>
+    <style {% if section.settings.section_preload == "false" %} class="gps-link" type="text/disabled-css" {% endif %}>@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+</style>
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gzCrNghZPB"}' data-id="gzCrNghZPB" id="gzCrNghZPB" data-same-height-subgrid-container class="gzCrNghZPB gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--op-tablet:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:40px;--pb:93px;--pt-mobile:30px;--pl-mobile:15px;--pb-mobile:71px;--pr-mobile:15px;--pt-tablet:35px;--pl-tablet:15px;--pb-tablet:71px;--pr-tablet:15px;--cg:32px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gBzPchRsjC gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gBbh_o8c-a"}' data-id="gBbh_o8c-a" id="gBbh_o8c-a" data-same-height-subgrid-container class="gBbh_o8c-a gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--cg:8px;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="g9IAe-bKqh gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gpghfOO8Vk"
+        class="gpghfOO8Vk"
+        style="--ta:center;--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb-mobile:0px;--mb-tablet:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <h3
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:700px;--w-mobile:290px;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-heading, heading);--weight:600;--size:32px;--size-tablet:28px;--size-mobile:24px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--c:#26A243;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggpghfOO8Vk_text | replace: '$locationOrigin', locationOrigin }}
+        </h3>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gGhojVF4B4"
+        class="gGhojVF4B4"
+        style="--ta:center;--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb-mobile:0px;--mb-tablet:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <h3
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:700px;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center;--weight:bold;--c:#000000;--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggGhojVF4B4_text | replace: '$locationOrigin', locationOrigin }}
+        </h3>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"#FFFFFF","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gtSgkkCI2Q"}' data-id="gtSgkkCI2Q" id="gtSgkkCI2Q" data-same-height-subgrid-container class="gtSgkkCI2Q gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:solid;--bw:1px 1px 1px 1px;--bc:#BDBDBD;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:32px;--mt-mobile:24px;--cg:8px;--gtc:minmax(0, 12fr);--w:1130px;--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:#FFFFFF;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      {% render 'gp-section-549990947778200773-3', product: product, variant: variant, product_form_id: product_form_id, productSelectedVariant: productSelectedVariant, form: form  %}
+
+      
+    </gp-row>
+  
+  
+      <style id="custom-css-gtSgkkCI2Q">
+        .gtSgkkCI2Q {
+
+}
+@media only screen and (max-width: 680px) {
+    .gtSgkkCI2Q > div {
+          overflow-x: auto;
+    }
+    .gtSgkkCI2Q > div > div {
+        min-width: 650px !important;
+        max-width: 650px !important;
+    }
+}
+      </style>
+    
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    "presets": [{ "name": "comparision trượt trượt" }],
+    "name": "comparision trượt trượt",
+    "tag": "section",
+    "class": "gps-549990947778200773 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=549990947778200773)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggpghfOO8Vk_text","label":"ggpghfOO8Vk_text","default":"CHARGE YOUR MIND LIKE NO OTHERS"},{"type":"html","id":"ggGhojVF4B4_text","label":"ggGhojVF4B4_text","default":"See why 11,523 people have chosen shilajit shockwave as their go-to supplement to charge their mind and body."},{"type":"html","id":"ggCCXwknqso_text","label":"ggCCXwknqso_text","default":"Shilajit Shockwave"},{"type":"html","id":"gggbBUMbzlN_text","label":"gggbBUMbzlN_text","default":"A premium blend designed to ignite your energy, focus, and vitality."},{"type":"html","id":"ggUP68fefOu_text","label":"ggUP68fefOu_text","default":"Our Superiors"},{"type":"html","id":"gg3Fbfyt7_O_text","label":"gg3Fbfyt7_O_text","default":"PrimaVie® Purified Shilajit:"},{"type":"html","id":"ggUTleWD9_p_text","label":"ggUTleWD9_p_text","default":"Enhance ATP production, a key molecule for energy production in cells."},{"type":"html","id":"gg_k3rIWBKY_text","label":"gg_k3rIWBKY_text","default":"Panax Ginseng Extract:"},{"type":"html","id":"gg15tYQafkp_text","label":"gg15tYQafkp_text","default":"Enhance cognitive function, reduce stress, and boost the immune system"},{"type":"html","id":"ggGgMGzrKMs_text","label":"ggGgMGzrKMs_text","default":"caffein extract:"},{"type":"html","id":"ggi9b3TfK1H_text","label":"ggi9b3TfK1H_text","default":"increase alertness, focus, and energy levels"},{"type":"html","id":"ggLn9JARsz-_text","label":"ggLn9JARsz-_text","default":"Tulsi Extract (Holy Basil):"},{"type":"html","id":"gga5QEwDYsK_text","label":"gga5QEwDYsK_text","default":"help the body adapt to stress, promote emotional well-being, and support a healthy immune response"},{"type":"html","id":"gg4WSyo-UPP_text","label":"gg4WSyo-UPP_text","default":"Minimal, natural ingredient:"},{"type":"html","id":"gg5kVenRKnk_text","label":"gg5kVenRKnk_text","default":"promote better health outcomes, and contribute to environmental&nbsp; sustainability"},{"type":"html","id":"ggoNkBW2ApE_text","label":"ggoNkBW2ApE_text","default":"Value"},{"type":"html","id":"ggAE_whKtVu_text","label":"ggAE_whKtVu_text","default":"90-day return policy"},{"type":"html","id":"ggInjcOYDDr_text","label":"ggInjcOYDDr_text","default":"Doctor Formulated"},{"type":"html","id":"ggtQsLQyPa4_text","label":"ggtQsLQyPa4_text","default":"Cost per serving:"},{"type":"html","id":"ggZMPwqi217_text","label":"ggZMPwqi217_text","default":"$0.6"},{"type":"html","id":"gg93yBx6xUC_text","label":"gg93yBx6xUC_text","default":"$4.90"},{"type":"html","id":"ggphMmf_6T4_text","label":"ggphMmf_6T4_text","default":"$1.25"},{"type":"html","id":"ggm90B199dF_text","label":"ggm90B199dF_text","default":"$0.5"},{"type":"html","id":"ggQ5UP8HQMw_text","label":"ggQ5UP8HQMw_text","default":"$0.6"},{"type":"html","id":"ggsC3P_m523_text","label":"ggsC3P_m523_text","default":"highest quality"},{"type":"html","id":"ggYedFpexPf_text","label":"ggYedFpexPf_text","default":"of shilajit and adaptogen&nbsp;<br>herbs"},{"type":"html","id":"ggZbBjy9kkO_text","label":"ggZbBjy9kkO_text","default":"For minerals and energy I have used so many brands, this one, by far is my favorite and has the energy benefit that other brands don't."},{"type":"html","id":"ggYW5Td62jK_text","label":"ggYW5Td62jK_text","default":"Sandy B. 33"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

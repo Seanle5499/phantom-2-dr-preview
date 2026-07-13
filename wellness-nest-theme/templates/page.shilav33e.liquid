@@ -1,0 +1,1866 @@
+<!-- CLI push v33 1778754970 -->
+<!-- v30 deploy bust:1779200000 — Codex page-speed audit pass
+     #1 Orphan PNG assets (shila-img1/2/5.png + shila-img6.jpg, ~6MB) deleted from theme
+     #2 shila-funnel.css loaded async (media=print -> all) instead of blocking
+     #3 FontAwesome (all.min.css) duplicate <link rel="stylesheet"> removed — keep preload+onload only
+     #4 Removed 3 no-cache/Pragma/Expires meta tags (Shopify CDN should cache)
+     #5 shila-19.mp4 lazy-loaded via IntersectionObserver with preload="none" + shila-1.webp poster
+     #6 Hero shila-1.webp gets explicit width=1200 height=675
+     #7 popper.min.js + bootstrap.min.js changed async -> defer (Bootstrap depends on jQuery+Popper load order)
+     #8 Hide empty Recharge/shopify-app placeholders
+-->
+{% layout none %}
+<!DOCTYPE html><html><head><link rel="preconnect" href="https://cdn.shopify.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="image" href="{{ 'shila-1.webp' | asset_url }}" fetchpriority="high"><meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" cc="true" media="print" onload="this.onload=null;this.media='all'" href="{{ 'bootstrap.min.css' | asset_url }}">
+        <link rel="preload" href="{{ 'all.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="{{ 'all.min.css' | asset_url }}"></noscript>
+        <link rel="stylesheet" cc="true" media="print" onload="this.onload=null;this.media='all'" href="{{ 'animate.min.css' | asset_url }}">
+
+
+
+        <script defer src="{{ 'jquery-3.5.1.min.js' | asset_url }}"></script>
+        <script defer src="{{ 'popper.min.js' | asset_url }}"></script>
+        <script defer src="{{ 'bootstrap.min.js' | asset_url }}"></script>
+        
+        <link rel="preconnect" cc="true" href="https://fonts.googleapis.com"><link rel="preconnect" cc="true" href="https://fonts.gstatic.com" crossorigin=""><link href="{{ 'css.css' | asset_url }}" rel="stylesheet" cc="true" as="style" onload="this.rel='stylesheet'"><meta http-equiv="“delegate-ch”" content="“sec-ch-ua" https:="" ad.rejuvacare.com;="" sec-ch-ua-mobile="" sec-ch-ua-arch="" sec-ch-ua-model="" sec-ch-ua-platform="" sec-ch-ua-platform-version="" sec-ch-ua-bitness="" sec-ch-ua-full-version-list="" sec-ch-ua-full-version="" ad.rejuvacare.com”=""><script>    (function(e,d,k,n,u,v,g,w,C,f,p,x,D,c,q,r,h,t,y,G,z){
+	function A(){
+	  for(var a=d.querySelectorAll(“.dtpcnt”),b=0,l=a.length;b<l;b++)a[b][w]=a[b][w].replace(/(^|\s+)dtpcnt($|\s+)/g,“”)}
+	function E(a,b,l,F){
+	  var m=new Date;
+	  m.setTime(m.getTime()+(F||864E5));
+	  d.cookie=a+“=”+b+“;
+	  “+l+“samesite=Strict;
+	  expires=“+m.toGMTString()+“;
+	  path=/“;k.setItem(a,b);k.setItem(a+“-expires”,m.getTime())}function B(a){var b=d.cookie.match(new RegExp(“(^| )“+a+“=([^;]+)“));return b?b.pop():k.getItem(a+“-expires”)&&+k.getItem(a+“-expires”)>(new Date).getTime()?k.getItem(a):null}z=“https:“===e.location.protocol?“secure; “:”“;e[f]||(e[f]=function(){(e[f].q=e[f].q||[]).push(arguments)},r=d[u],d[u]=function(){r&&r.apply(this,arguments);if(e[f]&&!e[f].hasOwnProperty(“params”)&&/loaded|interactive|complete/.test(d.readyState))for(;c=d[v][p++];)/\/?click\/?($|(\/[0-9]+)?$)/.test(c.pathname)&&(c[g]=“javascrip”+e.postMessage.toString().slice(4,5)+“:”+f+‘.l=“‘+c[g]+‘“,void 0’)}
+	,setTimeout(function(){
+	  (t=RegExp(“[?&]cpid(=([^&#]*)|&|#|$)“).exec(e.location.href))&&t[2]&&(h=t[2],y=B(“vl-“+h));
+	  var a=B(“vl-cep”),b=location[g];
+	  if(“savedCep”===D&&a&&(!h||“undefined”===typeof h)&&0>b.indexOf(“cep=“)){
+		var l=-1<b.indexOf(“?”)?“&”:“?”;b+=l+a}
+	  c=d.createElement(“script”);
+	  q=d.scripts[0];
+	  c.defer=1;
+	  c.src=x+(-1===x.indexOf(“?”)?“?”:“&”)+“lpref=“+n(d.referrer)+“&lpurl=“+n(b)+“&lpt=“+n(d.title)+“&vtm=“+(new Date).getTime()+(y?“&uw=no”:“”);c[C]=function(){
+		for(p=0;c=d[v][p++];)/dtpCallback\.l/.test(c[g])&&(c[g]=decodeURIComponent(c[g]).match(/dtpCallback\.l=“([^“]+)/)[1]);
+		A()};
+	  q.parentNode.insertBefore(c,q);
+	  h&&E(“vl-“+h,“1”,z)}
+				,0),setTimeout(A,7E3))}
+			)(window,document,localStorage,encodeURIComponent,“onreadystatechange”,“links”,“href”,“className”,“onerror”,“dtpCallback”,0,“https://ad.rejuvacare.com/d/.js”,“savedCep”);</script><noscript data-secondsdelay="">
+  <link href="“https://ad.rejuvacare.com/d/.js?noscript=true&amp;lpurl=”" rel="“stylesheet”/">
+</noscript><script id="pageDataScript">var pageData = {"pageViewReferenceId":"7c3b34b6-0e19-4f86-be00-2bfac4998e7f","funnelReferenceId":"2fb369b2-780f-4414-921a-d68d5ed24878"};</script><link rel="stylesheet" href="{{ 'shila-funnel.css' | asset_url }}" media="print" onload="this.onload=null;this.media='all'"><noscript><link rel="stylesheet" href="{{ 'shila-funnel.css' | asset_url }}"></noscript><title>ShilaSource Himalayan Shilajit Resin</title><!-- begin Convert Experiences code--><script defer type="text/javascript" src="{{ '1004313-100416907.js' | asset_url }}" class="4bb57823-d039-446c-8b87-e08dcff16d37-hr global-script"></script><!-- end Convert Experiences code --><script type="text/javascript" class="a046cdf4-5154-4c1d-8335-4331c927d47c-hr global-script">if(!window.Marketech){window.Marketech=[],window.MarketechQueue=[],Marketech.allowedMethods=["track","group","identify","page"],Marketech.publishToQueue=function(t){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(t),MarketechQueue.push(e),Marketech}},Marketech.allowedMethods.forEach(function(e){Marketech[e]=Marketech.publishToQueue(e)});var analytics=document.createElement("script");Marketech.loadScript=function(){analytics.setAttribute("src","https://d2xo6khwzbhes8.cloudfront.net/rejuvacare/analytics.js"),analytics.setAttribute("type","text/javascript"),analytics.setAttribute("async",!0);var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(analytics,e),analytics.onload=function(){window.MKT?window.MKT.init():console.error("ShilaSource analytics was not able to initialize.")}},Marketech.loadScript()}</script><!-- Google Tag Manager -->
+<script class="8dfbd4f2-0505-44f7-8fa7-d50811c759db-hr global-script">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5WR57ZD7');</script>
+<!-- End Google Tag Manager --><style id="shila-responsive">
+/* ============================================================
+   RESPONSIVE OVERRIDE — ed-av01-shilasource-shilajit-resin
+   Forces FunnelKonnekt/GrapesJS layout to stack + full-width
+   under 992px (tablet) and tightens further under 600px (phone)
+   ============================================================ */
+@media (max-width: 992px) {
+  html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+  img, video, iframe, object, embed { max-width: 100% !important; height: auto !important; }
+  * { min-width: 0 !important; }
+  /* FunnelKonnekt data-box containers — stack vertically, full width */
+  [data-box="true"] {
+    width: auto !important;
+    max-width: 100% !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+  }
+  /* Section wrappers + GrapesJS auto-generated id containers */
+  section, section > div, section [id^="i"] {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  /* FunnelKonnekt helper classes */
+  [class*="fk-"], .fk-bullet, .fk-image-defaults { max-width: 100% !important; }
+  /* Comments widget — full width on mobile */
+  #comment-text, #comment-input-holder { width: 100% !important; margin: 0 !important; left: 0 !important; }
+  #fbcomments { width: 100% !important; }
+  /* CTA buttons — full width tap target on mobile */
+  .btn-primary, .fk-ib29jv { width: 100% !important; padding: 16px !important; font-size: 18px !important; }
+}
+@media (max-width: 600px) {
+  /* Tighter side padding on phones */
+  body section { padding-left: 8px !important; padding-right: 8px !important; }
+  /* Scale down big headlines */
+  h1, [class*="fk-"] h1 { font-size: 26px !important; line-height: 1.2 !important; }
+  h2, [class*="fk-"] h2 { font-size: 22px !important; line-height: 1.25 !important; }
+  h3, [class*="fk-"] h3 { font-size: 18px !important; line-height: 1.3 !important; }
+  /* Comment widget tighter */
+  .profilepic { height: 36px !important; width: 36px !important; }
+  .prflpcCmt { height: 28px !important; width: 28px !important; }
+}
+</style>
+
+<style id="shila-paragraph-rhythm-v29">
+/* v29 — Universal paragraph spacing for adjacent <div data-text> siblings.
+   Many former <li> items were converted to <div> siblings in v22 refactor.
+   FunnelKonnekt funnel-css gives them margin-top:0 (li-context defaults)
+   so they render flush. This rule restores editorial paragraph rhythm. */
+
+/* Any data-text div immediately following another data-text div gets top margin */
+div[data-text="text"] + div[data-text="text"] {
+  margin-top: 22px !important;
+}
+
+@media (max-width: 600px) {
+  div[data-text="text"] + div[data-text="text"] {
+    margin-top: 18px !important;
+  }
+}
+
+/* Explicit margin-bottom for known split-from-<li> paragraph blocks (defensive,
+   in case funnel-css cascade overrides general rule via ID specificity) */
+#i0lyhj, #izziuxk, #iwb56zw,
+#ickgree, #ifzosbr, #ir2j3xk, #irpw2sv,
+#il6lksl, #icgc8tk, #i2c7lbl,
+#iq3q9w7, #ic6rkc9, #ifbtlkh,
+#ii3r4uv, #iurma5d {
+  margin-bottom: 22px !important;
+}
+
+@media (max-width: 600px) {
+  #i0lyhj, #izziuxk, #iwb56zw,
+  #ickgree, #ifzosbr, #ir2j3xk, #irpw2sv,
+  #il6lksl, #icgc8tk, #i2c7lbl,
+  #iq3q9w7, #ic6rkc9, #ifbtlkh,
+  #ii3r4uv, #iurma5d {
+    margin-bottom: 18px !important;
+  }
+}
+</style>
+
+
+<style id="shila-treatment-uniform-v31">
+/* v31 — UNIFY font format across WHY EVERYTHING section
+   Previously v27 forced first 3 treatments to Poppins/17px while v28
+   anchored intro/dave-marine to Bitter/20px → inconsistent fonts.
+   Now: force ALL 6 paragraph blocks + intro + dave-marine + summary
+   to MATCH funnel-css default (Bitter 20px 400 #303030 line-height 28px),
+   which is what #isdenzf et al already use natively. Couples/Natural/Summary
+   (new IDs, no funnel-css rule) inherit override. */
+
+/* Base body-copy style — matches funnel-css default body for entire section */
+#why-intro-v19,
+#isdenzf, #il8dax5, #it6rayw,
+#inmbvb9-couples, #inmbvb9-natural, #inmbvb9-summary,
+#dave-marine-v19,
+#root-cause-v19 {
+  font-family: Bitter, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+  color: #303030 !important;
+  text-align: left !important;
+}
+#why-intro-v19, #dave-marine-v19, #root-cause-v19 {
+  margin: 15px 0 24px 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* 5 treatment blocks: same body style + bullet marker + spacing */
+#isdenzf, #il8dax5, #it6rayw,
+#inmbvb9-couples, #inmbvb9-natural {
+  margin: 0 0 22px 0 !important;
+  padding: 0 0 0 28px !important;
+  position: relative !important;
+  display: block !important;
+}
+
+/* Bullet marker for 5 treatments */
+#isdenzf::before, #il8dax5::before, #it6rayw::before,
+#inmbvb9-couples::before, #inmbvb9-natural::before {
+  content: '\2022' !important;
+  position: absolute !important;
+  left: 4px !important;
+  top: -2px !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+  color: #c1272d !important;
+}
+
+/* Bold treatment headings: same Bitter font, weight 700, block display */
+#isdenzf > b:first-child, #il8dax5 > b:first-child, #it6rayw > b:first-child,
+#inmbvb9-couples > b:first-child, #inmbvb9-natural > b:first-child {
+  display: block !important;
+  font-family: Bitter, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 28px !important;
+  color: #303030 !important;
+  margin-bottom: 6px !important;
+}
+
+/* Summary "Every single one..." — same Bitter, no bullet, slightly heavier */
+#inmbvb9-summary {
+  margin: 28px 0 22px 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+#inmbvb9-summary::before {
+  content: none !important;
+}
+
+/* Descendant overrides: ensure inheritance for any nested elements */
+#why-intro-v19 *, #isdenzf *:not(b), #il8dax5 *:not(b), #it6rayw *:not(b),
+#inmbvb9-couples *:not(b), #inmbvb9-natural *:not(b),
+#inmbvb9-summary *,
+#dave-marine-v19 *, #root-cause-v19 * {
+  font-family: inherit !important;
+  font-weight: 400 !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Customer card name <b> IDs anchor (from v28) */
+#i6ujx3a, #iso3e72, #i3jnrgg {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+  font-weight: 700 !important;
+}
+
+/* Mobile: scale down to 19px (match funnel-css responsive breakpoint) */
+@media (max-width: 480px) {
+  #why-intro-v19,
+  #isdenzf, #il8dax5, #it6rayw,
+  #inmbvb9-couples, #inmbvb9-natural, #inmbvb9-summary,
+  #dave-marine-v19, #root-cause-v19,
+  #isdenzf > b:first-child, #il8dax5 > b:first-child, #it6rayw > b:first-child,
+  #inmbvb9-couples > b:first-child, #inmbvb9-natural > b:first-child {
+    font-size: 19px !important;
+    line-height: 27px !important;
+  }
+}
+</style>
+<style id="shila-sticky-cta-v32">
+/* v32 Sprint 2 — Sticky mobile CTA bar */
+.shila-sticky-cta {
+  display: none;
+}
+@media (max-width: 768px) {
+  .shila-sticky-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 9999;
+    background: #fff;
+    border-top: 1px solid #e4e6eb;
+    padding: 10px 14px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+  }
+  .shila-sticky-cta.shila-visible {
+    transform: translateY(0);
+  }
+  .shila-sticky-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 28px;
+    background: #2a7d2e;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 2px 6px rgba(42, 125, 46, 0.3);
+  }
+  .shila-sticky-btn:hover {
+    background: #226424;
+    color: #fff !important;
+  }
+  /* Add padding to body so sticky bar doesn't cover content */
+  body {
+    padding-bottom: 72px !important;
+  }
+}
+</style>
+<style id="shila-structures-v33">
+.shila-doctor-block{display:flex;align-items:center;gap:14px;margin:18px auto 22px;padding:14px 16px;max-width:740px;background:#faf7f2;border-left:4px solid #c1272d;border-radius:4px}
+.shila-doctor-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;background:#e4e6eb}
+.shila-doctor-info{display:flex;flex-direction:column;gap:2px;font-family:'Poppins',-apple-system,sans-serif;font-size:14px;color:#1a1a1a}
+.shila-doctor-info strong{font-size:16px;font-weight:700}
+.shila-doctor-meta{font-size:13px;color:#65676b}
+.shila-star-rating{display:flex;align-items:center;gap:8px;margin:14px auto 22px;padding:0 16px;max-width:740px;font-family:'Poppins',-apple-system,sans-serif;font-size:14px;color:#1a1a1a;flex-wrap:wrap}
+.shila-stars{color:#f5a623;font-size:18px;letter-spacing:1px}
+.shila-rating-value{font-weight:700;font-size:16px}
+.shila-rating-count{color:#65676b;font-size:13px}
+.shila-faq{max-width:720px;margin:36px auto 28px;padding:0 16px;font-family:'Poppins',-apple-system,sans-serif}
+.shila-faq-heading{font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:700;text-align:center;margin:0 0 22px;color:#0a0a0a}
+.shila-faq-item{border-bottom:1px solid #e4e6eb;padding:0}
+.shila-faq-item summary{cursor:pointer;list-style:none;padding:16px 32px 16px 0;font-size:16px;font-weight:600;color:#1a1a1a;position:relative;user-select:none}
+.shila-faq-item summary::-webkit-details-marker{display:none}
+.shila-faq-item summary::after{content:'+';position:absolute;right:0;top:12px;font-size:24px;font-weight:400;color:#65676b}
+.shila-faq-item[open] summary::after{content:'\2212'}
+.shila-faq-item summary:hover{color:#c1272d}
+.shila-faq-answer{padding:0 0 18px;font-size:15px;line-height:1.55;color:#303030}
+@media (max-width:600px){.shila-doctor-block{padding:12px;gap:12px}.shila-doctor-photo{width:56px;height:56px}.shila-doctor-info strong{font-size:15px}.shila-faq-heading{font-size:22px}.shila-faq-item summary{font-size:15px;padding:14px 28px 14px 0}}
+</style>
+</head><body class=" dom-pending">
+<style id="adv-hide-theme-chrome">
+/* ============================================================
+   HIDE THEME CHROME (announcement bar, header, footer, cart)
+   This page is a full-takeover advertorial — no theme nav.
+   GemPages prevents {% layout none %} from working, so we
+   hide everything that comes from theme.liquid via CSS instead.
+   ============================================================ */
+.announcement-bar,
+.announcement-bar-section,
+[id*="announcement-bar"],
+[class*="announcement-bar"],
+.shopify-section-header,
+[id*="shopify-section-header"],
+[id="shopify-section-header"],
+section[id*="header"],
+header.header,
+header.section-header,
+sticky-header,
+#shopify-section-sections--__main__sections-header,
+[id*="sections--"][id*="-header"],
+.header-wrapper,
+.site-header,
+.shopify-section-footer,
+[id*="shopify-section-footer"],
+[id="shopify-section-footer"],
+section[id*="footer"],
+footer.footer,
+footer.section-footer,
+footer.gradient,
+.footer,
+.site-footer,
+cart-drawer,
+.cart-drawer,
+.drawer,
+.drawer__inner,
+predictive-search,
+.search-modal,
+.cart-notification,
+[id*="cart-drawer"],
+[id*="cart-notification"],
+[id*="CartDrawer"],
+[id*="MenuDrawer"],
+.utility-bar,
+.utility-bar-section,
+[class*="utility-bar"],
+[id*="utility-bar"],
+/* WellnessNest theme: horizontal-ticker = the green "Free Shipping / Money-Back / Trusted by" banner */
+.horizontal-ticker,
+.horizontal-ticker__container,
+.horizontal-ticker__item,
+[class*="horizontal-ticker"],
+[id*="horizontal-ticker"],
+/* Belt-and-suspenders: kill any custom-liquid section that wraps a horizontal ticker */
+.shopify-section:has(.horizontal-ticker),
+.shopify-section:has([class*="horizontal-ticker"])
+{
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Strip theme padding/margins from layout containers */
+body, html { margin: 0 !important; padding: 0 !important; }
+main, main#MainContent, .content-for-layout, [role="main"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+.page-width, .container, .grid--container {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+</style>
+<style id="shila-responsive-images">
+/* ============================================================
+   v18 ROOT-CAUSE FIX — Problem A
+   Browser inspection (puppeteer @1280w) measured the
+   .embed-responsive.embed-responsive-1by1 wrapper around
+   shila-5.webp:
+     - element padding-bottom = 273.7px  (from v17 rule)
+     - ::before  padding-top  = 273.7px  (from v17 rule)
+     - resulting offsetHeight = 547.4px (487 wide) — that's 1:1.125
+   Both rules STACKED instead of one overriding the other,
+   doubling the reserved aspect. The image (16:9) was then
+   object-fit:contain'd into a near-1:1 box -> ~137px of empty
+   whitespace ABOVE and BELOW the image. That is the "HUGE empty
+   white box above the doctor+anatomy image" the user reported.
+
+   Fix: blow away padding-bottom on the element AND the ::before
+   pseudo-element, then use modern aspect-ratio with !important.
+   This wins over both Bootstrap's stock .embed-responsive-1by1::before
+   { padding-top:100% } AND any stale v17 padding-bottom in cache.
+   ============================================================ */
+.embed-responsive.embed-responsive-1by1{
+  /* Reset the doubled padding from v17 */
+  padding-bottom:0 !important;
+  padding-top:0 !important;
+  position:relative !important;
+  overflow:hidden !important;
+  /* Use modern aspect-ratio. Image is 1138x640 = 16:9. */
+  aspect-ratio:16 / 9 !important;
+  height:auto !important;
+}
+.embed-responsive.embed-responsive-1by1::before{
+  /* Bootstrap defaults to padding-top:100%; we kill it entirely
+     because aspect-ratio on the parent now governs height. */
+  content:none !important;
+  display:none !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  height:0 !important;
+}
+.embed-responsive.embed-responsive-1by1 .embed-responsive-item,
+.embed-responsive.embed-responsive-1by1 img{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+}
+/* On phones the 16:9 strip is plenty legible — keep it 16:9. */
+@media (max-width: 480px){
+  .embed-responsive.embed-responsive-1by1{
+    aspect-ratio:16 / 9 !important;
+  }
+}
+
+/* Normalise the other embed-responsive variants (16by9, 21by9)
+   so their images contain rather than crop. */
+.embed-responsive .embed-responsive-item,
+.embed-responsive img.embed-responsive-item,
+.embed-responsive img{
+  object-fit:contain !important;
+  object-position:center center !important;
+}
+
+/* ============================================================
+   v16 SECTION-HEADING NORMALISATION
+   The page renders ALL-CAPS "headings" as plain div[data-text]
+   blocks (no h2/h3). Sizes were inherited from random
+   FunnelKonnekt id rules — visually inconsistent. Apply a
+   uniform section-heading look so every UPPERCASE break reads
+   the same. We target the known heading ids by data-text divs
+   that contain only uppercase content.
+   ============================================================ */
+#i5sihc,#i1dnu3j,#ira3zeb,#ikfy6ba,#cc-id-J0TkJtWE0lu0,
+#cc-id-MVjB74x9W8ru,#itksswy,#cc-id-CD80XZ3eXphA,
+#cc-id-tUFK9E1hWHo7,#cc-id-4766VJLHRuDw,#ixmmzzo,
+#cc-id-7sJK9YnOZgfi,#iql61eq,#cc-id-yvRUZQpDB7qd,#cc-id-Eh03zM2Tb8jr{
+  font-family:Georgia,'Times New Roman',serif !important;
+  font-size:32px !important;
+  font-weight:800 !important;
+  line-height:1.18 !important;
+  text-align:center !important;
+  letter-spacing:0.02em !important;
+  color:#0a0a0a !important;
+  margin:36px auto 20px !important;
+  padding:0 8px !important;
+  max-width:920px !important;
+}
+@media (max-width:768px){
+  #i5sihc,#i1dnu3j,#ira3zeb,#ikfy6ba,#cc-id-J0TkJtWE0lu0,
+  #cc-id-MVjB74x9W8ru,#itksswy,#cc-id-CD80XZ3eXphA,
+  #cc-id-tUFK9E1hWHo7,#cc-id-4766VJLHRuDw,#ixmmzzo,
+  #cc-id-7sJK9YnOZgfi,#iql61eq,#cc-id-yvRUZQpDB7qd,#cc-id-Eh03zM2Tb8jr{
+    font-size:24px !important;
+    margin:28px auto 16px !important;
+  }
+}
+@media (max-width:480px){
+  #i5sihc,#i1dnu3j,#ira3zeb,#ikfy6ba,#cc-id-J0TkJtWE0lu0,
+  #cc-id-MVjB74x9W8ru,#itksswy,#cc-id-CD80XZ3eXphA,
+  #cc-id-tUFK9E1hWHo7,#cc-id-4766VJLHRuDw,#ixmmzzo,
+  #cc-id-7sJK9YnOZgfi,#iql61eq,#cc-id-yvRUZQpDB7qd,#cc-id-Eh03zM2Tb8jr{
+    font-size:20px !important;
+    line-height:1.22 !important;
+  }
+}
+</style>
+
+
+<script>
+// Belt-and-suspenders: also remove theme chrome via JS in case CSS misses any
+(function(){
+  function strip(){
+    var sels=['#shopify-section-header','[id*="shopify-section-header"]','#shopify-section-footer','[id*="shopify-section-footer"]','[id*="announcement-bar"]','cart-drawer','.cart-drawer','header.header','footer.footer','.utility-bar','.horizontal-ticker','[class*="horizontal-ticker"]'];
+    sels.forEach(function(s){document.querySelectorAll(s).forEach(function(el){el.remove()})})
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',strip);else strip();
+  setTimeout(strip,300);setTimeout(strip,1500);
+})();
+</script>
+<script id="funnel-route">
+/* v32 Sprint 6 — Improved route() with UTM preservation + removed premature IC fire */
+function route(e){
+  if(e&&e.preventDefault) e.preventDefault();
+
+  // Preserve UTMs + click-IDs in destination URL
+  var qs = window.location.search;
+  var dest = 'https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin';
+  if (qs && qs.length > 1) dest += qs;
+
+  // Fire engagement events only (no premature InitiateCheckout — that fires at real checkout)
+  try { if(window.fbq) fbq('track','Lead', {content_name:'ShilaSource Advertorial CTA', content_category:'ED Advertorial'}); } catch(_e){}
+  try { if(window.gtag) gtag('event','select_promotion', {promotion_name:'shila-advertorial-cta'}); } catch(_e){}
+  try { if(window.dataLayer) dataLayer.push({event:'shila_cta_click', cta_destination:dest, page:'ed-av01-shilasource-shilajit-resin'}); } catch(_e){}
+  try { if(window.TriplePixel) TriplePixel('event','AdvertorialCTAClick',{page:'ed-av01-shilasource-shilajit-resin'}); } catch(_e){}
+
+  setTimeout(function(){ window.location.href = dest; }, 220);
+}
+</script>
+<section id="ibsz"><div data-box="true" data-secondsdelay="" id="itdh" class="fk-mt-disable-lazy"><div data-box="true" data-secondsdelay="" id="icm6"><div data-text="text" data-secondsdelay="" id="igcr2">Health Insights Magazine
+	  </div></div></div></section><section id="ivjgwf"><div data-box="true" data-secondsdelay="" id="i2glpg"><div data-text="text" data-secondsdelay="" id="i5y858">Health Insights Magazine™
+	</div></div></section><section id="ialx1"><div data-box="true" data-secondsdelay="" id="ipgb6"><div data-box="true" data-secondsdelay="" id="ilqbm"><div data-box="true" data-secondsdelay="" id="izp8b"><ul id="is7zm" class="fk-bullet"><li id="ig0sv"><div data-secondsdelay="" id="itn02" class="fk-bullet-list-container"><div data-secondsdelay="" id="ikb4g" class="fk-bullet-icon-container"><i id="i6lxi" class="icp icp-auto fas fa-square-full">
+				</i></div><div data-secondsdelay="" id="cc-id-tfl9k8yDotdD"><div data-text="text" data-secondsdelay="" id="ivmko">Home &gt; Health &gt; Men's Health</div></div></div></li></ul><div data-text="text" data-secondsdelay="" id="iokvb">Top Urologists: "This Is the Fastest Way to Fix Erectile Dysfunction for Good"</div><ul id="i2i9t" class="fk-bullet"><li id="i68cd"><div data-secondsdelay="" id="iq25m" class="fk-bullet-list-container"><div data-secondsdelay="" id="ia7mz" class="fk-bullet-icon-container"><i id="irx9y" class="icp icp-auto far fa-calendar-alt">
+				</i></div><div data-secondsdelay="" id="cc-id-jXb7MdPElCNp"><div data-text="text" data-secondsdelay="" id="io9yv">May 13th, 2026 | 12:44 PM EST &nbsp; · &nbsp;</div></div></div></li></ul><div data-box="true" data-secondsdelay="" id="itu8i"><div data-box="true" data-secondsdelay="" id="i8yfg"><div data-text="text" data-secondsdelay="" id="i2h98">Written by <b>Dr. Marcus Hale, MD</b> | Board-Certified Urologist (22 years)&nbsp;</div>
+<!-- v33 Sprint 4 — Doctor headshot block (STRUCTURE ONLY — user fills image + reviewed claim) -->
+<div id="shila-doctor-block-v33" class="shila-doctor-block">
+  <img class="shila-doctor-photo" src="{{ 'dr-marcus-hale.webp' | asset_url }}" alt="" width="72" height="72" loading="eager" decoding="async">
+  <div class="shila-doctor-info">
+    <strong>Dr. Marcus Hale, MD</strong>
+    <span class="shila-doctor-meta">Board-Certified Urologist (22 years)</span>
+  </div>
+</div>
+
+<!-- v33 Sprint 5 — Star rating widget (STRUCTURE ONLY — user fills rating value + count claim) -->
+<div id="shila-star-rating-v33" class="shila-star-rating">
+  <span class="shila-stars" aria-hidden="true">★★★★★</span>
+  <span class="shila-rating-value">4.9/5</span>
+  <span class="shila-rating-count">— 137,235+ verified customers</span>
+</div>
+</div></div></div><div data-box="true" data-secondsdelay="" id="ixhjtwi"><img id="fkt-image-ce3-486-893" title="" target="_self" src="{{ 'shila-1.webp' | asset_url }}" href="" align="center" alt="" width="1200" height="675" onclick="" class="fk-image-defaults" loading="eager" fetchpriority="high" decoding="async"></div><div data-box="true" data-secondsdelay="" id="ih8f78"><div data-text="text" data-secondsdelay="" id="cc-id-ASKCcEx7Klw3"><b>Dear Friend Living With ED,</b><br><br>If you're reading this with that sick, hollow feeling in your gut because you already know how tonight is going to end…<br><br>If you've started dreading nights out with friends because you're terrified someone will notice the tension between you and your wife…<br><br>If you lie awake at 3 AM replaying the moment she publicly humiliated you — and the way everyone laughed — while wondering if your marriage is already over…<br><br>Then listen.<br><br>What I'm about to tell you is going to piss you off.<br><br>Because the real fix has been hidden from you on purpose.<br><br>Not because it doesn't work.<br><br>Because it works <b>too damn well</b>.<br><br>And when a $6+ billion pill machine sees something that could make their lifetime subscriptions obsolete, they don't celebrate.<br><br>They come for blood.<br><br><b>My name is Dr. Marcus Hale.</b><br><br>22 years. 5,000 men. I used to be one of the best pill pushers in the game.<br><br>Until 14 months ago, I believed every word of it.</div><div data-text="text" data-secondsdelay="" id="i5sihc">THE NIGHT EVERYTHING CHANGED…</div><div data-box="true" data-secondsdelay="" id="itcqk86"><img id="fkt-image-8f3-da0-9f5" title="" target="_self" src="{{ 'shila-2.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"></div><div data-box="true" data-secondsdelay="" id="ijc1c58" class="d-none"><div data-secondsdelay="" id="if6ohwg" class="embed-responsive embed-responsive-16by9"><img src="{{ 'shila-3.webp' | asset_url }}" id="i8ivigl" class="fk-i4vh35o embed-responsive-item fk-disable-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="i2700n">It happened on a Friday night at our friends' house. Fire pit. Drinks. Laughter.<br><br>Emily had been drinking heavier than usual. Six months of my anxiety-driven ED had worn her down. She swung between guilt and rage — some nights crying into her pillow, some nights cold.<br><br>Then it happened.<br><br>Someone made a joke about "married life." Emily — drunk, bitter, done — pointed straight at me in front of six couples and said loudly:<br><br><blockquote style="border-left:4px solid #c1272d; padding:8px 12px; margin:14px 0; font-style:italic; background:#faf7f2">"Yeah, and I'm not getting any because <b>this guy</b> can't even get it up!"</blockquote>Half a second of dead silence. Then the whole table exploded laughing. Someone even clapped.<br><br>I snapped.<br><br>I looked her dead in the eyes and said:<br><br><blockquote style="border-left:4px solid #c1272d; padding:8px 12px; margin:14px 0; font-style:italic; background:#faf7f2">"Yeah, and with a wife like this, can you even blame me?"</blockquote>They laughed harder. Thought it was just banter.<br><br>The ride home was silent. Dashboard clock: 12:03 AM. Not a single word.<br><br>The next morning she came at me in the kitchen:<br><br><blockquote style="border-left:4px solid #c1272d; padding:8px 12px; margin:14px 0; font-style:italic; background:#faf7f2">"I'm so tired, Marcus. I bought three sets of lingerie last year — all of them still have the tags on. I feel like a widow who's still married."</blockquote>She grabbed her keys and walked out.<br><br>I sat on the kitchen floor until 4 AM.<br><br>That was the night I realized I wasn't just losing my erections. I was losing my wife.<br><br><b>I went to war.</b></div><div data-text="text" data-secondsdelay="" id="ira3zeb">THE MIND BLOWING DISCOVERY</div><div data-box="true" data-secondsdelay="" id="i6iuzyf"><div data-secondsdelay="" id="im9ylgj" class="embed-responsive embed-responsive-16by9"><img src="{{ 'shila-4.webp' | asset_url }}" id="ir4elzu" class="fk-i4vh35o embed-responsive-item disable-fk-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="cc-id-Oh1MW2aFlH8e">For four months I became a man possessed.<br><br>I stopped taking new patients except emergencies. I pulled every published study on penile microvascular nutrition going back to 1994. I flew to Ladakh, India, and spent three weeks with a 74-year-old Ayurvedic practitioner named Dr. Sharma — a man who had been harvesting high-altitude Shilajit for 40 years. I sent samples to an independent laboratory in Munich for trace mineral analysis. I burned through $34,000 of our savings.<br><br>What I found made me physically sick.<br><br><b>Over 82% of chronic erectile dysfunction in men over 40</b> — according to a 2021 review in the Journal of Sexual Medicine — has <b>nothing</b> to do with low testosterone or "performance anxiety."<br><br>It's not even really about "blood flow" the way they tell you.<br><br><b>Your penile tissue is starving at the cellular level.</b></div><div data-box="true" data-secondsdelay="" id="ivek8a3"><div data-secondsdelay="" id="ivbhnc9" class="embed-responsive embed-responsive-1by1"><img src="{{ 'shila-5.webp' | asset_url }}" id="irxowjf" class="fk-i4vh35o embed-responsive-item disable-fk-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="i0lyhj">Think of your penis like a high-performance engine that's been running on watered-down, mineral-free fuel for 15–20 years.<br><br>When you're young, the engine roars. Instant response. Full pressure. Automatic. You don't even think about it — the same way you don't think about breathing.<br><br>By 40, you've lost roughly 30% of penile microcirculation. The engine starts sputtering on cold mornings. You notice it first as weaker morning wood — nothing dramatic. Just… less.</div><div data-text="text" data-secondsdelay="" id="izziuxk">By 50, it's 50% gone. The engine stalls mid-drive. Erections that used to be automatic now need perfect conditions — perfect mood, perfect timing, no stress, no alcohol. One wrong variable and nothing happens. You start making excuses. Avoiding. Pretending you're tired.</div><div data-text="text" data-secondsdelay="" id="iwb56zw">By 60, it's 65–70% gone. The engine barely turns over. You've stopped trying to start it. You've accepted the silence under the hood as permanent.</div><div data-box="true" data-secondsdelay="" id="imzww3"><div data-box="true" data-secondsdelay="" id="iywxt7j"><div data-text="text" data-secondsdelay="" id="is3wg4d">The medical industry <b>knows</b> this.<br><br>They've known since 1987 when Dr. Hideki Matsumoto's team at Tokyo Medical University proved that 84% of men with chronic ED showed severe trace mineral depletion in penile vascular tissue compared to healthy controls.<br><br>But here's the kicker…<br><br>There's no money in fixing mineral starvation. You can't patent ancient Himalayan resin. You can't bill insurance for teaching a man how to fix his own erections at home for less than the cost of one Cialis refill.<br><br>So they keep you on the hamster wheel.<br><br>Think about it:<br><br>You wouldn't pour premium fuel into an engine with corroded fuel lines and expect it to run. You'd rebuild the engine from the inside out.<br><br>But that's exactly what pills do — flood the system with temporary chemical pressure while the fuel lines keep corroding underneath. And every month you come back for another refill. Another copay. Another pill full of fillers that does nothing to fix the actual problem.<br><br>It's genius, really.<br><br>If you're a pharmaceutical executive who sees human suffering as a subscription model.</div><div data-text="text" data-secondsdelay="" id="i1dnu3j">WHY EVERYTHING YOU'VE TRIED HAS FAILED</div><div data-text="text" data-secondsdelay="" id="why-intro-v19">I'd tried every standard protocol on my own patients for two decades. Let me destroy the options you've probably already tried — one by one.</div><div data-text="text" data-secondsdelay="" id="isdenzf"><b>Viagra &amp; Cialis.</b><br>They force a temporary chemical reaction using a tiny amount of active ingredient buried in a mountain of fillers and binders — lactose, microcrystalline cellulose, starch, sucrose, povidone. The pill is mostly junk. It masks symptoms for a few hours while your penile tissue continues to starve. Cost: $300–600 per month. For life. Many men develop tolerance within 1–2 years. And your wife still feels unwanted — because a chemically-forced erection doesn't feel like desire.</div><div data-text="text" data-secondsdelay="" id="il8dax5"><b>Vacuum pumps.</b><br>They create negative pressure to mechanically force blood in. Works for 20–30 minutes max. Feels clinical and unsexy. Many wives hate the "whoosh" sound and the rubber ring at the base. No cellular repair whatsoever. Just a temporary mechanical hack. Cost: $150–400 plus ongoing frustration and the humiliation of using a medical device before sex.</div><div data-text="text" data-secondsdelay="" id="it6rayw"><b>Low-T therapy &amp; injections.</b><br>Testosterone shots or gels. Expensive — $200–400 per month — and they often don't fix the real problem because the issue isn't primarily hormonal. It's mineral starvation in the penile blood vessels. Many men on TRT gain weight, feel moody, and still can't perform reliably. It's like putting a bigger battery in a car with corroded fuel lines.</div><div data-text="text" data-secondsdelay="" id="inmbvb9-couples"><b>Couples counseling &amp; sex therapy.</b><br>$150–250 per session. 12–20 sessions minimum. They treat it like a relationship problem when the real issue is cellular. You sit on a couch talking about your feelings while your penile tissue continues to die. You leave feeling more broken and $3,000–$5,000 poorer.</div><div data-text="text" data-secondsdelay="" id="inmbvb9-natural"><b>"Natural" supplements from Amazon.</b><br>Tongkat ali. Maca. L-arginine. Most are under-dosed garbage with no fulvic acid and almost zero bioavailable trace minerals. You're pissing money down the drain while your tissue keeps starving. The reviews are fake. The dosages are laughable. And the guy selling them has never treated a single patient in his life.</div><div data-text="text" data-secondsdelay="" id="inmbvb9-summary">Every single one of these treats the symptom while ignoring the root cause.<br><br>That's why nothing has worked for you.</div><div data-text="text" data-secondsdelay="" id="ikfy6ba">THE 60-SECOND RITUAL HIDING IN PLAIN SIGHT</div><div data-secondsdelay="" id="i9h53o6" class="embed-responsive embed-responsive-16by9"><img src="{{ 'shila-6.webp' | asset_url }}" id="il9jsjw" class="fk-i4vh35o embed-responsive-item disable-fk-lazy" alt="" loading="lazy"></div></div></div><div data-text="text" data-secondsdelay="" id="cc-id-tGUN1ZootH6a">Remember that night after the fire pit? The night my wife walked out?<br><br>Six weeks after my discovery, she came back. Not just physically — emotionally. We had the best, most connected sex of our 12-year marriage. Spontaneous. Hard. No pills. No anxiety. No planning.<br><br>She looked at me afterward with tears in her eyes and said, <i>"I finally feel wanted again."</i><br><br><b>Just 60 seconds every morning.</b><br><br>To truly fix ED, you need <b>three things working at once</b>:</div><div data-text="text" data-secondsdelay="" id="i99fgx9">1. <b>Fulvic Acid Cellular Transport</b> — The ultimate "mineral taxi" that forces nutrients through cell walls that have been locked shut for decades<br><br>2. <b>Deep Trace Mineral Replenishment</b> — 87+ ancient minerals your penile tissue has been missing for decades<br><br>3. <b>Mitochondrial Awakening</b> — Reigniting the cellular power plants that create real nitric oxide and sustainable blood flow</div><div data-text="text" data-secondsdelay="" id="i7dflus">Miss even one and you stay stuck forever.<br><br>That's why pills fail — no mineral transport.<br><br>That's why supplements fail — no fulvic acid to carry anything past the cell wall.<br><br>That's why testosterone fails — the fuel lines are still corroded.<br><br>You need all three. In the exact form your body recognizes.<br><br>And that's exactly what I found.</div><div data-text="text" data-secondsdelay="" id="cc-id-J0TkJtWE0lu0">WORD SPREAD FAST</div><div data-box="true" data-secondsdelay="" id="ikrobdu"><div data-secondsdelay="" id="iy59m94" class="embed-responsive embed-responsive-16by9"><img src="{{ 'shila-7.webp' | asset_url }}" id="ic97xxa" class="fk-i4vh35o embed-responsive-item disable-fk-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="cc-id-Yev87gre1wCt">After Emily and I reconnected, word got out the way it always does in a tight circle — slowly at first, then all at once.<br><br>My neighbor Dave — 51, divorced three years, hadn't been on a single date since his ex told her friends he "couldn't perform" — showed up at my door on a Sunday morning.<br><br><blockquote style="border-left:4px solid #c1272d; padding:8px 12px; margin:14px 0; font-style:italic; background:#faf7f2">"Marcus, I heard what happened at that fire pit party… and whatever that black stuff is that fixed things with you and Emily… I need it. I've got a date Friday and I'm already making excuses to cancel."</blockquote>I gave him a jar. Told him one pea-sized amount every morning, dissolve under the tongue.<br><br>Six days later he texted me at 11:14 PM: <i>"Brother. I don't even know what to say. I feel like I'm 25 again. She's still here. Thank you."</i><br><br>Dave told his gym buddy. His gym buddy told his brother-in-law. Within three weeks I had men I'd never met calling my personal cell, asking about "that black stuff Dave won't shut up about."<br><br>A firefighter who hadn't been intimate with his wife in two years.<br><br>A high school football coach whose girlfriend was packing her bags.<br><br>A retired Marine who said he'd rather face combat again than another night of failure.<br><br><b>Every. Single. One. Got. Better.</b><br><br>Not "managed their ED" better.<br><br>Not "learned to live with it" better.<br><br><b>ACTUALLY BETTER.</b><br><br>That's when the threats started.</div><div data-text="text" data-secondsdelay="" id="cc-id-MVjB74x9W8ru">THEY CAME FOR ME</div><img title="" target="_self" src="{{ 'shila-8.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-dfd-da1-948" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="cc-id-tSh4Ox0XjtK7">First, it was "friendly" warnings.<br><br>A colleague I'd known for 18 years pulled me aside at the AUA conference: <i>"Marcus, you need to stop. What you're recommending isn't evidence-based. You're going to lose your license over a jar of mountain tar."</i><br><br><b>Mountain tar.</b> That's what he called the thing that saved my marriage.<br><br>Then came the cease-and-desist letters. Two law firms, both representing "concerned medical professionals" who claimed I was "undermining established pharmaceutical protocols."<br><br>The final straw? My hospital — the same hospital where I'd treated 5,000 men over two decades — quietly informed me my privileges were "under review." And three pharma reps I'd worked with for over a decade suddenly stopped returning my calls.<br><br>They wanted me gone because I'd found something that makes their entire revenue model obsolete.<br><br>A 60-second daily ritual that:</div><div data-box="true" data-secondsdelay="" id="iru1sew"><ul id="i25co5m" class="fk-bullet"><li id="iznddjl"><div data-secondsdelay="" id="iy0vtt8" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="imi45gq" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="iqlkjvp">Fixes the <b>ROOT CAUSE</b> of ED (not just the symptoms)</div></div></li><li id="izicd8g"><div data-secondsdelay="" id="iftxdki" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="idvq5rl" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="ii3r4uv">Costs less than one month of pills</div></div></li><li id="ivbhehn"><div data-secondsdelay="" id="iuamajf" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="iwdruml" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="iurma5d">Lets men fix it themselves at home (not in some clinic at $250 per visit)</div></div></li></ul></div><div data-text="text" data-secondsdelay="" id="i45ftvo">But here's what those suits didn't count on…<br><br>The men who got their lives back weren't going to stay quiet. And I'd already found a source for the purest Shilajit on earth. We'd turned my kitchen-counter experiment into something real.</div><div data-text="text" data-secondsdelay="" id="itksswy">THE ONLY THING THAT DELIVERS ALL THREE</div><div data-box="true" data-secondsdelay="" id="i524twj"><div data-secondsdelay="" id="isyommj" class="embed-responsive embed-responsive-16by9"><img src="{{ 'shila-9.webp' | asset_url }}" id="iyonet6" class="fk-i4vh35o embed-responsive-item disable-fk-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="ihljs5">It's called <b>ShilaSource Himalayan Shilajit Resin</b>.<br><br>The purest, most potent, third-party tested Himalayan Shilajit on Earth — harvested at 17,000+ feet from the exact ancient sources my research led me to.<br><br>One pea-sized amount every morning delivers:<br><br>✓ <b>FULVIC ACID</b> at 75% concentration — the cellular transport molecule that forces nutrients through cell walls that have been locked shut for decades<br><br>✓ <b>87+ TRACE MINERALS</b> in ionic form — the exact minerals your penile blood vessels have been starving for, in the precise bioavailable form your body actually recognizes<br><br>✓ <b>DIBENZO-ALPHA-PYRONES (DBPs)</b> — the mitochondrial activators that reignite your cellular power plants and restore natural nitric oxide production<br><br>All three. Every morning. Automatic.<br><br>You dissolve a pea-sized amount under your tongue, and let 4 months of obsessive research — backed by 22 years of hands-on clinical experience — do the work.<br><br>Think of it as <b>racing fuel AND engine rebuild in one jar</b> — except it works from the inside out. While pills mask the dashboard warning lights, ShilaSource rebuilds what's broken underneath.<br><br>No pills full of fillers. No devices. No appointments. No copays.<br><br>Just your body finally getting what it's been starving for.</div><div data-text="text" data-secondsdelay="" id="cc-id-CD80XZ3eXphA">HERE'S WHAT HAPPENS INSIDE YOUR BODY</div><div data-box="true" data-secondsdelay="" id="iaegt06"><div data-secondsdelay="" id="iuoimni" class="embed-responsive embed-responsive-16by9"><img src="{{ 'shila-10.webp' | asset_url }}" id="inhc40w" class="fk-i4vh35o embed-responsive-item disable-fk-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="i955kux"><b>Days 1–7: The Awakening Phase</b><br><br>Fulvic acid begins transporting trace minerals past cell walls that have been locked shut for years. Most men notice it first as stronger morning wood — subtle at first, then undeniable. That "dead" feeling in your groin starts to lift. Your body is waking up. Like an engine that's been sitting in a cold garage finally turning over.<br><br><b>Days 8–21: The Replenishment Phase</b><br><br>Your penile blood vessels and erectile tissue start receiving the minerals they've been missing for decades. Blood flow improves. Erections become fuller, harder, more reliable. The engine isn't just turning over now — it's starting to run. Most men say their wife notices before they do.<br><br><b>Days 22–45: The Regeneration Phase</b><br><br>Mitochondria fully wake up. Natural nitric oxide production increases dramatically. Many men report spontaneous erections, higher libido, and the kind of stamina they haven't felt in 15–20 years. The engine is rebuilt. The fuel lines are clean. And you've stopped thinking about ED altogether — the same way you stopped thinking about breathing.<br><br>This isn't a temporary chemical crutch.<br><br>This is <b>actual cellular repair</b>.</div><div data-text="text" data-secondsdelay="" id="cc-id-tUFK9E1hWHo7">THE RESULTS SPEAK FOR THEMSELVES</div><img title="" target="_self" src="{{ 'shila-11.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-61c-681-871" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="iv65mih">In the last 14 months, over <b>137,235 men</b> have started the ShilaSource subscription.<br><br><b>89%</b> report significant improvement in erection quality and reliability within 21 days.</div><div data-text="text" data-secondsdelay="" id="i50e43z">But my favorite statistic? The stories that come in every single day.</div><div data-text="text" data-secondsdelay="" id="iu5kzsa"><b>Dr. Richard K., Board-Certified Urologist</b><br>"I've been in practice 19 years. When I saw Marcus's research on mineral starvation and cellular transport, the mechanism made immediate sense. I tried ShilaSource on my own chronic issue first. Then I started quietly recommending it to patients who had failed everything else. The results have been remarkable. I now tell my toughest cases: 'Try this before we talk implants.'"</div><div data-text="text" data-secondsdelay="" id="iih9uxo"><b>Michael T., 54, Construction Foreman</b><br>"Couldn't get hard for two years. Workers comp was on my case. Was booked for an implant — deposit paid. 3 weeks on ShilaSource and I'm waking up with wood like I'm 18. My wife cried the first time it happened naturally. My surgeon called to ask why I cancelled. I told him I didn't need him anymore. Dead silence on the other end."</div><div data-text="text" data-secondsdelay="" id="cc-id-7sJK9YnOZgfi">THE PRICE THAT MAKES BIG PHARMA SWEAT</div><img title="" target="_self" src="{{ 'shila-12.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-c79-083-941" class="fk-image-defaults disable-fk-lazy fk-disable-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="ix5ahng">Let me show you what "managing" ED really costs in America:<br><br><b>The Pill Route</b></div><div data-box="true" data-secondsdelay="" id="izpxit6"><ul id="i6tz056" class="fk-bullet"><li id="iq1551x"><div data-secondsdelay="" id="inid5cc" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="ikx17yh" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="ickgree">Viagra/Cialis: $300–600/month</div></div></li><li id="igorvik"><div data-secondsdelay="" id="i1uja6o" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="ioorw2e" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="ifzosbr">Doctor visits for refills: $150 every 3 months</div></div></li><li id="if8ujgw"><div data-secondsdelay="" id="igh32dw" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="if4qzwg" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="idleere"><b>Annual cost: $4,800–$9,600/year</b><br>Over 5 years: <b>$24,000–$48,000</b> — for a pill that stops working anyway.</div></div></li></ul></div><div data-text="text" data-secondsdelay="" id="i2iva1p"><b>The Injection/Therapy Route</b></div><div data-box="true" data-secondsdelay="" id="i84eguv"><ul id="iavorto" class="fk-bullet"><li id="iacixyd"><div data-secondsdelay="" id="ixxsvfe" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="ic0jsaw" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="ir2j3xk">Low-T injections: $200–400/month</div></div></li><li id="irsyk52"><div data-secondsdelay="" id="ich79hd" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="i5186y7" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="irpw2sv">Blood work every 3 months: $200</div></div></li><li id="i2i1jv2"><div data-secondsdelay="" id="iq7hdyp" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="iqgfbhw" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="iiymq1h"><b>Annual cost: $2,800–$5,600</b> — for something that doesn't even address the real problem.</div></div></li></ul></div><div data-text="text" data-secondsdelay="" id="i7zrbst"><b>The "Last Resort" Route</b></div><div data-box="true" data-secondsdelay="" id="ixgatn6"><ul id="ib00a8g" class="fk-bullet"><li><div data-secondsdelay="" id="i2mrrzg" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="igis4fc" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="il6lksl">Penile implant: $18,000–$32,000</div></div></li><li><div data-secondsdelay="" id="iyfearu" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="i96qrwm" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="icgc8tk">30–40% complication rate</div></div></li><li><div data-secondsdelay="" id="ih0vljj" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="iqv082h" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="i2c7lbl">Permanent, irreversible surgery. And it doesn't feel the same. Ask any man who's had one.</div></div></li></ul></div><div data-text="text" data-secondsdelay="" id="iu8kgbp">The medical industry <b>LOVES</b> these options.<br><br>Know why?<br><br>Because you keep coming back.<br><br><b>Temporary fix = lifetime customer.</b><br><br>It's a goldmine built on the shame of men who just want to feel like men again.<br><br>But here's what really pisses them off…<br><br>In traditional Ayurvedic clinics at high altitude, authentic Himalayan Shilajit at this purity level sells for <b>$350–450 per month</b>.<br><br><b>ShilaSource</b> should cost $179/month.<br><br>That's what our bioavailability testing, third-party verification, and 17,000-foot sourcing is worth.<br><br>But I didn't create this to get rich.</div><div data-text="text" data-secondsdelay="" id="dave-marine-v19">I created it because I almost lost my wife the night she walked out after that fire pit.<br><br>Because Dave almost cancelled that date and went back to being alone.<br><br>Because that retired Marine was ready to give up on ever feeling like a man again.</div><div data-text="text" data-secondsdelay="" id="cc-id-4766VJLHRuDw">THE INTRODUCTORY PRICE "IN YOUR FACE" TO THE PILL MACHINE</div><img title="" target="_self" src="{{ 'shila-13.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-0cf-185-957" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="cc-id-57rdZ4gO4k1K">Remember those cease-and-desist letters I mentioned? The threats? The "under review" notice from my own hospital?<br><br>Well, I just got word that a major pharmaceutical company is pressuring our payment processor to drop us.<br><br>They can't copy what we have. They can't buy us out — I told them to go to hell.<br><br>So now they're trying to choke us financially.<br><br>My response?<br><br>I'm releasing <b>4,000 introductory bottles</b> at our <b>lowest available price</b>.<br><br><b>$39.99 one-time</b> or <b>$59/month subscription</b> (cancel anytime)<br><br>Less than one night out that ends in silence.<br><br>Less than your monthly Cialis refill.<br><br>Less than one session with a therapist who treats a cellular problem like a feelings problem.</div><div data-text="text" data-secondsdelay="" id="root-cause-v19">For the <b>ONLY</b> thing that actually fixes the root cause of ED.</div><div data-text="text" data-secondsdelay="" id="it15a18">Why would I do this?</div><img title="" target="_self" src="{{ 'shila-14.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-011-e86-ab2" class="fk-image-defaults disable-fk-lazy d-none fk-disable-lazy" loading="lazy" decoding="async"><div data-box="true" data-secondsdelay="" id="i3a3pa3"><div data-secondsdelay="" id="ioh4pst"><img src="{{ 'shila-15.webp' | asset_url }}" id="ifakykr" class="fk-is2i96r disable-fk-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="cc-id-JaSAeAp9Epei">Because every man who gets better is another nail in the coffin of the pill machine.<br><br>Because I want 4,000 men posting their success stories before these pharmaceutical vultures can choke us out.</div><div data-box="true" data-secondsdelay="" id="ixtn12u"><a id="iz4zd4t" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-912-b8e-a05" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><div data-text="text" data-secondsdelay="" id="i53lhn" class="d-none">⚠️ ONLY 1,943 JARS REMAINING AT THIS INTRODUCTORY PRICE ⚠️ &nbsp; Next harvest takes 3 weeks. Stock will not return at this rate.</div><div data-text="text" data-secondsdelay="" id="ixmmzzo">MY PERSONAL 90-DAY "I GOT MY MANHOOD BACK" GUARANTEE</div><div data-box="true" data-secondsdelay="" id="iiw8hzx"><div data-secondsdelay="" id="i0z8dqb"><img src="{{ 'shila-16.webp' | asset_url }}" id="irugowy" class="fk-is2i96r disable-fk-lazy" alt="" loading="lazy"></div></div><div data-box="true" data-secondsdelay="" id="i23otlj" class="d-none"><div data-secondsdelay="" id="i91c4uh" class="embed-responsive embed-responsive-21by9"><img src="{{ 'shila-16.webp' | asset_url }}" id="i4vh35o" class="fk-i4vh35o embed-responsive-item fk-disable-lazy" alt="" loading="lazy"></div></div><div data-text="text" data-secondsdelay="" id="cc-id-YFuMZnKUkOBZ">Look, I get it.<br><br>You've been burned before. Spent money on "miracle cures" that turned out to be expensive jars of dirt. Tried pills that worked once then never again. Bought supplements from Amazon that did absolutely nothing.<br><br>So here's my promise:<br><br>Try ShilaSource every single morning for 90 days.<br><br>Feel the morning wood come back first — subtle at first, then undeniable.<br><br>Feel the confidence return when she reaches for you at night.<br><br>Feel the moment you realize you haven't thought about ED in a week.<br><br>Feel what it's like to be spontaneous again — no planning, no pills, no anxiety, no dread.<br><br>And if you don't wake up one day thinking "Holy shit… I forgot what it felt like to feel like a man again" — if your wife doesn't notice the difference — I'll refund every penny.<br><br>No forms to fill out. No "store credit" nonsense. No questions asked.<br><br>Just email support@wellnessnest.co and say "It didn't work."<br><br>Your refund hits within 48 hours.<br><br>Why am I so confident?<br><br>Because in 14 months and over 137,235 subscribers, our refund rate is <b>0.8%</b>.<br><br>That's eight men per thousand.<br><br>Three of those were because their dog knocked the jar into the sink. One guy thought it was supposed to be injected. We still laugh about that one.</div><div data-box="true" data-secondsdelay="" id="ic6gpvg"><a id="ik8s56e" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-1b6-7ac-b90" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><div data-text="text" data-secondsdelay="" id="iql61eq">BUT HERE'S THE CATCH (AND IT'S A BIG ONE)</div><div data-text="text" data-secondsdelay="" id="ie1h2bh">Stock alert: only <b>1,943 jars</b> remaining at this price.<br><br>Not because I'm playing games.<br><br>But because my lawyers are expensive, and I need capital to fight these pharmaceutical trolls who want to shut us down.<br><br>Once these jars sell out, the next harvest run takes three weeks at our high-altitude source. There is no way to speed it up. Either way — barely the cost of a single date night.<br><br>Also — and this is important — we only produce <b>2,800 jars per month</b>.<br><br>Harvesting authentic Shilajit at 17,000+ feet is brutally slow. Each batch takes three weeks to collect, purify, and test. There are no shortcuts at that altitude. No factory can speed it up. The mountains don't care about your timeline.<br><br>When that Reddit post about ShilaSource blew up, we sold out in 11 hours.<br><br>We don't sell on Amazon. You won't find the real thing there — only cheap knockoffs cut with fulvic acid powder and fillers. The only place we sell is through our official ShilaSource website.<br><br>If you're reading this, jars are still available.<br><br>But I can't promise they'll last the day.<br><br>And here's the thing…<br><br>Every minute you wait is another minute you're:</div><div data-box="true" data-secondsdelay="" id="if3ge1a"><ul id="i2roale" class="fk-bullet"><li id="i9a21"><div data-secondsdelay="" id="im3ntql" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" id="imzolzg" class="fk-bullet-icon-container"><i id="i6y2kke" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="iq3q9w7">Feeding the pharmaceutical companies.</div></div></li><li id="i36e9fy"><div data-secondsdelay="" id="is9hhdc" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="iuujjid" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="ic6rkc9">Enriching the pill machine.</div></div></li><li id="iprsd4l"><div data-secondsdelay="" id="iqx5ztk" class="fk-bullet-list-container bullet-list-container"><div data-secondsdelay="" class="fk-bullet-icon-container"><i id="ib7vxjg" class="icp icp-auto fas fa-circle">
+				  </i></div><div data-text="text" data-secondsdelay="" id="ifbtlkh">Living in unnecessary shame.</div></div></li></ul></div><div data-text="text" data-secondsdelay="" id="ikbe181">While the actual fix is sitting right here for less than a night out.</div><div data-box="true" data-secondsdelay="" id="ie30p52"><a id="iiusfbk" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-dd6-2b3-911" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><div data-text="text" data-secondsdelay="" id="cc-id-yvRUZQpDB7qd">THE CHOICE THAT WILL DEFINE YOUR NEXT DECADE</div><img title="" target="_self" src="{{ 'shila-18.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="cc-id-5daezVPYlVuQ" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="cc-id-nTi4nEgxRjDS">Right now, you're at a crossroads.<br><br><b>Path #1: Keep Doing What You're Doing.</b><br><br>Keep feeding the pill machine full of fillers and binders. Keep avoiding social events because you're terrified of another fire-pit moment. Keep watching your marriage die one awkward silence at a time. Keep buying lingerie that stays in the drawer with the tags on.<br><br>Keep being a subscription for the pharmaceutical industry.<br><br><b>Path #2: Take the 60-Second Daily Ritual That Actually Works.</b><br><br>Spend less than you'd blow on a night out that ends in silence. Join over 137,235 men who've reclaimed their erections and their marriages. Fix the <b>ROOT CAUSE</b> instead of masking symptoms with a pill full of fillers. Wake up tomorrow with confidence instead of dread.<br><br>Join the men who are putting nails in the coffin of the pill machine.<br><br>The choice seems pretty obvious to me.</div><div data-text="text" data-secondsdelay="" id="cc-id-Eh03zM2Tb8jr">HERE'S EXACTLY WHAT TO DO NEXT</div><div data-box="true" data-secondsdelay="" id="i6mkd3f"><div data-secondsdelay="" id="iizdhky"><video allowfullscreen="allowfullscreen" aspectratio="" id="is2i96r" loop="" playsinline="" muted="" data-src="{{ 'shila-19.mp4' | asset_url }}" poster="{{ 'shila-1.webp' | asset_url }}" class="fk-is2i96r disable-fk-lazy" preload="none">
+			</video></div></div><div data-text="text" data-secondsdelay="" id="cc-id-iDikHciLqBRC">1. Click the button below that says <b>"Start My ShilaSource Order"</b><br><br>2. Choose your subscription length (Pro tip: the 3-month introductory price locks in your discount and gives your body the full regeneration window)<br><br>3. Enter your shipping info (plain brown box, completely discreet — no branding, no labels, your mailman won't know, your neighbors won't know)<br><br>4. Wait 3–5 days for your first jar to arrive<br><br>5. Dissolve a pea-sized amount under your tongue the same morning it arrives<br><br>6. Text us your success story when you get it back (+1 555-847-2931)</div><div data-text="text" data-secondsdelay="" id="iqapqvz">But whatever you do, don't close this page thinking "I'll order later."<br><br>Later doesn't exist when your marriage is on the line.<br><br>Later is another night of your wife walking out.<br><br>Later is another fire-pit moment waiting to happen.<br><br>Later is the introductory price expiring and jars selling out.</div><div data-box="true" data-secondsdelay="" id="in3xx5f"><a id="i30fsic" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-535-7ab-ae4" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><img title="" target="_self" src="{{ 'shila-20.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-d0b-fa8-b86" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-box="true" data-secondsdelay="" id="iizn4sw"><a id="fkt-link-596-eb3-a25" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-link-ea1-69a-85c" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="">GET INTRODUCTORY PRICE SHILASOURCE INTRODUCTORY PRICE NOW!<br data-text="text" draggable="true" data-highlightable="1" data-secondsdelay="" id="islkag"></a></div><div data-text="text" data-secondsdelay="" id="i5kqfvq">Your body has waited long enough.<br><br>Click below and let's end this.</div><div data-box="true" data-secondsdelay="" id="iuyd5g"><a id="ifj1wk" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-1b3-3a7-86b" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><div data-box="true" data-secondsdelay="" id="i9hb97"><div data-text="text" data-secondsdelay="" id="iny84d">INTERNET ONLY OFFER!
+		  </div><img id="fkt-image-0f0-6b9-897" title="" target="_self" src="{{ 'shila-9.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="io0abh"><b>START MY SHILASOURCE ORDER — FROM $39.99</b></div></div><div data-box="true" data-secondsdelay="" id="ipaj5k"><div data-text="text" data-secondsdelay="" id="i6vpd7"><b>ONLY 1,943 JARS LEFT AT THIS PRICE</b></div><div data-box="true" data-secondsdelay="" id="ihxzr8a"><a id="ibzjt83" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-715-e9a-af4" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><div data-box="true" data-secondsdelay="" id="ing4gs"><div data-text="text" data-secondsdelay="" id="i66uxi">With respect and the urgency that comes from almost losing everything,<br><br><b>Dr. Marcus Hale, MD</b><br>Creator, ShilaSource Himalayan Shilajit Resin<br>Former urologist who finally stopped lying to himself<br><br><b>P.S.</b> I just got a text from Emily. <i>"I'm so proud of us. Can't wait to see you tonight ❤️"</i> — The woman who walked out after that fire pit is now the woman who can't wait to come home. That could be you in three weeks. But only if you act now.<br><br><b>P.P.S.</b> Every jar of ShilaSource is third-party tested for purity, potency, and heavy metals. This is the exact resin I dissolve under my tongue every single morning. We did it the right way.<br><br><b>P.P.P.S.</b> Seriously, we're down to 1,943 jars at this price. When I refresh our inventory system and see it below 800, I'm pulling this page. Don't say I didn't warn you.</div></div><div data-box="true" data-secondsdelay="" id="iqw1x6"><a id="ij7hlk" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-8bd-8ae-a82" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div></div><div data-v-796cd32d="" data-v-4b3acc2c="" href="" data-secondsdelay="" id="itsl1b" class="row-column"><div data-v-8b814fa4="" data-v-796cd32d="" data-eid="575210" href="" data-secondsdelay="" id="i3ms0x" class="element-wrapper"></div></div></div></div><div data-box="true" data-secondsdelay="" id="iaxmo"><div data-box="true" data-secondsdelay="" id="iszb2y"><div data-box="true" data-secondsdelay="" id="i4yg4l"><div data-text="text" data-secondsdelay="" id="iqtncf">A revolutionary high-altitude resin is making headlines for fixing 89% of ED cases without pills, injections, or surgery.</div><img id="fkt-image-bb8-0a5-88d" title="" target="_self" src="{{ 'shila-9.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" class="fk-image-defaults fk-disable-lazy disable-fk-lazy" loading="lazy" decoding="async"></div><div data-box="true" data-secondsdelay="" id="i20cl2"><div data-text="text" data-secondsdelay="" id="iuhrmg">After 14 months of research and over 137,235 men in the field, Dr. Marcus Hale's team finally produced the only Himalayan Shilajit on Earth that delivers all three cellular triggers in one jar — fulvic acid transport, 87+ trace minerals, and mitochondrial activation.</div><img title="" target="_self" src="{{ 'shila-23.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-5de-19a-940" class="fk-image-defaults fk-disable-lazy disable-fk-lazy" loading="lazy" decoding="async"><div data-box="true" data-secondsdelay="" id="ie7d56"><div data-text="text" data-secondsdelay="" id="i8awej">Here are the life-changing results men over 40 have experienced :</div><img title="" target="_self" src="{{ 'shila-11.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-14d-3bc-a5d" class="fk-image-defaults fk-disable-lazy disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="i001c9">Individual results may vary*
+		  </div><div data-text="text" data-secondsdelay="" id="iclwxe"><b data-text="text" draggable="true" data-highlightable="1" data-secondsdelay="" id="i6ujx3a">Marcus W.
+			</b>&nbsp;Cleveland, Ohio
+		  </div><div data-text="text" data-secondsdelay="" id="imw8gk"><span><span class="cc-rte-styled">"</span></span><i>ShilaSource brought back morning wood within the first week — and by week three my wife was looking at me like she did when we were dating. The pill machine never gave me anything close to this. I feel like I got my body and my marriage back.</i><span>"</span></div><a id="ib29jv" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-458-b95-9fd" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><div data-box="true" data-secondsdelay="" id="iyzmil"><img title="" target="_self" src="{{ 'shila-25.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-5d4-582-833" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="ieujzj"><i data-text="text" data-secondsdelay="" id="cc-id-kbICWtwIjflo">Individual results may vary*
+			</i></div><div data-text="text" data-secondsdelay="" id="i2ql0k"><b data-text="text" draggable="true" data-highlightable="1" data-secondsdelay="" id="iso3e72">David L.
+			</b>&nbsp;Phoenix, Arizona
+		  </div><div data-text="text" data-secondsdelay="" id="i8x6o9"><span><span class="cc-rte-styled">"</span></span><i>Years of Cialis tolerance and a $400/month TRT routine — and nothing felt natural. Three weeks on ShilaSource and erections returned without thinking about it. The first time it happened spontaneously, my wife cried. So did I, to be honest.</i><span>"</span></div><a id="ih8cnk" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-c69-c95-992" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div><div data-box="true" data-secondsdelay="" id="i3pxa9"><img title="" target="_self" src="{{ 'shila-26.webp' | asset_url }}" href="" align="center" alt="" width="" height="" onclick="" id="fkt-image-57e-4b1-9dd" class="fk-image-defaults disable-fk-lazy" loading="lazy" decoding="async"><div data-text="text" data-secondsdelay="" id="ipo1su"><i data-text="text" data-secondsdelay="" id="cc-id-QoF69ughidod">Individual results may vary*
+			</i></div><div data-text="text" data-secondsdelay="" id="i0skt2"><b data-text="text" draggable="true" data-highlightable="1" data-secondsdelay="" id="i3jnrgg">Robert S.
+			</b>&nbsp;Austin, Texas
+		  </div><div data-text="text" data-secondsdelay="" id="i2qfdo"><span><span class="cc-rte-styled">"</span></span><i>Most ED "solutions" just mask the moment. ShilaSource rebuilt something underneath. After one month I had stamina I haven't felt in 15 years. It's simple, it's discreet, and it finally feels like real progress not just chemical fakery.</i><span>"</span></div><a id="i3c1mk" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-button-8aa-d85-b28" title="next page go!" target="_self" action="route" align="center" animate="" speed="" delay="none" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="" class="btn btn-primary btn-one-style fk-ib29jv">Check Availability Now →</a></div></div></div></div></div></section>
+<!-- v33 Sprint 3 — FAQ accordion (STRUCTURE ONLY — user fills questions + answers) -->
+<section id="shila-faq-v33" class="shila-faq">
+  <h2 class="shila-faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
+  <details class="shila-faq-item"><summary>How long before I notice a difference?</summary><div class="shila-faq-answer">Most men report noticeable shifts in energy and morning drive within the first 2–3 weeks of daily use. The full effect typically settles in around the 6–8 week mark as your body adjusts to consistent trace-mineral intake. The 90-day guarantee is designed to give you a complete cycle to evaluate it for yourself.</div></details>
+  <details class="shila-faq-item"><summary>Is the package discreet?</summary><div class="shila-faq-answer">Yes — every jar ships in a plain brown box with no branding, no product name, and no descriptive labels on the outside. The only visible text is the return address and shipping label. Your privacy is protected from doorstep to inbox.</div></details>
+  <details class="shila-faq-item"><summary>What if it doesn't work for me?</summary><div class="shila-faq-answer">Try ShilaSource for the full 90 days. If you're not satisfied for any reason, just email <a href="mailto:support@wellnessnest.co">support@wellnessnest.co</a> with your order number. We process a full refund within 48 hours — no forms, no "store credit," no questions asked.</div></details>
+  <details class="shila-faq-item"><summary>Are there any conditions where I shouldn't use this?</summary><div class="shila-faq-answer">ShilaSource is a natural Himalayan resin, but every individual is different. If you're currently on prescription medications, managing a chronic health condition, scheduled for surgery, or under 18, consult your healthcare provider before starting any new supplement. Not intended for women who are pregnant or nursing.</div></details>
+  <details class="shila-faq-item"><summary>How long does one jar last?</summary><div class="shila-faq-answer">One jar lasts approximately 30 days at the recommended pea-sized scoop per morning. Dissolve under the tongue or stir into a small glass of warm water or tea. Subscription customers automatically receive a fresh jar before they run out.</div></details>
+  <details class="shila-faq-item"><summary>Should I talk to my doctor first?</summary><div class="shila-faq-answer">We always recommend speaking with your healthcare provider about any supplement you add to your routine — especially if you're managing an existing condition, on prescription medication, or have questions about how Shilajit may interact with your individual health profile.</div></details>
+  <details class="shila-faq-item"><summary>How do I cancel my subscription?</summary><div class="shila-faq-answer">Cancel anytime, no questions asked. Log into your account at <a href="https://wellnessnest.co/account">wellnessnest.co/account</a> and click "Manage Subscription," or email <a href="mailto:support@wellnessnest.co">support@wellnessnest.co</a>. Cancellations are processed within 24 hours, and you'll receive a confirmation email.</div></details>
+  <details class="shila-faq-item"><summary>Do you ship internationally?</summary><div class="shila-faq-answer">We ship within the United States and to most major international destinations. Shipping times and fees vary by country — the exact rate for your address will appear at checkout. Standard US delivery is 3–7 business days; international 7–14 business days.</div></details>
+</section>
+<section id="shila-comments" class="shila-fb-comments"><style id="shila-fb-comments-css">
+.shila-fb-comments{background:#fff;padding:0 0 48px;margin-top:-12px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";color:#050505;}
+.shila-fb-comments *{box-sizing:border-box;}
+.shila-fb-wrap{max-width:680px;margin:0 auto;padding:0 16px;}
+.shila-fb-head{display:flex;align-items:center;justify-content:space-between;padding:0 0 12px;border-bottom:1px solid #e4e6eb;margin-bottom:14px;}
+.shila-fb-head-l{font-size:18px;font-weight:600;color:#050505;}
+.shila-fb-head-r{font-size:13px;color:#65676b;display:flex;align-items:center;gap:4px;cursor:pointer;}
+.shila-fb-head-r svg{width:12px;height:12px;}
+.fbc-input-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:18px;}
+.fbc-input-avatar{width:40px;height:40px;border-radius:50%;background:#e4e6eb;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#65676b;font-size:18px;font-weight:600;}
+.fbc-input-wrap{flex:1;background:#f0f2f5;border-radius:18px;padding:8px 12px;display:flex;align-items:center;}
+.fbc-input-wrap input{flex:1;border:none;background:transparent;outline:none;font:inherit;font-size:15px;color:#050505;padding:4px 0;}
+.fbc-input-wrap input::placeholder{color:#65676b;}
+.fbc-input-icons{display:flex;gap:10px;color:#65676b;margin-left:8px;}
+.fbc-input-icons svg{width:18px;height:18px;cursor:pointer;}
+.fbc-list,.fbc-replies{list-style:none;padding:0;margin:0;}
+.fbc-comment{display:grid;grid-template-columns:40px 1fr;gap:8px;margin-bottom:14px;position:relative;}
+.fbc-comment.fbc-comment-reply{grid-template-columns:32px 1fr;margin-top:8px;}
+.fbc-replies{grid-column:2;padding-left:0;margin-top:6px;}
+.fbc-avatar-link{display:block;flex-shrink:0;}
+.fbc-avatar{width:40px;height:40px;border-radius:50%;display:block;object-fit:cover;background:#e4e6eb;}
+.fbc-comment-reply .fbc-avatar{width:32px;height:32px;}
+.fbc-body{min-width:0;}
+.fbc-bubble{background:#f0f2f5;border-radius:18px;padding:8px 12px;display:inline-block;max-width:100%;}
+.fbc-name{display:block;font-size:13px;font-weight:600;color:#050505;text-decoration:none;line-height:1.3;}
+.fbc-name:hover{text-decoration:underline;}
+.fbc-text{font-size:15px;line-height:1.3333;color:#050505;margin-top:2px;word-wrap:break-word;white-space:pre-wrap;}
+.fbc-attached{margin-top:6px;}
+.fbc-attached img{display:block;max-width:240px;width:100%;border-radius:14px;border:1px solid #ced0d4;}
+.fbc-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:4px 12px 0;font-size:12px;color:#65676b;line-height:1.34;}
+.fbc-action{font-size:12px;font-weight:600;color:#65676b;text-decoration:none;cursor:pointer;}
+.fbc-action:hover{text-decoration:underline;}
+.fbc-action.fbc-liked{color:#1877f2;}
+.fbc-dot{color:#65676b;font-size:12px;}
+.fbc-time{color:#65676b;font-size:12px;cursor:pointer;}
+.fbc-time:hover{text-decoration:underline;}
+.fbc-likes{display:inline-flex;align-items:center;gap:3px;background:#fff;border-radius:10px;padding:1px 6px 1px 0;margin-left:auto;font-size:12px;color:#65676b;box-shadow:0 0 0 1px rgba(0,0,0,0.06);}
+.fbc-thumb{display:block;}
+.fbc-likecount{font-size:12px;color:#65676b;font-weight:400;}
+.fbc-more{font-size:15px;color:#65676b;cursor:pointer;padding:8px 0;display:flex;align-items:center;gap:6px;margin-top:8px;font-weight:600;}
+.fbc-more:hover{text-decoration:underline;}
+.fbc-more svg{width:14px;height:14px;}
+@media (max-width: 600px){
+  .fbc-bubble{max-width:100%;}
+  .fbc-attached img{max-width:100%;}
+  .shila-fb-head-l{font-size:16px;}
+  .shila-fb-wrap{padding:0 12px;}
+}
+</style>
+<div class="shila-fb-wrap">
+  <div class="shila-fb-head">
+    <div class="shila-fb-head-l">23 Comments</div>
+    <div class="shila-fb-head-r">Most relevant
+      <svg viewBox="0 0 12 8" fill="currentColor"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+  <div class="fbc-input-row">
+    <div class="fbc-input-avatar">+</div>
+    <div class="fbc-input-wrap">
+      <input type="text" placeholder="Write a comment…" aria-label="Write a comment">
+      <div class="fbc-input-icons">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-3.5 6c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zm7 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM12 17.5c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+    </div>
+  </div>
+  <ul class="fbc-list">
+    <li class="fbc-comment" id="fbc-c1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-wilma-becker.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Wilma Becker</a>
+          <div class="fbc-text">Has anyone over 45 tried this? My husband says he feels 25 again.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">39 m</span>
+          <span class="fbc-likes" data-base="4">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">4</span>
+          </span>
+        </div>
+      </div>
+      <ul class="fbc-replies">
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c1r1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-maria-schmidt.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Maria Schmidt</a>
+          <div class="fbc-text">My partner started 3 weeks ago — night and day difference. Worth every penny.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c1r1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c1r1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">16 m</span>
+          <span class="fbc-likes" data-base="7">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">7</span>
+          </span>
+        </div>
+      </div>
+      
+    </li></ul>
+    </li>
+    <li class="fbc-comment" id="fbc-c2">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-samantha-logan.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Samantha Logan</a>
+          <div class="fbc-text">I bought at $59 last month and NOW it's $39.99?? That's not fair! 😩</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c2">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c2">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">51 m</span>
+          <span class="fbc-likes" data-base="4">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">4</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment" id="fbc-c3">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-monica-smith.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Monica Smith</a>
+          <div class="fbc-text">How long does discreet shipping take?</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c3">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c3">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">1 h</span>
+          <span class="fbc-likes" data-base="1">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">1</span>
+          </span>
+        </div>
+      </div>
+      <ul class="fbc-replies">
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c3r1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-ilse-bierhals.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Ilse Bierhals</a>
+          <div class="fbc-text">Hey Monica, mine arrived in a plain brown box after about 5 days. Mailman had no idea.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c3r1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c3r1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">24 m</span>
+          <span class="fbc-likes" data-base="2">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">2</span>
+          </span>
+        </div>
+      </div>
+      
+    </li></ul>
+    </li>
+    <li class="fbc-comment" id="fbc-c4">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-steven-durenman.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Steven Durenman</a>
+          <div class="fbc-text">After 2 years of Cialis tolerance, this is the first thing that actually worked. My wife noticed before I did. Saved our marriage, no exaggeration.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c4">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c4">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">1 h</span>
+          <span class="fbc-likes" data-base="6">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">6</span>
+          </span>
+        </div>
+      </div>
+      <ul class="fbc-replies">
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c4r1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-emma-schulz.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Emma Schulz</a>
+          <div class="fbc-text">Hey Christina, you need to tell your husband about this instead of more pills! 💯</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c4r1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c4r1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">2 h</span>
+          <span class="fbc-likes" data-base="2">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">2</span>
+          </span>
+        </div>
+      </div>
+      
+    </li></ul>
+    </li>
+    <li class="fbc-comment" id="fbc-c5">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-christina-miller.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Christina Miller</a>
+          <div class="fbc-text">That's wild — just ordered 2 more, one for my brother-in-law. He won't admit he needs it but I can tell.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c5">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c5">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">1 h</span>
+          <span class="fbc-likes" data-base="3">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">3</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment" id="fbc-c6">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-hank-schneider.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Hank Schneider</a>
+          <div class="fbc-text">Anyone actually had results? I'm 52 and tired of pills letting me down.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c6">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c6">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">2 h</span>
+          <span class="fbc-likes" data-base="2">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">2</span>
+          </span>
+        </div>
+      </div>
+      <ul class="fbc-replies">
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c6r1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-susan-brown.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Susan Brown</a>
+          <div class="fbc-text">My husband, 56, was right where you are. 4 weeks in he's back to spontaneous. Don't wait.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c6r1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c6r1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">2 h</span>
+          <span class="fbc-likes" data-base="5">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">5</span>
+          </span>
+        </div>
+      </div>
+      
+    </li></ul>
+    </li>
+    <li class="fbc-comment" id="fbc-c7">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-gisella-neumann.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Gisella Neumann</a>
+          <div class="fbc-text">My son-in-law recommended this. I was skeptical but the energy difference in him is remarkable. He's like a new man.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c7">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c7">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">3 h</span>
+          <span class="fbc-likes" data-base="1">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">1</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment" id="fbc-c8">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-paula-rowen.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Paula Rowen</a>
+          <div class="fbc-text">Looks promising. Anyone over 60 try this? My husband is 63 and basically gave up years ago.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c8">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c8">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">3 h</span>
+          <span class="fbc-likes" data-base="1">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">1</span>
+          </span>
+        </div>
+      </div>
+      <ul class="fbc-replies">
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c8r1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-anna-white.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Anna White</a>
+          <div class="fbc-text">Packaging was 100% discreet — no labels, no branding. 6 weeks in and the morning wood is unreal. My wife keeps asking what I changed.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c8r1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c8r1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">2 h</span>
+          <span class="fbc-likes" data-base="3">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">3</span>
+          </span>
+        </div>
+      </div>
+      
+    </li></ul>
+    </li>
+    <li class="fbc-comment" id="fbc-c9">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-agnes-graeme.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Agnes Graeme</a>
+          <div class="fbc-text">Just ordered the 3-month introductory price! 🤞</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c9">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c9">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">3 h</span>
+          <span class="fbc-likes" data-base="4">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">4</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment" id="fbc-c10">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-mia-krause.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Mia Krause</a>
+          <div class="fbc-text">How long for shipping? Buying as a surprise for my husband's 50th.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c10">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c10">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">3 h</span>
+          <span class="fbc-likes" data-base="8">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">8</span>
+          </span>
+        </div>
+      </div>
+      <ul class="fbc-replies">
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c10r1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-laura-lehmann.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Laura Lehmann</a>
+          <div class="fbc-text">Hey Mia, mine arrived in about a week. Brown box, no labels — totally discreet.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c10r1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c10r1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">4 h</span>
+          <span class="fbc-likes" data-base="1">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">1</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c10r2">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-emma-shelby.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Emma Shelby</a>
+          <div class="fbc-text">Best gift ever. He'll thank you in three weeks 😉</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c10r2">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c10r2">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">2 h</span>
+          <span class="fbc-likes" data-base="2">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">2</span>
+          </span>
+        </div>
+      </div>
+      
+    </li></ul>
+    </li>
+    <li class="fbc-comment" id="fbc-c11">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-harry-keegan.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Harry Keegan</a>
+          <div class="fbc-text">My buddy at the gym mentioned this. Tried it after a year of avoiding intimacy. The bedroom isn't the only place I feel younger now.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c11">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c11">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">1 h</span>
+          <span class="fbc-likes" data-base="2">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">2</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment" id="fbc-c12">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-laura-fuchs.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Laura Fuchs</a>
+          <div class="fbc-text">Honestly the best decision I've made for our marriage! ❤️</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c12">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c12">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">4 h</span>
+          <span class="fbc-likes" data-base="3">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">3</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment" id="fbc-c13">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-anna-madison.jpg" width="40" height="40" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Anna Madison</a>
+          <div class="fbc-text">I was skeptical — but this is the first thing that delivered. My husband's confidence is BACK. Three of his friends ordered after seeing him.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c13">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c13">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">4 h</span>
+          <span class="fbc-likes" data-base="3">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">3</span>
+          </span>
+        </div>
+      </div>
+      <ul class="fbc-replies">
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c13r1">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-robert-reyes.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Robert Reyes</a>
+          <div class="fbc-text">Had to grab a second jar this week — wife keeps stealing pinches because she sees how it's working for me!</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c13r1">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c13r1">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">5 h</span>
+          <span class="fbc-likes" data-base="3">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">3</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c13r2">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-hanna-lang.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Hanna Lang</a>
+          <div class="fbc-text">OMG SAME! Grabbed 2 jars at $39.99 before they go back up to $59. Best money I've spent on us in years.</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c13r2">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c13r2">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">5 h</span>
+          <span class="fbc-likes" data-base="2">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">2</span>
+          </span>
+        </div>
+      </div>
+      
+    </li>
+    <li class="fbc-comment fbc-comment-reply" id="fbc-c13r3">
+      <a href="#" class="fbc-avatar-link"><img class="fbc-avatar" src="//wellnessnest.co/cdn/shop/t/78/assets/shila-fb-isabella-mayson.jpg" width="32" height="32" alt="" loading="lazy"></a>
+      <div class="fbc-body">
+        <div class="fbc-bubble">
+          <a href="#" class="fbc-name">Isabella Mayson</a>
+          <div class="fbc-text">Just arrived today — starting tomorrow morning. Will report back in 3 weeks. 🤞</div>
+        </div>
+        <div class="fbc-meta">
+          <a href="#" class="fbc-action fbc-like" data-id="c13r3">Like</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action fbc-reply" data-id="c13r3">Reply</a>
+          <span class="fbc-dot">·</span>
+          <a href="#" class="fbc-action">Share</a>
+          <span class="fbc-dot">·</span>
+          <span class="fbc-time">2 h</span>
+          <span class="fbc-likes" data-base="5">
+            <svg class="fbc-thumb" viewBox="0 0 16 16" width="14" height="14"><circle cx="8" cy="8" r="8" fill="#1877f2"/><path fill="#fff" d="M7.2 4.1c.4-.5 1.1-.6 1.5-.2.2.2.3.5.3.8v1.9h2.1c.5 0 .9.4.9.9 0 .1 0 .2-.1.3l-1 2.8c-.1.4-.5.7-.9.7H6.5c-.5 0-.9-.4-.9-.9V6.6c0-.2.1-.4.2-.6l1.4-1.9zM3.5 6.5h1.4v4.9H3.5c-.3 0-.6-.3-.6-.6V7c0-.3.3-.5.6-.5z"/></svg>
+            <span class="fbc-likecount">5</span>
+          </span>
+        </div>
+      </div>
+      
+    </li></ul>
+    </li>
+  </ul>
+  <div class="fbc-more">
+    <svg viewBox="0 0 12 8" fill="currentColor"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    View more comments
+  </div>
+</div>
+<script id="shila-fb-comments-js">
+(function(){
+  var root = document.getElementById('shila-comments');
+  if (!root) return;
+  root.addEventListener('click', function(e){
+    var t = e.target.closest('a.fbc-action.fbc-like, a.fbc-action.fbc-reply, a.fbc-action');
+    if (!t) return;
+    e.preventDefault();
+    if (t.classList.contains('fbc-like')) {
+      var li = t.closest('li.fbc-comment');
+      var likes = li.querySelector('.fbc-likes');
+      var count = likes.querySelector('.fbc-likecount');
+      var base = parseInt(likes.dataset.base, 10) || 0;
+      if (t.classList.contains('fbc-liked')) {
+        t.classList.remove('fbc-liked');
+        count.textContent = base;
+      } else {
+        t.classList.add('fbc-liked');
+        count.textContent = base + 1;
+      }
+    }
+  });
+})();
+</script>
+</section><section id="iylx5"><div data-box="true" data-secondsdelay="" id="invu4"><div data-text="text" data-secondsdelay="" id="io71cg">THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER PROTECTION UPDATE. The information presented on this website is not intended as specific medical advice and is not a substitute for professional treatment or diagnosis. These statements have not been evaluated by the Food and Drug Administration. Any products listed or mentioned above are not intended to diagnose, treat, cure, or prevent any disease. "Results in the Testimonials and Representations may not be typical and individual results may vary. This website is a marketing piece. The owner has a material financial connection to the provider of the goods and services referred to on the site in that it receives compensation for clicks onto the ad or for sales of the product. The story depicted on the website is fictional unless stated otherwise. The results portrayed in the story and in the comments are illustrative, and may not be the results that you achieve using the product. Please consult with your health care practitioner for all your health care needs. The testimonials on this website are individual cases and do not guarantee that you will get the same results.</div><hr id="isirkui" class="fk-line horizontal-line-default"><div data-box="true" data-secondsdelay="" id="ikhkd5l"><a id="fkt-link-a98-7af-a95" data-id="fkt-link-1a4-4a0-a19" title="Enter link text here" target="_self" action="choose" align="center" animate="" speed="" delay="" loop="none" variantvalue="" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" href="https://www.shilasource.com/policies/privacy-policy" offer="" upsell="" quantity="" price="">Privacy Policy</a><a id="fkt-link-160-995-9f1" data-id="fkt-link-303-7a5-ac7" title="Enter link text here" target="_self" action="choose" align="center" animate="" speed="" delay="" loop="none" variantvalue="" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" href="https://www.shilasource.com/policies/terms-of-service" offer="" upsell="" quantity="" price="">Terms of Service</a></div><div data-text="text" data-secondsdelay="" id="i3yylij">© {{yyyy}} All Rights Reserved.&nbsp;
+	  <div draggable="true" data-highlightable="1" data-secondsdelay="" id="i7sdqb9"></div></div></div></section><div data-secondsdelay="" id="ix4a36-4-5" class="fk-row front sticky"><div align="center" data-secondsdelay="" id="igo1za" class="fk-col col max-width"><a id="fkt-link-afa-fb4-a09" href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin" data-id="fkt-link-afa-fb4-a09" title="next page go!" target="_self" action="choose" align="center" animate="none" speed="none" delay="" loop="none" data-secondsdelay="" data-minutesdelay="" replaceproductid="" billnow="false" quantity="" price="" onclick="route(event)" variantvalue="" offer="" upsell="">CHECK AVAILABILITY NOW →</a></div></div><script>
+  document.addEventListener('DOMContentLoaded', function() {
+	const sticky = document.querySelector('.sticky');
+	if (!sticky) {
+	  console.warn("Sticky element with class 'sticky' not found.");
+	  return;
+	}
+	// Set initial styles to hide the sticky without transitions
+	sticky.style.position = 'fixed';
+	sticky.style.bottom = '0';
+	sticky.style.width = '100%';
+	sticky.style.zIndex = '1000';
+	sticky.style.transform = 'translateY(100%)';
+	sticky.style.opacity = '0';
+	sticky.style.transition = 'none';
+	sticky.style.visibility = 'hidden';
+	// Enable transitions after a short delay to avoid flashing on load
+	setTimeout(() => {
+	  sticky.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+	  sticky.style.visibility = 'visible';
+	}
+			   , 100);
+	// Reduced delay for faster perceived load
+	const trigger = document.getElementById('cc-id-FXiygOsSPFH8');
+	if (!trigger) {
+	  console.warn("Trigger element with ID 'cc-id-FXiygOsSPFH8' not found.");
+	  return;
+	}
+	// Use IntersectionObserver for better performance over scroll events
+	const observerOptions = {
+	  root: null, // Viewport
+	  rootMargin: '0px',
+	  threshold: 0 // Detect any intersection change
+	};
+	const observer = new IntersectionObserver((entries) => {
+	  entries.forEach(entry => {
+		if (!entry.isIntersecting && entry.boundingClientRect.bottom > 0) {
+		  // Trigger is below viewport: hide sticky
+		  sticky.style.transform = 'translateY(100%)';
+		  sticky.style.opacity = '0';
+		}
+		else {
+		  // Trigger is intersecting or above viewport: show sticky
+		  sticky.style.transform = 'translateY(0)';
+		  sticky.style.opacity = '1';
+		}
+	  }
+					 );
+	}
+											  , observerOptions);
+	// Start observing
+	observer.observe(trigger);
+	// Handle edge cases like initial load or resize
+	window.addEventListener('resize', () => {
+	  // Re-evaluate on resize (debounced internally by observer)
+	}
+						   );
+	// Optional: Disconnect observer on unload to clean up, but usually not necessary
+  }
+						   );
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+	const element = document.getElementById('ifpzjey');
+	if (!element) {
+	  console.error("Element with ID 'ifpzjey' not found.");
+	  return;
+	}
+	// Set initial text
+	element.textContent = 'City';
+	let attempts = 0;
+	const maxAttempts = 20;
+	// Limit to ~10 seconds to prevent infinite polling
+	const intervalId = setInterval(function () {
+	  attempts++;
+	  const geoData = JSON.parse(sessionStorage.getItem('ccGeoLocationInfo'));
+	  if (geoData && geoData.city) {
+		element.textContent = geoData.city;
+		clearInterval(intervalId);
+	  }
+	  else if (attempts >= maxAttempts) {
+		clearInterval(intervalId);
+		// Keep default 'City' if not found after timeout
+		console.warn("Geo location data not found after maximum attempts.");
+	  }
+	}
+								   , 500);
+  }
+						   );
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+	const element = document.getElementById('ifpzjey');
+	if (!element) {
+	  console.error("Element with ID 'ifpzjey' not found.");
+	  return;
+	}
+	// Set initial text
+	element.textContent = 'City';
+	let attempts = 0;
+	const maxAttempts = 20;
+	// Limit to ~10 seconds to prevent infinite polling
+	const intervalId = setInterval(function () {
+	  attempts++;
+	  const geoData = JSON.parse(sessionStorage.getItem('ccGeoLocationInfo'));
+	  if (geoData && geoData.city) {
+		element.textContent = geoData.city;
+		clearInterval(intervalId);
+	  }
+	  else if (attempts >= maxAttempts) {
+		clearInterval(intervalId);
+		// Keep default 'City' if not found after timeout
+		console.warn("Geo location data not found after maximum attempts.");
+	  }
+	}
+								   , 500);
+  }
+						   );
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+	// 1. Get current date and subtract 3 days
+	const date = new Date();
+	date.setDate(date.getDate() - 3);
+	// 2. Define names for formatting
+	const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	const dayName = days[date.getDay()];
+	const monthName = months[date.getMonth()];
+	const dayNum = date.getDate();
+	const year = date.getFullYear();
+	// 3. Determine suffix (st, nd, rd, or th)
+	let suffix = "th";
+	if (dayNum < 11 || dayNum > 13) {
+	  switch (dayNum % 10) {
+		case 1: suffix = "st";
+		  break;
+		case 2: suffix = "nd";
+		  break;
+		case 3: suffix = "rd";
+		  break;
+	  }
+	}
+	// 4. Combine into the final string
+	const formattedDate = `${dayName}
+. ${monthName}
+. ${dayNum}
+${suffix}
+, ${year}
+`;
+	// 5. Update the element while keeping the 11:11 am EST and the <i> tag
+	const element = document.getElementById('io9yv');
+	if (element) {
+	  const iconHtml = element.querySelector('i').outerHTML;
+	  element.innerHTML = `${formattedDate}
+| 11:11 am EST - ${iconHtml}
+`;
+	}
+  }
+						 );
+</script>
+        <script id="scriptData">
+            window.addEventListener('load', (function(){
+                $("#loading").hide();
+                $("body").removeClass("dom-pending");
+
+                var lazyLoadThrottleTimeout;
+                function recursiveOffsetParentTop(img) {
+                    if (img.offsetParent) {
+                        return img.offsetParent.offsetTop + recursiveOffsetParentTop(img.offsetParent);
+                    } else {
+                        return 0;
+                    }
+                }
+                function lazyLoad() {
+                    if (lazyLoadThrottleTimeout) {
+                        clearTimeout(lazyLoadThrottleTimeout);
+                    }
+                    lazyLoadThrottleTimeout = setTimeout(function () {
+                        const scrollTop = window.pageYOffset;
+                        const buffer = 500;
+                        var loaded = true;
+                        //Lazy loading the images
+                        var lazyLoad = [].slice.call(document.querySelectorAll(".fk-lazy"));
+                        lazyLoad.forEach(function (element) {
+                            if ($(element).is(':visible') && element.offsetTop + recursiveOffsetParentTop(element) < ((window.innerHeight + scrollTop) + buffer)) {
+								if(element.dataset.src) {
+                                    element.src = element.dataset.src;
+                                }
+								element.classList.remove("fk-lazy");
+                            } else {
+                                loaded = false;
+                            }
+                        });
+                        if (loaded) {
+                            document.removeEventListener("scroll", lazyLoad);
+                            window.removeEventListener("resize", lazyLoad);
+                            window.removeEventListener("orientationChange", lazyLoad);
+                        }
+                    }, 20);
+                }
+
+                document.addEventListener("scroll", lazyLoad);
+                window.addEventListener("resize", lazyLoad);
+                window.addEventListener("orientationChange", lazyLoad);
+                lazyLoad();
+            }), false);
+        </script>
+        
+        
+        <div data-cc-link-attribution="true"><a href="https://checkoutchamp.com" title="Powered by CheckoutChamp"></a></div>
+        <script>
+            document.cookie = "X-Source=" + pageData.funnelReferenceId;
+            var key = pageData.funnelReferenceId + "ccQuery";
+            var queryParam = sessionStorage.getItem(key);
+            if(!queryParam) {
+                queryParam = (Math.random() + 1).toString(36).substring(7);
+                sessionStorage.setItem(key, queryParam);
+            }
+
+            var dynamicCartRow = document.querySelector("tr[id='fk-dynamic-cart-row']");
+            if (dynamicCartRow) {
+                dynamicCartRow.style.display = "none";
+            }
+            function getAbsolutePath(url) {
+                const parts = url.split('/');
+                var size = 3;
+                if (parts[2].indexOf("thisisatestsiteonly") !== -1) {
+                    size = 4;
+                }
+                return parts.slice(0, size).join("/");
+            }
+            var fkDynamicScript = document.createElement("script");
+            fkDynamicScript.type = "text/javascript";
+            fkDynamicScript.src = getAbsolutePath(window.location.href)+"/index.js?f="+queryParam;
+            document.head.appendChild(fkDynamicScript);
+        </script>
+        <style cc="true">
+         .fk-hide-on-load {
+             visibility: hidden;
+         }
+         .fk-payment-options-hide-on-load, .fk-display-none-on-load {
+             display: none;
+         }
+         .fk-youtube {
+            background-color: #000;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            min-height: 160px;
+        }
+        .fk-youtube .fk-rm.image {
+            -webkit-background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .fk-youtube .play-button {
+            width: 90px;
+            height: 60px;
+            background-color: #333;
+            box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+            z-index: 1;
+            opacity: 0.8;
+            border-radius: 6px;
+        }
+        .fk-youtube .play-button:before {
+            content: "";
+            border-style: solid;
+            border-width: 15px 0 15px 26.0px;
+            border-color: transparent transparent transparent #fff;
+        }
+        .fk-youtube .fk-rm.image,
+        .fk-youtube .play-button {
+            cursor: pointer;
+        }
+        .fk-youtube .fk-rm.image,
+        .fk-youtube iframe,
+        .fk-youtube .play-button,
+        .fk-youtube .play-button:before {
+            position: absolute;
+        }
+        .fk-youtube .play-button,
+        .fk-youtube .play-button:before {
+            top: 50%;
+            left: 50%;
+            transform: translate3d( -50%, -50%, 0 );
+        }
+        .fk-youtube iframe {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        </style>
+        
+        <!-- Google Tag Manager (noscript) -->
+<noscript class="8dfbd4f2-0505-44f7-8fa7-d50811c759db-fr global-script"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WR57ZD7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><style id="shila-editorial-v24-codex">
+/* ============================================================
+   v24 CODEX EDITORIAL FIXES
+   Applies the 10 issues from GPT-5.5 (xhigh) review:
+   #2 heading hierarchy, #3 subhead style, #4 blockquotes,
+   #5 list rhythm, #7 hidden placeholders, #8 CTA spacing,
+   #9 customer card reorder, #10 FB widget transition.
+   ============================================================ */
+
+/* ---------- Issue #2 — H2 main section headings (refined) ---------- */
+#i5sihc, #ira3zeb, #i1dnu3j, #ikfy6ba,
+#cc-id-J0TkJtWE0lu0, #cc-id-MVjB74x9W8ru, #itksswy,
+#cc-id-CD80XZ3eXphA, #cc-id-tUFK9E1hWHo7, #cc-id-4766VJLHRuDw,
+#cc-id-7sJK9YnOZgfi, #iql61eq, #cc-id-yvRUZQpDB7qd, #cc-id-Eh03zM2Tb8jr,
+#ixmmzzo {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  line-height: 1.22 !important;
+  text-align: center !important;
+  letter-spacing: 0 !important;
+  color: #0a0a0a !important;
+  margin: 48px auto 22px !important;
+  padding: 0 8px !important;
+  max-width: 880px !important;
+}
+@media (max-width:768px){
+  #i5sihc, #ira3zeb, #i1dnu3j, #ikfy6ba,
+  #cc-id-J0TkJtWE0lu0, #cc-id-MVjB74x9W8ru, #itksswy,
+  #cc-id-CD80XZ3eXphA, #cc-id-tUFK9E1hWHo7, #cc-id-4766VJLHRuDw,
+  #cc-id-7sJK9YnOZgfi, #iql61eq, #cc-id-yvRUZQpDB7qd, #cc-id-Eh03zM2Tb8jr,
+  #ixmmzzo {
+    font-size: 24px !important;
+    margin: 36px auto 18px !important;
+  }
+}
+
+/* ---------- Issue #3 — Inline bold subheads styled like H3 ---------- */
+#root-cause-v19, #it15a18, #i7zrbst, #ix5ahng, #i2iva1p {
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin-top: 30px !important;
+  margin-bottom: 10px !important;
+  color: #1a1a1a;
+}
+/* Inline bold lead-ins that act as subheads (Days 1-7 etc., The Pill Route, Path #1 etc.) */
+#i955kux b:first-of-type,
+#i955kux b:nth-of-type(2),
+#i955kux b:nth-of-type(3),
+#cc-id-nTi4nEgxRjDS b {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+#cc-id-nTi4nEgxRjDS b:first-of-type{ margin-top: 0; }
+
+/* ---------- Issue #4 — Blockquote breathing room ---------- */
+#i2700n blockquote,
+#cc-id-Yev87gre1wCt blockquote,
+.fk-body blockquote {
+  border-left: 4px solid #c1272d !important;
+  padding: 18px 24px !important;
+  margin: 28px 0 !important;
+  font-style: italic !important;
+  line-height: 1.55 !important;
+  background: #faf7f2 !important;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+@media (max-width:600px){
+  #i2700n blockquote,
+  #cc-id-Yev87gre1wCt blockquote,
+  .fk-body blockquote {
+    padding: 14px 18px !important;
+    margin: 22px 0 !important;
+    font-size: 16px;
+  }
+}
+
+/* ---------- Issue #5 — Manual numbered/check lists rhythm ---------- */
+#i99fgx9, #cc-id-iDikHciLqBRC, #ihljs5 {
+  line-height: 1.75 !important;
+  padding-left: 4px;
+}
+#i99fgx9 b, #ihljs5 b {
+  display: inline-block;
+  padding-right: 2px;
+}
+
+/* ---------- Issue #7 — Hide empty placeholders ---------- */
+#itsl1b, #i3ms0x, #ijc1c58, #i23otlj, #i53lhn {
+  display: none !important;
+}
+/* Keep the image visible if it has src, but remove wrapping space */
+#fkt-image-011-e86-ab2 { display: none !important; }
+
+/* ---------- Issue #8 — CTA cluster spacing at bottom ---------- */
+.fk-ib29jv {
+  display: block;
+  margin: 24px auto !important;
+}
+#ixtn12u, #ic6gpvg, #ie30p52, #in3xx5f, #iuyd5g, #ihxzr8a, #iqw1x6 {
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
+}
+/* Card CTAs: visual breath between consecutive testimonial cards */
+#ie7d56, #iyzmil, #i3pxa9 {
+  margin-bottom: 36px !important;
+  padding-bottom: 24px !important;
+  border-bottom: 1px solid #ececec;
+}
+#i3pxa9 { border-bottom: none !important; }
+#ie7d56 .fk-ib29jv,
+#iyzmil .fk-ib29jv,
+#i3pxa9 .fk-ib29jv {
+  margin-top: 28px !important;
+}
+
+/* ---------- Issue #9 — Customer card hierarchy reorder
+   Original DOM order in each card:
+     image → disclaimer → name → quote → CTA
+   Desired visual order via flex:
+     image → name → quote → disclaimer → CTA
+   Use flex column + order on the disclaimer node only.
+   ---------- */
+#ie7d56, #iyzmil, #i3pxa9 {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#ie7d56 > *, #iyzmil > *, #i3pxa9 > * {
+  order: 5;
+}
+/* Marcus W card: introduction stays first; image second; name third; quote fourth; disclaimer fifth; CTA last */
+#ie7d56 > #i8awej { order: 1; }
+#ie7d56 > img { order: 2; }
+#ie7d56 > #iclwxe { order: 3; }
+#ie7d56 > #imw8gk { order: 4; }
+#ie7d56 > #i001c9 { order: 6; }
+#ie7d56 > a.fk-ib29jv { order: 7; }
+/* David L card */
+#iyzmil > img { order: 1; }
+#iyzmil > #i2ql0k { order: 2; }
+#iyzmil > #i8x6o9 { order: 3; }
+#iyzmil > #ieujzj { order: 4; }
+#iyzmil > a.fk-ib29jv { order: 5; }
+/* Robert S card */
+#i3pxa9 > img { order: 1; }
+#i3pxa9 > #i0skt2 { order: 2; }
+#i3pxa9 > #i2qfdo { order: 3; }
+#i3pxa9 > #ipo1su { order: 4; }
+#i3pxa9 > a.fk-ib29jv { order: 5; }
+/* Style disclaimer as small footnote rather than prominent */
+#i001c9, #ieujzj, #ipo1su,
+#i001c9 i, #ieujzj i, #ipo1su i,
+#cc-id-kbICWtwIjflo, #cc-id-QoF69ughidod {
+  font-size: 12px !important;
+  color: #888 !important;
+  font-style: italic;
+  margin-top: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* ---------- Issue #10 — FB widget transition ---------- */
+#shila-comments {
+  border-top: 1px solid #e4e6eb !important;
+  margin-top: 40px !important;
+  padding-top: 24px !important;
+}
+#shila-comments .shila-fb-wrap {
+  max-width: 720px !important;
+}
+</style>
+
+<style id="shila-final-spacing-v18">
+/* ============================================================
+   v18 ROOT-CAUSE FIX — Problem C
+   Browser inspection found that the empty gray box between the
+   final "Check Availability Now" CTA and the "23 Comments"
+   heading is NOT padding on #ialx1 (that was already overridden
+   to 8px in v17). It is padding-bottom:180px on #ih8f78.
+
+   shila-funnel.css declares:
+     #ih8f78{ ...; padding:15px 25px 180px; ... }
+   followed by an @media(max-width:480px) override that only
+   resets it on phones. On desktop, the 180px stays put.
+
+   #ih8f78 is the giant article-body wrapper (height ~22861px)
+   containing the entire body copy + CTAs. Its 180px padding-bottom
+   creates the empty gray space between the last in-flow CTA and
+   the bottom of #ialx1 (which is grey #f3f4f6) before the white
+   comments section starts.
+
+   Fix: override #ih8f78 padding-bottom to 8px on all viewports.
+   ============================================================ */
+#ih8f78{padding-bottom:8px !important;}
+
+/* Also tighten the testimonials sub-wrapper chain. The
+   bottom-most testimonial card (#i3pxa9) sits in #iszb2y which
+   has padding-bottom:12px inherited from the cards grid. */
+#iszb2y{padding-bottom:0 !important;margin-bottom:0 !important;}
+
+/* v17 fixes — kept */
+#ialx1{padding-bottom:8px !important;}
+#ipgb6{padding-bottom:0 !important;}
+#i3pxa9,#iyzmil{padding-bottom:0 !important;margin-bottom:0 !important;}
+.shila-fb-comments{margin-top:0 !important;padding-top:8px !important;}
+</style>
+
+<style id="shila-editorial-v24-overrides">
+/* v24 must override v18 for customer-card breathing + FB transition */
+#ie7d56, #iyzmil, #i3pxa9 {
+  margin-bottom: 36px !important;
+  padding-bottom: 24px !important;
+  border-bottom: 1px solid #ececec !important;
+}
+#i3pxa9 { border-bottom: none !important; margin-bottom: 0 !important; }
+#shila-comments.shila-fb-comments {
+  margin-top: 40px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid #e4e6eb !important;
+}
+#shila-comments .shila-fb-wrap { max-width: 720px !important; }
+</style>
+
+
+
+<script id="shila-empty-bullet-cleanup-v18">
+/* ============================================================
+   v18 ROOT-CAUSE FIX — Problem B (defense in depth)
+   We removed the one known empty <li> in #ib00a8g (Last Resort)
+   directly from the markup. But FunnelKonnekt funnels are full
+   of similar placeholder bullets. This sweep removes any <li>
+   whose ONLY descendants are an .fk-bullet-icon-container — i.e.
+   a bullet that has no text body. Runs once after DOM ready and
+   again after lazy-load fires.
+   ============================================================ */
+(function(){
+  function sweep(){
+    document.querySelectorAll('ul.fk-bullet > li').forEach(function(li){
+      var hasText = li.querySelector('[data-text]');
+      var text = (li.textContent || '').replace(/\s+/g,'').trim();
+      if (!hasText && text.length === 0){
+        li.remove();
+      }
+    });
+  }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', sweep);
+  } else {
+    sweep();
+  }
+  // Run once more after window load in case lazy content injects more
+  window.addEventListener('load', function(){ setTimeout(sweep, 100); });
+})();
+</script>
+
+<style id="shila-empty-placeholder-cleanup-v30">
+/* v30 — hide empty app embed containers so they don't reserve layout space */
+#recharge-storefront-experiences:empty,
+.shopify-app-block:empty,
+.shopify-block:empty {
+  display: none !important;
+}
+</style>
+
+<script id="shila-video-lazyload-v30">
+/* v30 — IntersectionObserver lazy-loader for shila-19.mp4 (2.44 MB)
+   Replaces autoplay+src= with data-src; loads + plays only when scrolled into viewport. */
+(function(){
+  var v = document.getElementById('is2i96r');
+  if (!v) return;
+  function load(){
+    if (v.src) return;
+    v.src = v.dataset.src;
+    v.load();
+    // FunnelKonnekt video was autoplay/loop/muted — preserve that intent on lazy hydrate
+    v.setAttribute('autoplay','');
+    var p = v.play();
+    if (p && typeof p.catch === 'function') p.catch(function(){});
+  }
+  if (!('IntersectionObserver' in window)) {
+    load();
+    return;
+  }
+  var obs = new IntersectionObserver(function(entries, o){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      load();
+      o.disconnect();
+    });
+  }, {rootMargin: '300px'});
+  obs.observe(v);
+})();
+</script>
+
+<!-- v33 — Sticky mobile CTA bar (no price; centered) -->
+<div class="shila-sticky-cta" id="shila-sticky-cta-bar">
+  <a href="https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin"
+     class="shila-sticky-btn"
+     onclick="route(event)">
+    Claim Now →
+  </a>
+</div>
+<script id="shila-sticky-cta-js-v32">
+/* Show sticky CTA after 25% scroll */
+(function(){
+  var bar = document.getElementById('shila-sticky-cta-bar');
+  if (!bar) return;
+  function check(){
+    var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+    if (pct > 0.25) {
+      bar.classList.add('shila-visible');
+    } else {
+      bar.classList.remove('shila-visible');
+    }
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  check();
+})();
+</script>
+
+<script id="shila-scroll-events-v32">
+/* v32 Sprint 6 — Scroll engagement events (25/50/75/100% depth) */
+(function(){
+  var fired = {25:false, 50:false, 75:false, 100:false};
+  function check(){
+    var docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    var pct = Math.round(((window.scrollY + window.innerHeight) / docHeight) * 100);
+    [25, 50, 75, 100].forEach(function(t){
+      if (!fired[t] && pct >= t) {
+        fired[t] = true;
+        try { if(window.fbq) fbq('track','ViewContent', {scroll_depth: t + '%', content_name:'ShilaSource Advertorial'}); } catch(_e){}
+        try { if(window.gtag) gtag('event','scroll', {percent_scrolled: t}); } catch(_e){}
+        try { if(window.dataLayer) dataLayer.push({event:'shila_scroll', depth: t, page:'ed-av01-shilasource-shilajit-resin'}); } catch(_e){}
+        try { if(window.TriplePixel) TriplePixel('event','ScrollDepth',{depth: t, page:'ed-av01-shilasource-shilajit-resin'}); } catch(_e){}
+      }
+    });
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  setTimeout(check, 500);  // Initial check in case page is short
+})();
+</script>
+</body></html>

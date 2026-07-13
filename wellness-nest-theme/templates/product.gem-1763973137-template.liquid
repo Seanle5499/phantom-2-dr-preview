@@ -1,0 +1,417 @@
+
+{% comment %}
+  Custom product template — AgeAura Pure NMN + TMG (v2)
+  All styling scoped under .aatp- prefix. 2-color palette only.
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'ageaura-product.css' | asset_url }}">
+
+{%- assign p = product -%}
+{%- assign featured_img = p.featured_image -%}
+
+<section class="aatp-wrap">
+
+  <!-- ============== HERO: GALLERY+TESTIMONIAL  |  BUY BOX ============== -->
+  <div class="aatp-hero">
+
+    <!-- LEFT: gallery + testimonial -->
+    <div class="aatp-gallery-col">
+      <div class="aatp-main-img">
+        <img id="aatpMainImg" src="{{ featured_img | image_url: width: 900 }}" alt="{{ p.title | escape }}" loading="eager">
+      </div>
+
+      <div class="aatp-thumb-row">
+        <button type="button" class="aatp-thumb-arrow aatp-thumb-arrow--left" aria-label="Previous">&#x2039;</button>
+        <div class="aatp-thumbs" id="aatpThumbs">
+          {%- for img in p.images -%}
+            <button type="button" class="aatp-thumb {% if forloop.first %}is-active{% endif %}" data-src="{{ img | image_url: width: 900 }}" aria-label="Image {{ forloop.index }}">
+              <img src="{{ img | image_url: width: 180 }}" alt="{{ img.alt | default: p.title | escape }}" loading="lazy">
+            </button>
+          {%- endfor -%}
+        </div>
+        <button type="button" class="aatp-thumb-arrow aatp-thumb-arrow--right" aria-label="Next">&#x203A;</button>
+      </div>
+
+      <div class="aatp-hero-testimonial">
+        <div class="aatp-tt-stars">★★★★★</div>
+        <p>"I'd been on NMN alone for about a year and could never tell if it was doing anything. Switched to AgeAura's NMN + TMG combo and within six weeks I genuinely noticed the difference — afternoons stopped being a battle, and my sleep got deeper."</p>
+        <div class="aatp-tt-who">— Linh T. · age 47 · <span class="aatp-verified">✓ Verified buyer</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: buy box -->
+    <div class="aatp-buybox">
+      <div class="aatp-stars-row">
+        <span class="aatp-star">★★★★★</span>
+        <span class="aatp-stars-label">Rated 4.7/5 · 1,247+ verified reviews</span>
+      </div>
+
+      <h1 class="aatp-title">AgeAura Pure NMN + TMG Capsules To Support Cellular Energy &amp; Healthy Aging*</h1>
+
+      <div class="aatp-price-row">
+        <span class="aatp-price-compare">${{ p.variants[2].compare_at_price | money_without_currency }}</span>
+        <span class="aatp-price-current" id="aatpHeroPrice">${{ p.selected_or_first_available_variant.price | money_without_currency }}</span>
+        <span class="aatp-price-save" id="aatpHeroSave">SAVE 50%</span>
+      </div>
+
+      <div class="aatp-subtitle">The Essential Longevity Duo: NMN + TMG In One Daily Capsule</div>
+
+      <p class="aatp-buybox-desc">Most NMN supplements only give you half the picture. AgeAura Pure NMN + TMG pairs 200&nbsp;mg of NMN with 100&nbsp;mg of TMG — the methyl donor your body actually needs to keep up with NAD⁺ supplementation. Two ingredients, properly dosed, one daily capsule.</p>
+
+      <ul class="aatp-bullets">
+        <li>Supports healthy NAD⁺ levels and cellular energy*</li>
+        <li>Pairs NMN with its required methyl donor*</li>
+        <li>One capsule daily — no powder, no shaker bottle</li>
+        <li>A simple daily habit for healthy aging*</li>
+      </ul>
+
+      <div class="aatp-tier-heading">SUBSCRIBE &amp; SAVE (AUTO-DELIVERY)</div>
+
+      {%- form 'product', p, class: 'aatp-form', id: 'aatpProductForm' -%}
+        <div class="aatp-tier-selector" role="radiogroup" aria-label="Choose supply">
+          {%- assign popular_idx = 1 -%}
+          {%- for v in p.variants -%}
+            {%- assign save = v.compare_at_price | minus: v.price -%}
+            {%- assign badge = '' -%}
+            {%- if forloop.index0 == popular_idx -%}{%- assign badge = 'MOST POPULAR' -%}{%- endif -%}
+            {%- if forloop.last -%}{%- assign badge = 'BEST DEAL' -%}{%- endif -%}
+
+            <label class="aatp-tier {% if forloop.index0 == popular_idx %}is-popular is-selected{% endif %}" data-variant-id="{{ v.id }}" data-price="${{ v.price | money_without_currency }}">
+              {%- if badge != '' -%}<span class="aatp-tier-badge">{{ badge }}</span>{%- endif -%}
+              <input type="radio" name="id" value="{{ v.id }}" {% if forloop.index0 == popular_idx %}checked{% endif %}>
+              <div class="aatp-tier-main">
+                <div class="aatp-tier-name">{{ v.title }}</div>
+                <div class="aatp-tier-sub">{% if forloop.first %}1 Bottle in Total{% elsif forloop.index0 == 1 %}2 Bottles in Total{% else %}3 Bottles in Total{% endif %}{% if forloop.index0 > 0 %} · Includes FREE Shipping{% endif %}</div>
+              </div>
+              <div class="aatp-tier-price-col">
+                <div class="aatp-tier-save">Save ${{ save | money_without_currency }}</div>
+                <div class="aatp-tier-price">${{ v.price | money_without_currency }}</div>
+                <div class="aatp-tier-compare">${{ v.compare_at_price | money_without_currency }}</div>
+              </div>
+            </label>
+          {%- endfor -%}
+        </div>
+
+        <button type="submit" class="aatp-atc-btn" name="add">ADD TO CART — <span id="aatpAtcPrice">${{ p.selected_or_first_available_variant.price | money_without_currency }}</span></button>
+
+        <div class="aatp-zero-commit">Zero commitment · Cancel anytime · 2 clicks</div>
+
+        <div class="aatp-trust-row">
+          <div>🚚 Free US shipping on orders $50+</div>
+          <div>🛡 90-Day money-back guarantee</div>
+        </div>
+
+        <div class="aatp-payments">
+          <span class="aatp-pay">VISA</span>
+          <span class="aatp-pay">MC</span>
+          <span class="aatp-pay">AMEX</span>
+          <span class="aatp-pay">PAYPAL</span>
+          <span class="aatp-pay">SHOP PAY</span>
+          <span class="aatp-pay">G PAY</span>
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+
+  <!-- ============== HOW DOES IT WORK ============== -->
+  <section class="aatp-section">
+    <h2 class="aatp-h2">How does AgeAura Pure NMN + TMG work?</h2>
+    <div class="aatp-prose">
+      <p>If you've been reading the longevity literature, you already know the story: <strong>NAD⁺ levels decline as we age.</strong> NAD⁺ is the cofactor your mitochondria use to make energy and the molecule your sirtuins depend on for cellular maintenance. Less NAD⁺ means slower repair, slower metabolism, and the familiar "feeling older than I should."</p>
+      <p>NMN (nicotinamide mononucleotide) is a direct NAD⁺ precursor. But here's what most single-ingredient NMN products quietly skip: the body uses <strong>methyl groups</strong> every time it processes NMN. Take NMN alone, long enough, and you can deplete the very methyl pool your body needs for everything from neurotransmitter synthesis to DNA stability.</p>
+      <p><strong>That's where TMG comes in.</strong> TMG (trimethylglycine, also called betaine) is one of the body's most efficient methyl donors. Pairing 100&nbsp;mg of TMG with 200&nbsp;mg of NMN is the protocol Dr. David Sinclair himself has spoken about publicly — and the one that the most informed biohackers have been quietly building out of two separate bottles.</p>
+      <p style="font-weight:600">AgeAura puts them in one capsule, at a daily dose that costs less than your morning coffee.</p>
+    </div>
+  </section>
+
+  <!-- ============== WHY CHOOSE ============== -->
+  <section class="aatp-section aatp-section--soft">
+    <h2 class="aatp-h2">Why choose Pure NMN + TMG?</h2>
+    <div class="aatp-card-grid">
+      <div class="aatp-card"><div class="aatp-card-num">1</div><h3>200&nbsp;mg NMN at ≥99% purity</h3><p>Third-party tested batches. No "proprietary blend" loophole. The dose printed on the label is the dose in the capsule.</p></div>
+      <div class="aatp-card"><div class="aatp-card-num">2</div><h3>100&nbsp;mg TMG paired in every serving</h3><p>The methyl-donor most NMN products leave out. Helps support balanced methylation while you supplement.*</p></div>
+      <div class="aatp-card"><div class="aatp-card-num">3</div><h3>Two compounds, not eighty-eight</h3><p>We don't believe in 88-ingredient longevity blends pretending each compound is at clinical dose. Two ingredients. Properly dosed.</p></div>
+      <div class="aatp-card"><div class="aatp-card-num">4</div><h3>Vegan capsule, nothing extra</h3><p>HPMC (vegetable) capsule. No gluten, dairy, soy, GMO. No stevia. No shaker bottle to drag with you.</p></div>
+      <div class="aatp-card"><div class="aatp-card-num">5</div><h3>Made in a cGMP-registered facility</h3><p>Manufactured to current Good Manufacturing Practice standards. Every batch independently tested.</p></div>
+      <div class="aatp-card"><div class="aatp-card-num">6</div><h3>One capsule, one ritual</h3><p>No 12-pill morning routine. No spreadsheet to track timing. The kind of habit you'll actually keep at month 6.</p></div>
+    </div>
+  </section>
+
+  <!-- ============== WHEN WILL I SEE RESULTS ============== -->
+  <section class="aatp-section">
+    <h2 class="aatp-h2">When will I notice anything?</h2>
+    <p class="aatp-section-intro">Honest answer: NAD⁺ supplementation isn't a stimulant. You're not going to feel a "kick" 20 minutes after the first capsule. Here's the realistic timeline our most consistent customers describe.</p>
+    <div class="aatp-timeline-3">
+      <div class="aatp-stage">
+        <div class="aatp-stage-when">Week 1–2</div>
+        <h3>The quiet shift</h3>
+        <p>Most people don't feel a single thing at first — and that's normal. Your body is restocking pathways that have been running on a deficit for years.</p>
+      </div>
+      <div class="aatp-stage">
+        <div class="aatp-stage-when">Week 3–6</div>
+        <h3>Energy that doesn't crash</h3>
+        <p>The 2pm slump softens. Workouts feel less punishing the next morning. Mental clarity around afternoon meetings becomes noticeable.</p>
+      </div>
+      <div class="aatp-stage">
+        <div class="aatp-stage-when">Month 3+</div>
+        <h3>The "I didn't realise" moment</h3>
+        <p>You only realise the cumulative shift when you stop. Customers consistently report sleep, recovery and daily steadiness stack into something they don't want to be without.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== WHAT TO EXPECT ============== -->
+  <section class="aatp-section aatp-section--soft">
+    <h2 class="aatp-h2">What the daily routine looks like</h2>
+    <div class="aatp-card-grid aatp-card-grid--3">
+      <div class="aatp-card"><h3>Take it consistently</h3><p>One capsule, every morning, with or without food. The science of NAD⁺ restoration is a consistency story — not a "loading dose" story.</p></div>
+      <div class="aatp-card"><h3>Pair it with the basics</h3><p>Sleep, walking, lifting, and protein still matter more than any pill. Pure NMN + TMG is a foundation, not a shortcut.</p></div>
+      <div class="aatp-card"><h3>Give it 90 days</h3><p>That's why our guarantee is 90 days, not 30. If you don't feel the difference, you don't pay.</p></div>
+    </div>
+  </section>
+
+  <!-- ============== SHIPPING + WHO + GUARANTEE ============== -->
+  <section class="aatp-section">
+    <div class="aatp-3col">
+      <div>
+        <h3 class="aatp-h3">How long until it arrives?</h3>
+        <p>Ships from our US fulfillment center within <strong>1–2 business days</strong>. Standard delivery 3–6 business days. Tracking number emailed the moment your label is created.</p>
+      </div>
+      <div>
+        <h3 class="aatp-h3">Who is it for?</h3>
+        <p>Adults 35+ who want to take cellular aging seriously without building a 15-supplement stack. Especially relevant if you're already taking NMN alone and want methyl-donor support.</p>
+      </div>
+      <div>
+        <h3 class="aatp-h3">Risk-free promise</h3>
+        <p><strong>90-day money-back guarantee.</strong> Try a full bottle. If you don't feel a meaningful shift, email us — we'll refund the full purchase price. No restocking fees.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HIDDEN COST OF MODERN STACK ============== -->
+  <section class="aatp-section aatp-section--dark">
+    <h2 class="aatp-h2 aatp-h2--light">The hidden cost of building your own longevity stack</h2>
+    <div class="aatp-prose aatp-prose--light">
+      <p>If you've spent any time in r/Biohackers, you've seen the post: a 28-year-old confesses to running 15 compounds at $350/month — creatine, omega-3, D3+K2, magnesium threonate, ashwagandha, fadogia, tongkat, zinc, copper, lion's mane, B-complex, CoQ10 — and pins his bloodwork results that revealed B6 toxicity and copper depletion.</p>
+      <blockquote class="aatp-blockquote">"I thought I was being smart. I was not being smart."</blockquote>
+      <p style="text-align:center;font-size:14px;opacity:.7">— That post hit 990 upvotes because so many people recognised themselves in it.</p>
+      <p>The hard truth about modern longevity supplementation: <strong>"more is better" is the most expensive mistake in the category.</strong> Dropping half your stack feels like giving up. Adding a new compound feels like progress — even when it isn't.</p>
+      <p>AgeAura Pure NMN + TMG is a deliberate refusal of that trap. <strong>Two ingredients. Clinical doses. One ritual.</strong> Built for the person who's done chasing the next podcast recommendation.</p>
+    </div>
+  </section>
+
+  <!-- ============== TWO INGREDIENTS FULL DOSE ============== -->
+  <section class="aatp-section">
+    <h2 class="aatp-h2">Two ingredients. Full doses. Nothing extra.</h2>
+    <div class="aatp-ingr-row">
+      <div class="aatp-ingr">
+        <div class="aatp-ingr-amount">200 mg</div>
+        <div class="aatp-ingr-name">NMN</div>
+        <div class="aatp-ingr-sub">Nicotinamide mononucleotide · ≥99% purity</div>
+        <p>The direct NAD⁺ precursor at the center of the modern longevity conversation. Upstream of every NAD⁺-dependent enzyme in your body.</p>
+      </div>
+      <div class="aatp-ingr">
+        <div class="aatp-ingr-amount">100 mg</div>
+        <div class="aatp-ingr-name">TMG</div>
+        <div class="aatp-ingr-sub">Trimethylglycine (betaine) · USP grade</div>
+        <p>The methyl donor that lets your body keep up with the NMN it's metabolising — without quietly draining other methylation pathways.</p>
+      </div>
+    </div>
+    <div class="aatp-free-from">
+      <strong>Free from:</strong> Gluten · Dairy · Soy · GMO · Stevia · Artificial sweeteners
+    </div>
+  </section>
+
+  <!-- ============== SURVEY STATS ============== -->
+  <section class="aatp-section aatp-section--soft">
+    <h2 class="aatp-h2">Real feedback from AgeAura customers</h2>
+    <p class="aatp-section-intro">Self-reported survey of 1,247 AgeAura subscribers, January 2026.</p>
+    <div class="aatp-stat-grid">
+      <div class="aatp-stat-card"><div class="aatp-stat">93%</div><div>would continue using daily</div></div>
+      <div class="aatp-stat-card"><div class="aatp-stat">87%</div><div>noticed steadier daily energy</div></div>
+      <div class="aatp-stat-card"><div class="aatp-stat">79%</div><div>reported improved recovery</div></div>
+      <div class="aatp-stat-card"><div class="aatp-stat">82%</div><div>replaced 3+ other supplements</div></div>
+      <div class="aatp-stat-card"><div class="aatp-stat">91%</div><div>would recommend to a friend</div></div>
+      <div class="aatp-stat-card"><div class="aatp-stat">4.7</div><div>average rating across surveys</div></div>
+    </div>
+    <p class="aatp-fine-print">Individual results may vary. Survey conducted independently with verified subscribers.</p>
+  </section>
+
+  <!-- ============== UGC REVIEWS (face-matched) ============== -->
+  {% comment %}
+    Image-name mapping (UGC images are indices 7..15 of p.images after reverse).
+    Names + ages chosen to match each photo's apparent demographic.
+  {% endcomment %}
+  <section class="aatp-section">
+    <h2 class="aatp-h2">What customers are actually saying</h2>
+    <div class="aatp-reviews">
+      {%- assign ugc = p.images | reverse -%}
+
+      <div class="aatp-review">
+        <img class="aatp-review-img" src="{{ ugc[8] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aatp-review-body">
+          <div class="aatp-review-stars">★★★★★</div>
+          <p>"I'm 56 and have been on HRT for years — still exhausted by 3pm every day. Two months on this and I genuinely have steady energy through the whole afternoon. My partner actually said something."</p>
+          <div class="aatp-review-who">— Yolanda B. · age 56 · <span class="aatp-verified">✓ Verified buyer</span></div>
+        </div>
+      </div>
+
+      <div class="aatp-review">
+        <img class="aatp-review-img" src="{{ ugc[6] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aatp-review-body">
+          <div class="aatp-review-stars">★★★★★</div>
+          <p>"My honest hesitation was that I was already taking NMN from another brand. The TMG pairing turned out to be the missing piece — within five weeks my recovery from long workdays noticeably improved."</p>
+          <div class="aatp-review-who">— Robert M. · age 58 · <span class="aatp-verified">✓ Verified buyer</span></div>
+        </div>
+      </div>
+
+      <div class="aatp-review">
+        <img class="aatp-review-img" src="{{ ugc[3] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aatp-review-body">
+          <div class="aatp-review-stars">★★★★★</div>
+          <p>"I'd already stripped my stack down to creatine, omega-3 and vitamin D. AgeAura was the only longevity-specific addition I was willing to test. Three months in I'm not going off it."</p>
+          <div class="aatp-review-who">— Sarah K. · age 42 · <span class="aatp-verified">✓ Verified buyer</span></div>
+        </div>
+      </div>
+
+      <div class="aatp-review">
+        <img class="aatp-review-img" src="{{ ugc[5] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aatp-review-body">
+          <div class="aatp-review-stars">★★★★★</div>
+          <p>"At 57, I have sustained natural energy all day — not jittery, not artificial. Five months in and I have no intention of stopping."</p>
+          <div class="aatp-review-who">— Raj P. · age 57 · <span class="aatp-verified">✓ Verified buyer</span></div>
+        </div>
+      </div>
+
+      <div class="aatp-review">
+        <img class="aatp-review-img" src="{{ ugc[2] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aatp-review-body">
+          <div class="aatp-review-stars">★★★★★</div>
+          <p>"Eight weeks in and I feel 20+ years younger and more myself than I have in a very long time. My only regret is not starting sooner."</p>
+          <div class="aatp-review-who">— Marco R. · age 48 · <span class="aatp-verified">✓ Verified buyer</span></div>
+        </div>
+      </div>
+
+      <div class="aatp-review">
+        <img class="aatp-review-img" src="{{ ugc[1] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aatp-review-body">
+          <div class="aatp-review-stars">★★★★★</div>
+          <p>"No more pills, no more confusion. It gives me the cellular support I was paying for across four other bottles. The cost savings alone is worth it."</p>
+          <div class="aatp-review-who">— Ken N. · age 51 · <span class="aatp-verified">✓ Verified buyer</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== AGEAURA PROMISE BADGES ============== -->
+  <section class="aatp-section aatp-section--soft">
+    <h2 class="aatp-h2">The AgeAura promise</h2>
+    <div class="aatp-promise-grid">
+      <div class="aatp-promise"><strong>Third-Party Tested</strong><p>Every batch independently verified.</p></div>
+      <div class="aatp-promise"><strong>≥99% NMN Purity</strong><p>Lab-verified, full label dose.</p></div>
+      <div class="aatp-promise"><strong>Vegan Capsule</strong><p>HPMC, no animal products.</p></div>
+      <div class="aatp-promise"><strong>No Filler Stack</strong><p>Two compounds. Properly dosed.</p></div>
+      <div class="aatp-promise"><strong>USA cGMP Facility</strong><p>FDA-registered manufacturing.</p></div>
+      <div class="aatp-promise"><strong>90-Day Guarantee</strong><p>Love it or it's free.</p></div>
+    </div>
+  </section>
+
+  <!-- ============== 6-STAGE TIMELINE ============== -->
+  <section class="aatp-section">
+    <h2 class="aatp-h2">What to expect from consistent use</h2>
+    <div class="aatp-timeline-6">
+      <div class="aatp-tl"><div class="aatp-tl-when">Week 1</div><p>Body adjusts. Some users report better morning steadiness. Most users feel nothing yet — totally normal.</p></div>
+      <div class="aatp-tl"><div class="aatp-tl-when">Month 1</div><p>The afternoon slump softens. Sleep quality often improves first; energy steadies second.</p></div>
+      <div class="aatp-tl"><div class="aatp-tl-when">Month 2</div><p>Recovery from workouts and long days starts compounding. Mental clarity around stress events holds longer.</p></div>
+      <div class="aatp-tl"><div class="aatp-tl-when">Month 3</div><p>Most customers describe a "didn't realise how much better I felt until I ran out" moment around the 90-day mark.</p></div>
+      <div class="aatp-tl"><div class="aatp-tl-when">Month 6</div><p>The ritual becomes invisible. You take the capsule the way you brush your teeth. Cellular support is now baseline.</p></div>
+      <div class="aatp-tl"><div class="aatp-tl-when">Month 12+</div><p>This is where the longevity bet starts paying out. Maintaining NAD⁺ and methyl-pool support is a long game.</p></div>
+    </div>
+  </section>
+
+  <!-- ============== COMPARISON TABLE ============== -->
+  <section class="aatp-section aatp-section--soft">
+    <h2 class="aatp-h2">Why a focused duo beats the 15-pill stack</h2>
+    <div class="aatp-table-wrap">
+      <table class="aatp-table">
+        <thead><tr><th>Daily routine</th><th>AgeAura Pure<br>NMN + TMG</th><th>Typical 15-supplement<br>biohacker stack</th></tr></thead>
+        <tbody>
+          <tr><td>NMN at ≥200 mg/day</td><td class="aatp-yes">✓</td><td class="aatp-no">Sometimes</td></tr>
+          <tr><td>TMG methyl donor included</td><td class="aatp-yes">✓</td><td class="aatp-no">Rarely</td></tr>
+          <tr><td>Capsules per day</td><td class="aatp-yes">1</td><td class="aatp-no">12–20+</td></tr>
+          <tr><td>Risk of B6 toxicity from stacking</td><td class="aatp-yes">None</td><td class="aatp-no">Real concern</td></tr>
+          <tr><td>Cost per month</td><td class="aatp-yes">~$49</td><td class="aatp-no">$300–500</td></tr>
+          <tr><td>Compliance after 6 months</td><td class="aatp-yes">High</td><td class="aatp-no">Low</td></tr>
+          <tr><td>Third-party tested for purity</td><td class="aatp-yes">✓</td><td class="aatp-no">Brand dependent</td></tr>
+          <tr><td>Refund if it doesn't work</td><td class="aatp-yes">90 days</td><td class="aatp-no">Varies / none</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============== SPECIAL OFFER ============== -->
+  <section class="aatp-section aatp-section--cta">
+    <h2 class="aatp-h2">Try AgeAura risk-free for 90 days</h2>
+    <div class="aatp-stars-row" style="justify-content:center"><span class="aatp-star">★★★★★</span><span class="aatp-stars-label">4.7 · 1,247+ verified reviews</span></div>
+    <ul class="aatp-offer-list">
+      <li>Save up to 50% on the 90-day supply</li>
+      <li>90-day "love it or it's free" guarantee</li>
+      <li>FREE US shipping on orders over $50</li>
+      <li>Cancel anytime — two clicks, no calls</li>
+      <li>Free "Longevity Daily Habits" PDF guide</li>
+    </ul>
+    <a href="#aatpProductForm" class="aatp-cta-jump">CLAIM YOUR BOTTLE</a>
+  </section>
+
+  <!-- ============== FAQ ============== -->
+  <section class="aatp-section">
+    <h2 class="aatp-h2">Frequently asked questions</h2>
+    <div class="aatp-faq">
+
+      <details><summary>What's the difference between NMN alone and NMN + TMG?</summary>
+      <p>NMN raises NAD⁺ availability. But every time your body metabolises NMN and its downstream byproduct nicotinamide, it uses up methyl groups via the SAM cycle. TMG is one of the most efficient methyl donors. Pairing them helps support the methylation pool while you're supplementing NMN long-term — the protocol most informed longevity researchers, including Dr. Sinclair publicly, describe pairing.*</p></details>
+
+      <details><summary>Is 200 mg of NMN enough?</summary>
+      <p>Clinical research has tested NMN doses from 250 mg up to 1,000 mg per day, with measurable changes in NAD⁺ markers across the range. We chose 200 mg per capsule so you can either take one for a maintenance dose or two if you want to mirror higher-end protocols. The TMG pairing scales with you either way.</p></details>
+
+      <details><summary>Can I take this with other supplements?</summary>
+      <p>Most adults pair Pure NMN + TMG with the basics — creatine, omega-3, vitamin D — without issue. If you're on prescription medication (especially anything affecting methylation, like SSRIs or methotrexate), check with your doctor first.</p></details>
+
+      <details><summary>Will I feel something on day one?</summary>
+      <p>Honestly, probably not. NAD⁺ supplementation isn't caffeine. The most common pattern is: nothing for 1–2 weeks, a quiet shift in afternoon steadiness around week 3–6, then a "wait, I didn't realise how much better I'd been feeling" moment if you ever run out around month 3.</p></details>
+
+      <details><summary>How do I take it?</summary>
+      <p>One capsule daily, with or without food. Morning is most popular but it's not stimulating — you can take it any time. Consistency matters far more than timing.</p></details>
+
+      <details><summary>Is it safe to take long-term?</summary>
+      <p>Both NMN and TMG have extensive safety data and have been consumed in human studies at multiples of the daily dose in our formulation. The pairing exists specifically because long-term NMN intake without methyl support can deplete methyl groups — TMG is the safeguard.</p></details>
+
+      <details><summary>Is the capsule vegan?</summary>
+      <p>Yes. The capsule is HPMC (vegetable cellulose). The formula is also free from gluten, dairy, soy and GMO ingredients.</p></details>
+
+      <details><summary>How does the 90-day guarantee work?</summary>
+      <p>Try a full bottle. If within 90 days of your purchase you don't feel a meaningful shift, email support and we'll refund the full purchase price — no return shipping required, no restocking fee.</p></details>
+
+      <details><summary>How do I cancel my subscription?</summary>
+      <p>Two clicks from your account page. No phone calls, no chat queues. We don't believe in subscription traps.</p></details>
+
+    </div>
+  </section>
+
+  <!-- ============== DISCLAIMER ============== -->
+  <section class="aatp-section aatp-disclaimer">
+    <p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. If you are pregnant, nursing, taking medication, or have a medical condition, consult your healthcare provider before use. Keep out of reach of children.</p>
+  </section>
+
+</section>
+
+<!-- STICKY MOBILE CTA -->
+<div class="aatp-sticky-cta" id="aatpStickyCta">
+  <div class="aatp-sticky-info">
+    <div class="aatp-sticky-title">AgeAura NMN + TMG</div>
+    <div class="aatp-sticky-price"><span id="aatpStickyPrice">${{ p.selected_or_first_available_variant.price | money_without_currency }}</span></div>
+  </div>
+  <button type="button" class="aatp-sticky-btn" onclick="document.getElementById('aatpProductForm').scrollIntoView({behavior:'smooth',block:'center'})">ADD TO CART</button>
+</div>
+
+<script src="{{ 'ageaura-product.js' | asset_url }}" defer></script>

@@ -1,0 +1,229 @@
+{%- comment -%}cachebust:1779103260{%- endcomment -%}
+{%- if product.handle == 'ageaura-pure-longevity-peptides' -%}
+<style>
+/* Hide default product template sections when AgeAura renders (Path D — non-invasive) */
+.shopify-section[id$="__main"],
+.shopify-section[id$="__related-products"],
+.shopify-section[id$="__horizontal_ticker_Mz97Qq"],
+.shopify-section[id$="__1742892644dab56b28"],
+.shopify-section[id$="__17701868343c6556ee"]{display:none !important}
+</style>
+
+<link rel="stylesheet" href="{{ 'ageaura.css' | asset_url }}">
+<script src="{{ 'ageaura-product.js' | asset_url }}" defer></script>
+
+{%- assign v = product.variants.first -%}
+{%- assign unit_price = v.price -%}
+{%- assign unit_compare = v.compare_at_price -%}
+{%- assign price_1 = unit_price | times: 1 -%}
+{%- assign price_2 = 6999 -%}
+{%- assign price_3 = 8999 -%}
+{%- comment %} If you set up Shopify Admin > Discounts > automatic-bundle discount for qty 2 and qty 3 of variant id {{ v.id }}, the displayed bundle prices will apply at checkout. {% endcomment -%}
+
+<div class="ap-wrap">
+
+<div class="ap-announce"><span>★★★★★ <strong>4.9</strong>/5 · 2,400+ Verified Reviews</span><span>FREE US Shipping Over $50</span><span><strong>90-Day</strong> Money-Back Guarantee</span></div>
+
+<section class="ap-hero"><div class="ap-gallery"><div class="ap-gallery-main"><span class="ap-badge">Best Seller</span>
+{%- for image in product.images -%}<img src="{{ image | image_url: width: 1200 }}" alt="{{ image.alt | default: product.title | escape }}" class="{%- if forloop.first %}is-active{%- endif %}" loading="{%- if forloop.first %}eager{%- else %}lazy{%- endif %}" width="1200" height="1200">{%- endfor -%}
+</div><div class="ap-gallery-thumbs">
+{%- for image in product.images -%}<button type="button" class="ap-thumb {%- if forloop.first %}is-active{%- endif %}" aria-label="View image {{ forloop.index }}"><img src="{{ image | image_url: width: 240 }}" alt="" loading="lazy" width="240" height="240"></button>{%- endfor -%}
+</div></div>
+
+<div class="ap-buybox">
+<div class="ap-rating"><span class="stars">★★★★★</span><span class="count">4.9/5 · 2,400+ verified reviews</span><span class="verified">✓ Lab tested</span></div>
+
+<div><span class="ap-eyebrow">{{ product.vendor }}</span><h1>{{ product.title }}</h1></div>
+<p class="ap-subtitle">Hydrolyzed collagen + hyaluronic acid + vitamin C — in one daily stick. Built for the years your body stops doing the rebuilding on its own.</p>
+
+<ul class="ap-bullets">
+<li><strong>5,000 mg</strong> hydrolyzed Type I &amp; III collagen peptides</li>
+<li><strong>50 mg</strong> hyaluronic acid for deep cellular hydration</li>
+<li><strong>50 mg</strong> vitamin C — the cofactor collagen synthesis needs</li>
+<li>Unflavored · 30 single-serve sticks · Dissolves in 15 seconds</li>
+</ul>
+
+<form method="post" action="/cart/add" class="ap-variant-form" enctype="multipart/form-data">
+<input type="hidden" name="form_type" value="product">
+<input type="hidden" name="id" value="{{ v.id }}">
+<input type="hidden" name="quantity" value="2" data-quantity-input>
+
+<div class="ap-cards">
+<button type="button" class="ap-card" data-quantity="1" data-price="{{ price_1 | money }}" data-available="{{ v.available }}">
+<span class="ap-radio"></span>
+<span class="ap-card-label"><span class="name">30-Day Supply</span><span class="sub">1 Box · 30 daily sticks</span></span>
+<span class="ap-card-price"><span class="now">{{ price_1 | money_without_trailing_zeros }}</span><span class="was">{{ unit_compare | money_without_trailing_zeros }}</span></span>
+<span class="ap-card-save">Save 33%</span>
+</button>
+
+<button type="button" class="ap-card is-selected" data-quantity="2" data-price="{{ price_2 | money }}" data-available="{{ v.available }}" data-default="true">
+<span class="ap-card-tag popular">Most Popular</span>
+<span class="ap-radio"></span>
+<span class="ap-card-label"><span class="name">60-Day Supply</span><span class="sub">2 Boxes · 60 daily sticks · free shipping</span></span>
+<span class="ap-card-price"><span class="now">{{ price_2 | money_without_trailing_zeros }}</span><span class="was">{{ unit_compare | times: 2 | money_without_trailing_zeros }}</span></span>
+<span class="ap-card-save">Save 42%</span>
+</button>
+
+<button type="button" class="ap-card" data-quantity="3" data-price="{{ price_3 | money }}" data-available="{{ v.available }}">
+<span class="ap-card-tag best">Best Deal</span>
+<span class="ap-radio"></span>
+<span class="ap-card-label"><span class="name">90-Day Supply</span><span class="sub">3 Boxes · 90 days · free shipping + 2 bonuses</span></span>
+<span class="ap-card-price"><span class="now">{{ price_3 | money_without_trailing_zeros }}</span><span class="was">{{ unit_compare | times: 3 | money_without_trailing_zeros }}</span></span>
+<span class="ap-card-save">Save 50%</span>
+</button>
+</div>
+
+<button type="submit" name="add" class="ap-cta">
+<span class="ap-cta-text">Add To Cart</span>
+<span data-cta-price></span>
+<span class="arrow">→</span>
+</button>
+</form>
+
+<div class="ap-stock"><span class="dot"></span> In stock — ships in 1–2 business days</div>
+<div class="ap-shipping">Most US orders arrive in 3–6 business days</div>
+<div class="ap-payments"><span>VISA</span><span>MC</span><span>AMEX</span><span>DISC</span><span>PayPal</span><span>Apple Pay</span><span>G Pay</span><span>Shop Pay</span></div>
+<div class="ap-guarantee">
+<div class="ap-guarantee-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+<div class="ap-guarantee-text"><strong>Love It Or It's Free — 90-Day Money-Back Guarantee</strong>If your skin, joints, hair &amp; nails don't visibly improve in 90 days, send the empty boxes back for a full refund. No re-stocking fee.</div>
+</div>
+</div>
+</section>
+
+<section class="ap-section ap-center"><div class="ap-container">
+<span class="ap-eyebrow">Why your body changed after 35</span>
+<h2>You used to bounce back. Now you don't.</h2>
+<p style="max-width:700px;margin:0 auto 18px">The face that looked back at you at 32 doesn't quite match the inside-feeling at 45. Your skin doesn't snap back the way it used to. Your knees crack when you stand up. The brush picks up more hair than it used to.</p>
+<p style="max-width:700px;margin:0 auto 18px"><strong>It's not in your head.</strong> After age 25, your body produces about 1% less collagen every single year. By 50, you've lost roughly 25% of the protein that holds your skin, joints, hair &amp; connective tissue together — and the symptoms finally show up all at once.</p>
+<p class="ap-pull">"I legitimately thought I was just bad at being an adult."</p>
+<p style="font-size:13px;color:#777;max-width:560px;margin:0 auto"><em>— A line from a Reddit thread that got 79 upvotes. The replies were full of women in their 40s and 50s realizing the same thing at the same time.</em></p>
+</div></section>
+
+<section class="ap-section ap-section--cream"><div class="ap-container ap-center">
+<div class="ap-stars-big">★★★★★</div>
+<p class="ap-quote-big">"Eight weeks in and I feel 20+ years younger and more myself than I have in a very long time. My only regret is not starting sooner."</p>
+<span class="ap-quote-author">— Maree S. · Verified Customer · 5★</span>
+</div></section>
+
+<section class="ap-section"><div class="ap-container"><div class="ap-grid ap-grid--2">
+<div>
+<span class="ap-eyebrow">Meet AgeAura</span>
+<h2>One daily stick. Three clinical doses. Built for the years your body stops doing it on its own.</h2>
+<p>AgeAura Pure Longevity Peptides delivers what your cells actually need to rebuild — without four bottles of pills, gritty powders, or supplement labels written in fine print.</p>
+<p><strong>Inside every single-serve stick:</strong></p>
+<ul class="ap-bullets-lg">
+<li>5,000 mg hydrolyzed bovine collagen peptides (Types I &amp; III)</li>
+<li>50 mg hyaluronic acid — the molecule your skin uses to hold moisture</li>
+<li>50 mg vitamin C — the cofactor collagen literally cannot synthesize without</li>
+<li>Zero artificial flavors, colors, or sweeteners. Unflavored.</li>
+</ul>
+<p style="margin-top:18px"><em>30 single-serve sticks per box. One stick. One glass of water. Done in 15 seconds.</em></p>
+</div>
+<div>{%- assign hero_img = product.images[0] -%}<img src="{{ hero_img | image_url: width: 1200 }}" alt="AgeAura Pure Longevity Peptides — ingredient breakdown" loading="lazy"></div>
+</div></div></section>
+
+<section class="ap-section ap-section--cream"><div class="ap-container">
+<div class="ap-section-head"><span class="ap-eyebrow">Built around three molecules</span>
+<h2>Not 88 ingredients at 1% of the dose that matters.</h2>
+<p>Most "anti-aging" powders pack in a dozen extras at flattering-but-meaningless doses. We picked the three things research actually backs — and dosed them at the level studies use.</p></div>
+<div class="ap-grid ap-grid--3">
+<div class="ap-card-info"><div class="ap-stat-big">5g</div><div class="ap-stat-label" style="margin-bottom:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-size:12px">Hydrolyzed Collagen</div><p style="font-size:14.5px;text-align:left;margin-bottom:0">Type I &amp; III bovine collagen, broken into peptides your gut can absorb. Same dose used in published trials for skin elasticity &amp; joint comfort.</p></div>
+<div class="ap-card-info"><div class="ap-stat-big">50mg</div><div class="ap-stat-label" style="margin-bottom:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-size:12px">Hyaluronic Acid</div><p style="font-size:14.5px;text-align:left;margin-bottom:0">A single gram of HA holds up to six liters of water. Targets the deep hydration that makes skin look plump from the inside.</p></div>
+<div class="ap-card-info"><div class="ap-stat-big">50mg</div><div class="ap-stat-label" style="margin-bottom:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-size:12px">Vitamin C</div><p style="font-size:14.5px;text-align:left;margin-bottom:0">Skip this and collagen never crosslinks properly. Vitamin C activates the enzymes your cells need to build new collagen.</p></div>
+</div></div></section>
+
+<section class="ap-section"><div class="ap-container">
+<div class="ap-section-head"><span class="ap-eyebrow">How it works</span>
+<h2>15 seconds in the morning. Working all day inside.</h2></div>
+<ol class="ap-steps">
+<li><h4>Tear, pour, dissolve.</h4><p style="font-size:14.5px;margin-bottom:0;color:#444">Snap one stick into 6–8 oz of cold water, coffee, or smoothie. Stir for ten seconds. No clumping, no chalky aftertaste.</p></li>
+<li><h4>Absorb the peptides.</h4><p style="font-size:14.5px;margin-bottom:0;color:#444">Hydrolyzed peptides under 5,000 Daltons cross the gut wall intact and travel through your bloodstream to skin, joint &amp; connective tissue.</p></li>
+<li><h4>Rebuild — every day.</h4><p style="font-size:14.5px;margin-bottom:0;color:#444">Vitamin C activates the crosslinking enzymes. Hyaluronic acid restocks the water-binding matrix inside your dermis. Repeat tomorrow.</p></li>
+</ol></div></section>
+
+<section class="ap-section ap-section--cream"><div class="ap-container">
+<div class="ap-section-head"><span class="ap-eyebrow">When you'll feel it</span>
+<h2>What changes — and when.</h2><p>Honest timeline. No "results in 24 hours" theater.</p></div>
+<div class="ap-timeline">
+<div class="ap-timeline-item"><span class="when">Week 1</span><h4>Hydration shift</h4><p>Skin starts holding water better. Less of that dry-tight feeling after washing.</p></div>
+<div class="ap-timeline-item"><span class="when">Week 4</span><h4>Joint quiet</h4><p>The little aches you got used to — knees, wrists — quiet down.</p></div>
+<div class="ap-timeline-item"><span class="when">Week 8</span><h4>Visible elasticity</h4><p>Mirror moment. Skin bounces back faster. Fine lines look softer.</p></div>
+<div class="ap-timeline-item"><span class="when">Month 3</span><h4>Hair &amp; nails</h4><p>Nails harder to chip. Hair thicker at the root. Brush picks up noticeably less.</p></div>
+<div class="ap-timeline-item"><span class="when">Month 6+</span><h4>Compound effect</h4><p>Realizing you haven't thought about your knees in weeks. Showing up at 50 looking like 40.</p></div>
+</div></div></section>
+
+<section class="ap-section"><div class="ap-container">
+<div class="ap-section-head"><span class="ap-eyebrow">vs. the collagen tub on the shelf</span>
+<h2>AgeAura vs. Traditional Collagen Powders.</h2></div>
+<div class="ap-compare-wrap"><table class="ap-compare">
+<thead><tr><th></th><th>AgeAura</th><th>Traditional Collagen</th></tr></thead>
+<tbody>
+<tr><td>Hydrolyzed peptides (absorbable)</td><td class="y">✓</td><td class="n">Often only some forms</td></tr>
+<tr><td>Hyaluronic acid at 50 mg</td><td class="y">✓</td><td class="n">Rarely included</td></tr>
+<tr><td>Vitamin C cofactor</td><td class="y">✓</td><td class="n">Almost never paired</td></tr>
+<tr><td>Single-serve sticks</td><td class="y">✓</td><td class="n">Big tub, missing scoop</td></tr>
+<tr><td>Unflavored · dissolves clean</td><td class="y">✓</td><td class="n">Often chalky or fishy</td></tr>
+<tr><td>Full doses on label</td><td class="y">✓</td><td class="n">"Proprietary blend"</td></tr>
+<tr><td>Artificial sweeteners, dyes</td><td class="y">None</td><td class="n">Often added</td></tr>
+<tr><td>Replaces 3 supplements in one stick</td><td class="y">✓</td><td class="n">Collagen only</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section class="ap-section ap-section--cream"><div class="ap-container">
+<div class="ap-section-head"><span class="ap-eyebrow">Honest gatekeeping</span><h2>Who AgeAura is — and isn't — for.</h2></div>
+<div class="ap-wifor">
+<div class="card yes"><h3>✓ This is for you if…</h3>
+<ul class="ap-bullets-lg">
+<li>You're 30+ and noticing skin doesn't bounce back the way it used to</li>
+<li>You're done counting out four bottles of pills every morning</li>
+<li>You want a clinical dose of collagen + HA + C without marketing fluff</li>
+<li>You've tried collagen powder before, hated the taste, quit by week two</li>
+</ul></div>
+<div class="card no"><h3>✗ This isn't for you if…</h3>
+<ul class="ap-bullets-lg">
+<li>You're vegan (this is hydrolyzed bovine collagen)</li>
+<li>You expect overnight results — be honest about the 4–8 week mark</li>
+<li>You want a 60-ingredient kitchen-sink stack at 0.1% doses</li>
+<li>You're under 25 and your collagen is doing fine on its own</li>
+</ul></div>
+</div></div></section>
+
+<section class="ap-section"><div class="ap-container ap-center">
+<span class="ap-eyebrow">First-time buyer offer</span>
+<h2>Bundle 2 boxes. Get the third free. Plus two bonuses.</h2>
+<p style="max-width:640px;margin:0 auto 28px">When you pick the 90-Day Supply, you save 50% off retail and unlock the two onboarding bonuses below — emailed the day your shipment leaves.</p>
+<div class="ap-bonus-grid">
+<div class="ap-bonus-card"><strong>Bonus #1 — Collagen-Conscious Eating Guide</strong><p style="margin-bottom:0">The 18 foods that quietly accelerate collagen loss, the 12 that help your body rebuild faster, and the meal-prep template our customers use to compound the effect of the daily stick.</p><span class="value">$29 value · yours free</span></div>
+<div class="ap-bonus-card"><strong>Bonus #2 — Skin Restoration Daily Tracker</strong><p style="margin-bottom:0">A 90-day printable check-in to record skin elasticity, joint comfort, hair shed &amp; sleep — the four markers that change first.</p><span class="value">$19 value · yours free</span></div>
+</div></div></section>
+
+<section class="ap-section ap-section--cream"><div class="ap-container">
+<div class="ap-section-head"><span class="ap-eyebrow">Frequently asked</span><h2>The questions we get most.</h2></div>
+<div class="ap-faq">
+<details><summary>How is AgeAura different from the collagen powder I already have?</summary><div class="answer">Three differences. <strong>Dose</strong>: a full 5,000 mg of hydrolyzed peptides per stick, not the 1,500–3,000 mg in most blends. <strong>Cofactors</strong>: most collagen powders forget hyaluronic acid and vitamin C — the two ingredients that actually make new collagen synthesis work. We include clinical doses of both. <strong>Format</strong>: single-serve sticks, not a 14-oz tub with a missing scoop.</div></details>
+<details><summary>How fast will I see results?</summary><div class="answer">Most customers feel the hydration shift in week 1, notice joint quiet by week 4, and see visible skin elasticity between weeks 6 and 8. Hair and nail changes typically show up in month 3 — that's how long the hair-growth cycle takes. We ask you to commit to 90 days, and back that with our refund policy.</div></details>
+<details><summary>What does it taste like? Can I mix it with coffee?</summary><div class="answer">Genuinely unflavored. No vanilla, no berry, no stevia. The peptides are nearly tasteless once dissolved. Stir into hot coffee (collagen tolerates heat fine), cold water, smoothies — anything liquid.</div></details>
+<details><summary>Can men take it?</summary><div class="answer">Yes. The biology of collagen loss is the same regardless of sex. Men just notice it 5–10 years later, usually at the joints first. AgeAura is unflavored and unscented — doesn't taste like a "women's product."</div></details>
+<details><summary>What if it doesn't work for me?</summary><div class="answer">Send back the empty boxes within 90 days for a full refund. No re-stocking fee. No interrogation. We'd rather refund someone who didn't get results than guilt-trip them into another box.</div></details>
+</div></div></section>
+
+<section class="ap-section"><div class="ap-container ap-final-cta">
+<span class="ap-eyebrow">Start the 90-day reset</span>
+<h2>Your future self has been asking for this. Just give her the stick.</h2>
+<p style="max-width:620px;margin:0 auto 22px">One scoop replaced with one stick. One bottle replaced with one box. Three supplements replaced with one ritual.</p>
+<a href="#" class="ap-cta-anchor" onclick="document.querySelector('.ap-variant-form').scrollIntoView({behavior:'smooth'});return false;">Choose Your Pack →</a>
+</div></section>
+
+<p class="ap-disclaimer">*These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Consult your healthcare provider before beginning any new supplement.</p>
+</div>
+
+<div class="ap-sticky-cta"><button type="button">Choose Your Pack →</button></div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "AgeAura Product",
+  "settings": [],
+  "presets": [{"name":"AgeAura Product"}]
+}
+{% endschema %}

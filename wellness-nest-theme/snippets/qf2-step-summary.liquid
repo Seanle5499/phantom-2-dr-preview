@@ -1,0 +1,66 @@
+{% comment %}
+  Quiz Funnel 2 — Step 14: Vitality Assessment Summary Dashboard
+  Dynamic content populated by qf2-scripts.liquid (genSummary function)
+{% endcomment %}
+
+<div class="qf-step" data-step="14">
+  <h2 class="qf-q" style="font-size:14px;color:#888;text-transform:uppercase;margin-bottom:4px;">YOUR VITALITY ASSESSMENT IS COMPLETE</h2>
+  <h3 class="qf-q" id="sHeadline" style="font-size:24px;margin-bottom:16px;"></h3>
+  <p class="qf-sub" style="font-size:14px;color:#555;line-height:1.7;text-align:left;padding:0 5px;">
+    Your answers indicate your body is running low on the trace minerals needed for natural testosterone production and sustained energy. This is not about age — it's about depletion, and depletion is correctable.
+  </p>
+
+  <!-- Vitality Depletion Slider -->
+  <div class="qf-sumcard">
+    <div class="qf-sumcard__hdr">
+      <div class="qf-sumcard__hdr-title">Vitality depletion level</div>
+      <div class="qf-sumcard__badge" id="sBadge">High</div>
+    </div>
+    <div class="qf-sumcard__slider-wrap">
+      <div class="qf-sumcard__slider">
+        <div class="qf-sumcard__circle" id="sCircle">
+          <div class="qf-sumcard__tooltip">Your level</div>
+        </div>
+      </div>
+      <div class="qf-sumcard__scale"><span>Healthy</span><span>Declining</span><span>Depleted</span><span>Critical</span></div>
+    </div>
+
+    <!-- Alert Box -->
+    <div class="qf-sumcard__alert">
+      <div class="qf-sumcard__alert-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 20C15.51 20 20 15.51 20 10C20 4.49 15.51 0 10 0C4.49 0 0 4.49 0 10C0 15.51 4.49 20 10 20ZM10.75 14C10.75 14.41 10.41 14.75 10 14.75C9.59 14.75 9.25 14.41 9.25 14L9.25 9C9.25 8.59 9.59 8.25 10 8.25C10.41 8.25 10.75 8.59 10.75 9L10.75 14ZM9.08 5.62C9.13 5.49 9.2 5.39 9.29 5.29C9.39 5.2 9.5 5.13 9.62 5.08C9.74 5.03 9.87 5 10 5C10.13 5 10.26 5.03 10.38 5.08C10.5 5.13 10.61 5.2 10.71 5.29C10.8 5.39 10.87 5.49 10.92 5.62C10.97 5.74 11 5.87 11 6C11 6.13 10.97 6.26 10.92 6.38C10.87 6.5 10.8 6.61 10.71 6.71C10.61 6.8 10.5 6.87 10.38 6.92C10.14 7.02 9.86 7.02 9.62 6.92C9.5 6.87 9.39 6.8 9.29 6.71C9.2 6.61 9.13 6.5 9.08 6.38C9.03 6.26 9 6.13 9 6C9 5.87 9.03 5.74 9.08 5.62Z"/></svg>
+      </div>
+      <div>
+        <div class="qf-sumcard__alert-label" id="sAlertLabel">CRITICALLY DEPLETED</div>
+        <div class="qf-sumcard__alert-text" id="sAlertText">Your body is running on empty. Chronic stress and mineral depletion are draining your drive, energy, and ability to show up for the people who matter most.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metrics Grid -->
+  <div class="qf-metrics">
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--yellow"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-shield-warning.svg?v=1774510946" alt="" onerror="this.style.display='none'"></div>
+      <div><div class="qf-metric__lbl">Natural Drive &amp; Libido</div><div class="qf-metric__val" id="sAging">Critically Low</div></div>
+    </div>
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--green"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-graph.svg?v=1774510947" alt="" onerror="this.style.display='none'"></div>
+      <div><div class="qf-metric__lbl">Daily Energy Reserves</div><div class="qf-metric__val" id="sRoom">Depleted</div></div>
+    </div>
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--blue"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-both.svg?v=1774510947" alt="" onerror="this.style.display='none'"></div>
+      <div><div class="qf-metric__lbl">Testosterone Support</div><div class="qf-metric__val" id="sTrigger">Below Optimal</div></div>
+    </div>
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--purple"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-magnifying-glass.svg?v=1774510946" alt="" onerror="this.style.display='none'"></div>
+      <div><div class="qf-metric__lbl">Relationship Pressure</div><div class="qf-metric__val" id="sImpact">Elevated</div></div>
+    </div>
+  </div>
+
+  <!-- Killer Line + Timer -->
+  <p class="qf-sub" style="font-size:14px;color:#555;line-height:1.7;text-align:left;padding:0 5px;margin-top:20px;">
+    <span id="sKillerLine" style="font-weight:bold;color:#111;display:block;margin-bottom:16px;"></span>
+    <span style="color:#e53935;font-weight:bold;">Your personalized protocol is available for <span id="qfTimer">15:00</span></span>
+  </p>
+  <button class="qf-btn" onclick="qfGoStep(15)">See My Recommended Protocol &rarr;</button>
+</div>

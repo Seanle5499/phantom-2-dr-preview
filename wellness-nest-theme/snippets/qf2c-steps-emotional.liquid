@@ -1,0 +1,58 @@
+{% comment %}
+  Quiz Funnel — Steps 8-10 (Emotional Depth Questions)
+  Step 8:  Partner Impact
+  Step 9:  Biggest Fear / Mirror
+  Step 10: Drive Level Rating
+{% endcomment %}
+
+<!-- ══ STEP 8: BODY COMPOSITION ══ -->
+<div class="qf-step" data-step="8">
+  <button class="qf-back" onclick="qfGoBack(8)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">How would you describe your current body composition?</h2>
+  <p class="qf-sub">She may not be saying it out loud. But you can feel the distance.</p>
+  <div class="qf-opts">
+    <button type="button" class="qf-opt" data-answer="Lean and muscular" onclick="qfPickOpt(this,8)"><div class="qf-opt__label">Lean and muscular</div></button>
+    <button type="button" class="qf-opt" data-answer="Average build" onclick="qfPickOpt(this,8)"><div class="qf-opt__label">Average build</div></button>
+    <button type="button" class="qf-opt" data-answer="Soft with muscle" onclick="qfPickOpt(this,8)"><div class="qf-opt__label">Soft with some muscle</div></button>
+    <button type="button" class="qf-opt" data-answer="Overweight" onclick="qfPickOpt(this,8)"><div class="qf-opt__label">Overweight/out of shape</div></button>
+  </div>
+</div>
+
+<!-- ══ STEP 9: SLEEP ══ -->
+<div class="qf-step" data-step="9">
+  <button class="qf-back" onclick="qfGoBack(9)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">How many hours of quality sleep do you get per night?</h2>
+  <p class="qf-sub">This isn't about looks. It's about the energy and presence you used to carry into every room.</p>
+  <div class="qf-opts">
+    <button type="button" class="qf-opt" data-answer="<5 hrs" onclick="qfPickOpt(this,9)"><div class="qf-opt__label">Less than 5 hours</div></button>
+    <button type="button" class="qf-opt" data-answer="5-6 hrs" onclick="qfPickOpt(this,9)"><div class="qf-opt__label">5-6 hours</div></button>
+    <button type="button" class="qf-opt" data-answer="7-8 hrs" onclick="qfPickOpt(this,9)"><div class="qf-opt__label">7-8 hours</div></button>
+    <button type="button" class="qf-opt" data-answer=">8 hrs" onclick="qfPickOpt(this,9)"><div class="qf-opt__label">More than 8 hours</div></button>
+  </div>
+</div>
+
+<!-- ══ FAKE LOADING OVERLAY (after step 9) ══ -->
+<div class="qf-fake-loading" id="qfFakeLoading">
+  <div class="qf-fake-loading__content">
+    <h2 class="qf-fake-loading__title">Analyzing your health profile...</h2>
+    <div class="qf-fake-loading__spinner">
+      <svg viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#ddd" stroke-width="4"/>
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#54b94a" stroke-width="4" stroke-dasharray="31.4 94.2" stroke-linecap="round" class="qf-fake-loading__arc"/>
+      </svg>
+    </div>
+    <p class="qf-fake-loading__sub">Based on your responses, we're building a comprehensive assessment of your hormonal health and identifying the key factors affecting your energy and vitality.</p>
+  </div>
+</div>
+
+<!-- ══ STEP 10: FAMILY HISTORY ══ -->
+<div class="qf-step" data-step="10">
+  <button class="qf-back" onclick="qfGoBack(10)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">Do you have a family history of diabetes, heart disease, or metabolic issues?</h2>
+  <p class="qf-sub">No judgment. No right or wrong answer. Just the raw truth.</p>
+  <div class="qf-opts">
+    <button type="button" class="qf-opt" data-answer="Yes" onclick="qfPickOpt(this,10)"><div class="qf-opt__label">Yes</div></button>
+    <button type="button" class="qf-opt" data-answer="No" onclick="qfPickOpt(this,10)"><div class="qf-opt__label">No</div></button>
+    <button type="button" class="qf-opt" data-answer="Not Sure" onclick="qfPickOpt(this,10)"><div class="qf-opt__label">Not Sure</div></button>
+  </div>
+</div>

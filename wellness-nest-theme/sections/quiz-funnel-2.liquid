@@ -1,0 +1,101 @@
+{% comment %}
+  Quiz Funnel 2 — ShilaSource Male Vitality Assessment
+  =====================================================
+  Main section orchestrator. All components are rendered via snippets.
+
+  REQUIRED ASSETS (upload to Files in Shopify admin):
+    quiz-user1.png, quiz-user2.png, quiz-user3.png,
+    quiz-user4.png, quiz-users.png,
+    quiz-shield-warning.svg, quiz-graph.svg, quiz-bolt.svg,
+    quiz-magnifying-glass.svg
+
+  REQUIRED TEMPLATE: templates/page.quiz2.json
+  Then create a Page in Shopify admin with template "quiz2".
+
+  SNIPPET STRUCTURE:
+    snippets/qf2-styles.liquid         → CSS (scoped under .qf)
+    snippets/qf2-header.liquid          → Header + progress bar
+    snippets/qf2-steps-basic.liquid     → Steps 1-5 (age, confidence, duration, stress, tried)
+    snippets/qf2-step-goals.liquid      → Step 6 (multi-select goals)
+    snippets/qf2-step-social.liquid     → Step 7 (social proof)
+    snippets/qf2-steps-emotional.liquid → Steps 8-10 (partner, mirror, drive)
+    snippets/qf2-step-validation.liquid → Step 11 (transition break)
+    snippets/qf2-steps-closing.liquid   → Steps 12-13 (caffeine, commitment)
+    snippets/qf2-step-summary.liquid    → Step 14 (results dashboard)
+    snippets/qf2-step-recovery.liquid   → Step 15 (bar chart)
+    snippets/qf2-step-loading.liquid    → Step 16 (loading bars + submit)
+    snippets/qf2-popups.liquid          → Commitment gate popups
+    snippets/qf2-scripts.liquid         → All JavaScript logic
+{% endcomment %}
+
+{%- comment -%} ── STYLES ── {%- endcomment -%}
+{% render 'qf2-styles' %}
+
+{%- comment -%} ── QUIZ CONTAINER ── {%- endcomment -%}
+<div class="qf" id="quizFunnel">
+
+  {%- comment -%} ── HEADER + PROGRESS BAR ── {%- endcomment -%}
+  {% render 'qf2-header' %}
+
+  <div class="qf-wrap">
+
+    {%- comment -%} ── STEPS 1-5: Basic Questions ── {%- endcomment -%}
+    {% render 'qf2-steps-basic' %}
+
+    {%- comment -%} ── STEP 6: Goals (Multi-Select) ── {%- endcomment -%}
+    {% render 'qf2-step-goals' %}
+
+    {%- comment -%} ── STEP 7: Social Proof ── {%- endcomment -%}
+    {% render 'qf2-step-social' %}
+
+    {%- comment -%} ── STEPS 8-10: Emotional Depth Questions ── {%- endcomment -%}
+    {% render 'qf2-steps-emotional' %}
+
+    {%- comment -%} ── STEP 11: Validation Break ── {%- endcomment -%}
+    {% render 'qf2-step-validation' %}
+
+    {%- comment -%} ── STEPS 12-13: Closing Questions ── {%- endcomment -%}
+    {% render 'qf2-steps-closing' %}
+
+    {%- comment -%} ── STEP 14: Summary Dashboard ── {%- endcomment -%}
+    {% render 'qf2-step-summary' %}
+
+    {%- comment -%} ── STEP 15: Recovery Chart ── {%- endcomment -%}
+    {% render 'qf2-step-recovery' %}
+
+    {%- comment -%} ── STEP 16: Loading + Submit ── {%- endcomment -%}
+    {% render 'qf2-step-loading' %}
+
+  </div>
+
+  {%- comment -%} ── POPUP OVERLAYS ── {%- endcomment -%}
+  {% render 'qf2-popups' %}
+
+</div>
+
+{%- comment -%} ── JAVASCRIPT ── {%- endcomment -%}
+{% render 'qf2-scripts', pixel_prefix: section.settings.pixel_prefix, redirect_url: section.settings.redirect_url %}
+
+{% schema %}
+{
+  "name": "Quiz Funnel 2",
+  "tag": "section",
+  "class": "quiz-funnel-2-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "pixel_prefix",
+      "label": "Meta Pixel Event Prefix",
+      "default": "VitalityQuiz",
+      "info": "Prevents data crossing if you duplicate this quiz. E.g., 'VitalityQuiz' creates events like 'VitalityQuiz_Step_05'."
+    },
+    {
+      "type": "text",
+      "id": "redirect_url",
+      "label": "Submit Redirect URL",
+      "default": "https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin",
+      "info": "Where to send users after quiz completion"
+    }
+  ]
+}
+{% endschema %}

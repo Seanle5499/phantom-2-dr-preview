@@ -1,0 +1,399 @@
+
+    {% render 'gp-head', isThemeSection: true %}
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-545963192392614921.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-545963192392614921.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-545963192392614921.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-545963192392614921.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-545963192392614921.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-545963192392614921.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-545963192392614921.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-545963192392614921.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-545963192392614921.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-545963192392614921.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-545963192392614921.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-545963192392614921.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-545963192392614921.gps.gpsil [style*="--bl:"]{border-left:var(--bl)}.gps-545963192392614921.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-545963192392614921.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-545963192392614921.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-545963192392614921.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-545963192392614921.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-545963192392614921.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-545963192392614921.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-545963192392614921.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-545963192392614921.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-545963192392614921.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-545963192392614921.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-545963192392614921.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-545963192392614921.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-545963192392614921.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-545963192392614921.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-545963192392614921.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-545963192392614921.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-545963192392614921.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-545963192392614921.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-545963192392614921.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-545963192392614921.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-545963192392614921.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-545963192392614921.gps.gpsil [style*="--w:"]{width:var(--w)}@media only screen and (max-width:1024px){.gps-545963192392614921.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-545963192392614921.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-545963192392614921.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}}@media only screen and (max-width:767px){.gps-545963192392614921.gps.gpsil [style*="--op-mobile:"]{opacity:var(--op-mobile)}.gps-545963192392614921.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-545963192392614921.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-545963192392614921.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}}.gps-545963192392614921 .gp-relative{position:relative}.gps-545963192392614921 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-545963192392614921 .gp-mb-0{margin-bottom:0}.gps-545963192392614921 .gp-flex{display:flex}.gps-545963192392614921 .gp-inline-flex{display:inline-flex}.gps-545963192392614921 .gp-grid{display:grid}.gps-545963192392614921 .\!gp-hidden{display:none!important}.gps-545963192392614921 .gp-hidden{display:none}.gps-545963192392614921 .gp-max-w-full{max-width:100%}.gps-545963192392614921 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-545963192392614921 .gp-flex-col{flex-direction:column}.gps-545963192392614921 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-545963192392614921 .gp-duration-200{transition-duration:.2s}.gps-545963192392614921 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-545963192392614921 .tablet\:\!gp-hidden{display:none!important}.gps-545963192392614921 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-545963192392614921 .mobile\:\!gp-hidden{display:none!important}.gps-545963192392614921 .mobile\:gp-hidden{display:none}}.gps-545963192392614921 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}</style>
+    
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gU4qTBVDWG"}' data-id="gU4qTBVDWG" id="gU4qTBVDWG" data-same-height-subgrid-container class="gU4qTBVDWG gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:0px;--pb:0px;--cg:32px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gUbtAd3mwj gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"g654wVX7HB"}' data-id="g654wVX7HB" id="g654wVX7HB" data-same-height-subgrid-container class="g654wVX7HB gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--cg:8px;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gEmLugeYXA gp-relative gp-flex gp-flex-col"
+    >
+      
+  
+    <div
+      
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gz4W_Wkkel gp-custom-code">
+      <div>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    </div>
+    </div>
+  
+      <style id="custom-css-gz4W_Wkkel">
+        /* Custom fake recharge app */
+
+.gps.gpsi .rcbundlecustom {
+    display: none;
+}
+#storefront .rcbundlecustom {
+    display: grid;
+}
+
+.custom-subscription-option{
+     border: 1px solid #BDBDBD !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;    
+    cursor: pointer;
+}
+.custom-subscription-option.active{
+    border-color: #26A243 !important;
+    background: #EAFFEF !important;
+}
+.gps .rcct{
+    display: none !important;
+}
+
+.custom-subscription-option{
+    padding-top: 35px;
+    
+}
+.custom-subscription-option::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0);
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    border: 1px solid #26A243;
+    transform: translateX(-50%);
+}
+.custom-subscription-option::after{
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0);
+    display: block;
+    z-index: 3;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.custom-subscription-option.subsave::after{
+    top: 18px;
+}
+.custom-subscription-option.subsave::before{
+     top: 15px;
+}
+.custom-subscription-option.active::after{
+    background: #26A243;
+}
+
+.onlyonetime{
+    display: none !important;;
+}
+#storefront  .onlyonetime{
+    display: grid !important;
+}
+.onlyonetime.onetime{
+    display: grid !important;
+}
+
+.listoption.onetime{
+    display: none !important;
+}
+
+
+
+
+.rc_widget__option__selector input[type="radio"]{
+    margin-top: 2px;
+}
+
+.rc_popup {
+  display: none !important;
+}
+.rc_widget__option {
+  flex: 1 !important;
+  width: 50% !important;
+  border: 2px solid #26a243 !important;
+  border-radius: 10px !important;
+  padding: 0px 3px !important;
+  cursor: pointer;
+}
+.rc_widget__option * {
+  cursor: pointer;
+}
+.rc-template__legacy-radio {
+  display: flex !important;
+  flex-wrap: inherit !important;
+  gap: 10px !important;
+  position: relative;
+  padding-bottom: 0px;
+}
+.rc_widget__option .rc-option__price {
+  display: none !important;
+}
+.rc_widget__option .rc_widget__option__plans {
+  position: absolute;
+  left: 0;
+  top: 48px;
+  width: 100%;
+  padding-left: 0 !important;
+}
+.rc_widget__option .rc-option__discount,
+.rc_widget__option .rc-option__text {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    font-family: Oswald !important;
+}
+.rc_widget__option .rc_widget__option__plans__dropdown {
+  width: 100%;
+  font-weight: 500 !important;
+}
+.rc-selling-plans__dropdown {
+  padding: 5px 26px 4px 5px !important;
+  background: url(https://cdn.shopify.com/s/files/1/0810/1563/6283/files/gempages_501444340413891578-efe3f03c-24b0-43b2-a834-afca664619d0.svg?v=1715327653)
+    no-repeat right 5px center;
+  background-size: 18px 18px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #26a243;
+  border-radius: 10px;
+  font-size: 14px !important;
+}
+.rc-template__legacy-radio .rc_widget__option{
+    background-color: #fcfcfc;
+}
+.rc-template__legacy-radio .rc_widget__option--active{
+    background-color: #efefef;
+}
+ .rc-template__legacy-radio .rc-radio__label {
+    margin-left:0px !important;
+}
+.rc_widget__option__selector{
+        text-align: center;
+}
+.rc_widget__option__selector .rc_widget__option__label{
+    position: relative;
+    padding-left: 20px;
+}
+.rc_widget__option__selector .rc_widget__option__label::after{
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #26a243;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    z-index: 2;
+}
+.rc_widget__option__selector .rc_widget__option__label::before{
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    display: block;
+    background: rgba(255,255,255,0);
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    z-index: 3;
+}
+.rc-option--active  .rc_widget__option__selector .rc_widget__option__label::before{
+    background: #26a243;
+}
+.rc_widget__option__selector .rc-radio__input{
+    display: none !important;
+}
+
+
+      </style>
+    
+      <script id="custom-js-gz4W_Wkkel">
+        try {
+          document.addEventListener("DOMContentLoaded", function() {
+    const rechargeWidget = document.querySelectorAll('.rcct');
+    if (rechargeWidget.length > 0) {
+        rechargeWidget.forEach(optioneach => {
+            const productForm = optioneach.closest('form');
+            const subscriptionOptions = productForm.querySelectorAll('.custom-subscription-option');
+            if (subscriptionOptions.length > 0) {
+                subscriptionOptions.forEach(option => {
+                    option.addEventListener('click', function() {
+                        const eachp = productForm.querySelectorAll('.custom-subscription-option');
+                        eachp.forEach(opt => opt.classList.remove('active'));
+                        this.classList.add('active');
+
+                        let selectedOption = this.classList.contains('onetime') ? 'onetime' : 'subsave';
+                        let sellingPlan = this.classList.contains('onetime') ? '' : 'selling_plan';
+
+                        let optionElements = productForm.querySelectorAll('.rc-option.rc_widget__option');
+                        let inputElements = productForm.querySelectorAll('input.rc_widget__option__input');
+                        let selectedInput = productForm.querySelector(`input.rc_widget__option__input[value="${selectedOption}"]`);
+
+                        if (optionElements.length > 0 && inputElements.length > 0 && selectedInput) {
+                            optionElements.forEach(opt => opt.classList.remove('rc_widget__option--active', 'rc-option--active'));
+                            let selectedOptionElement = productForm.querySelector(`.rc-option.rc_widget__option.rc-option__${selectedOption}`);
+                            if (selectedOptionElement) {
+                                selectedOptionElement.classList.add('rc_widget__option--active', 'rc-option--active');
+                            }
+
+                            let sellingPlanDropdown = productForm.querySelector('select.rc-selling-plans__dropdown');
+                            if (sellingPlanDropdown) {
+                                sellingPlanDropdown.setAttribute('name', sellingPlan);
+                            }
+
+                            inputElements.forEach(input => input.checked = false);
+                            selectedInput.checked = true;
+                            selectedInput.click();
+                        }
+                    });
+                });
+            }
+        });
+    }
+});
+
+function handleRechargeWidget(rechargeWidget) {
+    if (!rechargeWidget.dataset.initialized) {
+        const productForm = rechargeWidget.closest('form');
+        const featuredList = productForm.querySelector(".listoption");
+        const onlyonetime = productForm.querySelector(".onlyonetime");
+
+        if (featuredList && onlyonetime) {
+            const rechargeInputs = rechargeWidget.querySelectorAll('.rc_widget__option__input');
+            rechargeInputs.forEach(input => {
+                input.addEventListener('click', function(event) {
+                    const sellingPlanId = input.value;
+                    if (sellingPlanId === "onetime") {
+                        featuredList.classList.add("onetime");
+                        onlyonetime.classList.add("onetime");
+                    } else {
+                        featuredList.classList.remove("onetime");
+                        onlyonetime.classList.remove("onetime");
+                    }
+                });
+            });
+
+            rechargeWidget.dataset.initialized = true;
+        } else {
+            console.log("No featured list");
+        }
+    }
+
+    // Show the rcbundlecustom element now that the recharge widget has loaded
+    document.querySelectorAll('.rcbundlecustom').forEach(el => el.style.display = 'grid');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new MutationObserver(function (mutationsList, observer) {
+        mutationsList.forEach(function (mutation) {
+            if (mutation.type === "childList") {
+                const rechargeWidgets = document.querySelectorAll('.rcct .rc-widget');
+                rechargeWidgets.forEach(rechargeWidget => {
+                    handleRechargeWidget(rechargeWidget);
+                });
+            }
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+
+window.addEventListener("load", function () {
+    const rechargeWidgets = document.querySelectorAll('.rcct .rc-widget');
+    rechargeWidgets.forEach(rechargeWidget => {
+        handleRechargeWidget(rechargeWidget);
+    });
+});
+
+        } catch(err){}
+      </script>
+    
+  
+    <div
+      
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gmfv2k0_ow gp-custom-code">
+      <div>
+    
+    </div>
+    </div>
+  
+      <style id="custom-css-gmfv2k0_ow">
+        h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5,
+body{
+    letter-spacing: 0px;
+}
+.gp-group\/image > div{
+    line-height: 0;
+}
+
+.gp-button-base span.gp-inline-flex{
+    background-image: url(https://cdn.shopify.com/s/files/1/0810/1563/6283/files/gempages_501444340413891578-92be4358-19df-41eb-884d-206b90c72aea.svg?v=1719258862);
+    background-repeat: no-repeat;
+    background-size: 23px 18px;
+}
+.gp-button-base span.gp-inline-flex svg{
+    opacity: 0;
+}
+      </style>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    "presets": [{ "name": "recharge" }],
+    "name": "recharge",
+    "tag": "section",
+    "class": "gps-545963192392614921 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=545963192392614921)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

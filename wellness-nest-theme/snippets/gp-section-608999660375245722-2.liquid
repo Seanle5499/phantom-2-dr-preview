@@ -1,0 +1,184 @@
+
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    {%- liquid
+      assign inventory_quantity = variant.inventory_quantity | default: 0
+      assign is_in_stock = variant.available
+    -%}
+    <gp-product-button
+      style="--pos-mobile:static;--top-mobile:0px"
+      gp-data-wrapper="true"
+      gp-href="https://builder.gempages.net/post-purchase/preview?url=/post-purchase/preview&pageID=576951192974787323&title=Upsell%20Page&shopToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnZW14IiwiZXhwIjoxNzUzNDM2NzE2LCJpYXQiOjE3NTMzNTAzMTYsImp0aSI6IjQzNDc3NjQ2Mzg3NTUwNzE0NSJ9.Q5YwdwVdWhk71Q-eMal_cDuT35IjqhIJfoMewtmXyBYMyOUKYJQstsssqGulmwkeffiw3g5SJgw0MwwMEZ85NBgFk8o8BFFZ32KiDca-4agYUGz5sHgKb_AKciEuDhJakcffnpkdc2oY7bzhoBTkzrUkY3acSOXfd1fnNbGrtP1wo8gXhWz7GB5H5lw1J7s_xowS1CYB3HWG_odPCQ4V2GiO0Yo7LkA55BrCLgDM2ZK_xHMVzFxy4D9bFyTHSIvePYqNKractLim5aqjpAkJcmnkPZ08NQfpkfus-LNv29lm_Pa0FIywry1MpeA_LpdZ6SXszEEZ4O62WEmCoSewkeP0Wyt2IltsxwBDRusoZWBvwjYmShT_eo4diTZKQddilSy89HKyGL071V7GHJ82nyWa8kuAykfQsdtNFAeDtdnqHo51qmH8aTA9ASjnY2ALvL5PefYE8V07jXeblHqOnUgI96PxaI03lAAXfC8hF_Tq1gMfmFN2HOLVjsOfo5zqORISmw4OiwFyImWR_RkOuUDJgzCegANhTayEtlFAmoMCdjdNqFAQUV765-Er7OZi8CsQGT6uWF-LQAU32or04pWVGARJzwu4rhLTcIwZRZ-VH4YnYTw9HLH0rpAiCUZpkRngYdxX5WXsIqf3uEtrKbj39eYU1yNKY9vxSNPO4fQ&shopID=432750572815254551&shopName=seal-commerce-asia&publicShopToken=c2VhbC1jb21tZXJjZS1hc2lhLmdlbXBhZ2VzLmxpdmUtMmM3OTM1MjctOTI3Mi00MTYwLWFiNTMtMTU0MDc1NTkwN2ZiLTE2Njc0NjkwNDM&currentOfferID=576951201665385289&pageType=POST_PURCHASE&moneyFormat=${{amount}}&moneyWithCurrencyFormat=${{amount}}%20USD"
+      class="gp-product-button"
+      gp-label-out-of-stock="{{ section.settings.ggpi3i5rFSw_outOfStockLabel }}"
+      gp-label-unavailable="{{ section.settings.ggpi3i5rFSw_unavailableLabel }}"
+      gp-data='{"styles":{"errorTypo":{"attrs":{"color":"error"},"type":"paragraph-2"},"successTypo":{"attrs":{"color":"success"},"type":"paragraph-2"}},"setting":{"errorType":"built-in","actionEffect":"buy-now","enableMessage":true,"label":"ADD TO CART →","errorMessage":"Cannot add product to cart","successMessage":"Add product to cart successfully","outOfStockLabel":"Out of stock","customURL":{"link":"https://builder.gempages.net/post-purchase/preview?url=/post-purchase/preview&pageID=576951192974787323&title=Upsell%20Page&shopToken=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnZW14IiwiZXhwIjoxNzUzNDM2NzE2LCJpYXQiOjE3NTMzNTAzMTYsImp0aSI6IjQzNDc3NjQ2Mzg3NTUwNzE0NSJ9.Q5YwdwVdWhk71Q-eMal_cDuT35IjqhIJfoMewtmXyBYMyOUKYJQstsssqGulmwkeffiw3g5SJgw0MwwMEZ85NBgFk8o8BFFZ32KiDca-4agYUGz5sHgKb_AKciEuDhJakcffnpkdc2oY7bzhoBTkzrUkY3acSOXfd1fnNbGrtP1wo8gXhWz7GB5H5lw1J7s_xowS1CYB3HWG_odPCQ4V2GiO0Yo7LkA55BrCLgDM2ZK_xHMVzFxy4D9bFyTHSIvePYqNKractLim5aqjpAkJcmnkPZ08NQfpkfus-LNv29lm_Pa0FIywry1MpeA_LpdZ6SXszEEZ4O62WEmCoSewkeP0Wyt2IltsxwBDRusoZWBvwjYmShT_eo4diTZKQddilSy89HKyGL071V7GHJ82nyWa8kuAykfQsdtNFAeDtdnqHo51qmH8aTA9ASjnY2ALvL5PefYE8V07jXeblHqOnUgI96PxaI03lAAXfC8hF_Tq1gMfmFN2HOLVjsOfo5zqORISmw4OiwFyImWR_RkOuUDJgzCegANhTayEtlFAmoMCdjdNqFAQUV765-Er7OZi8CsQGT6uWF-LQAU32or04pWVGARJzwu4rhLTcIwZRZ-VH4YnYTw9HLH0rpAiCUZpkRngYdxX5WXsIqf3uEtrKbj39eYU1yNKY9vxSNPO4fQ&shopID=432750572815254551&shopName=seal-commerce-asia&publicShopToken=c2VhbC1jb21tZXJjZS1hc2lhLmdlbXBhZ2VzLmxpdmUtMmM3OTM1MjctOTI3Mi00MTYwLWFiNTMtMTU0MDc1NTkwN2ZiLTE2Njc0NjkwNDM&currentOfferID=576951201665385289&pageType=POST_PURCHASE&moneyFormat=${{amount}}&moneyWithCurrencyFormat=${{amount}}%20USD","target":"_self"}},"variantID":"{{variant.id}}","disabled":"{{variant.available}}","totalVariant":"{{total_combinations}}"}'
+      data-variant-selection-required-message="{{ section.settings.ggpi3i5rFSw_variantSelectionRequiredMessage }}"
+      gp-enable-third-partycart="{{shop.metafields.GEMPAGES.enableThirdPartyCart}}"
+    >
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:0.46947156278589086px 0.8829475928589269px 2px 0.5px rgba(18, 18, 18, 0.5);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--mt:16px;--mb:20px;--pt:0px;--pb:0px;--mt-mobile:16px;--pt-mobile:0px;--pb-mobile:0px;--mt-tablet:16px;--mb-tablet:20px;--pt-tablet:0px;--pb-tablet:0px;--ta:center" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+        <style>[data-id="gpi3i5rFSw"].gp-button-base::before, [data-id="gpi3i5rFSw-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="gpi3i5rFSw"]:hover::before, [data-id="gpi3i5rFSw-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="gpi3i5rFSw" dataId="gpi3i5rFSw" data-state="idle" aria-label="ADD TO CART →"
+          name="add" gp-data-hidden="{% unless variant.available %}true{% endunless %}"
+          type="submit"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:74px;--h-tablet:56px;--h-mobile:56px;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--shadow:none;--bgi:;--bg:#BDE522;--c:#1A1A1A;--fs:normal;--ff:var(--g-font-body, body);--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--tt:uppercase"
+          class="gp-button-atc tcustomizer-submit-button gpi3i5rFSw gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30  undefined"
+        >
+        
+  <svg
+    class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="gp-opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="gp-opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    ></path>
+  </svg>
+
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+    <span
+      style="--fs:normal;--ff:var(--g-font-body, body);--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--tt:uppercase;--ts:none;word-break:break-word;--ml:8px;--ml-tablet:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" data-name="arrow-right-bold" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817550824440168">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z" /></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-body, body);--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--tt:uppercase;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggpi3i5rFSw_label }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:0.46947156278589086px 0.8829475928589269px 2px 0.5px rgba(18, 18, 18, 0.5);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--mt:16px;--mb:20px;--pt:0px;--pb:0px;--mt-mobile:16px;--pt-mobile:0px;--pb-mobile:0px;--mt-tablet:16px;--mb-tablet:20px;--pt-tablet:0px;--pb-tablet:0px;--ta:center" class="{% if variant.available %} !gp-hidden {% endif %}">
+        <style>[data-id="gpi3i5rFSw-sold-out"].gp-button-base::before, [data-id="gpi3i5rFSw-sold-out-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="gpi3i5rFSw-sold-out"]:hover::before, [data-id="gpi3i5rFSw-sold-out-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="gpi3i5rFSw-sold-out" dataId="gpi3i5rFSw-sold-out" data-state="idle" aria-label="{{ section.settings.ggpi3i5rFSw_outOfStockLabel }}"
+          gp-data-hidden="{% if variant.available %}true{% endif %}"
+          type="button"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:74px;--h-tablet:56px;--h-mobile:56px;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--shadow:none;--bgi:;--bg:#D4A853;--c:var(--g-c-text-3, text-3);--fs:normal;--ff:var(--g-font-body, body);--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--tt:uppercase"
+          class="gp-cursor-default gp-opacity-30 btn-disabled gp-button-sold-out gpi3i5rFSw-sold-out gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+    <span
+      style="--fs:normal;--ff:var(--g-font-body, body);--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--tt:uppercase;--ts:none;word-break:break-word;--ml:8px;--ml-tablet:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" data-name="arrow-right-bold" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817550824440168">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z" /></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-body, body);--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--tt:uppercase;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggpi3i5rFSw_outOfStockLabel }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </gp-product-button>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  

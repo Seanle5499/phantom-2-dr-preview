@@ -1,0 +1,283 @@
+{% doc %}
+  @prompt
+    Create a new theme section block called "Icons with Text - 5 Columns" for use inside the "Product Information" section on a product page. The block should display up to 5 columns, each with a line-art icon (uploaded as an image) above a short 1-2 line text label centered below it. Requirements: - Up to 5 icon+label pairs, each configurable independently - Each column has an image picker for the icon and a text field for the label - Icons should be small (around 48-64px), displayed in a single row on desktop - On mobile, wrap into a 2-3 column grid - Minimal styling: no background, no borders, just icon + label centered, matching a clean wellness/premium aesthetic - Labels should use a small font size (around 12-14px), centered, with a slight top margin below the icon
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-icons-text-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .ai-icons-text-container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: {{ block.settings.desktop_width_percent }}%;
+    margin: 0 auto;
+  }
+
+  .ai-icons-text-column-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ai-icons-text-icon-wrapper-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: {{ block.settings.icon_label_spacing }}px;
+  }
+
+  .ai-icons-text-icon-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-icons-text-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .ai-icons-text-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-icons-text-label-{{ ai_gen_id }} {
+    font-size: {{ block.settings.label_font_size }}px;
+    line-height: 1.4;
+    color: {{ block.settings.label_color }};
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-icons-text-container-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    .ai-icons-text-icon-wrapper-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_size | times: 0.85 }}px;
+      height: {{ block.settings.icon_size | times: 0.85 }}px;
+      margin-bottom: {{ block.settings.icon_label_spacing | times: 0.85 }}px;
+    }
+
+    .ai-icons-text-label-{{ ai_gen_id }} {
+      font-size: {{ block.settings.label_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-icons-text-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-icons-text-container-{{ ai_gen_id }}">
+    {% for i in (1..5) %}
+      {% liquid
+        assign icon_key = 'icon_' | append: i
+        assign label_key = 'label_' | append: i
+        assign icon = block.settings[icon_key]
+        assign label = block.settings[label_key]
+      %}
+
+      {% if icon != blank or label != blank %}
+        <div class="ai-icons-text-column-{{ ai_gen_id }}">
+          <div class="ai-icons-text-icon-wrapper-{{ ai_gen_id }}">
+            {% if icon != blank %}
+              <img
+                src="{{ icon | image_url: width: 200 }}"
+                alt="{{ label | escape }}"
+                class="ai-icons-text-icon-{{ ai_gen_id }}"
+                loading="lazy"
+                width="{{ block.settings.icon_size }}"
+                height="{{ block.settings.icon_size }}"
+              >
+            {% else %}
+              <div class="ai-icons-text-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+          {% if label != blank %}
+            <p class="ai-icons-text-label-{{ ai_gen_id }}">{{ label }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Icons with text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "header",
+      "content": "Icon style"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 32,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "icon_label_spacing",
+      "label": "Space below icon",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Label style"
+    },
+    {
+      "type": "range",
+      "id": "label_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Icon 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Label",
+      "default": "Feature 1"
+    },
+    {
+      "type": "header",
+      "content": "Icon 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Label",
+      "default": "Feature 2"
+    },
+    {
+      "type": "header",
+      "content": "Icon 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_3",
+      "label": "Label",
+      "default": "Feature 3"
+    },
+    {
+      "type": "header",
+      "content": "Icon 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_4",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_4",
+      "label": "Label",
+      "default": "Feature 4"
+    },
+    {
+      "type": "header",
+      "content": "Icon 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_5",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "label_5",
+      "label": "Label",
+      "default": "Feature 5"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icons with text"
+    }
+  ]
+}
+{% endschema %}

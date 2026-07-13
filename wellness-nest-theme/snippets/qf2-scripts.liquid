@@ -1,0 +1,235 @@
+{% comment %}
+  Quiz Funnel 2 — JavaScript Logic
+  Handles: navigation, scoring, summary generation, animations,
+           loading bars, popups, timer, Meta Pixel tracking
+{% endcomment %}
+
+<script>
+(function(){
+  'use strict';
+  var STEPS=16,cur=1,ans={},multi=[],bars={};
+  var hiddenEls=[];
+
+  /* ── Hide theme header/footer (reversible, won't affect other pages) ── */
+  function hideChrome(){
+    var sels=[
+      '.shopify-section-footer','#shopify-section-footer','footer.footer','.shopify-section-group-footer-group'
+    ];
+    sels.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(el){
+        if(el.style.display!=='none'){
+          hiddenEls.push({el:el,prev:el.style.display});
+          el.style.display='none';
+        }
+      });
+    });
+  }
+
+  function init(){
+    hideChrome();
+    try{var s=localStorage.getItem('qf2Ans');if(s)ans=JSON.parse(s);}catch(e){}
+    setMonths();
+    show(1);
+  }
+
+  /* ── Countdown Timer (15 min) ── */
+  var qfTimerInt;
+  function startTimer() {
+    if(qfTimerInt) clearInterval(qfTimerInt);
+    var target = new Date().getTime() + (15 * 60 * 1000);
+    var el = document.getElementById('qfTimer');
+    if(!el) return;
+    qfTimerInt = setInterval(function() {
+      var dist = target - new Date().getTime();
+      if(dist < 0) {
+        clearInterval(qfTimerInt);
+        el.textContent = "00:00";
+        return;
+      }
+      var m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      var s = Math.floor((dist % (1000 * 60)) / 1000);
+      el.textContent = (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+    }, 1000);
+  }
+
+  /* ── Track each quiz step via dataLayer (GA4 / GTM) ── */
+  window.dataLayer = window.dataLayer || [];
+  function trackFunnelStep(stepObj) {
+    var prefix = '{{ pixel_prefix | escape }}' || 'Quiz';
+    var customEventName = prefix + '_Step_' + (stepObj < 10 ? '0' + stepObj : stepObj);
+    dataLayer.push({
+      event: 'quiz_step_completed',
+      quiz_step: stepObj,
+      quiz_step_name: customEventName
+    });
+    console.log('[Quiz dataLayer]', customEventName);
+  }
+
+  /* ── Step Navigation ── */
+  function show(s){
+    document.querySelectorAll('.qf-step').forEach(function(el){el.classList.remove('active')});
+    var t=document.querySelector('.qf-step[data-step="'+s+'"]');
+    if(t){t.classList.add('active');cur=s;updProg();}
+    if(s===14) { genSummary(); startTimer(); }
+    if(s===15) animBars();
+    if(s===16) startLoading();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function updProg(){
+    var p=Math.min(100,((cur-1)/15)*100);
+    var f=document.getElementById('progFill');
+    if(f)f.style.width=p+'%';
+    var lbl=document.getElementById('qfStepCur');
+    if(lbl)lbl.textContent=cur;
+  }
+
+  /* ── Global Handlers (qf- prefix to avoid conflicts) ── */
+  window.qfPickOpt=function(el,step){
+    el.parentElement.querySelectorAll('.qf-opt').forEach(function(o){o.classList.remove('sel')});
+    el.classList.add('sel');
+    ans[step]=el.getAttribute('data-answer');
+    try{localStorage.setItem('qf2Ans',JSON.stringify(ans));}catch(e){}
+    setTimeout(function(){qfGoStep(step+1)},300);
+  };
+
+  window.qfToggleM=function(el){
+    el.classList.toggle('sel');
+    multi=[];
+    document.querySelectorAll('#multiOpts .qf-opt--multi.sel').forEach(function(o){multi.push(o.getAttribute('data-answer'))});
+    var b=document.getElementById('multiBtn');
+    if(b)b.disabled=multi.length===0;
+  };
+
+  window.qfGoStep=function(s){
+    /* Fire event for the step the user just completed (cur) */
+    if(cur < s) trackFunnelStep(cur);
+    show(s);
+  };
+  window.qfGoBack=function(s){if(s>1)show(s-1)};
+
+  /* ── Summary Generation (Step 14) ── */
+  function genSummary(){
+    /* Fixed result — always show "Critically Depleted" (just above Depleted) */
+    var depletion = 'Critically Depleted';
+    var circlePos = 70;
+    var alertText = 'Your body is sending clear warning signals. Chronic stress and mineral depletion are actively draining your drive, energy, and ability to show up fully.';
+    var mainHead = 'You Are Critically Depleted. The Good News: This Is Reversible.';
+    var killer = '93% of men with your profile saw measurable improvement within 30 days. The window is still open — but it won\'t be forever.';
+    var drive = 'Critically Low';
+    var energy = 'Depleted';
+    var testSupport = 'Below Optimal';
+    var relPressure = 'Elevated';
+
+    var el;
+    el=document.getElementById('sBadge');if(el)el.textContent=depletion;
+    var circle=document.getElementById('sCircle');
+    if(circle){
+      var targetPos=circlePos;
+      circle.style.transition='none';
+      circle.style.left='0%';
+      setTimeout(function(){
+        circle.style.transition='left 1.5s ease-out';
+        circle.style.left=targetPos+'%';
+      },100);
+    }
+    el=document.getElementById('sAlertLabel');if(el)el.textContent=depletion.toUpperCase();
+    el=document.getElementById('sAlertText');if(el)el.textContent=alertText;
+    el=document.getElementById('sHeadline');if(el)el.textContent=mainHead;
+    el=document.getElementById('sKillerLine');if(el)el.textContent=killer;
+    el=document.getElementById('sAging');if(el)el.textContent=drive;
+    el=document.getElementById('sRoom');if(el)el.textContent=energy;
+    el=document.getElementById('sTrigger');if(el)el.textContent=testSupport;
+    el=document.getElementById('sImpact');if(el)el.textContent=relPressure;
+  }
+
+  /* ── Month Labels (Recovery Chart) ── */
+  function setMonths(){
+    var m=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var d=new Date(),ci=d.getMonth(),cy=d.getFullYear();
+    var ti=(ci+5)%12,ty=ci+5>=12?cy+1:cy;
+    var el=document.getElementById('targetMo');
+    if(el)el.textContent=m[ti]+' '+ty;
+    el=document.getElementById('barMonthStart');
+    if(el)el.textContent=m[ci];
+    el=document.getElementById('barMonthEnd');
+    if(el)el.textContent=m[ti];
+  }
+
+  /* ── Recovery Bar Chart Animation (Step 15) — now CSS-only via .qf-step.active */
+  function animBars(){}
+
+  /* ── Loading Progress Bars + Popup Gates (Step 16) ── */
+  var loadStarted=false;
+  function startLoading(){
+    if(loadStarted)return;
+    loadStarted=true;
+    /* Reset bars to 0 */
+    for(var i=1;i<=3;i++){
+      var f=document.getElementById('lf'+i),p=document.getElementById('lp'+i),b=document.getElementById('lb'+i);
+      if(f){f.style.setProperty('width','0%','important');f.offsetHeight;}
+      if(p)p.textContent='0 %';
+      if(b){b.classList.remove('active');b.classList.remove('done');}
+    }
+    var sa=document.getElementById('submitArea');if(sa)sa.classList.remove('vis');
+    setTimeout(function(){doAnimBar('first',1)},500);
+  }
+
+  function doAnimBar(id,n){
+    var fill=document.getElementById('lf'+n),pct=document.getElementById('lp'+n),bar=document.getElementById('lb'+n);
+    if(!fill||!bar)return;
+    bar.classList.add('active');
+    bar.offsetHeight;
+    var c=0;
+    var iv=setInterval(function(){
+      c++;
+      fill.style.setProperty('width',c+'%','important');
+      pct.textContent=c+' %';
+      if(c>=49){clearInterval(iv);bars[id]={n:n,c:c};showPop(id);}
+    },60);
+  }
+
+  function resumeBar(id,n,from){
+    var fill=document.getElementById('lf'+n),pct=document.getElementById('lp'+n),bar=document.getElementById('lb'+n);
+    if(!fill)return;
+    var c=from;
+    var iv=setInterval(function(){
+      c++;fill.style.setProperty('width',c+'%','important');pct.textContent=c+' %';
+      if(c>=100){
+        clearInterval(iv);bar.classList.add('done');
+        var lbl=bar.querySelector('.qf-load__label');
+        if(n===1&&lbl)lbl.textContent='Profile Mapped';
+        if(n===2&&lbl)lbl.textContent='Markers Analyzed';
+        if(n===3&&lbl)lbl.textContent='Protocol Ready';
+        if(n<3){var nx=n===1?'second':'third';setTimeout(function(){doAnimBar(nx,n+1)},1000);}
+        else{setTimeout(function(){document.getElementById('submitArea').classList.add('vis')},500);}
+      }
+    },60);
+  }
+
+  function showPop(id){
+    var o=document.getElementById(id+'PopupOverlay');
+    if(o){o.style.display='flex';o.offsetHeight;o.classList.add('vis');}
+  }
+
+  window.qfContProg=function(id){
+    var o=document.getElementById(id+'PopupOverlay');
+    if(o){
+      o.classList.remove('vis');
+      setTimeout(function(){o.style.display='none'},300);
+    }
+    var b=bars[id];if(b)resumeBar(id,b.n,b.c);
+  };
+
+  /* ── Final Submit ── */
+  window.qfSubmitQuiz=function(){
+    trackFunnelStep(STEPS);
+    try{localStorage.setItem('qf2Completed','true');localStorage.setItem('qf2Ans',JSON.stringify(ans));}catch(e){}
+    window.location.href='{{ redirect_url }}';
+  };
+
+  /* ── Init ── */
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+  else init();
+})();
+</script>

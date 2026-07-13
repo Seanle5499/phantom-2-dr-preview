@@ -1,0 +1,296 @@
+{% comment %}
+  Quiz Funnel 2 — JavaScript Logic
+  Handles: navigation, scoring, summary generation, animations,
+           loading bars, popups, timer, Meta Pixel tracking
+{% endcomment %}
+
+<script>
+(function(){
+  'use strict';
+  var STEPS=16,cur=1,ans={},multi=[];
+  var hiddenEls=[];
+  var socialInt, socialIdx=0;
+
+  /* ── Hide theme header/footer (reversible, won't affect other pages) ── */
+  function hideChrome(){
+    var sels=[
+      '.shopify-section-footer','#shopify-section-footer','footer.footer','.shopify-section-group-footer-group'
+    ];
+    sels.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(el){
+        if(el.style.display!=='none'){
+          hiddenEls.push({el:el,prev:el.style.display});
+          el.style.display='none';
+        }
+      });
+    });
+  }
+
+  function init(){
+    hideChrome();
+    try{var s=localStorage.getItem('qf2Ans');if(s)ans=JSON.parse(s);}catch(e){}
+    setMonths();
+    show(1);
+  }
+
+  /* ── Countdown Timer (15 min) ── */
+  var qfTimerInt;
+  function startTimer() {
+    if(qfTimerInt) clearInterval(qfTimerInt);
+    var target = new Date().getTime() + (15 * 60 * 1000);
+    var el = document.getElementById('qfTimer');
+    if(!el) return;
+    qfTimerInt = setInterval(function() {
+      var dist = target - new Date().getTime();
+      if(dist < 0) {
+        clearInterval(qfTimerInt);
+        el.textContent = "00:00";
+        return;
+      }
+      var m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      var s = Math.floor((dist % (1000 * 60)) / 1000);
+      el.textContent = (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+    }, 1000);
+  }
+
+  /* ── Track each quiz step via dataLayer (GA4 / GTM) ── */
+  window.dataLayer = window.dataLayer || [];
+  function trackFunnelStep(stepObj) {
+    var prefix = '{{ pixel_prefix | escape }}' || 'Quiz';
+    var customEventName = prefix + '_Step_' + (stepObj < 10 ? '0' + stepObj : stepObj);
+    dataLayer.push({
+      event: 'quiz_step_completed',
+      quiz_step: stepObj,
+      quiz_step_name: customEventName,
+      quiz_name: 'VitalityQuiz2C'
+    });
+    console.log('[Quiz dataLayer]', customEventName);
+  }
+
+  /* ── Step Navigation ── */
+  function show(s){
+    document.querySelectorAll('.qf-step').forEach(function(el){el.classList.remove('active')});
+    var t=document.querySelector('.qf-step[data-step="'+s+'"]');
+    if(t){t.classList.add('active');cur=s;updProg();}
+    if(s===7) startSocialCarousel(); else stopSocialCarousel();
+    if(s===14) { genSummary(); startTimer(); }
+    if(s===15) animBars();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function updProg(){
+    /* Steps 12-13 removed; map remaining steps to smooth progress */
+    var stepMap={1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,14:12,15:13,16:14};
+    var mapped=stepMap[cur]||cur;
+    var p=Math.min(100,((mapped-1)/14)*100);
+    var f=document.getElementById('progFill');
+    if(f)f.style.width=p+'%';
+    var lbl=document.getElementById('qfStepCur');
+    if(lbl)lbl.textContent=mapped;
+  }
+
+  /* ── Global Handlers (qf- prefix to avoid conflicts) ── */
+  window.qfPickOpt=function(el,step){
+    el.parentElement.querySelectorAll('.qf-opt').forEach(function(o){o.classList.remove('sel')});
+    el.classList.add('sel');
+    ans[step]=el.getAttribute('data-answer');
+    try{localStorage.setItem('qf2Ans',JSON.stringify(ans));}catch(e){}
+    setTimeout(function(){qfGoStep(step+1)},300);
+  };
+
+  window.qfToggleM=function(el){
+    el.classList.toggle('sel');
+    multi=[];
+    document.querySelectorAll('#multiOpts .qf-opt--multi.sel').forEach(function(o){multi.push(o.getAttribute('data-answer'))});
+    var b=document.getElementById('multiBtn');
+    if(b)b.disabled=multi.length===0;
+  };
+
+  window.qfGoStep=function(s){
+    /* Fire event for the step the user just completed (cur) */
+    if(cur < s) trackFunnelStep(cur);
+    /* Fake loading after sleep question (step 9 → 10) */
+    if(cur === 9 && s === 10){
+      var overlay = document.getElementById('qfFakeLoading');
+      if(overlay){
+        overlay.classList.add('active');
+        setTimeout(function(){ overlay.classList.remove('active'); show(s); }, 4000);
+        return;
+      }
+    }
+    /* Skip removed steps 12-13: step 11 → 14 with build profile loading */
+    if(cur === 11 && s === 12){
+      s = 14;
+      var bOverlay = document.getElementById('qfBuildLoading');
+      if(bOverlay){
+        bOverlay.classList.add('active');
+        var s1=document.getElementById('buildStage1');
+        var s2=document.getElementById('buildStage2');
+        var s3=document.getElementById('buildStage3');
+        /* Stage 1: show immediately */
+        if(s1) s1.classList.add('visible');
+        /* Stage 1 done + Stage 2 start */
+        setTimeout(function(){
+          if(s1) s1.classList.add('done');
+          if(s2) s2.classList.add('visible');
+        }, 2000);
+        /* Stage 2 done + Stage 3 start */
+        setTimeout(function(){
+          if(s2) s2.classList.add('done');
+          if(s3) s3.classList.add('visible');
+        }, 4000);
+        /* Stage 3 done + advance */
+        setTimeout(function(){
+          if(s3) s3.classList.add('done');
+          setTimeout(function(){
+            bOverlay.classList.remove('active');
+            [s1,s2,s3].forEach(function(el){if(el){el.classList.remove('visible','done');}});
+            show(s);
+          }, 600);
+        }, 6000);
+        return;
+      }
+    }
+    show(s);
+  };
+  window.qfGoBack=function(s){
+    if(s<=1)return;
+    /* Skip removed steps 12-13 when going back */
+    if(s===14){show(11);return;}
+    show(s-1);
+  };
+  
+  /* ── Social Carousel (Step 7) ── */
+  function startSocialCarousel(){
+    stopSocialCarousel();
+    var track = document.querySelector('#qfSocialCarousel .qf-carousel__track');
+    if(!track) return;
+    var slides = track.querySelectorAll('.qf-carousel__slide');
+    if(slides.length <= 1) return;
+    socialIdx = 0;
+    socialInt = setInterval(function(){
+      socialIdx = (socialIdx + 1) % slides.length;
+      qfGotoSlide(socialIdx);
+    }, 3000);
+  }
+  function stopSocialCarousel(){
+    if(socialInt) clearInterval(socialInt);
+    socialInt = null;
+  }
+  window.qfGotoSlide = function(n, e){
+    socialIdx = n;
+    var track = document.querySelector('#qfSocialCarousel .qf-carousel__track');
+    if(!track) return;
+    track.style.transform = 'translateX(-' + (n * 100) + '%)';
+    var dots = document.querySelectorAll('#qfSocialCarousel .qf-carousel__dot');
+    dots.forEach(function(d, i){
+      d.classList.toggle('active', i === n);
+    });
+    /* Reset timer if user clicks a dot */
+    if(e && e.type === 'click'){
+      startSocialCarousel();
+    }
+  };
+
+  /* ── Summary Generation (Step 14) ── */
+  function genSummary(){
+    var badgeText = 'HIGH LEVEL';
+    var circlePos = 78;
+    var alertLabel = 'Testosterone Assessment: DECLINING';
+    var alertText = 'Your testosterone production is significantly below peak. This results from accumulated stress, metabolic slowdown, and environmental toxins.';
+    var decline = 'Progressive';
+    var room = 'HIGH';
+    var rootCauses = 'Cortisol Environmental';
+    var lifeImpact = 'Substantial';
+
+    var el;
+    el=document.getElementById('sBadge');if(el)el.textContent=badgeText;
+    var circle=document.getElementById('sCircle');
+    if(circle){
+      circle.style.transition='none';
+      circle.style.left='0%';
+      setTimeout(function(){
+        circle.style.transition='left 1.5s ease-out';
+        circle.style.left=circlePos+'%';
+      },100);
+    }
+    el=document.getElementById('sAlertLabel');if(el)el.textContent=alertLabel;
+    el=document.getElementById('sAlertText');if(el)el.textContent=alertText;
+    el=document.getElementById('sAging');if(el)el.textContent=decline;
+    el=document.getElementById('sRoom');if(el)el.textContent=room;
+    el=document.getElementById('sTrigger');if(el)el.textContent=rootCauses;
+    el=document.getElementById('sImpact');if(el)el.textContent=lifeImpact;
+  }
+
+  /* ── Month Labels (Recovery Chart) ── */
+  function setMonths(){
+    var m=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var days=[31,28,31,30,31,30,31,31,30,31,30,31];
+    var d=new Date(),ci=d.getMonth(),cy=d.getFullYear();
+    var ti=(ci+3)%12,ty=ci+3>=12?cy+1:cy;
+    var el=document.getElementById('targetMo');
+    if(el)el.textContent=m[ti]+' '+days[ti];
+    /* X-axis: 3 future months */
+    for(var i=1;i<=3;i++){
+      var mi=(ci+i)%12;
+      el=document.getElementById('rcMonth'+i);
+      if(el)el.textContent=m[mi]+' '+days[mi];
+    }
+  }
+
+  /* ── Recovery Chart Animation (Step 15) — JS-driven ── */
+  function animBars(){
+    var line=document.getElementById('rcLinePath');
+    var area=document.getElementById('rcAreaPath');
+    var dotStart=document.getElementById('rcDotStart');
+    var dotGoal=document.getElementById('rcDotGoal');
+    var badgeHere=document.getElementById('rcBadgeHere');
+    var badgeGoal=document.getElementById('rcBadgeGoal');
+    if(!line)return;
+
+    /* Reset everything */
+    var totalLen=line.getTotalLength?line.getTotalLength():600;
+    line.style.strokeDasharray=totalLen;
+    line.style.strokeDashoffset=totalLen;
+    line.style.transition='none';
+    if(area)area.setAttribute('opacity','0');
+    if(dotStart)dotStart.setAttribute('opacity','0');
+    if(dotGoal)dotGoal.setAttribute('opacity','0');
+    if(badgeHere)badgeHere.style.opacity='0';
+    if(badgeGoal)badgeGoal.style.opacity='0';
+
+    /* Step 1: Show start dot + badge (0.3s) */
+    setTimeout(function(){
+      if(dotStart)dotStart.setAttribute('opacity','1');
+      if(badgeHere)badgeHere.style.opacity='1';
+    },300);
+
+    /* Step 2: Draw line + show area (0.5s) */
+    setTimeout(function(){
+      line.style.transition='stroke-dashoffset 2s ease-out';
+      line.style.strokeDashoffset='0';
+      if(area){
+        area.style.transition='opacity 1.5s ease-out';
+        area.setAttribute('opacity','1');
+      }
+    },500);
+
+    /* Step 3: Show goal dot + badge (2.5s) */
+    setTimeout(function(){
+      if(dotGoal)dotGoal.setAttribute('opacity','1');
+      if(badgeGoal)badgeGoal.style.opacity='1';
+    },2500);
+  }
+
+  /* ── Final Submit ── */
+  window.qfSubmitQuiz=function(){
+    trackFunnelStep(STEPS);
+    try{localStorage.setItem('qf2Completed','true');localStorage.setItem('qf2Ans',JSON.stringify(ans));}catch(e){}
+    window.location.href='{{ redirect_url }}';
+  };
+
+  /* ── Init ── */
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+  else init();
+})();
+</script>

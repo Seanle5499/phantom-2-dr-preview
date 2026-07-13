@@ -1,0 +1,922 @@
+
+    
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-530263160297358556.gps.gpsil [style*="--as:"]{align-self:var(--as)}.gps-530263160297358556.gps.gpsil [style*="--aspect:"]{aspect-ratio:var(--aspect)}.gps-530263160297358556.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-530263160297358556.gps.gpsil [style*="--hvr-bg:"]:hover{background:var(--hvr-bg)}.gps-530263160297358556.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-530263160297358556.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-530263160297358556.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-530263160297358556.gps.gpsil [style*="--hvr-bgi:"]:hover{background-image:var(--hvr-bgi)}.gps-530263160297358556.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-530263160297358556.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-530263160297358556.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-530263160297358556.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-530263160297358556.gps.gpsil [style*="--hvr-b:"]:hover{border:var(--hvr-b)}.gps-530263160297358556.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-530263160297358556.gps.gpsil [style*="--hvr-bb:"]:hover{border-bottom:var(--hvr-bb)}.gps-530263160297358556.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-530263160297358556.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-530263160297358556.gps.gpsil [style*="--hvr-bblr:"]:hover{border-bottom-left-radius:var(--hvr-bblr)}.gps-530263160297358556.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-530263160297358556.gps.gpsil [style*="--hvr-bbrr:"]:hover{border-bottom-right-radius:var(--hvr-bbrr)}.gps-530263160297358556.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-530263160297358556.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-530263160297358556.gps.gpsil [style*="--hvr-bt:"]:hover{border-top:var(--hvr-bt)}.gps-530263160297358556.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-530263160297358556.gps.gpsil [style*="--hvr-btlr:"]:hover{border-top-left-radius:var(--hvr-btlr)}.gps-530263160297358556.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-530263160297358556.gps.gpsil [style*="--hvr-btrr:"]:hover{border-top-right-radius:var(--hvr-btrr)}.gps-530263160297358556.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-530263160297358556.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-530263160297358556.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-530263160297358556.gps.gpsil [style*="--hvr-c:"]:hover{color:var(--hvr-c)}.gps-530263160297358556.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-530263160297358556.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-530263160297358556.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-530263160297358556.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-530263160297358556.gps.gpsil [style*="--fs:"]{font-style:var(--fs)}.gps-530263160297358556.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-530263160297358556.gps.gpsil [style*="--h:"]{height:var(--h)}.gps-530263160297358556.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-530263160297358556.gps.gpsil [style*="--ls:"]{letter-spacing:var(--ls)}.gps-530263160297358556.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-530263160297358556.gps.gpsil [style*="--tdt:"]{text-decoration-thickness:var(--tdt)}.gps-530263160297358556.gps.gpsil [style*="--tdl:"]{text-decoration-line:var(--tdl)}.gps-530263160297358556.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-530263160297358556.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-530263160297358556.gps.gpsil [style*="--ml:"]{margin-left:var(--ml)}.gps-530263160297358556.gps.gpsil [style*="--mt:"]{margin-top:var(--mt)}.gps-530263160297358556.gps.gpsil [style*="--objf:"]{-o-object-fit:var(--objf);object-fit:var(--objf)}.gps-530263160297358556.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-530263160297358556.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-530263160297358556.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-530263160297358556.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-530263160297358556.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-530263160297358556.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-530263160297358556.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-530263160297358556.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-530263160297358556.gps.gpsil [style*="--pos:"]{position:var(--pos)}.gps-530263160297358556.gps.gpsil [style*="--right:"]{right:var(--right)}.gps-530263160297358556.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-530263160297358556.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-530263160297358556.gps.gpsil [style*="--top:"]{top:var(--top)}.gps-530263160297358556.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-530263160297358556.gps.gpsil [style*="--w:"]{width:var(--w)}.gps-530263160297358556.gps.gpsil [style*="--line-clamp:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp)}@media only screen and (max-width:1024px){.gps-530263160297358556.gps.gpsil [style*="--aspect-tablet:"]{aspect-ratio:var(--aspect-tablet)}.gps-530263160297358556.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-530263160297358556.gps.gpsil [style*="--h-tablet:"]{height:var(--h-tablet)}.gps-530263160297358556.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-530263160297358556.gps.gpsil [style*="--mb-tablet:"]{margin-bottom:var(--mb-tablet)}.gps-530263160297358556.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-530263160297358556.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-530263160297358556.gps.gpsil [style*="--pt-tablet:"]{padding-top:var(--pt-tablet)}.gps-530263160297358556.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}.gps-530263160297358556.gps.gpsil [style*="--line-clamp-tablet:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-tablet)}}@media only screen and (max-width:767px){.gps-530263160297358556.gps.gpsil [style*="--aspect-mobile:"]{aspect-ratio:var(--aspect-mobile)}.gps-530263160297358556.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-530263160297358556.gps.gpsil [style*="--gtc-mobile:"]{grid-template-columns:var(--gtc-mobile)}.gps-530263160297358556.gps.gpsil [style*="--h-mobile:"]{height:var(--h-mobile)}.gps-530263160297358556.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-530263160297358556.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-530263160297358556.gps.gpsil [style*="--mt-mobile:"]{margin-top:var(--mt-mobile)}.gps-530263160297358556.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-530263160297358556.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-530263160297358556.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-530263160297358556.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-530263160297358556.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}.gps-530263160297358556.gps.gpsil [style*="--line-clamp-mobile:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-mobile)}}.gps-530263160297358556 .gp-g-subheading-2{font-family:var(--g-sh2-ff);font-size:var(--g-sh2-size);font-style:var(--g-sh2-fs);font-weight:var(--g-sh2-weight);letter-spacing:var(--g-sh2-ls);line-height:var(--g-sh2-lh)}.gps-530263160297358556 .gp-g-paragraph-1{font-family:var(--g-p1-ff);font-size:var(--g-p1-size);font-style:var(--g-p1-fs);font-weight:var(--g-p1-weight);letter-spacing:var(--g-p1-ls);line-height:var(--g-p1-lh)}.gps-530263160297358556 .gp-relative{position:relative}.gps-530263160297358556 .gp-z-1{z-index:1}.gps-530263160297358556 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-530263160297358556 .gp-mb-0{margin-bottom:0}.gps-530263160297358556 .gp-inline-block{display:inline-block}.gps-530263160297358556 .gp-flex{display:flex}.gps-530263160297358556 .gp-inline-flex{display:inline-flex}.gps-530263160297358556 .gp-grid{display:grid}.gps-530263160297358556 .gp-contents{display:contents}.gps-530263160297358556 .\!gp-hidden{display:none!important}.gps-530263160297358556 .gp-hidden{display:none}.gps-530263160297358556 .gp-h-auto{height:auto}.gps-530263160297358556 .gp-h-full{height:100%}.gps-530263160297358556 .gp-w-full{width:100%}.gps-530263160297358556 .gp-max-w-full{max-width:100%}.gps-530263160297358556 .gp-flex-none{flex:none}.gps-530263160297358556 .gp-shrink-0{flex-shrink:0}.gps-530263160297358556 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-530263160297358556 .gp-flex-row-reverse{flex-direction:row-reverse}.gps-530263160297358556 .gp-flex-col{flex-direction:column}.gps-530263160297358556 .gp-items-center{align-items:center}.gps-530263160297358556 .gp-justify-center{justify-content:center}.gps-530263160297358556 .gp-overflow-hidden{overflow:hidden}.gps-530263160297358556 .gp-break-words{overflow-wrap:break-word}.gps-530263160297358556 .gp-text-center{text-align:center}.gps-530263160297358556 .gp-no-underline{text-decoration-line:none}.gps-530263160297358556 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-530263160297358556 .gp-duration-200{transition-duration:.2s}.gps-530263160297358556 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-530263160297358556 .disabled\:gp-btn-disabled:disabled{cursor:default}.gps-530263160297358556 .disabled\:gp-opacity-30:disabled{opacity:.3}.gps-530263160297358556 .gp-group\/button:active .group-active\/button\:\!gp-text-inherit{color:inherit!important}.gps-530263160297358556 .gp-group[data-state=loading] .group-data-\[state\=loading\]\:gp-invisible{visibility:hidden}@media (max-width:1024px){.gps-530263160297358556 .tablet\:\!gp-hidden{display:none!important}.gps-530263160297358556 .tablet\:gp-hidden{display:none}.gps-530263160297358556 .tablet\:gp-h-auto{height:auto}.gps-530263160297358556 .tablet\:gp-flex-none{flex:none}}@media (max-width:767px){.gps-530263160297358556 .mobile\:\!gp-hidden{display:none!important}.gps-530263160297358556 .mobile\:gp-hidden{display:none}.gps-530263160297358556 .mobile\:gp-h-auto{height:auto}.gps-530263160297358556 .mobile\:gp-flex-none{flex:none}}.gps-530263160297358556 .\[\&\>svg\]\:\!gp-h-\[var\(--height-desktop\)\]>svg{height:var(--height-desktop)!important}.gps-530263160297358556 .\[\&\>svg\]\:\!gp-w-auto>svg{width:auto!important}@media (max-width:1024px){.gps-530263160297358556 .tablet\:\[\&\>svg\]\:\!gp-h-\[var\(--height-tablet\)\]>svg{height:var(--height-tablet)!important}}@media (max-width:767px){.gps-530263160297358556 .mobile\:\[\&\>svg\]\:\!gp-h-\[var\(--height-mobile\)\]>svg{height:var(--height-mobile)!important}}.gps-530263160297358556 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-530263160297358556 .\[\&_p\]\:gp-whitespace-pre-line p{white-space:pre-line}</style>
+    <style {% if section.settings.section_preload == "false" %} class="gps-link" type="text/disabled-css" {% endif %}>@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9GnM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+</style>
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"g2Fs4Gf2_7"}' data-id="g2Fs4Gf2_7" id="g2Fs4Gf2_7" data-same-height-subgrid-container class="g2Fs4Gf2_7 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--pt:0px;--pb:16px;--pt-mobile:0px;--pb-mobile:14px;--cg:32px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gUCEpDsvm- gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gIGmEhan5q"}' data-id="gIGmEhan5q" id="gIGmEhan5q" data-same-height-subgrid-container class="gIGmEhan5q gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--pt:80px;--pl:20px;--pr:20px;--pt-mobile:20px;--pl-mobile:20px;--pr-mobile:20px;--mb-tablet:0px;--pt-tablet:80px;--pl-tablet:20px;--pr-tablet:20px;--cg:8px;--gtc:minmax(0, 12fr);--w:1240px;--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="g9vAWc-ste gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="grpx59fHRV"
+        class="grpx59fHRV"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:24px;--mb-mobile:21px;--pr-mobile:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h1
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:70%;--w-tablet:70%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:left;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-heading, heading);--size:48px;--size-tablet:52px;--size-mobile:32px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:#1B8D17;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggrpx59fHRV_text | replace: '$locationOrigin', locationOrigin }}
+        </h1>
+      </div>
+    </div>
+    
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gE0bkeeFvp"}' data-id="gE0bkeeFvp" id="gE0bkeeFvp" data-same-height-subgrid-container class="gE0bkeeFvp gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_ARTICLE;--pos:relative;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:0px;--cg:30px;--gtc:minmax(0, 9fr) minmax(0, 3fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gs4gEUtC86 gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gLuD-uxyn9"}' data-id="gLuD-uxyn9" id="gLuD-uxyn9" data-same-height-subgrid-container class="gLuD-uxyn9 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pr:32px;--pr-mobile:0px;--pr-tablet:0px;--cg:8px;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gB9rhgPeaf gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gX2ilwSika"
+        class="gX2ilwSika"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:32px;--mb-mobile:28px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:16px;--size-tablet:16px;--size-mobile:16px;--c:#242424;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggX2ilwSika_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+      <style id="custom-css-gX2ilwSika">
+        .gX2ilwSika {
+
+}
+.gX2ilwSika p {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g9GIF23N0s"
+        class="g9GIF23N0s"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:12px;--mt-mobile:0px;--mb-mobile:10px;--mb-tablet:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:left;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-heading, heading);--size:46px;--size-tablet:46px;--size-mobile:32px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:#000000;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gg9GIF23N0s_text | replace: '$locationOrigin', locationOrigin }}
+        </h2>
+      </div>
+    </div>
+    
+    <div
+      role="presentation"
+      data-id="gjpbKUa3Gs"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mb:0px;--mb-mobile:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773476245293 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gjpbKUa3Gs"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="{{ "gempages_501444340413891578-63bec2f9-2ad2-4e8e-9631-0618c31b4830.png" | file_url }}" srcset="{{ "gempages_501444340413891578-63bec2f9-2ad2-4e8e-9631-0618c31b4830.png" | file_url }}" />
+      <source media="(max-width: 1024px)" data-srcSet="{{ "gempages_501444340413891578-63bec2f9-2ad2-4e8e-9631-0618c31b4830.png" | file_url }}" srcset="{{ "gempages_501444340413891578-63bec2f9-2ad2-4e8e-9631-0618c31b4830.png" | file_url }}" />
+    
+      
+      <img
+        title="Source: Freepik" loading="eager" fetchpriority="high"
+        src="{{ "gempages_501444340413891578-63bec2f9-2ad2-4e8e-9631-0618c31b4830.png" | file_url }}" data-src="{{ "gempages_501444340413891578-63bec2f9-2ad2-4e8e-9631-0618c31b4830.png" | file_url }}"
+        alt=""
+        width="100%"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--h:auto;--h-tablet:auto;--h-mobile:auto"
+        class="gp-inline-block gp-w-full gp-max-w-full"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gjpbKUa3Gs">
+        .gjpbKUa3Gs {
+
+}
+.gjpbKUa3Gs > figure > img {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="ghj5Ndadaw"
+        class="ghj5Ndadaw"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-xl);--mb-mobile:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:var(--g-c-text-1, text-1);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gghj5Ndadaw_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gTZoRWVkfF"
+        class="gTZoRWVkfF"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:32px;--mb-mobile:14px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:16px;--size-tablet:16px;--size-mobile:16px;--c:#242424;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggTZoRWVkfF_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+      <style id="custom-css-gTZoRWVkfF">
+        .gTZoRWVkfF {
+
+}
+.gTZoRWVkfF p {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="ggk43ll1fS"
+        class="ggk43ll1fS"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:12px;--mt-mobile:0px;--mb-mobile:10px;--mb-tablet:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:left;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-heading, heading);--weight:400;--size:46px;--size-tablet:46px;--size-mobile:32px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:#000000;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gggk43ll1fS_text | replace: '$locationOrigin', locationOrigin }}
+        </h2>
+      </div>
+    </div>
+    
+    <div
+      role="presentation"
+      data-id="gBtHSBiJDd"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mb:auto;--mb-mobile:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773476245297 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gBtHSBiJDd"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="{{ "gempages_501444340413891578-d8dd5552-0296-4169-95a6-03b7ade8d5b9.png" | file_url }}" srcset="{{ "gempages_501444340413891578-d8dd5552-0296-4169-95a6-03b7ade8d5b9.png" | file_url }}" />
+      <source media="(max-width: 1024px)" data-srcSet="{{ "gempages_501444340413891578-d8dd5552-0296-4169-95a6-03b7ade8d5b9.png" | file_url }}" srcset="{{ "gempages_501444340413891578-d8dd5552-0296-4169-95a6-03b7ade8d5b9.png" | file_url }}" />
+    
+      
+      <img
+        title="Source: Freepik" loading="eager" fetchpriority="high"
+        src="{{ "gempages_501444340413891578-d8dd5552-0296-4169-95a6-03b7ade8d5b9.png" | file_url }}" data-src="{{ "gempages_501444340413891578-d8dd5552-0296-4169-95a6-03b7ade8d5b9.png" | file_url }}"
+        alt=""
+        width="100%"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--h:auto;--h-tablet:auto;--h-mobile:auto"
+        class="gp-inline-block gp-w-full gp-max-w-full"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gBtHSBiJDd">
+        .gBtHSBiJDd {
+
+}
+.gBtHSBiJDd > figure > img {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gaujKeIn_v"
+        class="gaujKeIn_v"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-xl);--mb-mobile:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:var(--g-c-text-1, text-1);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggaujKeIn_v_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gxD5F8ssSO"
+        class="gxD5F8ssSO"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:24px;--mb-mobile:21px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:16px;--size-tablet:16px;--size-mobile:16px;--c:#242424;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggxD5F8ssSO_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+      <style id="custom-css-gxD5F8ssSO">
+        .gxD5F8ssSO {
+
+}
+.gxD5F8ssSO p {
+
+}
+      </style>
+    
+    <gp-button
+      gp-data='{"btnLink":{"link":"","selectedTab":"products","target":"_self","title":"Healing Shilajit Essential Extract"}}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-xl);--mb-mobile:0px;--ta:center" >
+        <style>[data-id="gjfpYjJVvr"].gp-button-base::before, [data-id="gjfpYjJVvr-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #000000;
+  
+    
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      
+  
+    }
+  
+      
+  [data-id="gjfpYjJVvr"]:hover::before, [data-id="gjfpYjJVvr-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="gjfpYjJVvr" dataId="gjfpYjJVvr" data-state="idle" aria-label="<p>KEEP YOUR GUT HEALTHY</p>"
+          
+          type="button"
+          style="--w:483px;--w-tablet:483px;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:15px;--pb:15px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:12px;--pb-mobile:12px;--bblr:100px;--bbrr:100px;--btlr:100px;--btrr:100px;--hvr-bblr:100px;--hvr-bbrr:100px;--hvr-btlr:100px;--hvr-btrr:100px;--shadow:none;--bgi:;--hvr-bgi:;--hvr-bg:#FFD700;--bg:#FFD700;--hvr-c:#252525;--c:#242424;--weight:bold"
+          class="gjfpYjJVvr gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30  gp-g-subheading-2"
+        >
+        
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+    <span
+      style="--weight:bold;word-break:break-word;--ml:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817550824440168">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z" /></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--weight:bold;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggjfpYjJVvr_label }}
+    </span>
+        </div>
+        
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      <style id="custom-css-gjfpYjJVvr">
+        button.gjfpYjJVvr {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gIMycOvou4"
+        class="gIMycOvou4"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:12px;--mt-mobile:12px;--mb-mobile:10px;--mb-tablet:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:left;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-heading, heading);--weight:400;--size:46px;--size-tablet:46px;--size-mobile:32px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:#000000;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggIMycOvou4_text | replace: '$locationOrigin', locationOrigin }}
+        </h2>
+      </div>
+    </div>
+    
+    <div
+      role="presentation"
+      data-id="gXm0nkhZVz"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mb:0px;--mb-mobile:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773476245301 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gXm0nkhZVz"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="{{ "gempages_501444340413891578-544eab4c-2cc1-443f-a148-ff6deea314b5.png" | file_url }}" srcset="{{ "gempages_501444340413891578-544eab4c-2cc1-443f-a148-ff6deea314b5.png" | file_url }}" />
+      <source media="(max-width: 1024px)" data-srcSet="{{ "gempages_501444340413891578-544eab4c-2cc1-443f-a148-ff6deea314b5.png" | file_url }}" srcset="{{ "gempages_501444340413891578-544eab4c-2cc1-443f-a148-ff6deea314b5.png" | file_url }}" />
+    
+      
+      <img
+        loading="eager" fetchpriority="high"
+        src="{{ "gempages_501444340413891578-544eab4c-2cc1-443f-a148-ff6deea314b5.png" | file_url }}" data-src="{{ "gempages_501444340413891578-544eab4c-2cc1-443f-a148-ff6deea314b5.png" | file_url }}"
+        alt=""
+        width="100%"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--h:auto;--h-tablet:auto;--h-mobile:auto"
+        class="gp-inline-block gp-w-full gp-max-w-full"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gXm0nkhZVz">
+        .gXm0nkhZVz {
+
+}
+.gXm0nkhZVz > figure > img {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gG0QoA7ZD_"
+        class="gG0QoA7ZD_"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-xl);--mb-mobile:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:var(--g-c-text-1, text-1);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggG0QoA7ZD__text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gFJeTDTG7k"
+        class="gFJeTDTG7k"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:24px;--mb-mobile:21px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:16px;--size-tablet:16px;--size-mobile:16px;--c:#242424;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggFJeTDTG7k_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+      <style id="custom-css-gFJeTDTG7k">
+        .gFJeTDTG7k {
+
+}
+.gFJeTDTG7k p {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gnxZ6NiIAE"
+        class="gnxZ6NiIAE"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:12px;--mt-mobile:0px;--mb-mobile:10px;--mb-tablet:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:left;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-heading, heading);--weight:400;--size:46px;--size-tablet:46px;--size-mobile:32px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:#000000;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggnxZ6NiIAE_text | replace: '$locationOrigin', locationOrigin }}
+        </h2>
+      </div>
+    </div>
+    
+    <div
+      role="presentation"
+      data-id="gPOimHUldt"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mb:0px;--mb-mobile:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773476245303 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPOimHUldt"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="{{ "gempages_501444340413891578-9f122083-62c4-4937-a192-720cce884eda.png" | file_url }}" srcset="{{ "gempages_501444340413891578-9f122083-62c4-4937-a192-720cce884eda.png" | file_url }}" />
+      <source media="(max-width: 1024px)" data-srcSet="{{ "gempages_501444340413891578-9f122083-62c4-4937-a192-720cce884eda.png" | file_url }}" srcset="{{ "gempages_501444340413891578-9f122083-62c4-4937-a192-720cce884eda.png" | file_url }}" />
+    
+      
+      <img
+        loading="eager" fetchpriority="high"
+        src="{{ "gempages_501444340413891578-9f122083-62c4-4937-a192-720cce884eda.png" | file_url }}" data-src="{{ "gempages_501444340413891578-9f122083-62c4-4937-a192-720cce884eda.png" | file_url }}"
+        alt=""
+        width="100%"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--h:auto;--h-tablet:auto;--h-mobile:auto"
+        class="gp-inline-block gp-w-full gp-max-w-full"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gPOimHUldt">
+        .gPOimHUldt {
+
+}
+.gPOimHUldt > figure > img {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gd4jdGa6co"
+        class="gd4jdGa6co"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-xl);--mb-mobile:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:var(--g-c-text-1, text-1);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggd4jdGa6co_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g-71aRsR4S"
+        class="g-71aRsR4S"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:24px;--mb-mobile:21px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:16px;--size-tablet:16px;--size-mobile:16px;--c:#242424;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gg-71aRsR4S_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+      <style id="custom-css-g-71aRsR4S">
+        .g-71aRsR4S {
+
+}
+.g-71aRsR4S p {
+
+}
+      </style>
+    
+    <gp-button
+      gp-data='{"btnLink":{"link":"https://wellnessnest.co/products/meno-pure-shilajit-gold-resin-pack-1","selectedTab":"products","target":"_self","title":"Healing Shilajit Essential Extract"}}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-xl);--mb-mobile:0px;--ta:center" >
+        <style>[data-id="gWBWLpq98g"].gp-button-base::before, [data-id="gWBWLpq98g-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #000000;
+  
+    
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      
+  
+    }
+  
+      
+  [data-id="gWBWLpq98g"]:hover::before, [data-id="gWBWLpq98g-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <a
+          data-id="gWBWLpq98g" dataId="gWBWLpq98g" data-state="idle" aria-label="<p>KEEP YOUR GUT HEALTHY</p>"
+          
+          href="https://wellnessnest.co/products/meno-pure-shilajit-gold-resin-pack-1" target="_self"
+          style="--w:483px;--w-tablet:483px;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:15px;--pb:15px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:12px;--pb-mobile:12px;--bblr:100px;--bbrr:100px;--btlr:100px;--btrr:100px;--hvr-bblr:100px;--hvr-bbrr:100px;--hvr-btlr:100px;--hvr-btrr:100px;--shadow:none;--bgi:;--hvr-bgi:;--hvr-bg:#FFD700;--bg:#FFD700;--hvr-c:#252525;--c:#242424;--weight:bold"
+          class="gWBWLpq98g gp-text-center gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30  gp-g-subheading-2"
+        >
+        
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+    <span
+      style="--weight:bold;word-break:break-word;--ml:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817550824440168">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z" /></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--weight:bold;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggWBWLpq98g_label }}
+    </span>
+        </div>
+        
+        </a>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      <style id="custom-css-gWBWLpq98g">
+        button.gWBWLpq98g {
+
+}
+      </style>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div><div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="g9UuBPwigF gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gBGdzbygyU"}' data-id="gBGdzbygyU" id="gBGdzbygyU" data-same-height-subgrid-container class="gBGdzbygyU gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:none;--d-tablet:grid;--op:100%;--pageType:GP_ARTICLE;--pos:sticky;--right:0px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--top:28px;--cg:8px;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="g7HH7cWOwn gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gSoee7N0d5"
+        class="gSoee7N0d5"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:24px;--mt-mobile:0px;--mb-mobile:24px;--mb-tablet:12px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h3
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--fs:normal;--ff:var(--g-font-Inter, 'Inter'), var(--g-font-heading, heading);--weight:600;--size:23px;--size-tablet:23px;--size-mobile:17px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--c:#000000;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggSoee7N0d5_text | replace: '$locationOrigin', locationOrigin }}
+        </h3>
+      </div>
+    </div>
+    
+    <div
+      role="presentation"
+      data-id="gyEPlCmTyN"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mb:12px;--mb-mobile:12px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773476245310 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gyEPlCmTyN"
+    >
+      <a
+        href="#" target="_self" title
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://wellnessnest.co/cdn/shop/articles/signal-of-menopause.png?v=1724083938&width=900" srcset="https://wellnessnest.co/cdn/shop/articles/signal-of-menopause.png?v=1724083938&width=900" />
+      <source media="(max-width: 1024px)" data-srcSet="https://wellnessnest.co/cdn/shop/articles/signal-of-menopause.png?v=1724083938&width=900" srcset="https://wellnessnest.co/cdn/shop/articles/signal-of-menopause.png?v=1724083938&width=900" />
+    
+      
+      <img
+        loading="eager" fetchpriority="high"
+        src="https://wellnessnest.co/cdn/shop/articles/signal-of-menopause.png?v=1724083938&width=900" data-src="https://wellnessnest.co/cdn/shop/articles/signal-of-menopause.png?v=1724083938&width=900"
+        alt=""
+        width="100%"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--h:auto;--h-tablet:auto;--h-mobile:auto"
+        class="gp-inline-block gp-w-full gp-max-w-full"
+      />
+    
+    </picture>
+  
+      </a>
+    </div>
+  
+      <style id="custom-css-gyEPlCmTyN">
+        .gyEPlCmTyN {
+
+}
+.gyEPlCmTyN > figure > img {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gBPa3AoeHL"
+        class="gBPa3AoeHL"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:24px;--mb-mobile:24px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Inter, 'Inter'), var(--g-font-body, body);--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--c:#242424;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggBPa3AoeHL_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+      <style id="custom-css-gBPa3AoeHL">
+        .gBPa3AoeHL {
+
+}
+.gBPa3AoeHL p {
+
+}
+      </style>
+    
+    <div
+      role="presentation"
+      data-id="g7qSR-sDQN"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mb:12px;--mb-mobile:12px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773476245311 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g7qSR-sDQN"
+    >
+      <a
+        href="#" target="_self" title
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://wellnessnest.co/cdn/shop/articles/training-women.png?v=1724728620&width=1200" srcset="https://wellnessnest.co/cdn/shop/articles/training-women.png?v=1724728620&width=1200" />
+      <source media="(max-width: 1024px)" data-srcSet="https://wellnessnest.co/cdn/shop/articles/training-women.png?v=1724728620&width=1200" srcset="https://wellnessnest.co/cdn/shop/articles/training-women.png?v=1724728620&width=1200" />
+    
+      
+      <img
+        loading="eager" fetchpriority="high"
+        src="https://wellnessnest.co/cdn/shop/articles/training-women.png?v=1724728620&width=1200" data-src="https://wellnessnest.co/cdn/shop/articles/training-women.png?v=1724728620&width=1200"
+        alt=""
+        width="100%"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--h:auto;--h-tablet:auto;--h-mobile:auto"
+        class="gp-inline-block gp-w-full gp-max-w-full"
+      />
+    
+    </picture>
+  
+      </a>
+    </div>
+  
+      <style id="custom-css-g7qSR-sDQN">
+        .g7qSR-sDQN {
+
+}
+.g7qSR-sDQN > figure > img {
+
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gOjRyedA18"
+        class="gOjRyedA18"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_ARTICLE;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:80px;--mb-mobile:28px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Inter, 'Inter'), var(--g-font-body, body);--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--ls:normal;--weight:bold;--c:#242424;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggOjRyedA18_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+      <style id="custom-css-gOjRyedA18">
+        .gOjRyedA18 {
+
+}
+.gOjRyedA18 p {
+
+}
+      </style>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    
+    "name": "Section 1",
+    "tag": "section",
+    "class": "gps-530263160297358556 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=GP_ARTICLE&editorId=530263160247026908&sectionId=530263160297358556)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggrpx59fHRV_text","label":"ggrpx59fHRV_text","default":"How Menopause Affects Your Gut and Tips to Keep It Happy"},{"type":"html","id":"ggX2ilwSika_text","label":"ggX2ilwSika_text","default":"<p>Menopause can significantly disrupt gut health due to hormonal changes, leading to issues like bloating, constipation, and acid reflux. To maintain digestive wellness during this transition, focus on a diet rich in fiber, probiotics, and anti-inflammatory foods, while staying hydrated and exercising regularly. Managing stress through relaxation techniques and maintaining good sleep habits are equally important.</p>"},{"type":"html","id":"gg9GIF23N0s_text","label":"gg9GIF23N0s_text","default":"Common Digestive Issues Women Face in Menopause"},{"type":"html","id":"gghj5Ndadaw_text","label":"gghj5Ndadaw_text","default":"<p>Source: Freepik</p>"},{"type":"html","id":"ggTZoRWVkfF_text","label":"ggTZoRWVkfF_text","default":"<p>As women transition through menopause, many experience an array of <a href=\"https://www.menopause.org/for-women/menopause-faqs-the-menopause-transition\"><u>digestive issues</u></a> that may have never been a concern before. This isn’t just coincidental—hormonal changes play a significant role in how your digestive system functions, leading to discomfort that can disrupt daily life.</p><p><span style=\"color:#1B8D17;\"><strong>=&gt; Find </strong></span><a href=\"https://wellnessnest.co/blogs/news/mastering-menopause\"><span style=\"color:#1B8D17;\"><strong><u>Natural Ways to Balance Your Hormones</u></strong></span></a><span style=\"color:#1B8D17;\"><strong> here.</strong></span></p><p>&nbsp;</p><p><strong>Bloating and Gas</strong></p><p>One of the most common complaints during menopause is bloating and gas. This can be particularly frustrating because it often occurs even if you haven’t made any changes to your diet. The drop in estrogen levels can slow down digestion, leading to food fermenting longer in the gut, which produces gas. Additionally, fluctuations in hormones can cause water retention, contributing to that uncomfortable bloated feeling.</p><p>&nbsp;</p><p><strong>Constipation</strong></p><p>Constipation is another digestive issue that becomes more prevalent during menopause. As estrogen and progesterone levels drop, the muscles in the digestive tract may not work as efficiently, slowing down the movement of food through your intestines. This can result in fewer bowel movements and harder stools, making elimination more difficult and uncomfortable.</p><p>&nbsp;</p><p><strong>Heartburn and Acid Reflux</strong></p><p>Heartburn and acid reflux are also common during menopause. The decrease in estrogen can weaken the lower esophageal sphincter, the muscle that prevents stomach acid from traveling back up into the esophagus. This can lead to frequent heartburn or a burning sensation in the chest, particularly after eating.</p><p>&nbsp;</p><p><strong>Weight Gain and Indigestion</strong></p><p>Menopause often brings about changes in body composition, including <a href=\"https://pubmed.ncbi.nlm.nih.gov/22978257/\"><u>weight gain</u></a>, which can exacerbate digestive issues. Excess weight, especially around the abdomen, puts pressure on the stomach and can lead to indigestion or discomfort after meals. This can create a cycle where eating becomes associated with discomfort, making it harder to enjoy food and maintain a healthy diet.</p><p><span style=\"color:#1B8D17;\"><strong>=&gt; How to <u>Keep your </u></strong></span><a href=\"https://wellnessnest.co/blogs/news/shed-the-menopause-pounds-secrets-to-keeping-weight-off-for-good\"><span style=\"color:#1B8D17;\"><strong><u>Weight During Menopause</u></strong></span></a><span style=\"color:#1B8D17;\"><strong><u>.</u></strong></span></p><p>&nbsp;</p><p><strong>Why These Issues Matter</strong></p><p>These digestive problems are more than just minor annoyances—they can have a significant impact on your overall well-being and quality of life. Poor digestion can lead to nutrient deficiencies, low energy levels, and a decrease in mental clarity. It’s important to address these issues not only for comfort but also for your long-term health.</p>"},{"type":"html","id":"gggk43ll1fS_text","label":"gggk43ll1fS_text","default":"<strong>Foods That Support a Healthy Gut in Menopause</strong>"},{"type":"html","id":"ggaujKeIn_v_text","label":"ggaujKeIn_v_text","default":"<p>Source: Freepik</p>"},{"type":"html","id":"ggxD5F8ssSO_text","label":"ggxD5F8ssSO_text","default":"<p>Maintaining a healthy gut is crucial during menopause, as hormonal shifts can disrupt your digestive system. Fortunately, incorporating certain foods into your diet can help support gut health, alleviate discomfort, and keep your digestive system running smoothly.</p><p>&nbsp;</p><p><strong>Fiber-Rich Foods</strong></p><p><a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5390821/\"><u>Fiber</u></a> is essential for a healthy digestive system, and during menopause, it becomes even more important. Foods rich in fiber, such as whole grains, fruits, vegetables, and legumes, help regulate bowel movements and prevent constipation, a common issue during this stage of life. Fiber also feeds the beneficial bacteria in your gut, promoting a balanced microbiome.</p><p>&nbsp;</p><p><strong>Probiotic-Rich Foods</strong></p><p><a href=\"https://www.nccih.nih.gov/health/probiotics-what-you-need-to-know\" target=\"_blank\"><u>Probiotics</u></a> are live bacteria and yeasts that are good for your digestive system. They help maintain a healthy balance of gut bacteria, which can be disrupted during menopause. Incorporate probiotic-rich foods like yogurt, kefir, sauerkraut, and kimchi into your diet. These foods can help reduce bloating, gas, and other digestive issues by replenishing the beneficial bacteria in your gut.</p><p>&nbsp;</p><p><strong>Prebiotic Foods</strong></p><p><u>Prebiotics</u> are types of fiber that feed the good bacteria in your gut, helping them to grow and thrive. Foods like garlic, onions, leeks, asparagus, and bananas are excellent sources of prebiotics. Including these in your diet can enhance the effectiveness of probiotics, further supporting a healthy gut environment.</p><p>&nbsp;</p><p><strong>Anti-Inflammatory Foods</strong></p><p>Menopause can lead to increased inflammation in the body, which can affect gut health. Incorporating <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6266803/\"><u>anti-inflammatory foods</u></a> like berries, leafy greens, fatty fish (such as salmon and mackerel), and nuts can help reduce inflammation. These foods are rich in antioxidants and omega-3 fatty acids, which help soothe the gut lining and reduce digestive discomfort.</p><p>&nbsp;</p><p><strong>Hydrating Foods</strong></p><p><a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2908954/\"><u>Staying hydrated</u></a> is key to digestive health, especially during menopause when dehydration can exacerbate digestive issues like constipation. In addition to drinking plenty of water, include hydrating foods like cucumbers, watermelon, and citrus fruits in your diet. These foods have high water content and can help keep your digestive system well-lubricated.</p><p>&nbsp;</p><p><strong>Take Charge of Your Gut Health</strong></p><p>While these foods can significantly improve gut health during menopause, adding a supplement like <strong>Wellness Nest’s Shilajit</strong> can enhance these benefits. Shilajit is packed with fulvic acid and essential minerals that support gut health by promoting better nutrient absorption and reducing inflammation.</p><p><span style=\"color:#1B8D17;\"><strong>=&gt; </strong></span><a href=\"https://wellnessnest.co/blogs/news/discovering-the-power-of-shilajit-benefits-for-health-wellness-and-vitality\"><span style=\"color:#1B8D17;\"><strong><u>What is Shilajit and its benefits?</u></strong></span></a></p>"},{"type":"html","id":"ggjfpYjJVvr_label","label":"ggjfpYjJVvr_label","default":"<p>KEEP YOUR GUT HEALTHY</p>"},{"type":"html","id":"ggIMycOvou4_text","label":"ggIMycOvou4_text","default":"<strong>Simple Lifestyle Changes to Improve Gut Health</strong>"},{"type":"html","id":"ggG0QoA7ZD__text","label":"ggG0QoA7ZD__text","default":"<p>Source: Freepik</p>"},{"type":"html","id":"ggFJeTDTG7k_text","label":"ggFJeTDTG7k_text","default":"<p>Maintaining a healthy gut during menopause isn’t just about what you eat—it’s also about how you live. By making a few simple lifestyle changes, you can significantly improve your digestive health, reduce discomfort, and support your body through this transition.</p><p>&nbsp;</p><p><strong>Prioritize Regular Physical Activity</strong></p><p><a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5357536/\"><u>Exercise</u></a> is one of the best ways to keep your digestive system functioning properly. Regular physical activity stimulates the muscles in your digestive tract, helping food move more efficiently through your system. Even simple activities like walking, yoga, or swimming can improve gut motility and reduce issues like bloating and constipation. Aim for at least 30 minutes of moderate exercise most days of the week to see the best results.</p><p>&nbsp;</p><p><strong>Manage Stress Effectively</strong> Stress can wreak havoc on your gut, especially during menopause when hormonal fluctuations can heighten anxiety and tension. Chronic stress can lead to digestive issues like irritable bowel syndrome (IBS) and exacerbate symptoms like bloating and abdominal pain. Techniques like deep breathing, meditation, and mindfulness can help manage stress and promote a healthier gut. Additionally, finding time to relax and unwind each day can make a big difference in how your digestive system responds to stress.</p><p>&nbsp;</p><p><strong>Get Enough Sleep</strong></p><p><a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6779243/\"><u>Sleep</u></a> is essential for overall health, including gut health. Poor sleep can disrupt the balance of bacteria in your gut and lead to increased inflammation. During menopause, when sleep disturbances are common, it’s crucial to establish a sleep routine that supports restful nights. Try to go to bed and wake up at the same time every day, create a calming bedtime ritual, and avoid screens before bed. A good night’s sleep can help maintain a balanced gut microbiome and reduce digestive discomfort.</p><p>&nbsp;</p><p><strong>Stay Hydrated</strong></p><p>Water is vital for every bodily function, including digestion. Staying hydrated helps soften stools and keeps your digestive system moving smoothly, preventing constipation. Aim to drink at least eight glasses of water a day, and consider hydrating foods like fruits and vegetables to boost your intake.</p><p>&nbsp;</p><p><strong>Elevate Your Gut Health Naturally</strong></p><p>While these lifestyle changes can greatly improve gut health, adding a high-quality supplement like <strong>Wellness Nest’s Shilajit</strong> can further enhance your digestive wellness. Shilajit supports gut health by reducing inflammation, improving nutrient absorption, and promoting a balanced microbiome.</p><p><strong>=&gt; Start your journey to a healthier gut today</strong> with Wellness Nest’s Shilajit. <a href=\"https://wellnessnest.co/products/meno-pure-shilajit-gold-resin-pack-1\"><strong><u>Order now</u></strong></a> and experience the benefits of better digestion, improved energy, and overall well-being.</p>"},{"type":"html","id":"ggnxZ6NiIAE_text","label":"ggnxZ6NiIAE_text","default":"<strong>Stress and Your Gut: Managing Menopausal Digestive Discomfort</strong>"},{"type":"html","id":"ggd4jdGa6co_text","label":"ggd4jdGa6co_text","default":"<p>Source: Freepik</p>"},{"type":"html","id":"gg-71aRsR4S_text","label":"gg-71aRsR4S_text","default":"<p>Stress is a major player when it comes to digestive health, and during menopause, its effects can be even more pronounced. The connection between your brain and gut, often referred to as the gut-brain axis, means that <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4367209/\"><u>stress</u></a> can directly impact how your digestive system functions. This link becomes particularly important during menopause, when hormonal fluctuations can amplify both stress levels and digestive discomfort.</p><p>&nbsp;</p><p><strong>How Stress Affects Your Gut</strong></p><p>When you’re stressed, your body releases cortisol, a hormone that prepares your body to deal with a perceived threat. While this response is helpful in short bursts, chronic stress can lead to a range of digestive issues. Cortisol can slow down digestion, leading to problems like bloating, constipation, and abdominal pain. Additionally, stress can disrupt the balance of your gut microbiome, making it harder for your digestive system to function properly.</p><p>&nbsp;</p><p>During menopause, the drop in estrogen and progesterone can further exacerbate stress levels and digestive issues. You might find that foods you once tolerated now cause discomfort, or that your usual digestive rhythm is thrown off. Understanding this connection is key to managing stress-induced digestive discomfort.</p><p>&nbsp;</p><p><strong>Managing Stress for Better Gut Health</strong></p><p>To reduce the impact of stress on your gut during menopause, it’s important to incorporate stress management techniques into your daily routine. Practices like meditation, deep breathing exercises, and yoga can help calm your nervous system and promote better digestion. Regular physical activity also plays a crucial role in managing stress and supporting gut health. Even simple activities like walking or stretching can make a significant difference.</p><p>&nbsp;</p><p>Another effective way to manage stress is by creating a relaxation routine before bed to improve sleep quality. Poor sleep can increase stress levels and worsen digestive issues, so establishing a calming bedtime ritual is essential.</p><p>&nbsp;</p><p><strong>Control your digestive health today</strong></p><p>In addition to stress management techniques, consider adding<a href=\"https://wellnessnest.co/\"> <strong><u>Wellness Nest’s Shilajit</u></strong></a> to your routine. Shilajit has been shown to support the gut-brain axis by promoting a balanced microbiome, reducing inflammation, and enhancing your body’s natural stress response.</p>"},{"type":"html","id":"ggWBWLpq98g_label","label":"ggWBWLpq98g_label","default":"<p>KEEP YOUR GUT HEALTHY</p>"},{"type":"html","id":"ggSoee7N0d5_text","label":"ggSoee7N0d5_text","default":"Related posts"},{"type":"html","id":"ggBPa3AoeHL_text","label":"ggBPa3AoeHL_text","default":"<p><a href=\"https://wellnessnest.co/blogs/news/mastering-menopause\">Mastering Menopause: Natural Ways to Balance Your Ho</a>rmones and Boost Vitality</p>"},{"type":"html","id":"ggOjRyedA18_text","label":"ggOjRyedA18_text","default":"<p><a href=\"https://wellnessnest.co/blogs/news/shed-the-menopause-pounds-secrets-to-keeping-weight-off-for-good\">Shed the Menopause Pounds: Secrets to Keeping Weight Off for Good</a></p>"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

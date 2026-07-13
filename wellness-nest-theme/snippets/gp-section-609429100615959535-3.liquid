@@ -1,0 +1,132 @@
+
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gC8u4MXBkp gp-custom-code">
+      <div>
+    
+    </div>
+    </div>
+  
+      <script id="custom-js-gC8u4MXBkp">
+        try {
+          var realReviewers = [
+  {
+    img: "https://im8health.com/cdn/shop/files/preview_images/thm-expert_robinB2.jpg?v=1731999065",
+    video: "https://im8health.com/cdn/shop/videos/c/vp/12eb3b01fd54404d81ef22a20d415f15/12eb3b01fd54404d81ef22a20d415f15.HD-1080p-2.5Mbps-38313438.mp4?v=0"
+  },
+  {
+    img: "https://im8health.com/cdn/shop/files/preview_images/influe-carou_bobbyRich2.jpg?v=1731863977",
+    video: "https://im8health.com/cdn/shop/videos/c/vp/e83246a2555949139036fce9bc1359a2/e83246a2555949139036fce9bc1359a2.HD-1080p-3.3Mbps-38232086.mp4?v=0"
+  },
+  {
+    img: "https://im8health.com/cdn/shop/files/preview_images/thm-expert_amyShah2.jpg?v=1731864964",
+    video: "https://im8health.com/cdn/shop/videos/c/vp/f7f68153342f4566ad00f411e2fb407b/f7f68153342f4566ad00f411e2fb407b.HD-1080p-7.2Mbps-38222859.mp4?v=0"
+  },
+  {
+    img: "https://im8health.com/cdn/shop/files/preview_images/thm-influ_dustinPoirier.jpg?v=1731833492",
+    video: "https://im8health.com/cdn/shop/videos/c/vp/064b8beaa0b04a4fad25676155936d3a/064b8beaa0b04a4fad25676155936d3a.HD-1080p-2.5Mbps-38221672.mp4?v=0"
+  },
+  {
+    img: "https://im8health.com/cdn/shop/files/preview_images/image_54.png?v=1731863088",
+    video: "https://im8health.com/cdn/shop/videos/c/vp/809d17a1684d40058d499ecd9afe9e21/809d17a1684d40058d499ecd9afe9e21.HD-1080p-4.8Mbps-38222820.mp4?v=0"
+  },
+  {
+    img: "https://im8health.com/cdn/shop/files/preview_images/1f4b2af008104c92a29f9d78814f1aa0.thumbnail.0000000000.jpg?v=1731860287",
+    video: "https://im8health.com/cdn/shop/videos/c/vp/1f4b2af008104c92a29f9d78814f1aa0/1f4b2af008104c92a29f9d78814f1aa0.HD-1080p-3.3Mbps-38232121.mp4?v=0"
+  }
+];
+
+(function () {
+  var container = document.querySelector('.gC8u4MXBkp');
+  if (container) {
+    container.innerHTML = '';
+    container.style.cssText += 'display:flex;gap:12px;overflow-x:auto;min-height:100px;scrollbar-width:none;-ms-overflow-style:none;';
+
+    // Hide webkit scrollbar
+    var style = document.createElement('style');
+    style.textContent = '.gC8u4MXBkp::-webkit-scrollbar { display:none; }';
+    document.head.appendChild(style);
+
+    realReviewers.forEach(function (pair, i) {
+      var wrap = document.createElement('div');
+      wrap.style.cssText = 'position:relative;flex-shrink:0;cursor:pointer;';
+
+      var img = document.createElement('img');
+      img.src = pair.img;
+      img.alt = 'Reviewer ' + (i + 1);
+      img.style.cssText = 'width:120px;height:160px;object-fit:cover;border-radius:10px;display:block;';
+      img.dataset.index = i;
+
+      var play = document.createElement('div');
+      play.style.cssText = 'position:absolute;bottom:10px;right:10px;width:32px;height:32px;pointer-events:none;z-index:2;';
+      play.innerHTML = '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#50000B"/><path d="M10 8.5L16 12L10 15.5V8.5Z" fill="white"/></svg>';
+
+      wrap.appendChild(img);
+      wrap.appendChild(play);
+      container.appendChild(wrap);
+    });
+  }
+
+  var modalHTML = `
+    <div id="gp-expert-modal" style="
+      display:none; position:fixed; inset:0; z-index:99999;
+      background:rgba(0,0,0,0.7); align-items:center; justify-content:center;">
+      <div style="
+        background:#000; border-radius:16px; max-height:80vh;
+        width:auto; max-width:90vw; position:relative;
+        box-shadow:0 20px 60px rgba(0,0,0,0.5); overflow:hidden;
+        display:flex; align-items:center; justify-content:center;">
+        <button id="gp-expert-modal-close" style="
+          position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.5);
+          border:none; font-size:24px; cursor:pointer; line-height:1;
+          color:#fff; border-radius:50%; width:36px; height:36px;
+          z-index:10;">×</button>
+        <video id="gp-expert-modal-video"
+          controls autoplay playsinline
+          style="display:block; max-height:80vh; width:auto; max-width:90vw; border-radius:16px;">
+        </video>
+      </div>
+    </div>`;
+
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  var modal    = document.getElementById('gp-expert-modal');
+  var videoEl  = document.getElementById('gp-expert-modal-video');
+  var closeBtn = document.getElementById('gp-expert-modal-close');
+
+  function openModal(pair) {
+    if (!pair.video) return;
+    videoEl.src = pair.video;
+    videoEl.load();
+    videoEl.play();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+    videoEl.pause();
+    videoEl.src = '';
+  }
+
+  if (container) {
+    container.addEventListener('click', function (e) {
+      var img = e.target.closest('img');
+      if (!img) return;
+      var idx = parseInt(img.dataset.index);
+      var pair = realReviewers[idx];
+      if (pair) openModal(pair);
+    });
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+})();
+        } catch(err){}
+      </script>
+    

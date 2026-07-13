@@ -1,0 +1,56 @@
+{% comment %}
+  Quiz Funnel — Step 7: Social Proof
+
+  Variables passed from section:
+    img_users — group photo of users
+{% endcomment %}
+
+<div class="qf-step" data-step="7">
+  <div class="qf-transition">
+    <div class="qf-transition__title">You are in the right place! 💪</div>
+    <div class="qf-transition__sub">Over 429,576 men have reclaimed their T, drive, and physique thanks to our NEW Scientific, Natural T-Revival System!</div>
+    {%- if social_images.size > 0 or social_proof_blocks.size > 0 -%}
+      <div class="qf-carousel" id="qfSocialCarousel">
+        <div class="qf-carousel__viewport">
+        <div class="qf-carousel__track">
+          {%- comment -%} Priority 1: social_images array from section {% endcomment -%}
+          {%- if social_images.size > 0 -%}
+            {%- for img in social_images -%}
+              <div class="qf-carousel__slide {% if forloop.first %}active{% endif %}">
+                {%- if img contains 'http' -%}
+                  <img src="{{ img }}" class="qf-social__img" width="800" height="600" loading="lazy">
+                {%- else -%}
+                  <img src="{{ img | file_url }}" class="qf-social__img" width="800" height="600" loading="lazy">
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          {%- comment -%} Priority 2: social_proof_blocks from Theme Customizer {% endcomment -%}
+          {%- elsif social_proof_blocks.size > 0 -%}
+            {%- for block in social_proof_blocks -%}
+              <div class="qf-carousel__slide {% if forloop.first %}active{% endif %}" {{ block.shopify_attributes }}>
+                {{ block.settings.image | image_url: width: 800 | image_tag: class: 'qf-social__img', loading: 'lazy' }}
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+        </div>
+        <div class="qf-carousel__dots">
+          {%- assign total_slides = 0 -%}
+          {%- if social_images.size > 0 -%}
+            {%- assign total_slides = social_images.size -%}
+          {%- elsif social_proof_blocks.size > 0 -%}
+            {%- assign total_slides = social_proof_blocks.size -%}
+          {%- endif -%}
+
+          {%- for i in (1..total_slides) -%}
+            {%- assign idx = forloop.index | minus: 1 -%}
+            <span class="qf-carousel__dot {% if forloop.first %}active{% endif %}" onclick="qfGotoSlide({{ idx }}, event)"></span>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- else -%}
+      <img src="{{ img_users }}" alt="Users" class="qf-social__img" style="margin: 20px auto; display: block;" loading="lazy" onerror="this.style.display='none'">
+    {%- endif -%}
+  </div>
+  <button type="button" class="qf-btn" onclick="qfGoStep(8)">Continue</button>
+</div>

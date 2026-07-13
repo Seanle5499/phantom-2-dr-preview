@@ -1,0 +1,1956 @@
+
+    
+
+    
+
+    
+    <gp-row gp-data='{"uid":"ghVKSr-jtj"}' data-id="ghVKSr-jtj" id="ghVKSr-jtj" data-same-height-subgrid-container class="ghVKSr-jtj gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:16px;--pl:16px;--pb:16px;--pr:16px;--mb-tablet:16px;--pt-tablet:16px;--pl-tablet:16px;--pb-tablet:16px;--pr-tablet:16px;--mb-mobile:16px;--pt-mobile:16px;--pl-mobile:16px;--pb-mobile:16px;--pr-mobile:16px;--cg:24px;--rg:16px;--rg-tablet:16px;--rg-mobile:16px;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gUmRpBdld9 gp-relative gp-flex gp-flex-col"
+    >
+      
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--pos:sticky;--top:100px;--top-mobile:100px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="g0kYsaja-R gp-custom-code">
+      <div>
+    <section>
+<div id="wn-gl">
+  <!-- Editor placeholder — JS will replace this -->
+  <div style="
+    width:100%;
+    min-height:420px;
+    border-radius:16px;
+    background: linear-gradient(135deg, #f5f2ee 0%, #ede8e3 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    flex-direction:column;
+    border: 2px dashed #d6cec9;
+  ">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#b0a89f" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+    <span style="font-size:13px;color:#b0a89f;font-family:sans-serif;letter-spacing:.04em;">Product Gallery</span>
+  </div>
+</div>
+
+<script>
+(function(){
+
+  /* ── INJECT STYLES INTO HEAD (bypasses GemPages scoping) ── */
+  var style = document.createElement('style');
+  style.textContent = [
+ '#wn-gl{overflow:visible!important;}#wn-gl *{box-sizing:border-box;margin:0;padding:0;}',
+  '.wng{display:flex;flex-direction:row;align-items:flex-start;gap:12px;width:100%; min-height: 100px !important}',
+
+  '.wng-thumbs{flex:0 0 8.333%;display:flex;flex-direction:column;align-items:center;gap:6px;}',
+  '.wng-nbtn{background:none;border:none;cursor:pointer;width:26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:50%;}',
+  '.wng-nbtn:disabled{opacity:.80;cursor:not-allowed;}',
+  '.wng-nbtn:hover:not(:disabled){background:rgba(0,0,0,.07);}',
+  '.wng-nbtn svg{width:11px;height:11px;display:block;}',
+  '.wng-tlist{display:flex;flex-direction:column;gap:6px;width:100%;}',
+  '.wng-thumb{width:100%;aspect-ratio:1/1;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;opacity:1;transition:border-color .2s;}',
+  '.wng-thumb img{width:100%;height:100%;object-fit:cover;display:block;}',
+ '.wng-thumb:hover{opacity:1;}',
+  '.wng-thumb.on{border-color:#9b0012;opacity:1;}',
+
+  /* MAIN container — aspect ratio HERE only */
+  '.wng-main{flex:1 1 0;min-width:0;position:relative;border-radius:16px;overflow:hidden;background:#f5f2ee;}',
+  '.wng-desk{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:opacity .2s;}',
+  '.wng-desk.wfade{opacity:0;}',
+
+  /* MOBILE track */
+  '.wng-mwrap{display:none;overflow:hidden;border-radius:16px;width:100%;aspect-ratio:1/1;}',
+  '.wng-track{display:flex;height:100%;transition:transform .32s cubic-bezier(.4,0,.2,1);will-change:transform;}',
+  '.wng-slide{flex:0 0 100%;width:100%;height:100%;}',
+  '.wng-slide img{width:100%;height:100%;object-fit:cover;display:block;}',
+
+  /* DOTS */
+ '.wng-dots{display:none;text-align:center;width:100%;margin-top:12px;overflow:visible;line-height:1;padding:4px 0;}',
+'.wng-dot{display:inline-block;vertical-align:middle;width:7px;height:7px;border-radius:50%;background:#ff9693 !important;border:none;cursor:pointer;padding:0;margin:3px 3.5px !important;transition:background .2s,transform .2s;}',
+  '.wng-dot.on{background:#50000b !important;transform:scale(1.4);}',
+
+  /* MOBILE OVERRIDES */
+  '@media(max-width:767px){',
+    '.wng{flex-direction:column!important;gap:0!important;}',
+    '.wng-thumbs{display:none!important;}',
+    '.wng-main{flex:0 0 100%!important;width:100%!important;}',
+    '.wng-desk{display:none!important;}',
+    '.wng-mwrap{display:block!important;}',
+    '.wng-dots{display:block!important;}',
+  '}',
+].join('');
+  document.head.appendChild(style);
+
+  /* ─── EDIT YOUR IMAGES HERE ─── */
+  var IMGS = [
+  'https://im8health.com/cdn/shop/files/variety-90.jpg?v=1771828131&width=600',
+  'https://im8health.com/cdn/shop/files/variety-bstack.jpg?v=1771827164&width=600',
+  'https://im8health.com/cdn/shop/files/bstack-acai.jpg?v=1771827164&width=600',
+  'https://im8health.com/cdn/shop/files/bstacklemon.jpg?v=1771827164&width=600',
+  'https://im8health.com/cdn/shop/files/mango.jpg?v=1771827170&width=600',
+  'https://im8health.com/cdn/shop/files/IM8_PDP_23_Images-daily-essential_longevity-slide_03_1.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/IM8_PDP_23_Images-daily-essential_longevity-slide_03_69563907-32b9-4039-b80a-461c3bebd20f.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/IM8_PDP_23_Images-daily-essential_longevity-slide_03_lemon.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/bstackcaro_acai03.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/bstackcaro_acai02.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/202510-bstack-carousel-04B.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/202510_bstack-carousel_05.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/202510bstack-carousel06_57240d78-7871-480b-8dba-dff023f35bdd.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/202510_bstack-carousel_07.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/6ASOCIALPROOF.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/bstackcaro_acai09.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/8BTRUSTQUALITY.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/202510_bstack-carousel_11.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/Carousel-Image-2025-09-26-11.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/Carousel-Image-2025-09-26-11_lemon.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/bstackcaro_acai12.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/Carousel-Image-2025-09-26-11_a8d5724d-8cb7-4b18-a15d-1bada7d7bb0b.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/pdp_carousel_NLG02.jpg?v=1771841773&width=600',
+  'https://im8health.com/cdn/shop/files/202510_bstack-carousel_14.jpg?v=1771841773&width=600',
+];
+
+  var MAX = 6, cur = 0, tStart = 0;
+  var mobile = window.innerWidth <= 767;
+
+  window.addEventListener('resize', function(){ mobile = window.innerWidth <= 767; });
+
+  function $(id){ return document.getElementById(id); }
+
+  function thumbsHTML(){
+    var canUp = tStart > 0;
+    var canDn = tStart + MAX < IMGS.length;
+    var vis   = IMGS.slice(tStart, tStart + MAX);
+    var thumbs = vis.map(function(src,i){
+      var idx = tStart+i;
+      return '<div class="wng-thumb'+(idx===cur?' on':'')+'" data-i="'+idx+'">'
+        +'<img src="'+src+'" loading="lazy" onerror="this.parentElement.style.background=\'#eee\'">'
+        +'</div>';
+    }).join('');
+    return '<button class="wng-nbtn" id="wng-up"'+(canUp?'':' disabled')+'>'
+      +'<svg viewBox="0 0 12 12" fill="none"><path d="M2 8.5L6 4l4 4.5" stroke="#9b0012" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      +'</button>'
+      +'<div class="wng-tlist">'+thumbs+'</div>'
+      +'<button class="wng-nbtn" id="wng-dn"'+(canDn?'':' disabled')+'>'
+      +'<svg viewBox="0 0 12 12" fill="none"><path d="M2 3.5L6 8l4-4.5" stroke="#9b0012" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      +'</button>';
+  }
+
+  function slidesHTML(){
+    return IMGS.map(function(src,i){
+      return '<div class="wng-slide"><img src="'+src+'" loading="'+(i===0?'eager':'lazy')+'"></div>';
+    }).join('');
+  }
+
+  function dotsHTML(){
+    return IMGS.map(function(_,i){
+      return '<button class="wng-dot'+(i===cur?' on':'')+'" data-i="'+i+'"></button>';
+    }).join('');
+  }
+
+  function render(){
+    var root = $('wn-gl');
+    if(!root) return;
+
+    root.innerHTML =
+      '<div class="wng">'
+        +'<div class="wng-thumbs">'+thumbsHTML()+'</div>'
+        +'<div class="wng-main">'
+          +'<img class="wng-desk" id="wng-mi" src="'+IMGS[cur]+'" alt="Product image">'
+          +'<div class="wng-mwrap">'
+            +'<div class="wng-track" id="wng-tr">'+slidesHTML()+'</div>'
+          +'</div>'
+        +'</div>'
+      +'</div>'
+      +'<div class="wng-dots">'+dotsHTML()+'</div>';
+
+    syncTrack();
+    bind();
+  }
+
+  function syncTrack(){
+    var tr = $('wng-tr');
+    if(tr) tr.style.transform = 'translateX(-'+(cur*100)+'%)';
+  }
+
+  function syncDots(){
+    document.querySelectorAll('.wng-dot').forEach(function(d){
+      d.classList.toggle('on', +d.dataset.i === cur);
+    });
+  }
+
+  function goTo(idx){
+    idx = Math.max(0, Math.min(idx, IMGS.length-1));
+    cur = idx;
+
+    var mi = $('wng-mi');
+    if(mi){
+      mi.classList.add('wfade');
+      setTimeout(function(){ mi.src = IMGS[cur]; mi.classList.remove('wfade'); }, 180);
+    }
+
+    document.querySelectorAll('.wng-thumb').forEach(function(t){
+      t.classList.toggle('on', +t.dataset.i === cur);
+    });
+
+    if(cur < tStart){ tStart = cur; render(); return; }
+    if(cur >= tStart + MAX){ tStart = cur - MAX + 1; render(); return; }
+
+    syncTrack();
+    syncDots();
+  }
+
+  function bind(){
+    document.querySelectorAll('.wng-thumb').forEach(function(t){
+      t.addEventListener('click', function(){ goTo(+t.dataset.i); });
+    });
+
+    var up = $('wng-up'), dn = $('wng-dn');
+    if(up) up.addEventListener('click', function(){ if(tStart>0){ tStart--; render(); } });
+    if(dn) dn.addEventListener('click', function(){ if(tStart+MAX<IMGS.length){ tStart++; render(); } });
+
+    document.querySelectorAll('.wng-dot').forEach(function(d){
+      d.addEventListener('click', function(){ goTo(+d.dataset.i); });
+    });
+
+    var tr = $('wng-tr');
+    if(!tr) return;
+    var sx=0, sy=0, dx=0;
+
+    tr.addEventListener('touchstart', function(e){
+      sx = e.changedTouches[0].clientX;
+      sy = e.changedTouches[0].clientY;
+      dx = 0;
+    },{passive:true});
+
+    tr.addEventListener('touchmove', function(e){
+      dx = e.changedTouches[0].clientX - sx;
+      var dy = e.changedTouches[0].clientY - sy;
+      if(Math.abs(dx) > Math.abs(dy)){
+        tr.style.transform = 'translateX(calc(-'+(cur*100)+'% + '+dx+'px))';
+      }
+    },{passive:true});
+
+    tr.addEventListener('touchend', function(){
+      if(dx < -50)     goTo(cur+1);
+      else if(dx > 50) goTo(cur-1);
+      else             syncTrack();
+    },{passive:true});
+  }
+
+  render();
+
+  window.wnGoTo = goTo;
+  window.wnSetImages = function(arr){
+    IMGS.length = 0;
+    arr.forEach(function(u){ IMGS.push(u); });
+    cur = 0; tStart = 0; render();
+  };
+
+})();
+</script>
+</section>
+    </div>
+    </div>
+  
+    </div><div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gNIzmmo3n3 gp-relative gp-flex gp-flex-col"
+    >
+      
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--pt:0px;--pt-tablet:0px;--mb-mobile:5px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="g4HLYK73VS gp-custom-code">
+      <div>
+    <div id="trust-bar">
+  <span class="tb-row1">
+    <span class="tb-stars">
+      ★★★★★ <strong>4.8</strong> from 16,225 Reviews
+    </span>
+  </span>
+  <span class="tb-sep">|</span>
+  <span class="tb-row2">
+    <span class="tb-item">700K+ customer purchases</span>
+    <span class="tb-sep">|</span>
+    <span class="tb-item">21M+ servings</span>
+  </span>
+</div>
+    </div>
+    </div>
+  
+      <style id="custom-css-g4HLYK73VS">
+        
+#trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #50000b;
+  font-family: Aeonik;
+  padding: 10px 0;
+  flex-wrap: nowrap;
+}
+
+tb-stars > strong {
+    color: #50000b !important;
+}
+#trust-bar .tb-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #50000b;
+  white-space: nowrap;
+}
+#trust-bar .tb-stars strong {
+  color: #6b4c3a;
+  font-weight: 700;
+}
+#trust-bar .tb-sep {
+  color: #6b4c3a;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+#trust-bar .tb-row2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+#trust-bar .tb-item {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  #trust-bar {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 4px 8px;
+     color: #50000b !important;
+  }
+  /* Row 1: chiếm full width → đẩy row2 xuống dòng mới */
+  #trust-bar .tb-row1 {
+    width: 100%;
+  }
+  /* Ẩn dấu | giữa row1 và row2 */
+  #trust-bar > .tb-sep {
+    display: none;
+  }
+}
+      </style>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gCWOm7IT0J"
+        class="gCWOm7IT0J"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb-mobile:8px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--ta-mobile:left;--fs:normal;--ff:var(--g-font-ABCArizonaFlare, 'ABCArizonaFlare'), var(--g-font-heading, heading);--weight:500;--size:36px;--size-tablet:25px;--size-mobile:32px;--lh:120%;--lh-tablet:120%;--lh-mobile:120%;--ls:0.78px;--ls-tablet:0.78px;--ls-mobile:0.78px;--c:#50000B;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggCWOm7IT0J_text | replace: '$locationOrigin', locationOrigin }}
+        </h2>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gXde5-TvM-"
+        class="gXde5-TvM-"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:24px;--mb-tablet:24px;--mb-mobile:16px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;--c:#50000B;--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggXde5-TvM-_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    <gp-button
+      gp-data='{"btnLink":{"type":"open-page","link":"","target":"_self"}}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--mt:-33px;--mb:13px;--mt-tablet:-33px;--mb-tablet:13px;--mt-mobile:8px;--mb-mobile:21px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center;--ta-mobile:center" >
+        <style>[data-id="guX8N9rwz_"].gp-button-base::before, [data-id="guX8N9rwz_-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  border-color: var(--g-c-line-3, line-3);
+  
+    
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+  
+    }
+  
+      
+  [data-id="guX8N9rwz_"]:hover::before, [data-id="guX8N9rwz_-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="guX8N9rwz_" dataId="guX8N9rwz_" data-state="idle" aria-label="<p>One Time Purchase</p>"
+          
+          type="button"
+          style="--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:0px;--pb-mobile:0px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--bgi:;--bg:transparent;--c:#50000B;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--size:14px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;--weight:bold"
+          class="guX8N9rwz_ gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex">
+          
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--size:14px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;--weight:bold;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.gguX8N9rwz__label }}
+    </span>
+        </div>
+        
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      <style id="custom-css-guX8N9rwz_">
+        button.guX8N9rwz_ {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
+}
+      </style>
+    
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:21px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gq_D6e9xpO gp-custom-code">
+      <div>
+    <section class="wn-trust">
+  <style>
+    .wn-trust {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+      padding: 0;
+    }
+    .wn-trust * { box-sizing: border-box; }
+
+    .wn-trust__row {
+      display: flex;
+      flex-direction: row !important;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .wn-trust__card {
+      flex: 1 1 0;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #faf9f7;
+      border: 1px solid #ede9e4;
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .wn-trust__badge {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      background: #5c1020;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+
+    .wn-trust__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 0;
+    }
+
+    .wn-trust__label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1210;
+      line-height: 1.25;
+    }
+
+    .wn-trust__sub {
+      font-size: 12px;
+      color: #b0a8a2;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    .wn-trust__hsa {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f7f0df;
+      border: 1px solid #e8d9b0;
+      border-radius: 14px;
+      padding: 13px 16px;
+    }
+
+    .wn-trust__hsa-icon {
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+      background: #c9a357;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wn-trust__hsa-icon svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    .wn-trust__hsa-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: #8a6b1a;
+      line-height: 1.45;
+      min-width: 0;
+    }
+    
+    /* CARD 1 */
+.wn-trust__card:first-child {
+  background: linear-gradient(165deg, #FFF5F5 0%, #FFF0F0 100%);
+  border-color: rgba(164, 0, 17, 0.12);
+}
+
+.wn-trust__card:first-child .wn-trust__badge {
+  background: linear-gradient(135deg, #A40011, #8B0E2F);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(164, 0, 17, 0.20);
+}
+
+/* CARD 2 */
+.wn-trust__card:last-child {
+  background: linear-gradient(165deg, #FAF7F3 0%, #F7F2EC 100%);
+  border-color: rgba(80, 0, 11, 0.08);
+}
+
+.wn-trust__card:last-child .wn-trust__badge {
+  background: linear-gradient(135deg, #50000B, #3D000A);
+  color: rgba(255, 255, 255, 0.75);
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(80, 0, 11, 0.15);
+}
+
+    /* Mobile: cards stay in a row, just tighten padding and font */
+    @media screen and (max-width: 767px) {
+      .wn-trust__card {
+        padding: 12px 10px !important;
+        gap: 8px !important;
+      }
+      .wn-trust__badge {
+        flex: 0 0 36px !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 14px !important;
+      }
+      .wn-trust__label {
+        font-size: 12px !important;
+      }
+      .wn-trust__sub {
+        font-size: 11px !important;
+      }
+    }
+  </style>
+
+  <div class="wn-trust__row">
+    <div class="wn-trust__card">
+      <div class="wn-trust__badge">90</div>
+      <div class="wn-trust__info">
+        <span class="wn-trust__label">90-Day Money<br>Back</span>
+        <span class="wn-trust__sub">Quarterly Plan</span>
+      </div>
+    </div>
+    <div class="wn-trust__card">
+      <div class="wn-trust__badge">30</div>
+      <div class="wn-trust__info">
+        <span class="wn-trust__label">30-Day Money<br>Back</span>
+        <span class="wn-trust__sub">Monthly Plan</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wn-trust__hsa">
+    <div class="wn-trust__hsa-icon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="7" width="20" height="14" rx="3" fill="#fff" fill-opacity="0.3"/>
+        <rect x="2" y="7" width="20" height="14" rx="3" stroke="#fff" stroke-width="1.8"/>
+        <path d="M2 11h20" stroke="#fff" stroke-width="1.8"/>
+        <rect x="15" y="13.5" width="4" height="3" rx="1" fill="#fff"/>
+        <path d="M6 7V6a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="wn-trust__hsa-text">
+      Pay with HSA/FSA — Save an average of 30%.<br>
+      98% of applicants approved.
+    </div>
+  </div>
+</section>
+    </div>
+    </div>
+  <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px" class="gSPIBzlIlA ">
+      
+    <gp-accordion data-id="gSPIBzlIlA" class="gp-flex gp-flex-col gp-w-full" style="--gg:8px;border-radius:inherit"
+      gp-data='{"uid":"gSPIBzlIlA","setting":{"iconSvg":"<svg width=\"17\" height=\"16\" viewBox=\"0 0 17 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z\" fill=\"currentColor\"/>\n                  </svg>","isIconPlus":false,"activeKey":"1","expanded":true,"expandItem":true,"iconPosition":"right","iconGlobalSize":{"desktop":{"gap":"8px"}},"iconCollapse":"\n          <svg width=\"16\" height=\"16\" data-name=\"Caret-down-regular\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.57576 6.77571C4.81007 6.5414 5.18997 6.5414 5.42429 6.77571L8.20002 9.55145L10.9758 6.77571C11.2101 6.5414 11.59 6.5414 11.8243 6.77571C12.0586 7.01003 12.0586 7.38993 11.8243 7.62424L8.62429 10.8242C8.38997 11.0586 8.01007 11.0586 7.77576 10.8242L4.57576 7.62424C4.34145 7.38993 4.34145 7.01003 4.57576 6.77571Z\" fill=\"currentColor\"/>\n</svg>\n          ","iconExpand":"\n       <svg width=\"16\" height=\"16\" data-name=\"Caret-up-regular\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.6243 9.82426C11.39 10.0586 11.0101 10.0586 10.7758 9.82426L8.00005 7.04853L5.22431 9.82426C4.99 10.0586 4.6101 10.0586 4.37579 9.82426C4.14147 9.58995 4.14147 9.21005 4.37579 8.97574L7.57579 5.77574C7.8101 5.54142 8.19 5.54142 8.42431 5.77574L11.6243 8.97574C11.8586 9.21005 11.8586 9.58995 11.6243 9.82426Z\" fill=\"currentColor\"/>\n</svg>\n","iconCollapseSize":16,"layoutHeader":"text-only","expandedMode":"multiple","configIconSize":16,"parentUid":"gSPIBzlIlA","childListNumber":["0"],"chidlrenUid":["gkuX7W55tF","gA-T5bb3Ye","g_2knfjN90","gu_RsiFNAs"]},"styles":{"bgColor":{},"color":{"normal":"text-1"},"headerBorder":{},"textColor":{"normal":"text-1"},"iconColor":{"normal":"text-1"},"contentSizePadding":{"desktop":{"gap":"8px","padding":{"bottom":"12px","left":"0px","right":"0px","top":"4px","type":"medium"}}},"headerContentPadding":{"desktop":{"padding":{"bottom":"8px","left":"0px","right":"0px","top":"8px","type":"medium"}}},"widthHeightSize":{"desktop":{"height":"auto","width":"100%"}}}}'
+        >
+        <div class=" gp-hidden gp-rotate-90 -gp-rotate-90 gp-rotate-180"></div>
+      
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:var(--g-c-text-1, text-1);--icon-expand-hover-color:var(--g-c-text-1, text-1);--icon-expand-active-color:var(--g-c-text-1, text-1);--icon-active-color:var(--g-c-text-1, text-1);--icon-hover-color:var(--g-c-text-1, text-1);--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 1px 0px;--bc:var(--g-c-line-3, line-3)">
+    <div data-index="0" class="gSPIBzlIlA gp-overflow-hidden gp-child-item-gSPIBzlIlA gp-accordion-item">
+      <div aria-hidden uid="gkuX7W55tF" id="gkuX7W55tF" data-index="0"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] gSPIBzlIlA gp-accordion-item-gSPIBzlIlA-0" style="--pl:0px;--pr:0px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:var(--g-c-text-1, text-1);width:16px;height:16px"
+            data-index="0"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full gp-text-[var(--icon-expand-active-color)]">
+              
+       <svg width="16" height="16" data-name="Caret-up-regular" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.6243 9.82426C11.39 10.0586 11.0101 10.0586 10.7758 9.82426L8.00005 7.04853L5.22431 9.82426C4.99 10.0586 4.6101 10.0586 4.37579 9.82426C4.14147 9.58995 4.14147 9.21005 4.37579 8.97574L7.57579 5.77574C7.8101 5.54142 8.19 5.54142 8.42431 5.77574L11.6243 8.97574C11.8586 9.21005 11.8586 9.58995 11.6243 9.82426Z" fill="currentColor"/>
+</svg>
+
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:8px;--jc:left;--ta:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:var(--g-c-text-1, text-1);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important]  gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggSPIBzlIlA_childItem_0 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="0" data-show="true" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:1fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="0" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:0px;--pr:0px;--pt:4px;--pb:12px">
+          <div
+      data-same-height-display-contents
+      
+      class="gaIVKxMlIy gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gkhAlg7OTh"
+        class="gkhAlg7OTh"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggkhAlg7OTh_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:var(--g-c-text-1, text-1);--icon-expand-hover-color:var(--g-c-text-1, text-1);--icon-expand-active-color:var(--g-c-text-1, text-1);--icon-active-color:var(--g-c-text-1, text-1);--icon-hover-color:var(--g-c-text-1, text-1);--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 1px 0px;--bc:var(--g-c-line-3, line-3)">
+    <div data-index="1" class="gSPIBzlIlA gp-overflow-hidden gp-child-item-gSPIBzlIlA gp-accordion-item">
+      <div aria-hidden uid="gA-T5bb3Ye" id="gA-T5bb3Ye" data-index="1"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] gSPIBzlIlA gp-accordion-item-gSPIBzlIlA-1" style="--pl:0px;--pr:0px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:var(--g-c-text-1, text-1);width:16px;height:16px"
+            data-index="1"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full gp-text-g-text-1">
+              
+          <svg width="16" height="16" data-name="Caret-down-regular" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.57576 6.77571C4.81007 6.5414 5.18997 6.5414 5.42429 6.77571L8.20002 9.55145L10.9758 6.77571C11.2101 6.5414 11.59 6.5414 11.8243 6.77571C12.0586 7.01003 12.0586 7.38993 11.8243 7.62424L8.62429 10.8242C8.38997 11.0586 8.01007 11.0586 7.77576 10.8242L4.57576 7.62424C4.34145 7.38993 4.34145 7.01003 4.57576 6.77571Z" fill="currentColor"/>
+</svg>
+          
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:8px;--jc:left;--ta:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:var(--g-c-text-1, text-1);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important]  gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggSPIBzlIlA_childItem_1 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="1" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="1" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:0px;--pr:0px">
+          <div
+      data-same-height-display-contents
+      
+      class="g_rNRqC1EF gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g6ChBR8gu4"
+        class="g6ChBR8gu4"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;--c:#50000B;--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gg6ChBR8gu4_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:var(--g-c-text-1, text-1);--icon-expand-hover-color:var(--g-c-text-1, text-1);--icon-expand-active-color:var(--g-c-text-1, text-1);--icon-active-color:var(--g-c-text-1, text-1);--icon-hover-color:var(--g-c-text-1, text-1);--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 1px 0px;--bc:var(--g-c-line-3, line-3)">
+    <div data-index="2" class="gSPIBzlIlA gp-overflow-hidden gp-child-item-gSPIBzlIlA gp-accordion-item">
+      <div aria-hidden uid="g_2knfjN90" id="g_2knfjN90" data-index="2"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] gSPIBzlIlA gp-accordion-item-gSPIBzlIlA-2" style="--pl:0px;--pr:0px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:var(--g-c-text-1, text-1);width:16px;height:16px"
+            data-index="2"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full gp-text-g-text-1">
+              
+          <svg width="16" height="16" data-name="Caret-down-regular" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.57576 6.77571C4.81007 6.5414 5.18997 6.5414 5.42429 6.77571L8.20002 9.55145L10.9758 6.77571C11.2101 6.5414 11.59 6.5414 11.8243 6.77571C12.0586 7.01003 12.0586 7.38993 11.8243 7.62424L8.62429 10.8242C8.38997 11.0586 8.01007 11.0586 7.77576 10.8242L4.57576 7.62424C4.34145 7.38993 4.34145 7.01003 4.57576 6.77571Z" fill="currentColor"/>
+</svg>
+          
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:8px;--jc:left;--ta:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:var(--g-c-text-1, text-1);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important]  gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggSPIBzlIlA_childItem_2 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="2" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="2" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:0px;--pr:0px">
+          <div
+      data-same-height-display-contents
+      
+      class="gBxiyKaSJG gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gnyfWzEv9I"
+        class="gnyfWzEv9I"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;--c:#50000B;--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggnyfWzEv9I_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:var(--g-c-text-1, text-1);--icon-expand-hover-color:var(--g-c-text-1, text-1);--icon-expand-active-color:var(--g-c-text-1, text-1);--icon-active-color:var(--g-c-text-1, text-1);--icon-hover-color:var(--g-c-text-1, text-1);--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 1px 0px;--bc:var(--g-c-line-3, line-3)">
+    <div data-index="3" class="gSPIBzlIlA gp-overflow-hidden gp-child-item-gSPIBzlIlA gp-accordion-item">
+      <div aria-hidden uid="gu_RsiFNAs" id="gu_RsiFNAs" data-index="3"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] gSPIBzlIlA gp-accordion-item-gSPIBzlIlA-3" style="--pl:0px;--pr:0px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:var(--g-c-text-1, text-1);width:16px;height:16px"
+            data-index="3"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full gp-text-g-text-1">
+              
+          <svg width="16" height="16" data-name="Caret-down-regular" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.57576 6.77571C4.81007 6.5414 5.18997 6.5414 5.42429 6.77571L8.20002 9.55145L10.9758 6.77571C11.2101 6.5414 11.59 6.5414 11.8243 6.77571C12.0586 7.01003 12.0586 7.38993 11.8243 7.62424L8.62429 10.8242C8.38997 11.0586 8.01007 11.0586 7.77576 10.8242L4.57576 7.62424C4.34145 7.38993 4.34145 7.01003 4.57576 6.77571Z" fill="currentColor"/>
+</svg>
+          
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:8px;--jc:left;--ta:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:var(--g-c-text-1, text-1);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important]  gp-text-instant"
+          style="--w:100%;--tdt:auto;--ts:none;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggSPIBzlIlA_childItem_3 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="3" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="3" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:0px;--pr:0px">
+          <div
+      data-same-height-display-contents
+      
+      class="g-mDjb7GcH gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gRptfOT1qN"
+        class="gRptfOT1qN"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Aeonik, 'Aeonik'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:14px;--size-mobile:14px;--lh:140%;--lh-tablet:180%;--lh-mobile:180%;--ls:0.4px;--ls-tablet:0.4px;--ls-mobile:0.4px;--c:#50000B;--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggRptfOT1qN_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+    </gp-accordion>
+    
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-accordion-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    
+  
+      </div>
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gZqT6eyxXw"
+        class="gZqT6eyxXw"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:12px;--mb:13px;--mt-tablet:12px;--mb-tablet:13px;--mt-mobile:16px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggZqT6eyxXw_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    <gp-carousel-v3 gp-data='{"id":"gWSWShATc1","setting":{"childItem":["Item 1","Item 2","Item 3","Item 4","Item 5","Item 6"],"itemNumber":{"desktop":6,"tablet":2,"mobile":4},"navigationStyle":{"desktop":"outside","mobile":"inside"},"dotStyle":{"desktop":"outside"},"sneakPeak":{"desktop":false},"sneakPeakType":{"desktop":"forward"},"sneakPeakOffsetForward":{"desktop":50},"sneakPeakOffsetCenter":{"desktop":50},"vertical":{"desktop":false},"controlOverContent":{"desktop":true},"dot":{"desktop":true,"mobile":false},"dotSize":{"desktop":12},"dotGapToCarousel":{"desktop":16},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"line-3"},"navigationEnable":{"desktop":true},"arrowCustom":"<svg height=\"20\" width=\"20\" data-name=\"caret-right-regular\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508418455613473128\">\n      <path fill=\"currentColor\" strokelinecap=\"round\" strokelinejoin=\"round\" d=\"M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z\"></path></svg>\n    ","arrowCustomColor":"#121212","arrowIconSize":{"desktop":24},"arrowButtonSize":{"desktop":{"shapeValue":"1/1","shapeLinked":true,"padding":{"linked":true,"type":"custom","top":"16px","bottom":"16px","left":"16px","right":"16px"}}},"arrowBackgroundColor":"transparent","arrowBorder":{"desktop":{"borderType":"none","border":"none","borderWidth":"1px","width":"1px 1px 1px 1px","isCustom":true}},"arrowShadow":{"desktop":{"type":"shadow-1","distance":"4px","blur":"4px","spread":"0px","color":"rgba(18, 18, 18, 0.2)","angle":45,"enable":false}},"roundedArrow":{"desktop":{"btrr":"0px","bblr":"0px","bbrr":"0px","btlr":"0px","radiusType":"none"}},"arrowGapToEachSide":"16","showWhenHover":false,"rtl":false,"autoplay":false,"autoplayTimeout":2,"pauseOnHover":true,"runPreview":false,"enableDrag":{"desktop":true},"loop":{"desktop":false},"animationMode":"ease-in","background":{"desktop":{"type":"color","image":{"src":"","width":0,"height":0},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll"}},"label":true},"styles":{"fullWidth":{"desktop":false,"tablet":false,"mobile":false},"sizeSetting":{"desktop":{"shapeLinked":false,"width":"default","height":"auto"}},"backgroundImage":{"desktop":{}},"playSpeed":500,"align":{"desktop":"center"},"borderContent":{"borderType":"none","border":"none","width":"1px 1px 1px 1px","position":"all","borderWidth":"1px","color":"line-3","isCustom":true},"roundedContent":{"radiusType":"none"},"hasActiveShadow":false,"carouselShadow":{"type":"shadow-1","distance":"4px","blur":"4px","spread":"0px","color":"rgba(18, 18, 18, 0.2)","angle":45,"enable":false},"spacing":{"desktop":16},"itemPadding":{"desktop":{"padding":{}}}}}' data-id="gWSWShATc1" id="gp-root-carousel-gWSWShATc1" style="--jc:center" class="gp-group/carousel gp-w-full gp-flex">
+      <div
+        
+        class="gWSWShATc1 gp-relative gp-my-0 tablet:gp-px-0 gp-max-w-full mobile:gp-px-0 gp-carousel-wrapper mobile:gp-block tablet:gp-block gp-block"
+        style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--w:var(--g-ct-w);--w-tablet:var(--g-ct-w);--w-mobile:var(--g-ct-w);--bgi:none;--bgi-tablet:none;--bgi-mobile:none"
+      >
+        <div class="gp-relative gp-overflow-hidden gp-flex gp-items-center gp-justify-between mobile:!gp-flex-row tablet:!gp-flex-row !gp-flex-row" style="--h:auto;--h-tablet:auto;--h-mobile:auto;gap:16px">
+          
+          
+    <button
+      type="button"
+      aria-label='Carousel Back Arrow'
+      class="gp-z-1 gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0 before:gp-left-0 before:gp-top-0 gp-carousel-arrow-gWSWShATc1 gWSWShATc1 gp-carousel-action-back gem-slider-previous gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative tablet:!gp-flex tablet:!gp-relative mobile:!gp-flex mobile:!gp-absolute mobile:gp-z-2"
+      style="--bg:transparent;--d:flex;--d-tablet:flex;--d-mobile:flex;--left:3px;--right:initial;--top:initial;--bottom:;--left-tablet:3px;--right-tablet:initial;--top-tablet:initial;--bottom-tablet:;--left-mobile:16px;--right-mobile:initial;--top-mobile:initial;--bottom-mobile:;--w:auto;--w-tablet:auto;--w-mobile:auto;--h:auto;--h-tablet:auto;--h-mobile:auto;--pl:16px;--pr:16px;--pt:16px;--pb:16px;--shadow:none;--v:hidden"
+    >
+      <style type="text/css">
+      .gp-carousel-arrow-gWSWShATc1 {
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      .gp-carousel-arrow-gWSWShATc1::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+        border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      @media only screen and (max-width: 1024px) and (min-width: 768px) {
+        .gp-carousel-arrow-gWSWShATc1 {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-gWSWShATc1::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .gp-carousel-arrow-gWSWShATc1 {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-gWSWShATc1::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+    </style>
+      
+    <div
+      class="gp-flex gp-items-center gp-justify-center [&>svg]:gp-h-full [&>svg]:gp-w-full gp-rotate-180 tablet:gp-rotate-180 mobile:gp-rotate-180"
+      style="--c:#121212;--w:24px;--w-tablet:24px;--w-mobile:24px;--h:24px;--h-tablet:24px;--h-mobile:24px"
+    >
+        <svg height="20" width="20" data-name="caret-right-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508418455613473128">
+      <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+    
+    </div>
+  
+    </button>
+  
+          <div id="gp-carousel-gWSWShATc1" dir="ltr" style="overflow:hidden;flex:1;width:100%;height:100%">
+            <div class="gem-slider-wrapper gp-flex gp-content-start gp-h-full gp-select-none !gp-max-w-none gp-carousel-slider-gWSWShATc1 mobile:!gp-flex-nowrap tablet:!gp-flex-nowrap !gp-flex-nowrap mobile:!gp-min-h-full tablet:!gp-min-h-full !gp-min-h-full">
+              
+    
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-gWSWShATc1 gp-child-item-gWSWShATc1 gUX9KwxZYB"
+      style="--minw:calc(100% / 6 - 13.333333333333334px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 4 - 12px);--maxw:calc(100% / 6 - 13.333333333333334px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 4 - 12px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="0"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+    <div
+      role="presentation"
+      data-id="g2AQaX-HPi"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1772896310667 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g2AQaX-HPi"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/thm-expert_robinB2.jpg?v=1731999065" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/thm-expert_robinB2.jpg?v=1731999065" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://im8health.com/cdn/shop/files/preview_images/thm-expert_robinB2.jpg?v=1731999065" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://im8health.com/cdn/shop/files/preview_images/thm-expert_robinB2.jpg?v=1731999065"
+        alt=""
+        width="100%"
+        style="--objf:cover;--w:100%;--w-tablet:100%;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--radiusType:rounded;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload gp_force_load"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-g2AQaX-HPi">
+        /* Make the wrapper positionable */
+.g2AQaX-HPi {
+  position: relative;
+}
+
+/* Inject play button via ::after — no HTML changes needed */
+.g2AQaX-HPi::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2211.75%22%20cy%3D%2212.25%22%20r%3D%229.25%22%20fill%3D%22%2350000B%22%3E%3C/circle%3E%3Cg%20clip-path%3D%22url%28%23clip0%29%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.4865%203.51351L12%200L3.51351%203.51351L0%2012L3.51351%2020.4865L12%2024L20.4865%2020.4865L24%2012L20.4865%203.51351ZM9.75%2015.8971L16.5%2012L9.75%208.10289V15.8971Z%22%20fill%3D%22white%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+      </style>
+    
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-gWSWShATc1 gp-child-item-gWSWShATc1 ghb4br_eJB"
+      style="--minw:calc(100% / 6 - 13.333333333333334px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 4 - 12px);--maxw:calc(100% / 6 - 13.333333333333334px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 4 - 12px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="1"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+    <div
+      role="presentation"
+      data-id="g8iQJD5OG7"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1772896310668 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g8iQJD5OG7"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/influe-carou_bobbyRich2.jpg?v=1731863977" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/influe-carou_bobbyRich2.jpg?v=1731863977" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://im8health.com/cdn/shop/files/preview_images/influe-carou_bobbyRich2.jpg?v=1731863977" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://im8health.com/cdn/shop/files/preview_images/influe-carou_bobbyRich2.jpg?v=1731863977"
+        alt=""
+        width="100%"
+        style="--objf:cover;--w:100%;--w-tablet:100%;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--radiusType:rounded;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload gp_force_load"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-g8iQJD5OG7">
+        /* Make the wrapper positionable */
+.g8iQJD5OG7 {
+  position: relative;
+}
+
+/* Inject play button via ::after — no HTML changes needed */
+.g8iQJD5OG7::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2211.75%22%20cy%3D%2212.25%22%20r%3D%229.25%22%20fill%3D%22%2350000B%22%3E%3C/circle%3E%3Cg%20clip-path%3D%22url%28%23clip0%29%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.4865%203.51351L12%200L3.51351%203.51351L0%2012L3.51351%2020.4865L12%2024L20.4865%2020.4865L24%2012L20.4865%203.51351ZM9.75%2015.8971L16.5%2012L9.75%208.10289V15.8971Z%22%20fill%3D%22white%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+      </style>
+    
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-gWSWShATc1 gp-child-item-gWSWShATc1 gjTgQHzBgM"
+      style="--minw:calc(100% / 6 - 13.333333333333334px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 4 - 12px);--maxw:calc(100% / 6 - 13.333333333333334px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 4 - 12px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="2"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+    <div
+      role="presentation"
+      data-id="gcdkST6So6"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1772896310669 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gcdkST6So6"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/thm-expert_amyShah2.jpg?v=1731864964" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/thm-expert_amyShah2.jpg?v=1731864964" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://im8health.com/cdn/shop/files/preview_images/thm-expert_amyShah2.jpg?v=1731864964" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://im8health.com/cdn/shop/files/preview_images/thm-expert_amyShah2.jpg?v=1731864964"
+        alt=""
+        width="100%"
+        style="--objf:cover;--w:100%;--w-tablet:100%;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--radiusType:rounded;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload gp_force_load"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gcdkST6So6">
+        /* Make the wrapper positionable */
+.gcdkST6So6 {
+  position: relative;
+}
+
+/* Inject play button via ::after — no HTML changes needed */
+.gcdkST6So6::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2211.75%22%20cy%3D%2212.25%22%20r%3D%229.25%22%20fill%3D%22%2350000B%22%3E%3C/circle%3E%3Cg%20clip-path%3D%22url%28%23clip0%29%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.4865%203.51351L12%200L3.51351%203.51351L0%2012L3.51351%2020.4865L12%2024L20.4865%2020.4865L24%2012L20.4865%203.51351ZM9.75%2015.8971L16.5%2012L9.75%208.10289V15.8971Z%22%20fill%3D%22white%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+      </style>
+    
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-gWSWShATc1 gp-child-item-gWSWShATc1 gh6xQw4cqI"
+      style="--minw:calc(100% / 6 - 13.333333333333334px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 4 - 12px);--maxw:calc(100% / 6 - 13.333333333333334px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 4 - 12px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="3"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+    <div
+      role="presentation"
+      data-id="gZsXPzbKdc"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1772896310669 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gZsXPzbKdc"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/thm-influ_dustinPoirier.jpg?v=1731833492" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/thm-influ_dustinPoirier.jpg?v=1731833492" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://im8health.com/cdn/shop/files/preview_images/thm-influ_dustinPoirier.jpg?v=1731833492" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://im8health.com/cdn/shop/files/preview_images/thm-influ_dustinPoirier.jpg?v=1731833492"
+        alt=""
+        width="100%"
+        style="--objf:cover;--w:100%;--w-tablet:100%;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--radiusType:rounded;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload gp_force_load"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gZsXPzbKdc">
+        /* Make the wrapper positionable */
+.gZsXPzbKdc {
+  position: relative;
+}
+
+/* Inject play button via ::after — no HTML changes needed */
+.gZsXPzbKdc::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2211.75%22%20cy%3D%2212.25%22%20r%3D%229.25%22%20fill%3D%22%2350000B%22%3E%3C/circle%3E%3Cg%20clip-path%3D%22url%28%23clip0%29%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.4865%203.51351L12%200L3.51351%203.51351L0%2012L3.51351%2020.4865L12%2024L20.4865%2020.4865L24%2012L20.4865%203.51351ZM9.75%2015.8971L16.5%2012L9.75%208.10289V15.8971Z%22%20fill%3D%22white%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+      </style>
+    
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-gWSWShATc1 gp-child-item-gWSWShATc1 godwdszWgv"
+      style="--minw:calc(100% / 6 - 13.333333333333334px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 4 - 12px);--maxw:calc(100% / 6 - 13.333333333333334px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 4 - 12px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="4"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+    <div
+      role="presentation"
+      data-id="gaosIusgNA"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1772896310670 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gaosIusgNA"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/image_54.png?v=1731863088" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMyIiBoZWlnaHQ9IjEzMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTczMi0xMzIwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSI3MzIiIGhlaWdodD0iMTMyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iNzMyIiBoZWlnaHQ9IjEzMjAiIGZpbGw9InVybCgjZy03MzItMTMyMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTczMiIgdG89IjczMiIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiICAvPgogIDwvc3ZnPg==" />
+      <source media="(max-width: 1024px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/image_54.png?v=1731863088" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMyIiBoZWlnaHQ9IjEzMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTczMi0xMzIwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSI3MzIiIGhlaWdodD0iMTMyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iNzMyIiBoZWlnaHQ9IjEzMjAiIGZpbGw9InVybCgjZy03MzItMTMyMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTczMiIgdG89IjczMiIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiICAvPgogIDwvc3ZnPg==" />
+    
+      
+      <img
+        base-src="https://im8health.com/cdn/shop/files/preview_images/image_54.png?v=1731863088" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMyIiBoZWlnaHQ9IjEzMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTczMi0xMzIwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSI3MzIiIGhlaWdodD0iMTMyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iNzMyIiBoZWlnaHQ9IjEzMjAiIGZpbGw9InVybCgjZy03MzItMTMyMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTczMiIgdG89IjczMiIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiICAvPgogIDwvc3ZnPg==" data-src="https://im8health.com/cdn/shop/files/preview_images/image_54.png?v=1731863088"
+        alt=""
+        width="100%"
+        style="--objf:cover;--w:100%;--w-tablet:100%;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--radiusType:rounded;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload gp_force_load"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gaosIusgNA">
+        /* Make the wrapper positionable */
+.gaosIusgNA {
+  position: relative;
+}
+
+/* Inject play button via ::after — no HTML changes needed */
+.gaosIusgNA::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2211.75%22%20cy%3D%2212.25%22%20r%3D%229.25%22%20fill%3D%22%2350000B%22%3E%3C/circle%3E%3Cg%20clip-path%3D%22url%28%23clip0%29%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.4865%203.51351L12%200L3.51351%203.51351L0%2012L3.51351%2020.4865L12%2024L20.4865%2020.4865L24%2012L20.4865%203.51351ZM9.75%2015.8971L16.5%2012L9.75%208.10289V15.8971Z%22%20fill%3D%22white%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+      </style>
+    
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-gWSWShATc1 gp-child-item-gWSWShATc1 g67zeZpn7p"
+      style="--minw:calc(100% / 6 - 13.333333333333334px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 4 - 12px);--maxw:calc(100% / 6 - 13.333333333333334px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 4 - 12px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="5"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+    <div
+      role="presentation"
+      data-id="gMSOevvKbN"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1772896310671 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gMSOevvKbN"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/1f4b2af008104c92a29f9d78814f1aa0.thumbnail.0000000000.jpg?v=1731860287" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://im8health.com/cdn/shop/files/preview_images/1f4b2af008104c92a29f9d78814f1aa0.thumbnail.0000000000.jpg?v=1731860287" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://im8health.com/cdn/shop/files/preview_images/1f4b2af008104c92a29f9d78814f1aa0.thumbnail.0000000000.jpg?v=1731860287" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0xMDgwLTE5MjAiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iMTkyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTA4MCIgaGVpZ2h0PSIxOTIwIiBmaWxsPSJ1cmwoI2ctMTA4MC0xOTIwKSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMTA4MCIgdG89IjEwODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://im8health.com/cdn/shop/files/preview_images/1f4b2af008104c92a29f9d78814f1aa0.thumbnail.0000000000.jpg?v=1731860287"
+        alt=""
+        width="100%"
+        style="--objf:cover;--w:100%;--w-tablet:100%;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--radiusType:rounded;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload gp_force_load"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+      <style id="custom-css-gMSOevvKbN">
+        /* Make the wrapper positionable */
+.gMSOevvKbN {
+  position: relative;
+}
+
+/* Inject play button via ::after — no HTML changes needed */
+.gMSOevvKbN::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2211.75%22%20cy%3D%2212.25%22%20r%3D%229.25%22%20fill%3D%22%2350000B%22%3E%3C/circle%3E%3Cg%20clip-path%3D%22url%28%23clip0%29%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.4865%203.51351L12%200L3.51351%203.51351L0%2012L3.51351%2020.4865L12%2024L20.4865%2020.4865L24%2012L20.4865%203.51351ZM9.75%2015.8971L16.5%2012L9.75%208.10289V15.8971Z%22%20fill%3D%22white%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+      </style>
+    
+      </div>
+    </div>
+  
+            </div>
+          </div>
+          
+    <button
+      type="button"
+      aria-label='Carousel Next Arrow'
+      class="gp-z-1 gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0 before:gp-left-0 before:gp-top-0 gp-carousel-arrow-gWSWShATc1 gWSWShATc1 gp-carousel-action-next gem-slider-next gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative tablet:!gp-flex tablet:!gp-relative mobile:!gp-flex mobile:!gp-absolute mobile:gp-z-2"
+      style="--bg:transparent;--d:flex;--d-tablet:flex;--d-mobile:flex;--right:3px;--left:initial;--top:;--bottom:initial;--right-tablet:3px;--left-tablet:initial;--top-tablet:;--bottom-tablet:initial;--right-mobile:16px;--left-mobile:initial;--top-mobile:;--bottom-mobile:initial;--w:auto;--w-tablet:auto;--w-mobile:auto;--h:auto;--h-tablet:auto;--h-mobile:auto;--pl:16px;--pr:16px;--pt:16px;--pb:16px;--shadow:none;--v:hidden"
+    >
+      <style type="text/css">
+      .gp-carousel-arrow-gWSWShATc1 {
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      .gp-carousel-arrow-gWSWShATc1::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+        border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      @media only screen and (max-width: 1024px) and (min-width: 768px) {
+        .gp-carousel-arrow-gWSWShATc1 {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-gWSWShATc1::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .gp-carousel-arrow-gWSWShATc1 {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-gWSWShATc1::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+    </style>
+      
+    <div
+      class="gp-flex gp-items-center gp-justify-center [&>svg]:gp-h-full [&>svg]:gp-w-full gp-rotate-0 tablet:gp-rotate-0 mobile:gp-rotate-0"
+      style="--c:#121212;--w:24px;--w-tablet:24px;--w-mobile:24px;--h:24px;--h-tablet:24px;--h-mobile:24px"
+    >
+        <svg height="20" width="20" data-name="caret-right-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508418455613473128">
+      <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+    
+    </div>
+  
+    </button>
+  
+        </div>
+        
+    
+        <div class="gp-carousel-dot-container gp-carousel-dot-container-gWSWShATc1 gp-z-2 gp-flex gp-flex-1 gp-items-center gp-justify-center gp-gap-2 gp-text-center gp-static gp-flex-row gp-left-0 gp-right-0 tablet:gp-static tablet:gp-flex-row tablet:gp-left-0 tablet:gp-right-0 mobile:gp-static mobile:gp-flex-row mobile:gp-left-0 mobile:gp-right-0" style="--mt:16px;--mt-tablet:16px;--mt-mobile:16px;--d:flex;--d-tablet:flex;--d-mobile:none">
+          <!-- item render by js -->
+        </div>
+      
+  
+      </div>
+    </gp-carousel-v3>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-carousel-v3-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+
+  
+    <gp-carousel-v3 gp-data='{"id":"g26UAtXNWt","setting":{"childItem":["Item 1","Item 2","Item 3","Item 4"],"itemNumber":{"desktop":4,"tablet":2,"mobile":2},"navigationStyle":{"desktop":"outside"},"dotStyle":{"desktop":"outside"},"sneakPeak":{"desktop":false},"sneakPeakType":{"desktop":"forward"},"sneakPeakOffsetForward":{"desktop":50},"sneakPeakOffsetCenter":{"desktop":50},"vertical":{"desktop":false},"controlOverContent":{"desktop":true},"dot":{"desktop":true},"dotSize":{"desktop":12},"dotGapToCarousel":{"desktop":16},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"line-3"},"navigationEnable":{"desktop":true},"arrowCustom":"<svg height=\"20\" width=\"20\" data-name=\"caret-right-regular\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508418455613473128\">\n      <path fill=\"currentColor\" strokelinecap=\"round\" strokelinejoin=\"round\" d=\"M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z\"></path></svg>\n    ","arrowCustomColor":"#121212","arrowIconSize":{"desktop":24},"arrowButtonSize":{"desktop":{"shapeValue":"1/1","shapeLinked":true,"padding":{"linked":true,"type":"custom","top":"16px","bottom":"16px","left":"16px","right":"16px"}}},"arrowBackgroundColor":"transparent","arrowBorder":{"desktop":{"borderType":"none","border":"none","borderWidth":"1px","width":"1px 1px 1px 1px","isCustom":true}},"arrowShadow":{"desktop":{"type":"shadow-1","distance":"4px","blur":"4px","spread":"0px","color":"rgba(18, 18, 18, 0.2)","angle":45,"enable":false}},"roundedArrow":{"desktop":{"btrr":"0px","bblr":"0px","bbrr":"0px","btlr":"0px","radiusType":"none"}},"arrowGapToEachSide":"16","showWhenHover":false,"rtl":false,"autoplay":false,"autoplayTimeout":2,"pauseOnHover":true,"runPreview":false,"enableDrag":{"desktop":true},"loop":{"desktop":false},"animationMode":"ease-in","background":{"desktop":{"type":"color","image":{"src":"","width":0,"height":0},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll"}},"label":true},"styles":{"fullWidth":{"desktop":false,"tablet":false,"mobile":false},"sizeSetting":{"desktop":{"shapeLinked":false,"width":"default","height":"auto"}},"backgroundImage":{"desktop":{}},"playSpeed":500,"align":{"desktop":"center"},"borderContent":{"borderType":"none","border":"none","width":"1px 1px 1px 1px","position":"all","borderWidth":"1px","color":"line-3","isCustom":true},"roundedContent":{"radiusType":"none"},"hasActiveShadow":false,"carouselShadow":{"type":"shadow-1","distance":"4px","blur":"4px","spread":"0px","color":"rgba(18, 18, 18, 0.2)","angle":45,"enable":false},"spacing":{"desktop":16},"itemPadding":{"desktop":{"padding":{}}}}}' data-id="g26UAtXNWt" id="gp-root-carousel-g26UAtXNWt" style="--jc:center" class="gp-group/carousel gp-w-full gp-flex">
+      <div
+        
+        class="g26UAtXNWt gp-relative gp-my-0 tablet:gp-px-0 gp-max-w-full mobile:gp-px-0 gp-carousel-wrapper mobile:gp-block tablet:gp-block gp-block"
+        style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--w:var(--g-ct-w);--w-tablet:var(--g-ct-w);--w-mobile:var(--g-ct-w);--bgi:none;--bgi-tablet:none;--bgi-mobile:none"
+      >
+        <div class="gp-relative gp-overflow-hidden gp-flex gp-items-center gp-justify-between mobile:!gp-flex-row tablet:!gp-flex-row !gp-flex-row" style="--h:auto;--h-tablet:auto;--h-mobile:auto;gap:16px">
+          
+          
+    <button
+      type="button"
+      aria-label='Carousel Back Arrow'
+      class="gp-z-1 gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0 before:gp-left-0 before:gp-top-0 gp-carousel-arrow-g26UAtXNWt g26UAtXNWt gp-carousel-action-back gem-slider-previous gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative tablet:!gp-flex tablet:!gp-relative mobile:!gp-flex mobile:!gp-relative"
+      style="--bg:transparent;--d:flex;--d-tablet:flex;--d-mobile:flex;--left:3px;--right:initial;--top:initial;--bottom:;--left-tablet:3px;--right-tablet:initial;--top-tablet:initial;--bottom-tablet:;--left-mobile:3px;--right-mobile:initial;--top-mobile:initial;--bottom-mobile:;--w:auto;--w-tablet:auto;--w-mobile:auto;--h:auto;--h-tablet:auto;--h-mobile:auto;--pl:16px;--pr:16px;--pt:16px;--pb:16px;--shadow:none;--v:hidden"
+    >
+      <style type="text/css">
+      .gp-carousel-arrow-g26UAtXNWt {
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      .gp-carousel-arrow-g26UAtXNWt::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+        border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      @media only screen and (max-width: 1024px) and (min-width: 768px) {
+        .gp-carousel-arrow-g26UAtXNWt {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-g26UAtXNWt::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .gp-carousel-arrow-g26UAtXNWt {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-g26UAtXNWt::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+    </style>
+      
+    <div
+      class="gp-flex gp-items-center gp-justify-center [&>svg]:gp-h-full [&>svg]:gp-w-full gp-rotate-180 tablet:gp-rotate-180 mobile:gp-rotate-180"
+      style="--c:#121212;--w:24px;--w-tablet:24px;--w-mobile:24px;--h:24px;--h-tablet:24px;--h-mobile:24px"
+    >
+        <svg height="20" width="20" data-name="caret-right-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508418455613473128">
+      <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+    
+    </div>
+  
+    </button>
+  
+          <div id="gp-carousel-g26UAtXNWt" dir="ltr" style="overflow:hidden;flex:1;width:100%;height:100%">
+            <div class="gem-slider-wrapper gp-flex gp-content-start gp-h-full gp-select-none !gp-max-w-none gp-carousel-slider-g26UAtXNWt mobile:!gp-flex-nowrap tablet:!gp-flex-nowrap !gp-flex-nowrap mobile:!gp-min-h-full tablet:!gp-min-h-full !gp-min-h-full">
+              
+    
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-g26UAtXNWt gp-child-item-g26UAtXNWt gfYI-VBYtp"
+      style="--minw:calc(100% / 4 - 12px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 2 - 8px);--maxw:calc(100% / 4 - 12px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 2 - 8px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="0"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"uid":"giSwfKFfN0"}' data-id="giSwfKFfN0" id="giSwfKFfN0" data-same-height-subgrid-container class="giSwfKFfN0 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pt:var(--g-s-l);--pl:var(--g-s-l);--pb:var(--g-s-l);--pr:var(--g-s-l);--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--cg:16px;--rg:0px;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start;--d-mobile:none"
+      class="gkI5Uhdzq4 gp-relative gp-flex gp-flex-col"
+    >
+      
+    </div>
+
+      
+    </gp-row>
+  
+  
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-g26UAtXNWt gp-child-item-g26UAtXNWt g69ycK9wHJ"
+      style="--minw:calc(100% / 4 - 12px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 2 - 8px);--maxw:calc(100% / 4 - 12px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 2 - 8px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="1"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-g26UAtXNWt gp-child-item-g26UAtXNWt gB7Tdu2fEF"
+      style="--minw:calc(100% / 4 - 12px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 2 - 8px);--maxw:calc(100% / 4 - 12px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 2 - 8px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="2"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+      </div>
+    </div>
+  
+    <div
+      
+      id=""
+      class="gem-slider-item gp-w-full gem-slider-item-g26UAtXNWt gp-child-item-g26UAtXNWt gycXeqvv9H"
+      style="--minw:calc(100% / 4 - 12px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 2 - 8px);--maxw:calc(100% / 4 - 12px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 2 - 8px);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:none;--op:100%;--mr:16px;--mr-tablet:16px;--mr-mobile:16px"
+      data-index="3"
+      grid-index="{{forloop.index}}"
+      external-id="{{media.external_id}}"
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      dir="ltr"
+    >
+      <div
+        class="gp-w-full gp-h-full"
+        style="--shadow:none"
+      >
+      
+      </div>
+    </div>
+  
+            </div>
+          </div>
+          
+    <button
+      type="button"
+      aria-label='Carousel Next Arrow'
+      class="gp-z-1 gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0 before:gp-left-0 before:gp-top-0 gp-carousel-arrow-g26UAtXNWt g26UAtXNWt gp-carousel-action-next gem-slider-next gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative tablet:!gp-flex tablet:!gp-relative mobile:!gp-flex mobile:!gp-relative"
+      style="--bg:transparent;--d:flex;--d-tablet:flex;--d-mobile:flex;--right:3px;--left:initial;--top:;--bottom:initial;--right-tablet:3px;--left-tablet:initial;--top-tablet:;--bottom-tablet:initial;--right-mobile:3px;--left-mobile:initial;--top-mobile:;--bottom-mobile:initial;--w:auto;--w-tablet:auto;--w-mobile:auto;--h:auto;--h-tablet:auto;--h-mobile:auto;--pl:16px;--pr:16px;--pt:16px;--pb:16px;--shadow:none;--v:hidden"
+    >
+      <style type="text/css">
+      .gp-carousel-arrow-g26UAtXNWt {
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      .gp-carousel-arrow-g26UAtXNWt::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+        border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+        
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+      }
+      @media only screen and (max-width: 1024px) and (min-width: 768px) {
+        .gp-carousel-arrow-g26UAtXNWt {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-g26UAtXNWt::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .gp-carousel-arrow-g26UAtXNWt {
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+        .gp-carousel-arrow-g26UAtXNWt::before {
+          border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+          
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+        }
+      }
+    </style>
+      
+    <div
+      class="gp-flex gp-items-center gp-justify-center [&>svg]:gp-h-full [&>svg]:gp-w-full gp-rotate-0 tablet:gp-rotate-0 mobile:gp-rotate-0"
+      style="--c:#121212;--w:24px;--w-tablet:24px;--w-mobile:24px;--h:24px;--h-tablet:24px;--h-mobile:24px"
+    >
+        <svg height="20" width="20" data-name="caret-right-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508418455613473128">
+      <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+    
+    </div>
+  
+    </button>
+  
+        </div>
+        
+    
+        <div class="gp-carousel-dot-container gp-carousel-dot-container-g26UAtXNWt gp-z-2 gp-flex gp-flex-1 gp-items-center gp-justify-center gp-gap-2 gp-text-center gp-static gp-flex-row gp-left-0 gp-right-0 tablet:gp-static tablet:gp-flex-row tablet:gp-left-0 tablet:gp-right-0 mobile:gp-static mobile:gp-flex-row mobile:gp-left-0 mobile:gp-right-0" style="--mt:16px;--mt-tablet:16px;--mt-mobile:16px;--d:flex;--d-tablet:flex;--d-mobile:flex">
+          <!-- item render by js -->
+        </div>
+      
+  
+      </div>
+    </gp-carousel-v3>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-carousel-v3-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+
+  
+    </div>
+
+      
+    </gp-row>
+  
+  

@@ -1,0 +1,117 @@
+{{ 'process-steps.css' | asset_url | stylesheet_tag }}
+
+<div class="process-section" style="background-color: {{ section.settings.bg_color }};">
+  <div class="process-section-width page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="process-heading" style="color: {{ section.settings.heading_color }};">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+    
+    <div class="process-container">
+      {% for block in section.blocks %}
+        <div class="process-step" {{ block.shopify_attributes }}>
+          <div class="step-circle">
+            {{ forloop.index }}
+          </div>
+          <div class="step-content">
+            <div class="step-title">
+              {{ block.settings.title }}
+            </div>
+            <div class="step-desc">
+              {{ block.settings.description }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Process Steps",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "HOW WE SOURCE OUR SHILAJIT"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Step Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Step Description",
+          "default": "Describe this step in the process."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Process Steps",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Rock Sourcing",
+            "description": "Raw Grade A Shilajit rocks are sourced above 14,000 ft from the Tibetan mountains."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Extraction",
+            "description": "The rocks are crushed and dissolved in water to break down the plant material from rock substances."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Filtration",
+            "description": "The mixture is initially filtered to separate dust and sediments."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Testing",
+            "description": "After repeated filtration and sun-drying processes, the Shilajit is inspected and lab-tested for safety."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Infusion",
+            "description": "The resin is then expertly infused into our gummies with sweet manuka honey."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,44 @@
+{% comment %}
+  BOGO quantity injector — pairs with a "Buy 1 Get 1" automatic discount.
+  Renders nothing visible. Forces qty=2 on product forms so 1 ATC click
+  adds 2 items, which triggers the BOGO discount (1 free).
+{% endcomment %}
+
+<script>
+  (function () {
+    function forceBogoQty() {
+      document.querySelectorAll('form[action*="/cart/add"]').forEach(function (form) {
+        if (form.dataset.bogoForced === '1') return;
+        var qty = form.querySelector('input[name="quantity"]');
+        if (!qty) {
+          qty = document.createElement('input');
+          qty.type = 'hidden';
+          qty.name = 'quantity';
+          form.appendChild(qty);
+        } else {
+          qty.type = 'hidden';
+        }
+        qty.value = '2';
+        form.dataset.bogoForced = '1';
+
+        var qtyWidget = form.querySelector('quantity-input, .quantity, .product-form__quantity');
+        if (qtyWidget) qtyWidget.style.display = 'none';
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', forceBogoQty);
+    } else {
+      forceBogoQty();
+    }
+    window.addEventListener('load', forceBogoQty);
+    document.addEventListener('variant:change', forceBogoQty);
+    document.addEventListener('shopify:section:load', forceBogoQty);
+
+    var tries = 0;
+    var interval = setInterval(function () {
+      forceBogoQty();
+      if (++tries > 20) clearInterval(interval);
+    }, 250);
+  })();
+</script>

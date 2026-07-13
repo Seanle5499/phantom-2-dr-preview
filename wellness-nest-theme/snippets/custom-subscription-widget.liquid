@@ -1,0 +1,210 @@
+{% if product.selling_plan_groups.size > 0 %}
+  {% assign first_group = product.selling_plan_groups[0] %}
+  {% assign first_plan = first_group.selling_plans[0] %}
+
+  {% if first_plan %}
+    {% assign subscribe_label = block.settings.subscribe_label | default: 'Subscribe & Save' %}
+    {% assign onetime_label = block.settings.onetime_label | default: 'One-Time Purchase' %}
+
+    <div class="custom_subscription_widget_wrapper hidden">
+      <button class="subscription_option_label h5 subsave active" value="{{ first_plan.id }}">
+        {{ subscribe_label }}
+        {% if block.settings.show_saved_percentage == true %}{{ first_plan.price_adjustments[0].value }}%{% endif %}
+      </button>
+      <button class="subscription_option_label h5 onetime" value="">{{ onetime_label }}</button>
+    </div>
+
+    {% comment %}
+      Dont change this code block
+    {% endcomment %}
+
+    <script>
+      (function () {
+        var RC_READY_SEL =
+          '.rc_widget__option__input--onetime, .rc_widget__option__input--subsave, ' +
+          '.rc_container select[name="selling_plan"], .rc-container select[name="selling_plan"], ' +
+          '.rc_widget select[name="selling_plan"], .rc-widget select[name="selling_plan"]';
+
+        function getRoot(node) {
+          var r = node && node.closest ? node.closest('product-info') : null;
+          return r || document;
+        }
+
+        function findWrapper(node) {
+          var root = getRoot(node);
+          var w = root.querySelector('.custom_subscription_widget_wrapper');
+          if (w) return w;
+          return document.querySelector('.custom_subscription_widget_wrapper');
+        }
+
+        function revealWrapper(wrapper) {
+          if (!wrapper) return;
+          wrapper.classList.remove('hidden');
+          if (wrapper.hasAttribute('hidden')) wrapper.removeAttribute('hidden');
+          if (wrapper.style.display === 'none') wrapper.style.display = '';
+        }
+
+        function isRechargeReady(root) {
+          var base = root && root.querySelector ? root : document;
+          return !!base.querySelector(RC_READY_SEL);
+        }
+
+        function clickRechargeRadio(root, mode) {
+          var base = root && root.querySelector ? root : document;
+          var sel = mode === 'subsave' ? '.rc_widget__option__input--subsave' : '.rc_widget__option__input--onetime';
+          var radio = base.querySelector(sel);
+          if (!radio) return false;
+          radio.click();
+          radio.checked = true;
+          radio.dispatchEvent(new Event('change', { bubbles: true }));
+          radio.dispatchEvent(new Event('input', { bubbles: true }));
+          return true;
+        }
+
+        function setActiveLabel(wrapper, mode) {
+          if (!wrapper) return;
+          var labels = wrapper.querySelectorAll('.subscription_option_label');
+          for (var i = 0; i < labels.length; i++) labels[i].classList.remove('active');
+          var target = wrapper.querySelector(
+            mode === 'subsave' ? '.subscription_option_label.subsave' : '.subscription_option_label.onetime'
+          );
+          if (target) target.classList.add('active');
+        }
+
+        function updatePriceUI(root, mode) {
+          var base = root && root.querySelector ? root : document;
+          var all = base.querySelectorAll('.quantity-break__price_custom');
+          for (var i = 0; i < all.length; i++) all[i].classList.remove('active');
+          var show = base.querySelectorAll(
+            mode === 'subsave' ? '.quantity-break__price_custom.subsave' : '.quantity-break__price_custom.onetime'
+          );
+          for (var j = 0; j < show.length; j++) show[j].classList.add('active');
+        }
+
+        function getDefaultMode(wrapper) {
+          if (!wrapper) return null;
+          var sub = wrapper.querySelector('.subscription_option_label.subsave');
+          var one = wrapper.querySelector('.subscription_option_label.onetime');
+          if (sub && sub.classList.contains('active')) return 'subsave';
+          if (one && one.classList.contains('active')) return 'onetime';
+          if (sub) return 'subsave';
+          if (one) return 'onetime';
+          return null;
+        }
+
+        function waitRechargeThen(root, fn) {
+          if (isRechargeReady(root)) {
+            fn();
+            return;
+          }
+          var mo = new MutationObserver(function (muts) {
+            if (isRechargeReady(root)) {
+              mo.disconnect();
+              fn();
+            }
+          });
+          mo.observe(root || document, { childList: true, subtree: true });
+          setTimeout(function () {
+            mo.disconnect();
+            if (isRechargeReady(root)) fn();
+          }, 8000);
+        }
+
+        function initialSetup() {
+          // Khi widget sẵn sàng: gỡ hidden cho wrapper và áp mode mặc định của bạn lên ReCharge
+          waitRechargeThen(document, function () {
+            var wrappers = document.querySelectorAll('.custom_subscription_widget_wrapper');
+            for (var i = 0; i < wrappers.length; i++) {
+              var w = wrappers[i];
+              var root = getRoot(w);
+              revealWrapper(w);
+              var mode = getDefaultMode(w);
+              if (mode) {
+                setActiveLabel(w, mode);
+                updatePriceUI(root, mode);
+                clickRechargeRadio(root, mode);
+              }
+            }
+          });
+        }
+
+        document.addEventListener(
+          'click',
+          function (e) {
+            var btn = e.target && e.target.closest ? e.target.closest('.subscription_option_label') : null;
+            if (!btn) return;
+
+            var wrapper = findWrapper(btn);
+            var root = getRoot(btn);
+            var mode = btn.classList.contains('subsave') ? 'subsave' : 'onetime';
+
+            revealWrapper(wrapper);
+            setActiveLabel(wrapper, mode);
+            updatePriceUI(root, mode);
+
+            if (isRechargeReady(root)) {
+              clickRechargeRadio(root, mode);
+            } else {
+              waitRechargeThen(root, function () {
+                clickRechargeRadio(root, mode);
+              });
+            }
+          },
+          true
+        ); // capture để chạy sớm
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initialSetup);
+        } else {
+          initialSetup();
+        }
+      })();
+    </script>
+
+    {% comment %}
+      End code block
+    {% endcomment %}
+
+    <style>
+      .custom_subscription_widget_wrapper.hidden {
+        display: none;
+      }
+      .custom_subscription_widget_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 12px 0;
+      }
+      .custom_subscription_widget_wrapper .subscription_option_label {
+        display: flex;
+        width: 50%;
+        border: 1px solid rgb(18, 18, 18);
+        padding: 17.5px 17.5px;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: #000000;
+        Font-size: 15.5px;
+        font-family: 'Poppins' !important;
+        border-width: 0.2rem;
+        border-color: rgb(198, 228, 185);
+      }
+      .custom_subscription_widget_wrapper .subscription_option_label.active {
+        background-color: rgba(83, 175, 1, 0.1);
+        border-color: rgb(83, 175, 1);
+        color: rgb(83, 175, 1);
+      }
+      .shopify-section .quantity-break__price.onetime,
+      .shopify-section .quantity-break__price.subsave {
+        display: none !important;
+      }
+      .shopify-section .quantity-break__price.onetime.active,
+      .shopify-section .quantity-break__price.subsave.active {
+        display: block !important;
+      }
+    </style>
+  {% endif %}
+{% endif %}

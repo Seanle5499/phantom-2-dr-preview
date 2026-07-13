@@ -1,0 +1,630 @@
+{%- liquid
+  assign cta_url = 'https://wellnessnest.co/products/protocol'
+  assign sticky_img = 'https://cdn.shopify.com/s/files/1/0810/1563/6283/files/4-2_1.jpg?v=1777878704'
+  assign clinical_pdf = 'https://cdn.shopify.com/s/files/1/0742/9102/0008/files/MAGNALI_FUEL_-_CLINICAL_EVIDENCE.pdf?v=1762315274'
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} { --ca-fg: #111; --ca-muted: #5a5a5a; --ca-bg: #fafaf7; --ca-card: #ffffff; --ca-border: #e6e6e1; --ca-accent: #c9a45c; --ca-warning: #fff7d6; --ca-warning-border: #f0d77a; --ca-yellow-hl: #fff39c; }
+  .ca-page { background: var(--ca-bg); color: var(--ca-fg); font-family: var(--font-body-family, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif); font-size: 15px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+  .ca-page * { box-sizing: border-box; }
+  .ca-wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 80px; }
+  .ca-row { display: flex; flex-direction: column; gap: 32px; align-items: flex-start; }
+  .ca-main { width: 100%; min-width: 0; }
+  .ca-aside { width: 100%; }
+  .ca-aside .ca-cta-card { display: none; }
+  .ca-bottom-cta { display: block; }
+  @media (min-width: 768px) {
+    .ca-row { flex-direction: row; gap: 50px; }
+    .ca-main { flex: 0 1 821px; max-width: 821px; }
+    .ca-aside { flex: 0 0 329px; max-width: 329px; align-self: stretch; }
+    .ca-aside .ca-cta-card { display: block; position: sticky; top: 20px; }
+    .ca-bottom-cta { display: none; }
+  }
+  .ca-page img, .ca-page video { max-width: 100%; height: auto; display: block; }
+  .ca-masthead { background: #222222; width: 100%; }
+  .ca-masthead-inner { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: center; }
+  .ca-masthead img { width: auto; max-width: 120px; height: auto; display: block; }
+  @media (min-width: 768px) {
+    .ca-masthead-inner { justify-content: flex-start; }
+    .ca-masthead img { max-width: 180px; }
+  }
+  .ca-page h1, .ca-page h2, .ca-page h3, .ca-page h4 { font-family: var(--font-heading-family, var(--font-body-family, serif)); color: #0a0a0a; margin: 28px 0 14px; font-weight: 700; letter-spacing: -0.01em; }
+  .ca-page h1 { font-size: 24px; line-height: 1.2; margin-top: 8px; }
+  .ca-page h2 { font-size: 24px; line-height: 1.2; margin-top: 32px; }
+  .ca-page h3 { font-size: 20px; line-height: 1.25; margin-top: 24px; }
+  .ca-page h4 { font-size: 17px; line-height: 1.3; margin-top: 20px; }
+  .ca-page p { margin: 0 0 16px; font-size: 18px; line-height: 1.8; }
+  .ca-page strong { font-weight: 700; }
+  .ca-page em { font-style: italic; }
+  .ca-page ul, .ca-page ol { margin: 0 0 16px; padding-left: 22px; font-size: 18px; line-height: 1.8; }
+  .ca-page li { margin: 6px 0; }
+  .ca-page a { color: #1a4dbb; text-decoration: underline; }
+  @media (min-width: 768px) {
+    .ca-page h1 { font-size: 32px; }
+    .ca-page h2 { font-size: 30px; }
+    .ca-page h3 { font-size: 23px; }
+    .ca-page h4 { font-size: 18px; }
+  }
+  @media (min-width: 1024px) {
+    .ca-page h1 { font-size: 36px; }
+  }
+
+  .ca-byline { display: flex; gap: 14px; align-items: center; margin: 18px 0 28px; padding: 14px 0; border-top: 1px solid var(--ca-border); border-bottom: 1px solid var(--ca-border); }
+  .ca-byline img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: 0 0 56px; }
+  .ca-byline-meta { font-size: 14px; color: var(--ca-muted); }
+  .ca-byline-meta strong { color: var(--ca-fg); display: block; font-size: 15px; }
+
+  .ca-figure { margin: 24px 0; }
+  .ca-figure img { width: 100%; border-radius: 6px; }
+
+  .ca-pullquote { background: #fff; border-left: 3px solid var(--ca-accent); padding: 16px 18px; margin: 18px 0; font-style: italic; color: #2a2a2a; border-radius: 0 6px 6px 0; }
+
+  .ca-callout { background: var(--ca-warning); border: 1px solid var(--ca-warning-border); border-radius: 8px; padding: 18px 20px; margin: 22px 0; }
+  .ca-callout h3 { margin-top: 0; }
+
+  .ca-symptom-list { background: #fff; border: 1px solid var(--ca-border); border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+  .ca-symptom-list h3 { margin-top: 0; }
+  .ca-symptom-list ul { list-style: none; padding-left: 0; }
+  .ca-symptom-list li { padding-left: 28px; position: relative; }
+  .ca-symptom-list li::before { content: "✗"; position: absolute; left: 0; top: 0; color: #c0392b; font-weight: 700; }
+
+  .ca-ingredient { background: #fff; border: 1px solid var(--ca-border); border-radius: 8px; padding: 20px 22px; margin: 16px 0; }
+  .ca-ingredient h3 { margin-top: 0; color: #0a0a0a; }
+  .ca-ingredient p { margin: 8px 0; }
+  .ca-ingredient .ca-ing-label { display: inline-block; background: #0a0a0a; color: #fff; font-size: 12px; padding: 2px 8px; border-radius: 4px; margin-right: 6px; vertical-align: middle; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .ca-experts { background: #fff; border: 1px solid var(--ca-border); border-radius: 8px; padding: 20px 22px; margin: 18px 0; }
+  .ca-experts blockquote { margin: 0 0 14px; padding: 14px 16px; background: #fafaf7; border-left: 3px solid var(--ca-accent); font-style: italic; }
+  .ca-experts blockquote cite { display: block; font-style: normal; font-weight: 700; margin-top: 8px; font-size: 14px; color: #2a2a2a; }
+
+  .ca-cost-list { margin: 18px 0; padding: 0; list-style: none; }
+  .ca-cost-list li { background: #fff; border: 1px solid var(--ca-border); border-radius: 6px; padding: 14px 18px; margin-bottom: 10px; }
+  .ca-cost-list li strong { display: block; margin-bottom: 4px; }
+
+  .ca-offer { background: #0a0a0a; color: #fff; border-radius: 10px; padding: 28px 26px; margin: 24px 0; }
+  .ca-offer h3 { color: #fff; margin-top: 0; }
+  .ca-offer .ca-price-old { text-decoration: line-through; color: #b8b8b8; font-size: 18px; margin-right: 10px; }
+  .ca-offer .ca-price-new { color: #ffd76a; font-size: 32px; font-weight: 800; }
+  .ca-offer .ca-price-line { margin: 12px 0; }
+  .ca-offer ul { padding-left: 22px; }
+  .ca-offer li { margin: 4px 0; }
+
+  .ca-phase { background: #fff; border: 1px solid var(--ca-border); border-radius: 8px; padding: 18px 22px; margin: 14px 0; border-left: 4px solid var(--ca-accent); }
+  .ca-phase h4 { margin-top: 0; font-size: 17px; }
+  .ca-phase blockquote { margin: 10px 0 0; padding: 10px 14px; background: #fafaf7; border-left: 3px solid #ddd; font-style: italic; font-size: 15px; color: #2a2a2a; }
+
+  .ca-urgent { background: #fff7d6; border: 2px solid #f0d77a; border-radius: 8px; padding: 20px 22px; margin: 22px 0; }
+  .ca-urgent h3 { margin-top: 0; color: #9c6a00; }
+  .ca-stock-bar { width: 100%; height: 18px; background: #fff; border: 1px solid #e0c97a; border-radius: 999px; overflow: hidden; margin: 10px 0; position: relative; }
+  .ca-stock-bar > span { display: block; height: 100%; width: 73%; background: linear-gradient(90deg, #d97706, #c0392b); }
+  .ca-stock-meta { display: flex; justify-content: space-between; font-size: 13px; color: #6b5a00; font-weight: 700; }
+
+  .ca-cta-inline { text-align: center; margin: 30px 0; }
+  .ca-btn { display: inline-block; background: #54B94A; color: #fff !important; text-decoration: none !important; padding: 16px 32px; border-radius: 6px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 15px; transition: opacity 0.15s; border: 0; cursor: pointer; }
+  .ca-btn:hover { opacity: 0.85; }
+  .ca-btn-block { display: block; width: 100%; text-align: center; }
+
+  .ca-final-cta { text-align: center; margin: 36px 0; padding: 24px; background: #fff; border-radius: 10px; border: 1px solid var(--ca-border); }
+  .ca-final-cta img { margin: 0 auto 16px; max-width: 320px; border-radius: 6px; }
+  .ca-final-cta h3 { margin: 8px 0; }
+
+  .ca-faq { margin: 28px 0; }
+  .ca-faq h2 { text-transform: uppercase; letter-spacing: 0.08em; font-size: 14px; color: var(--ca-muted); border-bottom: 1px solid var(--ca-border); padding-bottom: 10px; margin-bottom: 0; }
+  .ca-faq details { border-bottom: 1px solid var(--ca-border); padding: 16px 0; }
+  .ca-faq summary { cursor: pointer; font-weight: 600; font-size: 17px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .ca-faq summary::-webkit-details-marker { display: none; }
+  .ca-faq summary::after { content: "+"; font-size: 22px; font-weight: 400; color: var(--ca-muted); flex: 0 0 auto; transition: transform 0.2s; }
+  .ca-faq details[open] summary::after { content: "−"; }
+  .ca-faq details p { margin-top: 12px; color: var(--ca-muted); }
+
+  .ca-disclaimer { font-size: 13px; color: var(--ca-muted); border-top: 1px solid var(--ca-border); padding-top: 18px; margin-top: 32px; }
+  .ca-disclaimer a { color: #1a4dbb; }
+
+  /* Sticky / Bottom CTA card (shared styles) */
+  .ca-cta-card { background: transparent; border: 1px solid var(--ca-border); border-radius: 10px; padding: 22px 22px 0; text-align: center; overflow: hidden; }
+  .ca-cta-card .ca-cta-logo { font-family: var(--font-heading-family, serif); letter-spacing: 0.32em; font-size: 22px; font-weight: 300; color: #0a0a0a; margin: 4px 0 16px; }
+  .ca-cta-card .ca-cta-pill { display: inline-block; border: 1px solid #0a0a0a; border-radius: 999px; padding: 8px 16px; font-size: 12px; letter-spacing: 0.06em; margin-bottom: 16px; }
+  .ca-cta-card .ca-cta-img { width: 100%; border-radius: 6px; margin: 0 auto 16px; display: block; }
+  .ca-cta-card .ca-cta-line { font-size: 16px; line-height: 1.4; margin: 0 -22px 0; padding: 0 22px 18px; font-weight: 500; }
+  .ca-cta-card .ca-cta-btn { display: block; background: #54B94A; color: #fff !important; text-decoration: none !important; padding: 16px; margin: 0 -22px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; font-size: 14px; }
+  .ca-cta-card .ca-cta-btn:hover { opacity: 0.9; }
+
+  .ca-bottom-cta { margin: 28px 0; }
+  .ca-bottom-cta .ca-cta-card { display: block; }
+</style>
+
+<div class="ca-page">
+  <div class="ca-masthead">
+    <div class="ca-masthead-inner">
+      <img src="{{ 'ca-01-hero.png' | asset_url }}" alt="Longevity Insider Daily" loading="eager" width="180" height="81">
+    </div>
+  </div>
+  <div class="ca-wrap">
+    <div class="ca-row">
+
+      <!-- ===== MAIN COLUMN ===== -->
+      <article class="ca-main">
+
+        <h1>Have you heard about this Singapore brand that's causing a stir in elite wellness circles? A CEO just reversed 58 years of biological aging in 90 days!</h1>
+        <p>Wealthy executives are flying to Singapore to access this restricted formula. Now available in North America for 72 hours only—before the next production batch (6+ months away).</p>
+
+        <div class="ca-byline">
+          <img src="{{ 'ca-02-author.png' | asset_url }}" alt="Dr. Charles Anderson" loading="lazy" width="56" height="56">
+          <div class="ca-byline-meta">
+            <strong>Dr. Charles Anderson</strong>
+            Longevity Research Institute &nbsp;|&nbsp; Thursday, January 29, 2026
+          </div>
+        </div>
+
+        <div class="ca-figure">
+          <img src="{{ 'ca-03-lab.png' | asset_url }}" alt="Singapore biotech lab" loading="lazy">
+        </div>
+
+        <p>A 67-year-old Fortune 500 CEO just documented a 58-year reversal in biological age markers—in just 90 days.</p>
+        <p>His transformation is going viral in elite biohacking circles. And the Singapore research facility behind it just broke their Asia-only exclusivity.</p>
+        <p>You have 72 hours to access what billionaires pay $50,000+ annually to experience.</p>
+        <p>Here's what I witnessed...</p>
+
+        <h2>The Phone Call That Changed Everything</h2>
+        <p>Three months ago, I received an urgent call from Frank Martinez, former CEO of a Fortune 100 manufacturing company.</p>
+        <div class="ca-pullquote">"Charles, my biological age test results just came back. My cardiologist ran them four times thinking his equipment was malfunctioning."</div>
+        <p>Frank's voice was different. Sharp. Energetic. Like the executive I'd known 20 years ago.</p>
+        <p>"What the hell happened?" I asked.</p>
+        <p>What Frank told me next would lead me to Singapore, an exclusive research facility, and a discovery that's rewriting what we thought was possible about human aging.</p>
+
+        <div class="ca-figure">
+          <img src="{{ 'ca-04-singapore.png' | asset_url }}" alt="Singapore skyline" loading="lazy">
+        </div>
+
+        <h2>Why Billionaires Secretly Fly to Singapore</h2>
+        <p>Frank's breakthrough started with a tip from a hedge fund colleague: wealthy Americans were quietly flying to Singapore to access a formula unavailable anywhere else.</p>
+        <p>"Tech billionaires, Fortune 500 CEOs, Hollywood A-listers—they were all making the same 18-hour flight," Frank explained. "When people worth $100 million+ repeatedly travel halfway around the world for something, you pay attention."</p>
+        <p>The formula came from <strong>Magnali</strong>, a Singapore-based biotech facility that developed what they call a "BioStack"—specialized bio-active compounds combined with clinically-dosed nutrients that target all nine biological aging processes simultaneously.</p>
+
+        <h3>Why Singapore?</h3>
+        <p>This isn't just about location. Singapore is the reason this breakthrough was possible.</p>
+        <p>While Western regulatory frameworks created years-long approval barriers for certain peptide compounds, Singapore's biomedical research regulations (consistently ranked #1 globally for innovation) allowed Magnali to combine these compounds into a consumer formula.</p>
+        <p>Singapore's biotech sector operates under pharmaceutical-grade standards while maintaining research flexibility that doesn't exist in traditional markets. It's why companies like Genentech, Novartis, and Roche established major R&amp;D facilities there.</p>
+        <p>The specialized peptides in Magnali's formula were originally developed for Olympic athletes.</p>
+        <p>They showed such remarkable recovery and regeneration effects that access became restricted in Western markets—not for safety reasons, but because they consistently outperformed conventional approaches, threatening established pharmaceutical interests.</p>
+        <p>Singapore's framework allowed Magnali to bypass bureaucratic barriers designed to protect incumbent industries rather than advance consumer health.</p>
+        <p>The result? A formula combining therapeutic compounds that would take 5-10 years of regulatory approval in the U.S.—available now because Singapore prioritizes innovation and safety simultaneously.</p>
+
+        <div class="ca-figure">
+          <img src="{{ 'ca-05-frank-before.png' | asset_url }}" alt="Frank before" loading="lazy">
+        </div>
+
+        <h2>Frank's "Impossible" 90-Day Transformation</h2>
+        <p>When Frank walked into my clinic three months ago, his comprehensive health assessment revealed a concerning reality:</p>
+        <ul>
+          <li>Chronological age: <strong>67</strong></li>
+          <li>Biological age: <strong>92</strong></li>
+        </ul>
+        <p>He was aging faster than his 89-year-old father.</p>
+        <p>His symptoms were devastating:</p>
+        <ul>
+          <li>Chronic joint discomfort disrupting sleep every night</li>
+          <li>Mental fog so severe his family discussed care planning</li>
+          <li>Energy levels 40% below normal for his age group</li>
+          <li>Taking 14 different supplements and medications just to function</li>
+          <li>Considered "excellent" for someone his biological age—which was the problem</li>
+        </ul>
+        <p>His adult children were researching assisted living facilities.</p>
+        <p>I documented his experience day by day. What happened next left his entire medical team speechless.</p>
+
+        <h3>Day 3: Neural Reset</h3>
+        <p>Frank called me, voice animated.</p>
+        <div class="ca-pullquote">"I slept eight straight hours for the first time in a decade. When I woke up, my mind felt... clear. Like someone removed a fog filter. Sarah said I look years younger just from proper rest."</div>
+        <p>His sleep architecture had changed. Deep sleep cycles doubled according to his tracker.</p>
+
+        <h3>Day 10: Physical Transformation</h3>
+        <div class="ca-pullquote">"The chronic knee discomfort that's plagued me for 15 years? Gone. Completely. I walked up three flights of stairs without stopping or holding the railing. My orthopedic specialist asked what intervention I'd done."</div>
+        <p>Frank's inflammation markers (C-reactive protein) had dropped 47%.</p>
+
+        <h3>Week 2: Cognitive Renaissance</h3>
+        <div class="ca-pullquote">"My mental sharpness returned with a vengeance. I completed financial analyses I'd been avoiding for months because they felt overwhelming. My daughter called and said, 'Dad, your voice sounds strong again—like when I was young.'"</div>
+        <p>Processing speed tests showed 23% improvement. Memory recall up 31%.</p>
+
+        <h3>Week 4: The Test Results That Changed Everything</h3>
+        <p>Frank returned to his cardiologist for follow-up biological age testing.</p>
+        <p>The results:</p>
+        <ul>
+          <li>Biological age: <strong>58</strong></li>
+        </ul>
+        <p>Down from 92. A 34-year reversal in 28 days.</p>
+        <p>His cardiologist, Dr. Patricia Wong (Stanford Medical, 30+ years experience), ran the test four more times.</p>
+        <div class="ca-pullquote">"In three decades of cardiology, I've never seen markers improve this dramatically. Not in athletes. Not in patients following extreme protocols. This level of systemic improvement in someone his age is unprecedented."</div>
+        <p>Dr. Wong's exact words to Frank: "Whatever you're doing, don't stop."</p>
+
+        <h3>Month 3: Complete Biological Revival</h3>
+        <p>Final comprehensive assessment.</p>
+        <ul>
+          <li>Biological age: <strong>34</strong></li>
+        </ul>
+        <p>Frank—chronologically 67—now had the biological markers of a 34-year-old.</p>
+        <p><strong>58 years of biological aging reversed in 90 days.</strong></p>
+        <p>The data was verified by three independent labs. All confirmed the same impossible result.</p>
+        <p>Frank's own words:</p>
+        <div class="ca-pullquote">"I expected gradual decline at 67. Instead, I have energy levels I haven't felt since my 30s. While my peers accept aging as inevitable, I'm outperforming executives 20 years younger. My business partners assumed I was doing expensive stem cell treatments. When I told them it was a $89 formula from Singapore, they didn't believe me."</div>
+
+        <div class="ca-figure">
+          <img src="{{ 'ca-06-frank-after.png' | asset_url }}" alt="Frank after" loading="lazy">
+        </div>
+
+        <h2>What Frank's Transformation Means For You</h2>
+        <p>Frank's experience isn't unique. It's <em>replicable</em>.</p>
+        <p>He wasn't genetically special. No experimental procedures. No $2 million custom protocols. No privileged access to cutting-edge medical technology.</p>
+        <p>He took one scoop daily of a formula that's now available to you.</p>
+        <p>The same biological mechanisms that created Frank's transformation exist in your body right now.</p>
+        <p>They're just dormant—waiting for the right cellular signals to reactivate.</p>
+        <p>Here's what that means:</p>
+
+        <div class="ca-symptom-list">
+          <h3>If you're 45+ and experiencing:</h3>
+          <ul>
+            <li>Energy that disappears by 2 PM (even after good sleep)</li>
+            <li>Joint discomfort limiting activities you used to enjoy</li>
+            <li>Mental fog affecting work performance and decision-making</li>
+            <li>Sleep that doesn't refresh, no matter how many hours</li>
+            <li>Recovery taking days instead of hours after physical activity</li>
+            <li>Looking in the mirror and not recognizing yourself</li>
+            <li>Watching peers seem to age slower while you accelerate</li>
+          </ul>
+        </div>
+
+        <p>Your body isn't broken. Your biology is waiting for the cellular support it needs to function the way it did decades ago.</p>
+        <p>Frank proved this is possible.</p>
+        <p>The question is: <strong>Will you be next?</strong></p>
+
+        <h2>The Scientific Breakthrough Behind Frank's Results</h2>
+        <p>Most supplements contain token amounts of ingredients—just enough to list on the label, not enough to create measurable results.</p>
+        <p><strong>Magnali is fundamentally different.</strong></p>
+        <p>Every ingredient is included at <em>therapeutic doses</em>—the amounts actually used in clinical research that produced documented outcomes.</p>
+
+        <div class="ca-ingredient">
+          <h3>1. Proprietary Bio-Active Peptide Complex</h3>
+          <p>The specialized compounds originally developed in Olympic training facilities for elite athlete recovery.</p>
+          <p><span class="ca-ing-label">What it does</span> Signal your cells to activate repair and regeneration processes that naturally decline after age 40. Think of them as the "foreman" on a construction site—they tell your body where to rebuild.</p>
+          <p><span class="ca-ing-label">Why Asia-exclusive</span> These peptides showed such remarkable results in clinical observations that regulatory frameworks in Western markets created access barriers. Not for safety concerns—for competitive reasons. They challenged conventional pharmaceutical approaches to aging.</p>
+          <p>Singapore's regulations allowed consumer access while maintaining pharmaceutical-grade production standards.</p>
+          <p><span class="ca-ing-label">Frank's experience</span> "Day 3, my cellular recovery felt different. Like my body remembered how to repair itself."</p>
+        </div>
+
+        <div class="ca-ingredient">
+          <h3>2. KSM-66® Ashwagandha (600mg)</h3>
+          <p>The gold-standard ashwagandha extract with the most clinical research backing.</p>
+          <p><span class="ca-ing-label">What it does</span> Reduces cortisol (your primary stress hormone) by up to 30% in clinical trials. High cortisol accelerates biological aging by 3-5 years. This compound turns off the stress-aging switch.</p>
+          <p><span class="ca-ing-label">Clinical backing</span> 24+ peer-reviewed studies showing improvements in stress markers, hormone balance, and cognitive function.</p>
+          <p><span class="ca-ing-label">Frank's experience</span> "Week 2, I realized I wasn't waking up with that crushing stress feeling anymore. My baseline stress just... lowered."</p>
+        </div>
+
+        <div class="ca-ingredient">
+          <h3>3. Lion's Mane Extract (500mg, 10:1 concentration)</h3>
+          <p>Medicinal mushroom shown to support neurogenesis (new brain cell growth).</p>
+          <p><span class="ca-ing-label">What it does</span> Stimulates Nerve Growth Factor (NGF) production—the compound that keeps your brain generating new neural pathways. NGF production drops 50% between ages 30-60, causing the mental fog you're experiencing.</p>
+          <p><span class="ca-ing-label">Clinical backing</span> Studies show 12-15% improvement in cognitive function scores within 16 weeks.</p>
+          <p><span class="ca-ing-label">Frank's experience</span> "My mental clarity came roaring back. I'm processing complex information faster than I did in my 40s."</p>
+        </div>
+
+        <div class="ca-ingredient">
+          <h3>4. Hydrolyzed Collagen Peptides (2,000mg)</h3>
+          <p>Not the cheap collagen powder in most products. These are bioactive peptides that actually absorb and signal cellular repair.</p>
+          <p><span class="ca-ing-label">What it does</span> Rebuilds joint cartilage, restores skin elasticity, and strengthens connective tissue from the cellular level. Clinical studies show 43% reduction in joint discomfort and 20% improvement in skin elasticity within 8 weeks.</p>
+          <p><span class="ca-ing-label">Why dose matters</span> Most products contain 50-100mg (ineffective). Magnali contains 2,000mg—the clinical dose that produced documented results in research.</p>
+          <p><span class="ca-ing-label">Frank's experience</span> "Day 10, my chronic knee pain just... disappeared. I thought I'd need surgery."</p>
+        </div>
+
+        <div class="ca-ingredient">
+          <h3>5. L-Theanine (200mg)</h3>
+          <p>Amino acid that crosses the blood-brain barrier to promote relaxed focus.</p>
+          <p><span class="ca-ing-label">What it does</span> Increases alpha brain wave activity (calm alertness) while reducing stress response. Works synergistically with Lion's Mane for enhanced cognitive performance without jitters or crashes.</p>
+          <p><span class="ca-ing-label">Clinical backing</span> Studies show improved attention, reduced stress hormones, and better sleep quality.</p>
+          <p><span class="ca-ing-label">Frank's experience</span> "I feel calm and focused simultaneously. That constant background anxiety? Gone."</p>
+        </div>
+
+        <div class="ca-ingredient">
+          <h3>6. Cellular Support Matrix</h3>
+          <p>Additional compounds including Rhodiola Rosea, Panax Ginseng, Hyaluronic Acid, Vitamin B-Complex, Vitamin C, Zinc, Magnesium—all at therapeutic doses.</p>
+          <p>Each ingredient supports specific biological aging processes. Together, they create a synergistic effect greater than the sum of individual compounds.</p>
+          <p>One scoop replaces 10+ supplements while delivering results no conventional protocol can match.</p>
+          <p>Most people spend $200-400 monthly on multiple supplements with minimal effects. Magnali consolidates everything into one pharmaceutical-grade formula with documented outcomes.</p>
+        </div>
+
+        <div class="ca-figure">
+          <img src="{{ 'ca-07-logo.gif' | asset_url }}" alt="Magnali logo" loading="lazy">
+        </div>
+
+        <h2>What Elite Wellness Experts Are Saying</h2>
+        <div class="ca-experts">
+          <blockquote>
+            "I've now documented over 800 similar transformations in executives and professionals who gained early access. The average improvement in biological age markers is 18 years. Frank's 58-year reversal is on the extreme end, but 15-25 year reversals are common. The consistency of results is what's remarkable."
+            <cite>— Dr. Michael Thompson, PhD<br>Longevity Research Institute, Clinical Trials Director</cite>
+          </blockquote>
+          <blockquote>
+            "Bryan Johnson spends $2 million annually on his longevity protocol. Frank spent $270 for 90 days and achieved superior measurable outcomes. This Singapore formula represents a paradigm shift—therapeutic results at consumer pricing. It's going to disrupt the entire wellness industry."
+            <cite>— Dr. Sarah Chen, MD<br>Preventive Medicine Specialist, Wellness Research Consortium</cite>
+          </blockquote>
+        </div>
+
+        <h3>Real Results from High-Performing Professionals</h3>
+        <div class="ca-experts">
+          <blockquote>
+            "My biological age dropped from 81 to 56 in three months. My private physician at Johns Hopkins called the improvements 'clinically significant'—his exact words. I was spending $4,000 monthly at a longevity clinic in Manhattan. Magnali delivered superior results for 95% less cost."
+            <cite>— William Chen (68), Former Goldman Sachs Managing Director</cite>
+          </blockquote>
+          <blockquote>
+            "As a judge, I'm skeptical by training. I reviewed Magnali's research documentation before trying it. The peer-reviewed studies are legitimate. My personal results: energy levels I haven't felt since my 30s, mental clarity that improved my legal consulting work, and joint comfort that allowed me to return to tennis after 8 years."
+            <cite>— Margaret Williams (59), Retired Federal Judge</cite>
+          </blockquote>
+          <blockquote>
+            "I've tried every biohacking protocol. Red light therapy. Hyperbaric oxygen. NAD+ IV infusions. Peptide injections at $1,200 per session. Magnali outperformed everything—for the cost of daily coffee. My business partners thought I was doing stem cell treatments until I showed them the Magnali pouch."
+            <cite>— Charles Morrison (62), Tech Entrepreneur (3 successful exits)</cite>
+          </blockquote>
+        </div>
+
+        <h2>Why This Breakthrough Isn't Widely Available</h2>
+        <p>The supplement industry doesn't want Magnali to succeed.</p>
+        <p>Here's why:</p>
+        <p>Most supplement companies profit from selling multiple products with minimal active ingredients. Their business model depends on you buying 10+ bottles monthly with barely noticeable effects.</p>
+        <p>A single formula that actually delivers comprehensive, measurable results threatens their entire revenue structure.</p>
+        <p><strong>Elite wellness clinics charge $30,000-$80,000 annually</strong> for protocols that produce inferior outcomes compared to Frank's 90-day transformation. Magnali makes their services obsolete.</p>
+        <p><strong>The specialized peptides in Magnali's formula were deliberately restricted</strong>—not for safety, but because they challenged pharmaceutical profit margins. When compounds show superior results to patented drugs, regulatory barriers mysteriously appear.</p>
+        <p>Singapore's research framework prioritizes innovation over protecting incumbent industries. That's the only reason Magnali exists.</p>
+        <p>The establishment is already responding:</p>
+        <ul>
+          <li>Major supplement companies are attempting to create knockoffs (but can't source the restricted peptides)</li>
+          <li>Wellness industry lobbying groups are working to create new regulatory barriers</li>
+          <li>Pharmaceutical consultants are pressuring Singapore facilities to limit consumer access</li>
+        </ul>
+        <p>This window won't stay open forever.</p>
+        <p>The forces that restricted these compounds in Western markets are working to close Singapore's regulatory flexibility. Magnali's production capacity is deliberately limited—they refuse to compromise manufacturing standards for scale.</p>
+
+        <h2>The Math That Changes Everything</h2>
+        <p>Let's talk about what elite longevity actually costs—and what you're about to access.</p>
+
+        <ul class="ca-cost-list">
+          <li><strong>Bryan Johnson's Protocol:</strong> $2,000,000 annually — Result: Attempting to reverse aging (ongoing, no completion)</li>
+          <li><strong>Premium Longevity Clinics:</strong> $50,000–$80,000 annually — Result: Modest improvements in biomarkers, requires continuous expensive treatments</li>
+          <li><strong>Standard IV Peptide Therapy:</strong> $800–$1,200 per session, 2–4 sessions monthly. Cost: $20,000–$58,000 annually — Result: Temporary benefits, requires ongoing expensive sessions</li>
+          <li><strong>High-End Supplement Protocols:</strong> $300–$600 monthly. Cost: $3,600–$7,200 annually — Result: Minimal measurable effects (underdosed ingredients)</li>
+        </ul>
+
+        <div class="ca-figure">
+          <img src="{{ 'ca-08-protocol-stack.png' | asset_url }}" alt="Magnali protocol stack" loading="lazy">
+        </div>
+
+        <div class="ca-offer">
+          <h3>Magnali's 90-Day Transformation Protocol</h3>
+          <p><strong>Through This Exclusive Offer:</strong></p>
+          <p style="font-size:20px;font-weight:700;margin:14px 0 6px;">Buy 2 Months, Get 1 Month FREE = 90-Day Supply</p>
+          <p class="ca-price-line">
+            <span class="ca-price-old">$419</span>
+            <span class="ca-price-new">$239.98</span>
+          </p>
+          <p>Regular price: $419 (3 pouches at $139 each)<br>
+          Your price today: <strong>$239.98</strong> (Buy 2 at $119.99 each, get 3rd free)<br>
+          You pay: <strong>$119/month</strong> for Frank's exact 90-day protocol</p>
+
+          <p style="margin-top:18px;"><strong>How Monthly Refills Work:</strong></p>
+          <p>After your initial order, you'll receive 2 pouches every 30 days at $239.98/month to maintain and optimize your results.</p>
+          <p>Why 2 pouches monthly? Each pouch is a 30-day supply. The 2-pouch monthly refill ensures you always have backup supply during potential shipping delays or production gaps—you never run out during your transformation.</p>
+
+          <p style="margin-top:14px;"><strong>You're in complete control:</strong></p>
+          <ul>
+            <li>Pause shipments anytime</li>
+            <li>Cancel with zero penalties</li>
+            <li>Share Magnali with your loved ones</li>
+            <li>Adjust delivery schedule</li>
+            <li>No hidden charges or commitments</li>
+          </ul>
+          <p>Most members (93%) continue beyond 90 days because the results compound—but it's completely your choice.</p>
+        </div>
+
+        <div class="ca-cta-inline">
+          <a href="{{ cta_url }}" class="ca-btn">Claim Buy 2 Get 1 Free Deal</a>
+        </div>
+
+        <h2>Here's Exactly What Happens When You Order Today</h2>
+
+        <div class="ca-phase">
+          <h4>📦 Immediate Shipment (24–48 hours)</h4>
+          <p>Your 90-day supply (3 pouches via Buy 2, Get 1 Free) ships within 24 hours via priority mail.</p>
+          <ul>
+            <li>Discreet packaging</li>
+            <li>Full ingredient disclosure included</li>
+            <li>Batch testing certificates included</li>
+            <li>Tracking number sent to your email</li>
+          </ul>
+          <p>30 days after your order: Your first monthly refill (2 pouches) ships automatically at $89.99/month. You'll receive email notification 3 days before each shipment. Cancel or pause anytime.</p>
+        </div>
+
+        <div class="ca-phase">
+          <h4>📅 Days 1–10: Foundation Phase</h4>
+          <p>Initial cellular support begins. Most people report:</p>
+          <ul>
+            <li>Better sleep quality (deeper, more restorative)</li>
+            <li>Morning energy without alarm struggle</li>
+            <li>Reduced afternoon crashes</li>
+            <li>Subtle but noticeable "fog lifting" sensation</li>
+          </ul>
+          <blockquote>"Day 5, I woke up before my alarm feeling actually refreshed. Hasn't happened in a decade." — Robert K., 59</blockquote>
+        </div>
+
+        <div class="ca-phase">
+          <h4>📅 Days 11–30: Activation Phase</h4>
+          <p>Physical improvements become obvious:</p>
+          <ul>
+            <li>Joint comfort dramatically improves</li>
+            <li>Mental fog lifts significantly</li>
+            <li>Recovery time after exertion cuts in half</li>
+            <li>People start commenting you "look rested"</li>
+          </ul>
+          <p>→ At day 30: Your first monthly refill (2 pouches) ships automatically. You'll have continuous supply for the remainder of your transformation.</p>
+          <blockquote>"Week 3, my chronic knee pain just... stopped. I thought I'd need surgery." — Daniel M., 61</blockquote>
+        </div>
+
+        <div class="ca-phase">
+          <h4>📅 Days 31–60: Transformation Phase</h4>
+          <p>Systemic changes accelerate:</p>
+          <ul>
+            <li>Energy sustained throughout full day (no 2 PM crash)</li>
+            <li>Physical activities that were exhausting become easy</li>
+            <li>Mental performance noticeably sharper</li>
+            <li>People ask "what are you doing differently?"</li>
+          </ul>
+          <p>→ At day 60: Your second monthly refill ships automatically. By now, most people are experiencing dramatic transformation and want to continue.</p>
+          <blockquote>"Month 2, my business partners assumed I was on some expensive treatment. I showed them the Magnali pouch." — William C., 68</blockquote>
+        </div>
+
+        <div class="ca-phase">
+          <h4>📅 Days 61–90: Optimization Phase</h4>
+          <p>Full transformation becomes undeniable:</p>
+          <ul>
+            <li>Biological age markers show measurable reversal</li>
+            <li>You look visibly younger (others notice without prompting)</li>
+            <li>Physical and mental performance exceeds expectations</li>
+            <li>You feel like a different person</li>
+          </ul>
+          <p>→ At day 90: Your third monthly refill ships. Most members continue because results compound—every additional month optimizes further. But continuing is your choice.</p>
+          <blockquote>"Day 90 testing: biological age dropped from 78 to 49. My doctor ran it three times." — Margaret W., 59</blockquote>
+        </div>
+
+        <div class="ca-phase">
+          <h4>📅 Month 4+ : Compounding Benefits Phase</h4>
+          <p>Members who continue beyond 90 days experience:</p>
+          <ul>
+            <li>Continued biological age improvements (not just maintenance)</li>
+            <li>Energy and vitality stabilizing at optimal levels</li>
+            <li>Physical performance exceeding initial expectations</li>
+            <li>Cognitive function continuing to sharpen</li>
+          </ul>
+          <p>→ Monthly refills continue every 30 days (2 pouches at $119.99/month) for as long as you choose. Cancel anytime with zero penalties.</p>
+        </div>
+
+        <h2>72-Hour Exclusive North American Access</h2>
+        <p>For the first time, Magnali is breaking their Asia-only exclusivity—but only for 72 hours.</p>
+        <p><strong>Why the strict time limit?</strong></p>
+        <p>Manufacturing therapeutic-grade peptides requires:</p>
+        <p>This limited batch was produced specifically for North American executives who've been requesting access.</p>
+        <ul>
+          <li>Specialized pharmaceutical facilities (only 3 globally meet Magnali's standards)</li>
+          <li>6–9 month production timelines for initial batches</li>
+          <li>Stringent quality control (every batch independently tested)</li>
+        </ul>
+        <p>This limited production run was created specifically for North American professionals who've been requesting access after Frank's story went viral in executive wellness circles.</p>
+
+        <div class="ca-callout">
+          <h3>Initial order batch (Buy 2, Get 1 Free):</h3>
+          <ul>
+            <li>Production capacity: <strong>2,847 units</strong> (3-pouch sets)</li>
+            <li>Current orders: <strong>2,194</strong></li>
+            <li>Remaining: <strong>653 units</strong></li>
+          </ul>
+          <p>Monthly refill production is separate and ongoing—once you're in the system with an initial order, your monthly refills (2 pouches every 30 days) are guaranteed. But you must secure your initial batch during this 72-hour window.</p>
+        </div>
+
+        <p>Once this initial batch depletes, the next new customer production run won't be available until Q4 2026 (6+ months away).</p>
+        <p>After Tuesday 11:59 PM Pacific, two things happen:</p>
+        <ul>
+          <li>New customer ordering closes until next production batch (Q4 2026)</li>
+          <li>Price increases to full Singapore pricing ($327 for initial 3-pouch order, no discount)</li>
+        </ul>
+        <p>The Buy 2, Get 1 Free offer ($239.98 for 90-day supply) is exclusive to this North American launch batch only.</p>
+        <p><strong>Current customers who order during this window receive:</strong></p>
+        <ul>
+          <li>Guaranteed monthly refills (never wait for production)</li>
+          <li>Locked-in $119.99/month refill price (protected from future increases)</li>
+          <li>Priority access to new formulations and upgrades</li>
+          <li>Membership in Frank's 847-professional network</li>
+        </ul>
+
+        <div class="ca-urgent">
+          <h3>⚠️ URGENT: Stock Depleting Rapidly</h3>
+          <p><strong>Today, 11:47 AM Update:</strong></p>
+          <p>High-performing professionals are discovering this faster than anticipated. Manufacturing reports show:</p>
+          <div class="ca-stock-bar"><span></span></div>
+          <div class="ca-stock-meta">
+            <span>73% of North American allocation claimed</span>
+            <span>653 units remaining</span>
+          </div>
+          <p style="margin-top:12px;">After Tuesday, you'll pay full Singapore pricing ($419) and join a 6-month waiting list.</p>
+        </div>
+
+        <div class="ca-cta-inline">
+          <a href="{{ cta_url }}" class="ca-btn">Claim Your Buy 2 Get 1 Free Deal</a>
+        </div>
+
+        <h2>The Decision That Determines Your Wellness Future</h2>
+        <p>You face a choice that will define your health trajectory:</p>
+        <p><strong>Path 1:</strong> Continue conventional approaches while cellular processes decline monthly. Watch competitors who discovered Magnali gain significant wellness advantages while you age traditionally.</p>
+        <p><strong>Path 2:</strong> Join the executives who chose cellular support over symptom management. Experience what it feels like to have the energy, clarity, and vitality you had decades ago.</p>
+        <p><strong>Frank's perspective:</strong></p>
+        <div class="ca-pullquote">"I expected gradual decline at 67. Instead, I feel more vital than at 45. While peers accept aging as inevitable, I'm outperforming executives 20 years younger."</div>
+        <p>The wellness advantages your competitors gain in the next 90 days will compound for decades.</p>
+        <p>Don't let the people you compete against achieve optimal wellness while you continue conventional approaches.</p>
+
+        <div class="ca-final-cta">
+          <img src="{{ 'ca-09-product-demo.gif' | asset_url }}" alt="Magnali product demo" loading="lazy">
+          <h3>Access Magnali's Singapore Formula Now</h3>
+          <p>72-hour exclusive ends Tuesday at 11:59 PM</p>
+          <p>The same formula that helped Frank feel like he reversed decades of aging is available now – but only until this production batch depletes.</p>
+          <a href="{{ cta_url }}" class="ca-btn">Get Magnali Fuel Today</a>
+        </div>
+
+        <div class="ca-faq">
+          <h2>Frequently Asked Questions</h2>
+          <details><summary>Is Magnali Fuel safe to take?</summary><p>Yes, Magnali Fuel is made with all-natural ingredients that are clinically tested and safe for daily use. We use no artificial additives or harmful chemicals. However, as with any supplement, we recommend you consult your doctor if you have existing health conditions or are on medication.</p></details>
+          <details><summary>How long will it take to see results?</summary><p>While results can vary, most users report noticeable improvements within 10–14 days. They typically experience increased energy, mental clarity, and joint mobility. For skin and hair benefits, it may take a few weeks of consistent use to see visible changes.</p></details>
+          <details><summary>Does Magnali have any side effects?</summary><p>No, Magnali uses only natural, clinically-tested ingredients, with no harmful side effects.</p></details>
+          <details><summary>Can I take Magnali Fuel with other medications?</summary><p>Magnali Fuel is all-natural and generally safe to take alongside other medications. However, if you are on any prescription medication, we recommend you consult your healthcare provider first. This ensures there are no interactions with existing treatments.</p></details>
+          <details><summary>How do I use Magnali Fuel?</summary><p>It's simple! Just mix one scoop of Magnali Fuel with water, juice, or a smoothie each day. That's all it takes to start experiencing lasting anti-aging benefits. No pills, no complicated routines—just one scoop per day!</p></details>
+          <details><summary>Is Magnali Fuel suitable for vegetarians?</summary><p>Yes! Magnali Fuel is 100% vegetarian and made with natural, plant-based ingredients. It's suitable for most diets, but if you have any dietary restrictions, please check the ingredient list before use.</p></details>
+          <details><summary>Will Magnali Fuel help with weight loss?</summary><p>While Magnali Fuel isn't specifically designed for weight loss, its hormone-balancing and energy-boosting effects can help you feel more active and motivated to maintain a healthy lifestyle. Combining it with a balanced diet and regular exercise can naturally support your weight management goals.</p></details>
+          <details><summary>How is Magnali Fuel different from other supplements?</summary><p>Unlike most supplements that focus on just one area of health, Magnali Fuel is a comprehensive, all-in-one formula. It's designed to target multiple markers of aging simultaneously, from cellular energy to joint health and cognitive function. Plus, it's backed by rigorous clinical testing.</p></details>
+          <details><summary>Can I get a refund if I don't like the product?</summary><p>Yes, we offer a 60-day money-back guarantee. If you're not satisfied with Magnali Fuel for any reason, simply contact our customer service team, and we'll give you a full refund—no questions asked.</p></details>
+          <details><summary>How does the subscription work?</summary><p>Our subscription is the best way to ensure you never run out of Magnali Fuel. You'll receive a fresh supply every 30 days at a discounted rate. You can pause, skip, or cancel your subscription at any time through your account portal.</p></details>
+        </div>
+
+        <p class="ca-disclaimer">
+          Download all clinical evidence <a href="{{ clinical_pdf }}" target="_blank" rel="noopener">here</a>.<br><br>
+          These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Testimonials reflect individual experiences and are not typical results.
+        </p>
+
+        <!-- Bottom CTA card (mobile only — hidden on desktop because the sticky covers it) -->
+        <div class="ca-bottom-cta">
+          <div class="ca-cta-card">
+            <div class="ca-cta-logo">MAGNALI</div>
+            <div class="ca-cta-pill">2026 Reboot | Free Gifts In First Order</div>
+            <img class="ca-cta-img" src="{{ sticky_img }}" alt="Magnali Fuel — Longevity Breakthrough Award 2025" loading="lazy">
+            <p class="ca-cta-line">Secure Your Singapore Formula Before Wealthy Americans Buy Out the Stock</p>
+            <a class="ca-cta-btn" href="{{ cta_url }}">Check Availability</a>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- ===== STICKY ASIDE (DESKTOP) ===== -->
+      <aside class="ca-aside">
+        <div class="ca-cta-card">
+          <div class="ca-cta-logo">MAGNALI</div>
+          <div class="ca-cta-pill">2026 Reboot | Free Gifts In First Order</div>
+          <img class="ca-cta-img" src="{{ sticky_img }}" alt="Magnali Fuel — Longevity Breakthrough Award 2025" loading="lazy">
+          <p class="ca-cta-line">Secure Your Singapore Formula Before Wealthy Americans Buy Out the Stock</p>
+          <a class="ca-cta-btn" href="{{ cta_url }}">Check Availability</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CA Advertorial",
+  "settings": [],
+  "presets": [
+    { "name": "Charles Anderson Advertorial" }
+  ]
+}
+{% endschema %}

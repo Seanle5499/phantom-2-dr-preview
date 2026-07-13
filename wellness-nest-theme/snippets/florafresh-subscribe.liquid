@@ -1,0 +1,907 @@
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<style>
+/* ── Design Tokens ──────────────────────────────────────────────────── */
+.im8-variant-selects-wrapper {
+    --im8-green: #7B2D3F;
+    --im8-green-bright: #C94B6E;
+    --im8-lime: #F4C4C7;
+    --im8-lime-hover: #ebb0b4;
+    --im8-gold-start: #D4A84B;
+    --im8-gold-end: #C49A3F;
+    --im8-gold-text: #3D1F00;
+    --im8-badge-green-start: #E05C7A;
+    --im8-badge-green-end: #C94B6E;
+    --im8-text-primary: var(--im8-green);
+    --im8-text-secondary: rgba(123, 45, 63, 0.6);
+    --im8-text-muted: rgba(123, 45, 63, 0.35);
+    --im8-text-billing: rgb(123 45 63 / 60%);
+    --im8-text-price-muted: rgb(123 45 63 / 45%);
+    --im8-border-warm: #e1cbb9;
+    --im8-border-active: var(--im8-green);
+    --im8-border-hover: rgba(123, 45, 63, 0.25);
+    --im8-border-light: rgba(123, 45, 63, 0.12);
+    --im8-border-divider: rgba(123, 45, 63, 0.05);
+    --im8-bg-white: #fff;
+    --im8-bg-option-hover: rgba(123, 45, 63, 0.035);
+    --im8-bg-option-selected: rgba(201, 75, 110, 0.06);
+    --im8-bg-card-selected-start: rgb(254 234 237 / 80%);
+    --im8-bg-card-selected-end: rgb(255 240 243 / 60%);
+    --im8-shadow-sm: 0 2px 8px rgba(123, 45, 63, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --im8-shadow-md: 0 4px 16px rgba(123, 45, 63, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+    --im8-shadow-card-selected: 0 4px 12px 0 rgb(201 75 110 / 15%);
+    --im8-shadow-badge: 0 2px 6px -2px #7B2D3F40;
+    --im8-shadow-badge-best: 0 3px 10px rgba(201, 75, 110, 0.25);
+    --im8-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --im8-radius-lg: 14px;
+    --im8-radius-card: 10px;
+    --im8-radius-pill: 999px;
+    --im8-radius-full: 9999px;
+    --im8-font: "PPNeueMontreal", -apple-system, BlinkMacSystemFont, sans-serif;
+    --im8-font-alt: "PPNeueMontreal", "Montserrat", sans-serif;
+    font-family: var(--im8-font) !important;
+    color: var(--im8-text-primary) !important;
+    width: 100% !important;
+}
+
+.im8-variant-selects-wrapper *,
+.im8-variant-selects-wrapper *::before,
+.im8-variant-selects-wrapper *::after { box-sizing: border-box !important; }
+
+.im8-variant-selects-wrapper fieldset {
+    border: none !important;
+    margin: 0 0 24px !important;
+    padding: 0 !important;
+}
+
+.im8-variant-selects-wrapper .vs-label {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: var(--im8-text-primary) !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+}
+
+/* ── Plan Cards ─────────────────────────────────────────────────────── */
+.plan-cards-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+.plan-card {
+    position: relative !important;
+    border-radius: var(--im8-radius-card) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 14px 16px !important;
+    cursor: pointer !important;
+    border: 1px solid #d1d1d1 !important;
+    overflow: visible !important;
+    transition: background 0.18s, box-shadow 0.18s !important;
+}
+
+.plan-card.selected {
+    background: linear-gradient(120deg, var(--im8-bg-card-selected-start) 0%, var(--im8-bg-card-selected-end) 100%) !important;
+    box-shadow: var(--im8-shadow-card-selected) !important;
+    border-color: #F09CAA !important;
+    opacity: 0.85 !important;
+}
+
+.plan-card.selected .plan-card__badge-offer,
+.plan-card.selected .plan-card__badge-best {
+    box-shadow: var(--im8-shadow-badge) !important;
+    filter: saturate(1.15) brightness(1.05) !important;
+}
+
+.plan-card__badges {
+    position: absolute !important;
+    top: -5px !important;
+    left: 14px !important;
+    right: 14px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    pointer-events: none !important;
+}
+
+.plan-card__badge-offer {
+    font-family: var(--im8-font-alt) !important;
+    background: linear-gradient(135deg, var(--im8-gold-start) 0%, var(--im8-gold-end) 100%) !important;
+    color: var(--im8-gold-text) !important;
+    font-size: 9.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    padding: 3px 10px 4px !important;
+    border-radius: var(--im8-radius-pill) !important;
+    line-height: 1 !important;
+}
+
+.plan-card__badge-best {
+    font-family: var(--im8-font-alt) !important;
+    background: linear-gradient(135deg, var(--im8-badge-green-start) 0%, var(--im8-badge-green-end) 100%) !important;
+    color: var(--im8-bg-white) !important;
+    box-shadow: var(--im8-shadow-badge-best) !important;
+    font-size: 9.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    padding: 3px 10px 4px !important;
+    border-radius: var(--im8-radius-pill) !important;
+    line-height: 1 !important;
+}
+
+.plan-card__header {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+}
+
+.plan-card__left {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+}
+
+.plan-card__radio-wrap {
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.plan-card__radio-wrap input[type="radio"] {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.plan-card__radio-icon {
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
+    cursor: pointer !important;
+    background: url("https://cdn.shopify.com/s/files/1/0810/1563/6283/files/3_d2a52424-41fe-4e10-89d0-5321c7cd658e.svg?v=1773037208") center / cover no-repeat !important;
+}
+
+.plan-card__radio-wrap input[type="radio"]:checked + .plan-card__radio-icon {
+    background: url("https://cdn.shopify.com/s/files/1/0810/1563/6283/files/2_91d2ab22-3dd2-465c-867c-b4dc68af36c3.svg?v=1773037208g") center / cover no-repeat !important;
+}
+
+.plan-card__title {
+    font-family: var(--im8-font) !important;
+    color: var(--im8-green) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+}
+
+.plan-card__save-label {
+    color: var(--im8-green) !important;
+    font-weight: 700 !important;
+    margin-left: 4px !important;
+}
+
+.plan-card.selected .plan-card__save-label { color: var(--im8-green-bright) !important; }
+
+.plan-card__billing {
+    font-family: var(--im8-font) !important;
+    font-size: 11px !important;
+    color: var(--im8-text-billing) !important;
+    margin-top: 2px !important;
+    font-weight: 400 !important;
+}
+
+.plan-card__right {
+    text-align: right !important;
+    flex-shrink: 0 !important;
+    margin-left: 12px !important;
+}
+
+.plan-card__price {
+    font-family: var(--im8-font) !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: var(--im8-green) !important;
+    white-space: nowrap !important;
+}
+
+.plan-card__price-mo {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    color: var(--im8-text-price-muted) !important;
+}
+
+.plan-card__price-strike {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: var(--im8-text-price-muted) !important;
+    text-decoration: line-through !important;
+    margin: 0 2px !important;
+}
+
+.plan-card__price-day {
+    font-family: var(--im8-font) !important;
+    font-size: 11px !important;
+    color: var(--im8-text-price-muted) !important;
+    margin-top: 2px !important;
+}
+
+.plan-card__divider {
+    border: none !important;
+    border-top: 1px solid var(--im8-border-light) !important;
+    margin: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    transition:
+        margin 0.35s var(--im8-ease-out),
+        height 0.35s var(--im8-ease-out),
+        opacity 0.35s var(--im8-ease-out) !important;
+}
+
+.plan-card.selected .plan-card__divider {
+    margin: 11px 0 10px !important;
+    height: 1px !important;
+    opacity: 1 !important;
+}
+
+.plan-card__features {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding-top: 0 !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    transition:
+        max-height 0.45s var(--im8-ease-out),
+        opacity 0.35s ease-in-out,
+        padding 0.35s ease-in-out !important;
+}
+
+.plan-card.selected .plan-card__features {
+    max-height: 350px !important;
+    padding-top: 2px !important;
+    opacity: 1 !important;
+}
+
+.plan-card__feature {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    font-family: var(--im8-font) !important;
+    font-size: 12.5px !important;
+    color: var(--im8-green) !important;
+    line-height: 1.45 !important;
+}
+
+.plan-card__feature-icon {
+    font-size: 14px !important;
+    flex-shrink: 0 !important;
+    line-height: 1.35 !important;
+}
+
+/* ── One Time Purchase ──────────────────────────────────────────────── */
+.one-time-purchase-standalone {
+    text-align: center !important;
+    margin: 0 !important;
+    padding-top: 20px !important;
+}
+
+.one-time-purchase-link {
+    display: inline-block !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--im8-green) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    cursor: pointer !important;
+    transition: opacity 0.2s ease !important;
+}
+
+.one-time-purchase-link:hover { opacity: 0.7 !important; }
+
+.one-time-purchase-link .otp-price {
+    font-weight: 500 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    display: inline-block !important;
+}
+
+/* ── Delivery Estimate ─────────────────────────────────────────────── */
+.im8-delivery-estimate {
+    text-align: center !important;
+    font-family: var(--im8-font) !important;
+    font-size: 13.5px !important;
+    color: #4a4a4a !important;
+    margin-bottom: 10px !important;
+    margin-top: 20px !important;
+    letter-spacing: 0 !important;
+}
+
+.im8-delivery-date {
+    background: #F4C4C7 !important;
+    color: #6B2030 !important;
+    font-weight: 700 !important;
+    padding: 1px 6px !important;
+    border-radius: 4px !important;
+    display: inline !important;
+}
+
+/* ── Add to Cart ───────────────────────────────────────────────────── */
+.im8-add-to-cart-container {
+    margin-top: 0 !important;
+    width: 100% !important;
+}
+
+.im8-add-to-cart-btn {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 24px !important;
+    color: #6B2030 !important;
+    border: none !important;
+    font-family: var(--im8-font) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    transition:
+        box-shadow 0.35s var(--im8-ease-out),
+        background 0.35s var(--im8-ease-out) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: var(--im8-lime) !important;
+    border-radius: var(--im8-radius-full) !important;
+    letter-spacing: 0.06em !important;
+    font-size: 15px !important;
+    min-height: 54px !important;
+}
+
+.im8-add-to-cart-btn::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent) !important;
+    transition: left 0.6s ease !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+.im8-add-to-cart-btn:hover { background: var(--im8-lime-hover) !important; }
+.im8-add-to-cart-btn:hover::before { left: 100% !important; }
+
+.im8-add-to-cart-btn.is-loading {
+    opacity: 0.7 !important;
+    pointer-events: none !important;
+}
+</style>
+
+<div class="im8-variant-selects-wrapper">
+  <fieldset>
+    <span class="vs-label" data-label-subscribe></span>
+    <section class="plan-cards-wrapper" data-plan-cards></section>
+    <div class="one-time-purchase-standalone" data-otp-container style="display:none">
+      <a href="#" class="one-time-purchase-link" data-otp-link>
+        <span data-otp-label></span>
+        <span class="otp-price" data-otp-price></span>
+      </a>
+    </div>
+    <div class="im8-delivery-estimate" data-delivery-estimate></div>
+    <div class="im8-add-to-cart-container">
+      <button type="button" class="im8-add-to-cart-btn" data-add-to-cart-btn></button>
+    </div>
+  </fieldset>
+</div>
+
+<script>
+(function () {
+
+var PRODUCT_HANDLE       = {{ product_handle | default: product.handle | json }};
+var LANG                 = {{ lang | default: 'en' | json }};
+var ALLOWED_PLAN_INDICES = [0,1];
+
+var TEXT_EN = {
+  label_subscribe  : "2. Subscribe & Save:",
+  label_otp        : "One Time Purchase",
+  badge_offer      : "Launch Offer",
+  badge_best       : "Best Value",
+  day_supply       : "{days}-Day Supply",
+  save_label       : "(Save {pct}%)",
+  billed_every     : "Billed {price} every {weeks} weeks",
+  billed_weeks     : "Billed every {weeks} weeks",
+  per_mo           : "/mo",
+  per_day          : "{price} / DAY",
+  delivery_pre     : "Delivered on ",
+  delivery_post    : " with Express Shipping",
+  feat_3_program   : "Exclusive Access to {days} Day Transformation Program",
+  feat_3_savings   : "Maximum savings – lowest price per serving",
+  feat_3_guarantee : "{days}-Day Money-Back Guarantee",
+  feat_3_share     : "Share with family and friends",
+  feat_3_shipping  : "Free Shipping to US, UK, CA, and most of EU and APAC",
+  feat_3_cancel    : "Cancel or pause anytime",
+  feat_2_savings   : "Great savings per serving",
+  feat_2_shipping  : "Free Shipping to US, UK, CA, and most of EU and APAC",
+  feat_2_cancel    : "Cancel or pause anytime",
+  feat_1_savings   : "Save {pct}% vs one-time purchase",
+  feat_1_shipping  : "Free Priority Shipping",
+  feat_1_cancel    : "Cancel or pause anytime",
+  btn_add_cart     : "TRY RISK FREE",
+  btn_add_cart_plain: "TRY RISK FREE",
+  btn_loading      : "ADDING...",
+  alert_select_plan: "Please select a plan",
+  alert_cart_error : "Error adding to cart. Please try again.",
+};
+
+var TEXT_IT = {
+  label_subscribe  : "2. Abbonati e Risparmia:",
+  label_otp        : "Acquisto singolo",
+  badge_offer      : "Offerta Lancio",
+  badge_best       : "Miglior Valore",
+  day_supply       : "Fornitura di {days} giorni",
+  save_label       : "(Risparmia {pct}%)",
+  billed_every     : "Addebito di {price} ogni {weeks} settimane",
+  billed_weeks     : "Addebito ogni {weeks} settimane",
+  per_mo           : "/mese",
+  per_day          : "{price} / GIORNO",
+  delivery_pre     : "Consegna prevista il ",
+  delivery_post    : " con spedizione espressa",
+  feat_3_program   : "Accesso esclusivo al programma di trasformazione di {days} giorni",
+  feat_3_savings   : "Massimo risparmio – prezzo più basso per dose",
+  feat_3_guarantee : "Garanzia soddisfatti o rimborsati di {days} giorni",
+  feat_3_share     : "Condividi con familiari e amici",
+  feat_3_shipping  : "Spedizione gratuita in Italia e gran parte di UE e APAC",
+  feat_3_cancel    : "Annulla o sospendi quando vuoi",
+  feat_2_savings   : "Ottimo risparmio per dose",
+  feat_2_shipping  : "Spedizione gratuita in Italia e gran parte di UE e APAC",
+  feat_2_cancel    : "Annulla o sospendi quando vuoi",
+  feat_1_savings   : "Risparmia {pct}% rispetto all'acquisto singolo",
+  feat_1_shipping  : "Spedizione prioritaria gratuita",
+  feat_1_cancel    : "Annulla o sospendi quando vuoi",
+  btn_add_cart     : "PROVA SENZA RISCHI",
+  btn_add_cart_plain: "PROVA SENZA RISCHI",
+  btn_loading      : "AGGIUNTA...",
+  alert_select_plan: "Seleziona un piano",
+  alert_cart_error : "Errore durante l'aggiunta al carrello. Riprova.",
+};
+
+var TEXT = (LANG === 'it') ? TEXT_IT : TEXT_EN;
+
+var ZERO_DECIMAL_CURRENCIES = [
+  'BIF','CLP','DJF','GNF','JPY','KMF','KRW','MGA',
+  'PYG','RWF','UGX','VND','VUV','XAF','XOF','XPF'
+];
+
+var _allVariants = [];
+var _allGroups   = [];
+var _activeVariant = null;
+
+function t(key, vars) {
+  var str = TEXT[key] || key;
+  if (vars) {
+    Object.keys(vars).forEach(function(k) {
+      str = str.replace(new RegExp('\\{' + k + '\\}', 'g'), vars[k]);
+    });
+  }
+  return str;
+}
+
+function activeCurrency() {
+  return (window.Shopify && window.Shopify.currency && window.Shopify.currency.active) || 'USD';
+}
+
+function isZeroDecimal(c) {
+  return ZERO_DECIMAL_CURRENCIES.indexOf(c.toUpperCase()) !== -1;
+}
+
+function fmt(shopifyCents) {
+  var currency = activeCurrency();
+  var amount   = shopifyCents / 100;
+  var decimals = isZeroDecimal(currency) ? 0 : 2;
+  try {
+    return new Intl.NumberFormat(navigator.language || 'en-US', {
+      style: 'currency', currency: currency,
+      minimumFractionDigits: decimals, maximumFractionDigits: decimals
+    }).format(amount);
+  } catch (e) { return amount.toFixed(decimals) + ' ' + currency; }
+}
+
+function fmtShort(shopifyCents) {
+  var currency = activeCurrency();
+  var amount   = shopifyCents / 100;
+  try {
+    return new Intl.NumberFormat(navigator.language || 'en-US', {
+      style: 'currency', currency: currency,
+      minimumFractionDigits: 0, maximumFractionDigits: 0
+    }).format(amount);
+  } catch (e) { return amount.toFixed(0) + ' ' + currency; }
+}
+
+function fmtPerDay(shopifyCents, days) {
+  if (!days) return "";
+  return fmt(shopifyCents / days);
+}
+
+function esc(s) {
+  var d = document.createElement("div");
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function getActiveVariant() {
+  return _activeVariant || _allVariants[0];
+}
+
+function getActiveVariantId() {
+  var v = getActiveVariant();
+  return v ? v.id : null;
+}
+
+function getDeliveryDate() {
+  var d = new Date();
+  d.setDate(d.getDate() + 5);
+  if (LANG === 'it') {
+    var daysIt   = ['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+    var monthsIt = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+    return daysIt[d.getDay()] + ', ' + d.getDate() + ' ' + monthsIt[d.getMonth()];
+  }
+  var days   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return days[d.getDay()] + ', ' + d.getDate() + ' ' + months[d.getMonth()];
+}
+
+function injectStaticText() {
+  var map = {
+    "[data-label-subscribe]" : TEXT.label_subscribe,
+    "[data-otp-label]"       : TEXT.label_otp,
+    "[data-add-to-cart-btn]" : TEXT.btn_add_cart_plain,
+  };
+  Object.keys(map).forEach(function(sel) {
+    var el = document.querySelector(sel);
+    if (el) el.textContent = map[sel];
+  });
+
+  var deliveryEl = document.querySelector('[data-delivery-estimate]');
+  if (deliveryEl) {
+    deliveryEl.innerHTML =
+      esc(TEXT.delivery_pre) + '<span class="im8-delivery-date">' + getDeliveryDate() + '</span>' + esc(TEXT.delivery_post);
+  }
+}
+
+fetch("/products/" + PRODUCT_HANDLE + ".js")
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    _allVariants  = data.variants;
+    _allGroups    = data.selling_plan_groups || [];
+    _activeVariant = _allVariants[0] || null;
+    injectStaticText();
+    buildPlans();
+    buildOTP();
+    initAddToCartBtn();
+  })
+  .catch(function(e) { console.error("[SubscribeWidget] fetch failed:", e); });
+
+document.addEventListener('variant:change', function(e) {
+  if (e.detail && e.detail.variant) {
+    _activeVariant = e.detail.variant;
+    buildPlans();
+    updateOTPPrice();
+  }
+});
+
+function buildPlans() {
+  var c = document.querySelector("[data-plan-cards]");
+  if (!c || !_allGroups.length) return;
+
+  var selectedCard = c.querySelector(".plan-card.selected");
+  var prevDays     = selectedCard ? selectedCard.dataset.planDays : null;
+  c.innerHTML      = "";
+
+  var v0    = getActiveVariant();
+  var allocs = v0 ? (v0.selling_plan_allocations || []) : [];
+
+  var plans = _allGroups
+    .map(function(g) {
+      var sp    = g.selling_plans[0];
+      var alloc = null;
+      for (var i = 0; i < allocs.length; i++) {
+        if (allocs[i].selling_plan_id === sp.id) { alloc = allocs[i]; break; }
+      }
+      var qty = 1;
+      g.options.forEach(function(o) {
+        if (o.name === "Product Quantity") qty = parseInt(o.values[0]) || 1;
+      });
+      var save = sp.price_adjustments && sp.price_adjustments[0]
+        ? sp.price_adjustments[0].value : 0;
+      return {
+        originalIndex: _allGroups.indexOf(g),
+        plan: sp, alloc: alloc, qty: qty, save: save,
+        price  : alloc ? alloc.price           : (v0 ? v0.price : 0),
+        compare: alloc ? alloc.compare_at_price : (v0 ? v0.price : 0),
+        spId   : sp.id,
+      };
+    })
+    .filter(function(p) {
+      return !ALLOWED_PLAN_INDICES.length ||
+             ALLOWED_PLAN_INDICES.indexOf(p.originalIndex) !== -1;
+    });
+
+  plans.sort(function(a, b) { return b.qty - a.qty; });
+
+  var bestIdx = 0, maxS = 0;
+  plans.forEach(function(p, i) { if (p.save > maxS) { maxS = p.save; bestIdx = i; } });
+
+  plans.forEach(function(p, idx) {
+    var best  = idx === bestIdx;
+    var days  = p.qty * 30;
+    var weeks = p.qty * 4;
+    var def   = prevDays ? String(days) === String(prevDays) : idx === 0;
+
+    var billing = t('billed_weeks', { weeks: weeks });
+    var savePct = Math.round(p.save);
+
+    var saveLbl = savePct > 0
+      ? ' <span class="plan-card__save-label">' + t('save_label', { pct: savePct }) + '</span>'
+      : '';
+
+    var badges = best
+      ? '<div class="plan-card__badges">' +
+        '<span class="plan-card__badge-offer">' + t('badge_offer') + '</span>' +
+        '<span class="plan-card__badge-best">'  + t('badge_best')  + '</span>' +
+        '</div>'
+      : '';
+
+    var priceHtml = fmt(p.price);
+    if (p.compare && p.compare > p.price)
+      priceHtml += ' <span class="plan-card__price-strike">' + fmt(p.compare) + '</span>';
+    priceHtml += '<span class="plan-card__price-mo">' + esc(TEXT.per_mo) + '</span>';
+
+    var feats;
+    if (p.qty >= 3) {
+      feats = [
+        { i: "🎯", k: 'feat_3_program',   v: { days: days } },
+        { i: "💰", k: 'feat_3_savings'                      },
+        { i: "🔵", k: 'feat_3_guarantee', v: { days: days } },
+        { i: "🧡", k: 'feat_3_share'                        },
+        { i: "🚚", k: 'feat_3_shipping'                     },
+        { i: "📋", k: 'feat_3_cancel'                       },
+      ];
+    } else if (p.qty >= 2) {
+      feats = [
+        { i: "💰", k: 'feat_2_savings'  },
+        { i: "🚚", k: 'feat_2_shipping' },
+        { i: "📋", k: 'feat_2_cancel'   },
+      ];
+    } else {
+      feats = [
+        { i: "💰", k: 'feat_1_savings',  v: { pct: savePct } },
+        { i: "🚚", k: 'feat_1_shipping'                      },
+        { i: "📋", k: 'feat_1_cancel'                        },
+      ];
+    }
+
+    var fHtml = '<div class="plan-card__features">';
+    feats.forEach(function(f) {
+      fHtml +=
+        '<div class="plan-card__feature">' +
+        '<span class="plan-card__feature-icon">' + f.i + '</span>' +
+        '<span>' + esc(t(f.k, f.v || {})) + '</span>' +
+        '</div>';
+    });
+    fHtml += '</div>';
+
+    c.insertAdjacentHTML('beforeend',
+      '<div class="plan-card' + (def ? ' selected' : '') +
+      '" data-plan-days="'       + days   +
+      '" data-selling-plan-id="' + p.spId +
+      '" data-plan-qty="'        + p.qty  +
+      '" data-monthly-price="'   + p.price + '">' +
+
+      badges +
+
+      '<div class="plan-card__header"' + (best ? ' style="padding-top:4px"' : '') + '>' +
+        '<div class="plan-card__left">' +
+          '<div class="plan-card__radio-wrap">' +
+            '<input type="radio" name="im8-plan" ' + (def ? 'checked ' : '') + '/>' +
+            '<span class="plan-card__radio-icon"></span>' +
+          '</div>' +
+          '<div>' +
+            '<div class="plan-card__title">' +
+              esc(t('day_supply', { days: days })) + saveLbl +
+            '</div>' +
+            '<div class="plan-card__billing">' + billing + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="plan-card__right">' +
+          '<div class="plan-card__price">' + priceHtml + '</div>' +
+        '</div>' +
+      '</div>' +
+
+      '<hr class="plan-card__divider"/>' +
+      fHtml +
+      '</div>'
+    );
+  });
+
+  var cards = c.querySelectorAll('.plan-card');
+  cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      cards.forEach(function(c2) {
+        c2.classList.remove('selected');
+        var r = c2.querySelector('input[type="radio"]');
+        if (r) r.checked = false;
+      });
+      card.classList.add('selected');
+      var r = card.querySelector('input[type="radio"]');
+      if (r) r.checked = true;
+      updateAddToCartBtnPrice();
+    });
+  });
+
+  updateAddToCartBtnPrice();
+}
+
+function buildOTP() {
+  var ctr  = document.querySelector("[data-otp-container]");
+  var link = document.querySelector("[data-otp-link]");
+  if (!ctr || !_allVariants.length) return;
+
+  ctr.style.display = "";
+  updateOTPPrice();
+
+  if (link && !link._otpBound) {
+    link._otpBound = true;
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var vid = getActiveVariantId();
+
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body   : JSON.stringify({
+          items       : [{ id: parseInt(vid), quantity: 1 }],
+          sections    : ['cart-drawer', 'cart-icon-bubble'],
+          sections_url: window.location.pathname,
+        }),
+      })
+      .then(function(res) {
+        if (!res.ok) {
+          return res.json().then(function(e) { throw new Error(e.description || 'Error'); });
+        }
+        return res.json();
+      })
+      .then(function(response) { openCartDrawer(response); })
+      .catch(function(err) {
+        console.error("[OTP] failed:", err);
+        window.location.href = "/cart/add?id=" + vid + "&quantity=1";
+      });
+    });
+  }
+}
+
+function updateOTPPrice() {
+  var priceEl = document.querySelector("[data-otp-price]");
+  if (!priceEl || !_allVariants.length) return;
+  var v = getActiveVariant();
+  priceEl.textContent = v ? fmt(v.price) : "";
+}
+
+function openCartDrawer(addResponse) {
+  try {
+    var drawerEl = document.querySelector('cart-drawer');
+    if (!drawerEl) return;
+
+    // Update cart drawer inner HTML
+    var drawerHtml = addResponse.sections && addResponse.sections['cart-drawer'];
+    if (drawerHtml) {
+      var tmp = document.createElement('div');
+      tmp.innerHTML = drawerHtml;
+      var newInner  = tmp.querySelector('.drawer__inner');
+      var currInner = drawerEl.querySelector('.drawer__inner');
+      if (newInner && currInner) {
+        currInner.innerHTML = newInner.innerHTML;
+      }
+      // Sync is-empty class: native theme removes it when cart has items
+      var newDrawer = tmp.querySelector('cart-drawer');
+      if (newDrawer) {
+        if (newDrawer.classList.contains('is-empty')) {
+          drawerEl.classList.add('is-empty');
+        } else {
+          drawerEl.classList.remove('is-empty');
+        }
+      } else {
+        drawerEl.classList.remove('is-empty');
+      }
+    }
+
+    // Update cart icon bubble (count)
+    var bubbleHtml = addResponse.sections && addResponse.sections['cart-icon-bubble'];
+    if (bubbleHtml) {
+      var bTmp = document.createElement('div');
+      bTmp.innerHTML = bubbleHtml;
+      var bubbleEl = document.getElementById('cart-icon-bubble');
+      if (bubbleEl) bubbleEl.innerHTML = bTmp.querySelector('.shopify-section')?.innerHTML || bTmp.innerHTML;
+    }
+
+    // Open the drawer
+    if (typeof drawerEl.open === 'function') {
+      drawerEl.open();
+    } else {
+      drawerEl.classList.add('active');
+    }
+  } catch(e) {
+    console.error('[SubscribeWidget] openCartDrawer failed:', e);
+  }
+}
+
+function initAddToCartBtn() {
+  var btn = document.querySelector("[data-add-to-cart-btn]");
+  if (!btn) return;
+
+  btn.addEventListener('click', function() {
+    if (btn.disabled) return;
+
+    var variantId = getActiveVariantId();
+    if (!variantId) { alert(t('alert_select_plan')); return; }
+
+    var selectedCard = document.querySelector('.plan-card.selected');
+    if (!selectedCard) { alert(t('alert_select_plan')); return; }
+
+    var sellingPlanId = selectedCard.dataset.sellingPlanId;
+    var qty           = parseInt(selectedCard.dataset.planQty || 1, 10);
+
+    btn.disabled = true;
+    btn.classList.add('is-loading');
+    btn.textContent = t('btn_loading');
+
+    var payload = { id: parseInt(variantId, 10), quantity: qty };
+    if (sellingPlanId && sellingPlanId !== "undefined" && sellingPlanId !== "null") {
+      payload.selling_plan = parseInt(sellingPlanId, 10);
+    }
+
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method : 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body   : JSON.stringify({
+        items       : [payload],
+        sections    : ['cart-drawer', 'cart-icon-bubble'],
+        sections_url: window.location.pathname,
+      }),
+    })
+    .then(function(res) {
+      if (!res.ok) {
+        return res.json().then(function(e) { throw new Error(e.description || t('alert_cart_error')); });
+      }
+      return res.json();
+    })
+    .then(function(response) {
+      btn.disabled = false;
+      btn.classList.remove('is-loading');
+      updateAddToCartBtnPrice();
+      openCartDrawer(response);
+    })
+    .catch(function(err) {
+      console.error("[SubscribeWidget] cart/add failed:", err);
+      btn.disabled = false;
+      btn.classList.remove('is-loading');
+      updateAddToCartBtnPrice();
+    });
+  });
+}
+
+function updateAddToCartBtnPrice() {
+  var btn = document.querySelector("[data-add-to-cart-btn]");
+  if (!btn || btn.classList.contains('is-loading')) return;
+  btn.textContent = TEXT.btn_add_cart;
+}
+
+})();
+</script>

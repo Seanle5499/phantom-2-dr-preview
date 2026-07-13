@@ -1,0 +1,17 @@
+{% comment %}
+  Quiz Funnel — Step 6: Areas to Improve (Multi-Select)
+{% endcomment %}
+
+<div class="qf-step" data-step="6">
+  <button class="qf-back" onclick="qfGoBack(6)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">What do you most want back?</h2>
+  <p class="qf-sub">Select everything that applies. The more honest you are, the more accurate your protocol.</p>
+  <div class="qf-opts" id="multiOpts">
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Higher energy" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">Higher energy that lasts all day</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Muscle mass" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">Increased muscle mass and strength</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Sex drive" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">Better sex drive and performance</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Focus" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">Improved mental clarity and focus</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="All" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">All of the above</div></button>
+  </div>
+  <button type="button" class="qf-btn" id="multiBtn" onclick="qfGoStep(7)" disabled>Continue</button>
+</div>

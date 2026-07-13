@@ -1,0 +1,237 @@
+
+    
+    
+    <style>@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+.gps-598710028144673335 .gp-relative{position:relative}.gps-598710028144673335 .gp-sticky{position:sticky}.gps-598710028144673335 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-598710028144673335 .gp-mb-0{margin-bottom:0}.gps-598710028144673335 .gp-flex{display:flex}.gps-598710028144673335 .gp-inline-flex{display:inline-flex}.gps-598710028144673335 .gp-grid{display:grid}.gps-598710028144673335 .\!gp-hidden{display:none!important}.gps-598710028144673335 .gp-hidden{display:none}.gps-598710028144673335 .gp-h-full{height:100%}.gps-598710028144673335 .gp-max-w-full{max-width:100%}.gps-598710028144673335 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-598710028144673335 .gp-flex-col{flex-direction:column}.gps-598710028144673335 .gp-items-center{align-items:center}.gps-598710028144673335 .gp-justify-center{justify-content:center}.gps-598710028144673335 .gp-overflow-hidden{overflow:hidden}.gps-598710028144673335 .gp-break-words{overflow-wrap:break-word}.gps-598710028144673335 .gp-text-center{text-align:center}.gps-598710028144673335 .gp-no-underline{text-decoration-line:none}.gps-598710028144673335 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-598710028144673335 .gp-duration-200{transition-duration:.2s}.gps-598710028144673335 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-598710028144673335 .disabled\:gp-btn-disabled:disabled{cursor:default}.gps-598710028144673335 .disabled\:gp-opacity-30:disabled{opacity:.3}.gps-598710028144673335 .gp-group\/button:active .group-active\/button\:\!gp-text-inherit{color:inherit!important}.gps-598710028144673335 .gp-group[data-state=loading] .group-data-\[state\=loading\]\:gp-invisible{visibility:hidden}@media (max-width:1024px){.gps-598710028144673335 .tablet\:\!gp-hidden{display:none!important}.gps-598710028144673335 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-598710028144673335 .mobile\:\!gp-hidden{display:none!important}.gps-598710028144673335 .mobile\:gp-hidden{display:none}}.gps-598710028144673335 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-598710028144673335 .\[\&_p\]\:gp-whitespace-pre-line p{white-space:pre-line}</style>
+    
+  
+    
+    
+    
+    <gp-sticky
+    data-id="gUaFo_O_eT"
+      gp-data='{"uid":"gUaFo_O_eT","setting":{"display":{"desktop":"after-first-cart-button","tablet":"after-first-cart-button","mobile":"after-first-cart-button"}},"advanced":{"d":{"desktop":true,"mobile":true,"tablet":true}}}'
+      id="gUaFo_O_eT"
+      data-id="gUaFo_O_eT"
+      class="sticky-wrapper  gUaFo_O_eT undefined {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+      style="--w:100%;margin:0 auto;--left:50%;--t:translateX(-50%);--left-tablet:50%;--t-tablet:translateX(-50%);--left-mobile:50%;--t-mobile:translateX(-50%);--top:auto;--bottom:0;--pos:fixed;--d:none;--top-tablet:auto;--bottom-tablet:0;--pos-tablet:fixed;--d-tablet:none;--top-mobile:auto;--bottom-mobile:0;--pos-mobile:fixed;--d-mobile:none;z-index:999"
+    >
+      <style>.drawer-page-content {
+       transform: none !important;
+      -webkit-transform: none !important;
+  }</style>
+      <div  style="--m:0 auto;--pt-mobile:0px;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--shadow:8.485281374238571px 8.48528137423857px 12px 0px rgba(18, 18, 18, 0.2);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--bgc:#FFFFFF;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+        <div
+      data-same-height-display-contents
+      
+      class="gUZD_yKw6V gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+      {%- assign gpBkProduct = product -%}
+      
+      {%- liquid
+        if request.page_type == 'product'
+          if 'static' == 'static'
+            if '10245735645499' == 'latest'
+              paginate collections.all.products by 100000
+                assign product = collections.all.products | sort: 'created_at' | reverse | first
+              endpaginate
+            else
+              assign product = all_products['psg-fi']
+              assign productId = '10245735645499' | times: 1
+              if product == empty or product == null
+                paginate collections.all.products by 100000
+                  for item in collections.all.products
+                    if item.id == productId
+                      assign product = item
+                    endif
+                  endfor
+                endpaginate
+              endif
+            endif
+          endif
+        else
+          if '10245735645499' == 'latest'
+            paginate collections.all.products by 100000
+              assign product = collections.all.products | sort: 'created_at'| reverse | first
+            endpaginate
+          else
+            assign product = all_products['psg-fi']
+            assign productId = '10245735645499' | times: 1
+            if product == empty or product == null
+              paginate collections.all.products by 100000
+                for item in collections.all.products
+                  if item.id == productId
+                    assign product = item
+                  endif
+                endfor
+              endpaginate
+            endif
+          endif
+        endif
+      -%}
+    
+    
+    {% if product != empty and product != null %}
+      
+      {%- assign initVariantId =  -%}
+      {%- assign product_form_id = 'product-form-' | append: "gq9lCI39YT" -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
+        {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- endif -%}
+      {%-if variant == empty or variant == null -%}
+        {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- endif -%}
+    
+      <gp-product
+        data-uid="gq9lCI39YT"
+        data-id="gq9lCI39YT"
+        
+        
+        gp-context='{"productId": {{ product.id }}, "preSelectedOptionIds": [], "isSyncProduct": "true", "hasPreSelected": false, "variantSelected": {{ variant | json | escape }},  "inventory_management": {{ variant.inventory_management | json | escape  }}, "inventory_policy": {{ variant.inventory_policy | json | escape }}, "inventoryQuantity": {{ variant.inventory_quantity }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
+        gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1, "productUrl":{{ product.url | json | escape }}, "productHandle":{{ product.handle | json | escape }}, "collectionUrl": {{ collection.url | json | escape }}, "collectionHandle": {{ collection.handle | json | escape }}}'
+      >
+        <product-form class="product-form">
+          {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
+            <input type="hidden" name="id" value="{{ variant.id }}" />
+            <input type="hidden" name="quantity" value="{{ quantity }}" />
+            <button type="submit" onclick="return false;" style="display:none;"></button>
+            
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"color":"#53AF02","preload":false,"type":"color"},"tablet":{"color":"#53AF01","preload":false,"type":"color"}},"uid":"gq9lCI39YT"}' data-id="gq9lCI39YT-row" id="gq9lCI39YT" data-same-height-subgrid-container class="gq9lCI39YT gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--cg:8px;--rg:0px;--gtc:minmax(0, 12fr);--w:100%;--bgc:#53AF02;--bgc-tablet:#53AF01;--bgi:url();--bgi-tablet:url();--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gR_qhsTFy_ gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"},"mobile":{"attachment":"scroll","color":"#53AF02","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"preload":false,"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"g_2reffatr"}' data-id="g_2reffatr" id="g_2reffatr" data-same-height-subgrid-container class="g_2reffatr gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pb:8px;--mt-mobile:10px;--pt-mobile:0px;--pl-mobile:20px;--pb-mobile:10px;--pr-mobile:20px;--pb-tablet:8px;--cg:8px;--cg-tablet:8px;--rg:0px;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:600px;--w-mobile:var(--g-ct-w, 100%);--h:auto;--h-mobile:auto;--bgc:transparent;--bgc-mobile:#53AF02;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gH4HDvhBA7 gp-relative gp-flex gp-flex-col"
+    >
+      
+    <gp-button
+      gp-data='{"btnLink":{"link":"#ggn38f5KT4","target":"_self","title":"Element","type":"scroll-to"}}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:16px;--mt-mobile:0px;--mt-tablet:16px;--ta:center" >
+        <style>[data-id="gAMu27qVNp"].gp-button-base::before, [data-id="gAMu27qVNp-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  border-color: var(--g-c-line-3, line-3);
+  
+    
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      
+  
+    }
+  
+      
+  [data-id="gAMu27qVNp"]:hover::before, [data-id="gAMu27qVNp-interaction"]:hover::before {
+    
+    
+  }</style>
+        <a
+            class="gp-trigger-button-link gp-hidden"
+            href=#ggn38f5KT4
+            target=_self
+          ></a>
+        <a
+          data-id="gAMu27qVNp" dataId="gAMu27qVNp" data-state="idle" aria-label="<p>Try Shilajit Gummies Risk-Free</p>"
+          
+          href="#ggn38f5KT4" target="_self"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--bgi:;--bg:#FFFFFF;--c:#53AF02;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:600;--size:18px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--tt:capitalize"
+          class="gAMu27qVNp gp-text-center gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex">
+          
+          
+    <span
+      data-gp-text
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:600;--size:18px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--tt:capitalize;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggAMu27qVNp_label | downcase }}
+    </span>
+        </div>
+        
+        </a>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+          {%- endform -%}
+        </product-form>
+      </gp-product>
+      {%- assign product = gpBkProduct -%}
+    {% else %}
+      <div class="gp-text-center">{{ 'gempages.Product.product_not_found' | t }}</div>
+    {% endif %}
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div>
+      </div>
+    </gp-sticky>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-sticky-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    
+{% schema %}
+  {
+    
+    "name": "Section 1",
+    "tag": "section",
+    "class": "gps-598710028144673335 gps gpsi",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=GP_PRODUCT&editorId=598710027926110775&sectionId=598710028144673335)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggAMu27qVNp_label","label":"ggAMu27qVNp_label","default":"<p>Try Shilajit Gummies Risk-Free</p>"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

@@ -1,0 +1,425 @@
+/* cachebust:1779154560 */
+
+/* ============================================================
+   AgeAura Pure NMN + TMG — Product Template v5
+   Palette: #ffffff + #111111. Mobile-first.
+   ============================================================ */
+
+.aap-wrap{
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color:#111;max-width:1280px;margin:0 auto;padding:24px 16px 120px;
+  line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+.aap-wrap *{box-sizing:border-box}
+.aap-wrap img{max-width:100%;display:block}
+.aap-wrap h1,.aap-wrap h2,.aap-wrap h3,.aap-wrap h4{
+  color:#111;margin:0 0 12px;font-weight:800;line-height:1.18;
+  letter-spacing:-0.015em;font-family:inherit;
+}
+.aap-h1{font-size:28px;line-height:1.18}
+.aap-h2{font-size:26px;text-align:center;margin-bottom:18px}
+.aap-h2--left{text-align:left}
+.aap-h3{font-size:18px;font-weight:800;margin:18px 0 10px}
+
+/* ============ S1: HERO ============ */
+.aap-hero{display:flex;flex-direction:column;gap:20px;margin-bottom:24px}
+.aap-gallery{display:flex;flex-direction:column;gap:10px;min-width:0}
+.aap-main-img{
+  background:#fafafa;border:1px solid #ececec;border-radius:14px;
+  overflow:hidden;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
+}
+.aap-main-img img{width:100%;height:100%;object-fit:contain}
+.aap-thumb-strip{display:flex;align-items:center;gap:8px}
+.aap-thumb-arrow{
+  flex:0 0 32px;height:32px;border-radius:50%;background:#111;color:#fff;
+  border:0;cursor:pointer;font-size:18px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  font-family:Arial,sans-serif;transition:background .15s,transform .1s;
+}
+.aap-thumb-arrow:hover{background:#333}
+.aap-thumb-arrow:active{transform:scale(.94)}
+.aap-thumbs{
+  flex:1 1 auto;display:flex;gap:8px;overflow-x:auto;
+  scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:2px;
+}
+.aap-thumbs::-webkit-scrollbar{display:none}
+.aap-thumb{
+  flex:0 0 64px;width:64px;height:64px;padding:0;
+  border:2px solid transparent;border-radius:8px;cursor:pointer;
+  background:#fafafa;overflow:hidden;scroll-snap-align:start;
+  transition:border-color .15s,transform .1s;
+}
+.aap-thumb:active{transform:scale(.94)}
+.aap-thumb.is-active{border-color:#111}
+.aap-thumb img{width:100%;height:100%;object-fit:cover}
+
+/* === HERO testimonial card (below thumbs — Cathy-style) === */
+.aap-hero-review{
+  margin-top:12px;background:#fff;border:1px solid #ececec;border-radius:14px;
+  padding:22px 22px 18px;
+}
+.aap-hero-review-stars{
+  color:#f5a623;letter-spacing:2px;font-size:18px;margin-bottom:14px;
+}
+.aap-hero-review-quote{
+  margin:0 0 16px;font-size:15px;color:#111;line-height:1.6;font-style:italic;
+}
+.aap-hero-review-footer{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.aap-hero-review-who{font-weight:700;font-size:14px;color:#111}
+.aap-hero-review-verified{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:700;color:#111;
+}
+.aap-hero-review-verified svg{display:block}
+
+/* ============ BUY BOX ============ */
+.aap-buybox-wrap{display:flex;flex-direction:column;min-width:0}
+.aap-buybox{display:flex;flex-direction:column;gap:14px}
+.aap-rating{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;color:#444}
+.aap-stars{color:#111;letter-spacing:2px;font-size:16px;font-weight:700}
+.aap-rating-text{font-weight:600;color:#222}
+.aap-price-block{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:14px 0;border-top:1px solid #ececec;border-bottom:1px solid #ececec;
+}
+.aap-price-old{text-decoration:line-through;color:#888;font-size:18px}
+.aap-price-new{font-size:28px;font-weight:800;color:#111;letter-spacing:-0.01em}
+.aap-price-save{
+  background:#111;color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:0.06em;padding:4px 10px;border-radius:999px;
+}
+.aap-buybox-intro{font-size:15px;font-weight:700;margin:0;color:#111}
+.aap-buybox-desc{font-size:14px;color:#444;margin:0;line-height:1.6}
+.aap-bullets{list-style:none;padding:0;margin:4px 0 8px}
+.aap-bullets li{
+  position:relative;padding-left:24px;margin-bottom:8px;font-size:15px;color:#222;line-height:1.5;
+}
+.aap-bullets li:before{content:"✓";position:absolute;left:0;top:0;color:#111;font-weight:800}
+.aap-tier-label{
+  text-align:center;font-size:11px;letter-spacing:0.16em;font-weight:800;color:#111;margin-top:6px;
+}
+.aap-form{display:flex;flex-direction:column;gap:10px}
+.aap-tiers{display:flex;flex-direction:column;gap:10px}
+.aap-tier{
+  position:relative;display:grid;grid-template-columns:24px 1fr auto;
+  align-items:center;gap:14px;padding:14px;
+  border:2px solid #e3e3e3;border-radius:10px;cursor:pointer;background:#fff;
+  transition:border-color .15s,background .15s;
+}
+.aap-tier.is-selected{border-color:#111;background:#fafafa}
+.aap-tier-badge{
+  position:absolute;top:-10px;left:50%;transform:translateX(-50%);
+  background:#111;color:#fff;font-size:10px;letter-spacing:0.08em;
+  font-weight:800;padding:3px 10px;white-space:nowrap;
+}
+.aap-tier input{
+  appearance:none;-webkit-appearance:none;width:22px;height:22px;
+  border:2px solid #c8c8c8;border-radius:50%;margin:0;position:relative;cursor:pointer;
+}
+.aap-tier.is-selected input{border-color:#111}
+.aap-tier.is-selected input:after{content:"";position:absolute;inset:3px;background:#111;border-radius:50%}
+.aap-tier-title{font-weight:700;font-size:16px;color:#111}
+.aap-tier-meta{font-size:12px;color:#666;margin-top:3px;line-height:1.45}
+.aap-tier-pricing{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.aap-tier-save{
+  background:#111;color:#fff;font-size:10px;font-weight:700;
+  letter-spacing:0.04em;padding:2px 6px;border-radius:3px;line-height:1;
+}
+.aap-tier-price{font-weight:800;font-size:20px;color:#111;line-height:1}
+.aap-tier-old{font-size:13px;color:#888;text-decoration:line-through}
+
+.aap-atc{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;background:#111;color:#fff;font-weight:800;font-size:15px;
+  letter-spacing:0.08em;padding:18px 22px;border:0;border-radius:10px;
+  cursor:pointer;text-transform:uppercase;
+  transition:background .15s,transform .1s,box-shadow .2s;margin-top:6px;
+  animation:aap-pulse 2.4s ease-in-out infinite;
+}
+.aap-atc:hover{background:#000;animation:none;box-shadow:0 6px 24px rgba(0,0,0,.22)}
+.aap-atc:active{transform:scale(.98)}
+.aap-atc-arrow{display:inline-block;transition:transform .2s}
+.aap-atc:hover .aap-atc-arrow{transform:translateX(4px)}
+@keyframes aap-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(17,17,17,0.45)}
+  60%{box-shadow:0 0 0 14px rgba(17,17,17,0)}
+}
+.aap-atc-sub{text-align:center;font-size:12px;color:#666;margin-top:6px}
+.aap-trust-row{
+  display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;
+  margin-top:10px;font-size:12px;color:#333;text-align:center;
+}
+.aap-trust-row > div{flex:1 1 30%;padding:6px}
+.aap-pay-row{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-top:10px}
+.aap-pay{
+  background:#f4f4f4;border:1px solid #e0e0e0;border-radius:4px;
+  padding:3px 8px;font-weight:700;font-size:10px;letter-spacing:0.05em;color:#444;
+}
+
+/* === MINI FAQ inside buybox (Ảnh 3) === */
+.aap-mini-faq{
+  margin-top:18px;border-top:1px solid #ececec;
+}
+.aap-mini-faq details{
+  border-bottom:1px solid #ececec;padding:0;background:#fff;
+}
+.aap-mini-faq summary{
+  cursor:pointer;font-weight:700;font-size:15px;color:#111;
+  list-style:none;position:relative;padding:16px 32px 16px 4px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.aap-mini-faq summary::-webkit-details-marker{display:none}
+.aap-mini-faq-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;color:#111;font-size:20px;line-height:1;font-weight:600;
+  transition:transform .25s ease;flex-shrink:0;
+}
+.aap-mini-faq details[open] .aap-mini-faq-icon{transform:rotate(90deg)}
+.aap-mini-faq p{margin:0 0 14px;padding:0 4px;color:#444;font-size:14px;line-height:1.6}
+
+/* ============ S2-S4: SPLIT 50/50 SECTIONS ============ */
+.aap-split{margin:32px 0;padding:48px 16px}
+.aap-split--soft{background:#f5f5f5;margin:32px -16px;padding:48px 16px}
+.aap-split-inner{
+  max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:32px;align-items:center;
+}
+.aap-split-text{min-width:0}
+.aap-split-text p{margin:0 0 16px;font-size:15px;color:#222;line-height:1.7}
+.aap-split-text p:last-child{margin-bottom:0}
+.aap-split-img{
+  border-radius:14px;overflow:hidden;background:#fff;aspect-ratio:1/1;
+}
+.aap-split-img img{width:100%;height:100%;object-fit:cover}
+
+.aap-green-list{list-style:none;padding:0;margin:16px 0 0}
+.aap-green-list li{
+  position:relative;padding:6px 0 6px 30px;font-size:15px;color:#222;line-height:1.5;
+}
+.aap-green-list li:before{
+  content:"";position:absolute;left:0;top:8px;width:18px;height:18px;
+  border-radius:50%;background:#111;
+}
+.aap-green-list li:after{
+  content:"✓";position:absolute;left:4px;top:6px;color:#fff;font-weight:800;font-size:11px;
+}
+.aap-bullet-dots{list-style:none;padding:0;margin:6px 0 14px}
+.aap-bullet-dots li{
+  position:relative;padding:4px 0 4px 18px;font-size:15px;color:#222;line-height:1.55;
+}
+.aap-bullet-dots li:before{
+  content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:#111;
+}
+
+/* ============ S5: TESTIMONIALS ============ */
+.aap-section{padding:48px 0;border-bottom:1px solid #ececec}
+.aap-section:last-of-type{border-bottom:none}
+.aap-reviews{display:grid;grid-template-columns:1fr;gap:14px}
+.aap-review{
+  background:#fff;border:1px solid #ececec;border-radius:12px;
+  padding:18px;display:flex;flex-direction:column;gap:10px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+.aap-review-img{width:64px;height:64px;border-radius:50%;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a8f4e 0%,#0f6e3d 100%);color:#fff;font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:-0.02em;flex-shrink:0;line-height:1;font-family:-apple-system,BlinkMacSystemFont,sans-serif;user-select:none}
+.aap-review-stars{color:#f5a623;letter-spacing:2px;font-size:14px;font-weight:700}
+.aap-review-quote{margin:0;font-size:14px;font-style:italic;color:#222;line-height:1.55;flex:1}
+.aap-review-who{font-size:12px;color:#666;font-weight:600;line-height:1.4}
+.aap-verified{color:#111;font-weight:700}
+.aap-review-dots{display:flex;justify-content:center;gap:6px;margin-top:14px}
+.aap-review-dots button{
+  width:8px;height:8px;border-radius:50%;border:0;background:#d4d4d4;
+  cursor:pointer;padding:0;transition:background .15s,width .15s;
+}
+.aap-review-dots button.is-active{background:#111;width:22px;border-radius:4px}
+
+/* ============ S6: BOTTOM FAQ (Ảnh 4 reference) ============ */
+.aap-bottom-faq{
+  background:#f5f5f5;margin:48px -16px 0;padding:60px 16px 80px;
+}
+.aap-bottom-faq-inner{max-width:1100px;margin:0 auto}
+.aap-bottom-faq-title{
+  font-size:32px;font-weight:800;text-align:center;color:#111;
+  letter-spacing:-0.02em;margin:0 0 32px;line-height:1.18;
+}
+.aap-bottom-faq-list{
+  display:flex;flex-direction:column;gap:10px;margin-bottom:32px;
+}
+.aap-bfaq-item{
+  background:#fff;border:1px solid #ececec;border-radius:8px;padding:0;
+  transition:box-shadow .15s;
+}
+.aap-bfaq-item:hover{box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.aap-bfaq-item summary{
+  cursor:pointer;font-weight:700;font-size:16px;color:#111;
+  list-style:none;position:relative;padding:20px 56px 20px 24px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.aap-bfaq-item summary::-webkit-details-marker{display:none}
+.aap-bfaq-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:24px;height:24px;color:#111;font-size:22px;line-height:1;
+  font-weight:600;transition:transform .25s ease;flex-shrink:0;
+}
+.aap-bfaq-item[open] .aap-bfaq-icon{transform:rotate(90deg)}
+.aap-bfaq-item p{
+  margin:0;padding:0 24px 22px;color:#444;font-size:15px;line-height:1.65;
+}
+.aap-bottom-cta{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  margin-top:28px;
+}
+.aap-buynow{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:#111;color:#fff;font-weight:800;font-size:15px;
+  letter-spacing:0.1em;padding:18px 64px;border-radius:999px;
+  text-decoration:none;text-transform:uppercase;
+  transition:background .15s,transform .1s,box-shadow .2s;
+  min-width:280px;text-align:center;
+}
+.aap-buynow:hover{background:#000;box-shadow:0 6px 24px rgba(0,0,0,0.22);transform:translateY(-1px)}
+.aap-buynow:active{transform:scale(.98)}
+.aap-bottom-mbg{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:#444;font-weight:700;
+}
+.aap-bottom-mbg svg{display:block}
+
+/* ============ S7: DISCLAIMER ============ */
+.aap-disclaimer{font-size:11px;color:#888;text-align:center;padding:32px 8px;line-height:1.55}
+.aap-disclaimer p{margin:0 0 10px}
+.aap-company{font-weight:700;color:#444;margin-top:14px !important}
+
+/* ============ STICKY MOBILE CTA ============ */
+.aap-sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  background:#fff;border-top:1px solid #ececec;
+  display:none;align-items:center;justify-content:space-between;
+  padding:10px 14px;box-shadow:0 -6px 18px rgba(0,0,0,0.08);
+}
+.aap-sticky-title{font-size:13px;font-weight:700;color:#111}
+.aap-sticky-price{font-size:18px;font-weight:800;color:#111}
+.aap-sticky-btn{
+  background:#111;color:#fff;border:0;font-weight:800;padding:14px 22px;
+  border-radius:8px;cursor:pointer;letter-spacing:0.04em;font-size:13px;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (768px+)
+   ============================================================ */
+@media (min-width:768px){
+  .aap-wrap{padding:32px 24px 80px}
+  .aap-hero{
+    display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:flex-start;margin-bottom:48px;
+  }
+  .aap-thumb{flex:0 0 72px;width:72px;height:72px}
+  .aap-h1{font-size:32px}
+  .aap-h2{font-size:30px}
+  .aap-split{margin:48px -24px;padding:64px 24px}
+  .aap-split--soft{margin:48px -24px;padding:64px 24px}
+  .aap-split-inner{grid-template-columns:1fr 1fr;gap:48px}
+  .aap-split--reverse .aap-split-img{order:1}
+  .aap-split--reverse .aap-split-text{order:2}
+  .aap-reviews{grid-template-columns:repeat(2,1fr);gap:18px}
+  .aap-section{padding:64px 0}
+  .aap-bottom-faq{margin:64px -24px 0;padding:72px 24px 88px}
+  .aap-bottom-faq-title{font-size:38px}
+}
+
+/* ============================================================
+   RESPONSIVE — DESKTOP (1024px+)
+   ============================================================ */
+@media (min-width:1024px){
+  .aap-wrap{padding:40px 32px 80px}
+  .aap-hero{gap:48px}
+  .aap-buybox-wrap{position:sticky;top:24px;align-self:flex-start}
+  .aap-h1{font-size:34px}
+  .aap-h2{font-size:34px}
+  .aap-buybox-intro{font-size:16px}
+  .aap-thumb{flex:0 0 80px;width:80px;height:80px}
+  .aap-split{margin:64px -32px;padding:80px 32px}
+  .aap-split--soft{margin:64px -32px;padding:80px 32px}
+  .aap-split-inner{gap:64px}
+  .aap-split-text p{font-size:16px}
+  .aap-split-text h2{font-size:32px;margin-bottom:18px}
+  .aap-reviews{grid-template-columns:repeat(3,1fr);gap:20px}
+  .aap-review-dots{display:none}
+  .aap-bottom-faq{margin:80px -32px 0;padding:88px 32px 104px}
+  .aap-bottom-faq-title{font-size:44px;margin-bottom:40px}
+  .aap-bfaq-item summary{font-size:17px;padding:22px 64px 22px 28px}
+  .aap-bfaq-item p{padding:0 28px 24px}
+}
+
+/* ============================================================
+   MOBILE-ONLY (under 768px)
+   ============================================================ */
+@media (max-width:767px){
+  .aap-wrap{padding:16px 14px 100px}
+  .aap-h1{font-size:24px}
+  .aap-h2{font-size:22px}
+  .aap-price-new{font-size:26px}
+  .aap-buybox-intro{font-size:14px}
+  .aap-buybox-desc{font-size:13px}
+  .aap-tier{padding:12px 10px;gap:10px}
+  .aap-tier-title{font-size:14px}
+  .aap-tier-meta{font-size:11px}
+  .aap-tier-price{font-size:17px}
+  .aap-tier-old{font-size:12px}
+  .aap-atc{padding:16px 18px;font-size:14px}
+  .aap-trust-row{font-size:11px}
+  .aap-pay{font-size:9px;padding:2px 6px}
+  .aap-mini-faq summary{font-size:14px;padding:14px 28px 14px 4px}
+  .aap-mini-faq p{font-size:13px}
+  .aap-hero-review{padding:18px 18px 16px}
+  .aap-hero-review-quote{font-size:14px}
+  .aap-split{margin:24px -14px;padding:36px 16px}
+  .aap-split--soft{margin:24px -14px;padding:36px 16px}
+  .aap-split-text p{font-size:15px}
+  .aap-section{padding:32px 0}
+  .aap-bottom-faq{margin:32px -14px 0;padding:48px 14px 64px}
+  .aap-bottom-faq-title{font-size:24px;margin-bottom:24px}
+  .aap-bfaq-item summary{font-size:14px;padding:16px 44px 16px 18px}
+  .aap-bfaq-item p{padding:0 18px 18px;font-size:14px}
+  .aap-buynow{padding:16px 40px;font-size:14px;min-width:240px}
+  .aap-reviews{
+    display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+    gap:12px;padding:4px 4px 12px;
+    scrollbar-width:none;-ms-overflow-style:none;
+    margin:0 -14px;padding-left:14px;padding-right:14px;
+  }
+  .aap-reviews::-webkit-scrollbar{display:none}
+  .aap-review{flex:0 0 86%;scroll-snap-align:start;min-width:0}
+  .aap-sticky{display:flex}
+}
+
+/* ---------- PURCHASE TOGGLE (Subscribe / One-time) ---------- */
+.aap-purchase-toggle {
+  display: flex;
+  border: 1.5px solid #111;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0;
+  background: #fff;
+}
+.aap-toggle-btn {
+  flex: 1;
+  padding: 20px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border: 0;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+.aap-toggle-btn.is-active {
+  background: #111;
+  color: #fff;
+}
+.aap-toggle-btn:not(.is-active):hover {
+  background: #f6f5f1;
+}
+

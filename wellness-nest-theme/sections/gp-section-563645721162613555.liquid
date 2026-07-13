@@ -1,0 +1,541 @@
+
+    
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-563645721162613555.gps.gpsil [style*="--ai:"]{align-items:var(--ai)}.gps-563645721162613555.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bg:"]:hover{background:var(--hvr-bg)}.gps-563645721162613555.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-563645721162613555.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bgc:"]:hover{background-color:var(--hvr-bgc)}.gps-563645721162613555.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bgi:"]:hover{background-image:var(--hvr-bgi)}.gps-563645721162613555.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-563645721162613555.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-563645721162613555.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-563645721162613555.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-563645721162613555.gps.gpsil [style*="--hvr-b:"]:hover{border:var(--hvr-b)}.gps-563645721162613555.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bb:"]:hover{border-bottom:var(--hvr-bb)}.gps-563645721162613555.gps.gpsil [style*="--bbw:"]{border-bottom-width:var(--bbw)}.gps-563645721162613555.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bc:"]:hover{border-color:var(--hvr-bc)}.gps-563645721162613555.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bblr:"]:hover{border-bottom-left-radius:var(--hvr-bblr)}.gps-563645721162613555.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bbrr:"]:hover{border-bottom-right-radius:var(--hvr-bbrr)}.gps-563645721162613555.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bs:"]:hover{border-style:var(--hvr-bs)}.gps-563645721162613555.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bt:"]:hover{border-top:var(--hvr-bt)}.gps-563645721162613555.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-563645721162613555.gps.gpsil [style*="--hvr-btlr:"]:hover{border-top-left-radius:var(--hvr-btlr)}.gps-563645721162613555.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-563645721162613555.gps.gpsil [style*="--hvr-btrr:"]:hover{border-top-right-radius:var(--hvr-btrr)}.gps-563645721162613555.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-563645721162613555.gps.gpsil [style*="--hvr-bw:"]:hover{border-width:var(--hvr-bw)}.gps-563645721162613555.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-563645721162613555.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-563645721162613555.gps.gpsil [style*="--hvr-c:"]:hover{color:var(--hvr-c)}.gps-563645721162613555.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-563645721162613555.gps.gpsil [style*="--fd:"]{flex-direction:var(--fd)}.gps-563645721162613555.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-563645721162613555.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-563645721162613555.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-563645721162613555.gps.gpsil [style*="--fs:"]{font-style:var(--fs)}.gps-563645721162613555.gps.gpsil [style*="--gg:"]{grid-gap:var(--gg)}.gps-563645721162613555.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-563645721162613555.gps.gpsil [style*="--h:"]{height:var(--h)}.gps-563645721162613555.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-563645721162613555.gps.gpsil [style*="--left:"]{left:var(--left)}.gps-563645721162613555.gps.gpsil [style*="--ls:"]{letter-spacing:var(--ls)}.gps-563645721162613555.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-563645721162613555.gps.gpsil [style*="--tdt:"]{text-decoration-thickness:var(--tdt)}.gps-563645721162613555.gps.gpsil [style*="--tdl:"]{text-decoration-line:var(--tdl)}.gps-563645721162613555.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-563645721162613555.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-563645721162613555.gps.gpsil [style*="--ml:"]{margin-left:var(--ml)}.gps-563645721162613555.gps.gpsil [style*="--mr:"]{margin-right:var(--mr)}.gps-563645721162613555.gps.gpsil [style*="--mt:"]{margin-top:var(--mt)}.gps-563645721162613555.gps.gpsil [style*="--minw:"]{min-width:var(--minw)}.gps-563645721162613555.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-563645721162613555.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-563645721162613555.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-563645721162613555.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-563645721162613555.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-563645721162613555.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-563645721162613555.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-563645721162613555.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-563645721162613555.gps.gpsil [style*="--pos:"]{position:var(--pos)}.gps-563645721162613555.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-563645721162613555.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-563645721162613555.gps.gpsil [style*="--tt:"]{text-transform:var(--tt)}.gps-563645721162613555.gps.gpsil [style*="--top:"]{top:var(--top)}.gps-563645721162613555.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-563645721162613555.gps.gpsil [style*="--v:"]{visibility:var(--v)}.gps-563645721162613555.gps.gpsil [style*="--w:"]{width:var(--w)}.gps-563645721162613555.gps.gpsil [style*="--line-clamp:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp)}@media only screen and (max-width:1024px){.gps-563645721162613555.gps.gpsil [style*="--bgi-tablet:"]{background-image:var(--bgi-tablet)}.gps-563645721162613555.gps.gpsil [style*="--bgp-tablet:"]{background-position:var(--bgp-tablet)}.gps-563645721162613555.gps.gpsil [style*="--bgr-tablet:"]{background-repeat:var(--bgr-tablet)}.gps-563645721162613555.gps.gpsil [style*="--bgs-tablet:"]{background-size:var(--bgs-tablet)}.gps-563645721162613555.gps.gpsil [style*="--bbw-tablet:"]{border-bottom-width:var(--bbw-tablet)}.gps-563645721162613555.gps.gpsil [style*="--cg-tablet:"]{-moz-column-gap:var(--cg-tablet);column-gap:var(--cg-tablet)}.gps-563645721162613555.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-563645721162613555.gps.gpsil [style*="--gtc-tablet:"]{grid-template-columns:var(--gtc-tablet)}.gps-563645721162613555.gps.gpsil [style*="--h-tablet:"]{height:var(--h-tablet)}.gps-563645721162613555.gps.gpsil [style*="--left-tablet:"]{left:var(--left-tablet)}.gps-563645721162613555.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-563645721162613555.gps.gpsil [style*="--mb-tablet:"]{margin-bottom:var(--mb-tablet)}.gps-563645721162613555.gps.gpsil [style*="--ml-tablet:"]{margin-left:var(--ml-tablet)}.gps-563645721162613555.gps.gpsil [style*="--mr-tablet:"]{margin-right:var(--mr-tablet)}.gps-563645721162613555.gps.gpsil [style*="--mt-tablet:"]{margin-top:var(--mt-tablet)}.gps-563645721162613555.gps.gpsil [style*="--minw-tablet:"]{min-width:var(--minw-tablet)}.gps-563645721162613555.gps.gpsil [style*="--pc-tablet:"]{place-content:var(--pc-tablet)}.gps-563645721162613555.gps.gpsil [style*="--pb-tablet:"]{padding-bottom:var(--pb-tablet)}.gps-563645721162613555.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-563645721162613555.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-563645721162613555.gps.gpsil [style*="--pt-tablet:"]{padding-top:var(--pt-tablet)}.gps-563645721162613555.gps.gpsil [style*="--pos-tablet:"]{position:var(--pos-tablet)}.gps-563645721162613555.gps.gpsil [style*="--top-tablet:"]{top:var(--top-tablet)}.gps-563645721162613555.gps.gpsil [style*="--v-tablet:"]{visibility:var(--v-tablet)}.gps-563645721162613555.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}.gps-563645721162613555.gps.gpsil [style*="--line-clamp-tablet:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-tablet)}}@media only screen and (max-width:767px){.gps-563645721162613555.gps.gpsil [style*="--bga-mobile:"]{background-attachment:var(--bga-mobile)}.gps-563645721162613555.gps.gpsil [style*="--bgc-mobile:"]{background-color:var(--bgc-mobile)}.gps-563645721162613555.gps.gpsil [style*="--bgi-mobile:"]{background-image:var(--bgi-mobile)}.gps-563645721162613555.gps.gpsil [style*="--bgp-mobile:"]{background-position:var(--bgp-mobile)}.gps-563645721162613555.gps.gpsil [style*="--bgr-mobile:"]{background-repeat:var(--bgr-mobile)}.gps-563645721162613555.gps.gpsil [style*="--bgs-mobile:"]{background-size:var(--bgs-mobile)}.gps-563645721162613555.gps.gpsil [style*="--bbw-mobile:"]{border-bottom-width:var(--bbw-mobile)}.gps-563645721162613555.gps.gpsil [style*="--cg-mobile:"]{-moz-column-gap:var(--cg-mobile);column-gap:var(--cg-mobile)}.gps-563645721162613555.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-563645721162613555.gps.gpsil [style*="--gg-mobile:"]{grid-gap:var(--gg-mobile)}.gps-563645721162613555.gps.gpsil [style*="--gtc-mobile:"]{grid-template-columns:var(--gtc-mobile)}.gps-563645721162613555.gps.gpsil [style*="--h-mobile:"]{height:var(--h-mobile)}.gps-563645721162613555.gps.gpsil [style*="--left-mobile:"]{left:var(--left-mobile)}.gps-563645721162613555.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-563645721162613555.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-563645721162613555.gps.gpsil [style*="--ml-mobile:"]{margin-left:var(--ml-mobile)}.gps-563645721162613555.gps.gpsil [style*="--mr-mobile:"]{margin-right:var(--mr-mobile)}.gps-563645721162613555.gps.gpsil [style*="--mt-mobile:"]{margin-top:var(--mt-mobile)}.gps-563645721162613555.gps.gpsil [style*="--minw-mobile:"]{min-width:var(--minw-mobile)}.gps-563645721162613555.gps.gpsil [style*="--pc-mobile:"]{place-content:var(--pc-mobile)}.gps-563645721162613555.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-563645721162613555.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-563645721162613555.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-563645721162613555.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-563645721162613555.gps.gpsil [style*="--pos-mobile:"]{position:var(--pos-mobile)}.gps-563645721162613555.gps.gpsil [style*="--ta-mobile:"]{text-align:var(--ta-mobile)}.gps-563645721162613555.gps.gpsil [style*="--top-mobile:"]{top:var(--top-mobile)}.gps-563645721162613555.gps.gpsil [style*="--v-mobile:"]{visibility:var(--v-mobile)}.gps-563645721162613555.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}.gps-563645721162613555.gps.gpsil [style*="--line-clamp-mobile:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-mobile)}}.gps-563645721162613555 .-gp-rotate-90,.gps-563645721162613555 .gp-rotate-180,.gps-563645721162613555 .gp-rotate-90{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1}.gps-563645721162613555 .gp-g-heading-2{font-family:var(--g-h2-ff);font-size:var(--g-h2-size);font-style:var(--g-h2-fs);font-weight:var(--g-h2-weight);letter-spacing:var(--g-h2-ls);line-height:var(--g-h2-lh)}.gps-563645721162613555 .gp-g-paragraph-1{font-family:var(--g-p1-ff);font-size:var(--g-p1-size);font-style:var(--g-p1-fs);font-weight:var(--g-p1-weight);letter-spacing:var(--g-p1-ls);line-height:var(--g-p1-lh)}.gps-563645721162613555 .gp-invisible{visibility:hidden}.gps-563645721162613555 .gp-absolute{position:absolute}.gps-563645721162613555 .gp-relative{position:relative}.gps-563645721162613555 .-gp-z-1{z-index:-1}.gps-563645721162613555 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-563645721162613555 .gp-mb-0{margin-bottom:0}.gps-563645721162613555 .gp-block{display:block}.gps-563645721162613555 .gp-flex{display:flex}.gps-563645721162613555 .gp-inline-flex{display:inline-flex}.gps-563645721162613555 .gp-grid{display:grid}.gps-563645721162613555 .\!gp-hidden{display:none!important}.gps-563645721162613555 .gp-hidden{display:none}.gps-563645721162613555 .gp-h-full{height:100%}.gps-563645721162613555 .gp-min-h-0{min-height:0}.gps-563645721162613555 .gp-w-full{width:100%}.gps-563645721162613555 .gp-min-w-0{min-width:0}.gps-563645721162613555 .gp-max-w-full{max-width:100%}.gps-563645721162613555 .gp-flex-1{flex:1 1 0%}.gps-563645721162613555 .gp-flex-none{flex:none}.gps-563645721162613555 .-gp-rotate-90{--tw-rotate:-90deg}.gps-563645721162613555 .-gp-rotate-90,.gps-563645721162613555 .gp-rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-563645721162613555 .gp-rotate-180{--tw-rotate:180deg}.gps-563645721162613555 .gp-rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-563645721162613555 .gp-cursor-pointer{cursor:pointer}.gps-563645721162613555 .gp-grid-rows-\[0fr\]{grid-template-rows:0fr}.gps-563645721162613555 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-563645721162613555 .gp-flex-row{flex-direction:row}.gps-563645721162613555 .gp-flex-col{flex-direction:column}.gps-563645721162613555 .gp-flex-wrap{flex-wrap:wrap}.gps-563645721162613555 .\!gp-content-stretch{align-content:stretch!important}.gps-563645721162613555 .gp-items-center{align-items:center}.gps-563645721162613555 .gp-justify-end{justify-content:flex-end}.gps-563645721162613555 .gp-justify-center{justify-content:center}.gps-563645721162613555 .gp-gap-\[16px\]{gap:16px}.gps-563645721162613555 .\!gp-self-center{align-self:center!important}.gps-563645721162613555 .gp-self-center{align-self:center}.gps-563645721162613555 .gp-overflow-hidden{overflow:hidden}.gps-563645721162613555 .gp-overflow-clip{overflow:clip}.gps-563645721162613555 .gp-whitespace-nowrap{white-space:nowrap}.gps-563645721162613555 .gp-break-words{overflow-wrap:break-word}.gps-563645721162613555 .gp-break-all{word-break:break-all}.gps-563645721162613555 .gp-p-4{padding:16px}.gps-563645721162613555 .gp-px-4{padding-left:16px;padding-right:16px}.gps-563645721162613555 .gp-py-2{padding-bottom:8px;padding-top:8px}.gps-563645721162613555 .gp-text-center{text-align:center}.gps-563645721162613555 .gp-leading-\[0\]{line-height:0}.gps-563645721162613555 .\!gp-text-inherit{color:inherit!important}.gps-563645721162613555 .gp-text-g-line-3{color:var(--g-c-line-3)}.gps-563645721162613555 .gp-no-underline{text-decoration-line:none}.gps-563645721162613555 .gp-transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-563645721162613555 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-563645721162613555 .gp-duration-200{transition-duration:.2s}.gps-563645721162613555 .gp-duration-500{transition-duration:.5s}.gps-563645721162613555 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-563645721162613555 .disabled\:gp-btn-disabled:disabled{cursor:default}.gps-563645721162613555 .disabled\:gp-opacity-30:disabled{opacity:.3}@media (hover:hover) and (pointer:fine){.gps-563645721162613555 .gp-group:hover .group-hover\:\[color\:var\(--icon-expand-hover-color\)\]{color:var(--icon-expand-hover-color)}.gps-563645721162613555 .gp-group:hover .group-hover\:\[color\:var\(--icon-hover-color\)\!important\]{color:var(--icon-hover-color)!important}.gps-563645721162613555 .gp-group:hover .group-hover\:\[color\:var\(--text-hover-color\)\!important\]{color:var(--text-hover-color)!important}}.gps-563645721162613555 .gp-group\/button:active .group-active\/button\:\!gp-text-inherit{color:inherit!important}.gps-563645721162613555 .gp-group[data-state=loading] .group-data-\[state\=loading\]\:gp-invisible{visibility:hidden}@media (max-width:1024px){.gps-563645721162613555 .tablet\:\!gp-relative{position:relative!important}.gps-563645721162613555 .tablet\:gp-block{display:block}.gps-563645721162613555 .tablet\:\!gp-hidden{display:none!important}.gps-563645721162613555 .tablet\:gp-hidden{display:none}.gps-563645721162613555 .tablet\:gp-flex-row{flex-direction:row}.gps-563645721162613555 .tablet\:gp-flex-col{flex-direction:column}.gps-563645721162613555 .tablet\:\!gp-content-stretch{align-content:stretch!important}.gps-563645721162613555 .tablet\:gp-justify-center{justify-content:center}.gps-563645721162613555 .tablet\:\!gp-self-center{align-self:center!important}}@media (max-width:767px){.gps-563645721162613555 .mobile\:\!gp-relative{position:relative!important}.gps-563645721162613555 .mobile\:gp-block{display:block}.gps-563645721162613555 .mobile\:\!gp-hidden{display:none!important}.gps-563645721162613555 .mobile\:gp-hidden{display:none}.gps-563645721162613555 .mobile\:\!gp-h-auto{height:auto!important}.gps-563645721162613555 .mobile\:gp-flex-row{flex-direction:row}.gps-563645721162613555 .mobile\:gp-flex-col{flex-direction:column}.gps-563645721162613555 .mobile\:\!gp-content-stretch{align-content:stretch!important}.gps-563645721162613555 .mobile\:gp-justify-center{justify-content:center}.gps-563645721162613555 .mobile\:\!gp-self-center{align-self:center!important}}.gps-563645721162613555 .\[\&\>\*\]\:\!gp-justify-center>*{justify-content:center!important}@media (max-width:1024px){.gps-563645721162613555 .tablet\:\[\&\>\*\]\:\!gp-justify-center>*{justify-content:center!important}}@media (max-width:767px){.gps-563645721162613555 .mobile\:\[\&\>\*\]\:\!gp-justify-center>*{justify-content:center!important}}.gps-563645721162613555 .\[\&\>svg\]\:\!gp-h-\[var\(--height-configIconSize\)\]>svg{height:var(--height-configIconSize)!important}.gps-563645721162613555 .\[\&\>svg\]\:\!gp-h-\[var\(--height-desktop\)\]>svg{height:var(--height-desktop)!important}.gps-563645721162613555 .\[\&\>svg\]\:\!gp-h-\[var\(--height-iconCollapseSize\)\]>svg{height:var(--height-iconCollapseSize)!important}.gps-563645721162613555 .\[\&\>svg\]\:\!gp-w-auto>svg{width:auto!important}.gps-563645721162613555 .\[\&\>svg\]\:\!gp-w-full>svg{width:100%!important}@media (max-width:1024px){.gps-563645721162613555 .tablet\:\[\&\>svg\]\:\!gp-h-\[var\(--height-tablet\)\]>svg{height:var(--height-tablet)!important}}@media (max-width:767px){.gps-563645721162613555 .mobile\:\[\&\>svg\]\:\!gp-h-\[var\(--height-mobile\)\]>svg{height:var(--height-mobile)!important}}.gps-563645721162613555 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-563645721162613555 .\[\&_p\]\:gp-whitespace-pre-line p{white-space:pre-line}</style>
+    <style {% if section.settings.section_preload == "false" %} class="gps-link" type="text/disabled-css" {% endif %}>@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');
+}
+</style>
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"color":"#FAFAFA","image":{"backupFileKey":"","height":2129,"src":"https://cdn.shopify.com/s/files/1/0810/1563/6283/files/background_5.png?v=1745573278","width":1920},"position":{"x":100,"y":0},"size":"cover","type":"image","video":"","videoHtml5":""},"mobile":{"attachment":"","color":"#00000000","image":{"backupFileKey":"","height":2129,"src":"https://cdn.shopify.com/s/files/1/0810/1563/6283/files/background_5.png?v=1745573278","width":1920},"loop":"","position":{"x":100,"y":0},"repeat":"repeat-x","size":"contain","type":"image","video":"","videoHtml5":""}},"uid":"i2l8261515932"}' data-id="i2l8261515932" id="i2l8261515932" data-same-height-subgrid-container class="i2l8261515932 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pageType:GP_STATIC;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:20px;--pb:0px;--pr:20px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:24px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:auto;--mb-tablet:0px;--mr-tablet:auto;--pt-tablet:0px;--pl-tablet:20px;--pb-tablet:0px;--pr-tablet:20px;--cg:32px;--cg-tablet:32px;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#FAFAFA;--bgc-mobile:#00000000;--bgi:url(https://cdn.shopify.com/s/files/1/0810/1563/6283/files/background_5.png?v=1745573278);--bgi-mobile:url(https://cdn.shopify.com/s/files/1/0810/1563/6283/files/background_5.png?v=1745573278);--bgp:100% 0%;--bgp-mobile:100% 0%;--bgs:cover;--bgs-mobile:contain;--bgr-mobile:repeat-x;--bga-mobile:;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="c-w-i2l8261515932 gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"sp-i2ld0ee0853f8"}' data-id="sp-i2ld0ee0853f8" id="sp-i2ld0ee0853f8" data-same-height-subgrid-container class="sp-i2ld0ee0853f8 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pageType:GP_STATIC;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:50px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:16px;--pl-mobile:20px;--pb-mobile:0px;--pr-mobile:20px;--cg:32px;--cg-tablet:32px;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="i2ld0ee0853f8 gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"sp-i2l3e8629dc98"}' data-id="sp-i2l3e8629dc98" id="sp-i2l3e8629dc98" data-same-height-subgrid-container class="sp-i2l3e8629dc98 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pageType:GP_STATIC;--mt:0px;--ml:auto;--mb:var(--g-s-2xl);--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:var(--g-s-l);--mr-mobile:auto;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--cg:32px;--cg-tablet:32px;--gtc:minmax(0, auto);--gtc-tablet:minmax(0, auto);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="i2l3e8629dc98 gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="DXpeJySIegHq"
+        class="DXpeJySIegHq"
+        style="--ta:left;--pageType:GP_STATIC;--mt:0px;--ml:0px;--mb:8px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:24px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ts:none;--ta:left;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:600;--size:20px;--size-tablet:22px;--size-mobile:20px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--ls:2px;--c:#cb7b04;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gDXpeJySIegHq_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="umjwRkQTLmeE"
+        class="umjwRkQTLmeE"
+        style="--ta:left;--pageType:GP_STATIC;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:20px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="gp-g-heading-2  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:left;--ta-mobile:center;--size:41px;--size-tablet:41px;--size-mobile:32px;--weight:bold;--c:#582140;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gumjwRkQTLmeE_text | replace: '$locationOrigin', locationOrigin }}
+        </h2>
+      </div>
+    </div>
+    {% render 'gp-section-563645721162613555-1', product: product, variant: variant, product_form_id: product_form_id, productSelectedVariant: productSelectedVariant, form: form  %}
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+      <gp-hero-banner
+        
+        data-id="rewrap_row_fNVCpRlIBaVF"
+        class="rewrap_row_fNVCpRlIBaVF gp-group/hero gp-flex gp-w-full gp-flex-col gp-self-center gp-transition-colors gp-duration-200 gp-ease-in-out !gp-self-center tablet:!gp-self-center mobile:!gp-self-center"
+        style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:flex;--d-mobile:flex;--d-tablet:flex;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:12px;--mr-mobile:auto;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--w:100%;--w-tablet:100%;--w-mobile:var(--g-ct-w);--h:fit-content;--h-tablet:fit-content;--h-mobile:fit-content"
+        gp-data='{"background":{"desktop":{"attachment":"scroll","color":"","image":{"backupFileKey":"","height":374,"src":"","storage":"FILE_CONTENT","width":508},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"contain","type":"color","video":"","videoHtml5":""},"tablet":{"attachment":"scroll","color":"","image":{"backupFileKey":"","height":271,"src":"","storage":"FILE_CONTENT","width":513},"loop":"","position":{"x":50,"y":100},"repeat":"no-repeat","size":"contain","type":"image","video":"","videoHtml5":"","videoType":"youtube"},"mobile":{"attachment":"scroll","color":"","image":{"backupFileKey":"gempages_501444340413891578-457d5084-1e5d-471b-a6a5-f20fa954a27f.png","height":271,"src":"https://cdn.shopify.com/s/files/1/0810/1563/6283/files/gempages_501444340413891578-457d5084-1e5d-471b-a6a5-f20fa954a27f.png","storage":"FILE_CONTENT","width":513},"loop":"","position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"image","video":"","videoHtml5":"","videoType":"youtube"}},"uid":"rewrap_row_fNVCpRlIBaVF","enableParallax":false,"speedParallax":0.6,"hoverEffect":false,"hoverEffectScale":"100%","layout":{"desktop":{"cols":[12],"display":"fill"},"mobile":{"cols":[12],"display":"fill"},"tablet":{"cols":[12],"display":"fill"}},"contentPosition1Col":{"desktop":"center","tablet":"center"},"contentPosition2Col":{"desktop":"center"},"sizeSetting":{"desktop":{"gap":"","height":"fit-content","shape":"custom","shapeLinked":false,"shapeValue":"","width":"100%","widthHeightLinked":false},"tablet":{"customShapeValue":"","gap":"","height":"fit-content","shape":"custom","shapeLinked":false,"shapeValue":"","width":"100%"},"mobile":{"customShapeValue":"","gap":"","height":"fit-content","shape":"custom","shapeLinked":false,"shapeValue":"","width":"default"}},"videoObjectFit":{},"target":"_self","href":"","linkType":"","hoverEffectDuration":0.5,"isYoutubeVideoMigrated":true}'
+      >
+        
+  <div class="gp-relative gp-flex gp-w-full gp-flex-col gp-items-center gp-overflow-hidden hero-banner-container gp-justify-center tablet:gp-justify-center mobile:gp-justify-center" style="--h:fit-content;--h-tablet:fit-content;--h-mobile:fit-content;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--shadow:none">
+      <div
+        class="gp-hero-banner-bg gp-absolute gp-overflow-hidden gp-w-full gp-h-full top-0 left-0"
+        style="clip-path:inset(0px)"
+      >
+        <div class="hero-banner-bg gp-hero-banner-image-background hero-banner-bg-parallax" style="--bgi:url();--bgi-tablet:url();--bgi-mobile:url({{ "gempages_501444340413891578-457d5084-1e5d-471b-a6a5-f20fa954a27f.png" | file_url }});--h:100%;--h-tablet:100%;--h-mobile:100%;--w:100%;--w-tablet:100%;--w-mobile:100%;--top:;--top-tablet:;--top-mobile:;--bgp:50% 50%;--bgp-tablet:50% 100%;--bgp-mobile:50% 50%;--bgs:contain;--bgs-tablet:contain;--bgs-mobile:cover;--bgr:no-repeat;--bgr-tablet:no-repeat;--bgr-mobile:no-repeat;--duration:0.5s;--scale:100%;--pos:absolute;--pos-tablet:absolute;--pos-mobile:absolute;transform:;transition:transform 0.5s cubic-bezier(0,0,0,1)">
+          
+          
+        </div>
+        
+      </div>
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{}' data-id id data-same-height-subgrid-container class="gp-hero-banner-row tablet:!gp-relative mobile:!gp-relative  tablet:[&>*>*]:!gp-justify-undefined mobile:[&>*>*]:!gp-justify-undefined !gp-content-stretch [&>*]:!gp-justify-center tablet:!gp-content-stretch tablet:[&>*]:!gp-justify-center mobile:!gp-content-stretch mobile:[&>*]:!gp-justify-center mobile:!gp-h-auto gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pl:0px;--pr:0px;--pt:0px;--pb:32px;--pl-mobile:var(--g-s-xl);--pr-mobile:var(--g-s-xl);--pt-mobile:0px;--pb-mobile:var(--g-s-2xl);--cg:32px;--cg-tablet:32px;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:1200px;--w-tablet:var(--g-ct-w, 1200px);--w-mobile:var(--g-ct-w, 1200px);--pc:center;--pc-tablet:center;--pc-mobile:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:end"
+      class="c-hb-rewrap_row_fNVCpRlIBaVF gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"sp-c-nsw-eznomfYacPon"}' data-id="sp-c-nsw-eznomfYacPon" id="sp-c-nsw-eznomfYacPon" data-same-height-subgrid-container class="sp-c-nsw-eznomfYacPon gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pageType:GP_STATIC;--mt:auto;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-tablet:auto;--ml-tablet:auto;--mb-tablet:auto;--mr-tablet:auto;--cg:32px;--cg-tablet:32px;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:370px;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="c-nsw-eznomfYacPon gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div id="gz_SgqjiOn" class="gp-leading-[0] gz_SgqjiOn" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--ta:center">
+      <div data-id="gz_SgqjiOn" class="icon-wrapper gp-inline-flex gp-overflow-hidden gz_SgqjiOn " style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000">
+      
+        <div >
+          <span style="--c:var(--g-c-line-3, line-3);--t:rotate(0deg);--w:100px;--w-tablet:100px;--w-mobile:100px;--h:100px;--h-tablet:100px;--h-mobile:100px;--minw:100px;--minw-tablet:100px;--minw-mobile:100px;--height-desktop:100px;--height-tablet:100px;--height-mobile:100px" class="gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)] gp-text-g-line-3"><svg data-id="563788665541624805" xmlns="http://www.w3.org/2000/svg" width="80" height="44" viewBox="0 0 80 44" fill="none">
+<g id="Isolation_Mode" clip-path="url(#clip0_203_1589)">
+<g id="Group">
+<path id="Vector" d="M6.5954 13.734C5.92801 14.4828 5.20173 15.0148 4.2399 15.1724C2.8266 15.4089 1.70774 14.936 0.804796 13.8719C0.274808 13.2414 0 12.4926 0 11.6453C0 9.02464 0 6.40395 0 3.78326C0 3.62562 0 3.48769 0.0196292 3.29065H1.35441C1.35441 3.5271 1.35441 3.76356 1.35441 4.00001C1.35441 6.50247 1.35441 9.00493 1.35441 11.5271C1.35441 12.67 2.11995 13.5961 3.23881 13.8128C4.5736 14.069 5.86912 13.064 5.92801 11.7044C5.92801 11.5074 5.92801 11.3104 5.92801 11.1133C5.92801 8.76848 5.92801 6.40395 5.92801 4.05912C5.92801 3.82267 5.92801 3.58622 5.92801 3.29065H7.26279C7.26279 3.5271 7.26279 3.76356 7.26279 4.00001C7.26279 6.44336 7.26279 8.88671 7.26279 11.3301C7.26279 11.9409 7.38057 12.5123 7.77315 12.9852C8.40129 13.7537 9.38274 14.069 10.3053 13.734C11.2475 13.399 11.8364 12.5714 11.8364 11.5862C11.8364 9.08375 11.8364 6.58129 11.8364 4.05912C11.8364 3.82267 11.8364 3.58622 11.8364 3.29065H13.1515C13.1515 3.46799 13.1908 3.66503 13.1908 3.84237C13.1908 6.46306 13.1908 9.08375 13.1908 11.6847C13.1908 13.3005 11.9345 14.798 10.3642 15.1133C8.83313 15.4286 7.63575 14.8769 6.61503 13.6946L6.5954 13.734Z" fill="#D21D82"/>
+<path id="Vector_2" d="M58.3183 3.42856C55.0402 2.6995 51.8799 4.72906 51.1732 8.0197C50.447 11.3892 52.6454 14.4236 55.7665 15.133C58.8875 15.8424 61.773 13.5961 62.1459 12H60.7326C58.9464 14.1084 56.5516 14.3251 54.7065 13.2611C53.3913 12.4926 52.508 11.0936 52.3902 9.57635H62.8526C63.1667 7.133 61.4197 4.13792 58.279 3.44827L58.3183 3.42856ZM59.4371 8.23644H57.4742C56.7872 8.23644 56.1198 8.23644 55.4328 8.23644C54.942 8.23644 53.3128 8.25615 52.5277 8.25615C52.5669 8.07881 52.6062 7.92117 52.6847 7.74383C53.0576 6.6995 53.725 5.87191 54.6869 5.30048C55.688 4.70935 56.7676 4.53201 57.9453 4.72906C59.5745 5.00492 61.3019 6.66009 61.4 8.23644H59.4568H59.4371Z" fill="#D21D82"/>
+<path id="Vector_3" d="M49.4851 15.2512H48.1896C48.1896 15.0147 48.1503 14.7783 48.1503 14.5418C48.1503 12.3152 48.1503 10.1083 48.1503 7.88172C48.1503 6.71916 47.6204 5.81275 46.6585 5.18221C44.6563 3.86201 42.1438 5.1231 41.6923 7.17236C41.6138 7.50733 41.5746 7.86201 41.5746 8.21669C41.5746 10.3054 41.5746 12.394 41.5746 14.4827C41.5746 14.7192 41.5746 14.9556 41.5746 15.2315H40.2594C40.2594 15.0147 40.2202 14.8374 40.2202 14.6403C40.2202 12.4137 40.2202 10.2068 40.2202 7.98024C40.2202 5.45807 42.2223 3.64527 44.146 3.32999C46.953 2.87679 49.3673 5.1428 49.4655 7.50733C49.5048 8.19699 49.5047 8.86694 49.5047 9.5566C49.5047 11.2118 49.5047 12.8472 49.5047 14.5024C49.5047 14.7389 49.4851 14.9753 49.4655 15.2315L49.4851 15.2512Z" fill="#D21D82"/>
+<path id="Vector_4" d="M72.2942 11.6059H73.5505C73.6094 11.8227 73.6683 12.0591 73.7272 12.2759C74.0412 13.2808 74.8068 13.8325 75.8864 13.8916C76.8678 13.9507 77.7708 13.202 78.0848 12.2168C78.3793 11.2709 78.0848 10.3448 77.2015 9.7537C76.7304 9.43843 76.2004 9.22168 75.6901 8.96553C75.2582 8.74878 74.8068 8.59114 74.3945 8.35469C72.4905 7.27094 72.8242 4.63055 74.4534 3.66503C76.4556 2.50247 78.6933 4.09853 78.6541 6.00986H77.3585C77.2211 5.22168 76.75 4.72907 75.8667 4.61085C75.749 4.65025 75.5527 4.66996 75.376 4.74878C74.316 5.16257 74.2375 6.54188 74.8853 7.01479C75.2582 7.29065 75.6508 7.5271 76.0434 7.72415C76.6519 8.05912 77.3193 8.31528 77.9082 8.65025C79.5963 9.63548 79.8907 11.6059 79.1841 13.1232C78.5559 14.4631 77.4371 15.1921 76.0238 15.2315C74.1394 15.2906 72.5494 13.9902 72.2746 12.0591C72.255 11.9212 72.2746 11.7636 72.2746 11.5862L72.2942 11.6059Z" fill="#D21D82"/>
+<path id="Vector_5" d="M70.1154 6.04923H68.8199C68.7414 5.85219 68.6825 5.63544 68.5843 5.4384C68.3291 4.88667 67.8188 4.65022 67.2692 4.63051C66.6803 4.61081 66.0522 5.18224 65.8951 5.77337C65.7774 6.28569 65.9933 6.87682 66.5036 7.19209C66.9159 7.44825 67.3477 7.64529 67.7795 7.86204C68.2703 8.09849 68.7806 8.29554 69.2517 8.59111C70.6061 9.39899 71.0969 10.5024 70.9398 11.8817C70.7435 13.596 69.6639 14.7783 68.2114 15.133C65.7185 15.7438 63.5985 13.6748 63.7163 11.6453C63.7948 11.6256 63.8733 11.5862 63.9518 11.5862C64.2855 11.5862 64.5996 11.5862 64.9726 11.5862C65.0118 11.7438 65.0707 11.8817 65.0903 12.0197C65.267 13.1231 66.3073 13.9901 67.5047 13.8719C68.8395 13.734 69.6836 12.6699 69.5854 11.3891C69.5265 10.6798 69.2125 10.1281 68.6236 9.75367C68.2114 9.49751 67.7795 9.30046 67.3477 9.10342C66.8177 8.84726 66.2681 8.61081 65.7577 8.31524C64.7566 7.72411 64.4033 6.798 64.5407 5.67485C64.6781 4.61081 65.5418 3.665 66.5625 3.38913C68.2114 2.93593 69.6836 4.03938 69.9976 5.33987C70.0565 5.55662 70.0761 5.75367 70.1154 6.04923Z" fill="#D21D82"/>
+<path id="Vector_6" d="M32.9966 13.9704V15.2512C32.1526 15.2512 31.3674 15.0936 30.6608 14.6995C28.8745 13.7537 27.7949 12.2956 27.736 10.266C27.6575 6.93596 27.7164 3.58621 27.7164 0.236453C27.7164 0.17734 27.736 0.118227 27.7556 0H29.0315C29.0315 0.236453 29.0512 0.472907 29.0512 0.689655C29.0512 3.70443 29.0904 6.71921 29.0512 9.71429C29.0119 11.9212 30.6608 13.6552 32.5255 13.8128C32.6826 13.8128 32.82 13.8916 32.9966 13.931V13.9704Z" fill="#D21D82"/>
+<path id="Vector_7" d="M38.9246 13.931V15.2315C36.2354 15.2315 34.0958 13.1034 33.7818 10.8965C33.7229 10.4433 33.664 9.99009 33.664 9.53689C33.664 6.62064 33.664 3.68468 33.664 0.768422C33.664 0.531968 33.664 0.295515 33.664 0.0196533H35.0184C35.0184 0.275811 35.0184 0.512264 35.0184 0.729013C35.0184 3.76349 35.0184 6.79798 35.0184 9.81275C35.0184 11.7241 36.2158 13.2807 38.002 13.7536C38.2965 13.8325 38.5909 13.8719 38.9246 13.931Z" fill="#D21D82"/>
+<path id="Vector_8" d="M21.7884 3.42856C18.5103 2.6995 15.35 4.72906 14.6433 8.0197C13.9171 11.3892 16.1155 14.4236 19.2366 15.133C22.3576 15.8424 25.2431 13.5961 25.616 12H24.2027C22.4165 14.1084 20.0217 14.3251 18.1766 13.2611C16.8614 12.4926 15.9781 11.0936 15.8603 9.57635H26.3227C26.6368 7.133 24.8898 4.13792 21.7491 3.44827L21.7884 3.42856ZM22.9072 8.23644H20.9443C20.2573 8.23644 19.5899 8.23644 18.9029 8.23644C18.4121 8.23644 16.7829 8.25615 15.9977 8.25615C16.037 8.07881 16.0763 7.92117 16.1548 7.74383C16.5277 6.6995 17.1951 5.87191 18.157 5.30048C19.158 4.70935 20.2376 4.53201 21.4154 4.72906C23.0446 5.00492 24.772 6.66009 24.8701 8.23644H22.9268H22.9072Z" fill="#D21D82"/>
+</g>
+<g id="Group_2">
+<path id="Vector_9" d="M48.543 33.3597H29.9738C30.6608 35.6454 32.0544 37.1429 34.194 37.9705C34.7436 38.1873 35.3129 38.3449 35.9018 38.3449C36.2551 38.3449 36.8047 38.3449 37.0403 38.3449C38.4339 38.2464 39.2387 37.8917 40.3968 37.1429C40.7305 36.9459 40.9465 36.7291 40.9465 36.7291C42.7327 36.7488 44.9704 36.7291 46.7567 36.7291C46.9726 36.7291 47.2082 36.7686 47.4437 36.7883C45.736 41.34 39.9846 44.808 34.3511 43.7439C27.1864 42.3843 23.3587 35.7242 24.3598 29.8129C25.5572 22.6799 31.7404 18.7193 37.8843 19.4286C41.2409 19.803 43.989 21.4385 46.1286 24.0986C47.7774 26.1676 49.2103 30.0296 48.5626 33.3597H48.543ZM42.6346 29.202C41.5746 26.3449 38.8265 24.7094 35.9607 24.9065C33.4285 25.0838 30.9945 26.8375 30.2486 29.202H42.6346Z" fill="#D21D82"/>
+<path id="Vector_10" d="M50.1722 36.0591C51.9584 36.0591 53.8232 36.0591 55.6291 36.0591C55.7272 36.6109 55.9039 37.1823 56.2768 37.6552C56.4731 37.8916 56.8657 38.1084 57.1405 38.2069C57.4938 38.3251 57.9061 38.4237 58.279 38.3448C59.0838 38.2069 59.7512 37.7734 60.0456 37.0049C60.5167 35.7833 60.0456 34.5419 58.809 33.8916C57.7294 33.3202 56.6302 32.8079 55.5505 32.2562C54.5102 31.7045 53.5287 31.0936 52.724 30.2069C51.7229 29.1232 51.1536 27.8621 51.1536 26.3448C51.1536 23.7833 52.2725 21.7931 54.3532 20.4532C56.7676 18.8966 59.6138 18.9951 61.9693 20.6897C62.7937 21.2808 63.5004 22.0099 63.9715 22.8966C64.5211 23.9212 64.9529 25.0049 64.7763 26.2266L59.3979 26.2857C59.3586 26.1675 59.3194 26.0493 59.2801 25.9311C58.9857 24.9655 57.9257 24.5912 57.1601 25.2217C56.5124 25.7537 56.4142 26.8572 57.3564 27.4089C58.1809 27.8818 59.0642 28.2759 59.9279 28.6897C61.4 29.3596 62.8133 30.1084 63.9911 31.2512C64.8548 32.0788 65.3651 33.1429 65.6203 34.3054C66.0325 36.2759 65.797 38.1872 64.7959 39.9409C63.5592 42.069 61.7141 43.3892 59.2605 43.8227C57.7294 44.0985 56.2572 43.9015 54.8832 43.2907C52.6651 42.3251 51.0751 40.4926 50.4077 38.1872C50.231 37.5567 50.1722 36.7094 50.1525 36.0591H50.1722Z" fill="#D21D82"/>
+<path id="Vector_11" d="M78.6737 38.4237C78.2026 38.404 77.7118 38.3646 77.28 38.2266C76.4359 37.9508 75.6115 37.005 75.6115 35.8621C75.6311 31.8621 75.6115 26.1281 75.6115 26.1281H78.3007L78.2614 21.9114H75.6508C75.6508 21.7143 75.6115 19.0542 75.6115 17.399H69.9779C69.9779 19.6454 69.9583 21.8128 69.9387 21.9705H67.5243V26.1675H69.9779C69.9779 26.5025 69.9779 31.8227 69.9779 35.6059C69.9779 36.0986 70.0368 36.5912 70.0957 37.0641C70.4687 39.4089 71.666 41.2217 73.5897 42.5813C74.7478 43.3892 76.0433 43.803 77.4174 43.9803C78.124 44.0592 78.8503 43.9803 79.5962 43.9803V38.4237C79.2822 38.4237 78.9288 38.4237 78.6148 38.4237H78.6737Z" fill="#D21D82"/>
+<path id="Vector_12" d="M21.7688 29.3399C21.494 27.8424 21.1799 26.3842 20.4143 25.0246C19.747 23.8424 18.9422 22.7783 17.9018 21.931C15.2911 19.7832 12.2879 18.9754 8.95091 19.5271C8.4798 19.6059 8.0087 19.7832 7.5376 19.9212C6.06542 20.335 4.78952 21.1034 3.67066 22.1084C2.76771 22.936 1.98255 23.8621 1.39367 24.9458C0.588875 26.4433 0.0196292 28 0 29.6946C0 34.4433 0 39.1921 0 43.9409H5.45691C5.45691 43.9409 5.49617 43.9409 5.5158 43.9212V43.0936C5.5158 39.0148 5.5158 34.9162 5.5158 30.8374C5.5158 30.3054 5.55506 29.7537 5.6532 29.2414C5.88875 28.0591 6.47763 27.0542 7.4002 26.2857C8.65647 25.2217 10.0894 24.8079 11.7382 25.0443C13.2301 25.2611 14.3686 26.0296 15.2715 27.2118C16.0763 28.2759 16.2726 29.5172 16.2726 30.798C16.2922 34.9162 16.2726 39.0148 16.2726 43.133C16.2726 43.3891 16.2726 43.6256 16.2922 43.9212H21.7295C21.7295 43.665 21.7688 43.4877 21.7688 43.3103C21.7688 38.8374 21.7688 34.3842 21.7688 29.9113C21.7688 29.7143 21.7688 29.5369 21.7688 29.3399Z" fill="#D21D82"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_203_1589">
+<rect width="79.6552" height="44" fill="white"/>
+</clipPath>
+</defs>
+</svg></span>
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="eznomfYacPon"
+        class="eznomfYacPon"
+        style="--ta:center;--pageType:GP_STATIC;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:16px;--size-tablet:16px;--size-mobile:18px;--c:rgb(52, 51, 65);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.geznomfYacPon_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gINUbt-0mq"
+        class="gINUbt-0mq"
+        style="--ta:center;--pageType:GP_STATIC;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:rgb(52, 51, 65);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggINUbt-0mq_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gxSsBFLzLZ"}' data-id="gxSsBFLzLZ" id="gxSsBFLzLZ" data-same-height-subgrid-container class="gxSsBFLzLZ gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--cg:8px;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gN3uIKYta0 gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div id="go1TohnlAW" class="gp-leading-[0] go1TohnlAW" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center">
+      <div data-id="go1TohnlAW" class="icon-wrapper gp-inline-flex gp-overflow-hidden go1TohnlAW " style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000">
+      
+        <div >
+          <span style="--c:var(--g-c-line-3, line-3);--t:rotate(0deg);--w:20px;--w-tablet:20px;--w-mobile:20px;--h:20px;--h-tablet:20px;--h-mobile:20px;--minw:20px;--minw-tablet:20px;--minw-mobile:20px;--height-desktop:20px;--height-tablet:20px;--height-mobile:20px" class="gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)] gp-text-g-line-3"><svg data-id="563788856868995889" xmlns="http://www.w3.org/2000/svg" width="26" height="19" viewBox="0 0 26 19" fill="none">
+<g id="ð¦ icon &quot;mail&quot;">
+<path id="Vector" d="M7.28564 6.07227L12.9999 10.0723L18.7142 6.07227" stroke="#D76C95" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M1.57129 15.2143V3.78571C1.57129 2.52335 2.59464 1.5 3.857 1.5H22.1427C23.4051 1.5 24.4284 2.52335 24.4284 3.78571V15.2143C24.4284 16.4767 23.4051 17.5 22.1427 17.5H3.857C2.59464 17.5 1.57129 16.4767 1.57129 15.2143Z" stroke="#D76C95" stroke-width="1.4"/>
+</g>
+</svg></span>
+        </div>
+      </div>
+    </div>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gty8mJbUXZ gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gmq_rxa5Z0"
+        class="gmq_rxa5Z0"
+        style="--ta:center;--pageType:GP_STATIC;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:500;--size:16px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#d76c95;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggmq_rxa5Z0_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gvnZqhBKwk"
+        class="gvnZqhBKwk"
+        style="--ta:center;--pageType:GP_STATIC;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:50%;--w-mobile:80%;--tdt:auto;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:300;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:rgb(52, 51, 65);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggvnZqhBKwk_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+        
+    <picture style="border-radius:inherit" class="gp-w-full gp-invisible -gp-z-1">
+      
+      <source media="(max-width: 767px)" data-srcSet="{{ "gempages_501444340413891578-457d5084-1e5d-471b-a6a5-f20fa954a27f.png" | file_url }}" srcset="{{ "gempages_501444340413891578-457d5084-1e5d-471b-a6a5-f20fa954a27f.png" | file_url }}" />
+      <source media="(max-width: 1024px)" data-srcSet="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTE5MjAtOTAwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjkwMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjZy0xOTIwLTkwMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTE5MjAiIHRvPSIxOTIwIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTE5MjAtOTAwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjkwMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjZy0xOTIwLTkwMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTE5MjAiIHRvPSIxOTIwIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+" />
+    
+      
+      <img
+        loading="eager" fetchpriority="high" title fallbackImg="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTE5MjAtOTAwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjkwMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjZy0xOTIwLTkwMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTE5MjAiIHRvPSIxOTIwIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTE5MjAtOTAwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjkwMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjZy0xOTIwLTkwMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTE5MjAiIHRvPSIxOTIwIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+" data-src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTE5MjAtOTAwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjkwMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjZy0xOTIwLTkwMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTE5MjAiIHRvPSIxOTIwIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+"
+        alt=""
+        width="100%"
+        style="--d:none;--d-tablet:none;--d-mobile:none;--h:fit-content;--h-tablet:fit-content;--h-mobile:fit-content;--w:100%;--w-tablet:100%;--w-mobile:var(--g-ct-w)"
+        class="adaptive-hero-banner"
+      />
+    
+    </picture>
+  
+  </div>
+
+        
+      </gp-hero-banner>
+       <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-hero-banner-v2-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+
+  
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"sp-i2l5dbb3e3516"}' data-id="sp-i2l5dbb3e3516" id="sp-i2l5dbb3e3516" data-same-height-subgrid-container class="sp-i2l5dbb3e3516 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pageType:GP_STATIC;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--cg:32px;--cg-tablet:32px;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="i2l5dbb3e3516 gp-relative gp-flex gp-flex-col"
+    >
+      
+    <gp-button
+      gp-data='{"btnLink":{"link":"#gRWc4Cnpjy","selectedTab":"scrollToList","target":"_self","title":"Section"}}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--pageType:GP_STATIC;--mt:0px;--ml:0px;--mb:5px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--ta:center" >
+        <style>[data-id="gEiHFSjSkO"].gp-button-base::before, [data-id="gEiHFSjSkO-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      
+  
+    }
+  
+      
+  [data-id="gEiHFSjSkO"]:hover::before, [data-id="gEiHFSjSkO-interaction"]:hover::before {
+    
+    
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      
+  }</style>
+        <a
+            class="gp-trigger-button-link gp-hidden"
+            href=#gRWc4Cnpjy
+            target=_self
+          ></a>
+        <a
+          data-id="gEiHFSjSkO" dataId="gEiHFSjSkO" data-state="idle" aria-label="<p>Try FloralFresh Now!</p>"
+          
+          href="#gRWc4Cnpjy" target="_self"
+          style="--w:500px;--w-tablet:500px;--w-mobile:350px;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:25px;--pr:25px;--pt:16px;--pb:var(--g-s-l);--pl-mobile:25px;--pr-mobile:25px;--pt-mobile:16px;--pb-mobile:var(--g-s-l);--bblr:50px;--bbrr:50px;--btlr:50px;--btrr:50px;--hvr-bblr:50px;--hvr-bbrr:50px;--hvr-btlr:50px;--hvr-btrr:50px;--shadow:none;--bgi:;--hvr-bgi:;--hvr-bg:#5bcc1a;--bg:#5BCC1A;--c:rgb(255, 255, 255);--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:600;--size:24px;--size-tablet:22px;--size-mobile:20px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--ls:Auto"
+          class="gEiHFSjSkO gp-text-center gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex">
+          
+          
+    <span
+      data-gp-text
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:600;--size:24px;--size-tablet:22px;--size-mobile:20px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--ls:Auto;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggEiHFSjSkO_label }}
+    </span>
+        </div>
+        
+        </a>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"ggfyh-tlGf"}' data-id="ggfyh-tlGf" id="ggfyh-tlGf" data-same-height-subgrid-container class="ggfyh-tlGf gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:4px;--cg:8px;--cg-mobile:5px;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gG1IkfUUcJ gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div id="gAkr_S99KP" class="gp-leading-[0] gAkr_S99KP" style="--pageType:GP_STATIC;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--ta:left">
+      <div data-id="gAkr_S99KP" class="icon-wrapper gp-inline-flex gp-overflow-hidden gAkr_S99KP " style="--bs:none;--bc:#121212">
+      
+        <div >
+          <span style="--c:rgb(62, 205, 127);--t:rotate(0deg);--height-desktop:undefined;--height-tablet:undefined;--height-mobile:undefined" class="gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)] "><svg data-id="563752135653589989" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+<path d="M12.2533 2.98584H4.75334C3.25334 2.98584 2.5 3.7325 2.5 5.2325V12.7325C2.5 14.2325 3.25334 14.9858 4.75334 14.9858H12.2533C13.7533 14.9858 14.5 14.2325 14.5 12.7325V5.2325C14.5 3.7325 13.7533 2.98584 12.2533 2.98584ZM11.1867 7.78585L8.07332 10.8925C7.97999 10.9925 7.85334 11.0392 7.72001 11.0392C7.59334 11.0392 7.46666 10.9925 7.36666 10.8925L5.81331 9.33919C5.61998 9.14586 5.61998 8.82582 5.81331 8.63249C6.00665 8.43915 6.32669 8.43915 6.52002 8.63249L7.72001 9.83252L10.48 7.07918C10.6733 6.87918 10.9934 6.87918 11.1867 7.07918C11.38 7.27252 11.38 7.58585 11.1867 7.78585Z" fill="#1FDD54"/>
+</svg></span>
+        </div>
+      </div>
+    </div>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gr5sO0JFSN gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g3In78yG5O"
+        class="g3In78yG5O"
+        style="--ta:left;--pageType:GP_STATIC;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:500;--size:18px;--size-tablet:18px;--size-mobile:18px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--fs:italic;--c:#4A4A4A;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gg3In78yG5O_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+    <div id="g4jf306HZ-" class="gp-leading-[0] g4jf306HZ-" style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--left:200px;--left-mobile:150px;--left-tablet:160px;--op:100%;--pageType:GP_STATIC;--pos:relative;--pos-mobile:relative;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--mb-mobile:0px;--top:-215px;--top-mobile:-200px;--top-tablet:-230px;--ta:center">
+      <div data-id="g4jf306HZ-" class="icon-wrapper gp-inline-flex gp-overflow-hidden g4jf306HZ- " style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000">
+      
+        <div >
+          <span style="--c:var(--g-c-line-3, line-3);--t:rotate(0deg);--w:103px;--w-tablet:80px;--w-mobile:80px;--h:103px;--h-tablet:80px;--h-mobile:80px;--minw:103px;--minw-tablet:80px;--minw-mobile:80px;--height-desktop:103px;--height-tablet:80px;--height-mobile:80px" class="gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)] gp-text-g-line-3"><svg data-id="563788747733205989" xmlns="http://www.w3.org/2000/svg" width="120" height="135" viewBox="0 0 120 135" fill="none">
+<g id="Elements" clip-path="url(#clip0_203_3771)">
+<path id="Vector" d="M86.568 110.59C89.6697 109.093 92.7654 107.585 96.1675 105.94C97.3259 108.338 96.384 110.634 94.3925 111.93C89.9177 114.824 85.3829 117.821 80.4615 119.743C75.031 121.868 72.3346 119.554 72.2757 113.712C72.2231 108.476 72.3371 103.251 72.4353 98.0212C72.4607 96.3952 72.2356 94.5225 74.8275 94.0265C77.2728 96.527 76.3484 99.8824 76.7297 102.869C77.1182 105.96 77.1732 109.096 77.4341 113.317C79.0928 111.267 80.1827 110.117 81.0553 108.822C89.389 96.4205 93.6923 82.8487 92.0974 67.6256C91.3608 60.6217 89.2965 54.0401 85.0788 48.2946C78.8437 39.799 71.5428 37.1379 61.6293 40.1978C57.4814 41.4794 53.6471 43.7561 49.5771 45.6287C50.4801 47.932 51.1059 49.4626 51.7019 51.0106C54.5659 58.5746 52.4988 64.9795 47.2231 70.4799C45.1232 72.6658 42.54 74.389 39.2845 73.038C36.1933 71.7401 35.0436 68.8766 34.6768 65.8003C34.1168 61.1577 35.5741 56.9093 37.7359 52.9541C39.1398 50.3752 40.9154 47.9992 42.6551 45.3328C41.4542 42.4044 38.6725 41.0884 36.1516 39.6475C29.7216 35.964 22.7297 35.4109 15.5939 36.052C10.6772 36.4957 5.78331 37.1156 0.606016 37.6842C2.40531 34.3196 3.59526 33.7068 15.6023 32.9329C20.8834 32.5881 26.4831 32.721 31.5416 34.1443C36.7744 35.615 41.5143 38.9166 47.5097 41.9465C49.4605 40.8088 52.3468 38.8277 55.486 37.3489C69.5629 30.7237 82.2389 34.5964 90.7057 47.8565C96.2728 56.5791 98.2263 66.15 97.8414 76.2857C97.4406 86.7828 94.3802 96.4478 88.8469 105.28C87.8777 106.82 86.9085 108.361 85.9392 109.901C86.1521 110.129 86.3651 110.356 86.578 110.584L86.568 110.59ZM46.0835 50.0221C39.4267 56.5852 37.5799 63.9854 41.4572 68.5754C48.797 64.2814 50.6682 56.7858 46.0835 50.0221Z" fill="#88E950"/>
+</g>
+<defs>
+<clipPath id="clip0_203_3771">
+<rect width="72.7411" height="112.846" fill="white" transform="translate(0 36.6445) rotate(-30.2502)"/>
+</clipPath>
+</defs>
+</svg></span>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    
+    "name": "Section 19",
+    "tag": "section",
+    "class": "gps-563645721162613555 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=GP_STATIC&editorId=563645721060836147&sectionId=563645721162613555)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"gDXpeJySIegHq_text","label":"gDXpeJySIegHq_text","default":"<p>Still Not Sure?</p>"},{"type":"html","id":"gumjwRkQTLmeE_text","label":"gumjwRkQTLmeE_text","default":"Here Are The Top Questions We Get About <span style=\"color:#D76C95;\">FloralFresh</span>"},{"type":"html","id":"gg5r5suHM2c_childItem_0","label":"gg5r5suHM2c_childItem_0","default":"<p>Product</p>"},{"type":"html","id":"gg5r5suHM2c_childItem_1","label":"gg5r5suHM2c_childItem_1","default":"<p>Shipping</p>"},{"type":"html","id":"gg5r5suHM2c_childItem_2","label":"gg5r5suHM2c_childItem_2","default":"<p>Others</p>"},{"type":"html","id":"gg5r5suHM2c_childItem_3","label":"gg5r5suHM2c_childItem_3","default":"<p>Reference</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_0","label":"ggMAwlGrXGm_childItem_0","default":"<p>What are vaginal prebiotics + probiotics?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_1","label":"ggMAwlGrXGm_childItem_1","default":"<p>How does FloraFresh work?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_2","label":"ggMAwlGrXGm_childItem_2","default":"<p>What is a synbiotic?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_3","label":"ggMAwlGrXGm_childItem_3","default":"<p>Can I take FloraFresh with other supplements?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_4","label":"ggMAwlGrXGm_childItem_4","default":"<p>Who should take FloraFresh?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_5","label":"ggMAwlGrXGm_childItem_5","default":"<p>How do I take FloraFresh?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_6","label":"ggMAwlGrXGm_childItem_6","default":"<p>Can FloraFresh be taken with prescription medications?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_7","label":"ggMAwlGrXGm_childItem_7","default":"<p>Are there any side effects I should be concerned about with FloraFresh?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_8","label":"ggMAwlGrXGm_childItem_8","default":"<p>How long does it take for FloraFresh to work?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_9","label":"ggMAwlGrXGm_childItem_9","default":"<p>Can vaginal probiotics affect my menstrual cycle?</p>"},{"type":"html","id":"ggMAwlGrXGm_childItem_10","label":"ggMAwlGrXGm_childItem_10","default":"<p>What are the key ingredients in FloraFresh?</p>"},{"type":"html","id":"gghzAEIneIS_text","label":"gghzAEIneIS_text","default":"<p>FloraFresh is a carefully formulated vaginal prebiotic + probiotic supplement designed to support a balanced vaginal microbiome. It contains a synergistic blend of probiotics and prebiotics to maintain optimal vaginal pH, promote healthy flora, and help manage unwanted dryness and odors naturally.</p>"},{"type":"html","id":"ggchKAmY9Py_text","label":"ggchKAmY9Py_text","default":"<p>FloraFresh works by replenishing beneficial bacteria in the vaginal ecosystem, helping to crowd out non-beneficial microbes and support a healthy balance. The probiotic strains in FloraFresh—<strong>Lactobacillus salivarius, Lactobacillus rhamnosus, Lactobacillus reuteri, and Lactobacillus gasseri</strong>—have been selected for their ability to promote vaginal health, while <strong>Xylooligosaccharides (Prebiotic XOS) and D-Mannose</strong> provide additional support.</p>"},{"type":"html","id":"ggAf5i_TgPF_text","label":"ggAf5i_TgPF_text","default":"<p>A synbiotic combines both <strong>probiotics (beneficial bacteria)</strong> and <strong>prebiotics (nutrients that help probiotics thrive)</strong> to maximize their effectiveness. FloraFresh’s <strong>probiotic blend (15 Billion CFUs)</strong> works in harmony with XOS prebiotics to create a supportive environment for vaginal wellness.</p>"},{"type":"html","id":"ggaIXTmsXZA_text","label":"ggaIXTmsXZA_text","default":"<p>Yes! FloraFresh is designed to complement other wellness supplements. It pairs well with urinary tract support formulas, PMS relief supplements, and general gut health probiotics. However, if you are taking multiple probiotic formulas, consider spacing them throughout the day for best results.</p>"},{"type":"html","id":"gg3O1d12p5q_text","label":"gg3O1d12p5q_text","default":"<p>FloraFresh is ideal for <strong>women ages 20 and up</strong> who want to maintain a <strong>healthy vaginal microbiome</strong>. It’s especially beneficial for those prone to <strong>imbalance, odor concerns, or discomfort due to pH shifts</strong>.</p>"},{"type":"html","id":"ggi2qbtFyBl_text","label":"ggi2qbtFyBl_text","default":"<p>Take <strong>2 capsules per day</strong>, preferably with food, or as directed by your healthcare provider. For best results, make FloraFresh part of your <strong>daily wellness routine</strong>.</p>"},{"type":"html","id":"ggUZFDBANHF_text","label":"ggUZFDBANHF_text","default":"<p>If you are taking prescription medications or have a medical condition, it's best to <strong>consult your healthcare provider</strong> before starting any new supplement. Do not use if the safety seal is broken or missing.</p>"},{"type":"html","id":"gg61CD1i7Kc_text","label":"gg61CD1i7Kc_text","default":"<p>Warning: Don’t bother hauling extra menstrual pads to work! FloraFresh might hit you with a hydration wave so wild you’ll think you’re Niagara Falls down there—but relax, it’s just our probiotics and Vitamin C turning your dusty, stinky woes into a hot, fresh splash party!</p>"},{"type":"html","id":"ggWKzj3mZYo_text","label":"ggWKzj3mZYo_text","default":"<p>Many users notice improvements within 7-14 days, with full benefits after 8 weeks of consistent use. Individual results may vary, but we're confident you'll see positive changes</p>"},{"type":"html","id":"ggjapvgxD2E_text","label":"ggjapvgxD2E_text","default":"<p>Probiotics do not directly alter menstrual cycles, but lifestyle factors, stress, and diet can contribute to cycle changes. If you experience any unusual shifts, consult your healthcare provider.</p>"},{"type":"html","id":"ggOoj1p_I0j_text","label":"ggOoj1p_I0j_text","default":"<p>Each serving (2 capsules) contains:</p><ul><li><strong>Vitamin C (as Ascorbic Acid) – 40mg</strong> (44% DV)</li><li><strong>FloraFresh Probiotic Blend – 54mg</strong> (15 Billion CFUs of Lactobacillus strains)</li><li><strong>Xylooligosaccharides (Prebiotic XOS) – 50mg</strong></li><li><strong>D-Mannose – 50mg</strong></li><li><strong>(Capsules are free from artificial additives, gluten, dairy, and GMOs.)</strong></li></ul>"},{"type":"html","id":"ggYCBVBXnrj_childItem_0","label":"ggYCBVBXnrj_childItem_0","default":"<p>Is my credit card information secure?</p>"},{"type":"html","id":"ggYCBVBXnrj_childItem_1","label":"ggYCBVBXnrj_childItem_1","default":"<p>Where do you ship?</p>"},{"type":"html","id":"ggYCBVBXnrj_childItem_2","label":"ggYCBVBXnrj_childItem_2","default":"<p>How much does shipping cost?</p>"},{"type":"html","id":"ggYCBVBXnrj_childItem_3","label":"ggYCBVBXnrj_childItem_3","default":"<p>How do I track my package?</p>"},{"type":"html","id":"ggYCBVBXnrj_childItem_4","label":"ggYCBVBXnrj_childItem_4","default":"<p>I didn’t receive a shipping or order confirmation. Help!</p>"},{"type":"html","id":"gg8VFpLp-___text","label":"gg8VFpLp-___text","default":"<p>Yes, all credit card transactions are securely processed through Shopify, PayPal, or Amazon.</p>"},{"type":"html","id":"ggXNgRoGZ7a_text","label":"ggXNgRoGZ7a_text","default":"<p>We offer shipping worldwide!<br>&nbsp;</p>"},{"type":"html","id":"ggxwe77QI9n_text","label":"ggxwe77QI9n_text","default":"<p>Shipping is free for bundle of 60 days and 120 days!</p>"},{"type":"html","id":"ggZniogzhxv_text","label":"ggZniogzhxv_text","default":"<p>Want to know if your vitamins are on their way? Tracking information should have been sent to you via email when you placed your order. If you didn’t receive it, send us an email at support@wellnessnest.co.</p>"},{"type":"html","id":"ggR5-TNGLAP_text","label":"ggR5-TNGLAP_text","default":"<p>No worries! Email us at support@wellnessnest.co, and we’ll sort it out for you.</p>"},{"type":"html","id":"ggih2t7nP_S_childItem_0","label":"ggih2t7nP_S_childItem_0","default":"<p>Are Wellness Nest supplements FDA-approved?</p>"},{"type":"html","id":"ggih2t7nP_S_childItem_1","label":"ggih2t7nP_S_childItem_1","default":"<p>Are there any artificial flavors, colors, or dyes in Wellness Nest supplements?</p>"},{"type":"html","id":"ggih2t7nP_S_childItem_2","label":"ggih2t7nP_S_childItem_2","default":"<p>Where are Wellness Nest supplements manufactured?</p>"},{"type":"html","id":"gghcyelJxPO_text","label":"gghcyelJxPO_text","default":"<p>By law, the FDA does not approve dietary supplements. However, it does regulate both dietary supplements and their ingredients. At Wellness Nest, we comply with the FDA’s “Current Good Manufacturing Practice” (cGMP) regulations, established in 2007. These require manufacturers to evaluate products for identity, purity, strength, and composition. We go further by testing for stability with our manufacturers and conducting third-party testing for potency of active ingredients, as well as screening for adulterants like heavy metals and microbes, allergens, rancidity, and other unwanted contaminants.</p>"},{"type":"html","id":"gg1LLfWGFbH_text","label":"gg1LLfWGFbH_text","default":"<p>Nope! Our vitamins are all-natural, made with vegan, non-GMO, and gluten-free ingredients.</p>"},{"type":"html","id":"ggsXWr7i8ur_text","label":"ggsXWr7i8ur_text","default":"<p>Wellness Nest supplements are formulated, manufactured, and packaged with care right here in the USA. That said, some of our products may occasionally be backstocked from third-party manufacturers partnering with our main supplier, based in India, China, or Vietnam.</p>"},{"type":"html","id":"ggujEU4nA-I_text","label":"ggujEU4nA-I_text","default":"<p><strong>1. Johns Hopkins Medicine</strong>: https://www.hopkinsmedicine.org/health/wellness-and-prevention/turmeric-benefits</p><p><strong>2. Idyl</strong>: https://www.idyl.co.in/blogs/blog/unlock-the-heart-healthy-secrets-of-curry-leaves</p><p><strong>3. Journal of Midwifery &amp; Women's Health</strong>: https://journals.lww.com/jomh/fulltext/2024/15010/exploring_the_efficacy_and_safety_of_black_cohosh.3.aspx</p><p><strong>4. PMC</strong>: https://pmc.ncbi.nlm.nih.gov/articles/PMC9881416/</p><p><strong>5. PubMed</strong>: https://pubmed.ncbi.nlm.nih.gov/16552838/</p><p><strong>6. Medical News Today</strong>: https://www.medicalnewstoday.com/articles/317530</p><p><strong>7. Harvard Health Publishing</strong>: https://www.health.harvard.edu/staying-healthy/turmeric-benefits-a-look-at-the-evidence</p><p><strong>8. NDTV</strong>: https://www.ndtv.com/food/diabetes-how-curry-leaves-kadi-patta-help-manage-blood-sugar-levels-1949847</p><p><strong>9. NIH</strong>: https://ods.od.nih.gov/factsheets/BlackCohosh-HealthProfessional/</p><p><strong>10. WebMD</strong>: https://www.webmd.com/vitamins/ai/ingredientmono-662/turmeric</p><p><strong>11. Healthline</strong>: https://www.healthline.com/nutrition/curry-leaves-benefits</p><p><strong>12. Mount Sinai</strong>: https://www.mountsinai.org/health-library/herb/black-cohosh</p><p><strong>13. Mayo Clinic</strong>: https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-minute-are-there-health-benefits-to-taking-turmeric/</p><p><strong>14. Healthline</strong>: https://www.healthline.com/nutrition/top-10-evidence-based-health-benefits-of-turmeric</p>"},{"type":"html","id":"geznomfYacPon_text","label":"geznomfYacPon_text","default":"<p><strong>Still have questions?</strong></p>"},{"type":"html","id":"ggINUbt-0mq_text","label":"ggINUbt-0mq_text","default":"<p>Contact our support team at</p>"},{"type":"html","id":"ggmq_rxa5Z0_text","label":"ggmq_rxa5Z0_text","default":"<p>support@wellnessnest.co</p>"},{"type":"html","id":"ggvnZqhBKwk_text","label":"ggvnZqhBKwk_text","default":"<p>or check out our <strong>Help Center</strong> for more details&nbsp;</p>"},{"type":"html","id":"ggEiHFSjSkO_label","label":"ggEiHFSjSkO_label","default":"<p>Try FloralFresh Now!</p>"},{"type":"html","id":"gg3In78yG5O_text","label":"gg3In78yG5O_text","default":"<p><i>90-Day Money-back Guarantee</i></p>"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

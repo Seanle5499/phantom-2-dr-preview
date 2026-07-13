@@ -1,0 +1,230 @@
+{% comment %}
+  Quiz Funnel 2 — Styles
+  All scoped CSS for the quiz funnel (.qf namespace)
+{% endcomment %}
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== SCOPED RESET — only inside .qf ===== */
+  .qf *{margin:0;padding:0;box-sizing:border-box}
+  .qf{
+    font-family:'Montserrat',Helvetica,Arial,sans-serif;
+    background:#f7ffd8;min-height:100vh;color:#121212;
+    line-height:1.5;-webkit-font-smoothing:antialiased;
+  }
+
+  /* HEADER + PROGRESS */
+  .qf-topbar{padding:8px;background:#fff}
+
+  /* TOP PROGRESS BAR */
+  .qf-progress{background:#e8e8e8;height:8px;width:100%;border-radius:99px;overflow:hidden}
+  .qf-progress__fill{
+    background:#54b94a;height:100% !important;width:0%;
+    transition:width 0.4s ease;border-radius:99px;
+    display:block !important;
+  }
+  .qf-stepper__label{font-size:13px;font-weight:600;color:#999;text-align:center;padding:8px 0 0}
+
+  .qf-wrap{max-width:580px;margin:0 auto;padding:24px 18px 60px}
+  .qf-step{display:none;animation:qfIn .3s ease}
+  .qf-step.active{display:block}
+  @keyframes qfIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+
+  .qf-back{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:13px;color:#aaa;cursor:pointer;
+    background:none;border:none;font-family:inherit;margin-bottom:16px;
+    position:absolute;left:18px;top:80px;z-index:10;
+  }
+  .qf-back:hover{color:#666}
+  .qf-back svg{width:16px;height:16px}
+
+  .qf-q{font-size:22px;font-weight:800;text-align:center;margin-bottom:8px;color:#1a1a1a;line-height:1.35;padding:0 10px}
+  .qf-sub{font-size:13px;text-align:center;color:#888;margin-bottom:24px;font-weight:400}
+  .qf-skip{
+    font-size:11px;color:#bbb;text-decoration:underline;cursor:pointer;
+    text-transform:uppercase;font-weight:600;letter-spacing:.5px;
+    display:block;text-align:center;margin-top:16px;
+  }
+  .qf-terms{font-size:11px;color:#bbb;text-align:center;margin-top:20px;line-height:1.6}
+  .qf-terms a{color:#54b94a;text-decoration:underline}
+
+  /* OPTIONS */
+  .qf-opts{display:flex;flex-direction:column;gap:12px}
+  .qf-opt{
+    background:#fff;border:2px solid #eaeaeb;border-radius:12px;
+    padding:16px 20px;cursor:pointer;transition:all .2s;
+    display:flex;align-items:center;gap:14px;font-size:15px;font-weight:500;color:#333;
+    width:100%;text-align:left;font-family:inherit;line-height:inherit;
+    -webkit-appearance:none;appearance:none;outline:none;
+  }
+  .qf-opt:hover{border-color:#54b94a;background:#f0faf0}
+  .qf-opt.sel{border-color:#54b94a;background:#54b94a;color:#ffffffe6}
+  .qf-opt__ico{
+    width:48px;height:48px;border-radius:50%;background:#f7ffd8;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;
+  }
+  .qf-opt__ico img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+  .qf-opt.sel .qf-opt__ico{background:rgba(255,255,255,.2)}
+  .qf-opt__ico--svg{background:#fff;border:1px solid #eee}
+  .qf-opt__ico--svg img{width:28px;height:28px;object-fit:contain;border-radius:0}
+  .qf-opt__txt{flex:1}
+  .qf-opt__label{font-weight:700;font-size:15px}
+  .qf-opt__desc{font-size:13px;font-weight:400;color:#505051;margin-top:2px}
+  .qf-opt.sel .qf-opt__desc{color:rgba(255,255,255,.7)}
+  .qf-opt.sel .qf-opt__label{color:#ffffffe6}
+
+  .qf-opts--grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .qf-opt--grid{flex-direction:column;text-align:center;padding:18px 10px}
+  .qf-opt--grid .qf-opt__ico{width:72px;height:72px;margin:0 auto 8px}
+
+  .qf-opt--multi{position:relative}
+  .qf-chk{
+    width:22px;height:22px;border:2px solid #ccc;border-radius:6px;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;
+  }
+  .qf-opt--multi.sel .qf-chk{background:#fff;border-color:#fff}
+  .qf-chk svg{display:none;width:14px;height:14px}
+  .qf-opt--multi.sel .qf-chk svg{display:block;stroke:#54b94a;stroke-width:3}
+
+  /* BUTTONS */
+  .qf-btn{
+    display:block;width:100%;max-width:400px;margin:24px auto 0;
+    padding:16px 28px;background:#54b94a;color:#fff;border:none;
+    border-radius:8px;font-size:16px;font-weight:600;
+    font-family:inherit;cursor:pointer;transition:all .2s;
+    text-align:center;
+  }
+  .qf-btn:hover{background:#46a33e}
+  .qf-btn:disabled{background:#b0d4b0;cursor:not-allowed}
+  .qf-btn--green{background:#54b94a}
+  .qf-btn--green:hover{background:#46a33e}
+
+  /* SOCIAL PROOF */
+  .qf-social{text-align:center;padding:20px 0}
+  .qf-social__num{font-size:26px;font-weight:800;color:#54b94a;margin-bottom:4px}
+  .qf-social__num u{text-decoration:underline}
+  .qf-social__txt{font-size:16px;color:#666;margin-bottom:20px}
+  .qf-social__img{max-width:100%;margin:0 auto;display:block}
+
+  /* TRANSITION */
+  .qf-transition{text-align:center;padding:10px 0}
+  .qf-transition__title{font-size:22px;font-weight:800;color:#1a1a1a;line-height:1.4;margin-bottom:12px}
+  .qf-transition__sub{font-size:14px;color:#333;line-height:1.6;margin-bottom:20px}
+  .qf-transition__img{display:block;max-width:100%;margin:20px auto 0}
+
+  /* WHY WE ASK */
+  .qf-whyask{display:block;max-width:100%;margin:20px auto 0;border-radius:12px}
+
+  /* SUMMARY CARD */
+  .qf-sumcard{background:#fff;border-radius:12px;padding:20px;margin-top:16px;overflow:hidden}
+  .qf-sumcard__hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .qf-sumcard__hdr-title{font-size:15px;font-weight:700;color:#1a1a1a}
+  .qf-sumcard__badge{
+    background:#fce3e3;border:1px solid #f9bdbd;color:#f04d4d;
+    font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;
+  }
+  .qf-sumcard__photo{display:block;width:160px;height:160px;object-fit:cover;margin:0 auto 16px;border-radius:0}
+  .qf-sumcard__slider-wrap{background:#f8f7fa;border-radius:15px;padding:12px 16px;margin-bottom:12px}
+  .qf-sumcard__slider{
+    height:10px;border-radius:8px;position:relative;
+    background:linear-gradient(90deg,rgb(150,217,255) 1.63%,rgb(183,245,168) 24.72%,rgb(249,235,124) 54.9%,rgb(233,107,88) 81.94%);
+  }
+  .qf-sumcard__circle{
+    position:absolute;top:50%;width:20px;height:20px;
+    background:#fff;border:3px solid #999;border-radius:50%;
+    transform:translate(-50%,-50%);left:0%;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
+  .qf-sumcard__tooltip{
+    position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+    background:#1a1a1a;color:#fff;font-size:11px;font-weight:700;
+    padding:4px 10px;border-radius:6px;white-space:nowrap;
+  }
+  .qf-sumcard__tooltip::after{
+    content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    border:5px solid transparent;border-top-color:#1a1a1a;
+  }
+  .qf-sumcard__scale{display:flex;justify-content:space-between;font-size:11px;color:#aaa;margin-top:8px;font-weight:600}
+  .qf-sumcard__scale span:last-child{color:#666}
+  .qf-sumcard__alert{
+    background:#fce3e3;border-radius:8px;padding:14px;
+    display:flex;gap:14px;align-items:flex-start;margin-top:12px;
+  }
+  .qf-sumcard__alert-icon{
+    width:32px;height:32px;background:#f9bdbd;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .qf-sumcard__alert-icon svg{width:18px;height:18px;color:#f04d4d}
+  .qf-sumcard__alert-label{font-size:13px;font-weight:700;color:#1a1a1a}
+  .qf-sumcard__alert-text{font-size:12px;color:#666;margin-top:2px;line-height:1.5}
+
+  /* METRICS GRID */
+  .qf-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  .qf-metric{background:#fff;border-radius:12px;padding:16px;display:flex;align-items:center;gap:12px}
+  .qf-metric__ico{
+    width:40px;height:40px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .qf-metric__ico--yellow{background:#fef3e6}
+  .qf-metric__ico--green{background:#e8f5e9}
+  .qf-metric__ico--blue{background:#e3f2fd}
+  .qf-metric__ico--purple{background:#f3e5f5}
+  .qf-metric__ico img{width:22px;height:22px}
+  .qf-metric__lbl{font-size:11px;color:#999;font-weight:600}
+  .qf-metric__val{font-size:14px;font-weight:700;color:#1a1a1a;margin-top:1px}
+
+  /* LOADING PROGRESS BARS */
+  .qf-load{margin-top:20px}
+  .qf-load__item{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:12px;opacity:.3;transition:opacity .3s}
+  .qf-load__item.active{opacity:1}
+  .qf-load__item.done{opacity:1}
+  .qf-load__hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  .qf-load__label{font-size:14px;font-weight:700;color:#333}
+  .qf-load__pct{font-size:14px;font-weight:700;color:#333}
+  .qf-load__chk{color:#54b94a;font-size:20px;display:none}
+  .qf-load__item.done .qf-load__chk{display:inline}
+  .qf-load__item.done .qf-load__pct{display:none}
+  .qf-load__bar{background:#e8e8e8 !important;border-radius:9999px !important;height:8px !important;overflow:hidden !important;display:block !important}
+  .qf-load__fill{background:#54b94a !important;height:100% !important;width:0%;border-radius:9999px !important;display:block !important;min-height:8px !important}
+
+  /* POPUPS */
+  .qf-popup-overlay{
+    position:fixed;top:0;left:0;right:0;bottom:0;
+    background:rgba(0,0,0,.55);z-index:1000;
+    display:none;align-items:center;justify-content:center;
+    opacity:0;padding:20px;transition:opacity .3s ease;
+  }
+  .qf-popup-overlay.vis{opacity:1}
+  .qf-popup{
+    background:#fff;border-radius:16px;padding:30px 24px;
+    max-width:400px;width:100%;text-align:center;
+    transform:translateY(20px);transition:transform .3s ease;
+  }
+  .qf-popup-overlay.vis .qf-popup{transform:translateY(0)}
+  .qf-popup__subtitle{font-size:13px;color:#e53935;font-weight:500;margin-bottom:6px}
+  .qf-popup__title{font-size:18px;font-weight:700;margin-bottom:20px;color:#1a1a1a;line-height:1.4}
+  .qf-popup__btns{display:flex;gap:10px;justify-content:center}
+  .qf-popup__btn{
+    padding:10px 28px;font-size:16px;font-weight:700;cursor:pointer;
+    border:none;border-radius:9999px;background:#54b94a;color:#fff;
+    font-family:inherit;transition:opacity .3s;display:inline-block;
+  }
+  .qf-popup__btn:hover{opacity:.85}
+
+  /* SUBMIT */
+  .qf-submit{text-align:center;margin-top:24px;opacity:0;transition:opacity .5s ease-in-out;pointer-events:none}
+  .qf-submit.vis{opacity:1;pointer-events:auto}
+
+  /* RESPONSIVE */
+  @media(max-width:480px){
+    .qf-q{font-size:19px}
+    .qf-wrap{padding:16px 14px 50px}
+    .qf-opt{padding:14px 16px}
+    .qf-opts--grid{gap:8px}
+    .qf-metrics{gap:8px}
+    .qf-metric{padding:12px}
+  }
+</style>

@@ -1,0 +1,19 @@
+{%- comment -%}
+  Minimal page template for advertorial pages on wellnessnest1.
+
+  Why this file exists: the live theme has no default `templates/page.json`
+  or `templates/page.liquid`, so every new page needs an explicit
+  template_suffix mapped to a template file. Without it, pages 404 even
+  when published_at is set.
+
+  The body_html already contains the hide-theme-chrome CSS + JS at the top,
+  so this template just outputs page.content with a full-width container.
+
+  Note: `{% layout none %}` does NOT bypass theme.liquid on this store
+  because GemPages intercepts at a higher level. Don't bother — let the
+  body_html's hide-chrome CSS handle it.
+{%- endcomment -%}
+
+<div class="page-width" style="max-width:none;padding:0;">
+  {{ page.content }}
+</div>

@@ -1,0 +1,1080 @@
+
+
+    (function( jQuery ){
+  var $module = jQuery('#m-1717055659322').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1717055659331').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1717055659323').children('.module');
+  if($('body').find('.dbtfy')?.length) {
+    $module.find("a[href='javascript:void(0)']").off("click").on("click", (event) => {
+      event.preventDefault();
+    });
+  }
+  $module.gfV4ProductImageList({
+    onImageClicked: function(imageUrl, imageZoomUrl) {}
+  });
+
+  var style = $module.attr('data-style');
+  switch(style) {
+    case 'slider':
+    var navspeed = $module.data('navspeed'),
+      navlg = $module.data('navlg'),
+      navmd = $module.data('navmd'),
+      navsm = $module.data('navsm'),
+      navxs = $module.data('navxs'),
+      collg = $module.data('collg'),
+      colmd = $module.data('colmd'),
+      colsm = $module.data('colsm'),
+      colxs = $module.data('colxs'),
+      dotslg = $module.data('dotslg'),
+      dotsmd = $module.data('dotsmd'),
+      dotssm = $module.data('dotssm'),
+      dotsxs = $module.data('dotsxs'),
+
+      marginlg = parseInt($module.data('mlg')),
+      marginmd = parseInt($module.data('mmd')),
+      marginsm = parseInt($module.data('msm')),
+      marginxs = parseInt($module.data('mxs'));
+
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+    if(mode == 'production') {
+      var loop = $module.data('loop'),
+        autoRefresh = true;
+    } else {
+      var loop = 0,
+        autoRefresh = false;
+    }
+    $module.find('.gf_product-images-list').children().each( function( index ) {
+      jQuery(this).attr( 'data-position', index );
+    });
+    $module.find('.gf_product-images-list').owlCarousel({
+      mouseDrag: false,
+      navSpeed: navspeed,
+      autoRefresh: autoRefresh,
+      autoWidth: !1,
+      loop: loop,
+      responsiveClass:true,
+      responsive:{
+        0:{
+          items:colxs,
+          nav: navxs,
+          dots:dotsxs,
+          margin: marginxs
+        },
+        768:{
+          items:colsm,
+          nav: navsm,
+          dots:dotssm,
+          margin: marginsm
+        },
+        992:{
+          items:colmd,
+          nav: navmd,
+          dots:dotsmd,
+          margin: marginmd
+        },
+        1200:{
+          items:collg,
+          nav: navlg,
+          dots:dotslg,
+          margin: marginlg
+        }
+      },
+      onInitialized: function(){
+        $module.closest('.module-wrap[data-label="(P) Image List"]').addClass('gf-carousel-loaded');
+      }
+    }); 
+    break;
+  }
+})(window.GemQuery || jQuery); 
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1717055659249').children('.module');
+  var swatchText = $module.attr('data-swatch-text') != undefined ? $module.attr('data-swatch-text') : '1';
+  $module.gfV3ProductSwatches({
+    swatchText: swatchText,
+    onSwatchSelected: function(variant, $swatch) {}
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  (function (jQuery) {
+  var $module = jQuery("#m-1717055659269").children(".module");
+  // You can add custom Javascript code right here.
+
+  var $product = $module.closest('[data-label="Product"]').children(".module");
+  if ($product.length == 0) {
+    $product = $module
+      .closest('[data-icon="gpicon-product"]')
+      .children(".module");
+  }
+
+  if (!$("body.gempage-editing").length && $(".custom-subscription-option").length > 0) {
+    $(".custom-subscription-option").click(function () {
+      // Custom active subscription option
+      $(".custom-subscription-option").removeClass("active");
+      $(this).addClass("active");
+
+      // Get selected subscription option
+      let selectedOption = $(this).hasClass("onetime") ? "onetime" : "subsave";
+      let sellingPlan = $(this).hasClass("onetime") ? "" : "selling_plan";
+
+      if ($product.data("gfv3product") != undefined) {
+        var selectedVariant = $product.data("gfv3product").getVariant();
+
+        // Prop select Recharge subscription option
+        if (
+          $product.find(".rc-option.rc_widget__option").length > 0 &&
+          $product.find("input.rc_widget__option__input").length > 0 &&
+          $product.find(
+            `input.rc_widget__option__input[value="${selectedOption}"]`
+          ).length > 0
+        ) {
+          $product
+            .find(".rc-option.rc_widget__option")
+            .removeClass("rc_widget__option--active rc-option--active");
+          $product
+            .find(`.rc-option.rc_widget__option.rc-option__${selectedOption}`)
+            .addClass("rc_widget__option--active rc-option--active");
+          $product
+            .find("select.rc-selling-plans__dropdown")
+            .attr("name", sellingPlan);
+          $product
+            .find("input.rc_widget__option__input")
+            .prop("checked", false);
+          $product
+            .find(`input.rc_widget__option__input[value="${selectedOption}"]`)
+            .prop("checked", true)
+            .trigger("click");
+        }
+
+        /* Update (P) Button label */
+        // Get store's data
+        var countryCode = Shopify.country || "US";
+        var currencyCode = Shopify.currency.active || "USD";
+
+        // Format selected variant price
+        var varPrice =
+          selectedOption == "subsave"
+            ? selectedVariant.selling_plan_allocations[0].price / 100
+            : selectedVariant.price / 100;
+
+        var curPrice = new Intl.NumberFormat("en-" + countryCode, {
+          style: "currency",
+          currency: currencyCode,
+        }).format(varPrice);
+
+        // Get (P) Button
+        if (
+          $product.find(
+            '[data-label="(P) Cart Button"] .gf_add-to-cart .AddToCartText'
+          ).length > 0
+        ) {
+          $product
+            .find(
+              '[data-label="(P) Cart Button"] .gf_add-to-cart .AddToCartText'
+            )
+            .each(function () {
+              $(this).attr("data-after", " • " + curPrice);
+            });
+        }
+      }
+
+      // Change benefit list
+      if (
+        $product.find(".custom-benefit").length > 0 &&
+        $product.find(`.custom-benefit.${selectedOption}`).length > 0
+      ) {
+        $product.find(".custom-benefit").removeClass("active");
+        $product.find(`.custom-benefit.${selectedOption}`).addClass("active");
+      }
+    });
+  }
+})(window.GemQuery || jQuery);(function( jQuery ){
+  // var $module = jQuery('#m-1717055659325').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+    (function( jQuery ){
+  var $module = jQuery('#m-1717055659305').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  (function (jQuery) {
+    var $module = jQuery("#m-1717055659332").children(".module");
+    // You can add custom Javascript code right here.
+  
+    var $product = $module.closest('[data-label="Product"]').children(".module");
+    if ($product.length == 0) {
+      $product = $module
+        .closest('[data-icon="gpicon-product"]')
+        .children(".module");
+    }
+    if ($product.data("gfv3product") != undefined) {
+      var selectedVariant = $product.data("gfv3product").getVariant();
+  
+      console.log("selectedVariant: ", selectedVariant);
+  
+      triggerChangeVariant(selectedVariant);
+    }
+  
+    //get WrapProductId
+    var currentWrapProductId = $module
+      .closest('[data-label="Product"]')
+      .attr("id");
+  
+    function changeVariantFunction(variant) {
+      triggerChangeVariant(variant);
+    }
+  
+    if (window.GEMSTORE) {
+      window.GEMSTORE.subscribe(
+        "product-" + currentWrapProductId + "-variant",
+        changeVariantFunction
+      );
+    }
+  
+    function triggerChangeVariant(variant) {
+      // Get store's data
+      var countryCode = Shopify.country || "US";
+      var currencyCode = Shopify.currency.active || "USD";
+      
+      // Format selected variant price
+      var varPrice = variant.selling_plan_allocations[0].price !== undefined ? variant.selling_plan_allocations[0].price / 100 : variant.price / 100;
+  
+      if ($product.find("input.rc_widget__option__input").length > 0) {
+        varPrice =
+          $product.find("input.rc_widget__option__input:checked").val() ==
+          "onetime"
+            ? variant.price / 100
+            : varPrice;
+      }
+  
+      var curPrice = new Intl.NumberFormat("en-" + countryCode, {
+        style: "currency",
+        currency: currencyCode,
+      }).format(varPrice);
+  
+      // Get (P) Button
+      if (
+        $product.find(
+          '[data-label="(P) Cart Button"] .gf_add-to-cart .AddToCartText'
+        ).length > 0
+      ) {
+        $product
+          .find('[data-label="(P) Cart Button"] .gf_add-to-cart .AddToCartText')
+          .each(function () {
+            $(this).attr("data-after", " • " + curPrice);
+          });
+      }
+  
+      // Update hidden variant id
+      if (
+        $product.find(
+          'form[action*="/cart/add"] > input[name="id"][type="hidden"]'
+        ).length > 0
+      ) {
+        $product
+          .find('form[action*="/cart/add"] > input[name="id"][type="hidden"]')
+          .val(variant.id);
+        $product
+          .find('form[action*="/cart/add"] > input[name="id"][type="hidden"]')
+          .attr("data-value", variant.id);
+      }
+    }
+  })(window.GemQuery || jQuery);
+    (function( jQuery ){
+  // var $module = jQuery('#m-1717055659279').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  try {
+    var $module = jQuery('#m-1716788759969').children('.module');
+    var single = $module.attr('data-single');
+    var openDefault = $module.attr('data-openDefault');
+    var openTab = $module.attr('data-openTab');
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+    if(openDefault == 0 || openDefault == '0') {
+      openTab = '0';
+    }
+
+    $module.gfAccordion({
+      single: single,
+      openTab: openTab,
+      mode: mode,
+      onChanged: function() {	
+        // Fix (P) Desc read more bug	
+        $module.find('.module-wrap[data-label="(P) Description"]').each(function(index, el) {	
+          if (jQuery(el).children('.module').data('gfv3productdesc') != undefined) {	
+            jQuery(el).children(".module").data("gfv3productdesc").initReadMore();	
+          }	
+        })	
+      }
+    });
+
+    var borderColor = $module.attr('data-borderColor');
+    var borderSize = $module.attr('data-borderSize');
+
+    $module.children('[data-accordion]').children('[data-control]').css('border-bottom', borderSize + ' solid ' + borderColor);
+    $module.children('[data-accordion]').children('[data-content]').children().css('border-bottom', borderSize + ' solid ' + borderColor);
+  } catch(err) {}
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  try {
+    var $module = jQuery('#m-1723202659655').children('.module');   
+    var navspeed = $module.data('navspeed'),
+      autoplaytimeout = $module.data('autoplaytimeout'),
+      autoplayhoverpause = $module.data('autoplayhoverpause'),
+      navlg = $module.data('navlg'),
+      navmd = $module.data('navmd'),
+      navsm = $module.data('navsm'),
+      navxs = $module.data('navxs'),
+      collg = $module.data('collg'),
+      colmd = $module.data('colmd'),
+      colsm = $module.data('colsm'),
+      colxs = $module.data('colxs'),
+      dotslg = $module.data('dotslg'),
+      dotsmd = $module.data('dotsmd'),
+      dotssm = $module.data('dotssm'),
+      dotsxs = $module.data('dotsxs'),
+      marginlg = parseInt($module.data('marginlg')),
+      marginmd = parseInt($module.data('marginmd')),
+      marginsm = parseInt($module.data('marginsm')),
+      marginxs = parseInt($module.data('marginxs'));
+
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+    if(mode == 'production') {
+    var autoplay = $module.data('autoplay'), 
+        autoRefresh = true, 
+        loop = $module.data('loop');
+    } else {
+    var autoplay = 0, 
+        autoRefresh = false, 
+        loop = 0;
+    }
+
+    var initCarousel = function() {
+      $module.owlCarousel({
+        mouseDrag: false,
+        autoplayHoverPause: autoplayhoverpause,
+        autoplay: autoplay,
+        autoRefresh: autoRefresh,
+        autoplaySpeed: navspeed,
+        autoplayTimeout: autoplaytimeout,
+        loop: loop,
+        navSpeed: navspeed,
+        autoWidth: !1,
+        responsiveClass:true,
+        responsive:{
+          0:{
+            items:colxs,
+            nav: navxs,
+            dots:dotsxs,
+            margin: marginxs
+          },
+          768:{
+            items:colsm,
+            nav: navsm,
+            dots:dotssm,
+            margin: marginsm
+          },
+          992:{
+            items:colmd,
+            nav: navmd,
+            dots:dotsmd,
+            margin: marginmd
+          },
+          1200:{
+            items:collg,
+            nav: navlg,
+            dots:dotslg,
+            margin: marginlg
+          }
+        },
+        onInitialized: function () {
+          $module.closest('.module-wrap[data-label="Carousel"]').addClass('gf-carousel-loaded');
+          jQuery(window).trigger("resize");
+        }
+      });
+    }
+    
+    // Fix nested carousel bug	
+    if ($module.parent().parent().closest('.module-wrap[data-label="Carousel"]').length > 0) {	
+      setTimeout(function() {	
+        initCarousel();	
+      }, 300)	
+    } else {	
+      initCarousel();	
+    }
+  } catch(err) {}
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1723202252114').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1723202419776').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1723202418926').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1723202637110').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1723202637088').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1723202637135').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1716908661346').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  // var $module = jQuery('#m-1716961986925').children('.module');
+  // You can add custom Javascript code right here.
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  try {
+    var $module = jQuery('#m-1708751638907').children('.module');   
+    var navspeed = $module.data('navspeed'),
+      autoplaytimeout = $module.data('autoplaytimeout'),
+      autoplayhoverpause = $module.data('autoplayhoverpause'),
+      navlg = $module.data('navlg'),
+      navmd = $module.data('navmd'),
+      navsm = $module.data('navsm'),
+      navxs = $module.data('navxs'),
+      collg = $module.data('collg'),
+      colmd = $module.data('colmd'),
+      colsm = $module.data('colsm'),
+      colxs = $module.data('colxs'),
+      dotslg = $module.data('dotslg'),
+      dotsmd = $module.data('dotsmd'),
+      dotssm = $module.data('dotssm'),
+      dotsxs = $module.data('dotsxs'),
+      marginlg = parseInt($module.data('marginlg')),
+      marginmd = parseInt($module.data('marginmd')),
+      marginsm = parseInt($module.data('marginsm')),
+      marginxs = parseInt($module.data('marginxs'));
+
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+    if(mode == 'production') {
+    var autoplay = $module.data('autoplay'), 
+        autoRefresh = true, 
+        loop = $module.data('loop');
+    } else {
+    var autoplay = 0, 
+        autoRefresh = false, 
+        loop = 0;
+    }
+
+    var initCarousel = function() {
+      $module.owlCarousel({
+        mouseDrag: false,
+        autoplayHoverPause: autoplayhoverpause,
+        autoplay: autoplay,
+        autoRefresh: autoRefresh,
+        autoplaySpeed: navspeed,
+        autoplayTimeout: autoplaytimeout,
+        loop: loop,
+        navSpeed: navspeed,
+        autoWidth: !1,
+        responsiveClass:true,
+        responsive:{
+          0:{
+            items:colxs,
+            nav: navxs,
+            dots:dotsxs,
+            margin: marginxs
+          },
+          768:{
+            items:colsm,
+            nav: navsm,
+            dots:dotssm,
+            margin: marginsm
+          },
+          992:{
+            items:colmd,
+            nav: navmd,
+            dots:dotsmd,
+            margin: marginmd
+          },
+          1200:{
+            items:collg,
+            nav: navlg,
+            dots:dotslg,
+            margin: marginlg
+          }
+        },
+        onInitialized: function () {
+          $module.closest('.module-wrap[data-label="Carousel"]').addClass('gf-carousel-loaded');
+          jQuery(window).trigger("resize");
+        }
+      });
+    }
+    
+    // Fix nested carousel bug	
+    if ($module.parent().parent().closest('.module-wrap[data-label="Carousel"]').length > 0) {	
+      setTimeout(function() {	
+        initCarousel();	
+      }, 300)	
+    } else {	
+      initCarousel();	
+    }
+  } catch(err) {}
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    
+  
+    
+  
+    
+    (function( jQuery ){
+  try {
+    var $module = jQuery('#m-1717039660981').children('.module');
+    var single = $module.attr('data-single');
+    var openDefault = $module.attr('data-openDefault');
+    var openTab = $module.attr('data-openTab');
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+    if(openDefault == 0 || openDefault == '0') {
+      openTab = '0';
+    }
+
+    $module.gfAccordion({
+      single: single,
+      openTab: openTab,
+      mode: mode,
+      onChanged: function() {	
+        // Fix (P) Desc read more bug	
+        $module.find('.module-wrap[data-label="(P) Description"]').each(function(index, el) {	
+          if (jQuery(el).children('.module').data('gfv3productdesc') != undefined) {	
+            jQuery(el).children(".module").data("gfv3productdesc").initReadMore();	
+          }	
+        })	
+      }
+    });
+
+    var borderColor = $module.attr('data-borderColor');
+    var borderSize = $module.attr('data-borderSize');
+
+    $module.children('[data-accordion]').css('border-bottom', borderSize + ' solid ' + borderColor);
+  } catch(err) {}
+})( window.GemQuery || jQuery );
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  (function( jQuery ){
+  try {
+    var $module = jQuery('#m-1717039699390').children('.module');
+    var single = $module.attr('data-single');
+    var openDefault = $module.attr('data-openDefault');
+    var openTab = $module.attr('data-openTab');
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+    if(openDefault == 0 || openDefault == '0') {
+      openTab = '0';
+    }
+
+    $module.gfAccordion({
+      single: single,
+      openTab: openTab,
+      mode: mode,
+      onChanged: function() {	
+        // Fix (P) Desc read more bug	
+        $module.find('.module-wrap[data-label="(P) Description"]').each(function(index, el) {	
+          if (jQuery(el).children('.module').data('gfv3productdesc') != undefined) {	
+            jQuery(el).children(".module").data("gfv3productdesc").initReadMore();	
+          }	
+        })	
+      }
+    });
+
+    var borderColor = $module.attr('data-borderColor');
+    var borderSize = $module.attr('data-borderSize');
+
+    $module.children('[data-accordion]').css('border-bottom', borderSize + ' solid ' + borderColor);
+  } catch(err) {}
+})( window.GemQuery || jQuery );
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+  
+    
+  
+    (function( jQuery ){
+  try {
+    var $module = jQuery('#m-1716863733766').children('.module');   
+    var navspeed = $module.data('navspeed'),
+      autoplaytimeout = $module.data('autoplaytimeout'),
+      autoplayhoverpause = $module.data('autoplayhoverpause'),
+      navlg = $module.data('navlg'),
+      navmd = $module.data('navmd'),
+      navsm = $module.data('navsm'),
+      navxs = $module.data('navxs'),
+      collg = $module.data('collg'),
+      colmd = $module.data('colmd'),
+      colsm = $module.data('colsm'),
+      colxs = $module.data('colxs'),
+      dotslg = $module.data('dotslg'),
+      dotsmd = $module.data('dotsmd'),
+      dotssm = $module.data('dotssm'),
+      dotsxs = $module.data('dotsxs'),
+      marginlg = parseInt($module.data('marginlg')),
+      marginmd = parseInt($module.data('marginmd')),
+      marginsm = parseInt($module.data('marginsm')),
+      marginxs = parseInt($module.data('marginxs'));
+
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+    if(mode == 'production') {
+    var autoplay = $module.data('autoplay'), 
+        autoRefresh = true, 
+        loop = $module.data('loop');
+    } else {
+    var autoplay = 0, 
+        autoRefresh = false, 
+        loop = 0;
+    }
+
+    var initCarousel = function() {
+      $module.owlCarousel({
+        mouseDrag: false,
+        autoplayHoverPause: autoplayhoverpause,
+        autoplay: autoplay,
+        autoRefresh: autoRefresh,
+        autoplaySpeed: navspeed,
+        autoplayTimeout: autoplaytimeout,
+        loop: loop,
+        dotsEach: true,
+        navSpeed: navspeed,
+        autoWidth: !1,
+        responsiveClass:true,
+        responsive:{
+          0:{
+            items:colxs,
+            nav: navxs,
+            dots:dotsxs,
+            margin: marginxs
+          },
+          768:{
+            items:colsm,
+            nav: navsm,
+            dots:dotssm,
+            margin: marginsm
+          },
+          992:{
+            items:colmd,
+            nav: navmd,
+            dots:dotsmd,
+            margin: marginmd
+          },
+          1200:{
+            items:collg,
+            nav: navlg,
+            dots:dotslg,
+            margin: marginlg
+          }
+        },
+        onInitialized: function () {
+          $module.closest('.module-wrap[data-label="Carousel"]').addClass('gf-carousel-loaded');
+          jQuery(window).trigger("resize");
+        }
+      });
+    }
+    
+    // Fix nested carousel bug	
+    if ($module.parent().parent().closest('.module-wrap[data-label="Carousel"]').length > 0) {	
+      setTimeout(function() {	
+        initCarousel();	
+      }, 300)	
+    } else {	
+      initCarousel();	
+    }
+  } catch(err) {}
+  
+  $(document).ready(function(){
+    setInterval(function(){ 
+      var rows = $('#m-1716863733766').find('.item-content').children('.gf_row');
+      height = 0;
+      rows.each(function(){
+        $(this).css('height', 'auto');
+        if($(this).outerHeight() > height){
+          height = $(this).outerHeight();
+        }
+      });
+      rows.css('height', height);
+    }, 1000);
+  });
+})( window.GemQuery || jQuery );
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  

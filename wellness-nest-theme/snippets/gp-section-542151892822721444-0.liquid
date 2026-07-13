@@ -1,0 +1,168 @@
+
+  
+    <div
+      
+      style="--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gjUWeg9l6F gp-custom-code">
+      <div>
+    <script>
+  var money_format = {{ shop.money_format | json }};
+</script>
+
+<script>
+  var money_format = {{ shop.money_format | json }};
+</script>
+{% for variant in product.variants %}
+    {% if variant.metafields.custom.unit  %}
+        <div class="variantorder" style="display: none;" data-variant="{{variant.id}}" data-number="{{ variant.metafields.custom.unit }}">{{variant.id}}</div>
+    {% else %}
+        <div class="variantorder" style="display: none;" data-variant="{{variant.id}}" data-number="1">{{variant.id}}</div>
+    {% endif %}
+{% endfor %}
+    </div>
+    </div>
+  
+      <script id="custom-js-gjUWeg9l6F">
+        try {
+          
+window.addEventListener("DOMContentLoaded", function () {
+  var productElement = document.querySelector(".gjUWeg9l6F");
+
+  if (productElement) {
+    var productelm = productElement.closest("gp-product");
+    var gpContext = productelm.getAttribute("gp-context");
+    var product = productelm.getContext();
+
+    var productvariantid = product.variantSelected.id;
+    var productprice = product.variantSelected.price;
+    var saveprice = product.variantSelected.selling_plan_allocations.length > 0
+      ? product.variantSelected.selling_plan_allocations[0].price
+      : 0;
+
+    var onetimePriceElement = productelm.querySelector(".onetime strong");
+    var rcsavepriceElement = productelm.querySelector(".subsave strong");
+
+    var onetimepricect;
+    var sabsavepricect;
+
+    var variantorder = productelm.querySelectorAll(".variantorder");
+    variantorder.forEach(function (quantityElement) {
+      var checknumber = quantityElement.getAttribute("data-variant");
+      if (String(productvariantid).trim() === String(checknumber).trim()) {
+        var numberquantity = parseInt(quantityElement.getAttribute("data-number"));
+        onetimepricect = productprice / numberquantity;
+        sabsavepricect = saveprice / numberquantity;
+      }
+    });
+
+    if (onetimePriceElement) {
+      onetimePriceElement.innerHTML = Shopify.formatMoney(onetimepricect, money_format);
+    }
+
+    if (rcsavepriceElement) {
+      rcsavepriceElement.innerHTML = Shopify.formatMoney(sabsavepricect, money_format);
+    }
+
+    window.addEventListener("gp:product-change-variant", function(data) {
+      if (data.detail.productId === product.productId) {
+        var onetimePriceElement = productelm.querySelector(".onetime strong");
+        var rcsavepriceElement = productelm.querySelector(".subsave strong");
+
+        var variantSelected = data.detail.variantSelected;
+        if (variantSelected) {
+          var checkvariant = variantSelected.id;
+          var variantPrice = variantSelected.price;
+          var saveVariantPrice = variantSelected.selling_plan_allocations.length > 0
+            ? variantSelected.selling_plan_allocations[0].price
+            : 0;
+
+          var onetimepricect1, sabsavepricect1;
+
+          var variantorder1 = productelm.querySelectorAll(".variantorder");
+          variantorder1.forEach(function (quantityElement) {
+            var checknumber1 = quantityElement.getAttribute("data-variant");
+            if (String(checkvariant).trim() === String(checknumber1).trim()) {
+              var numberquantity1 = parseInt(quantityElement.getAttribute("data-number"));
+              onetimepricect1 = variantPrice / numberquantity1;
+              sabsavepricect1 = saveVariantPrice / numberquantity1;
+            }
+          });
+
+          if (onetimePriceElement) {
+            onetimePriceElement.innerHTML = Shopify.formatMoney(onetimepricect1, money_format);
+          }
+
+          if (rcsavepriceElement) {
+            rcsavepriceElement.innerHTML = Shopify.formatMoney(sabsavepricect1, money_format);
+          }
+        }
+      }
+    });
+  }
+});
+
+
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     var productElement = document.querySelector('.gjUWeg9l6F');
+
+//     if (productElement) {
+//         var product = productElement.closest('gp-product').getContext();
+//         console.log(product);
+//         var productelm = productElement.closest('gp-product');
+//         function updatePrices(data) {
+//             if (data.detail.productId === product.productId) {
+                
+//                 console.log(data.detail.productId);
+//                 var onetimePriceElement = productelm.querySelector(".onetime strong");
+//                 var rcsavepriceElement = productelm.querySelector(".subsave strong");
+
+
+//                 var checkvariant =  data.detail.variantSelected.id
+//                 console.log(checkvariant);
+//                 var variantPrice = data.detail.variantSelected.price;
+//                 console.log(variantPrice);
+                
+//                 var saveVariantPrice = data.detail.variantSelected.selling_plan_allocations.length > 0
+//                     ? data.detail.variantSelected.selling_plan_allocations[0].price
+//                     : 0;
+//                 console.log(saveVariantPrice);
+
+//                 if( checkvariant === 48768153485627 ){
+//                      var onetimepricect = variantPrice/2;
+//                      var sabsavepricect = saveVariantPrice/2;
+//                 }else if( checkvariant === 48768153518395  ){
+//                      var onetimepricect = variantPrice/4;
+//                      var sabsavepricect = saveVariantPrice/4;
+//                 }else{
+//                     var onetimepricect = variantPrice;
+//                     var sabsavepricect = saveVariantPrice;
+//                 }
+                
+
+
+
+//                 if (onetimePriceElement) {
+//                     onetimePriceElement.innerHTML = Shopify.formatMoney(onetimepricect, money_format);
+//                 }
+
+//                 if (rcsavepriceElement) {
+//                     rcsavepriceElement.innerHTML = Shopify.formatMoney(sabsavepricect, money_format);
+//                 }
+//             }else{
+//                 console.log('khoong dung dk');
+//             }
+//         }
+
+//         // Initial price update
+//         updatePrices({ detail: { productId: product.productId, variantSelected: product.variantSelected } });
+
+//         // Listen for variant change events
+//         window.addEventListener("gp:product-change-variant", updatePrices);
+//     }
+// });
+
+        } catch(err){}
+      </script>
+    

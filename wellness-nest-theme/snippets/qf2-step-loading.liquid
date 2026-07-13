@@ -1,0 +1,36 @@
+{% comment %}
+  Quiz Funnel 2 — Step 16: Loading Progress Bars + Submit Button
+  Three animated progress bars with popup gates before final CTA
+{% endcomment %}
+
+<div class="qf-step" data-step="16">
+  <div class="qf-load" id="loadBars">
+    <div class="qf-load__item" id="lb1">
+      <div class="qf-load__hdr">
+        <span class="qf-load__label">Analyzing your mineral depletion profile...</span>
+        <span class="qf-load__pct" id="lp1">0%</span>
+        <span class="qf-load__chk">&#10004;</span>
+      </div>
+      <div class="qf-load__bar"><div class="qf-load__fill" id="lf1"></div></div>
+    </div>
+    <div class="qf-load__item" id="lb2">
+      <div class="qf-load__hdr">
+        <span class="qf-load__label">Cross-referencing your drive and energy markers...</span>
+        <span class="qf-load__pct" id="lp2">0%</span>
+        <span class="qf-load__chk">&#10004;</span>
+      </div>
+      <div class="qf-load__bar"><div class="qf-load__fill" id="lf2"></div></div>
+    </div>
+    <div class="qf-load__item" id="lb3">
+      <div class="qf-load__hdr">
+        <span class="qf-load__label">Building your personalized recovery protocol...</span>
+        <span class="qf-load__pct" id="lp3">0%</span>
+        <span class="qf-load__chk">&#10004;</span>
+      </div>
+      <div class="qf-load__bar"><div class="qf-load__fill" id="lf3"></div></div>
+    </div>
+  </div>
+  <div class="qf-submit" id="submitArea">
+    <button class="qf-btn qf-btn--green" onclick="qfSubmitQuiz()">Show Me My Protocol &rarr;</button>
+  </div>
+</div>

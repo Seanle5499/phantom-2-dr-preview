@@ -1,0 +1,99 @@
+{% comment %}
+  Quiz Funnel — Step 14: Assessment Summary Dashboard
+  Dynamic content populated by qf2-scripts.liquid (genSummary function)
+
+  Variables passed from section:
+    img_shield — shield/warning icon
+    img_graph  — graph icon
+    img_bolt   — bolt icon
+    img_glass  — magnifying glass icon
+    img_summary_man — man photo for summary card
+{% endcomment %}
+
+<div class="qf-step" data-step="14">
+  <h2 class="qf-summary__title">Summary of your Profile</h2>
+
+  <!-- Main Summary Card -->
+  <div class="qf-sumcard">
+    <!-- Header: Title + Badge -->
+    <div class="qf-sumcard__hdr">
+      <div class="qf-sumcard__hdr-title">Level of T Decline</div>
+      <div class="qf-sumcard__badge" id="sBadge">HIGH LEVEL</div>
+    </div>
+
+    <!-- Man Photo -->
+    <div class="qf-sumcard__photo-wrap">
+      <img src="{{ img_summary_man }}" alt="" class="qf-sumcard__photo" loading="lazy" onerror="this.style.display='none'">
+    </div>
+
+    <!-- Slider -->
+    <div class="qf-sumcard__slider-wrap">
+      <div class="qf-sumcard__slider">
+        <div class="qf-sumcard__circle" id="sCircle">
+          <div class="qf-sumcard__tooltip">YOUR LEVEL</div>
+        </div>
+      </div>
+      <div class="qf-sumcard__scale">
+        <span>LOW</span><span>NORMAL</span><span>MEDIUM</span><span>HIGH</span>
+      </div>
+    </div>
+
+    <!-- Alert Box -->
+    <div class="qf-sumcard__alert">
+      <div class="qf-sumcard__alert-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+      </div>
+      <div>
+        <div class="qf-sumcard__alert-label" id="sAlertLabel">Testosterone Assessment: DECLINING</div>
+        <div class="qf-sumcard__alert-text" id="sAlertText">Your testosterone production is significantly below peak. This results from accumulated stress, metabolic slowdown, and environmental toxins.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metrics Grid -->
+  <div class="qf-metrics">
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--orange">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div>
+        <div class="qf-metric__lbl">DECLINE PATTERN:</div>
+        <div class="qf-metric__val" id="sAging">Progressive</div>
+      </div>
+    </div>
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--orange">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      </div>
+      <div>
+        <div class="qf-metric__lbl">ROOM FOR IMPROVEMENT:</div>
+        <div class="qf-metric__val" id="sRoom">HIGH</div>
+      </div>
+    </div>
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--orange">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div>
+        <div class="qf-metric__lbl">ROOT CAUSES:</div>
+        <div class="qf-metric__val" id="sTrigger">Cortisol Environmental</div>
+      </div>
+    </div>
+    <div class="qf-metric">
+      <div class="qf-metric__ico qf-metric__ico--orange">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      </div>
+      <div>
+        <div class="qf-metric__lbl">QUALITY OF LIFE IMPACT:</div>
+        <div class="qf-metric__val" id="sImpact">Substantial</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden elements for JS compatibility -->
+  <span id="sHeadline" style="display:none"></span>
+  <span id="sKillerLine" style="display:none"></span>
+  <span id="qfTimer" style="display:none"></span>
+
+  <button class="qf-btn" onclick="qfGoStep(15)">CONTINUE &rarr;</button>
+</div>

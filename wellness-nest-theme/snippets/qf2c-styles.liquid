@@ -1,0 +1,349 @@
+{% comment %}
+  Quiz Funnel — Styles
+  All CSS scoped under .qf namespace to avoid conflicts with the theme.
+{% endcomment %}
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== SCOPED RESET ===== */
+  .qf * { margin:0; padding:0; box-sizing:border-box }
+  .qf {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    background: #f7ffd8;
+    min-height: 100vh;
+    color: #121212;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER + PROGRESS ── */
+  .qf-topbar { padding:8px; background:#fff }
+  .qf-progress { background:#e8e8e8; height:8px; width:100%; border-radius:99px; overflow:hidden }
+  .qf-progress__fill {
+    background: #54b94a; height:100% !important; width:0%;
+    transition: width 0.4s ease; border-radius:99px;
+    display: block !important;
+  }
+  .qf-stepper__label { font-size:13px; font-weight:600; color:#999; text-align:center; padding:8px 0 0 }
+
+  /* ── LAYOUT ── */
+  .qf-wrap { max-width:580px; margin:0 auto; padding:24px 18px 60px }
+  .qf-step { display:none; animation:qfIn .3s ease }
+  .qf-step.active { display:block }
+  @keyframes qfIn { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
+
+  /* ── BACK BUTTON ── */
+  .qf-back {
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:13px; color:#aaa; cursor:pointer;
+    background:none; border:none; font-family:inherit; margin-bottom:16px;
+    position:absolute; left:18px; top:80px; z-index:10;
+  }
+  .qf-back:hover { color:#666 }
+  .qf-back svg { width:16px; height:16px }
+
+  /* ── HERO (Step 1) ── */
+  .qf-hero__title {
+    font-size:26px; font-weight:800; text-align:center; color:#1a1a1a;
+    line-height:1.3; margin-bottom:12px; padding:0 10px;
+  }
+  .qf-hero__sub {
+    font-size:15px; text-align:center; color:#555; margin-bottom:20px;
+    font-weight:400; line-height:1.6; padding:0 10px;
+  }
+  .qf-testimonial {
+    background:#fdf5ee; border-radius:12px; padding:20px 24px;
+    margin-bottom:28px; text-align:center;
+  }
+  .qf-testimonial__quote {
+    font-size:14px; font-style:italic; color:#333; line-height:1.6;
+    margin-bottom:10px; font-weight:500;
+  }
+  .qf-testimonial__author {
+    font-size:14px; font-weight:700; color:#1a1a1a;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .qf-q { font-size:22px; font-weight:800; text-align:center; margin-bottom:8px; color:#1a1a1a; line-height:1.35; padding:0 10px }
+  .qf-sub { font-size:13px; text-align:center; color:#888; margin-bottom:24px; font-weight:400 }
+  .qf-skip {
+    font-size:11px; color:#bbb; text-decoration:underline; cursor:pointer;
+    text-transform:uppercase; font-weight:600; letter-spacing:.5px;
+    display:block; text-align:center; margin-top:16px;
+  }
+  .qf-terms { font-size:11px; color:#bbb; text-align:center; margin-top:20px; line-height:1.6 }
+  .qf-terms a { color:#54b94a; text-decoration:underline }
+
+  /* ── OPTIONS ── */
+  .qf-opts { display:flex; flex-direction:column; gap:12px }
+  .qf-opt {
+    background:#fff; border:2px solid #eaeaeb; border-radius:12px;
+    padding:16px 20px; cursor:pointer; transition:all .2s;
+    display:flex; align-items:center; gap:14px;
+    font-size:15px; font-weight:500; color:#333;
+    width:100%; text-align:left; font-family:inherit; line-height:inherit;
+    -webkit-appearance:none; appearance:none; outline:none;
+  }
+  .qf-opt:hover { border-color:#54b94a; background:#f0faf0 }
+  .qf-opt.sel { border-color:#54b94a; background:#54b94a; color:#ffffffe6 }
+
+  .qf-opt__ico {
+    width:48px; height:48px; border-radius:50%; background:#f7ffd8;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
+  }
+  .qf-opt__ico img { width:100%; height:100%; object-fit:cover; border-radius:50% }
+  .qf-opt.sel .qf-opt__ico { background:rgba(255,255,255,.2) }
+  .qf-opt__ico--svg { background:#fff; border:1px solid #eee }
+  .qf-opt__ico--svg img { width:28px; height:28px; object-fit:contain; border-radius:0 }
+
+  .qf-opt__txt { flex:1 }
+  .qf-opt__label { font-weight:700; font-size:15px }
+  .qf-opt__desc { font-size:13px; font-weight:400; color:#505051; margin-top:2px }
+  .qf-opt.sel .qf-opt__desc { color:rgba(255,255,255,.7) }
+  .qf-opt.sel .qf-opt__label { color:#ffffffe6 }
+
+  /* Grid layout (age step) */
+  .qf-opts--grid { display:grid; grid-template-columns:1fr 1fr; gap:10px }
+  .qf-opt--grid { flex-direction:column; text-align:center; padding:18px 10px }
+  .qf-opt--grid .qf-opt__ico { width:72px; height:72px; margin:0 auto 8px }
+
+  /* Multi-select checkboxes */
+  .qf-opt--multi { position:relative }
+  .qf-chk {
+    width:22px; height:22px; border:2px solid #ccc; border-radius:6px;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all .2s;
+  }
+  .qf-opt--multi.sel .qf-chk { background:#fff; border-color:#fff }
+  .qf-chk svg { display:none; width:14px; height:14px }
+  .qf-opt--multi.sel .qf-chk svg { display:block; stroke:#54b94a; stroke-width:3 }
+
+  /* ── BUTTONS ── */
+  .qf-btn {
+    display:block; width:100%; max-width:400px; margin:24px auto 0;
+    padding:16px 28px; background:#54b94a; color:#fff; border:none;
+    border-radius:8px; font-size:16px; font-weight:600;
+    font-family:inherit; cursor:pointer; transition:all .2s; text-align:center;
+  }
+  .qf-btn:hover { background:#46a33e }
+  .qf-btn:disabled { background:#b0d4b0; cursor:not-allowed }
+  .qf-btn--green { background:#54b94a }
+  .qf-btn--green:hover { background:#46a33e }
+
+  /* ── SOCIAL PROOF ── */
+  .qf-social { text-align:center; padding:20px 0 }
+  .qf-social__num { font-size:26px; font-weight:800; color:#54b94a; margin-bottom:4px }
+  .qf-social__num u { text-decoration:underline }
+  .qf-social__txt { font-size:16px; color:#666; margin-bottom:20px }
+  .qf-social__img { max-width:100%; margin:0 auto; display:block }
+
+  /* ── CAROUSEL (Step 7) ── */
+  .qf-carousel { position: relative; width: 100%; max-width: 480px; margin: 20px auto; }
+  .qf-carousel__viewport { overflow: hidden; border-radius: 12px; width: 100%; }
+  .qf-carousel__track { display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); width: 100%; }
+  .qf-carousel__slide { min-width: 100%; max-width: 100%; flex: 0 0 100%; overflow: hidden; }
+  .qf-carousel__slide img.qf-social__img { width: 100%; height: auto; max-height: 480px; display: block; object-fit: cover; margin: 0; }
+  .qf-carousel__dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+  .qf-carousel__dot { width: 8px; height: 8px; border-radius: 50%; background: #ddd; cursor: pointer; transition: all 0.3s; }
+  .qf-carousel__dot.active { background: #54b94a; transform: scale(1.2); }
+  @media (max-width: 600px) {
+    .qf-carousel { max-width: 100%; }
+    .qf-carousel__slide img.qf-social__img { max-height: 360px; }
+  }
+
+  /* ── FAKE LOADING OVERLAY ── */
+  .qf-fake-loading { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#f7ffd8; z-index:9999; align-items:center; justify-content:center; }
+  .qf-fake-loading.active { display:flex; }
+  .qf-fake-loading__content { text-align:center; max-width:500px; padding:0 24px; }
+  .qf-fake-loading__title { font-size:28px; font-weight:800; color:#1a1a1a; margin-bottom:32px; }
+  .qf-fake-loading__spinner { width:80px; height:80px; margin:0 auto 32px; }
+  .qf-fake-loading__spinner svg { width:100%; height:100%; animation: qf-spin 1.2s linear infinite; }
+  .qf-fake-loading__arc { stroke-linecap:round; }
+  .qf-fake-loading__sub { font-size:15px; color:#333; line-height:1.7; }
+  @keyframes qf-spin { to { transform: rotate(360deg); } }
+
+  /* ── BUILD PROFILE LOADING OVERLAY ── */
+  .qf-build-loading { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#f7ffd8; z-index:9999; align-items:center; justify-content:center; }
+  .qf-build-loading.active { display:flex; }
+  .qf-build-loading__content { text-align:center; max-width:500px; padding:0 24px; width:100%; }
+  .qf-build-loading__title { font-size:28px; font-weight:800; color:#1a1a1a; margin-bottom:48px; }
+  .qf-build-loading__stage { display:none; flex-direction:column; align-items:center; gap:12px; margin-bottom:32px; opacity:0; transition:opacity 0.4s ease; }
+  .qf-build-loading__stage.visible { display:flex; opacity:1; }
+  .qf-build-loading__stage.done .qf-build-loading__spinner-svg { display:none; }
+  .qf-build-loading__stage.done .qf-build-loading__done-svg { display:block; }
+  .qf-build-loading__icon { width:48px; height:48px; }
+  .qf-build-loading__spinner-svg { width:100%; height:100%; animation:qf-spin 1.2s linear infinite; }
+  .qf-build-loading__done-svg { display:none; width:100%; height:100%; }
+  .qf-build-loading__label { font-size:16px; font-weight:600; color:#333; }
+
+  /* ── TRANSITION ── */
+  .qf-transition { text-align:center; padding:10px 0 }
+  .qf-transition__title { font-size:22px; font-weight:800; color:#1a1a1a; line-height:1.4; margin-bottom:12px }
+  .qf-transition__sub { font-size:14px; color:#333; line-height:1.6; margin-bottom:20px }
+  .qf-transition__img { display:block; max-width:100%; margin:20px auto 0 }
+  .qf-whyask { display:block; max-width:100%; margin:20px auto 0; border-radius:12px }
+
+  /* ── SUMMARY TITLE ── */
+  .qf-summary__title { font-size:24px; font-weight:800; color:#1a1a1a; text-align:center; margin-bottom:20px }
+
+  /* ── SUMMARY CARD ── */
+  .qf-sumcard { background:#fff; border-radius:12px; padding:20px; margin-top:0; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.06) }
+  .qf-sumcard__hdr { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px }
+  .qf-sumcard__hdr-title { font-size:18px; font-weight:800; color:#1a1a1a }
+  .qf-sumcard__badge {
+    background:#fff; border:2px solid #ff4d4d; color:#ff4d4d;
+    font-size:11px; font-weight:800; padding:4px 14px; border-radius:20px;
+    text-transform:uppercase; letter-spacing:1px;
+  }
+  .qf-sumcard__photo-wrap { text-align:center; margin-bottom:8px }
+  .qf-sumcard__photo { display:block; width:100%; max-width:280px; height:auto; object-fit:cover; margin:0 auto; border-radius:0 }
+  .qf-sumcard__slider-wrap { padding:12px 0; margin-bottom:4px }
+  .qf-sumcard__slider {
+    height:10px; border-radius:8px; position:relative;
+    background: linear-gradient(90deg, rgb(150,217,255) 1.63%, rgb(183,245,168) 24.72%, rgb(249,235,124) 54.9%, rgb(233,107,88) 81.94%);
+  }
+  .qf-sumcard__circle {
+    position:absolute; top:50%; width:24px; height:24px;
+    background:#fff; border:3px solid #ff4d4d; border-radius:50%;
+    transform:translate(-50%,-50%); left:0%;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .qf-sumcard__tooltip {
+    position:absolute; bottom:calc(100% + 10px); left:50%; transform:translateX(-50%);
+    background:#1a1a1a; color:#fff; font-size:10px; font-weight:800;
+    padding:5px 12px; border-radius:6px; white-space:nowrap;
+    text-transform:uppercase; letter-spacing:1px;
+  }
+  .qf-sumcard__tooltip::after {
+    content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    border:5px solid transparent; border-top-color:#1a1a1a;
+  }
+  .qf-sumcard__scale { display:flex; justify-content:space-between; font-size:11px; color:#999; margin-top:8px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px }
+  .qf-sumcard__alert {
+    background: #fff5f5; border-radius:10px; padding:16px;
+    display:flex; gap:14px; align-items:flex-start; margin-top:16px;
+    border: 1px solid #ffcaca;
+  }
+  .qf-sumcard__alert-icon {
+    width:36px; height:36px; background:#ff4d4d; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .qf-sumcard__alert-icon svg { width:20px; height:20px; color:#fff }
+  .qf-sumcard__alert-label { font-size:15px; font-weight:800; color:#1a1a1a }
+  .qf-sumcard__alert-text { font-size:13px; color:#555; margin-top:4px; line-height:1.6 }
+
+  /* ── METRICS GRID ── */
+  .qf-metrics { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px }
+  .qf-metric {
+    background:#fff; border-radius:12px; padding:16px; display:flex; align-items:center; gap:12px;
+    border-bottom:3px solid #ff4d4d; box-shadow:0 1px 6px rgba(0,0,0,.04);
+  }
+  .qf-metric__ico {
+    width:40px; height:40px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .qf-metric__ico--orange { background: #fff5f5; color: #ff4d4d }
+  .qf-metric__ico svg { width:22px; height:22px }
+  .qf-metric__lbl { font-size:10px; color:#999; font-weight:700; text-transform:uppercase; letter-spacing:0.5px }
+  .qf-metric__val { font-size:15px; font-weight:800; color:#1a1a1a; margin-top:2px }
+
+  /* ── FINAL PRODUCT STEP (Step 16) ── */
+  .qf-final { text-align: center; }
+  .qf-final__title { font-size: 24px; font-weight: 800; color: #1a1a1a; line-height: 1.3; margin-bottom: 16px; }
+  .qf-final__sub { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 12px; }
+  .qf-final__guarantee { font-size: 14px; font-weight: 700; color: #1a1a1a; text-decoration: underline; margin-bottom: 24px; }
+  
+  .qf-final__preview { position: relative; width: 100%; max-width: 320px; margin: 40px auto 48px; }
+  .qf-final__img-wrap { position: relative; width: 100%; aspect-ratio: 1/1; background: #fff; border-radius: 20px; border: 1px solid #eee; overflow: visible; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+  .qf-final__img { display: block; width: 85%; height: 85%; object-fit: contain; }
+  .qf-final__placeholder { color: #ddd; font-weight: 800; font-size: 11px; letter-spacing: 1px; }
+  
+  .qf-final__label { position: absolute; background: #fff; border-radius: 40px; padding: 8px 14px; display: flex; align-items: center; gap: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); z-index: 5; white-space: nowrap; border: 1px solid rgba(0,0,0,0.05); }
+  .qf-final__label span { font-size: 10px; font-weight: 800; color: #1a1a1a; text-transform: uppercase; letter-spacing: 0.5px; }
+  .qf-final__icon-box { width: 28px; height: 28px; background: #54b94a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; }
+  .qf-final__icon-box svg { width: 16px; height: 16px; stroke-width: 2.5px; }
+  
+  .qf-final__label--tl { top: 5%; left: -25%; }
+  .qf-final__label--tr { top: 5%; right: -25%; }
+  .qf-final__label--bl { bottom: 5%; left: -25%; }
+  .qf-final__label--br { bottom: 5%; right: -25%; }
+  
+  .qf-btn--final { background: #54b94a; box-shadow: 0 6px 20px rgba(84, 185, 74, 0.4); display: flex; align-items: center; justify-content: center; margin-top: 32px; }
+  .qf-btn--final:hover { background: #46a33e; transform: translateY(-2px); }
+
+  @media (max-width: 480px) {
+    .qf-final__title { font-size: 20px; }
+    .qf-final__preview { max-width: 240px; margin: 30px auto 40px; }
+    .qf-final__label { padding: 6px 10px; }
+    .qf-final__label span { font-size: 9px; }
+    .qf-final__icon-box { width: 22px; height: 22px; }
+    .qf-final__icon-box svg { width: 12px; height: 12px; }
+    .qf-final__label--tl { left: -15%; }
+    .qf-final__label--tr { right: -15%; }
+    .qf-final__label--bl { left: -15%; }
+    .qf-final__label--br { right: -15%; }
+  }
+
+  /* ── POPUPS ── */
+  .qf-popup-overlay {
+    position:fixed; top:0; left:0; right:0; bottom:0;
+    background:rgba(0,0,0,.55); z-index:1000;
+    display:none; align-items:center; justify-content:center;
+    opacity:0; padding:20px; transition:opacity .3s ease;
+  }
+  .qf-popup-overlay.vis { opacity:1 }
+  .qf-popup {
+    background:#fff; border-radius:16px; padding:30px 24px;
+    max-width:400px; width:100%; text-align:center;
+    transform:translateY(20px); transition:transform .3s ease;
+  }
+  .qf-popup-overlay.vis .qf-popup { transform:translateY(0) }
+  .qf-popup__subtitle { font-size:13px; color:#e53935; font-weight:500; margin-bottom:6px }
+  .qf-popup__title { font-size:18px; font-weight:700; margin-bottom:20px; color:#1a1a1a; line-height:1.4 }
+  .qf-popup__btns { display:flex; gap:10px; justify-content:center }
+  .qf-popup__btn {
+    padding:10px 28px; font-size:16px; font-weight:700; cursor:pointer;
+    border:none; border-radius:9999px; background:#54b94a; color:#fff;
+    font-family:inherit; transition:opacity .3s; display:inline-block;
+  }
+  .qf-popup__btn:hover { opacity:.85 }
+
+  /* ── SUBMIT ── */
+  .qf-submit { text-align:center; margin-top:24px; opacity:0; transition:opacity .5s ease-in-out; pointer-events:none }
+  .qf-submit.vis { opacity:1; pointer-events:auto }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width:480px) {
+    .qf-q { font-size:19px }
+    .qf-wrap { padding:16px 14px 50px }
+    .qf-opt { padding:14px 16px }
+    .qf-opts--grid { gap:8px }
+
+    /* Summary title */
+    .qf-summary__title { font-size:20px; margin-bottom:14px }
+
+    /* Summary card */
+    .qf-sumcard { padding:14px; border-radius:10px }
+    .qf-sumcard__hdr { flex-direction:column; align-items:flex-start; gap:8px }
+    .qf-sumcard__hdr-title { font-size:15px }
+    .qf-sumcard__badge { font-size:10px; padding:3px 10px }
+    .qf-sumcard__photo { max-width:200px }
+    .qf-sumcard__slider-wrap { padding:8px 0 }
+    .qf-sumcard__circle { width:20px; height:20px }
+    .qf-sumcard__tooltip { font-size:8px; padding:4px 8px; bottom:calc(100% + 8px) }
+    .qf-sumcard__scale { font-size:9px }
+    .qf-sumcard__alert { padding:12px; gap:10px; flex-direction:row }
+    .qf-sumcard__alert-icon { width:30px; height:30px }
+    .qf-sumcard__alert-icon svg { width:16px; height:16px }
+    .qf-sumcard__alert-label { font-size:13px }
+    .qf-sumcard__alert-text { font-size:11px }
+
+    /* Metrics grid — stack single column on small screens */
+    .qf-metrics { grid-template-columns:1fr; gap:8px }
+    .qf-metric { padding:12px; gap:10px }
+    .qf-metric__ico { width:34px; height:34px; border-radius:8px }
+    .qf-metric__ico svg { width:18px; height:18px }
+    .qf-metric__lbl { font-size:9px }
+    .qf-metric__val { font-size:13px }
+  }
+</style>

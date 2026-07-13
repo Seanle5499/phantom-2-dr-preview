@@ -1,0 +1,42 @@
+{% layout none %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MicroPlaque – Wellness Nest</title>
+<link rel="canonical" href="https://wellnessnest.co/pages/microplaque-clone">
+<meta property="og:site_name" content="Wellness Nest">
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="//wellnessnest.co/cdn/shop/t/78/assets/page.microplaque-v2-inline.css">
+<script id="shrine-blocker">(function(){var o=window.fetch;if(o){window.fetch=function(u,i){if(typeof u==='string'&&u.indexOf('shrinetheme.com')>-1)return Promise.reject(new Error('blocked'));return o.apply(this,arguments);};}var X=window.XMLHttpRequest&&window.XMLHttpRequest.prototype.open;if(X){window.XMLHttpRequest.prototype.open=function(m,u){if(typeof u==='string'&&u.indexOf('shrinetheme.com')>-1)throw new Error('blocked');return X.apply(this,arguments);};}})();</script>
+<!-- MICROPLAQUE_V3_MINIMAL_MARKER -->
+</head>
+<body>
+<style>html,body{margin:0;padding:0;}.loading{text-align:center;padding:80px 20px;color:#666;font-family:system-ui,sans-serif;}</style>
+<script id="funnel-route">function route(e){if(e&&e.preventDefault)e.preventDefault();window.location.href='https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin';}</script>
+<div id="microplaque-body" class="loading">Loading content…</div>
+<script id="microplaque-body-loader">
+(function(){
+  var base='//wellnessnest.co/cdn/shop/t/78/assets/';
+  var chunks=['page.microplaque-v2-body-1.html','page.microplaque-v2-body-2.html','page.microplaque-v2-body-3.html','page.microplaque-v2-body-4.html'];
+  Promise.all(chunks.map(function(f){return fetch(base+f).then(function(r){return r.text();});})).then(function(parts){
+    var el=document.getElementById('microplaque-body');
+    el.className='';
+    el.innerHTML=parts.join('');
+    el.querySelectorAll('script').forEach(function(oldS){
+      var newS=document.createElement('script');
+      Array.from(oldS.attributes).forEach(function(a){newS.setAttribute(a.name,a.value);});
+      newS.text=oldS.text;
+      oldS.parentNode.replaceChild(newS,oldS);
+    });
+    document.dispatchEvent(new Event('microplaque:loaded'));
+  }).catch(function(err){
+    document.getElementById('microplaque-body').innerHTML='<div style="padding:80px;text-align:center;color:#900">Failed to load: '+err.message+'</div>';
+  });
+})();
+</script>
+<script src="//wellnessnest.co/cdn/shop/t/78/assets/page.microplaque-v2-inline.js" defer></script>
+</body>
+</html>

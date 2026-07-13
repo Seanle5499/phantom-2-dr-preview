@@ -1,0 +1,913 @@
+
+    {% render 'gp-head', isThemeSection: true %}
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-624364335199748936.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-624364335199748936.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-624364335199748936.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-624364335199748936.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-624364335199748936.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-624364335199748936.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-624364335199748936.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-624364335199748936.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-624364335199748936.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-624364335199748936.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-624364335199748936.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-624364335199748936.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-624364335199748936.gps.gpsil [style*="--bl:"]{border-left:var(--bl)}.gps-624364335199748936.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-624364335199748936.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-624364335199748936.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-624364335199748936.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-624364335199748936.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-624364335199748936.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-624364335199748936.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-624364335199748936.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-624364335199748936.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-624364335199748936.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-624364335199748936.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-624364335199748936.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-624364335199748936.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-624364335199748936.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-624364335199748936.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-624364335199748936.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-624364335199748936.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-624364335199748936.gps.gpsil [style*="--rg:"]{row-gap:var(--rg)}.gps-624364335199748936.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-624364335199748936.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-624364335199748936.gps.gpsil [style*="--w:"]{width:var(--w)}@media only screen and (max-width:1024px){.gps-624364335199748936.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-624364335199748936.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-624364335199748936.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}}@media only screen and (max-width:767px){.gps-624364335199748936.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-624364335199748936.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-624364335199748936.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}}.gps-624364335199748936 .gp-relative{position:relative}.gps-624364335199748936 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-624364335199748936 .gp-mb-0{margin-bottom:0}.gps-624364335199748936 .gp-flex{display:flex}.gps-624364335199748936 .gp-grid{display:grid}.gps-624364335199748936 .\!gp-hidden{display:none!important}.gps-624364335199748936 .gp-hidden{display:none}.gps-624364335199748936 .gp-max-w-full{max-width:100%}.gps-624364335199748936 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-624364335199748936 .gp-flex-col{flex-direction:column}.gps-624364335199748936 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-624364335199748936 .gp-duration-200{transition-duration:.2s}.gps-624364335199748936 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-624364335199748936 .tablet\:\!gp-hidden{display:none!important}.gps-624364335199748936 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-624364335199748936 .mobile\:\!gp-hidden{display:none!important}.gps-624364335199748936 .mobile\:gp-hidden{display:none}}.gps-624364335199748936 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}</style>
+    
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--w-mobile:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"type":"color","color":"transparent","image":{"src":"","width":0,"height":0},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll"}},"uid":"gz-l-Xxu0A"}' data-id="gz-l-Xxu0A" id="gz-l-Xxu0A" data-same-height-subgrid-container class="gz-l-Xxu0A gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--pt:var(--g-s-2xl);--pb:var(--g-s-2xl);--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--cg:16px;--rg:0px;--gtc:minmax(0, 12fr);--w:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gUMfUzh-Qn gp-relative gp-flex gp-flex-col"
+    >
+      
+  
+    <div
+      data-id="gaueBqO6ld"
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gaueBqO6ld gp-custom-code">
+      <div>
+    <!-- MenoMate Product Widget -->
+<div class="mn-widget" id="mnWidget">
+  <div class="mn-gallery">
+    <div class="mn-main-img">
+      <img id="mnMainImg" src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/menomate.webp?v=1772185217" alt="MenoMate Menopause Probiotic">
+    </div>
+
+    <div class="mn-thumb-strip" data-mn-thumbs>
+      <button class="mn-thumb active"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/menomate.webp?v=1772185217" alt="MenoMate 1"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_benefit_d69ca807-e0e4-402a-8dfb-75accd782526.webp?v=1772185217" alt="MenoMate 2"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_amazon_d76f4479-c2b0-41f5-9dac-152fcc7c28dc.webp?v=1772185217" alt="MenoMate 3"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/1_0559498b-2a8d-42dc-a572-eaf480db60b4.webp?v=1755177345" alt="MenoMate 4"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_supplement_fact.webp?v=1772185217" alt="MenoMate 5"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_value_prop.webp?v=1772185217" alt="MenoMate 6"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_rv2.webp?v=1772185217" alt="MenoMate 7"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_compare.webp?v=1772185217" alt="MenoMate 8"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_lab.webp?v=1772185217" alt="MenoMate 9"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/mnm_en_rv1.webp?v=1772185217" alt="MenoMate 10"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/bundle_3_new.webp?v=1772185217" alt="MenoMate 11"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/bundle_2_new.webp?v=1772185217" alt="MenoMate 12"></button>
+      <button class="mn-thumb"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/gempages_501444340413891578-d3749045-4433-4da3-b774-5ab02441cf92.png?v=1772185217" alt="MenoMate 13"></button>
+    </div>
+
+    <div class="mn-review-card">
+      <p class="mn-review-quote">“I’m going through Perimenopause. Took MenoMate for 3 weeks and WOW I feel great! No more night sweats, I’m more mindful of snacking between meals, my joints feel more flexible and I wake up feeling refreshed and energized. The best part? My pants feel looser and my tops fit better!”</p>
+      <div class="mn-review-footer">
+        <span class="mn-review-stars">★★★★★</span>
+        <span class="mn-review-author">Naomi, 47, USA</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mn-buybox">
+    <span class="mn-eyebrow">MENOMATE · MENOPAUSE PROBIOTIC</span>
+
+    <div class="mn-rating">
+      <span class="mn-stars">★★★★★</span>
+      <span>4.9/5.0 — Trusted by 1M+ women</span>
+    </div>
+
+    <h1 class="mn-h1">Menopause Probiotic Support for Hot Flashes, Mood, Bloating & Daily Comfort</h1>
+
+    <div class="mn-price-block">
+      <span class="mn-compare-price" data-mn-compare>$79.90</span>
+      <span class="mn-sale-price" data-mn-sale>$35.95</span>
+      <span class="mn-save-badge" data-mn-save>SAVE $43.95</span>
+    </div>
+
+    <p class="mn-intro"><strong>Daily probiotic support for women navigating menopause and perimenopause.</strong></p>
+
+    <ul class="mn-bullets">
+      <li>✓ Supports hot flash & night sweat comfort</li>
+      <li>✓ Helps support mood, cravings & digestive balance</li>
+      <li>✓ Helps reduce bloating and daily discomfort</li>
+      <li>✓ Supports vaginal, urinary & gut microbiome health</li>
+      <li>✓ Non-GMO · Gluten Free · Third-Party Tested</li>
+    </ul>
+
+
+    <div class="mn-purchase-toggle" data-mn-toggle>
+      <button class="mn-toggle-btn active" data-mode="sub">Subscribe & Save</button>
+      <button class="mn-toggle-btn" data-mode="otp">One-time</button>
+    </div>
+
+    <div class="mn-tiers" data-mn-tiers>
+      <label class="mn-tier is-selected" data-qty="2" data-sub-price="$35.95" data-otp-price="$39.95" data-compare="$79.90">
+        <input type="radio" name="mn-tier" value="2" checked>
+        <div class="mn-tier-inner">
+          <span class="mn-tier-radio"></span>
+          <div class="mn-tier-left">
+            <span class="mn-tier-name">Buy 1, Get 1 Free</span>
+            <span class="mn-tier-detail">Buy 1, Get 1 Free · 2 bottles total</span>
+            <span class="mn-tier-cadence">Delivered every 30 days</span>
+          </div>
+          <div class="mn-tier-right">
+            <span class="mn-tier-save">Best Starter</span>
+            <span class="mn-tier-price">$35.95</span>
+            <span class="mn-tier-compare">$79.90</span>
+          </div>
+        </div>
+      </label>
+
+      <label class="mn-tier mn-tier--popular" data-qty="4" data-sub-price="$58.95" data-otp-price="$64.95" data-compare="$159.80">
+        <span class="mn-tier-badge">MOST POPULAR</span>
+        <input type="radio" name="mn-tier" value="4">
+        <div class="mn-tier-inner">
+          <span class="mn-tier-radio"></span>
+          <div class="mn-tier-left">
+            <span class="mn-tier-name">Buy 2, Get 2 Free</span>
+            <span class="mn-tier-detail">4 bottles total · FREE Shipping</span>
+            <span class="mn-tier-cadence">Delivered every 60 days</span>
+          </div>
+          <div class="mn-tier-right">
+            <span class="mn-tier-save">Save More</span>
+            <span class="mn-tier-price">$58.95</span>
+            <span class="mn-tier-compare">$159.80</span>
+          </div>
+        </div>
+      </label>
+
+      <label class="mn-tier mn-tier--best" data-qty="6" data-sub-price="$71.95" data-otp-price="$79.95" data-compare="$239.70">
+        <span class="mn-tier-badge">BEST VALUE</span>
+        <input type="radio" name="mn-tier" value="6">
+        <div class="mn-tier-inner">
+          <span class="mn-tier-radio"></span>
+          <div class="mn-tier-left">
+            <span class="mn-tier-name">Buy 3, Get 3 Free</span>
+            <span class="mn-tier-detail">6 bottles total · FREE Shipping</span>
+            <span class="mn-tier-cadence">Delivered every 90 days</span>
+          </div>
+          <div class="mn-tier-right">
+            <span class="mn-tier-save">Lowest Price</span>
+            <span class="mn-tier-price">$71.95</span>
+            <span class="mn-tier-compare">$239.70</span>
+          </div>
+        </div>
+      </label>
+    </div>
+
+    <button type="button" class="mn-atc" data-mn-atc>GET MENOMATE TODAY →</button>
+    <div class="mn-atc-sub">Cancel anytime · 90-day money-back guarantee</div>
+
+    <div class="mn-trust-row">
+      <span>🚚 FREE US Shipping</span>
+      <span>🛡 90-Day MBG</span>
+      <span>🧪 Third-Party Tested</span>
+    </div>
+
+    <div class="mn-mini-faq">
+      <details><summary>How do I take MenoMate?<span>›</span></summary><p>Take daily as directed on the bottle. Consistency matters most during menopause and perimenopause.</p></details>
+      <details><summary>When will I notice results?<span>›</span></summary><p>Many women notice digestive and comfort changes within the first few weeks. Best results come with daily use.</p></details>
+      <details><summary>Is this for menopause or perimenopause?<span>›</span></summary><p>Both. MenoMate is designed to support women through perimenopause, menopause and post-menopause.</p></details>
+      <details><summary>What if it doesn't work for me?<span>›</span></summary><p>Your order is protected by our 90-day money-back guarantee.</p></details>
+    </div>
+  </div>
+</div>
+    </div>
+    </div>
+  
+      <style id="custom-css-gaueBqO6ld">
+        .mn-widget {
+  --mn-primary:#5B3B8F;
+  --mn-primary-dark:#4A2F76;
+  --mn-accent:#E66AA8;
+  --mn-green:#4ECB71;
+  --mn-border:#D8C8F2;
+  --mn-soft-bg:#FAF8FD;
+  --mn-text:#3D3A4A;
+  --mn-muted:#7B6F8F;
+
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  gap:40px!important;
+  max-width:1200px!important;
+  margin:0 auto!important;
+  padding:20px!important;
+  color:var(--mn-text)!important;
+  line-height:1.5!important;
+}
+
+.mn-widget * {
+  box-sizing:border-box!important;
+}
+
+.mn-gallery {
+  position:sticky!important;
+  top:20px!important;
+  align-self:start!important;
+  min-width:0!important;
+}
+
+.mn-main-img {
+  width:100%!important;
+  aspect-ratio:1/1!important;
+  border-radius:14px!important;
+  overflow:hidden!important;
+  background:var(--mn-soft-bg)!important;
+  margin-bottom:12px!important;
+  border:1px solid var(--mn-border)!important;
+}
+
+.mn-main-img img {
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  display:block!important;
+}
+
+.mn-thumb-strip {
+  display:flex!important;
+  gap:8px!important;
+  overflow-x:auto!important;
+  padding-bottom:4px!important;
+  -webkit-overflow-scrolling:touch!important;
+}
+
+.mn-thumb {
+  flex:0 0 60px!important;
+  width:60px!important;
+  height:60px!important;
+  border-radius:8px!important;
+  border:2px solid transparent!important;
+  overflow:hidden!important;
+  background:var(--mn-soft-bg)!important;
+  padding:0!important;
+  cursor:pointer!important;
+}
+
+.mn-thumb.active {
+  border-color:var(--mn-primary)!important;
+}
+
+.mn-thumb img {
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  display:block!important;
+}
+
+.mn-review-card {
+  margin-top:20px!important;
+  padding:16px!important;
+  border:1px solid var(--mn-border)!important;
+  border-radius:12px!important;
+  background:var(--mn-soft-bg)!important;
+}
+
+.mn-review-quote {
+  font-size:15px!important;
+  font-weight:600!important;
+  color:var(--mn-text)!important;
+  margin:0 0 10px!important;
+  line-height:1.5!important;
+}
+
+.mn-review-footer {
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  flex-wrap:wrap!important;
+}
+
+.mn-review-stars {
+  color:#FFB800!important;
+  font-size:22px!important;
+  letter-spacing:1px!important;
+}
+
+.mn-review-author {
+  font-size:16px!important;
+  font-weight:700!important;
+  color:var(--mn-primary-dark)!important;
+}
+
+.mn-buybox {
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+  min-width:0!important;
+}
+
+.mn-eyebrow {
+  display:inline-block!important;
+  background:var(--mn-primary)!important;
+  color:#fff!important;
+  font-size:11px!important;
+  font-weight:700!important;
+  letter-spacing:1.4px!important;
+  padding:5px 12px!important;
+  border-radius:999px!important;
+  width:fit-content!important;
+}
+
+.mn-rating {
+  display:flex!important;
+  gap:8px!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  font-size:13px!important;
+  color:var(--mn-muted)!important;
+}
+
+.mn-stars {
+  color:#FFB800!important;
+  letter-spacing:1px!important;
+}
+
+.mn-h1 {
+  font-size:28px!important;
+  line-height:1.2!important;
+  margin:0!important;
+  font-weight:800!important;
+  letter-spacing:-.3px!important;
+  color:var(--mn-primary)!important;
+}
+
+.mn-price-block {
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  flex-wrap:wrap!important;
+}
+
+.mn-compare-price {
+  font-size:16px!important;
+  color:#9B91AA!important;
+  text-decoration:line-through!important;
+}
+
+.mn-sale-price {
+  font-size:30px!important;
+  font-weight:800!important;
+  color:var(--mn-primary-dark)!important;
+}
+
+.mn-save-badge {
+  background:var(--mn-accent)!important;
+  color:#fff!important;
+  font-size:11px!important;
+  font-weight:800!important;
+  padding:4px 10px!important;
+  border-radius:999px!important;
+}
+
+.mn-intro {
+  border-top:1px solid var(--mn-border)!important;
+  padding-top:12px!important;
+  font-size:15px!important;
+  margin:0!important;
+  color:var(--mn-text)!important;
+}
+
+.mn-bullets {
+  list-style:none!important;
+  padding:0!important;
+  margin:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:8px!important;
+}
+
+.mn-bullets li {
+  font-size:14px!important;
+  color:var(--mn-text)!important;
+}
+
+.mn-tier-label {
+  text-align:center!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  letter-spacing:2px!important;
+  color:var(--mn-primary)!important;
+  padding-top:8px!important;
+}
+
+.mn-purchase-toggle {
+  display:flex!important;
+  border:2px solid var(--mn-primary)!important;
+  border-radius:10px!important;
+  overflow:hidden!important;
+  background:#fff!important;
+}
+
+.mn-toggle-btn {
+  flex:1!important;
+  padding:12px!important;
+  border:0!important;
+  background:#fff!important;
+  color:var(--mn-primary)!important;
+  font-size:14px!important;
+  font-weight:700!important;
+  cursor:pointer!important;
+}
+
+.mn-toggle-btn.active {
+  background:var(--mn-primary)!important;
+  color:#fff!important;
+}
+
+.mn-tiers {
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+  overflow:visible!important;
+}
+
+.mn-tier {
+  position:relative!important;
+  display:block!important;
+  padding:16px!important;
+  border:1px solid var(--mn-border)!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  cursor:pointer!important;
+  overflow:visible!important;
+}
+
+.mn-tier.is-selected {
+  border:2px solid var(--mn-primary)!important;
+  background:var(--mn-soft-bg)!important;
+  padding:15px!important;
+}
+
+.mn-tier input {
+  position:absolute!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+.mn-tier-inner {
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:12px!important;
+}
+
+.mn-tier-radio {
+  width:20px!important;
+  height:20px!important;
+  border:2px solid var(--mn-border)!important;
+  border-radius:50%!important;
+  flex-shrink:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:#fff!important;
+}
+
+.mn-tier.is-selected .mn-tier-radio {
+  border-color:var(--mn-primary)!important;
+}
+
+.mn-tier.is-selected .mn-tier-radio:after {
+  content:""!important;
+  width:10px!important;
+  height:10px!important;
+  background:var(--mn-primary)!important;
+  border-radius:50%!important;
+}
+
+.mn-tier-left {
+  flex:1!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:2px!important;
+  min-width:0!important;
+}
+
+.mn-tier-name {
+  font-size:15px!important;
+  font-weight:800!important;
+  color:var(--mn-primary-dark)!important;
+}
+
+.mn-tier-detail,
+.mn-tier-cadence {
+  font-size:12px!important;
+  color:var(--mn-muted)!important;
+}
+
+.mn-tier-right {
+  text-align:right!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-end!important;
+  gap:2px!important;
+  flex-shrink:0!important;
+}
+
+.mn-tier-save {
+  background:var(--mn-accent)!important;
+  color:#fff!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  padding:3px 8px!important;
+  border-radius:999px!important;
+}
+
+.mn-tier-price {
+  font-size:22px!important;
+  font-weight:800!important;
+  color:var(--mn-primary-dark)!important;
+}
+
+.mn-tier-compare {
+  font-size:13px!important;
+  color:#9B91AA!important;
+  text-decoration:line-through!important;
+}
+
+.mn-tier-badge {
+  position:absolute!important;
+  top:-11px!important;
+  left:16px!important;
+  background:var(--mn-primary)!important;
+  color:#fff!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  padding:3px 10px!important;
+  border-radius:999px!important;
+  letter-spacing:1px!important;
+  z-index:2!important;
+}
+
+.mn-atc {
+  width:100%!important;
+  padding:18px 24px!important;
+  border:0!important;
+  border-radius:999px!important;
+  background:var(--mn-green)!important;
+  color:#fff!important;
+  font-size:16px!important;
+  font-weight:800!important;
+  letter-spacing:.8px!important;
+  cursor:pointer!important;
+  box-shadow:0 8px 18px rgba(78,203,113,.25)!important;
+}
+
+.mn-atc.is-loading {
+  opacity:.65!important;
+  pointer-events:none!important;
+}
+
+.mn-atc-sub {
+  text-align:center!important;
+  font-size:12px!important;
+  color:var(--mn-muted)!important;
+}
+
+.mn-trust-row {
+  display:flex!important;
+  justify-content:center!important;
+  gap:18px!important;
+  flex-wrap:wrap!important;
+  padding:12px 0!important;
+  border-top:1px solid var(--mn-border)!important;
+  border-bottom:1px solid var(--mn-border)!important;
+  font-size:13px!important;
+  color:var(--mn-primary-dark)!important;
+}
+
+.mn-mini-faq {
+  border-top:1px solid var(--mn-border)!important;
+}
+
+.mn-mini-faq details {
+  border-bottom:1px solid var(--mn-border)!important;
+}
+
+.mn-mini-faq summary {
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  padding:14px 0!important;
+  font-size:14px!important;
+  font-weight:700!important;
+  cursor:pointer!important;
+  list-style:none!important;
+  color:var(--mn-primary-dark)!important;
+}
+
+.mn-mini-faq summary::-webkit-details-marker {
+  display:none!important;
+}
+
+.mn-mini-faq p {
+  font-size:13px!important;
+  color:var(--mn-muted)!important;
+  line-height:1.6!important;
+  padding-bottom:14px!important;
+  margin:0!important;
+}
+
+@media(max-width:768px){
+  .mn-widget {
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+    padding:16px!important;
+  }
+
+  .mn-gallery {
+    position:static!important;
+  }
+
+  .mn-h1 {
+    font-size:22px!important;
+  }
+
+  .mn-sale-price {
+    font-size:24px!important;
+  }
+
+  .mn-thumb {
+    flex-basis:52px!important;
+    width:52px!important;
+    height:52px!important;
+  }
+}
+
+@media(max-width:480px){
+  .mn-h1 {
+    font-size:20px!important;
+  }
+
+  .mn-tier {
+    padding:12px!important;
+  }
+
+  .mn-tier.is-selected {
+    padding:11px!important;
+  }
+
+  .mn-tier-price {
+    font-size:18px!important;
+  }
+
+  .mn-atc {
+    font-size:14px!important;
+    padding:16px!important;
+  }
+}
+      </style>
+    
+      <script id="custom-js-gaueBqO6ld">
+        try {
+          (function(){
+  var MN_PRODUCT_HANDLE = "menomate-menopause-probiotic";
+  var mnProduct = null;
+  var mnMode = "sub";
+  var mnSelectedQty = 2;
+
+  var MN_TEXT = {
+    cta: "GET MENOMATE TODAY →",
+    loading: "ADDING...",
+    added: "ADDED! ✓",
+    productLoading: "Product is still loading. Please try again.",
+    error: "Error adding to cart. Please try again."
+  };
+
+  function moneyToNumber(str){
+    return parseFloat(String(str).replace(/[^0-9.]/g,"")) || 0;
+  }
+
+  function formatMoney(n){
+    return "$" + n.toFixed(2);
+  }
+
+  function getSelectedTier(){
+    return document.querySelector(".mn-tier input:checked")?.closest(".mn-tier");
+  }
+
+  function updateSelectedClasses(){
+    document.querySelectorAll(".mn-tier").forEach(function(tier){
+      var input = tier.querySelector("input");
+      tier.classList.toggle("is-selected", !!input && input.checked);
+    });
+  }
+
+  function updateUI(){
+    var tier = getSelectedTier();
+    if(!tier) return;
+
+    var price = tier.getAttribute("data-" + mnMode + "-price");
+    var compare = tier.getAttribute("data-compare");
+    var save = moneyToNumber(compare) - moneyToNumber(price);
+
+    document.querySelectorAll(".mn-tier").forEach(function(t){
+      var p = t.getAttribute("data-" + mnMode + "-price");
+      var c = t.getAttribute("data-compare");
+      var priceEl = t.querySelector(".mn-tier-price");
+      var compareEl = t.querySelector(".mn-tier-compare");
+      var cadenceEl = t.querySelector(".mn-tier-cadence");
+
+      if(priceEl) priceEl.textContent = p;
+      if(compareEl) compareEl.textContent = c;
+      if(cadenceEl) cadenceEl.style.display = mnMode === "sub" ? "" : "none";
+    });
+
+    var saleEl = document.querySelector("[data-mn-sale]");
+    var compareEl = document.querySelector("[data-mn-compare]");
+    var saveEl = document.querySelector("[data-mn-save]");
+
+    if(saleEl) saleEl.textContent = price;
+    if(compareEl) compareEl.textContent = compare;
+    if(saveEl) saveEl.textContent = "SAVE " + formatMoney(save);
+
+    updateSelectedClasses();
+  }
+
+  function getSellingPlanId(variant){
+    if(!variant || !variant.selling_plan_allocations || !variant.selling_plan_allocations.length){
+      return null;
+    }
+
+    // Always use the first purchase option:
+    // The Test Drive - 1 Bottle
+    return variant.selling_plan_allocations[0].selling_plan_id;
+  }
+
+  function getOtpExtraDiscountCode(qty){
+    if(qty === 4) return "MNMB2G2EXTRA";
+    if(qty === 6) return "MNMB3G3EXTRA";
+    return "";
+  }
+
+  function getSubDiscountCode(qty){
+    if(qty === 2) return "MNMB1G1SUB";
+    if(qty === 4) return "MNMB2G2SUB";
+    if(qty === 6) return "MNMB3G3SUB";
+    return "";
+  }
+
+  function getCheckoutDiscountCode(){
+    if(mnMode === "sub"){
+      return getSubDiscountCode(mnSelectedQty);
+    }
+
+    if(mnMode === "otp"){
+      return getOtpExtraDiscountCode(mnSelectedQty);
+    }
+
+    return "";
+  }
+
+  function goToCheckoutWithDiscount(discountCode){
+    var root = window.Shopify && window.Shopify.routes ? window.Shopify.routes.root : "/";
+
+    if(discountCode){
+      window.location.href = root + "checkout?discount=" + encodeURIComponent(discountCode);
+    } else {
+      window.location.href = root + "checkout";
+    }
+  }
+
+  function loadProduct(){
+    fetch("/products/" + MN_PRODUCT_HANDLE + ".js")
+      .then(function(r){ return r.json(); })
+      .then(function(product){
+        mnProduct = product;
+        console.log("[MenoMate Widget] Product loaded:", product.title);
+      })
+      .catch(function(err){
+        console.error("[MenoMate Widget] Product fetch failed:", err);
+      });
+  }
+
+  document.addEventListener("click", function(e){
+    var thumb = e.target.closest(".mn-thumb");
+    if(thumb){
+      var img = thumb.querySelector("img");
+      var main = document.getElementById("mnMainImg");
+
+      document.querySelectorAll(".mn-thumb").forEach(function(btn){
+        btn.classList.remove("active");
+      });
+
+      thumb.classList.add("active");
+
+      if(img && main) {
+        main.src = img.src;
+      }
+
+      return;
+    }
+
+    var toggle = e.target.closest(".mn-toggle-btn");
+    if(toggle){
+      document.querySelectorAll(".mn-toggle-btn").forEach(function(btn){
+        btn.classList.remove("active");
+      });
+
+      toggle.classList.add("active");
+      mnMode = toggle.getAttribute("data-mode");
+      updateUI();
+      return;
+    }
+
+    var tier = e.target.closest(".mn-tier");
+    if(tier){
+      var input = tier.querySelector("input");
+
+      if(input){
+        input.checked = true;
+        mnSelectedQty = parseInt(input.value, 10);
+        updateUI();
+      }
+
+      return;
+    }
+
+    var atc = e.target.closest("[data-mn-atc]");
+    if(atc){
+      handleATC(atc);
+    }
+  });
+
+  function handleATC(btn){
+    if(btn.disabled) return;
+
+    if(!mnProduct || !mnProduct.variants || !mnProduct.variants.length){
+      alert(MN_TEXT.productLoading);
+      return;
+    }
+
+    var variant = mnProduct.variants[0];
+
+    var item = {
+      id: parseInt(variant.id, 10),
+      quantity: mnSelectedQty
+    };
+
+    if(mnMode === "sub"){
+      var spId = getSellingPlanId(variant);
+
+      if(spId){
+        item.selling_plan = parseInt(spId, 10);
+      }
+    }
+
+    btn.disabled = true;
+    btn.classList.add("is-loading");
+    btn.textContent = MN_TEXT.loading;
+
+    fetch((window.Shopify && window.Shopify.routes ? window.Shopify.routes.root : "/") + "cart/add.js", {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify({
+        items:[item]
+      })
+    })
+    .then(function(res){
+      if(!res.ok) throw new Error("Cart add failed");
+      return res.json();
+    })
+    .then(function(){
+      btn.textContent = MN_TEXT.added;
+
+      var discountCode = getCheckoutDiscountCode();
+
+      goToCheckoutWithDiscount(discountCode);
+    })
+    .catch(function(err){
+      console.error("[MenoMate Widget] Add to cart error:", err);
+      btn.disabled = false;
+      btn.classList.remove("is-loading");
+      btn.textContent = MN_TEXT.cta;
+      alert(MN_TEXT.error);
+    });
+  }
+
+  updateUI();
+  loadProduct();
+})();
+        } catch(err){}
+      </script>
+    
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    "presets": [{ "name": "Menomate - Product Widget" }],
+    "name": "Menomate - Product Widget",
+    "tag": "section",
+    "class": "gps-624364335199748936 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=624364335199748936)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

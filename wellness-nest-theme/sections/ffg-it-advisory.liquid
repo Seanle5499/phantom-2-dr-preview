@@ -1,0 +1,113 @@
+{%- comment -%}
+  FloraFresh Gummies — Italian "Meet our medical advisory board" block.
+  Self-contained (no product context). Mirrors the live English product page
+  section (rich_text heading + 3-column doctor multicolumn) in Italian.
+  Doctor photos are referenced directly by their store CDN URLs so this
+  section is portable and never touches other templates.
+{%- endcomment -%}
+
+{%- assign uid = section.id | replace: '-', '' -%}
+
+<style>
+  .ffg-adv-{{ uid }} {
+    --ffg-plum: #6B2030;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 18px;
+    font-family: "PPNeueMontreal", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #121212;
+    text-align: center;
+  }
+  .ffg-adv-{{ uid }} * { box-sizing: border-box; }
+  .ffg-adv-{{ uid }} .ffg-adv-title {
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 800;
+    margin: 0 0 36px;
+  }
+  .ffg-adv-{{ uid }} .ffg-adv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+  .ffg-adv-{{ uid }} .ffg-adv-card { padding: 0 6px; }
+  .ffg-adv-{{ uid }} .ffg-adv-photo {
+    width: 230px;
+    height: 230px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 18px;
+    background: #faf2f3;
+  }
+  .ffg-adv-{{ uid }} .ffg-adv-name {
+    font-size: 16px;
+    line-height: 1.45;
+    margin: 0;
+    color: #121212;
+  }
+  .ffg-adv-{{ uid }} .ffg-adv-name strong { font-weight: 800; }
+  .ffg-adv-{{ uid }} .ffg-adv-name em { font-style: italic; color: #444; }
+  @media (max-width: 749px) {
+    .ffg-adv-{{ uid }} { padding: 28px 14px; }
+    .ffg-adv-{{ uid }} .ffg-adv-title { font-size: 26px; margin-bottom: 26px; }
+    .ffg-adv-{{ uid }} .ffg-adv-grid { grid-template-columns: 1fr; gap: 30px; }
+    .ffg-adv-{{ uid }} .ffg-adv-photo { width: 200px; height: 200px; }
+  }
+</style>
+
+<div class="ffg-adv-{{ uid }}">
+  <h2 class="ffg-adv-title">{{ section.settings.title | default: 'Il nostro comitato medico consultivo' }}</h2>
+  <div class="ffg-adv-grid">
+
+    <div class="ffg-adv-card">
+      <img class="ffg-adv-photo"
+           src="https://wellnessnest.co/cdn/shop/files/Shannon_Klinger.webp"
+           alt="Dr. Shannon Klinger, MD" loading="lazy" />
+      <p class="ffg-adv-name">
+        <strong>Dr. Shannon Klinger, MD</strong> Ginecologa, specialista in salute vaginale
+        <em>Minnesota Women's Care</em>
+      </p>
+    </div>
+
+    <div class="ffg-adv-card">
+      <img class="ffg-adv-photo"
+           src="https://wellnessnest.co/cdn/shop/files/Dr._Vonda_Rodriguez.webp"
+           alt="Dr. Vonda Rodriguez, MD" loading="lazy" />
+      <p class="ffg-adv-name">
+        <strong>Dr. Vonda Rodriguez, MD</strong> Responsabile salute ormonale femminile e menopausa
+        <em>Obstetrics &amp; Gynecology Institute</em>
+      </p>
+    </div>
+
+    <div class="ffg-adv-card">
+      <img class="ffg-adv-photo"
+           src="https://wellnessnest.co/cdn/shop/files/Rhonda_Perkins.webp"
+           alt="Dr. Rhonda Perkins, PhD" loading="lazy" />
+      <p class="ffg-adv-name">
+        <strong>Dr. Rhonda Perkins, PhD</strong> Ricercatrice associata, microbioma femminile e benessere intimo
+        <em>Integrative Women's Health Institute</em>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FFG IT Advisory",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titolo",
+      "default": "Il nostro comitato medico consultivo"
+    }
+  ],
+  "presets": [
+    { "name": "FFG IT Advisory" }
+  ]
+}
+{% endschema %}

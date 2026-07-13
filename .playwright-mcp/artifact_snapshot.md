@@ -1,0 +1,343 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Claude" [ref=e9] [cursor=pointer]:
+            - /url: https://claude.ai
+            - img "Claude" [ref=e10]
+          - generic [ref=e12]: Content is user-generated and unverified.
+        - generic [ref=e35]:
+          - img [ref=e36]
+          - generic [ref=e38]: "2"
+      - generic [ref=e13]:
+        - button "Copy link" [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+        - button "Report" [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+        - button "Customize" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+          - text: Customize
+    - iframe [ref=e32]:
+      - generic [active] [ref=f15e1]:
+        - alert [ref=f15e6]
+        - iframe [ref=f15e9]:
+          - generic [active] [ref=f19e1]:
+            - generic [ref=f19e2]:
+              - generic [ref=f19e3]:
+                - generic [ref=f19e4]:
+                  - generic [ref=f19e5]: Brief · Reference Video Series · Phantom 2.0 IWB
+                  - generic [ref=f19e6]: 🎥Video Chân Thực Từ Reference
+                - generic [ref=f19e7]:
+                  - generic [ref=f19e8]: Ver v1
+                  - generic [ref=f19e9]: Owner SouthEDC
+                  - generic [ref=f19e10]: Budget 200k / video
+              - generic [ref=f19e11]: Mỗi reference video → tạo 1 video tương ứng. Script giống 90% — chỉ thay sản phẩm đối thủ bằng sản phẩm của mình. Không sáng tạo lại từ đầu. Giữ nguyên cái hay mà reference đã làm tốt.
+            - link "🛡️ Sản phẩm quảng cáo Phantom 2.0 IWB Holster southedc.store/products/phantom-2-0-iwb-holster ↗" [ref=f19e12] [cursor=pointer]:
+              - /url: https://southedc.store/products/phantom-2-0-iwb-holster
+              - generic [ref=f19e13]: 🛡️
+              - generic [ref=f19e14]:
+                - generic [ref=f19e15]: Sản phẩm quảng cáo
+                - generic [ref=f19e16]: Phantom 2.0 IWB Holster
+                - generic [ref=f19e17]: southedc.store/products/phantom-2-0-iwb-holster ↗
+            - generic [ref=f19e18]:
+              - generic [ref=f19e19]: Reading order →
+              - generic [ref=f19e20]: 01 Nguyên tắc 90%
+              - generic [ref=f19e21]: ›
+              - generic [ref=f19e22]: 02 Quy trình 4 bước
+              - generic [ref=f19e23]: ›
+              - generic [ref=f19e24]: 03 Lỗi cấm
+              - generic [ref=f19e25]: ›
+              - generic [ref=f19e26]: 04 Assets
+              - generic [ref=f19e27]: ›
+              - generic [ref=f19e28]: 05 Payment
+              - generic [ref=f19e29]: ›
+              - generic [ref=f19e30]: 06 Scripts revised
+            - link "📚 Khóa học Google Omni · Trả phí Cách làm video chân thực bằng AI Xem trước khi bắt tay vào làm · đây là lợi thế được học miễn phí khi nhận job Mở Drive ↗" [ref=f19e31] [cursor=pointer]:
+              - /url: https://drive.google.com/drive/folders/1IinUloJAJX3O7UxjAirepGHAKuNi8owM?usp=sharing
+              - img [ref=f19e33]
+              - generic [ref=f19e35]:
+                - generic [ref=f19e36]: 📚 Khóa học Google Omni · Trả phí
+                - generic [ref=f19e37]: Cách làm video chân thực bằng AI
+                - generic [ref=f19e38]: Xem trước khi bắt tay vào làm · đây là lợi thế được học miễn phí khi nhận job
+              - generic [ref=f19e39]: Mở Drive ↗
+            - generic [ref=f19e40]:
+              - generic [ref=f19e41]:
+                - generic [ref=f19e42]: "01"
+                - generic [ref=f19e43]: Nguyên tắc 90% giống Reference
+                - generic [ref=f19e44]: Nguyên tắc cốt lõi
+              - generic [ref=f19e45]:
+                - generic [ref=f19e46]:
+                  - generic [ref=f19e47]: Hook · Mở đầu
+                  - generic [ref=f19e48]: Copy y hệt
+                  - generic [ref=f19e49]: Hook là phần quan trọng nhất. Reference đã làm rất tốt rồi — catchy, shock, giữ chân người xem. Giữ nguyên 100%. Đừng cố sáng tạo hơn.
+                - generic [ref=f19e50]:
+                  - generic [ref=f19e51]: Body · Thân
+                  - generic [ref=f19e52]: Swap sản phẩm
+                  - generic [ref=f19e53]: Giữ nguyên cấu trúc, lập luận, flow. Chỉ thay sản phẩm đối thủ → Phantom 2.0 IWB. Giữ terminology, profanity, giọng đời thường y nguyên.
+                - generic [ref=f19e54]:
+                  - generic [ref=f19e55]: Close · Kết
+                  - generic [ref=f19e56]: CTA tương tự
+                  - generic [ref=f19e57]: CTA pattern giống reference. Thay link/tên sản phẩm. Không viết lại.
+              - list [ref=f19e58]:
+                - listitem [ref=f19e59]:
+                  - generic [ref=f19e60]: Tại sao không viết lại từ đầu?
+                  - text: Tất cả các nền tảng AI nếu không biết dùng đều bị "ngoắc rêu" — AI sẽ viết sạch sẽ, bóng bẩy, mất hết chất đời thường. Những reference video này đã giải quyết vấn đề đó rồi. Nếu bắt AI generate lại, toàn bộ cái hay sẽ mất.
+                - listitem [ref=f19e61]:
+                  - generic [ref=f19e62]: Giữ nguyên ngôn ngữ thật
+                  - text: Profanity, slang, cách nói đời thường trong reference →
+                  - code [ref=f19e63]: giữ nguyên
+                  - text: . Đây chính là thứ khiến video chân thực. Không clean up, không chỉnh cho "đúng ngữ pháp".
+                - listitem [ref=f19e64]:
+                  - generic [ref=f19e65]: Giữ nguyên terminology
+                  - text: Các thuật ngữ chuyên ngành (IWB, OWB, appendix carry, draw, retention, concealment…), tên thành phần, cách diễn đạt benefit —
+                  - code [ref=f19e66]: dùng tương tự
+                  - text: reference. Không paraphrase, không đồng nghĩa hóa.
+            - generic [ref=f19e67]:
+              - generic [ref=f19e68]:
+                - generic [ref=f19e69]: "02"
+                - generic [ref=f19e70]: Quy trình 4 bước · Mỗi video
+                - generic [ref=f19e71]: Workflow
+              - generic [ref=f19e72]:
+                - generic [ref=f19e75]:
+                  - generic [ref=f19e76]: Bóc script reference
+                  - text: "Xem video reference, ghi lại toàn bộ script từng câu. Giữ nguyên từ ngữ, không tóm tắt. Đánh dấu rõ: phần nào là Hook, phần nào là Body (nhắc sản phẩm đối thủ), phần nào là Close."
+                - generic [ref=f19e79]:
+                  - generic [ref=f19e80]: Tìm kiếm A-roll & B-roll tương ứng
+                  - text: "Phân tích visual trong reference: kiểu shot nào, góc quay nào, motion nào (draw motion, IWB carry shot, dressing test, mag swap…). Tìm / quay footage tương đương."
+                  - code [ref=f19e81]: Không bắt AI generate hình ảnh từ đầu.
+                - generic [ref=f19e84]:
+                  - generic [ref=f19e85]: Swap sản phẩm trong Body
+                  - text: Thay tên + hình ảnh sản phẩm đối thủ →
+                  - code [ref=f19e86]: Phantom 2.0 IWB Holster
+                  - text: . Giữ nguyên toàn bộ lập luận, flow, cách diễn đạt. Hook và Close giữ y hệt (chỉ đổi tên sản phẩm nếu có nhắc).
+                - generic [ref=f19e89]:
+                  - generic [ref=f19e90]: Dựng video + QC
+                  - text: "Ráp thành phẩm. So sánh song song với reference: nhịp cắt, energy, tone, độ dài có tương đương không. Nếu xem lại mà thấy \"sạch quá\", \"AI quá\" → chưa đạt."
+              - generic [ref=f19e91]: Self-QC cuối cùng · Đặt video của bạn cạnh reference. Nếu người xem không nhận ra đây là 2 video khác nhau (trừ sản phẩm) → đạt. Nếu thấy khác biệt rõ ràng về tone, energy, ngôn ngữ → chưa đạt.
+            - generic [ref=f19e92]:
+              - generic [ref=f19e93]:
+                - generic [ref=f19e94]: "03"
+                - generic [ref=f19e95]: Lỗi cấm · Tuyệt đối tránh
+                - generic [ref=f19e96]: Hard Reject
+              - list [ref=f19e97]:
+                - listitem [ref=f19e98]:
+                  - generic [ref=f19e99]: Bắt AI viết lại script từ đầu
+                  - text: Đây là lỗi nặng nhất. Prompt AI kiểu "viết lại script này theo phong cách…" = mất toàn bộ chất tự nhiên. AI sẽ "ngoắc rêu" — viết sạch, lịch sự, mất hết cảm xúc thật.
+                - listitem [ref=f19e100]:
+                  - generic [ref=f19e101]: Sáng tạo Hook mới
+                  - text: Reference đã có hook catchy / shock. Đừng cố nghĩ ra hook hay hơn.
+                  - code [ref=f19e102]: Copy y hệt
+                  - text: cấu trúc + cách vào đề.
+                - listitem [ref=f19e103]:
+                  - generic [ref=f19e104]: Clean up ngôn ngữ
+                  - text: Không sửa slang thành formal. Không xóa profanity. Không chỉnh ngữ pháp cho "đúng". Sự thô, thật, đời thường chính là thứ giữ chân người xem.
+                - listitem [ref=f19e105]:
+                  - generic [ref=f19e106]: Thay đổi cấu trúc Body
+                  - text: Không đảo thứ tự lập luận. Không thêm/bớt ý. Không pha thêm "info hữu ích" mà reference không có. Chỉ swap sản phẩm, giữ nguyên mọi thứ khác.
+                - listitem [ref=f19e107]:
+                  - generic [ref=f19e108]: Military / Militia framing
+                  - text: Không dùng footage lính chiến, quân đội, militia, hay framing "kill threat / take down bad guy". Brand safety + Meta ad policy. Giữ trong khung
+                  - code [ref=f19e109]: civilian concealed carry
+                  - text: ","
+                  - code [ref=f19e110]: EDC enthusiast
+                  - text: ","
+                  - code [ref=f19e111]: responsible gun owner
+                  - text: ","
+                  - code [ref=f19e112]: sport / range shooting
+                  - text: .
+                - listitem [ref=f19e113]:
+                  - generic [ref=f19e114]: Dùng footage chất lượng thấp
+                  - text: B-roll / A-roll phải tối thiểu
+                  - code [ref=f19e115]: 1080p
+                  - text: . Không blur, không upscale, không watermark.
+            - generic [ref=f19e116]:
+              - generic [ref=f19e117]:
+                - generic [ref=f19e118]: "04"
+                - generic [ref=f19e119]: Assets · Tài nguyên
+              - generic [ref=f19e120]:
+                - link "drive.google.com/drive/folders/1CtTd-gZQErU8nraxvK1jF0PgbOtdnFmx" [ref=f19e121] [cursor=pointer]:
+                  - /url: https://drive.google.com/drive/folders/1CtTd-gZQErU8nraxvK1jF0PgbOtdnFmx?usp=sharing
+                - generic [ref=f19e122]: Reference videos · Phantom 2.0
+              - generic [ref=f19e123]:
+                - link "southedc.store/products/phantom-2-0-iwb-holster" [ref=f19e124] [cursor=pointer]:
+                  - /url: https://southedc.store/products/phantom-2-0-iwb-holster
+                - generic [ref=f19e125]: Trang sản phẩm
+              - generic [ref=f19e126]:
+                - link "drive.google.com/drive/folders/1IinUloJAJX3O7UxjAirepGHAKuNi8owM" [ref=f19e127] [cursor=pointer]:
+                  - /url: https://drive.google.com/drive/folders/1IinUloJAJX3O7UxjAirepGHAKuNi8owM?usp=sharing
+                - generic [ref=f19e128]: Khóa học Google Omni
+              - generic [ref=f19e129]:
+                - link "drive.google.com/drive/folders/1OZ2CBdbkLWKAG-18c-r_b-FhM-SGQerb" [ref=f19e130] [cursor=pointer]:
+                  - /url: https://drive.google.com/drive/folders/1OZ2CBdbkLWKAG-18c-r_b-FhM-SGQerb
+                - generic [ref=f19e131]: Raw video sản phẩm
+              - generic [ref=f19e132]: Mỗi reference video = 1 deliverable. Xem hết folder reference, mỗi video trong đó → tạo 1 video tương ứng cho Phantom 2.0 IWB. Tổng deliverable = tổng số video trong folder reference.
+            - generic [ref=f19e133]:
+              - generic [ref=f19e134]:
+                - generic [ref=f19e135]: "05"
+                - generic [ref=f19e136]: Payment & Lợi ích
+              - generic [ref=f19e137]:
+                - generic [ref=f19e138]:
+                  - generic [ref=f19e139]: 💰 Tiền mặt / video
+                  - generic [ref=f19e140]: 200.000đ
+                  - generic [ref=f19e141]: Mỗi video approved = 200k. Reject = không pay, được resubmit 1 lần trong 48h.
+                - generic [ref=f19e142]:
+                  - generic [ref=f19e143]: 📚 Lợi thế đi kèm
+                  - generic [ref=f19e144]: Khóa học trả phí
+                  - generic [ref=f19e145]: Được học miễn phí nguyên khóa ứng dụng AI làm video chân thực bằng Google Omni. Link khóa học ở Section 04.
+            - generic [ref=f19e146]:
+              - generic [ref=f19e147]:
+                - generic [ref=f19e148]: "06"
+                - generic [ref=f19e149]: Scripts đã revised · 3 variants
+                - generic [ref=f19e150]: Bám sát 90% rule
+              - generic [ref=f19e151]:
+                - text: Cách dùng · Mỗi script tương ứng 1 reference video trong folder Assets. Đọc Swap notes trên đầu mỗi script để hiểu điểm khác biệt vs reference gốc — phần
+                - mark [ref=f19e152]: highlight đỏ
+                - text: là vùng đã swap, KHÔNG đọc nhấn, chỉ note để diff. Hook + pacing + intonation giữ 100% reference.
+              - generic [ref=f19e153]:
+                - generic [ref=f19e154]:
+                  - generic [ref=f19e155]:
+                    - generic [ref=f19e156]: Script · 1.1 · Pain-story
+                    - generic [ref=f19e157]: Drawer full of holsters
+                  - generic [ref=f19e158]: ~85% retained
+                - generic [ref=f19e159]:
+                  - heading "Swap notes vs reference Breakout 2.0" [level=4] [ref=f19e160]
+                  - list [ref=f19e161]:
+                    - listitem [ref=f19e162]:
+                      - text: → Product Breakout 2.0 →
+                      - code [ref=f19e163]: Phantom 2.0 IWB
+                    - listitem [ref=f19e164]:
+                      - text: → Material Hand-buffed silky smooth edges →
+                      - code [ref=f19e165]: Soft faux-leather wrap covers every edge
+                    - listitem [ref=f19e166]:
+                      - text: → Mechanism Patented breakout channel →
+                      - code [ref=f19e167]: Dual reinforced metal clips lock into trigger guard, ejection port, rail
+                    - listitem [ref=f19e168]:
+                      - text: → Upgrade pitch Concealment claw + UltiClip (2 upgrades) →
+                      - code [ref=f19e169]: FREE Mag Carrier — $20 value
+                      - text: (1 upgrade, integrated)
+                    - listitem [ref=f19e170]:
+                      - text: → Social proof 100,000 carriers, 4.7★ →
+                      - code [ref=f19e171]: 4.7★ from 368 carriers
+                - generic [ref=f19e172]:
+                  - text: "That holster you just got, it's going to dig into your hip every time you sit down. Here's how I know. Look, you're not alone in this. Every new carrier starts with the same plan: \"I'm going to carry every single day.\" But then reality hits. The holster digs into your hip. It jabs when you sit. It shifts when you bend over to pick something up. Within a week, you're done. So you buy another one, something better, more expensive, but it's still bulky. Still prints. You wear it sometimes, not every day. Then you try a third, and now you spent some real money, and all you got is a drawer full of holsters. It's a thing among gun owners for a reason. And worse, you're still leaving your gun in your car or at home. Here's the truth nobody tells you: It's not your fault. You don't lack commitment. You just haven't found a holster that makes carrying feel normal. That's exactly why we created the"
+                  - mark [ref=f19e173]: Phantom 2.0 IWB
+                  - text: . This isn't some bulky, uncomfortable rig that screams, "I'm new at this." It's designed to disappear against your body. So thin, so comfortable, you'll actually forget it's there.
+                  - mark [ref=f19e174]: Soft faux-leather wrap covers every edge — no metal biting skin, no sharp corners, no pinching, no jabbing
+                  - text: ", and that's when carrying stops feeling like a chore and starts feeling like second nature. But here's what separates this holster from everything else you've tried."
+                  - mark [ref=f19e175]: Dual reinforced metal clips lock into the trigger guard, ejection port, and rail — your firearm doesn't swing, doesn't shift, doesn't move when you're moving.
+                  - text: You'll hear it. You'll feel it. And that confidence, that's what actually builds the habit. Quick access from the belt line — no fumbling or panicking, even if you've never had to draw under pressure before. And you're smart for sticking around because right now, for the next 24 hours, when you grab your
+                  - mark [ref=f19e176]: Phantom 2.0 IWB
+                  - text: ", we're giving you a second one absolutely free. That's right. Buy one, get one free. One for your compact when you're running errands in a t-shirt, one for your full size when you're headed somewhere you're not too sure about. Because let's be honest, different situations call for different setups. And if both guns aren't riding in a holster you'll actually wear, one of them is staying home when you need it most. This way, every firearm you own is ready to go. No excuses."
+                  - mark [ref=f19e177]: And every order ships with a FREE Mag Carrier — $20 value, included at no extra cost. One more mag on your hip, zero printing, fully integrated with the holster setup.
+                  - text: And because we know you might be thinking, "What if this doesn't work for me either?" you get a full 30 days to try it. Risk-free. Wear it around the house, run errands, see if it feels right. If it doesn't become the holster that finally gets your gun out of the drawer and onto your body every single day, send it back. No questions asked.
+                  - mark [ref=f19e178]: Rated 4.7 out of 5 stars by 368 carriers.
+                  - text: "Many of them started exactly where you are right now. Brand new permit, no idea what to buy. They just skipped the expensive learning curve. So ask yourself: do you want to keep buying holsters that end up in a drawer, or do you want to start with one that actually works? The holster that makes it easy is right here. Your 30-day trial starts the moment it arrives. But this buy-one-get-one-free deal ends at midnight tonight. Tap the button below to claim your deal before it's gone. So let's get you carrying with confidence. I'll see you on the other side."
+              - generic [ref=f19e179]:
+                - generic [ref=f19e180]:
+                  - generic [ref=f19e181]:
+                    - generic [ref=f19e182]: Script · 2.1 · Open letter
+                    - generic [ref=f19e183]: Real-life vs kitchen-test
+                  - generic [ref=f19e184]: ~72% retained
+                - generic [ref=f19e185]:
+                  - heading "Swap notes vs reference Breakout 2.0" [level=4] [ref=f19e186]
+                  - list [ref=f19e187]:
+                    - listitem [ref=f19e188]:
+                      - text: → Product Breakout 2.0 →
+                      - code [ref=f19e189]: Phantom 2.0 IWB
+                    - listitem [ref=f19e190]:
+                      - text: → Material Precision Kydex, custom molded to your exact firearm →
+                      - code [ref=f19e191]: Soft faux-leather wrap, universal IWB fit
+                      - text: (Phantom không phải Kydex, không custom mold per-gun)
+                    - listitem [ref=f19e192]:
+                      - text: → Mechanism Patented breakout channel →
+                      - code [ref=f19e193]: Clean draw straight from the belt line + dual reinforced metal clips
+                    - listitem [ref=f19e194]:
+                      - text: → Origin Made in the US, veteran-owned →
+                      - code [ref=f19e195]: Drop entirely
+                      - text: (FTC risk — Phantom là dropship)
+                    - listitem [ref=f19e196]:
+                      - text: → Upgrade Thêm 1 dòng
+                      - code [ref=f19e197]: FREE Mag Carrier — $20 value
+                    - listitem [ref=f19e198]:
+                      - text: → Social proof 100,000 carriers, 4.7★ →
+                      - code [ref=f19e199]: 4.7★ from 368 carriers
+                    - listitem [ref=f19e200]:
+                      - text: → Warranty
+                      - code [ref=f19e201]: Lifetime warranty
+                      - text: — giữ nguyên ✓
+                - generic [ref=f19e202]:
+                  - text: "This is an open letter to every American who carries a gun on their hip. Here's what people get wrong: they put the gun in, it doesn't fall out standing in the kitchen, and they think, \"Okay, we're good.\" But standing in your kitchen isn't real life. Real life is getting shoved in a parking lot, tripping off a curb, or bending over to grab your kid. Real life is soft material losing retention, or worse, folding into the trigger guard. Real life is cheap clips popping off your belt. Here's why this one's different: the"
+                  - mark [ref=f19e203]: Phantom 2.0 IWB
+                  - text: . Buy one, get one free, but this deal ends tonight at midnight.
+                  - mark [ref=f19e204]: Built around a soft faux-leather wrap that flexes with your body — no metal biting skin, no sharp edges, no hot spots after twelve hours of wear.
+                  - text: Trigger guard, ejection port, rail — locked in
+                  - mark [ref=f19e205]: with dual reinforced metal clips that don't fold and don't fail
+                  - text: ". You hear the click when it seats. That click means it's safe. Retention that holds the same on day 1,000 as day one. Turn it upside down, shake it, run with it — it doesn't move. And the draw: no straps, no snaps, no thumb breaks. Nothing to fumble with when your hands are shaking and your heart rate hits 160."
+                  - mark [ref=f19e206]: Clean draw straight from the belt line, every time.
+                  - mark [ref=f19e207]: Hand-finished universal IWB fit — works with most compact and full-size pistols. Available for both left and right-hand carry.
+                  - text: Right now, it's buy one, get one free. One for daily carry, one for your full size — two holsters, double your safety net.
+                  - mark [ref=f19e208]: Plus every order includes a FREE Mag Carrier — $20 value, no add-on needed.
+                  - text: But this deal ends tonight at midnight. 30 days to test it; if it's not the most secure holster you've ever owned, full refund.
+                  - mark [ref=f19e209]: 4.7 stars from 368 carriers, lifetime warranty.
+                  - text: Tap below now.
+              - generic [ref=f19e210]:
+                - generic [ref=f19e211]:
+                  - generic [ref=f19e212]:
+                    - generic [ref=f19e213]: Script · 3.1 · Granddad
+                    - generic [ref=f19e214]: Farm work / back pasture
+                  - generic [ref=f19e215]: ~70% retained
+                - generic [ref=f19e216]:
+                  - heading "Swap notes vs reference Breakout 2.0" [level=4] [ref=f19e217]
+                  - list [ref=f19e218]:
+                    - listitem [ref=f19e219]:
+                      - text: → Product Breakout 2.0 →
+                      - code [ref=f19e220]: Phantom 2.0 IWB
+                    - listitem [ref=f19e221]:
+                      - text: → Brand Houdini Holsters, veteran-owned family business →
+                      - code [ref=f19e222]: SouthEDC
+                      - text: ", drop \"veteran-owned\""
+                    - listitem [ref=f19e223]:
+                      - text: → Material Hand-buffed silky edges, center crimped edges angle away →
+                      - code [ref=f19e224]: Soft faux-leather wrap covers every edge of the shell
+                    - listitem [ref=f19e225]:
+                      - text: → Mechanism Patented breakout channel + 6.7-inch draw + backup draw →
+                      - code [ref=f19e226]: Clean draw from belt line + dual reinforced metal clips
+                      - text: (bỏ số liệu fake)
+                    - listitem [ref=f19e227]:
+                      - text: → Upgrade paragraph Concealment claw + UltiClip cả đoạn dài →
+                      - code [ref=f19e228]: Bỏ hẳn, thay bằng 1 dòng FREE Mag Carrier integrated với farm context
+                    - listitem [ref=f19e229]:
+                      - text: → Origin Handmade right here in America →
+                      - code [ref=f19e230]: Drop
+                      - text: (FTC risk)
+                    - listitem [ref=f19e231]:
+                      - text: → Social proof 100,000 carriers, 4.7★ →
+                      - code [ref=f19e232]: 4.7★ from 368 carriers
+                    - listitem [ref=f19e233]:
+                      - text: → Warranty
+                      - code [ref=f19e234]: Lifetime warranty
+                      - text: — giữ nguyên ✓
+                - generic [ref=f19e235]:
+                  - text: Your granddad kept a revolver in the barn, a rifle on the tractor, and a shotgun by the door. Covered, right? Maybe. But these are different times. That's how it's been done forever out here. Guns staged everywhere. Always within reach, but within reach assumes you're always near one of those spots, and you're not. You're at the fence line. You're in the back pasture. You're a quarter-mile from the house checking the tree stand. Staged guns cover the house. They don't cover you. The guys who figured this out started carrying on their body, but most of them hit the same wall. Every holster they tried was built for standing around, not for actually working. 12 hours of bending, sitting, climbing, sweating, and the holster punishes you for every minute of it. So, even the ones who know better end up back where they started with the gun on the counter and not on their person. That's why
+                  - mark [ref=f19e236]: here at SouthEDC, we built the Phantom 2.0 IWB different.
+                  - text: This holster was designed for people who actually wear their gun all day, not just to the range and back.
+                  - mark [ref=f19e237]: A soft faux-leather wrap covers every edge of the shell — no sharp corners, no rough spots, nothing to dig, scrape, or rub no matter how long you're wearing it.
+                  - text: The leather flexes with your body — so when you're sitting on equipment, driving into town, or bending over an engine bay, nothing stabs into your ribs or hip.
+                  - mark [ref=f19e238]: It moves with you instead of fighting you.
+                  - text: And here's the thing, you don't have to conceal with it if you don't want to. This is an inside the waistband holster built for comfort first. It keeps your firearm nice and flat to your body, out of the way, secure, and accessible. Whether your shirt's tucked, untucked, or you've got no shirt on at all, the holster just works.
+                  - mark [ref=f19e239]: Quick draw straight from the belt line — no fumbling, no snagging. And it locks into the trigger guard, ejection port, and rail via dual reinforced metal clips. You'll hear the click. You'll feel it. It holds firm upside down, shaking, running, whatever you throw at it. But when you draw, smooth and instant.
+                  - text: Here's why right now is the time to act. We're running a buy one, get one free deal on the Phantom 2.0 IWB. Two holsters. Set them up for two different guns or set them up different for the same gun.
+                  - mark [ref=f19e240]: Plus every order includes a FREE Mag Carrier — $20 value, integrated with the setup. One more mag on your hip when you head into the back pasture, when you're driving fence line, when you're a quarter mile from the truck.
+                  - text: This deal is limited. Once the BOGO window closes, it's gone.
+                  - mark [ref=f19e241]: Hand-finished universal IWB fit — works with most compact and full-size pistols. 4.7 out of 5 stars from 368 carriers
+                  - text: — real carriers, guys who work farms, construction, HVAC, who wear this thing 12-plus hours, call it the most comfortable holster they've ever owned. You're backed by a
+                  - mark [ref=f19e242]: 30-day risk-free trial and lifetime warranty.
+                  - text: Wear it for a full month of real work. If it's not the most comfortable holster you've ever put on, send it back — every penny, no questions. You got enough things fighting you out there. Your holster shouldn't be one of them. Tap the button below and claim your buy one, get one free Phantom 2.0 IWB.
+              - generic [ref=f19e243]: QC checklist khi dựng từng video · Nếu actor đọc "Kydex" / "custom molded to your exact firearm" / "veteran-owned" / "Made in America" / "100,000 carriers" / "6.7 inches draw" → REJECT, redo. Đây là các claim của reference, KHÔNG đúng cho Phantom 2.0.
+            - contentinfo [ref=f19e244]:
+              - generic [ref=f19e245]: SouthEDC · Video Brief
+              - generic [ref=f19e246]: Phantom 2.0 IWB Reference Series · v1
+  - alert [ref=e34]
+  - iframe [ref=e39]:
+    

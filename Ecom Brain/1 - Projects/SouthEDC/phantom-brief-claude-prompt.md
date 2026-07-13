@@ -1,0 +1,845 @@
+Tạo artifact HTML cho mình. Đây là 1 video brief đã hoàn thiện — giữ nguyên 100% nội dung, không sửa, không tối ưu, không rewrite. Chỉ wrap lại thành artifact để mình share public.
+
+Sau khi tạo xong, mình sẽ click Share → Make public.
+
+File content:
+
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brief · Phantom 2.0 IWB Reference Video Series · v1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-2: #131316;
+    --bg-3: #1a1a1f;
+    --line: #26262d;
+    --line-2: #34343d;
+    --ink: #ededee;
+    --ink-2: #a1a1a8;
+    --ink-3: #6b6b73;
+    --accent: #ff3b30;
+    --accent-soft: #ff3b3018;
+    --amber: #ffb340;
+    --amber-soft: #ffb34018;
+    --green: #30d158;
+    --green-soft: #30d15818;
+    --blue: #64d2ff;
+    --gold: #d4af37;
+    --pink: #ff6b9d;
+    --pink-soft: #ff6b9d18;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14.5px;
+    line-height: 1.65;
+    padding: 32px 24px 80px;
+    max-width: 920px;
+    margin: 0 auto;
+    background-image:
+      radial-gradient(ellipse at top, #1a1a22 0%, var(--bg) 50%),
+      repeating-linear-gradient(0deg, transparent 0, transparent 39px, #ffffff03 39px, #ffffff03 40px);
+  }
+
+  /* SLATE */
+  .slate {
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, #16161b 0%, #101013 100%);
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .slate::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent) 30%, transparent 30%, transparent 70%, var(--gold) 70%, var(--gold) 100%);
+  }
+  .slate-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .slate-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em;
+    color: var(--ink-3); text-transform: uppercase; margin-bottom: 8px;
+  }
+  .slate-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600; font-size: 36px; line-height: 1.1;
+    letter-spacing: 0.01em; text-transform: uppercase;
+  }
+  .slate-title .emoji { font-size: 30px; margin-right: 8px; }
+  .slate-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-3); text-align: right;
+  }
+  .slate-meta b { color: var(--ink-2); font-weight: 500; }
+  .slate-sub {
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px dashed var(--line-2);
+    font-size: 13.5px; color: var(--ink-2); line-height: 1.65;
+  }
+  .slate-sub b { color: var(--ink); }
+
+  /* PRODUCT CARD */
+  .product-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+    background: linear-gradient(135deg, #1a1410 0%, #131316 60%);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s;
+  }
+  .product-card:hover { border-color: var(--accent); }
+  .product-icon {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    border: 1px solid #ff3b3044;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+  }
+  .product-info { flex: 1; min-width: 0; }
+  .product-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .product-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px; font-weight: 600;
+    letter-spacing: 0.02em; text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .product-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px; color: var(--blue);
+    word-break: break-all;
+  }
+
+  /* READING ORDER */
+  .reading-order {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 28px;
+    padding: 14px 18px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+  }
+  .reading-order-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-3);
+    align-self: center; margin-right: 8px;
+  }
+  .ro-step {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    background: var(--bg-3);
+    border: 1px solid var(--line-2);
+    color: var(--ink-2);
+    letter-spacing: 0.06em;
+  }
+  .ro-step b { color: var(--accent); font-weight: 600; margin-right: 6px; }
+  .ro-arrow { color: var(--ink-3); align-self: center; }
+
+  /* VIDEO REVIEW CARD */
+  .video-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+    background: linear-gradient(135deg, #1a1410 0%, #131316 60%);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .video-card:hover {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #221a10 0%, #16161b 60%);
+  }
+  .video-play {
+    flex-shrink: 0;
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 6px #d4af3722;
+  }
+  .video-play svg { width: 22px; height: 22px; margin-left: 3px; }
+  .video-info { flex: 1; min-width: 0; }
+  .video-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .video-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px; font-weight: 600;
+    letter-spacing: 0.02em; text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .video-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-3);
+    letter-spacing: 0.04em;
+  }
+  .video-cta {
+    flex-shrink: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-2);
+    border: 1px solid var(--line-2);
+    padding: 7px 12px;
+  }
+
+  /* SECTIONS */
+  section { margin-bottom: 36px; }
+  .sec-head {
+    display: flex; align-items: baseline; gap: 14px;
+    margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .sec-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--accent);
+    letter-spacing: 0.15em; font-weight: 700;
+  }
+  .sec-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600; font-size: 22px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .sec-tag {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; padding: 3px 8px;
+    border: 1px solid var(--line-2); color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+  .sec-tag.hard { color: var(--accent); border-color: #ff3b3055; background: var(--accent-soft); }
+  .sec-tag.core { color: var(--accent); border-color: #ff3b3055; background: var(--accent-soft); }
+  .sec-tag.first { color: var(--gold); border-color: #d4af3755; background: #d4af3718; }
+
+  /* CRITERIA */
+  ul.criteria { list-style: none; display: grid; gap: 10px; }
+  ul.criteria li {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--line-2);
+    padding: 12px 16px;
+    font-size: 13.5px; line-height: 1.65;
+  }
+  ul.criteria li.priority { border-left-color: var(--gold); }
+  ul.criteria li.danger { border-left-color: var(--accent); }
+  ul.criteria li b {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500; letter-spacing: 0.02em;
+    color: var(--ink); text-transform: uppercase;
+    font-size: 13px; display: inline-block; margin-right: 8px;
+  }
+  ul.criteria li code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px; background: #2a2a32;
+    padding: 1px 6px; border-radius: 2px;
+    color: var(--blue);
+  }
+
+  /* 3 PARTS DIAGRAM */
+  .parts-diagram {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .part-card {
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    padding: 16px;
+    position: relative; overflow: hidden;
+  }
+  .part-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+  }
+  .part-card.hook::before { background: var(--accent); }
+  .part-card.body::before { background: var(--blue); }
+  .part-card.close::before { background: var(--green); }
+  .part-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .part-card.hook .part-label { color: var(--accent); }
+  .part-card.body .part-label { color: var(--blue); }
+  .part-card.close .part-label { color: var(--green); }
+  .part-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.03em;
+    margin-bottom: 8px;
+  }
+  .part-body { font-size: 12.5px; color: var(--ink-2); line-height: 1.55; }
+  .part-body b { color: var(--ink); }
+
+  /* WORKFLOW STEPS */
+  .workflow {
+    counter-reset: step;
+    display: grid; gap: 12px;
+  }
+  .wf-step {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    padding: 14px 16px;
+    counter-increment: step;
+  }
+  .wf-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px; font-weight: 700;
+    color: var(--accent);
+    display: flex; align-items: flex-start; justify-content: center;
+    padding-top: 2px;
+  }
+  .wf-num::before { content: counter(step, decimal-leading-zero); }
+  .wf-content { font-size: 13.5px; line-height: 1.65; }
+  .wf-content b {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500; letter-spacing: 0.02em;
+    text-transform: uppercase; font-size: 13px;
+    color: var(--ink);
+    display: block; margin-bottom: 4px;
+  }
+  .wf-content code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px; background: #2a2a32;
+    padding: 1px 6px; border-radius: 2px;
+    color: var(--blue);
+  }
+
+  /* CALLOUT */
+  .callout {
+    margin-top: 12px;
+    padding: 12px 14px;
+    background: #1a1a14;
+    border-left: 3px solid var(--gold);
+    font-size: 12.5px; color: var(--ink-2);
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.55;
+  }
+  .callout b { color: var(--gold); }
+  .callout.danger {
+    background: #1a1010;
+    border-left-color: var(--accent);
+  }
+  .callout.danger b { color: var(--accent); }
+
+  /* ASSET LINKS */
+  .asset-link {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    margin-bottom: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; gap: 12px;
+  }
+  .asset-link a {
+    color: var(--blue); text-decoration: none; word-break: break-all;
+  }
+  .asset-link a:hover { text-decoration: underline; }
+  .asset-link .pill {
+    padding: 3px 8px;
+    font-size: 10px; letter-spacing: 0.1em;
+    border: 1px solid; text-transform: uppercase; flex-shrink: 0;
+  }
+  .pill-ref { background: var(--accent-soft); color: var(--accent); border-color: #ff3b3055 !important; }
+  .pill-product { background: var(--green-soft); color: var(--green); border-color: #30d15855 !important; }
+  .pill-course { background: #d4af3718; color: var(--gold); border-color: #d4af3755 !important; }
+
+  /* PAYMENT */
+  .pay-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .pay-card {
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    padding: 18px;
+    position: relative; overflow: hidden;
+  }
+  .pay-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+  }
+  .pay-card.cash::before { background: var(--green); }
+  .pay-card.learn::before { background: var(--gold); }
+  .pay-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .pay-card.cash .pay-label { color: var(--green); }
+  .pay-card.learn .pay-label { color: var(--gold); }
+  .pay-amount {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px; font-weight: 600;
+    letter-spacing: 0.02em; margin-bottom: 6px;
+  }
+  .pay-note {
+    font-size: 12.5px; color: var(--ink-2); line-height: 1.5;
+  }
+
+  footer {
+    margin-top: 48px; padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; color: var(--ink-3);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* SCRIPT BLOCK */
+  .script-card {
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    margin-bottom: 22px;
+    overflow: hidden;
+  }
+  .script-head {
+    padding: 14px 18px;
+    background: linear-gradient(180deg, #1a1410 0%, #131316 100%);
+    border-bottom: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  .script-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 4px;
+  }
+  .script-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px; font-weight: 600;
+    letter-spacing: 0.03em; text-transform: uppercase;
+  }
+  .script-retain {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; padding: 4px 10px;
+    border: 1px solid var(--green); color: var(--green);
+    background: var(--green-soft);
+    letter-spacing: 0.08em;
+  }
+  .script-retain.med { border-color: var(--gold); color: var(--gold); background: #d4af3718; }
+  .script-swaps {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-3);
+  }
+  .script-swaps h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 10px; font-weight: 500;
+  }
+  .swap-list { list-style: none; display: grid; gap: 6px; }
+  .swap-list li {
+    font-size: 12.5px; line-height: 1.55; color: var(--ink-2);
+    padding-left: 14px; position: relative;
+  }
+  .swap-list li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--accent); font-weight: 700;
+  }
+  .swap-list li b {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500; text-transform: uppercase; font-size: 12px;
+    color: var(--ink); letter-spacing: 0.02em;
+  }
+  .swap-list li s {
+    color: var(--ink-3); text-decoration: line-through;
+  }
+  .swap-list li code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; background: #2a2a32;
+    padding: 1px 6px; border-radius: 2px;
+    color: var(--blue);
+  }
+  .script-body {
+    padding: 16px 18px;
+    font-size: 13.5px; line-height: 1.7;
+    color: var(--ink);
+    white-space: pre-wrap;
+  }
+  .script-body p { margin-bottom: 12px; }
+  .script-body mark {
+    background: var(--accent-soft);
+    color: var(--ink);
+    padding: 0 3px;
+    border-bottom: 1px dashed var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 20px 14px 60px; }
+    .slate-title { font-size: 26px; }
+    .slate-meta { text-align: left; }
+    .parts-diagram { grid-template-columns: 1fr; }
+    .pay-block { grid-template-columns: 1fr; }
+    .product-card { flex-direction: column; }
+    .video-card { flex-wrap: wrap; }
+    .video-cta { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLATE -->
+<div class="slate">
+  <div class="slate-row">
+    <div>
+      <div class="slate-id">Brief · Reference Video Series · Phantom 2.0 IWB</div>
+      <div class="slate-title"><span class="emoji">🎥</span>Video Chân Thực Từ Reference</div>
+    </div>
+    <div class="slate-meta">
+      <div>Ver <b>v1</b></div>
+      <div>Owner <b>SouthEDC</b></div>
+      <div>Budget <b>200k / video</b></div>
+    </div>
+  </div>
+  <div class="slate-sub">
+    Mỗi reference video → tạo <b>1 video tương ứng</b>. Script giống <b>90%</b> — chỉ thay sản phẩm đối thủ bằng sản phẩm của mình. <b>Không sáng tạo lại từ đầu.</b> Giữ nguyên cái hay mà reference đã làm tốt.
+  </div>
+</div>
+
+<!-- PRODUCT -->
+<a class="product-card" href="https://southedc.store/products/phantom-2-0-iwb-holster" target="_blank" rel="noopener">
+  <div class="product-icon">🛡️</div>
+  <div class="product-info">
+    <div class="product-kicker">Sản phẩm quảng cáo</div>
+    <div class="product-name">Phantom 2.0 IWB Holster</div>
+    <div class="product-url">southedc.store/products/phantom-2-0-iwb-holster ↗</div>
+  </div>
+</a>
+
+<!-- READING ORDER -->
+<div class="reading-order">
+  <span class="reading-order-label">Reading order →</span>
+  <span class="ro-step"><b>01</b> Nguyên tắc 90%</span>
+  <span class="ro-arrow">›</span>
+  <span class="ro-step"><b>02</b> Quy trình 4 bước</span>
+  <span class="ro-arrow">›</span>
+  <span class="ro-step"><b>03</b> Lỗi cấm</span>
+  <span class="ro-arrow">›</span>
+  <span class="ro-step"><b>04</b> Assets</span>
+  <span class="ro-arrow">›</span>
+  <span class="ro-step"><b>05</b> Payment</span>
+  <span class="ro-arrow">›</span>
+  <span class="ro-step"><b>06</b> Scripts revised</span>
+</div>
+
+<!-- KHÓA HỌC -->
+<a class="video-card" href="https://drive.google.com/drive/folders/1IinUloJAJX3O7UxjAirepGHAKuNi8owM?usp=sharing" target="_blank" rel="noopener">
+  <span class="video-play">
+    <svg viewBox="0 0 24 24" fill="#16120a"><path d="M8 5v14l11-7z"/></svg>
+  </span>
+  <div class="video-info">
+    <div class="video-kicker">📚 Khóa học Google Omni · Trả phí</div>
+    <div class="video-title">Cách làm video chân thực bằng AI</div>
+    <div class="video-meta">Xem trước khi bắt tay vào làm · đây là lợi thế được học miễn phí khi nhận job</div>
+  </div>
+  <span class="video-cta">Mở Drive ↗</span>
+</a>
+
+<!-- SECTION 01 — NGUYÊN TẮC 90% -->
+<section>
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <span class="sec-title">Nguyên tắc 90% giống Reference</span>
+    <span class="sec-tag core">Nguyên tắc cốt lõi</span>
+  </div>
+
+  <div class="parts-diagram">
+    <div class="part-card hook">
+      <div class="part-label">Hook · Mở đầu</div>
+      <div class="part-title">Copy y hệt</div>
+      <div class="part-body">Hook là phần quan trọng nhất. Reference đã làm rất tốt rồi — <b>catchy, shock, giữ chân người xem</b>. Giữ nguyên 100%. Đừng cố sáng tạo hơn.</div>
+    </div>
+    <div class="part-card body">
+      <div class="part-label">Body · Thân</div>
+      <div class="part-title">Swap sản phẩm</div>
+      <div class="part-body">Giữ nguyên cấu trúc, lập luận, flow. <b>Chỉ thay sản phẩm đối thủ → Phantom 2.0 IWB.</b> Giữ terminology, profanity, giọng đời thường y nguyên.</div>
+    </div>
+    <div class="part-card close">
+      <div class="part-label">Close · Kết</div>
+      <div class="part-title">CTA tương tự</div>
+      <div class="part-body">CTA pattern giống reference. Thay link/tên sản phẩm. <b>Không viết lại.</b></div>
+    </div>
+  </div>
+
+  <ul class="criteria">
+    <li class="priority"><b>Tại sao không viết lại từ đầu?</b> Tất cả các nền tảng AI nếu không biết dùng đều bị "ngoắc rêu" — AI sẽ viết sạch sẽ, bóng bẩy, mất hết chất đời thường. Những reference video này đã giải quyết vấn đề đó rồi. Nếu bắt AI generate lại, toàn bộ cái hay sẽ mất.</li>
+    <li class="danger"><b>Giữ nguyên ngôn ngữ thật</b> Profanity, slang, cách nói đời thường trong reference → <code>giữ nguyên</code>. Đây chính là thứ khiến video chân thực. Không clean up, không chỉnh cho "đúng ngữ pháp".</li>
+    <li><b>Giữ nguyên terminology</b> Các thuật ngữ chuyên ngành (IWB, OWB, appendix carry, draw, retention, concealment…), tên thành phần, cách diễn đạt benefit — <code>dùng tương tự</code> reference. Không paraphrase, không đồng nghĩa hóa.</li>
+  </ul>
+</section>
+
+<!-- SECTION 02 — QUY TRÌNH -->
+<section>
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <span class="sec-title">Quy trình 4 bước · Mỗi video</span>
+    <span class="sec-tag first">Workflow</span>
+  </div>
+
+  <div class="workflow">
+    <div class="wf-step">
+      <div class="wf-num"></div>
+      <div class="wf-content">
+        <b>Bóc script reference</b>
+        Xem video reference, ghi lại toàn bộ script từng câu. Giữ nguyên từ ngữ, không tóm tắt. Đánh dấu rõ: phần nào là Hook, phần nào là Body (nhắc sản phẩm đối thủ), phần nào là Close.
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="wf-num"></div>
+      <div class="wf-content">
+        <b>Tìm kiếm A-roll & B-roll tương ứng</b>
+        Phân tích visual trong reference: kiểu shot nào, góc quay nào, motion nào (draw motion, IWB carry shot, dressing test, mag swap…). Tìm / quay footage tương đương. <code>Không bắt AI generate hình ảnh từ đầu.</code>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="wf-num"></div>
+      <div class="wf-content">
+        <b>Swap sản phẩm trong Body</b>
+        Thay tên + hình ảnh sản phẩm đối thủ → <code>Phantom 2.0 IWB Holster</code>. Giữ nguyên toàn bộ lập luận, flow, cách diễn đạt. Hook và Close giữ y hệt (chỉ đổi tên sản phẩm nếu có nhắc).
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="wf-num"></div>
+      <div class="wf-content">
+        <b>Dựng video + QC</b>
+        Ráp thành phẩm. So sánh song song với reference: nhịp cắt, energy, tone, độ dài có tương đương không. Nếu xem lại mà thấy "sạch quá", "AI quá" → chưa đạt.
+      </div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:14px">
+    <b>Self-QC cuối cùng</b> · Đặt video của bạn cạnh reference. Nếu người xem không nhận ra đây là 2 video khác nhau (trừ sản phẩm) → đạt. Nếu thấy khác biệt rõ ràng về tone, energy, ngôn ngữ → chưa đạt.
+  </div>
+</section>
+
+<!-- SECTION 03 — LỖI CẤM -->
+<section>
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <span class="sec-title">Lỗi cấm · Tuyệt đối tránh</span>
+    <span class="sec-tag hard">Hard Reject</span>
+  </div>
+  <ul class="criteria">
+    <li class="danger"><b>Bắt AI viết lại script từ đầu</b> Đây là lỗi nặng nhất. Prompt AI kiểu "viết lại script này theo phong cách…" = mất toàn bộ chất tự nhiên. AI sẽ "ngoắc rêu" — viết sạch, lịch sự, mất hết cảm xúc thật.</li>
+    <li class="danger"><b>Sáng tạo Hook mới</b> Reference đã có hook catchy / shock. Đừng cố nghĩ ra hook hay hơn. <code>Copy y hệt</code> cấu trúc + cách vào đề.</li>
+    <li class="danger"><b>Clean up ngôn ngữ</b> Không sửa slang thành formal. Không xóa profanity. Không chỉnh ngữ pháp cho "đúng". Sự thô, thật, đời thường chính là thứ giữ chân người xem.</li>
+    <li class="danger"><b>Thay đổi cấu trúc Body</b> Không đảo thứ tự lập luận. Không thêm/bớt ý. Không pha thêm "info hữu ích" mà reference không có. Chỉ swap sản phẩm, giữ nguyên mọi thứ khác.</li>
+    <li class="danger"><b>Military / Militia framing</b> Không dùng footage lính chiến, quân đội, militia, hay framing "kill threat / take down bad guy". Brand safety + Meta ad policy. Giữ trong khung <code>civilian concealed carry</code>, <code>EDC enthusiast</code>, <code>responsible gun owner</code>, <code>sport / range shooting</code>.</li>
+    <li><b>Dùng footage chất lượng thấp</b> B-roll / A-roll phải tối thiểu <code>1080p</code>. Không blur, không upscale, không watermark.</li>
+  </ul>
+</section>
+
+<!-- SECTION 04 — ASSETS -->
+<section>
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <span class="sec-title">Assets · Tài nguyên</span>
+  </div>
+
+  <div class="asset-link">
+    <a href="https://drive.google.com/drive/folders/1CtTd-gZQErU8nraxvK1jF0PgbOtdnFmx?usp=sharing" target="_blank" rel="noopener">
+      drive.google.com/drive/folders/1CtTd-gZQErU8nraxvK1jF0PgbOtdnFmx
+    </a>
+    <span class="pill pill-ref">Reference videos · Phantom 2.0</span>
+  </div>
+
+  <div class="asset-link">
+    <a href="https://southedc.store/products/phantom-2-0-iwb-holster" target="_blank" rel="noopener">
+      southedc.store/products/phantom-2-0-iwb-holster
+    </a>
+    <span class="pill pill-product">Trang sản phẩm</span>
+  </div>
+
+  <div class="asset-link">
+    <a href="https://drive.google.com/drive/folders/1IinUloJAJX3O7UxjAirepGHAKuNi8owM?usp=sharing" target="_blank" rel="noopener">
+      drive.google.com/drive/folders/1IinUloJAJX3O7UxjAirepGHAKuNi8owM
+    </a>
+    <span class="pill pill-course">Khóa học Google Omni</span>
+  </div>
+
+  <div class="callout">
+    <b>Mỗi reference video = 1 deliverable.</b> Xem hết folder reference, mỗi video trong đó → tạo 1 video tương ứng cho Phantom 2.0 IWB. Tổng deliverable = tổng số video trong folder reference.
+  </div>
+</section>
+
+<!-- SECTION 05 — PAYMENT -->
+<section>
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <span class="sec-title">Payment & Lợi ích</span>
+  </div>
+
+  <div class="pay-block">
+    <div class="pay-card cash">
+      <div class="pay-label">💰 Tiền mặt / video</div>
+      <div class="pay-amount">200.000đ</div>
+      <div class="pay-note">Mỗi video approved = 200k. Reject = không pay, được resubmit 1 lần trong 48h.</div>
+    </div>
+    <div class="pay-card learn">
+      <div class="pay-label">📚 Lợi thế đi kèm</div>
+      <div class="pay-amount">Khóa học trả phí</div>
+      <div class="pay-note">Được học miễn phí nguyên khóa ứng dụng AI làm video chân thực bằng Google Omni. Link khóa học ở Section 04.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06 — SCRIPTS REVISED -->
+<section>
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <span class="sec-title">Scripts đã revised · 3 variants</span>
+    <span class="sec-tag core">Bám sát 90% rule</span>
+  </div>
+
+  <div class="callout">
+    <b>Cách dùng</b> · Mỗi script tương ứng 1 reference video trong folder Assets. Đọc <b>Swap notes</b> trên đầu mỗi script để hiểu điểm khác biệt vs reference gốc — phần <mark>highlight đỏ</mark> là vùng đã swap, KHÔNG đọc nhấn, chỉ note để diff. Hook + pacing + intonation giữ 100% reference.
+  </div>
+
+  <!-- SCRIPT 1.1 -->
+  <div class="script-card">
+    <div class="script-head">
+      <div>
+        <div class="script-id">Script · 1.1 · Pain-story</div>
+        <div class="script-name">Drawer full of holsters</div>
+      </div>
+      <span class="script-retain">~85% retained</span>
+    </div>
+    <div class="script-swaps">
+      <h4>Swap notes vs reference Breakout 2.0</h4>
+      <ul class="swap-list">
+        <li><b>Product</b> <s>Breakout 2.0</s> → <code>Phantom 2.0 IWB</code></li>
+        <li><b>Material</b> <s>Hand-buffed silky smooth edges</s> → <code>Soft faux-leather wrap covers every edge</code></li>
+        <li><b>Mechanism</b> <s>Patented breakout channel</s> → <code>Dual reinforced metal clips lock into trigger guard, ejection port, rail</code></li>
+        <li><b>Upgrade pitch</b> <s>Concealment claw + UltiClip (2 upgrades)</s> → <code>FREE Mag Carrier — $20 value</code> (1 upgrade, integrated)</li>
+        <li><b>Social proof</b> <s>100,000 carriers, 4.7★</s> → <code>4.7★ from 368 carriers</code></li>
+      </ul>
+    </div>
+    <div class="script-body">That holster you just got, it's going to dig into your hip every time you sit down. Here's how I know. Look, you're not alone in this. Every new carrier starts with the same plan: "I'm going to carry every single day." But then reality hits. The holster digs into your hip. It jabs when you sit. It shifts when you bend over to pick something up. Within a week, you're done. So you buy another one, something better, more expensive, but it's still bulky. Still prints. You wear it sometimes, not every day. Then you try a third, and now you spent some real money, and all you got is a drawer full of holsters. It's a thing among gun owners for a reason. And worse, you're still leaving your gun in your car or at home.
+
+Here's the truth nobody tells you: It's not your fault. You don't lack commitment. You just haven't found a holster that makes carrying feel normal. That's exactly why we created the <mark>Phantom 2.0 IWB</mark>. This isn't some bulky, uncomfortable rig that screams, "I'm new at this." It's designed to disappear against your body. So thin, so comfortable, you'll actually forget it's there. <mark>Soft faux-leather wrap covers every edge — no metal biting skin, no sharp corners, no pinching, no jabbing</mark>, and that's when carrying stops feeling like a chore and starts feeling like second nature.
+
+But here's what separates this holster from everything else you've tried. <mark>Dual reinforced metal clips lock into the trigger guard, ejection port, and rail — your firearm doesn't swing, doesn't shift, doesn't move when you're moving.</mark> You'll hear it. You'll feel it. And that confidence, that's what actually builds the habit. Quick access from the belt line — no fumbling or panicking, even if you've never had to draw under pressure before.
+
+And you're smart for sticking around because right now, for the next 24 hours, when you grab your <mark>Phantom 2.0 IWB</mark>, we're giving you a second one absolutely free. That's right. Buy one, get one free. One for your compact when you're running errands in a t-shirt, one for your full size when you're headed somewhere you're not too sure about. Because let's be honest, different situations call for different setups. And if both guns aren't riding in a holster you'll actually wear, one of them is staying home when you need it most. This way, every firearm you own is ready to go. No excuses.
+
+<mark>And every order ships with a FREE Mag Carrier — $20 value, included at no extra cost. One more mag on your hip, zero printing, fully integrated with the holster setup.</mark>
+
+And because we know you might be thinking, "What if this doesn't work for me either?" you get a full 30 days to try it. Risk-free. Wear it around the house, run errands, see if it feels right. If it doesn't become the holster that finally gets your gun out of the drawer and onto your body every single day, send it back. No questions asked. <mark>Rated 4.7 out of 5 stars by 368 carriers.</mark> Many of them started exactly where you are right now. Brand new permit, no idea what to buy. They just skipped the expensive learning curve.
+
+So ask yourself: do you want to keep buying holsters that end up in a drawer, or do you want to start with one that actually works? The holster that makes it easy is right here. Your 30-day trial starts the moment it arrives. But this buy-one-get-one-free deal ends at midnight tonight. Tap the button below to claim your deal before it's gone. So let's get you carrying with confidence. I'll see you on the other side.</div>
+  </div>
+
+  <!-- SCRIPT 2.1 -->
+  <div class="script-card">
+    <div class="script-head">
+      <div>
+        <div class="script-id">Script · 2.1 · Open letter</div>
+        <div class="script-name">Real-life vs kitchen-test</div>
+      </div>
+      <span class="script-retain med">~72% retained</span>
+    </div>
+    <div class="script-swaps">
+      <h4>Swap notes vs reference Breakout 2.0</h4>
+      <ul class="swap-list">
+        <li><b>Product</b> <s>Breakout 2.0</s> → <code>Phantom 2.0 IWB</code></li>
+        <li><b>Material</b> <s>Precision Kydex, custom molded to your exact firearm</s> → <code>Soft faux-leather wrap, universal IWB fit</code> (Phantom không phải Kydex, không custom mold per-gun)</li>
+        <li><b>Mechanism</b> <s>Patented breakout channel</s> → <code>Clean draw straight from the belt line + dual reinforced metal clips</code></li>
+        <li><b>Origin</b> <s>Made in the US, veteran-owned</s> → <code>Drop entirely</code> (FTC risk — Phantom là dropship)</li>
+        <li><b>Upgrade</b> Thêm 1 dòng <code>FREE Mag Carrier — $20 value</code></li>
+        <li><b>Social proof</b> <s>100,000 carriers, 4.7★</s> → <code>4.7★ from 368 carriers</code></li>
+        <li><b>Warranty</b> <code>Lifetime warranty</code> — giữ nguyên ✓</li>
+      </ul>
+    </div>
+    <div class="script-body">This is an open letter to every American who carries a gun on their hip. Here's what people get wrong: they put the gun in, it doesn't fall out standing in the kitchen, and they think, "Okay, we're good." But standing in your kitchen isn't real life. Real life is getting shoved in a parking lot, tripping off a curb, or bending over to grab your kid. Real life is soft material losing retention, or worse, folding into the trigger guard. Real life is cheap clips popping off your belt.
+
+Here's why this one's different: the <mark>Phantom 2.0 IWB</mark>. Buy one, get one free, but this deal ends tonight at midnight. <mark>Built around a soft faux-leather wrap that flexes with your body — no metal biting skin, no sharp edges, no hot spots after twelve hours of wear.</mark> Trigger guard, ejection port, rail — locked in <mark>with dual reinforced metal clips that don't fold and don't fail</mark>. You hear the click when it seats. That click means it's safe. Retention that holds the same on day 1,000 as day one. Turn it upside down, shake it, run with it — it doesn't move.
+
+And the draw: no straps, no snaps, no thumb breaks. Nothing to fumble with when your hands are shaking and your heart rate hits 160. <mark>Clean draw straight from the belt line, every time.</mark>
+
+<mark>Hand-finished universal IWB fit — works with most compact and full-size pistols. Available for both left and right-hand carry.</mark> Right now, it's buy one, get one free. One for daily carry, one for your full size — two holsters, double your safety net. <mark>Plus every order includes a FREE Mag Carrier — $20 value, no add-on needed.</mark> But this deal ends tonight at midnight. 30 days to test it; if it's not the most secure holster you've ever owned, full refund. <mark>4.7 stars from 368 carriers, lifetime warranty.</mark> Tap below now.</div>
+  </div>
+
+  <!-- SCRIPT 3.1 -->
+  <div class="script-card">
+    <div class="script-head">
+      <div>
+        <div class="script-id">Script · 3.1 · Granddad</div>
+        <div class="script-name">Farm work / back pasture</div>
+      </div>
+      <span class="script-retain med">~70% retained</span>
+    </div>
+    <div class="script-swaps">
+      <h4>Swap notes vs reference Breakout 2.0</h4>
+      <ul class="swap-list">
+        <li><b>Product</b> <s>Breakout 2.0</s> → <code>Phantom 2.0 IWB</code></li>
+        <li><b>Brand</b> <s>Houdini Holsters, veteran-owned family business</s> → <code>SouthEDC</code>, drop "veteran-owned"</li>
+        <li><b>Material</b> <s>Hand-buffed silky edges, center crimped edges angle away</s> → <code>Soft faux-leather wrap covers every edge of the shell</code></li>
+        <li><b>Mechanism</b> <s>Patented breakout channel + 6.7-inch draw + backup draw</s> → <code>Clean draw from belt line + dual reinforced metal clips</code> (bỏ số liệu fake)</li>
+        <li><b>Upgrade paragraph</b> <s>Concealment claw + UltiClip cả đoạn dài</s> → <code>Bỏ hẳn, thay bằng 1 dòng FREE Mag Carrier integrated với farm context</code></li>
+        <li><b>Origin</b> <s>Handmade right here in America</s> → <code>Drop</code> (FTC risk)</li>
+        <li><b>Social proof</b> <s>100,000 carriers, 4.7★</s> → <code>4.7★ from 368 carriers</code></li>
+        <li><b>Warranty</b> <code>Lifetime warranty</code> — giữ nguyên ✓</li>
+      </ul>
+    </div>
+    <div class="script-body">Your granddad kept a revolver in the barn, a rifle on the tractor, and a shotgun by the door. Covered, right? Maybe. But these are different times. That's how it's been done forever out here. Guns staged everywhere. Always within reach, but within reach assumes you're always near one of those spots, and you're not. You're at the fence line. You're in the back pasture. You're a quarter-mile from the house checking the tree stand. Staged guns cover the house. They don't cover you.
+
+The guys who figured this out started carrying on their body, but most of them hit the same wall. Every holster they tried was built for standing around, not for actually working. 12 hours of bending, sitting, climbing, sweating, and the holster punishes you for every minute of it. So, even the ones who know better end up back where they started with the gun on the counter and not on their person. That's why <mark>here at SouthEDC, we built the Phantom 2.0 IWB different.</mark>
+
+This holster was designed for people who actually wear their gun all day, not just to the range and back. <mark>A soft faux-leather wrap covers every edge of the shell — no sharp corners, no rough spots, nothing to dig, scrape, or rub no matter how long you're wearing it.</mark> The leather flexes with your body — so when you're sitting on equipment, driving into town, or bending over an engine bay, nothing stabs into your ribs or hip. <mark>It moves with you instead of fighting you.</mark>
+
+And here's the thing, you don't have to conceal with it if you don't want to. This is an inside the waistband holster built for comfort first. It keeps your firearm nice and flat to your body, out of the way, secure, and accessible. Whether your shirt's tucked, untucked, or you've got no shirt on at all, the holster just works. <mark>Quick draw straight from the belt line — no fumbling, no snagging. And it locks into the trigger guard, ejection port, and rail via dual reinforced metal clips. You'll hear the click. You'll feel it. It holds firm upside down, shaking, running, whatever you throw at it. But when you draw, smooth and instant.</mark>
+
+Here's why right now is the time to act. We're running a buy one, get one free deal on the Phantom 2.0 IWB. Two holsters. Set them up for two different guns or set them up different for the same gun. <mark>Plus every order includes a FREE Mag Carrier — $20 value, integrated with the setup. One more mag on your hip when you head into the back pasture, when you're driving fence line, when you're a quarter mile from the truck.</mark>
+
+This deal is limited. Once the BOGO window closes, it's gone. <mark>Hand-finished universal IWB fit — works with most compact and full-size pistols. 4.7 out of 5 stars from 368 carriers</mark> — real carriers, guys who work farms, construction, HVAC, who wear this thing 12-plus hours, call it the most comfortable holster they've ever owned. You're backed by a <mark>30-day risk-free trial and lifetime warranty.</mark> Wear it for a full month of real work. If it's not the most comfortable holster you've ever put on, send it back — every penny, no questions. You got enough things fighting you out there. Your holster shouldn't be one of them. Tap the button below and claim your buy one, get one free Phantom 2.0 IWB.</div>
+  </div>
+
+  <div class="callout danger" style="margin-top:16px">
+    <b>QC checklist khi dựng từng video</b> · Nếu actor đọc "Kydex" / "custom molded to your exact firearm" / "veteran-owned" / "Made in America" / "100,000 carriers" / "6.7 inches draw" → <b>REJECT, redo</b>. Đây là các claim của reference, KHÔNG đúng cho Phantom 2.0.
+  </div>
+</section>
+
+<footer>
+  <span>SouthEDC · Video Brief</span>
+  <span>Phantom 2.0 IWB Reference Series · v1</span>
+</footer>
+
+</body>
+</html>
+
+```

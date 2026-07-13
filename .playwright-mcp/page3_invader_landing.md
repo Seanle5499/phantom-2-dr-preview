@@ -1,0 +1,307 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link [ref=e12] [cursor=pointer]:
+      - /url: https://invaderconcepts.com/pages/chest-holsters
+      - img [ref=e13]
+    - generic [ref=e20]:
+      - link "Go to RECON Chest Holster":
+        - /url: /products/recon-chest-holster
+      - generic [ref=e22]:
+        - generic [ref=e25]:
+          - generic "Carousel" [ref=e26]:
+            - button "Go to the previous slide Preview" [ref=e27] [cursor=pointer]:
+              - img "Go to the previous slide" [ref=e28]
+              - text: Preview
+            - button "Go to the next slide Next" [ref=e30] [cursor=pointer]:
+              - img "Go to the next slide" [ref=e31]
+              - text: Next
+            - generic [ref=e33]:
+              - generic [ref=e34]: slide 2 of 13
+              - generic [ref=e37]:
+                - img [ref=e40] [cursor=pointer]
+                - img "Recon chest holster on white background and topo lines" [ref=e43] [cursor=pointer]
+                - img [ref=e46] [cursor=pointer]
+                - img [ref=e49] [cursor=pointer]
+                - img [ref=e52] [cursor=pointer]
+                - img [ref=e55] [cursor=pointer]
+                - img [ref=e58] [cursor=pointer]
+                - img [ref=e61] [cursor=pointer]
+                - img [ref=e64] [cursor=pointer]
+                - img [ref=e67] [cursor=pointer]
+                - img [ref=e70] [cursor=pointer]
+                - img [ref=e73] [cursor=pointer]
+                - img [ref=e76] [cursor=pointer]
+                - img [ref=e79] [cursor=pointer]
+                - img [ref=e82] [cursor=pointer]
+          - generic [ref=e83]:
+            - list "Carousel Pagination" [ref=e85]:
+              - listitem "Carousel Page 1 (Current Slide)" [ref=e86]:
+                - button "Carousel pagination button" [ref=e87] [cursor=pointer]:
+                  - img "Recon chest holster on white background and topo lines" [ref=e88]
+              - listitem "Carousel Page 2" [ref=e89]:
+                - button "Carousel pagination button" [ref=e90] [cursor=pointer]:
+                  - img "Recon chest holster with adjustable retention system on a white background with yellow line patterns" [ref=e91]
+              - listitem "Carousel Page 3" [ref=e92]:
+                - button "Carousel pagination button" [ref=e93] [cursor=pointer]:
+                  - img "Pair of brown and black straps with adjustable keepers on a white background with yellow lines." [ref=e94]
+              - listitem "Carousel Page 4" [ref=e95]:
+                - button "Carousel pagination button" [ref=e96] [cursor=pointer]:
+                  - img "Brown leather connectors with black hardware on a white background with yellow line art" [ref=e97]
+              - listitem "Carousel Page 5" [ref=e98]:
+                - button "Carousel pagination button" [ref=e99] [cursor=pointer]:
+                  - img "Person wearing a recon chest holster while riding a side by side" [ref=e100]
+              - listitem "Carousel Page 6" [ref=e101]:
+                - button "Carousel pagination button" [ref=e102] [cursor=pointer]:
+                  - img "Person on an orange motorcycle with a helmet and gear, surrounded by trees. wearing a recon chest holster" [ref=e103]
+              - listitem "Carousel Page 7" [ref=e104]:
+                - button "Carousel pagination button" [ref=e105] [cursor=pointer]:
+                  - img "Camouflage gun recon chest holster on a textured surface with fishing equipment." [ref=e106]
+              - listitem "Carousel Page 8" [ref=e107]:
+                - button "Carousel pagination button" [ref=e108] [cursor=pointer]:
+                  - img "Person wearing a helmet and riding gear on a motorcycle with a forest background, wearing a Recon chest holster" [ref=e109]
+              - listitem "Carousel Page 9" [ref=e110]:
+                - button "Carousel pagination button" [ref=e111] [cursor=pointer]:
+                  - img "Man in mountain biking gear, wearing a recon chest holster" [ref=e112]
+              - listitem "Carousel Page 10" [ref=e113]:
+                - button "Carousel pagination button" [ref=e114] [cursor=pointer]:
+                  - img "Person in camouflage gear with a Recon chest holster in coyote, on a rocky landscape." [ref=e115]
+              - listitem "Carousel Page 11" [ref=e116]:
+                - button "Carousel pagination button" [ref=e117] [cursor=pointer]:
+                  - img "Recon chest holster, with a S&W M&P 10mm in side" [ref=e118]
+              - listitem "Carousel Page 12" [ref=e119]:
+                - button "Carousel pagination button" [ref=e120] [cursor=pointer]:
+                  - img "person in hunting camouflage, with a bow. Wearing a Recon chest holster" [ref=e121]
+              - listitem "Carousel Page 13" [ref=e122]:
+                - button "Carousel pagination button" [ref=e123] [cursor=pointer]:
+                  - img "Collection of fabric color swatches and patterns." [ref=e124]
+            - button "Go to the next slide" [ref=e125] [cursor=pointer]:
+              - img "Go to the next slide" [ref=e126]
+        - generic [ref=e129]:
+          - generic [ref=e131]:
+            - list [ref=e132]:
+              - listitem [ref=e133]:
+                - img [ref=e134]
+              - listitem [ref=e136]:
+                - img [ref=e137]
+              - listitem [ref=e139]:
+                - img [ref=e140]
+              - listitem [ref=e142]:
+                - img [ref=e143]
+              - listitem [ref=e145]:
+                - img [ref=e146]
+            - generic [ref=e148]: "4.6"
+          - heading "RECON Chest Holster" [level=2] [ref=e149]
+          - generic [ref=e151]:
+            - paragraph [ref=e153]: "Your Price:"
+            - generic [ref=e155]: $159.95
+          - generic [ref=e157]:
+            - button "Increase quantity" [ref=e158] [cursor=pointer]:
+              - img [ref=e159]
+            - textbox "Quantity" [ref=e161]: "1"
+            - button "Decrease quantity" [ref=e162] [cursor=pointer]:
+              - img [ref=e163]
+          - button "BUY NOW" [ref=e166] [cursor=pointer]
+          - paragraph [ref=e168]: 100% Money Back Guarantee
+          - list [ref=e170]:
+            - listitem [ref=e171]:
+              - generic [ref=e172]:
+                - button "Product Description" [expanded] [ref=e174] [cursor=pointer]:
+                  - generic [ref=e175]:
+                    - generic [ref=e176]: Product Description
+                    - img "Close" [ref=e177]
+                - generic [ref=e182]:
+                  - paragraph [ref=e183]:
+                    - strong [ref=e184]: Built for real movement. Quiet when it counts most.
+                  - paragraph [ref=e185]: The RECON Chest Holster was created for hunters, hikers, riders, and anyone who moves hard through the mountains. When backpacks, hip belts, heavy layers, and steep terrain make waist carry impossible, the RECON gives you a stable, silent, and custom-fit solution that stays ready no matter how far you push.
+                  - paragraph [ref=e186]: Where other chest holsters flop, squeak, or fight your draw, the RECON stays locked in. Wide 2" nylon straps distribute weight comfortably, while our QuietRide Technology uses leather connection points that flex naturally with your movement—zero creaking, zero noise, zero giveaway. An elastic rear panel adds dynamic tension to keep the holster tight to your body whether you're climbing, bushwhacking, or riding.
+                  - paragraph [ref=e187]: Every RECON is built around a firearm-specific shell with adjustable retention, suppressor-height sight clearance, and threaded-barrel compatibility. With a huge harness adjustment range, and color options let you dial in your exact setup.
+                  - paragraph [ref=e188]: The result? A chest holster you’ll forget you’re wearing—until the moment you need it.
+                  - heading "Key Features" [level=3] [ref=e189]:
+                    - strong [ref=e190]: Key Features
+                  - list [ref=e191]:
+                    - listitem [ref=e192]:
+                      - paragraph [ref=e193]: Silent performance with QuietRide leather connection points
+                    - listitem [ref=e194]:
+                      - paragraph [ref=e195]: Wide 2" straps for all-day comfort and stability
+                    - listitem [ref=e196]:
+                      - paragraph [ref=e197]: Adjustable retention for a secure, custom-tuned draw
+                    - listitem [ref=e198]:
+                      - paragraph [ref=e199]: Elastic rear section for dynamic fit under movement
+                    - listitem [ref=e200]:
+                      - paragraph [ref=e201]: Custom-fit shells for specific firearm models
+                    - listitem [ref=e202]:
+                      - paragraph [ref=e203]: Suppressor-height sight and threaded-barrel ready
+                    - listitem [ref=e204]:
+                      - paragraph [ref=e205]: Multiple color options + accessory compatibility
+                    - listitem [ref=e206]:
+                      - paragraph [ref=e207]: Massive size range on a single harness
+                    - listitem [ref=e208]:
+                      - paragraph [ref=e209]: Built with premium nylon, leather, and hardware
+                    - listitem [ref=e210]:
+                      - paragraph [ref=e211]: Lifetime warranty
+                  - paragraph [ref=e212]: Whether you're pushing ridge lines, scouting heavy cover, or running a backpack all day, the RECON keeps your firearm silent, secure, and instantly accessible—exactly where it should be.
+          - generic [ref=e214]:
+            - generic [ref=e216]:
+              - img "Truck" [ref=e220]
+              - paragraph [ref=e223]: Secure Delivery
+            - generic [ref=e225]:
+              - img "Dolly" [ref=e229]
+              - paragraph [ref=e232]: Easy Returns
+            - generic [ref=e234]:
+              - img "Thumbs" [ref=e238]
+              - paragraph [ref=e241]: Best Quality
+    - paragraph [ref=e249]: NEED A HOLSTER UNDER YOUR BINO HARNESS?
+    - iframe [ref=e258]:
+      - generic [active] [ref=f38e1]:
+        - generic "YouTube Video Player" [ref=f38e3]
+        - generic [ref=f38e5]:
+          - generic:
+            - generic:
+              - button "Play video" [ref=f38e10] [cursor=pointer]
+              - button "Hide player controls" [ref=f38e12] [cursor=pointer]
+              - generic [ref=f38e14]:
+                - generic [ref=f38e19]:
+                  - generic [ref=f38e20]:
+                    - link "the GUIDE // Invader Concepts" [ref=f38e21] [cursor=pointer]:
+                      - /url: https://www.youtube.com/watch?v=gJyqagswogg
+                    - link "Invader Concepts" [ref=f38e22] [cursor=pointer]:
+                      - /url: /channel/UC58CLikrAzQWk7-hpS6Sq2w
+                      - generic [ref=f38e23]: Invader Concepts
+                  - generic [ref=f38e24]:
+                    - button [ref=f38e25] [cursor=pointer]
+                    - generic [ref=f38e27]:
+                      - generic: Invader Concepts
+                      - generic: 2.42K subscribers
+                - generic [ref=f38e28]:
+                  - button "Share" [ref=f38e31] [cursor=pointer]:
+                    - generic [ref=f38e35]:
+                      - img
+                  - link "Watch on YouTube" [ref=f38e42] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=gJyqagswogg
+                    - generic [ref=f38e45]:
+                      - text: Watch on
+                      - img [ref=f38e47]:
+                        - generic [ref=f38e49]:
+                          - img
+    - generic [ref=e262]:
+      - img [ref=e267]
+      - generic [ref=e269]:
+        - paragraph [ref=e271]: WHAT MAKES THE RECON THE MOST COMFORTABLE?
+        - generic [ref=e272]:
+          - heading "We designed the RECON from the Ground Up to create the most comfortable and functional chest holster ever built. Here's how we did it." [level=4] [ref=e273]
+          - paragraph [ref=e274]: .
+          - list [ref=e275]:
+            - listitem [ref=e276]:
+              - paragraph [ref=e277]: "2\" Wide Codera Webbing: Utilizing 2\" webbing straps evenly disperses the weight of your firearm. Codera webbing can get wet without impacting its elasticity or long term strength."
+          - paragraph [ref=e278]
+          - list [ref=e279]:
+            - listitem [ref=e280]:
+              - paragraph [ref=e281]: "Connectors: Our connection method allows each individual point to rotate. This allows the RECON to work with your body, not against it."
+              - paragraph [ref=e282]
+        - button "ORDER NOW" [ref=e284] [cursor=pointer]
+    - generic [ref=e286]:
+      - generic [ref=e288]:
+        - generic [ref=e290]:
+          - img [ref=e294]
+          - paragraph [ref=e297]: "\"Its Fan-effing-tastic!\""
+          - paragraph [ref=e299]: Got the Recon for my P365. I typically carry IWB, but having the option to have it on my chest when I’m on a hike is fan-effing-tastic! It’s truly comfortable to wear. Haven’t experienced any hotspots. Doesn’t get in the way of my backpack or my fanny pack when I’m on hikes. I’m about to get one for my Lone Wolf Dusk 19. Just get it already!
+          - paragraph [ref=e301]: Art
+        - generic [ref=e303]:
+          - img [ref=e307]
+          - paragraph [ref=e310]: "\"Love This Thing\""
+          - paragraph [ref=e312]: I got the recon chest rig for when I’m riding the Atv. It’s fits great. Very comfortable. I do a lot of hunting and having it ready and available is great. The shipping and craftsmanship is a perfect fit for my 19, 19x, g45. Thank you for the superior product. Already showed my buddies and they are jealous and asking about one of their own. Thanks again.
+          - paragraph [ref=e314]: Phillip
+        - generic [ref=e316]:
+          - img [ref=e320]
+          - paragraph [ref=e323]: "\"The RECON is literally PERFECT\""
+          - paragraph [ref=e325]: The RECON solves my carry issue. Due to recent surgery on my abdominal area, I needed an alternate way to carry for now. The RECON, after much searching, was perfect in every way for me. Fits me and my CZ perfectly.
+          - paragraph [ref=e327]: Michael
+      - button "ORDER NOW" [ref=e333] [cursor=pointer]
+    - generic [ref=e335]:
+      - heading "Customer Testimonials" [level=2] [ref=e341]
+      - heading "Don't Take Our Word For It!" [level=1] [ref=e347]
+      - heading "What our customers think about the RECON" [level=2] [ref=e353]
+    - heading "Not Sure on the RECON? No worries, we have a holster that you'll love!" [level=3] [ref=e361]
+    - generic "Carousel" [ref=e368]:
+      - generic [ref=e370]:
+        - generic [ref=e375]:
+          - img "STANDARD OWB - Outside the Waistband Holster" [ref=e381]
+          - generic [ref=e383]:
+            - list [ref=e386]:
+              - listitem [ref=e387]:
+                - img [ref=e388]
+              - listitem [ref=e390]:
+                - img [ref=e391]
+              - listitem [ref=e393]:
+                - img [ref=e394]
+              - listitem [ref=e396]:
+                - img [ref=e397]
+              - listitem [ref=e399]:
+                - img [ref=e400]
+            - heading "STANDARD OWB - Outside the Waistband Holster" [level=2] [ref=e402]
+            - generic [ref=e403]:
+              - paragraph [ref=e404]
+              - list [ref=e405]:
+                - listitem [ref=e406]:
+                  - paragraph [ref=e407]: Adjustable Retention
+                - listitem [ref=e408]:
+                  - paragraph [ref=e409]: Sleek Slim Fit
+                - listitem [ref=e410]:
+                  - paragraph [ref=e411]: Simple Easy Ride Height Adjustment
+              - paragraph [ref=e412]
+            - button "Shop The Standard" [ref=e414] [cursor=pointer]: Shop The Standard
+        - generic [ref=e419]:
+          - img "OUTLAW IWB - Inside the Waistband Holster" [ref=e425]
+          - generic [ref=e427]:
+            - list [ref=e430]:
+              - listitem [ref=e431]:
+                - img [ref=e432]
+              - listitem [ref=e434]:
+                - img [ref=e435]
+              - listitem [ref=e437]:
+                - img [ref=e438]
+              - listitem [ref=e440]:
+                - img [ref=e441]
+              - listitem [ref=e443]:
+                - img [ref=e444]
+            - heading "OUTLAW IWB - Inside the Waistband Holster" [level=2] [ref=e446]
+            - generic [ref=e447]:
+              - paragraph [ref=e448]
+              - list [ref=e449]:
+                - listitem [ref=e450]:
+                  - paragraph [ref=e451]: Positive Click Retention
+                - listitem [ref=e452]:
+                  - paragraph [ref=e453]: Concealment Claw Reduces Size and Print
+                - listitem [ref=e454]:
+                  - paragraph [ref=e455]: Easy Adjustment of Ride Height and Retention Strength
+              - paragraph [ref=e456]
+            - button "Shop The Outlaw" [ref=e458] [cursor=pointer]: Shop The Outlaw
+        - generic [ref=e463]:
+          - img "Three edc(everyday carry) belts in od green, coyote, and black on a white background with subtle patterns." [ref=e469]
+          - generic [ref=e471]:
+            - list [ref=e474]:
+              - listitem [ref=e475]:
+                - img [ref=e476]
+              - listitem [ref=e478]:
+                - img [ref=e479]
+              - listitem [ref=e481]:
+                - img [ref=e482]
+              - listitem [ref=e484]:
+                - img [ref=e485]
+              - listitem [ref=e487]:
+                - img [ref=e488]
+            - heading "BELT | EDC/Tactical" [level=2] [ref=e490]
+            - generic [ref=e491]:
+              - paragraph [ref=e492]
+              - list [ref=e493]:
+                - listitem [ref=e494]:
+                  - paragraph [ref=e495]: Easy to Use G Hook
+                - listitem [ref=e496]:
+                  - paragraph [ref=e497]: Plenty of Adjustment Room
+                - listitem [ref=e498]:
+                  - paragraph [ref=e499]: Holds Weight Extremely Well
+              - paragraph [ref=e500]
+            - button "Shop THE BELT" [ref=e502] [cursor=pointer]: Shop THE BELT
+  - iframe [ref=e505]:
+    - button "Open Smile.io Rewards Program" [ref=f41e2] [cursor=pointer]:
+      - generic [ref=f41e3]: REWARDS

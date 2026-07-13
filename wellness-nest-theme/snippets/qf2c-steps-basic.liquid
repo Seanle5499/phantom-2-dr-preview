@@ -1,0 +1,95 @@
+{% comment %}
+  Quiz Funnel — Steps 1-5 (Basic Questions)
+  Step 1: Age
+  Step 2: Confidence Level
+  Step 3: Duration
+  Step 4: Stress / Sleep
+  Step 5: What You've Tried
+
+  Variables passed from section:
+    img_user1, img_user2, img_user3, img_user4 — avatar images
+    skip_url    — where "Skip this quiz" links to
+    terms_url   — Terms of Service page
+    privacy_url — Privacy Policy page
+{% endcomment %}
+
+<!-- ══ STEP 1: AGE ══ -->
+<div class="qf-step active" data-step="1">
+  <h1 class="qf-hero__title">Find Out What's Really Happening With Your Testosterone</h1>
+  <p class="qf-hero__sub">✅ This 2-minute assessment analyzes your symptoms, lifestyle, and risk factor in order to find a solution.</p>
+
+  <div class="qf-testimonial">
+    <p class="qf-testimonial__quote">"I was skeptical at first that an online quiz could help me get my T levels back, but it was super easy, took maybe a minute, and... Let's just say me and my wife are VERY happy I took this quiz."</p>
+    <p class="qf-testimonial__author">ADAM, Verified Customer</p>
+  </div>
+
+  <h2 class="qf-q">How old are you?</h2>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="50+" onclick="qfPickOpt(this,1)"><div class="qf-opt__label">50+ Years Old</div></div>
+    <div class="qf-opt" data-answer="40 - 49" onclick="qfPickOpt(this,1)"><div class="qf-opt__label">40 - 49 Years Old</div></div>
+    <div class="qf-opt" data-answer="30 - 39" onclick="qfPickOpt(this,1)"><div class="qf-opt__label">30 - 39 Years Old</div></div>
+    <div class="qf-opt" data-answer="20 - 29" onclick="qfPickOpt(this,1)"><div class="qf-opt__label">20 - 29 Years Old</div></div>
+  </div>
+  {% if skip_url != blank %}
+    <span class="qf-skip" onclick="window.location.href='{{ skip_url }}'">SKIP THIS QUIZ</span>
+  {% endif %}
+  {% if terms_url != blank or privacy_url != blank %}
+    <div class="qf-terms">
+      By clicking any of the options above, you agree with the
+      {% if terms_url != blank %}<a href="{{ terms_url }}">Terms of Use and Service</a>{% endif %}
+      {% if terms_url != blank and privacy_url != blank %} and {% endif %}
+      {% if privacy_url != blank %}<a href="{{ privacy_url }}">Privacy Policy</a>{% endif %}
+    </div>
+  {% endif %}
+</div>
+
+<!-- ══ STEP 2: BIGGEST CONCERN ══ -->
+<div class="qf-step" data-step="2">
+  <button class="qf-back" onclick="qfGoBack(2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">What's your biggest concern about your masculine health right now?</h2>
+  <p class="qf-sub">Be honest. This is private. The more accurate you are, the more precise your results.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="Energy levels" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">😮‍💨 Energy levels</div></div>
+    <div class="qf-opt" data-answer="Muscle mass" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">💪 Muscle mass and strength</div></div>
+    <div class="qf-opt" data-answer="Sex drive" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">🍆 Sex drive and performance</div></div>
+    <div class="qf-opt" data-answer="Mental focus" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">☁️ Mental focus and clarity</div></div>
+    <div class="qf-opt" data-answer="Weight Loss" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">🫃 Weight Loss</div></div>
+  </div>
+</div>
+
+<!-- ══ STEP 3: STRESS SYMPTOMS ══ -->
+<div class="qf-step" data-step="3">
+  <button class="qf-back" onclick="qfGoBack(3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">Do you have stress symptoms during the day? Like feeling tired, cranky, foggy, or moody.</h2>
+  <p class="qf-sub">Most men underestimate how long this has been going on. Be real with yourself.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="Yes" onclick="qfPickOpt(this,3)"><div class="qf-opt__label">Yes</div></div>
+    <div class="qf-opt" data-answer="No" onclick="qfPickOpt(this,3)"><div class="qf-opt__label">No</div></div>
+  </div>
+</div>
+
+<!-- ══ STEP 4: ENERGY AT 3PM ══ -->
+<div class="qf-step" data-step="4">
+  <button class="qf-back" onclick="qfGoBack(4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">How's your energy at 3pm compared to when you wake up?</h2>
+  <p class="qf-sub">Chronic stress is one of the fastest ways to strip the trace minerals your body needs to produce testosterone naturally.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="Drained" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">🥱 Completely drained</div><div class="qf-opt__desc">Need caffeine or a nap.</div></div></div>
+    <div class="qf-opt" data-answer="Slump" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">📉 Noticeably lower</div><div class="qf-opt__desc">Afternoon slump hits hard.</div></div></div>
+    <div class="qf-opt" data-answer="Slightly tired" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">😮‍💨 Slightly tired</div><div class="qf-opt__desc">Still functional but slower.</div></div></div>
+    <div class="qf-opt" data-answer="Same energy" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">⚡ Same energy</div><div class="qf-opt__desc">No afternoon crash.</div></div></div>
+  </div>
+</div>
+
+<!-- ══ STEP 5: TIMELINE ══ -->
+<div class="qf-step" data-step="5">
+  <button class="qf-back" onclick="qfGoBack(5)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">When did you start noticing changes to your energy and drive?</h2>
+  <p class="qf-sub">If it didn't work, it's not your fault. 82% of mainstream options contain fillers, underdosed ingredients, or zero active compounds.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="Over a year ago" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">Over a year ago</div></div>
+    <div class="qf-opt" data-answer="In the past year" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">In the past year</div></div>
+    <div class="qf-opt" data-answer="In the past few months" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">In the past few months</div></div>
+    <div class="qf-opt" data-answer="Not sure" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">Not sure</div></div>
+  </div>
+</div>

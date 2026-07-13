@@ -1,0 +1,425 @@
+
+    
+    
+    <style>.gps-558289940363150440 .-gp-rotate-90,.gps-558289940363150440 .gp-rotate-180,.gps-558289940363150440 .gp-rotate-90{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1}.gps-558289940363150440 .gp-g-subheading-3{font-family:var(--g-sh3-ff);font-size:var(--g-sh3-size);font-style:var(--g-sh3-fs);font-weight:var(--g-sh3-weight);letter-spacing:var(--g-sh3-ls);line-height:var(--g-sh3-lh)}.gps-558289940363150440 .gp-g-paragraph-1{font-family:var(--g-p1-ff);font-size:var(--g-p1-size);font-style:var(--g-p1-fs);font-weight:var(--g-p1-weight);letter-spacing:var(--g-p1-ls);line-height:var(--g-p1-lh)}.gps-558289940363150440 .gp-relative{position:relative}.gps-558289940363150440 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-558289940363150440 .gp-mb-0{margin-bottom:0}.gps-558289940363150440 .gp-flex{display:flex}.gps-558289940363150440 .gp-inline-flex{display:inline-flex}.gps-558289940363150440 .gp-grid{display:grid}.gps-558289940363150440 .\!gp-hidden{display:none!important}.gps-558289940363150440 .gp-hidden{display:none}.gps-558289940363150440 .gp-min-h-0{min-height:0}.gps-558289940363150440 .gp-w-full{width:100%}.gps-558289940363150440 .gp-max-w-full{max-width:100%}.gps-558289940363150440 .-gp-rotate-90{--tw-rotate:-90deg}.gps-558289940363150440 .-gp-rotate-90,.gps-558289940363150440 .gp-rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-558289940363150440 .gp-rotate-180{--tw-rotate:180deg}.gps-558289940363150440 .gp-rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-558289940363150440 .gp-cursor-pointer{cursor:pointer}.gps-558289940363150440 .gp-grid-rows-\[0fr\]{grid-template-rows:0fr}.gps-558289940363150440 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-558289940363150440 .gp-flex-col{flex-direction:column}.gps-558289940363150440 .gp-items-center{align-items:center}.gps-558289940363150440 .gp-justify-center{justify-content:center}.gps-558289940363150440 .gp-gap-\[16px\]{gap:16px}.gps-558289940363150440 .gp-overflow-hidden{overflow:hidden}.gps-558289940363150440 .gp-overflow-clip{overflow:clip}.gps-558289940363150440 .gp-break-all{word-break:break-all}.gps-558289940363150440 .gp-transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-558289940363150440 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-558289940363150440 .gp-duration-200{transition-duration:.2s}.gps-558289940363150440 .gp-duration-500{transition-duration:.5s}.gps-558289940363150440 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (hover:hover) and (pointer:fine){.gps-558289940363150440 .gp-group:hover .group-hover\:\[color\:var\(--icon-expand-hover-color\)\]{color:var(--icon-expand-hover-color)}.gps-558289940363150440 .gp-group:hover .group-hover\:\[color\:var\(--text-hover-color\)\!important\]{color:var(--text-hover-color)!important}}@media (max-width:1024px){.gps-558289940363150440 .tablet\:\!gp-hidden{display:none!important}.gps-558289940363150440 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-558289940363150440 .mobile\:\!gp-hidden{display:none!important}.gps-558289940363150440 .mobile\:gp-hidden{display:none}}.gps-558289940363150440 .\[\&\>svg\]\:\!gp-h-\[var\(--height-iconCollapseSize\)\]>svg{height:var(--height-iconCollapseSize)!important}.gps-558289940363150440 .\[\&\>svg\]\:\!gp-w-full>svg{width:100%!important}.gps-558289940363150440 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}</style>
+    
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:calc(var(--g-ct-w, 1200px) + 2 * var(--g-ct-p, 15px));--w-tablet:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--w-mobile:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--pl:var(--g-ct-p, 15px);--pl-tablet:var(--g-ct-p, 15px);--pl-mobile:var(--g-ct-p, 15px);--pr:var(--g-ct-p, 15px);--pr-tablet:var(--g-ct-p, 15px);--pr-mobile:var(--g-ct-p, 15px)"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"color":"rgb(254, 254, 254)","type":"color"}},"uid":"i2l01036c565e"}' data-id="i2l01036c565e" id="i2l01036c565e" data-same-height-subgrid-container class="i2l01036c565e gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--pageType:GP_PRODUCT;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:30px;--pl:0px;--pb:30px;--pr:0px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:var(--g-s-xl);--pl-mobile:0px;--pb-mobile:var(--g-s-m);--pr-mobile:0px;--cg:32px;--cg-tablet:32px;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--bgc:rgb(254, 254, 254);--bgi:url();--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="c-w-i2l01036c565e gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="WJnunfrraOLA"
+        class="WJnunfrraOLA"
+        style="--ta:center;--pageType:GP_PRODUCT;--mt:0px;--ml:0px;--mb:var(--g-s-2xl);--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:var(--g-s-xl);--ml-mobile:0px;--mb-mobile:var(--g-s-xl);--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <div
+          data-gp-text
+          class="gp-g-subheading-3  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:32px;--size-tablet:32px;--size-mobile:36px;--c:#1B8D17;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gWJnunfrraOLA_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    <div gp-el-wrapper style="--pageType:GP_PRODUCT;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px" class="AlkuZfxVZuEq ">
+      
+    <gp-accordion data-id="AlkuZfxVZuEq" class="gp-flex gp-flex-col gp-w-full" style="--gg:16px;border-radius:inherit"
+      gp-data='{"uid":"AlkuZfxVZuEq","setting":{"iconSvg":"<svg width=\"17\" height=\"16\" viewBox=\"0 0 17 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z\" fill=\"currentColor\"/>\n                  </svg>","isIconPlus":false,"activeKey":"1","expanded":true,"expandItem":false,"iconPosition":"right","iconGlobalSize":{"desktop":{"gap":"16px"}},"iconCollapse":"<svg height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508817558491496808\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z\" /></svg>","iconExpand":"<svg height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508817562042171752\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M216.49,168.49a12,12,0,0,1-17,0L128,97,56.49,168.49a12,12,0,0,1-17-17l80-80a12,12,0,0,1,17,0l80,80A12,12,0,0,1,216.49,168.49Z\" /></svg>","iconCollapseSize":16,"layoutHeader":"text-only","expandedMode":"multiple","configIconSize":16,"parentUid":"AlkuZfxVZuEq","childListNumber":[],"chidlrenUid":["i2l201b643a78","gD7_YKj4gx","i2lf7ac59bd44","i2l663244236a","i2l8eed2f68bb"]},"styles":{"bgColor":{"active":"transparent","hover":"transparent","normal":"transparent"},"color":{"normal":"rgb(36, 36, 36)"},"headerBorder":{"active":{"border":"none","borderWidth":"Mixed","color":"#CCCCCC","isCustom":true,"position":"bottom","width":"0px 0px 1px 0px"},"hover":{"border":"none","borderWidth":"Mixed","color":"#121212","isCustom":true,"position":"bottom","width":"0px 0px 1px 0px"},"normal":{"border":"none","borderWidth":"Mixed","color":"#121212","isCustom":true,"position":"bottom","width":"0px 0px 1px 0px"}},"textColor":{"normal":"rgb(36, 36, 36)"},"iconColor":{"active":"#121212","hover":"#121212","normal":"#121212"},"contentSizePadding":{"desktop":{"gap":"16px","padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}}},"headerContentPadding":{"desktop":{"padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}}},"widthHeightSize":{"desktop":{"gap":"","height":"auto","width":"100%"}}}}'
+        >
+        <div class=" gp-hidden gp-rotate-90 -gp-rotate-90 gp-rotate-180"></div>
+      
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:rgb(36, 36, 36);--icon-expand-hover-color:rgb(36, 36, 36);--icon-expand-active-color:rgb(36, 36, 36);--icon-active-color:#121212;--icon-hover-color:#121212;--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:1px 1px 1px 1px;--bc:transparent;--bg:#F2F2F2;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
+    <div data-index="0" class="AlkuZfxVZuEq gp-overflow-hidden gp-child-item-AlkuZfxVZuEq gp-accordion-item">
+      <div aria-hidden uid="i2l201b643a78" id="i2l201b643a78" data-index="0"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] AlkuZfxVZuEq gp-accordion-item-AlkuZfxVZuEq-0" style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;--hvr-bgc:transparent;--bgc:transparent;--bs:none;--hvr-bs:none;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:rgb(36, 36, 36);width:16px;height:16px"
+            data-index="0"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full">
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817558491496808">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z" /></svg>
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:16px;--jc:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:rgb(36, 36, 36);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important] gp-g-paragraph-1  gp-text-instant"
+          style="--w:100%;--tdt:auto;--size:20px;--size-tablet:16px;--size-mobile:16px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gAlkuZfxVZuEq_childItem_0 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="0" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="0" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:24px;--pr:24px">
+          <div
+      data-same-height-display-contents
+      
+      class="accordion_item-col-i2l201b643a78 gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="accordion-item-body-text-i2l201b643a78"
+        class="accordion-item-body-text-i2l201b643a78"
+        style="--ta:left;--pageType:GP_PRODUCT;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:18px;--size-tablet:16px;--size-mobile:16px;--c:rgb(36, 36, 36);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gaccordion-item-body-text-i2l201b643a78_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:rgb(36, 36, 36);--icon-expand-hover-color:rgb(36, 36, 36);--icon-expand-active-color:rgb(36, 36, 36);--icon-active-color:#121212;--icon-hover-color:#121212;--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:1px 1px 1px 1px;--bc:transparent;--bg:#F2F2F2;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
+    <div data-index="1" class="AlkuZfxVZuEq gp-overflow-hidden gp-child-item-AlkuZfxVZuEq gp-accordion-item">
+      <div aria-hidden uid="gD7_YKj4gx" id="gD7_YKj4gx" data-index="1"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] AlkuZfxVZuEq gp-accordion-item-AlkuZfxVZuEq-1" style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;--hvr-bgc:transparent;--bgc:transparent;--bs:none;--hvr-bs:none;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:rgb(36, 36, 36);width:16px;height:16px"
+            data-index="1"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full">
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817558491496808">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z" /></svg>
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:16px;--jc:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:rgb(36, 36, 36);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important] gp-g-paragraph-1  gp-text-instant"
+          style="--w:100%;--tdt:auto;--size:20px;--size-tablet:16px;--size-mobile:16px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gAlkuZfxVZuEq_childItem_1 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="1" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="1" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:24px;--pr:24px">
+          <div
+      data-same-height-display-contents
+      style="--ai:normal;--jc:normal;--o:0"
+      class="gQ-dYO20rX gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gCd5EYmfck"
+        class="gCd5EYmfck"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_PRODUCT;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:18px;--size-tablet:16px;--size-mobile:16px;--c:var(--g-c-text-1, text-1);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggCd5EYmfck_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:rgb(36, 36, 36);--icon-expand-hover-color:rgb(36, 36, 36);--icon-expand-active-color:rgb(36, 36, 36);--icon-active-color:#121212;--icon-hover-color:#121212;--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:1px 1px 1px 1px;--bc:transparent;--bg:#F2F2F2;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
+    <div data-index="2" class="AlkuZfxVZuEq gp-overflow-hidden gp-child-item-AlkuZfxVZuEq gp-accordion-item">
+      <div aria-hidden uid="i2lf7ac59bd44" id="i2lf7ac59bd44" data-index="2"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] AlkuZfxVZuEq gp-accordion-item-AlkuZfxVZuEq-2" style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;--hvr-bgc:transparent;--bgc:transparent;--bs:none;--hvr-bs:none;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:rgb(36, 36, 36);width:16px;height:16px"
+            data-index="2"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full">
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817558491496808">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z" /></svg>
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:16px;--jc:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:rgb(36, 36, 36);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important] gp-g-paragraph-1  gp-text-instant"
+          style="--w:100%;--tdt:auto;--size:20px;--size-tablet:16px;--size-mobile:16px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gAlkuZfxVZuEq_childItem_2 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="2" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="2" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:24px;--pr:24px">
+          <div
+      data-same-height-display-contents
+      
+      class="accordion_item-col-i2lf7ac59bd44 gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="accordion-item-body-text-i2lf7ac59bd44"
+        class="accordion-item-body-text-i2lf7ac59bd44"
+        style="--ta:left;--pageType:GP_PRODUCT;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:18px;--size-tablet:16px;--size-mobile:16px;--c:rgb(36, 36, 36);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gaccordion-item-body-text-i2lf7ac59bd44_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:rgb(36, 36, 36);--icon-expand-hover-color:rgb(36, 36, 36);--icon-expand-active-color:rgb(36, 36, 36);--icon-active-color:#121212;--icon-hover-color:#121212;--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:1px 1px 1px 1px;--bc:transparent;--bg:#F2F2F2;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
+    <div data-index="3" class="AlkuZfxVZuEq gp-overflow-hidden gp-child-item-AlkuZfxVZuEq gp-accordion-item">
+      <div aria-hidden uid="i2l663244236a" id="i2l663244236a" data-index="3"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] AlkuZfxVZuEq gp-accordion-item-AlkuZfxVZuEq-3" style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;--hvr-bgc:transparent;--bgc:transparent;--bs:none;--hvr-bs:none;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:rgb(36, 36, 36);width:16px;height:16px"
+            data-index="3"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full">
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817558491496808">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z" /></svg>
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:16px;--jc:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:rgb(36, 36, 36);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important] gp-g-paragraph-1  gp-text-instant"
+          style="--w:100%;--tdt:auto;--size:20px;--size-tablet:16px;--size-mobile:16px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gAlkuZfxVZuEq_childItem_3 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="3" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="3" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:24px;--pr:24px">
+          <div
+      data-same-height-display-contents
+      
+      class="accordion_item-col-i2l663244236a gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="accordion-item-body-text-i2l663244236a"
+        class="accordion-item-body-text-i2l663244236a"
+        style="--ta:left;--pageType:GP_PRODUCT;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:18px;--size-tablet:16px;--size-mobile:16px;--c:rgb(36, 36, 36);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gaccordion-item-body-text-i2l663244236a_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+          <div class="gp-flex" style="--jc:center">
+            
+  <div class="gp-overflow-clip gp-group" style="--text-hover-color:rgb(36, 36, 36);--icon-expand-hover-color:rgb(36, 36, 36);--icon-expand-active-color:rgb(36, 36, 36);--icon-active-color:#121212;--icon-hover-color:#121212;--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:1px 1px 1px 1px;--bc:transparent;--bg:#F2F2F2;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
+    <div data-index="4" class="AlkuZfxVZuEq gp-overflow-hidden gp-child-item-AlkuZfxVZuEq gp-accordion-item">
+      <div aria-hidden uid="i2l8eed2f68bb" id="i2l8eed2f68bb" data-index="4"
+        class="gp-flex gp-accordion-item_header gp-cursor-pointer gp-items-center gp-gap-[16px] AlkuZfxVZuEq gp-accordion-item-AlkuZfxVZuEq-4" style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;--hvr-bgc:transparent;--bgc:transparent;--bs:none;--hvr-bs:none;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212">
+        
+          <div class="gp-inline-flex">
+            <span style="--c:rgb(36, 36, 36);width:16px;height:16px"
+            data-index="4"
+            class="group-hover:[color:var(--icon-expand-hover-color)] gp-collapsible-icon gp-accordion-item_icon gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden gp-transition-all gp-duration-200 [&>svg]:!gp-h-[var(--height-iconCollapseSize)] [&>svg]:!gp-w-full">
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817558491496808">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z" /></svg>
+            </span>
+          </div>
+          
+        <div class="gp-flex gp-w-full gp-items-center gp-break-all" style="--gg:16px;--jc:left">
+          
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--c:rgb(36, 36, 36);--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-overflow-hidden gp-accordion-text-content group-hover:[color:var(--text-hover-color)!important] gp-g-paragraph-1  gp-text-instant"
+          style="--w:100%;--tdt:auto;--size:20px;--size-tablet:16px;--size-mobile:16px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gAlkuZfxVZuEq_childItem_4 }}
+        </div>
+      </div>
+    </div>
+    
+          
+        </div>
+      </div>
+      <div data-index="4" data-show="false" class="gp-accordion-item_body gp-transition-all gp-grid gp-duration-500 gp-overflow-hidden gp-grid-rows-[0fr]" style="grid-template-rows:0fr;grid-template-columns:minmax(auto, 100%)">
+        <div data-index="4" class="gp-accordion-item_body-inner gp-transition-all gp-duration-500 gp-min-h-0" style="--pl:24px;--pr:24px">
+          <div
+      data-same-height-display-contents
+      
+      class="accordion_item-col-i2l8eed2f68bb gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="accordion-item-body-text-i2l8eed2f68bb"
+        class="accordion-item-body-text-i2l8eed2f68bb"
+        style="--ta:left;--pageType:GP_PRODUCT;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--size:18px;--size-tablet:16px;--size-mobile:16px;--c:rgb(36, 36, 36);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gaccordion-item-body-text-i2l8eed2f68bb_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+            
+    </gp-accordion>
+    
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-accordion-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    
+  
+      </div>
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    
+    "name": "Section 14",
+    "tag": "section",
+    "class": "gps-558289940363150440 gps gpsi",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=GP_PRODUCT&editorId=558289940245382248&sectionId=558289940363150440)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"gWJnunfrraOLA_text","label":"gWJnunfrraOLA_text","default":"<p><strong>Häufig gestellte Fragen</strong></p>"},{"type":"html","id":"gAlkuZfxVZuEq_childItem_0","label":"gAlkuZfxVZuEq_childItem_0","default":"<p><strong>Wie viele Premium Himalayan Shilajit Gummies sollte ich pro Tag einnehmen?</strong></p>"},{"type":"html","id":"gAlkuZfxVZuEq_childItem_1","label":"gAlkuZfxVZuEq_childItem_1","default":"<p><strong>Wann werde ich erste Ergebnisse bemerken?</strong></p>"},{"type":"html","id":"gAlkuZfxVZuEq_childItem_2","label":"gAlkuZfxVZuEq_childItem_2","default":"<p><strong>Woher stammt unser Shilajit?</strong></p>"},{"type":"html","id":"gAlkuZfxVZuEq_childItem_3","label":"gAlkuZfxVZuEq_childItem_3","default":"<p><strong>Hat es Nebenwirkungen?</strong></p>"},{"type":"html","id":"gAlkuZfxVZuEq_childItem_4","label":"gAlkuZfxVZuEq_childItem_4","default":"<p><strong>Kann ich es mit anderen Nahrungsergänzungsmitteln oder Medikamenten kombinieren?</strong></p>"},{"type":"html","id":"gaccordion-item-body-text-i2l201b643a78_text","label":"gaccordion-item-body-text-i2l201b643a78_text","default":"<p><span style=\"background-color:rgba(255,253,250,0);color:rgb(0,0,0);font-size:16px;\">Wir empfehlen 1 Gummibärchen pro Tag, 5-6 Tage pro Woche.</span></p>"},{"type":"html","id":"ggCd5EYmfck_text","label":"ggCd5EYmfck_text","default":"<p>Das hängt von der Person ab.<br>Einige Menschen bemerken bereits nach 2 Wochen eine Verbesserung ihrer allgemeinen Gesundheit und Energielevels.<br>Die meisten sehen Ergebnisse nach 4 Wochen.</p>"},{"type":"html","id":"gaccordion-item-body-text-i2lf7ac59bd44_text","label":"gaccordion-item-body-text-i2lf7ac59bd44_text","default":"<p><span style=\"color:rgb(0,0,0);font-size:16px;\">Unser Shilajit wird in der Himalaya-Region auf über 5.000 Metern Höhe geerntet.</span></p>"},{"type":"html","id":"gaccordion-item-body-text-i2l663244236a_text","label":"gaccordion-item-body-text-i2l663244236a_text","default":"<p>Bei empfohlener Dosierung sind keine Nebenwirkungen bekannt.<br>Bei übermäßiger Einnahme kann es jedoch zu Übelkeit, Erbrechen und Durchfall kommen.</p>"},{"type":"html","id":"gaccordion-item-body-text-i2l8eed2f68bb_text","label":"gaccordion-item-body-text-i2l8eed2f68bb_text","default":"<p>Unsere <strong>Premium Himalayan Shilajit Gummies</strong> sind <strong>sicher in Kombination mit anderen Nahrungsergänzungsmitteln</strong>.<br>Es gibt <strong>keine bekannten Wechselwirkungen</strong> mit rezeptfreien oder verschreibungspflichtigen Medikamenten.<br>Wir empfehlen jedoch, vor der Einnahme eine <strong>Rücksprache mit deinem Arzt</strong> zu halten.</p>"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

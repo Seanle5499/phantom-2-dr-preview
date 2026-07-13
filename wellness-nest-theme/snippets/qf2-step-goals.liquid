@@ -1,0 +1,18 @@
+{% comment %}
+  Quiz Funnel 2 — Step 6: Areas to Improve (Multi-Select)
+{% endcomment %}
+
+<div class="qf-step" data-step="6">
+  <button class="qf-back" onclick="qfGoBack(6)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">What do you most want back?</h2>
+  <p class="qf-sub">Select everything that applies. The more honest you are, the more accurate your protocol.</p>
+  <div class="qf-opts" id="multiOpts">
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Drive" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">⚡ Raw, natural sex drive and libido</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Erections" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">💪 Stronger, harder, more reliable erections</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Energy" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">🔋 All-day sustained energy with no afternoon crash</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Focus" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">🧠 Sharp focus and mental clarity</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Sleep" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">😴 Deep, restful sleep and faster recovery</div></button>
+    <button type="button" class="qf-opt qf-opt--multi" data-answer="Confidence" onclick="qfToggleM(this)"><div class="qf-chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><div class="qf-opt__label">🔥 The confidence to initiate without anxiety or hesitation</div></button>
+  </div>
+  <button type="button" class="qf-btn" id="multiBtn" onclick="qfGoStep(7)" disabled>Continue</button>
+</div>

@@ -1,0 +1,144 @@
+{%- comment -%}
+  1. Lấy variant_id (mặc định là biến truyền vào hoặc variant đang được chọn)
+  2. Lọc thẳng trong product.variants, nếu không tìm được thì fallback về variant đầu tiên
+  3. Usage:
+   {% render 'custom-bundle-subscription-price', product: product, variant_id: variant.id, display: 'variant_image' %}
+   {% render 'custom-bundle-subscription-price', product: product, variant_id: variant.id, display: 'unit_price' %}
+   {% render 'custom-bundle-subscription-price', product: product, variant_id: variant.id, display: 'daily_price' %}
+   {% render 'custom-bundle-subscription-price', product: product, variant_id: variant.id, display: 'selling_plan' %}
+{%- endcomment -%}
+
+{%- assign variant_id = variant_id | default: product.selected_or_first_available_variant.id -%}
+
+{%- assign selected_variant = product.variants | where: 'id', variant_id | first | default: product.variants.first -%}
+
+{%- assign display = display | default: 'total_price' -%}
+
+{%- assign normal_price = selected_variant.price -%}
+{%- assign subsave_price = selected_variant.selling_plan_allocations[0].price | default: normal_price -%}
+
+{%- assign unit_value = selected_variant.metafields.custom.unit | plus: 0 -%}
+{%- assign day_supply = selected_variant.metafields.custom.variant_day_supply | plus: 0 -%}
+
+{%- if unit_value > 0 -%}
+  {%- assign unit_price_normal = normal_price | divided_by: unit_value -%}
+  {%- assign unit_price_subsave = subsave_price | divided_by: unit_value -%}
+{%- endif -%}
+
+{%- if day_supply > 0 -%}
+  {%- assign daily_price_normal = normal_price | divided_by: day_supply -%}
+  {%- assign daily_price_subsave = subsave_price | divided_by: day_supply -%}
+{%- endif -%}
+
+{%- case display -%}
+  {%- when 'unit_price' -%}
+    {% if unit_value > 0 %}
+      <span class="custom_unit_price normal disable" data-variant-id="{{ selected_variant.id }}">
+        {{- unit_price_normal | money -}}
+      </span>
+      <span class="custom_unit_price subsave" data-variant-id="{{ selected_variant.id }}">
+        {{- unit_price_subsave | money -}}
+      </span>
+    {% endif %}
+
+  {%- when 'daily_price' -%}
+    {% if day_supply > 0 %}
+      <span class="custom_daily_price normal disable" data-variant-id="{{ selected_variant.id }}">
+        {{- daily_price_normal | money -}}
+      </span>
+      <span class="custom_daily_price subsave" data-variant-id="{{ selected_variant.id }}">
+        {{- daily_price_subsave | money -}}
+      </span>
+    {% endif %}
+
+  {%- when 'total_price' -%}
+    <span class="custom_total_price normal disable" data-variant-id="{{ selected_variant.id }}">
+      {{- normal_price | money -}}
+    </span>
+    <span class="custom_total_price subsave" data-variant-id="{{ selected_variant.id }}">
+      {{- subsave_price | money -}}
+    </span>
+
+  {%- when 'variant_image' -%}
+    {% assign alt_text = product.title | append: ' - ' | append: selected_variant.title %}
+
+    {% if selected_variant.metafields.custom.variant_image.value %}
+      <img
+        src="{{ selected_variant.metafields.custom.variant_image.value | image_url: width: 2000 }}"
+        srcset="
+          {{ selected_variant.metafields.custom.variant_image.value | image_url: width: 400 }} 400w,
+          {{ selected_variant.metafields.custom.variant_image.value | image_url: width: 600 }} 600w,
+          {{ selected_variant.metafields.custom.variant_image.value | image_url: width: 800 }} 800w,
+          {{ selected_variant.metafields.custom.variant_image.value | image_url: width: 1000 }} 1000w
+        "
+        sizes="(max-width: 768px) 100vw, 1000px"
+        alt="{{ alt_text }}"
+        class="custom_variant_image normal disable"
+        data-variant-id="{{ selected_variant.id }}"
+        loading="eager"
+        width="1000"
+        height="715"
+      >
+    {% endif %}
+
+    {% if selected_variant.metafields.custom.variant_image_subscription.value %}
+      <img
+        src="{{ selected_variant.metafields.custom.variant_image_subscription.value | image_url: width: 2000 }}"
+        srcset="
+          {{ selected_variant.metafields.custom.variant_image_subscription.value | image_url: width: 400 }} 400w,
+          {{ selected_variant.metafields.custom.variant_image_subscription.value | image_url: width: 600 }} 600w,
+          {{ selected_variant.metafields.custom.variant_image_subscription.value | image_url: width: 800 }} 800w,
+          {{ selected_variant.metafields.custom.variant_image_subscription.value | image_url: width: 1000 }} 1000w
+        "
+        sizes="(max-width: 768px) 100vw, 1000px"
+        alt="{{ alt_text }}"
+        class="custom_variant_image subsave"
+        data-variant-id="{{ selected_variant.id }}"
+        loading="eager"
+        width="1000"
+        height="715"
+      >
+    {% endif %}
+
+  {%- when 'selling_plan' -%}
+    {% assign group_id = selected_variant.selling_plan_allocations[0].selling_plan_group_id %}
+    {% for group in product.selling_plan_groups %}
+      {% if group.id == group_id %}
+        {% if group.selling_plans.size > 0 %}
+          {% assign selling_plan_id = group.selling_plans[0].id %}
+          <input
+            type="hidden"
+            name="selling_plan"
+            value="{{ selling_plan_id }}"
+            data-value="{{ selling_plan_id }}"
+            data-variant-id="{{ selected_variant.id }}"
+          >
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+  {%- when 'discount' -%}
+    {%- assign original_price = product.variants.first.price | times: unit_value -%}
+    {%- assign compare_price = original_price | times: 1.0 -%}
+
+    {%- assign saving_raw_normal = compare_price | minus: normal_price -%}
+    {%- assign saving_raw_subsave = compare_price | minus: subsave_price -%}
+
+    {%- assign saving_raw_normal_times = saving_raw_normal | times: 100 -%}
+    {%- assign discount_normal = saving_raw_normal_times | divided_by: compare_price -%}
+
+    {%- assign saving_raw_subsave_times = saving_raw_subsave | times: 100 -%}
+    {%- assign discount_subsave = saving_raw_subsave_times | divided_by: compare_price -%}
+
+    <span class="custom_discount normal disable" data-variant-id="{{ selected_variant.id }}">
+      Save {{ discount_normal | ceil }}%
+    </span>
+    <span class="custom_discount subsave" data-variant-id="{{ selected_variant.id }}">
+      Save {{ discount_subsave | ceil }}%
+    </span>
+
+  {%- else -%}
+    <span class="custom_total_price normal disable" data-variant-id="{{ selected_variant.id }}">
+      {{- normal_price | money -}}
+    </span>
+{%- endcase -%}

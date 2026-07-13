@@ -1,0 +1,89 @@
+{% comment %}
+  Quiz Funnel 2 — Steps 1-5 (Basic Quiz Questions)
+  Step 1: Age
+  Step 2: Confidence Level
+  Step 3: Duration
+  Step 4: Stress / Sleep
+  Step 5: What You've Tried
+{% endcomment %}
+
+<!-- STEP 1: AGE -->
+<div class="qf-step active" data-step="1">
+  <h2 class="qf-q">How old are you?</h2>
+  <p class="qf-sub">Men lose up to 1% of their testosterone naturally every year after 30. Your age tells us exactly how far the depletion has gone.</p>
+  <div class="qf-opts qf-opts--grid">
+    <div class="qf-opt qf-opt--grid" data-answer="Under 30" onclick="qfPickOpt(this,1)">
+      <div class="qf-opt__ico"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-user1.png?v=1774510947" alt="Under 30" onerror="this.style.display='none'"></div>
+      <div class="qf-opt__label">Under 30</div>
+    </div>
+    <div class="qf-opt qf-opt--grid" data-answer="30 - 39" onclick="qfPickOpt(this,1)">
+      <div class="qf-opt__ico"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-user2.png?v=1774510948" alt="30-39" onerror="this.style.display='none'"></div>
+      <div class="qf-opt__label">30 – 39</div>
+    </div>
+    <div class="qf-opt qf-opt--grid" data-answer="40 - 49" onclick="qfPickOpt(this,1)">
+      <div class="qf-opt__ico"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-user3.png?v=1774510948" alt="40-49" onerror="this.style.display='none'"></div>
+      <div class="qf-opt__label">40 – 49</div>
+    </div>
+    <div class="qf-opt qf-opt--grid" data-answer="50+" onclick="qfPickOpt(this,1)">
+      <div class="qf-opt__ico"><img src="https://cdn.shopify.com/s/files/1/0810/1563/6283/files/quiz-user4.png?v=1774510948" alt="50+" onerror="this.style.display='none'"></div>
+      <div class="qf-opt__label">50+</div>
+    </div>
+  </div>
+  <span class="qf-skip" onclick="window.location.href='https://wellnessnest.co/products/shilasource-himalayan-shilajit-resin'">SKIP THIS QUIZ</span>
+  <div class="qf-terms">By clicking any of the options above, you agree with the <a href="https://wellnessnest.co/policies/terms-of-service">Terms of Use and Service</a> and <a href="https://wellnessnest.co/policies/privacy-policy">Privacy Policy</a></div>
+</div>
+
+<!-- STEP 2: CONFIDENCE LEVEL -->
+<div class="qf-step" data-step="2">
+  <button class="qf-back" onclick="qfGoBack(2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">When your partner wants you — how confident do you feel right now?</h2>
+  <p class="qf-sub">Be honest. This is private. The more accurate you are, the more precise your results.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="Fully confident" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">💪 Fully confident — I never hesitate or hold back</div></div>
+    <div class="qf-opt" data-answer="Depends" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">😐 Depends on the night — Some nights I'm fine. Other nights I avoid it and hope she doesn't notice</div></div>
+    <div class="qf-opt" data-answer="Avoiding" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">🫣 Avoiding it more than I admit — I make excuses. Tired. Stressed. Busy. The truth is I don't trust my body anymore</div></div>
+    <div class="qf-opt" data-answer="Dread" onclick="qfPickOpt(this,2)"><div class="qf-opt__label">😰 I dread it — The anxiety starts hours before. I'd rather she didn't initiate at all</div></div>
+  </div>
+</div>
+
+<!-- STEP 3: DURATION -->
+<div class="qf-step" data-step="3">
+  <button class="qf-back" onclick="qfGoBack(3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">How long has your drive not been what it used to be?</h2>
+  <p class="qf-sub">Most men underestimate how long this has been going on. Be real with yourself.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="<6mo" onclick="qfPickOpt(this,3)"><div class="qf-opt__label">🕐 Less than 6 months</div></div>
+    <div class="qf-opt" data-answer="6-12mo" onclick="qfPickOpt(this,3)"><div class="qf-opt__label">📅 6–12 months</div></div>
+    <div class="qf-opt" data-answer="1-2yr" onclick="qfPickOpt(this,3)"><div class="qf-opt__label">📆 1–2 years</div></div>
+    <div class="qf-opt" data-answer="3+yr" onclick="qfPickOpt(this,3)"><div class="qf-opt__label">⏳ 3+ years — I barely remember what it felt like</div></div>
+    <div class="qf-opt" data-answer="Can't remember" onclick="qfPickOpt(this,3)"><div class="qf-opt__label">🌫️ I can't even remember the last time I felt like myself</div></div>
+  </div>
+</div>
+
+<!-- STEP 4: STRESS / SLEEP -->
+<div class="qf-step" data-step="4">
+  <button class="qf-back" onclick="qfGoBack(4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">How would you describe your stress levels right now?</h2>
+  <p class="qf-sub">Chronic stress is one of the fastest ways to strip the trace minerals your body needs to produce testosterone naturally. This matters more than most men realize.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="Mild" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">😌 Mild</div><div class="qf-opt__desc">I manage it well most days.</div></div></div>
+    <div class="qf-opt" data-answer="Moderate" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">😑 Moderate</div><div class="qf-opt__desc">It's always there in the background.</div></div></div>
+    <div class="qf-opt" data-answer="High" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">😤 High</div><div class="qf-opt__desc">Wired and tired. My mind doesn't stop.</div></div></div>
+    <div class="qf-opt" data-answer="Severe" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">😩 Severe</div><div class="qf-opt__desc">It's affecting my sleep, mood, and everything in between.</div></div></div>
+    <div class="qf-opt" data-answer="Empty" onclick="qfPickOpt(this,4)"><div class="qf-opt__txt"><div class="qf-opt__label">💀 Running on empty</div><div class="qf-opt__desc">I'm operating on fumes every single day.</div></div></div>
+  </div>
+</div>
+
+<!-- STEP 5: WHAT YOU'VE TRIED -->
+<div class="qf-step" data-step="5">
+  <button class="qf-back" onclick="qfGoBack(5)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <h2 class="qf-q">What have you already tried to fix this?</h2>
+  <p class="qf-sub">If it didn't work, it's not your fault. 82% of mainstream options in this category contain fillers, underdosed ingredients, or zero active compounds. Your body didn't fail you — the products did.</p>
+  <div class="qf-opts">
+    <div class="qf-opt" data-answer="Medication" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">💊 Prescription medication or TRT.</div></div>
+    <div class="qf-opt" data-answer="Vitamins" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">🧪 Random testosterone boosters or pharmacy vitamins.</div></div>
+    <div class="qf-opt" data-answer="Energy drinks" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">☕ Energy drinks or pre-workouts just to get through the day.</div></div>
+    <div class="qf-opt" data-answer="Nothing serious" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">🤷 Nothing serious — I kept hoping it would fix itself.</div></div>
+    <div class="qf-opt" data-answer="Nothing yet" onclick="qfPickOpt(this,5)"><div class="qf-opt__label">🛑 Nothing yet — I'm done waiting and ready to act.</div></div>
+  </div>
+</div>

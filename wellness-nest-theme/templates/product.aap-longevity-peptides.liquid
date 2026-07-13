@@ -1,0 +1,359 @@
+{% comment %}
+  AgeAura Pure Longevity Peptides — Custom Product Template
+  Rosabella-style structure. Scoped under .aap- prefix.
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'ageaura-product.css' | asset_url }}">
+
+{%- assign p = product -%}
+{%- assign images = p.images -%}
+
+<section class="aap-wrap">
+
+  <!-- ============== S1: HERO (50/50 Rosabella layout) ============== -->
+  <div class="aap-hero">
+
+    <!-- LEFT COLUMN: gallery + testimonial -->
+    <div class="aap-gallery">
+      <div class="aap-main-img">
+        <img id="aapMainImg" src="{{ images[0] | image_url: width: 1000 }}" alt="{{ p.title | escape }}" loading="eager">
+      </div>
+
+      <div class="aap-thumb-strip">
+        <button type="button" class="aap-thumb-arrow aap-thumb-arrow--left" aria-label="Previous">&#x2039;</button>
+        <div class="aap-thumbs" id="aapThumbs">
+          {%- for img in images limit: 8 -%}
+            <button type="button" class="aap-thumb {% if forloop.first %}is-active{% endif %}"
+                    data-src="{{ img | image_url: width: 1000 }}"
+                    aria-label="Image {{ forloop.index }}">
+              <img src="{{ img | image_url: width: 200 }}" alt="{{ img.alt | default: p.title | escape }}" loading="lazy">
+            </button>
+          {%- endfor -%}
+        </div>
+        <button type="button" class="aap-thumb-arrow aap-thumb-arrow--right" aria-label="Next">&#x203A;</button>
+      </div>
+
+      <div class="aap-hero-review">
+        <div class="aap-hero-review-stars">★★★★★</div>
+        <p class="aap-hero-review-quote">"I'm in my mid-50s and I've spent more money on skin treatments and collagen tubs than I want to admit. Two months on AgeAura and the difference in my skin and joints is the first time anything has actually worked. The single-serve sticks make it impossible to skip a day."</p>
+        <div class="aap-hero-review-footer">
+          <span class="aap-hero-review-who">— Catherine L. US.</span>
+          <span class="aap-hero-review-verified">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#111" aria-hidden="true">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Verified Customer
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: buy box -->
+    <div class="aap-buybox-wrap">
+      <div class="aap-buybox">
+
+        <div class="aap-rating">
+          <span class="aap-stars">★★★★★</span>
+          <span class="aap-rating-text">Trusted by Over 1 Million Happy Customers</span>
+        </div>
+
+        <h1 class="aap-h1">
+          Hydrolyzed Collagen + Hyaluronic Acid + Vitamin C — In One Daily Stick
+        </h1>
+
+        <div class="aap-price-block">
+          <span class="aap-price-old">${{ p.variants[2].compare_at_price | money_without_currency }}</span>
+          <span class="aap-price-new" id="aapPriceNew">${{ p.selected_or_first_available_variant.price | money_without_currency }}</span>
+          <span class="aap-price-save" id="aapPriceSave">SAVE 50%</span>
+        </div>
+
+        <p class="aap-buybox-intro"><strong>Built For The Years Your Body Stops Doing The Rebuilding On Its Own</strong></p>
+        <p class="aap-buybox-desc">
+          Most collagen powders give you a fraction of the dose, no hyaluronic acid, and no vitamin C — the cofactor your body actually needs to crosslink new collagen. AgeAura Pure Longevity Peptides pairs <strong>5,000&nbsp;mg hydrolyzed Type I &amp; III collagen</strong> with <strong>50&nbsp;mg hyaluronic acid</strong> and <strong>50&nbsp;mg vitamin C</strong> in every single-serve stick. Three molecules, properly dosed, one daily ritual.
+        </p>
+
+        <ul class="aap-bullets">
+          <li>5,000 mg hydrolyzed Type I &amp; III collagen peptides per stick*</li>
+          <li>50 mg hyaluronic acid for deep cellular hydration*</li>
+          <li>50 mg vitamin C — the cofactor collagen synthesis requires*</li>
+          <li>Unflavored · 30 single-serve sticks · Dissolves in 15 seconds</li>
+        </ul>
+
+        <div class="aap-tier-label">SUBSCRIBE &amp; SAVE (AUTO-DELIVERY)</div>
+
+        {%- form 'product', p, class: 'aap-form', id: 'aapProductForm' -%}
+          <div class="aap-tiers" role="radiogroup">
+            {%- for v in p.variants -%}
+              {%- assign save = v.compare_at_price | minus: v.price -%}
+              {%- assign badge = '' -%}
+              {%- if forloop.index0 == 1 -%}{%- assign badge = 'MOST POPULAR' -%}{%- endif -%}
+              {%- if forloop.last -%}{%- assign badge = 'BEST DEAL' -%}{%- endif -%}
+
+              <label class="aap-tier {% if forloop.index0 == 1 %}is-popular is-selected{% endif %}"
+                     data-variant-id="{{ v.id }}"
+                     data-price="${{ v.price | money_without_currency }}">
+                {%- if badge != '' -%}<span class="aap-tier-badge">{{ badge }}</span>{%- endif -%}
+                <input type="radio" name="id" value="{{ v.id }}" {% if forloop.index0 == 1 %}checked{% endif %}>
+                <div class="aap-tier-info">
+                  <div class="aap-tier-title">{{ v.title }}</div>
+                  <div class="aap-tier-meta">
+                    {% if forloop.first %}1 Box in Total
+                    {% elsif forloop.index0 == 1 %}2 Boxes in Total · FREE Shipping
+                    {% else %}3 Boxes in Total · FREE Shipping
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="aap-tier-pricing">
+                  <span class="aap-tier-save">Save ${{ save | money_without_currency }}</span>
+                  <span class="aap-tier-price">${{ v.price | money_without_currency }}</span>
+                  <span class="aap-tier-old">${{ v.compare_at_price | money_without_currency }}</span>
+                </div>
+              </label>
+            {%- endfor -%}
+          </div>
+
+          <button type="submit" class="aap-atc" name="add" id="aapATC">
+            <span class="aap-atc-text">CLAIM YOUR BOX</span>
+            <span class="aap-atc-arrow">→</span>
+          </button>
+
+          <div class="aap-atc-sub">Zero commitment · Cancel anytime · 2 clicks</div>
+
+          <div class="aap-trust-row">
+            <div>🚚 FREE US Shipping</div>
+            <div>🛡 90-Day MBG</div>
+            <div>🧪 Third-Party Tested</div>
+          </div>
+
+          <div class="aap-pay-row">
+            <span class="aap-pay">VISA</span>
+            <span class="aap-pay">MC</span>
+            <span class="aap-pay">AMEX</span>
+            <span class="aap-pay">PAYPAL</span>
+            <span class="aap-pay">SHOP&nbsp;PAY</span>
+            <span class="aap-pay">G&nbsp;PAY</span>
+          </div>
+        {%- endform -%}
+
+        <!-- MINI FAQ -->
+        <div class="aap-mini-faq">
+
+          <details><summary>How does it work?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Your body's own collagen production starts dropping in your late 20s and falls sharply through perimenopause. AgeAura gives your body the three things its collagen rebuild pathway needs that your diet rarely covers: 5,000&nbsp;mg of pre-broken collagen peptides (ready to absorb), 50&nbsp;mg of oral hyaluronic acid (signals fibroblasts to produce more), and 50&nbsp;mg of vitamin C (the cofactor that crosslinks new collagen). Mix one stick into coffee, water, or your morning shake.</p>
+          </details>
+
+          <details><summary>Why choose AgeAura Pure Longevity Peptides?<span class="aap-mini-faq-icon">›</span></summary>
+          <p><strong>5,000&nbsp;mg of hydrolyzed peptides</strong> — the clinically studied dose, not the 1,500&nbsp;mg most powders rely on. <strong>50&nbsp;mg of hyaluronic acid + 50&nbsp;mg of vitamin C</strong> — the two cofactors most collagen brands quietly omit. <strong>Single-serve sticks</strong>, not a giant scoop-everything tub that sits half-finished on your counter.</p>
+          </details>
+
+          <details><summary>When will I see results?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Week 1–2: Hydration shifts — skin feels plumper, less tight. Week 4–8: Joint comfort, visible elasticity in the mirror. Month 3+: Hair and nail growth changes — the slowest tissues to turn over. Commit to 90 days. That's why our guarantee is 90 days, not 30.</p>
+          </details>
+
+          <details><summary>What does it taste like? Can I mix it with coffee?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Genuinely unflavored. Hydrolyzed peptides are neutral when dissolved — no fishy taste, no bone-broth aftertaste. Stir into hot coffee, cold water, smoothies, or matcha — dissolves in about 15 seconds.</p>
+          </details>
+
+          <details><summary>How long until I get it?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Ships from our US fulfillment center within 1–2 business days. Standard US delivery 3–6 business days. Tracking number emailed the moment your label is created.</p>
+          </details>
+
+          <details><summary>Who can use it?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Adults 35+ who want to take collagen and connective-tissue health seriously without building a 5-bottle stack. Men also benefit — collagen biology is identical across sex; men typically notice effects in joints first, 5–10 years later than women. Not intended for pregnant or nursing women, children under 18, or anyone with a known sensitivity to bovine products without consulting their healthcare provider.</p>
+          </details>
+
+          <details><summary>Results or full refund guarantee<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Try a full box. If within 90 days you don't feel a meaningful shift in skin, joints, or hair, email us — we'll refund the full purchase price. No restocking fees. No "send the empty box back at your expense."</p>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== S2: WHY YOUR BODY CHANGED AFTER 35 ============== -->
+  <section class="aap-split aap-split--soft">
+    <div class="aap-split-inner">
+      <div class="aap-split-text">
+        <h2 class="aap-h2 aap-h2--left">Why Your Body Changed After 35</h2>
+        <p>Modern life is busier than ever. Between work, family, and packed schedules, most women 35+ start noticing something they didn't 10 years ago — skin that doesn't bounce back the way it used to, joints that complain after the workouts that used to be effortless, hair and nails that grow slower and break faster.</p>
+        <p>Here's what most people don't realise: your body's own collagen production <strong>drops roughly 1% every year after 25</strong>, and accelerates sharply through perimenopause. By 40, you've already lost 25% of what your body made effortlessly in your 20s — and the synthesis cofactors (vitamin C, hyaluronic acid) don't show up in most collagen products either.</p>
+        <p>For years, the most informed customers have been pairing a collagen powder with a separate hyaluronic acid capsule and a vitamin C tablet, just to cover the basics. AgeAura is built for the person who wants all three properly dosed — in one daily stick — without becoming the kind of person who manages five different bottles every morning.</p>
+      </div>
+      <div class="aap-split-img">
+        <img src="{{ images[7] | image_url: width: 900 }}" alt="For all stages of women's wellness — hair, skin, joints, hydration" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== S3: SIMPLE DAILY NUTRITION ============== -->
+  <section class="aap-split aap-split--soft aap-split--reverse">
+    <div class="aap-split-inner">
+      <div class="aap-split-img">
+        <img src="{{ images[6] | image_url: width: 900 }}" alt="Your daily radiance ritual — 30/60/90 day timeline" loading="lazy">
+      </div>
+      <div class="aap-split-text">
+        <h2 class="aap-h2 aap-h2--left">AgeAura Pure Longevity Peptides: Simple Daily Nutrition</h2>
+        <p>Collagen research has moved fast in the last decade. The picture is now clear: hydrolyzed Type I &amp; III peptides at adequate daily doses (≈5&nbsp;g) supports skin and joint matrix maintenance, hyaluronic acid taken orally measurably improves skin hydration, and vitamin C is the rate-limiting cofactor your body actually needs to crosslink those peptides into new collagen.</p>
+        <p>The role of a daily supplement, in that picture, is to do the one or two things that diet and lifestyle <em>cannot</em> easily do. That's exactly what AgeAura is built for — covering the three molecules your collagen rebuild pathway depends on, at clinically meaningful doses, in one stick that dissolves in 15 seconds. <strong>That's the whole job.</strong></p>
+        <p>AgeAura Pure Longevity Peptides delivers <strong>5,000&nbsp;mg hydrolyzed collagen, 50&nbsp;mg hyaluronic acid, and 50&nbsp;mg vitamin C</strong> in every single-serve stick — making it perfect for adults who want to:</p>
+        <ul class="aap-green-list">
+          <li>Support skin elasticity, hydration and the collagen matrix*</li>
+          <li>Maintain joint comfort during recovery and training*</li>
+          <li>Skip the 4-bottle morning routine for one daily stick</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== S4: BUILT AROUND THREE MOLECULES ============== -->
+  <section class="aap-split">
+    <div class="aap-split-inner">
+      <div class="aap-split-text">
+        <h2 class="aap-h2 aap-h2--left">Built Around Three Molecules</h2>
+        <p>Many supplements pack in dozens of ingredients — but AgeAura takes a different approach.</p>
+        <p>Our formula is built around three clinically-dosed molecules:</p>
+        <ul class="aap-bullet-dots">
+          <li><strong>5,000&nbsp;mg hydrolyzed collagen</strong> (Type I &amp; III bovine peptides, ≤3&nbsp;kDa molecular weight)</li>
+          <li><strong>50&nbsp;mg hyaluronic acid</strong> (low-molecular-weight, oral-bioavailable form)</li>
+          <li><strong>50&nbsp;mg vitamin C</strong> (the rate-limiting cofactor for collagen crosslinking)</li>
+        </ul>
+        <p>Three molecules. No "proprietary blend" loophole. The dose printed on the label is the dose in every single stick.</p>
+        <h3 class="aap-h3">What You'll Find in Every Stick:</h3>
+        <p><strong>Hydrolyzed Collagen (5,000&nbsp;mg)</strong> — Pre-broken into low-weight peptides (≤3&nbsp;kDa) so your gut absorbs them intact instead of breaking them down. Type I &amp; III matched to the collagen profile of human skin, bones, and tendons.</p>
+        <p><strong>Hyaluronic Acid (50&nbsp;mg)</strong> — A clinically-studied dose of low-molecular-weight HA. Oral absorption studies show it reaches skin tissue and signals fibroblasts to produce more endogenous collagen and HA.</p>
+        <p><strong>Vitamin C (50&nbsp;mg)</strong> — The required cofactor for prolyl and lysyl hydroxylase — the enzymes that crosslink newly synthesized collagen. Without it, your body can't actually build new collagen, even when the peptides are sitting right there.</p>
+      </div>
+      <div class="aap-split-img">
+        <img src="{{ images[1] | image_url: width: 900 }}" alt="5000mg Collagen + 50mg HA + 50mg Vitamin C callouts" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== S5: TESTIMONIALS ============== -->
+  <section class="aap-section">
+    <h2 class="aap-h2">What customers are actually saying</h2>
+    <div class="aap-reviews" id="aapReviews">
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[10] | image_url: width: 300 }}" alt="Maree S. · verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"Eight weeks in and I feel 20+ years younger and more myself than I have in a very long time. My only regret is not starting sooner."</p>
+        <div class="aap-review-who">Maree S. · age 58<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[8] | image_url: width: 300 }}" alt="Elena R. · verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"Two kids, a full-time job, exactly zero patience for messy collagen tubs. The single-serve stick goes straight into my morning coffee — I haven't missed a day in 10 weeks. My skin honestly feels plumper, and I caught up to where I felt in my early 30s."</p>
+        <div class="aap-review-who">Elena R. · age 42<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[12] | image_url: width: 300 }}" alt="Jasmine R. · verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"I'm 39 and started seeing the joint stiffness my mom always complained about. Two months on AgeAura and the morning stiffness is gone. The hyaluronic acid is what made me try this brand specifically."</p>
+        <div class="aap-review-who">Jasmine R. · age 39<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[11] | image_url: width: 300 }}" alt="Mai P. · verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"I was skeptical because most collagen powders have a fishy aftertaste. AgeAura genuinely has no flavor in my matcha — I forget it's in there. Three months in and people keep asking what I've changed in my routine."</p>
+        <div class="aap-review-who">Mai P. · age 38<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[14] | image_url: width: 300 }}" alt="Priya N. · verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"The vitamin C inclusion is the detail that made me commit. Other brands sell you collagen without the cofactor your body actually needs to synthesize it. AgeAura is the only one I've seen that gets the formula right."</p>
+        <div class="aap-review-who">Priya N. · age 41<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[13] | image_url: width: 300 }}" alt="Hannah K. · verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"I lift four days a week and my recovery was getting worse year over year. Five weeks on AgeAura and my knees stopped complaining after squat day. Wasn't expecting that from a 'beauty' supplement."</p>
+        <div class="aap-review-who">Hannah K. · age 47<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+    </div>
+    <div class="aap-review-dots" id="aapReviewDots"></div>
+  </section>
+
+  <!-- ============== S6: BOTTOM FULL FAQ ============== -->
+  <section class="aap-bottom-faq">
+    <div class="aap-bottom-faq-inner">
+      <h2 class="aap-bottom-faq-title">Frequently Asked Questions</h2>
+
+      <div class="aap-bottom-faq-list">
+
+        <details class="aap-bfaq-item"><summary>Can I buy AgeAura Pure Longevity Peptides in stores?<span class="aap-bfaq-icon">›</span></summary>
+        <p>AgeAura is sold exclusively online and shipped directly from our US fulfillment center. By keeping distribution direct-to-consumer, we control every batch from manufacture to delivery — so the dose printed on the label is the dose you actually get.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What ingredients are in AgeAura Pure Longevity Peptides?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Each single-serve stick contains 5,000&nbsp;mg of hydrolyzed bovine collagen peptides (Type I &amp; III, ≤3&nbsp;kDa), 50&nbsp;mg of low-molecular-weight hyaluronic acid, and 50&nbsp;mg of vitamin C (ascorbic acid). Free from gluten, dairy, soy, GMO, stevia, and artificial sweeteners. Manufactured in a US cGMP-registered facility.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>Is AgeAura safe to take with my current medications?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Most adults pair Pure Longevity Peptides with basics like creatine, omega-3, and vitamin D without issue. If you're on prescription medication or have a known sensitivity to bovine products, please consult your healthcare provider before adding any supplement to your routine.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How should I store AgeAura?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Store in a cool, dry place away from direct sunlight. No refrigeration required. The sticks stay fresh for the full shelf-life printed on the box.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What is AgeAura Pure Longevity Peptides intended for?<span class="aap-bfaq-icon">›</span></summary>
+        <p>A daily ritual for adults 35+ who want to support skin elasticity, joint comfort, hydration, and connective-tissue maintenance — without managing a 5-bottle morning routine. Built for people who already take their basics seriously and want a focused, dosed-right collagen supplement.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How should I use AgeAura?<span class="aap-bfaq-icon">›</span></summary>
+        <p>One stick daily. Tear open, pour into 6–12 oz of any liquid (hot or cold), stir for ~15 seconds until dissolved. Best taken consistently, around the same time each day. Many customers add it to morning coffee, smoothies, or matcha.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How often should I take the supplement?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Once a day, every day. Collagen supplementation is a consistency story, not a loading-dose story. The most consistent customers describe hydration shifts in week 1–2, with cumulative skin and joint benefits at month 3+.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How many sticks are in each box?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Each box contains 30 single-serve sticks — a 30-day supply at the recommended one-stick-daily intake. Our 60-day and 90-day subscription bundles include 2 and 3 boxes respectively.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>Are there any age or health restrictions?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Not intended for use by pregnant or nursing women, children under 18, or people on prescription medications without first consulting their healthcare provider. If you have a known sensitivity to bovine products, please speak with your doctor before adding this supplement.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What if the supplement doesn't work for me?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Try a full box. If within 90 days of your purchase date you don't feel a meaningful shift, email our support team — we'll refund the full purchase price. No restocking fees. No "send the empty box back at your expense." We don't sell supplements we'd be afraid to back.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What is your return policy?<span class="aap-bfaq-icon">›</span></summary>
+        <p>90-day money-back guarantee. Email support within 90 days of your purchase date and we'll refund the full purchase price. You don't need to return the box. To cancel a subscription, log into your account and cancel in two clicks — no calls, no chat queues.</p>
+        </details>
+
+      </div>
+
+      <div class="aap-bottom-cta">
+        <a href="#aapProductForm" class="aap-buynow">BUY NOW &amp; SAVE</a>
+        <div class="aap-bottom-mbg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#111"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
+          90-Day Money Back Guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ============== STICKY MOBILE CTA ============== -->
+<div class="aap-sticky" id="aapSticky">
+  <div class="aap-sticky-info">
+    <div class="aap-sticky-title">AgeAura Longevity Peptides</div>
+    <div class="aap-sticky-price"><span id="aapStickyPrice">${{ p.selected_or_first_available_variant.price | money_without_currency }}</span></div>
+  </div>
+  <button type="button" class="aap-sticky-btn" id="aapStickyBtn">CLAIM</button>
+</div>
+
+<script src="{{ 'ageaura-product.js' | asset_url }}" defer></script>

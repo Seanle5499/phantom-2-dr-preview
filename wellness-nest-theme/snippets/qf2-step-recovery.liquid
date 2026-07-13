@@ -1,0 +1,97 @@
+{% comment %}
+  Quiz Funnel — Step 15: Recovery Timeline Bar Chart
+  Bars animate via CSS when the step becomes active.
+{% endcomment %}
+
+<div class="qf-step" data-step="15">
+  <h2 class="qf-q">Your recovery timeline starts now.</h2>
+  <p class="qf-sub">Based on your assessment, men with your depletion score typically see full vitality restoration by <strong id="targetMo"></strong>. Here's what the recovery curve looks like:</p>
+
+  <div id="rcChart">
+    <div id="rcBars">
+      <div class="rc-col">
+        <div class="rc-track"><div class="rc-fill" id="bf1" style="height:80px;background:#85c1e9"></div></div>
+        <span class="rc-lbl" id="barMonthStart"></span>
+      </div>
+      <div class="rc-col">
+        <div class="rc-track"><div class="rc-fill" id="bf2" style="height:110px;background:#9ce579"></div></div>
+      </div>
+      <div class="rc-col">
+        <div class="rc-track"><div class="rc-fill" id="bf3" style="height:160px;background:#f4e69d"></div></div>
+      </div>
+      <div class="rc-col">
+        <div class="rc-track"><div class="rc-fill" id="bf4" style="height:180px;background:#e6b18c"></div></div>
+      </div>
+      <div class="rc-col">
+        <div class="rc-track">
+          <div class="rc-fill" id="bf5" style="height:210px;background:#f4cc9c"></div>
+          <div id="goalInd"><span class="rc-goal-tag">Goal</span><span class="rc-goal-dot"></span></div>
+        </div>
+      </div>
+      <div class="rc-col">
+        <div class="rc-track"><div class="rc-fill" id="bf6" style="height:250px;background:#e6978c"></div></div>
+        <span class="rc-lbl" id="barMonthEnd"></span>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="qf-btn" onclick="qfGoStep(16)">Continue</button>
+</div>
+
+<style>
+  #rcChart { width:100%; max-width:500px; padding:20px 20px 0; margin:0 auto }
+  #rcBars { display:flex; justify-content:center; align-items:flex-end; gap:15px; padding-bottom:40px }
+  .rc-col { position:relative }
+  .rc-track { position:relative; width:70px; height:275px; background:#fff; border-radius:15px; box-shadow:0 0 2px rgba(0,0,0,.3); overflow:hidden }
+  .rc-fill { position:absolute; bottom:0; left:0; width:100%; border-radius:0 0 15px 15px; transform:scaleY(0); transform-origin:bottom center; display:block !important }
+  .rc-lbl { display:block; position:absolute; bottom:-30px; width:100%; text-align:center; color:#000; font-size:13px; font-weight:600 }
+  #goalInd { position:absolute; left:50%; transform:translateX(-50%); z-index:10; opacity:0; bottom:120px }
+  .rc-goal-tag { display:block; background:#54b94a; color:#fff; font-size:14px; font-weight:700; padding:4px 12px; border-radius:12px; white-space:nowrap }
+  .rc-goal-dot { display:block; width:20px; height:20px; border:4px solid #fff; border-radius:50%; background:#54b94a; margin:4px auto 0; box-shadow:0 0 0 2px #54b94a }
+
+  @keyframes rcUp   { 0% { transform:scaleY(0) } 100% { transform:scaleY(1) } }
+  @keyframes rcFade  { 0% { opacity:0 }          100% { opacity:1 } }
+
+  .qf-step.active #bf1     { animation: rcUp 1s ease-out 0.2s both }
+  .qf-step.active #bf2     { animation: rcUp 1s ease-out 0.4s both }
+  .qf-step.active #bf3     { animation: rcUp 1s ease-out 0.6s both }
+  .qf-step.active #bf4     { animation: rcUp 1s ease-out 0.8s both }
+  .qf-step.active #bf5     { animation: rcUp 1s ease-out 1.0s both }
+  .qf-step.active #bf6     { animation: rcUp 1s ease-out 1.2s both }
+  .qf-step.active #goalInd { animation: rcFade .5s ease-out 2.2s both }
+
+  /* ── Responsive ── */
+  @media (max-width:600px) {
+    #rcChart { padding:16px 10px 0 }
+    #rcBars  { gap:8px; padding-bottom:32px }
+    .rc-track { width:46px; height:180px; border-radius:10px }
+    .rc-fill  { border-radius:0 0 10px 10px }
+    .rc-lbl   { font-size:11px; bottom:-24px }
+    #goalInd  { bottom:78px }
+    .rc-goal-tag { font-size:11px; padding:3px 8px; border-radius:10px }
+    .rc-goal-dot { width:14px; height:14px; border-width:3px }
+
+    #bf1 { height:52px !important }
+    #bf2 { height:72px !important }
+    #bf3 { height:104px !important }
+    #bf4 { height:118px !important }
+    #bf5 { height:136px !important }
+    #bf6 { height:162px !important }
+  }
+
+  @media (max-width:380px) {
+    #rcBars  { gap:5px }
+    .rc-track { width:38px; height:150px }
+    .rc-lbl   { font-size:10px }
+    #goalInd  { bottom:64px }
+    .rc-goal-tag { font-size:10px; padding:2px 6px }
+    .rc-goal-dot { width:12px; height:12px; border-width:2px }
+
+    #bf1 { height:44px !important }
+    #bf2 { height:60px !important }
+    #bf3 { height:86px !important }
+    #bf4 { height:98px !important }
+    #bf5 { height:114px !important }
+    #bf6 { height:136px !important }
+  }
+</style>

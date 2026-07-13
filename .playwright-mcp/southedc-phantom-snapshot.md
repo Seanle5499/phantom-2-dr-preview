@@ -1,0 +1,659 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#MainContent"
+  - banner [ref=e5]:
+    - navigation [ref=e6]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e10]: Home
+        - listitem [ref=e11]:
+          - link "Catalog" [ref=e12] [cursor=pointer]:
+            - /url: /collections/all
+            - generic [ref=e13]: Catalog
+        - listitem [ref=e14]:
+          - link "Contact" [ref=e15] [cursor=pointer]:
+            - /url: /pages/contact
+            - generic [ref=e16]: Contact
+    - link "SouthEDC" [ref=e17] [cursor=pointer]:
+      - /url: /
+      - img "SouthEDC" [ref=e18]
+    - generic [ref=e19]:
+      - generic:
+        - group
+      - link "Log in" [ref=e20] [cursor=pointer]:
+        - /url: https://southedc.store/customer_authentication/redirect?locale=en&region_country=US
+        - img [ref=e21]
+        - generic [ref=e22]: Log in
+      - button "Cart" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+        - generic [ref=e28]: Cart
+  - region [ref=e30]:
+    - region [ref=e33]:
+      - list [ref=e35]:
+        - listitem [ref=e36]:
+          - paragraph [ref=e39]:
+            - generic [ref=e40]: storefront
+            - strong [ref=e42]: "SUMMER SALE: 36% OFF + 2 FREE GIFTS!"
+  - generic:
+    - img "American Express" [ref=e43]
+    - img "Discover" [ref=e48]
+    - img "Mastercard" [ref=e57]
+    - img "PayPal" [ref=e64]
+    - img "Venmo" [ref=e70]
+    - img "Visa" [ref=e75]
+  - main [ref=e80]:
+    - generic [ref=e83]:
+      - region "Gallery Viewer" [ref=e85]:
+        - link "Skip to product information" [ref=e87] [cursor=pointer]:
+          - /url: "#ProductInfo-template--27072392429879__main"
+        - generic [ref=e112]:
+          - button "Slide left" [disabled] [ref=e113] [cursor=pointer]:
+            - img [ref=e114]
+          - list [ref=e115]:
+            - listitem [ref=e116]:
+              - button "Load image 1 in gallery view" [ref=e117] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+            - listitem [ref=e118]:
+              - button "Load image 2 in gallery view" [ref=e119] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+            - listitem [ref=e120]:
+              - button "Load image 3 in gallery view" [ref=e121] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+            - listitem [ref=e122]:
+              - button "Load image 4 in gallery view" [ref=e123] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+            - listitem [ref=e124]:
+              - button "Load image 5 in gallery view" [ref=e125] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+            - listitem [ref=e126]:
+              - button "Load image 6 in gallery view" [ref=e127] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+            - listitem [ref=e128]:
+              - button "Load image 7 in gallery view" [ref=e129] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+            - listitem [ref=e130]:
+              - button "Load image 8 in gallery view" [ref=e131] [cursor=pointer]:
+                - img "Phantom 2.0 IWB Holster"
+          - button "Slide right" [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+      - generic [ref=e135]:
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - img [ref=e139]
+            - img [ref=e141]
+            - img [ref=e143]
+            - img [ref=e145]
+            - img [ref=e147]
+            - generic [ref=e149]:
+              - img [ref=e150]
+              - img [ref=e152]
+              - img [ref=e154]
+              - img [ref=e156]
+              - img [ref=e158]
+          - strong [ref=e161]: 4.7/5 | 368 reviews
+        - heading "Phantom 2.0 IWB Holster" [level=1] [ref=e163]
+        - status [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e167]:
+              - generic [ref=e168]: Regular price
+              - generic [ref=e169]: $69.99
+              - generic [ref=e170]: Sale price
+              - generic [ref=e172]: $109.99
+            - generic [ref=e173]:
+              - img [ref=e174]
+              - generic [ref=e175]: SAVE 36%
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e180]: Hand Orientation - Left
+            - radio "Left" [checked] [ref=e181]
+            - generic [ref=e182] [cursor=pointer]: Left
+            - radio "Right" [ref=e183]
+            - generic [ref=e184] [cursor=pointer]: Right
+          - generic [ref=e185]:
+            - generic [ref=e188]: Mag Option - No mag
+            - radio "No mag" [checked] [ref=e189]
+            - generic [ref=e190] [cursor=pointer]: No mag
+            - radio "1 Mag" [ref=e191]
+            - generic [ref=e192] [cursor=pointer]: 1 Mag
+            - radio "2 Mags" [ref=e193]
+            - generic [ref=e194] [cursor=pointer]: 2 Mags
+        - button "Add to cart" [ref=e200] [cursor=pointer]:
+          - generic [ref=e201]: Add to cart
+        - generic [ref=e203]:
+          - img "Phantom 2.0 IWB Holster" [ref=e205]
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - heading "Phantom 2.0 IWB Holster" [level=4] [ref=e208]
+              - generic [ref=e210]:
+                - generic [ref=e212]:
+                  - generic [ref=e213]: Regular price
+                  - generic [ref=e214]: $69.99
+                  - generic [ref=e215]: Sale price
+                  - generic [ref=e217]: $109.99
+                - generic [ref=e218]:
+                  - img [ref=e219]
+                  - generic [ref=e220]: SAVE 36%
+            - generic [ref=e223]:
+              - combobox [ref=e224] [cursor=pointer]:
+                - option "Left / No mag" [selected]
+                - option "Left / 1 Mag"
+                - option "Left / 2 Mags"
+                - option "Right / No mag"
+                - option "Right / 1 Mag"
+                - option "Right / 2 Mags"
+              - img
+          - button "Add to cart" [ref=e226] [cursor=pointer]:
+            - generic [ref=e227]: Add to cart
+        - generic [ref=e229]:
+          - img "files/image_6.webp" [ref=e231]
+          - generic [ref=e232]:
+            - paragraph [ref=e234]: As a concealed carry instructor, I recommend the Breakout Holster to my students, it’s the only one that truly delivers all day comfort and reliable concealment.
+            - generic [ref=e235]: Ryan S. - CCW Instructor
+        - generic [ref=e236]:
+          - group [ref=e237]:
+            - generic "mail Still Have Questions?" [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - generic [ref=e240]: mail
+                - heading "Still Have Questions?" [level=2] [ref=e241]
+              - img [ref=e242]
+          - paragraph [ref=e243]: If you have any questions about fitment or anything else, please call or text us directly at support@southedc.store — we’re happy to help you make an informed decision.
+        - generic [ref=e244]:
+          - group [ref=e245]:
+            - generic "box Product Features" [ref=e246] [cursor=pointer]:
+              - generic [ref=e247]:
+                - generic [ref=e248]: box
+                - heading "Product Features" [level=2] [ref=e249]
+              - img [ref=e250]
+          - generic:
+            - generic:
+              - paragraph [ref=e251]: "A full-grain leather pancake IWB designed around the one thing Kydex can't solve: all-day comfort against skin. Covers the grip, wicks sweat, flexes with your body — not against it."
+              - list [ref=e252]:
+                - listitem [ref=e253]:
+                  - strong [ref=e254]: Full-grip back panel
+                  - text: — leather covers the grip so metal doesn't bite skin
+                - listitem [ref=e255]:
+                  - strong [ref=e256]: Dual reinforced metal clips
+                  - text: — pistol doesn't swing or shift during movement
+                - listitem [ref=e257]:
+                  - strong [ref=e258]: Mag holder included
+                  - text: (new version)
+                - listitem [ref=e259]:
+                  - strong [ref=e260]: Tuckable
+                  - text: — shirt tucks over the clips for dress-code environments
+                - listitem [ref=e261]:
+                  - strong [ref=e262]: "Carry positions:"
+                  - text: Appendix · Strong-side hip · 4 o'clock · Behind
+                - listitem [ref=e263]:
+                  - strong [ref=e264]: 120-day money back guarantee
+        - generic [ref=e265]:
+          - group [ref=e266]:
+            - generic "box Shipping & Delivery" [ref=e267] [cursor=pointer]:
+              - generic [ref=e268]:
+                - generic [ref=e269]: box
+                - heading "Shipping & Delivery" [level=2] [ref=e270]
+              - img [ref=e271]
+          - generic:
+            - generic:
+              - paragraph [ref=e272]: "A full-grain leather pancake IWB designed around the one thing Kydex can't solve: all-day comfort against skin. Covers the grip, wicks sweat, flexes with your body — not against it."
+              - list [ref=e273]:
+                - listitem [ref=e274]:
+                  - strong [ref=e275]: Full-grip back panel
+                  - text: — leather covers the grip so metal doesn't bite skin
+                - listitem [ref=e276]:
+                  - strong [ref=e277]: Dual reinforced metal clips
+                  - text: — pistol doesn't swing or shift during movement
+                - listitem [ref=e278]:
+                  - strong [ref=e279]: Mag holder included
+                  - text: (new version)
+                - listitem [ref=e280]:
+                  - strong [ref=e281]: Tuckable
+                  - text: — shirt tucks over the clips for dress-code environments
+                - listitem [ref=e282]:
+                  - strong [ref=e283]: "Carry positions:"
+                  - text: Appendix · Strong-side hip · 4 o'clock · Behind
+                - listitem [ref=e284]:
+                  - strong [ref=e285]: 120-day money back guarantee
+    - generic [ref=e288]:
+      - paragraph [ref=e289]: Fast Shipping
+      - paragraph [ref=e290]: Made in U.S.A
+      - paragraph [ref=e291]: Lifetime-Guarantee
+      - paragraph [ref=e292]: Fast Shipping
+      - paragraph [ref=e293]: Made in U.S.A
+      - paragraph [ref=e294]: Lifetime-Guarantee
+      - paragraph [ref=e295]: Fast Shipping
+      - paragraph [ref=e296]: Made in U.S.A
+      - paragraph [ref=e297]: Lifetime-Guarantee
+      - paragraph [ref=e298]: Fast Shipping
+      - paragraph [ref=e299]: Made in U.S.A
+      - paragraph [ref=e300]: Lifetime-Guarantee
+      - paragraph [ref=e301]: Fast Shipping
+      - paragraph [ref=e302]: Made in U.S.A
+      - paragraph [ref=e303]: Lifetime-Guarantee
+      - paragraph [ref=e304]: Fast Shipping
+      - paragraph [ref=e305]: Made in U.S.A
+      - paragraph [ref=e306]: Lifetime-Guarantee
+      - paragraph [ref=e307]: Fast Shipping
+      - paragraph [ref=e308]: Made in U.S.A
+      - paragraph [ref=e309]: Lifetime-Guarantee
+      - paragraph [ref=e310]: Fast Shipping
+      - paragraph [ref=e311]: Made in U.S.A
+      - paragraph [ref=e312]: Lifetime-Guarantee
+      - paragraph [ref=e313]: Fast Shipping
+      - paragraph [ref=e314]: Made in U.S.A
+      - paragraph [ref=e315]: Lifetime-Guarantee
+      - paragraph [ref=e316]: Fast Shipping
+      - paragraph [ref=e317]: Made in U.S.A
+      - paragraph [ref=e318]: Lifetime-Guarantee
+      - paragraph [ref=e319]: Fast Shipping
+      - paragraph [ref=e320]: Made in U.S.A
+      - paragraph [ref=e321]: Lifetime-Guarantee
+      - paragraph [ref=e322]: Fast Shipping
+      - paragraph [ref=e323]: Made in U.S.A
+      - paragraph [ref=e324]: Lifetime-Guarantee
+    - generic [ref=e327]:
+      - heading "Multicolumn" [level=2] [ref=e329]
+      - region [ref=e331]:
+        - list [ref=e333]:
+          - listitem [ref=e334]:
+            - generic [ref=e339]:
+              - heading "Sit & Drive Comfortably" [level=3] [ref=e340]
+              - paragraph [ref=e342]: Rounded edges & thin profile allow for easy movement.
+          - listitem [ref=e343]:
+            - generic [ref=e348]:
+              - heading "Complete Concealment" [level=3] [ref=e349]
+              - paragraph [ref=e351]: Sits snug to the body with zero printing for maximum discretion.
+          - listitem [ref=e352]:
+            - generic [ref=e357]:
+              - heading "Retention & Control" [level=3] [ref=e358]
+              - paragraph [ref=e360]: Keeps your weapon safe and secure until you're ready to draw.
+          - listitem [ref=e361]:
+            - generic [ref=e366]:
+              - heading "Fast Instant Access" [level=3] [ref=e367]
+              - paragraph [ref=e369]: Present your weapon even if pinned by cranking out on target.
+    - generic [ref=e377]:
+      - heading "EFFORTLESSLY CARRY ALL DAY" [level=2] [ref=e378]
+      - paragraph [ref=e380]: Your gun does no good sitting at home, but with most holsters biting into your side and leaving you exposed, we understand why you don't carry. That's why the Phantom 2.0 IWB Holster prioritizes comfort by pulling all edges away from the body and hand-buffing them to silky-smooth perfection, all while maintaining an ultra-thin profile for hip-hugging concealment
+    - generic [ref=e382]:
+      - heading "Real Carriers. Real Stories." [level=2] [ref=e385]
+      - region [ref=e388]:
+        - generic [ref=e389]:
+          - tabpanel "1 of 4" [ref=e390]:
+            - button [ref=e397] [cursor=pointer]:
+              - img [ref=e399]
+          - tabpanel "2 of 4" [ref=e401]:
+            - button [ref=e408] [cursor=pointer]:
+              - img [ref=e410]
+          - tabpanel "3 of 4" [ref=e412]:
+            - button [ref=e419] [cursor=pointer]:
+              - img [ref=e421]
+          - tabpanel "4 of 4" [ref=e423]:
+            - button [ref=e430] [cursor=pointer]:
+              - img [ref=e432]
+        - generic:
+          - generic:
+            - button "Previous slide" [disabled] [ref=e434]:
+              - img [ref=e435]
+            - button "Next slide" [disabled] [ref=e437]:
+              - img [ref=e438]
+    - generic [ref=e444]:
+      - paragraph [ref=e445]: NEVER GET CAUGHT UNPREPARED
+      - heading "Instant Access Anytime, Anywhere With A Flick Of The Wrist" [level=2] [ref=e446]
+      - generic [ref=e447]:
+        - paragraph [ref=e448]: Precision built with premium American materials and our patented Breakout Channel that lets you draw instantly with the flick of the wrist even when you’re pinned or overpowered. Designed slim and comfortable for all day carry so you are always ready, whether alone, with your kids, or facing the unexpected.
+        - paragraph [ref=e449]: See Phantom IWB 2.0 in action in the video below.
+    - button "Load video:" [ref=e454] [cursor=pointer]:
+      - img "Load video:" [ref=e455]
+      - img [ref=e457]
+    - generic [ref=e466]:
+      - heading "Veteran Owned, Family Built, And Purpose Driven." [level=2] [ref=e467]
+      - generic [ref=e468]:
+        - paragraph [ref=e469]: In 2015, Cheryl and her sons, Alex and Austin, moved to Chicago, where protecting her family became essential.
+        - paragraph [ref=e470]: Frustrated with bulky holsters, she began modifying and eventually building her own—leading to the patented “Breakout” channel for lightning-fast draw speeds. The design quickly gained popularity locally.
+        - paragraph [ref=e471]: Now, over 10 years later, Houdini Holsters remains proudly veteran-owned and family-operated, handcrafting premium holsters in Greensboro, North Carolina.
+    - generic [ref=e474]:
+      - heading "Breakthrough Design & Unmatched Performance" [level=2] [ref=e476]
+      - region [ref=e478]:
+        - list [ref=e480]:
+          - listitem [ref=e481]:
+            - generic [ref=e486]:
+              - heading "Minimal Printing" [level=3] [ref=e487]
+              - paragraph [ref=e489]: Enjoy the peace of mind of deep concealment for minimal visibility
+          - listitem [ref=e490]:
+            - generic [ref=e495]:
+              - heading "Exceptional Retention" [level=3] [ref=e496]
+              - paragraph [ref=e498]: Ensures your firearm stays secure and stable in any activity or situation.
+          - listitem [ref=e499]:
+            - generic [ref=e504]:
+              - heading "Silky Smooth Edges" [level=3] [ref=e505]
+              - paragraph [ref=e507]: Reduces discomfort, wear and tear to your carry for seamless operation.
+    - region [ref=e512]:
+      - list [ref=e514]:
+        - listitem [ref=e515]:
+          - generic [ref=e520]:
+            - heading "Extreme Durability" [level=3] [ref=e521]
+            - paragraph [ref=e523]: Holds up for a lifetime with weather proof, scratch-resistant infused .08 Kydex.
+        - listitem [ref=e524]:
+          - generic [ref=e529]:
+            - heading "Ultralight Shell" [level=3] [ref=e530]
+            - paragraph [ref=e532]: Feather light design increases freedom of movement without sacrifice.
+        - listitem [ref=e533]:
+          - generic [ref=e538]:
+            - heading "Enhanced Stability" [level=3] [ref=e539]
+            - paragraph [ref=e541]: Reduce holder shift, sag, and improve retention with double steel clips.
+    - generic [ref=e545]:
+      - generic [ref=e546]:
+        - heading "Why Houdini Holsters?" [level=2] [ref=e547]
+        - paragraph [ref=e549]: Here's why 104,506+people choose Breakout 2.0 over the rest…
+      - table [ref=e551]:
+        - rowgroup [ref=e552]:
+          - row "SouthEDC Others" [ref=e553]:
+            - columnheader [ref=e554]
+            - columnheader "SouthEDC" [ref=e555]
+            - columnheader "Others" [ref=e556]
+        - rowgroup [ref=e557]:
+          - row "Patented Breakout" [ref=e558]:
+            - cell "Patented Breakout" [ref=e559]:
+              - strong [ref=e560]: Patented Breakout
+            - cell [ref=e561]:
+              - img [ref=e563]
+            - cell [ref=e565]:
+              - img [ref=e567]
+          - row "Low Maintenance" [ref=e569]:
+            - cell "Low Maintenance" [ref=e570]:
+              - strong [ref=e571]: Low Maintenance
+            - cell [ref=e572]:
+              - img [ref=e574]
+            - cell [ref=e576]:
+              - img [ref=e578]
+          - row "Zero Break-In" [ref=e580]:
+            - cell "Zero Break-In" [ref=e581]:
+              - strong [ref=e582]: Zero Break-In
+            - cell [ref=e583]:
+              - img [ref=e585]
+            - cell [ref=e587]:
+              - img [ref=e589]
+          - row "Custom Made Fit" [ref=e591]:
+            - cell "Custom Made Fit" [ref=e592]:
+              - strong [ref=e593]: Custom Made Fit
+            - cell [ref=e594]:
+              - img [ref=e596]
+            - cell [ref=e598]:
+              - img [ref=e600]
+          - row "Lifetime Warranty" [ref=e602]:
+            - cell "Lifetime Warranty" [ref=e603]:
+              - strong [ref=e604]: Lifetime Warranty
+            - cell [ref=e605]:
+              - img [ref=e607]
+            - cell [ref=e609]:
+              - img [ref=e611]
+          - row "Made In America" [ref=e613]:
+            - cell "Made In America" [ref=e614]:
+              - strong [ref=e615]: Made In America
+            - cell [ref=e616]:
+              - img [ref=e618]
+            - cell [ref=e620]:
+              - img [ref=e622]
+    - generic [ref=e626]:
+      - generic [ref=e627]:
+        - heading "Join The Houdini Holster Revolution" [level=2] [ref=e629]
+        - paragraph [ref=e631]: Over 104,506 customers are carrying smarter with Breakout 2.0 for more comfort, deeper concealment, faster draw.
+      - region [ref=e633]:
+        - list [ref=e635]:
+          - listitem [ref=e636]:
+            - generic [ref=e639]:
+              - generic [ref=e642]:
+                - img [ref=e643]
+                - img [ref=e645]
+                - img [ref=e647]
+                - img [ref=e649]
+                - img [ref=e651]
+                - generic [ref=e653]:
+                  - img [ref=e654]
+                  - img [ref=e656]
+                  - img [ref=e658]
+                  - img [ref=e660]
+                  - img [ref=e662]
+              - img [ref=e665]
+              - heading "\"Massive Confidence boost, faster draw time\"" [level=3] [ref=e668]
+              - paragraph [ref=e670]:
+                - emphasis [ref=e671]: "\"I wasn't expecting the confidence boost this holster gave me. With the breakout draw I feel WAY more prepared and draw faster then ever. Just bought another for my Sig 365."
+              - paragraph [ref=e673]:
+                - emphasis [ref=e674]: Mike R.
+          - listitem [ref=e675]:
+            - generic [ref=e678]:
+              - generic [ref=e681]:
+                - img [ref=e682]
+                - img [ref=e684]
+                - img [ref=e686]
+                - img [ref=e688]
+                - img [ref=e690]
+                - generic [ref=e692]:
+                  - img [ref=e693]
+                  - img [ref=e695]
+                  - img [ref=e697]
+                  - img [ref=e699]
+                  - img [ref=e701]
+              - img [ref=e704]
+              - heading "\"Fastest draw, completely secure, very comfortable\"" [level=3] [ref=e707]
+              - paragraph [ref=e709]: "\"I was skeptical about the open channel, but after using it, It’s completely legit, fasest draw I've ever had, completely secure and forget it’s on me half the time. Lives up to the hype, will buy again.\""
+              - paragraph [ref=e711]:
+                - emphasis [ref=e712]: Jason T.
+          - listitem [ref=e713]:
+            - generic [ref=e716]:
+              - generic [ref=e719]:
+                - img [ref=e720]
+                - img [ref=e722]
+                - img [ref=e724]
+                - img [ref=e726]
+                - img [ref=e728]
+                - generic [ref=e730]:
+                  - img [ref=e731]
+                  - img [ref=e733]
+                  - img [ref=e735]
+                  - img [ref=e737]
+                  - img [ref=e739]
+              - img [ref=e742]
+              - heading "Very concealable, comfortable all day." [level=3] [ref=e745]
+              - paragraph [ref=e747]: This holster is exactly what I needed. I wear it all day with no problems at all. VERY concealable, and the breakout feature is a game changer. Would recommend.
+              - paragraph [ref=e749]:
+                - emphasis [ref=e750]: Chris S.
+    - generic [ref=e755]:
+      - heading "FAQ'S" [level=2] [ref=e757]
+      - generic [ref=e759]:
+        - generic [ref=e760]:
+          - group [ref=e761]:
+            - generic "check What carry positions is the Breakout 2.0 compatible with?" [ref=e762] [cursor=pointer]:
+              - generic [ref=e763]:
+                - generic [ref=e764]: check
+                - heading "What carry positions is the Breakout 2.0 compatible with?" [level=2] [ref=e765]
+              - img [ref=e766]
+          - generic:
+            - region:
+              - paragraph [ref=e767]: The Breakout 2.0 holster is designed to be versatile, offering compatibility with various carry positions.
+              - paragraph [ref=e768]:
+                - text: You can
+                - strong [ref=e769]: wear it anywhere ranging from the 10 o'clock position
+                - text: (opposite side Appendix carry)
+                - strong [ref=e770]: all the way to the 5 o'clock position
+                - text: ", just before the center of your back."
+              - paragraph [ref=e771]:
+                - text: This ensures flexibility and comfort to
+                - strong [ref=e772]: accommodate different carrying preferences.
+              - paragraph [ref=e773]:
+                - text: However, please note that the
+                - strong [ref=e774]: Breakout draw performs best in the appendix carry position.
+        - generic [ref=e775]:
+          - group [ref=e776]:
+            - generic "check What belt size does it work with?" [ref=e777] [cursor=pointer]:
+              - generic [ref=e778]:
+                - generic [ref=e779]: check
+                - heading "What belt size does it work with?" [level=2] [ref=e780]
+              - img [ref=e781]
+          - generic:
+            - region:
+              - paragraph [ref=e782]:
+                - text: The Breakout 2.0 will
+                - strong [ref=e783]: fit up to a 1.5-inch gun belt.
+              - paragraph [ref=e784]: (A 1.5 inch gun belt is recommended for best use)
+        - generic [ref=e785]:
+          - group [ref=e786]:
+            - generic "check Does it work with rail-mounted lights/lasers?" [ref=e787] [cursor=pointer]:
+              - generic [ref=e788]:
+                - generic [ref=e789]: check
+                - heading "Does it work with rail-mounted lights/lasers?" [level=2] [ref=e790]
+              - img [ref=e791]
+          - generic:
+            - region:
+              - paragraph [ref=e792]: The Breakout 2.0 is currently available in only non-light-bearing options.
+        - generic [ref=e793]:
+          - group [ref=e794]:
+            - generic "check Is it compatible with red dots, night sights & top mounted optics?" [ref=e795] [cursor=pointer]:
+              - generic [ref=e796]:
+                - generic [ref=e797]: check
+                - heading "Is it compatible with red dots, night sights & top mounted optics?" [level=2] [ref=e798]
+              - img [ref=e799]
+          - generic:
+            - region:
+              - paragraph [ref=e800]: Yes, it is compatible with red dots, night sights, and top-mounted optics.
+        - generic [ref=e801]:
+          - group [ref=e802]:
+            - generic "check Does it work with threaded barrels?" [ref=e803] [cursor=pointer]:
+              - generic [ref=e804]:
+                - generic [ref=e805]: check
+                - heading "Does it work with threaded barrels?" [level=2] [ref=e806]
+              - img [ref=e807]
+          - generic:
+            - region:
+              - paragraph [ref=e808]: The Breakout 2.0 currently only works with flush-fitting barrels.
+        - generic [ref=e809]:
+          - group [ref=e810]:
+            - generic "check Does it work with gas pedal attachments?" [ref=e811] [cursor=pointer]:
+              - generic [ref=e812]:
+                - generic [ref=e813]: check
+                - heading "Does it work with gas pedal attachments?" [level=2] [ref=e814]
+              - img [ref=e815]
+          - generic:
+            - region:
+              - paragraph [ref=e816]: The Breakout 2.0 currently does not work with gas-pedal attachments.
+        - generic [ref=e817]:
+          - group [ref=e818]:
+            - generic "check What color is the Breakout 2.0 offered in?" [ref=e819] [cursor=pointer]:
+              - generic [ref=e820]:
+                - generic [ref=e821]: check
+                - heading "What color is the Breakout 2.0 offered in?" [level=2] [ref=e822]
+              - img [ref=e823]
+          - generic:
+            - region:
+              - paragraph [ref=e824]: At the moment, the Breakout 2.0 is exclusively offered in Flat Black.
+        - generic [ref=e825]:
+          - group [ref=e826]:
+            - generic "check Will the retention loosen up over time?" [ref=e827] [cursor=pointer]:
+              - generic [ref=e828]:
+                - generic [ref=e829]: check
+                - heading "Will the retention loosen up over time?" [level=2] [ref=e830]
+              - img [ref=e831]
+          - generic:
+            - region:
+              - paragraph [ref=e832]: The retention on the Breakout 2.0 will change very little over a long period of time, meaning if you select a medium draw, it will maintain that level of retention for many years to come.
+        - generic [ref=e833]:
+          - group [ref=e834]:
+            - generic "check Can I adjust the retention level of the holster?" [ref=e835] [cursor=pointer]:
+              - generic [ref=e836]:
+                - generic [ref=e837]: check
+                - heading "Can I adjust the retention level of the holster?" [level=2] [ref=e838]
+              - img [ref=e839]
+          - generic:
+            - region:
+              - paragraph [ref=e840]: At Houdini Holsters, we've prioritized comfort, concealment, and reliability in our design approach.
+              - paragraph [ref=e841]: Instead of compromise concealment with bulky retention screws, nuts & grommets, we've opted for a sleek and robust steel riveted retention system. This fixed retention ensures consistent and reliable performance over the long term.
+              - paragraph [ref=e842]:
+                - text: With nearly a
+                - strong [ref=e843]: decade
+                - text: of expertise in the industry, we've fine-tuned our retention system to a perfect medium draw retention level, offering a perfect balance of security and accessibility.
+              - paragraph [ref=e844]:
+                - text: Your firearm will
+                - strong [ref=e845]: audibly "click" into place, providing ample retention during physical activities, yet allowing for a smooth and reliable draw when needed.
+              - paragraph [ref=e846]:
+                - text: If you require lighter or heavier retention for specific preferences, we're more than happy to guide you through the simple heat adjustment process. However, our default setting is optimized for most users' needs, ensuring a
+                - strong [ref=e847]: hassle-free experience right out of the box.
+        - generic [ref=e848]:
+          - group [ref=e849]:
+            - generic "check Can I return the Breakout 2.0 holster if it doesn't meet my expectations?" [ref=e850] [cursor=pointer]:
+              - generic [ref=e851]:
+                - generic [ref=e852]: check
+                - heading "Can I return the Breakout 2.0 holster if it doesn't meet my expectations?" [level=2] [ref=e853]
+              - img [ref=e854]
+          - generic:
+            - region:
+              - paragraph [ref=e855]:
+                - text: We understand that finding the perfect holster is essential.
+                - text: If for any reason you're not completely satisfied with your Breakout 2.0 Holster, we offer a 30 day risk-free product return and refund policy on all Flat Black & Carbon Fiber products.
+                - text: Simply contact our customer service team within 30 days of receiving your order to initiate a return.
+                - text: Once we receive your returned item in its original condition, we will process a full refund of the product to your original payment method.
+                - text: Please note that shipping costs are non-refundable.
+    - img [ref=e859]
+  - contentinfo [ref=e869]:
+    - generic [ref=e871]:
+      - generic [ref=e872]:
+        - heading "Subscribe to our emails" [level=2] [ref=e873]
+        - generic [ref=e874]:
+          - paragraph [ref=e876]: Join our email list for exclusive offers and the latest news.
+          - generic [ref=e877]:
+            - generic [ref=e879]:
+              - textbox "Email" [ref=e880]
+              - generic: Email
+            - button "Subscribe" [ref=e881] [cursor=pointer]: Sign up
+      - generic [ref=e882]:
+        - heading "Product Links" [level=2] [ref=e883]
+        - list [ref=e884]:
+          - listitem [ref=e885]:
+            - link "Ghost Tee" [ref=e886] [cursor=pointer]:
+              - /url: /products/2tac-ghost-tee
+          - listitem [ref=e887]:
+            - link "Phantom Brief" [ref=e888] [cursor=pointer]:
+              - /url: /products/phantom-brief
+          - listitem [ref=e889]:
+            - link "IWB Phantom 2.0 Holster" [ref=e890] [cursor=pointer]:
+              - /url: /products/phantom-2-0-iwb-holster
+      - generic [ref=e891]:
+        - heading "Customer Support" [level=2] [ref=e892]
+        - list [ref=e893]:
+          - listitem [ref=e894]:
+            - link "Term of Service" [ref=e895] [cursor=pointer]:
+              - /url: /policies/terms-of-service
+          - listitem [ref=e896]:
+            - link "Privacy Policy" [ref=e897] [cursor=pointer]:
+              - /url: /policies/privacy-policy
+          - listitem [ref=e898]:
+            - link "Refund Policy" [ref=e899] [cursor=pointer]:
+              - /url: /policies/refund-policy
+          - listitem [ref=e900]:
+            - link "Contact Us" [ref=e901] [cursor=pointer]:
+              - /url: /pages/contact
+    - generic [ref=e902]:
+      - generic [ref=e905]:
+        - generic [ref=e906]: Payment methods
+        - list [ref=e907]:
+          - listitem [ref=e908]:
+            - img "American Express" [ref=e909]
+          - listitem [ref=e914]:
+            - img "Discover" [ref=e915]
+          - listitem [ref=e924]:
+            - img "Mastercard" [ref=e925]
+          - listitem [ref=e932]:
+            - img "PayPal" [ref=e933]
+          - listitem [ref=e939]:
+            - img "Venmo" [ref=e940]
+          - listitem [ref=e945]:
+            - img "Visa" [ref=e946]
+      - generic [ref=e952]:
+        - generic [ref=e953]:
+          - text: © 2026,
+          - link "SouthEDC" [ref=e954] [cursor=pointer]:
+            - /url: /
+        - generic [ref=e955]:
+          - text: Powered by
+          - link "Shrine" [ref=e956] [cursor=pointer]:
+            - /url: https://shrinesolutions.com/

@@ -1,0 +1,584 @@
+
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gByoXncj9c"}' data-id="gByoXncj9c" id="gByoXncj9c" data-same-height-subgrid-container class="gByoXncj9c gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--op-tablet:100%;--radius:var(--g-radius-none);--mt:28px;--mt-mobile:30px;--pl-mobile:15px;--pr-mobile:15px;--cg:8px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:552px;--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gcovZPGqdI gp-relative gp-flex gp-flex-col"
+    >
+      
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    {%- liquid
+      assign inventory_quantity = variant.inventory_quantity | default: 0
+      assign is_in_stock = variant.available
+    -%}
+    <gp-product-button
+      
+      gp-data-wrapper="true"
+      gp-href="{{ request.origin }}{{ routes.root_url | split: '/' | join: '/' }}/cart"
+      class="gp-product-button"
+      gp-label-out-of-stock="{{ section.settings.gg_RmL1C6n4_outOfStockLabel }}"
+      gp-label-unavailable="{{ section.settings.gg_RmL1C6n4_unavailableLabel_-288996254 }}"
+      gp-data='{"styles":{"errorTypo":{"type":"paragraph-2"},"successTypo":{"custom":{"fontFamily":"Poppins","fontSize":{"desktop":"14px","mobile":"12px","tablet":"14px"},"fontWeight":"400","lineHeight":"150%"},"type":"paragraph-2"}},"setting":{"errorType":"built-in","actionEffect":"open-cart-drawer","label":"GET MINE NOW","errorMessage":"Cannot add product to cart","successMessage":"Add product to cart successfully","outOfStockLabel":"Out of stock","customURL":{"link":"/cart","target":"_self"}},"variantID":"{{variant.id}}","disabled":"{{variant.available}}","totalVariant":"{{total_combinations}}"}'
+      data-variant-selection-required-message=""
+      gp-enable-third-partycart="{{shop.metafields.GEMPAGES.enableThirdPartyCart}}"
+    >
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--radius:var(--g-radius-none);--mb:0px;--ta:center" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+        <style>[data-id="g_RmL1C6n4"].gp-button-base::before, [data-id="g_RmL1C6n4-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="g_RmL1C6n4"]:hover::before, [data-id="g_RmL1C6n4-interaction"]:hover::before {
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+  }</style>
+        
+        <button
+          data-id="g_RmL1C6n4" dataId="g_RmL1C6n4" data-state="idle" aria-label="GET MINE NOW"
+          name="add" gp-data-hidden="{% unless variant.available %}true{% endunless %}"
+          type="submit"
+          style="--w:225%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:12px;--pr:12px;--pt:17px;--pb:17px;--pl-tablet:12px;--pr-tablet:12px;--pt-tablet:12px;--pb-tablet:12px;--pl-mobile:12px;--pr-mobile:12px;--pt-mobile:12px;--pb-mobile:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--hvr-bblr:8px;--hvr-bbrr:8px;--hvr-btlr:8px;--hvr-btrr:8px;--shadow:none;--bgi:;--hvr-bgi:;--hvr-bg:rgba(255, 214, 4, 0.7);--bg:#FFD604;--hvr-c:#252525;--c:#252525;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px"
+          class="gp-button-atc tcustomizer-submit-button g_RmL1C6n4 gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30  undefined"
+        >
+        
+  <svg
+    class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="gp-opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="gp-opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    ></path>
+  </svg>
+
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+          
+    <span
+      data-gp-text
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.gg_RmL1C6n4_label }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--radius:var(--g-radius-none);--mb:0px;--ta:center" class="{% if variant.available %} !gp-hidden {% endif %}">
+        <style>[data-id="g_RmL1C6n4-sold-out"].gp-button-base::before, [data-id="g_RmL1C6n4-sold-out-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="g_RmL1C6n4-sold-out"]:hover::before, [data-id="g_RmL1C6n4-sold-out-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="g_RmL1C6n4-sold-out" dataId="g_RmL1C6n4-sold-out" data-state="idle" aria-label="{{ section.settings.gg_RmL1C6n4_outOfStockLabel }}"
+          gp-data-hidden="{% if variant.available %}true{% endif %}"
+          type="button"
+          style="--w:225%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:12px;--pr:12px;--pt:17px;--pb:17px;--pl-tablet:12px;--pr-tablet:12px;--pt-tablet:12px;--pb-tablet:12px;--pl-mobile:12px;--pr-mobile:12px;--pt-mobile:12px;--pb-mobile:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--hvr-bblr:8px;--hvr-bbrr:8px;--hvr-btlr:8px;--hvr-btrr:8px;--shadow:none;--bgi:;--hvr-bgi:;--bg:#FFD604;--hvr-bg:#FFD604;--c:#252525;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px"
+          class="gp-cursor-default gp-opacity-30 btn-disabled gp-button-sold-out g_RmL1C6n4-sold-out gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+          
+    <span
+      data-gp-text
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.gg_RmL1C6n4_outOfStockLabel }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </gp-product-button>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+      <style id="custom-css-g_RmL1C6n4">
+        .g_RmL1C6n4 {
+
+}
+
+      </style>
+    
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gadzyXk9Bm"}' data-id="gadzyXk9Bm" id="gadzyXk9Bm" data-same-height-subgrid-container class="gadzyXk9Bm gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--radius:var(--g-radius-none);--mt:22px;--mb:0px;--mt-mobile:12px;--mb-mobile:0px;--mb-tablet:12px;--cg:8px;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gZZOFg-FkP gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div
+      role="presentation"
+      data-id="gV70C6I5VN"
+      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--radius:var(--g-radius-none);--mb-mobile:0px;--mb-tablet:9px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773475778422 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gV70C6I5VN"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <img
+      alt="Alt image" width="1520" height="112" draggable="false" quality-type quality-percent data-sizes="auto" sizes="100vw" src="{{ "501444340413891578-0b0ba0e9-6b09-4edb-b98e-8b30a8c48701.png" | file_url }}" isNotLazyload="true" srcset base-src="{{ "501444340413891578-0b0ba0e9-6b09-4edb-b98e-8b30a8c48701.png" | file_url }}" loading="lazy"
+      id=""
+      style="--h:auto;--h-tablet:auto;--h-mobile:auto;--radius:var(--g-radius-none);--aspect:1520/112;--aspect-tablet:1520/112;--aspect-mobile:1520/112;--objf:cover"
+      class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload"
+    />
+      </div>
+    </div>
+  
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gBvJsGiqUP gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"rgba(0, 0, 0, 0)","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gaZ4z1ZDou"}' data-id="gaZ4z1ZDou" id="gaZ4z1ZDou" data-same-height-subgrid-container class="gaZ4z1ZDou gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--b:solid;--bc:#000000;--bw:1px 1px 1px 1px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--radius:var(--g-radius-none);--mt-mobile:9px;--cg:1px;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--bgc:rgba(0, 0, 0, 0);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start;--pc-tablet:start;--pc-mobile:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gZwdTAZbQy gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div
+      role="presentation"
+      data-id="gahrvjCLHB"
+      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--ml:14px;--mr:14px;--pt:2px;--pb:2px;--pr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1773475778423 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gahrvjCLHB"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <img
+      alt="Alt image" width="64" height="64" draggable="false" quality-type quality-percent data-sizes="auto" sizes="100vw" src="{{ "501444340413891578-2b66ada1-d6c4-4c5b-98dc-97bdb38139f4.png" | file_url }}" isNotLazyload="true" srcset base-src="{{ "501444340413891578-2b66ada1-d6c4-4c5b-98dc-97bdb38139f4.png" | file_url }}" loading="lazy"
+      id=""
+      style="--w:16px;--w-tablet:16px;--w-mobile:16px;--h:auto;--h-tablet:auto;--h-mobile:auto;--radius:var(--g-radius-none);--aspect:64/64;--aspect-tablet:64/64;--aspect-mobile:64/64;--objf:cover"
+      class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload"
+    />
+      </div>
+    </div>
+  
+      <style id="custom-css-gahrvjCLHB">
+        .gahrvjCLHB > div{
+    line-height: 0;
+}
+      </style>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="g9zOOb-63g gp-relative gp-flex gp-flex-col"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gDljK6fKBb"
+        class="gDljK6fKBb"
+        style="--ta:left;--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:400;--size:12px;--size-tablet:12px;--size-mobile:14px;--c:#000000;word-break:break-word;--bgc:rgba(255, 255, 255, 0);--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p>{{ section.settings.ggDljK6fKBb_text | replace: '$locationOrigin', locationOrigin }}</p>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+      <style id="custom-css-gaZ4z1ZDou">
+        .gaZ4z1ZDou > div:first-child{
+    background: #000000;
+} 
+.gaZ4z1ZDou{
+   grid-template-columns: 45px calc(100% - 45px) !important; 
+}
+
+      </style>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"#F4F4F4","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color"}},"uid":"gUaJWkVs7D"}' data-id="gUaJWkVs7D" id="gUaJWkVs7D" data-same-height-subgrid-container class="gUaJWkVs7D gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mt:22px;--pt:10px;--pb:10px;--mt-mobile:12px;--pt-mobile:4px;--pb-mobile:4px;--pt-tablet:8px;--pb-tablet:8px;--cg:28px;--gtc:minmax(0, auto) minmax(0, auto) minmax(0, auto);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:340px;--w-mobile:284px;--bgc:#F4F4F4;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gB2EO9s7T2 gp-relative gp-flex gp-flex-col"
+    >
+      <div gp-el-wrapper  class="gLqD17Me50 ">
+      
+    
+    <div class="gp-flex" >
+    <div
+      data-id="gLqD17Me50"
+       style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--radius:var(--g-radius-none);--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-tablet:center;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+     
+     <ul
+        class="gp-inline-flex gp-flex-col"
+        style="--gg:0px"
+        >
+        
+    <li
+      data-index="0" data-id="g8Xf7U9-Cq"
+      class="gp-icon-list-item gp-flex gp-w-full gp-items-center gp-child-item-gLqD17Me50"
+      style="--cg:16px;--cg-mobile:4px"
+    >
+    <div
+      data-same-height-display-contents
+      
+      class="gFYLo9eVmM gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div
+      role="presentation"
+      data-id="g81M7vHaV4"
+      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--ta:center"
+      class="gp-group/image gp-relative force-publish-1773475778443 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g81M7vHaV4"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <img
+      alt="Alt image" width="24" height="24" draggable="false" quality-type quality-percent data-sizes="auto" sizes="100vw" src="{{ "gempages_501444340413891578-0deb2ec9-8210-4a81-8a74-1dd70fbdbb1d.svg" | file_url }}" isNotLazyload="true" srcset base-src="{{ "gempages_501444340413891578-0deb2ec9-8210-4a81-8a74-1dd70fbdbb1d.svg" | file_url }}" loading="lazy"
+      id=""
+      style="--w:28px;--w-tablet:28px;--w-mobile:16px;--h:auto;--h-tablet:auto;--h-mobile:auto;--radius:var(--g-radius-none);--aspect:24/24;--aspect-tablet:24/24;--aspect-mobile:24/24;--objf:cover"
+      class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload"
+    />
+      </div>
+    </div>
+  
+      <style id="custom-css-g81M7vHaV4">
+        .g81M7vHaV4 > div{
+    line-height: 0;
+}
+      </style>
+    
+    </div><div
+      data-same-height-display-contents
+      
+      class="g0gDppTOXh gp-relative gp-flex gp-flex-col gp-w-full"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gvpjhXZwap"
+        class="gvpjhXZwap estimate-time"
+        style="--ta:left;--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt-mobile:0px;--mt-tablet:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:400;--size:12px;--size-tablet:14px;--size-mobile:12px;--c:var(--g-c-text-1, text-1);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p>{{ section.settings.ggvpjhXZwap_text | replace: '$locationOrigin', locationOrigin }}</p>
+        </div>
+      </div>
+    </div>
+    
+      <script id="custom-js-gvpjhXZwap">
+        try {
+          const currentElement = document.querySelector('.gvpjhXZwap');
+const orderShipper = dateToYMD(new Date(), 7);
+
+function dateToYMD(date, plus) {
+    const dayOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; // Thêm các thứ vào mảng
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; // Thêm các tên tháng vào mảng
+    date.setDate(date.getDate() + plus);
+    const d = date.getDate();
+    const m = dayOfWeek[date.getDay()]; // Lấy thứ từ mảng
+    const mm = monthNames[date.getMonth()]; // Lấy tên tháng từ mảng
+    return '' + m + ', ' + d + ' ' + mm; // Trả về định dạng mới
+}
+
+currentElement.querySelector('strong').innerHTML = orderShipper;
+        } catch(err){}
+      </script>
+    
+    </div>
+  </li>
+      </ul>
+  </div>
+  </div>
+  
+      </div>
+      <style id="custom-css-gLqD17Me50">
+        .gLqD17Me50 {
+    line-height: 0;
+}
+      </style>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="g_2Z54srDH gp-relative gp-flex gp-flex-col"
+    >
+      <div gp-el-wrapper style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--pt:0px;--pb:0px;--pt-tablet:4px;--pl-tablet:36px;--pb-tablet:4px;--pr-tablet:36px" class="gBGIYpbfbQ ">
+      
+    <div data-id="gBGIYpbfbQ" class="gp-flex gp-justify-start">
+      <div style="--w:1px;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bbw:20px;--bbw-tablet:1px;--bbw-mobile:1px;--t:gp-rotate(0deg);--bc:#BDBDBD" class="gp-block tablet:gp-block mobile:gp-block"></div>
+      <div class="gp-items-center gp-hidden tablet:gp-hidden mobile:gp-hidden" style="--w:1px;--w-tablet:100%;--w-mobile:100%;--bc:#BDBDBD;--t:gp-rotate(0deg)">
+        <div class="gp-hidden" style="--bc:#BDBDBD;--bs:solid;--bbw:20px;--bbw-tablet:1px;--bbw-mobile:1px;--minw:1px;--minw-tablet:100%;--w:1px;--w-tablet:100%;--w-mobile:100%"></div>
+        
+            <span
+              class="gp-inline-flex gp-flex-none gp-items-center gp-justify-center"
+              style="--mr:var(--g-s-xs);--w:20px;--h:20px;--t:gp-rotate(0);--c:var(--g-c-text-1, text-1)"
+            >
+              <svg style="width: 100%; height: 100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M428.8 137.6h-86.177a115.52 115.52 0 0 0 2.176-22.4c0-47.914-35.072-83.2-92-83.2-45.314 0-57.002 48.537-75.707 78.784-7.735 12.413-16.994 23.317-25.851 33.253l-.131.146-.129.148C135.662 161.807 127.764 168 120.8 168h-2.679c-5.747-4.952-13.536-8-22.12-8H32c-17.673 0-32 12.894-32 28.8v230.4C0 435.106 14.327 448 32 448h64c8.584 0 16.373-3.048 22.12-8h2.679c28.688 0 67.137 40 127.2 40h21.299c62.542 0 98.8-38.658 99.94-91.145 12.482-17.813 18.491-40.785 15.985-62.791A93.148 93.148 0 0 0 393.152 304H428.8c45.435 0 83.2-37.584 83.2-83.2 0-45.099-38.101-83.2-83.2-83.2zm0 118.4h-91.026c12.837 14.669 14.415 42.825-4.95 61.05 11.227 19.646 1.687 45.624-12.925 53.625 6.524 39.128-10.076 61.325-50.6 61.325H248c-45.491 0-77.21-35.913-120-39.676V215.571c25.239-2.964 42.966-21.222 59.075-39.596 11.275-12.65 21.725-25.3 30.799-39.875C232.355 112.712 244.006 80 252.8 80c23.375 0 44 8.8 44 35.2 0 35.2-26.4 53.075-26.4 70.4h158.4c18.425 0 35.2 16.5 35.2 35.2 0 18.975-16.225 35.2-35.2 35.2zM88 384c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z" /></svg>
+            </span>
+          
+        
+            <span
+              class="gp-inline-flex gp-flex-none gp-items-center gp-justify-center gp-g-paragraph-1"
+              style="--tt:horizontal;--c:var(--g-c-text-1, text-1);--mr:var(--g-s-s);--ml:var(--g-s-s)"
+            >
+              Title
+            </span>
+          
+        <div class="gp-flex" style="--bc:#BDBDBD;--bs:solid;--bbw:20px;--bbw-tablet:1px;--bbw-mobile:1px;--minw:1px;--minw-tablet:100%;--w:1px;--w-tablet:100%;--w-mobile:100%"></div>
+      </div>
+    </div>
+  
+      </div>
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="g2RxRaO3Zb gp-relative gp-flex gp-flex-col"
+    >
+      <div gp-el-wrapper  class="g1pc9sbsCn ">
+      
+    
+    <div class="gp-flex" >
+    <div
+      data-id="g1pc9sbsCn"
+       style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-tablet:center;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+     
+     <ul
+        class="gp-inline-flex gp-flex-col"
+        style="--gg:0px"
+        >
+        
+    <li
+      data-index="0" data-id="gj1hYkl2Sq"
+      class="gp-icon-list-item gp-flex gp-w-full gp-items-center gp-child-item-g1pc9sbsCn"
+      style="--cg:16px;--cg-mobile:4px"
+    >
+    <div
+      data-same-height-display-contents
+      
+      class="gimpKFAvdJ gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div
+      role="presentation"
+      data-id="gg8O74DTRg"
+      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--ta:center"
+      class="gp-group/image gp-relative force-publish-1773475778456 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gg8O74DTRg"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <img
+      alt="Alt image" width="24" height="24" draggable="false" quality-type quality-percent data-sizes="auto" sizes="100vw" src="{{ "gempages_501444340413891578-cd7bc548-098c-44e5-80c6-d3359b7d3e83.svg" | file_url }}" isNotLazyload="true" srcset base-src="{{ "gempages_501444340413891578-cd7bc548-098c-44e5-80c6-d3359b7d3e83.svg" | file_url }}" loading="lazy"
+      id=""
+      style="--w:28px;--w-tablet:28px;--w-mobile:16px;--h:auto;--h-tablet:auto;--h-mobile:auto;--radius:var(--g-radius-none);--aspect:24/24;--aspect-tablet:24/24;--aspect-mobile:24/24;--objf:cover"
+      class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload"
+    />
+      </div>
+    </div>
+  
+      <style id="custom-css-gg8O74DTRg">
+        .gg8O74DTRg > div{
+    line-height: 0;
+}
+      </style>
+    
+    </div><div
+      data-same-height-display-contents
+      
+      class="gP3jTlgzF4 gp-relative gp-flex gp-flex-col gp-w-full"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gz26C2KMZ0"
+        class="gz26C2KMZ0"
+        style="--ta:left;--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt-mobile:0px;--mt-tablet:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:400;--size:12px;--size-tablet:14px;--size-mobile:12px;--c:#252525;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          <p>{{ section.settings.ggz26C2KMZ0_text | replace: '$locationOrigin', locationOrigin }}</p>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </li>
+      </ul>
+  </div>
+  </div>
+  
+      </div>
+      <style id="custom-css-g1pc9sbsCn">
+        .g1pc9sbsCn {
+line-height: 0;
+}
+      </style>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  
+      <style id="custom-css-gUaJWkVs7D">
+        .gUaJWkVs7D {
+
+}
+
+@media (max-width: 1023px) { /* Kích thước màn hình mobile */
+  .gUaJWkVs7D {
+    grid-template-columns: auto auto; /* 2 cột */
+    justify-content: center; /* Căn giữa */
+  }
+}
+      </style>
+    
+    </div>
+
+      
+    </gp-row>
+  
+  

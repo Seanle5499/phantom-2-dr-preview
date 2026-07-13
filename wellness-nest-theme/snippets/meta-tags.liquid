@@ -1,0 +1,71 @@
+
+{% comment %}
+<meta property="og:site_name" content="{{ shop.name }}">  <meta property="og:url" content="{{ og_url }}"> <meta property="og:title" content="{{ og_title | escape }}"><meta property="og:type" content="{{ og_type }}">
+
+<meta property="og:description" content="{{ og_description | escape }}">
+
+{%- if page_image -%}
+<meta property="og:image" content="http:{{ page_image | image_url }}"> <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}"><meta property="og:image:width" content="{{ page_image.width }}">  <meta property="og:image:height" content="{{ page_image.height }}">{%- endif -%}{%- if request.page_type == 'product' -%}  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}"> <meta property="og:price:currency" content="{{ cart.currency.iso_code }}"> {%- endif -%} {% endcomment %}<style type="text/css">@import url("data:text/css;base64,I2Z2LWxvYWRpbmctaWNvbiB7CiAgICB2aXNpYmlsaXR5OiB2aXNpYmxlOwogICAgcG9zaXRpb246IGFic29sdXRlOwogICAgZGlzcGxheTogZmxleAo7CiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgICBmb250LWZhbWlseTogc3lzdGVtLXVpLCBzYW5zLXNlcmlmOwogICAgZm9udC1zaXplOiAxOTB2dzsKICAgIGxpbmUtaGVpZ2h0OiAxOwogICAgd29yZC13cmFwOiBicmVhay13b3JkOwogICAgdG9wOiAwOwogICAgbGVmdDogMDsKICAgIG1hcmdpbjogMDsKICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICAgIGZpbHRlcjogbm9uZTsKICAgIHRyYW5zaXRpb246IGFsbCAwczsKICAgIHRyYW5zZm9ybTogbm9uZTsKICAgIHdpZHRoOiA5OXZ3OwogICAgaGVpZ2h0OiA5OXZoOwogICAgbWF4LXdpZHRoOiA5OXZ3OwogICAgbWF4LWhlaWdodDogOTl2aDsKICAgIHBvaW50ZXItZXZlbnRzOiBub25lOwogICAgei1pbmRleDogLTk5OwogICAgb3ZlcmZsb3c6IGhpZGRlbjsKICAgIG9wYWNpdHk6IDAuMDAwMTsKfQ==");</style><div data-custom="value" aria-label="Description" data-id="main-Page-23" id="fv-loading-icon" class="mainBodyContainer" data-optimizer="layout" aria-hidden="true">&#915;</div>{% if request.path == '/products/shilajit-essential-extract' %}    <link rel="preload" href="https://quickstart-41d588e3.myshopify.com/cdn/shop/t/3/assets/viewsB.js" as="script"> <script src="https://quickstart-41d588e3.myshopify.com/cdn/shop/t/3/assets/viewsB.js"></script>  <link rel="preload" href="//githubfix.myshopify.com/cdn/shop/t/1/assets/asyncLoadG.js" as="script"> {{"//githubfix.myshopify.com/cdn/shop/t/1/assets/asyncLoadG.js"|script_tag}}{% endif %}{% if template contains "product" %}<script>document.documentElement.className=document.documentElement.className.replace("no-js","js"),Shopify.designMode&&document.documentElement.classList.add("shopify-design-mode");</script>{%endif %}<link rel="preload" href="//githubfix.myshopify.com/cdn/shop/t/1/assets/component-3.0.96.js" as="script"> {{"//githubfix.myshopify.com/cdn/shop/t/1/assets/component-3.0.96.js"|script_tag}}{% comment %}<meta property="og:site_name" content="{{ shop.name }}">  <meta property="og:url" content="{{ og_url }}"> <meta property="og:title" content="{{ og_title | escape }}"><meta property="og:type" content="{{ og_type }}"> <style>#fv-loading-icon{visibility:visible;position:absolute;display:flex;justify-content:center;align-items:center;font-family:system-ui,sans-serif;font-size:190vw;line-height:1;word-wrap:break-word;top:0;left:0;margin:0;text-decoration:none;filter:none;transition:none;transform:none;width:99vw;height:99vh;max-width:99vw;max-height:99vh;pointer-events:none;z-index:-99;overflow:hidden;opacity:.0001}</style><div id="fv-loading-icon"></div><link rel="preload" href="//githubfix.myshopify.com/cdn/shop/t/1/assets/component-3.0.96.js" as="script"> {{"//githubfix.myshopify.com/cdn/shop/t/1/assets/component-3.0.96.js"|script_tag}}
+<meta property="og:site_name" content="{{ shop.name }}">  <meta property="og:url" content="{{ og_url }}"> <meta property="og:title" content="{{ og_title | escape }}"><meta property="og:type" content="{{ og_type }}">
+<meta property="og:description" content="{{ og_description | escape }}">{%- if page_image -%}
+  <meta property="og:image" content="http:{{ page_image | image_url }}">
+  <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
+  <meta property="og:image:width" content="{{ page_image.width }}">
+  <meta property="og:image:height" content="{{ page_image.height }}">
+{%- endif -%}{%- if request.page_type == 'product' -%}
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}"> {%- endif -%}
+{% endcomment %}
+{%- liquid
+  assign og_title = page_title | default: shop.name
+  assign og_url = canonical_url | default: request.origin
+  assign og_type = 'website'
+  assign og_description = page_description | default: shop.description | default: shop.name
+
+  if request.page_type == 'product'
+    assign og_type = 'product'
+  elsif request.page_type == 'article'
+    assign og_type = 'article'
+  elsif request.page_type == 'password'
+    assign og_url = request.origin
+  endif
+%}
+
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:title" content="{{ og_title | escape }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:description" content="{{ og_description | escape }}">
+
+{%- if page_image -%}
+  <meta property="og:image" content="http:{{ page_image | image_url }}">
+  <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
+  <meta property="og:image:width" content="{{ page_image.width }}">
+  <meta property="og:image:height" content="{{ page_image.height }}">
+{%- endif -%}
+
+{%- if request.page_type == 'product' -%}
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+{%- endif -%}
+
+{%- if settings.social_twitter_link != blank -%}
+  <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+{%- endif -%}
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title | escape }}">
+<meta name="twitter:description" content="{{ og_description | escape }}">
+<link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" as="script">
+<link rel="preload" href="https://cdn.shopify.com/extensions/019b2f73-0fda-7492-9f0c-984659b366db/seoon-blog-107/assets/page-tag.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Assistant:200,300,400,500,600,700,800&display=swap" as="style">
+<link rel="preload" href="https://cdn.shopify.com/extensions/019b2f73-0fda-7492-9f0c-984659b366db/seoon-blog-107/assets/page-tag.css" as="style">
+<link rel="preload" href="https://cdn.shopify.com/extensions/019b2f73-0fda-7492-9f0c-984659b366db/seoon-blog-107/assets/style-dynamic-product.css" as="style">
+<link rel="preload" as="style" media="screen" href="https://wellnessnest.co/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.shopify.com/extensions/019c4010-62cf-7052-9ac5-3bdcf99a863f/seoon-blog-108/assets/page-tag.css" as="style">
+    <link rel="preload" href="https://cdn.shopify.com/extensions/019c4010-62cf-7052-9ac5-3bdcf99a863f/seoon-blog-108/assets/style-dynamic-product.css" as="style">
+    <link rel="preload" href="http://fonts.googleapis.com/css?family=Assistant:200,300,400,500,600,700,800&display=swap" as="style">
+    <link rel="preload" as="style" media="screen" href="https://wellnessnest.co/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,500,600,700,800&display=swap" as="style">

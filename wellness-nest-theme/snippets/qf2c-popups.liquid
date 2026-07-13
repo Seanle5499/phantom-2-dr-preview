@@ -1,0 +1,35 @@
+{% comment %}
+  Quiz Funnel — Commitment Gate Popups
+  Three popup overlays that appear during loading progress bars (Step 16).
+  Each pauses the loading bar at ~49% and requires user confirmation to continue.
+{% endcomment %}
+
+<!-- Popup 1: Commitment gate -->
+<div class="qf-popup-overlay" id="firstPopupOverlay">
+  <div class="qf-popup">
+    <div class="qf-popup__title">Are you ready to commit to feeling like yourself again?</div>
+    <div class="qf-popup__btns">
+      <button type="button" class="qf-popup__btn" onclick="qfContProg('first')">Yes — I'm Ready</button>
+    </div>
+  </div>
+</div>
+
+<!-- Popup 2: Education gate -->
+<div class="qf-popup-overlay" id="secondPopupOverlay">
+  <div class="qf-popup">
+    <div class="qf-popup__title" style="font-size:16px;">Your body is missing critical trace minerals. That's the root cause — not age.</div>
+    <div class="qf-popup__btns" style="margin-top:20px;">
+      <button type="button" class="qf-popup__btn" onclick="qfContProg('second')">I Understand — Continue</button>
+    </div>
+  </div>
+</div>
+
+<!-- Popup 3: Social proof gate -->
+<div class="qf-popup-overlay" id="thirdPopupOverlay">
+  <div class="qf-popup">
+    <div class="qf-popup__title">93% of men with your score recovered within 30 days. Your protocol is ready.</div>
+    <div class="qf-popup__btns">
+      <button type="button" class="qf-popup__btn" onclick="qfContProg('third')">Show Me My Protocol &rarr;</button>
+    </div>
+  </div>
+</div>

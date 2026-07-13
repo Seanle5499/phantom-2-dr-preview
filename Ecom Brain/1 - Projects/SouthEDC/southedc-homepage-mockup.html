@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SouthEDC — Concealed Carry, Redesigned for All-Day Comfort</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#0a0a0b;--ink:#111;--white:#fff;
+  --accent:#FF3132;--accent-hover:#d92528;
+  --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;
+  --gray-500:#6B7280;--gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--gray-900:#111827;
+  --red:#DC2626;--gold:#d4af37;
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --font-display:'Oswald',sans-serif;
+}
+html,body{background:var(--white);color:var(--gray-900);font-family:var(--font-sans);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+
+/* === ANNOUNCEMENT === */
+.announce{background:var(--black);color:var(--white);text-align:center;padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:0.5px}
+.announce b{color:#facc15}
+
+/* === HEADER === */
+.header{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:1px solid var(--gray-200);background:var(--white);position:sticky;top:0;z-index:50}
+.logo{font-family:var(--font-display);font-size:26px;font-weight:700;letter-spacing:3px;color:var(--black)}
+.nav{display:flex;gap:32px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.nav a:hover{color:var(--accent)}
+.header-right{display:flex;gap:20px;align-items:center;font-size:13px;font-weight:600}
+.cart-btn{background:var(--black);color:var(--white);padding:8px 16px;border-radius:6px;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+
+/* === HERO === */
+.hero{position:relative;background:linear-gradient(135deg,#0a0a0b 0%,#1a1a1f 100%);color:var(--white);padding:100px 40px 120px;overflow:hidden;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,49,50,0.15) 0%,transparent 60%);pointer-events:none}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:100px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:#a1a1a8;margin-bottom:28px}
+.hero-eyebrow .dot{width:6px;height:6px;background:var(--accent);border-radius:50%}
+.hero h1{font-family:var(--font-display);font-size:64px;font-weight:700;line-height:1.05;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:19px;color:#c1c1c8;max-width:640px;margin:0 auto 36px;line-height:1.55}
+.hero-cta{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.btn-primary{background:var(--accent);color:var(--white);padding:16px 34px;font-size:15px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;border:none;border-radius:8px;transition:background .2s}
+.btn-primary:hover{background:var(--accent-hover)}
+.btn-secondary{background:transparent;color:var(--white);padding:16px 30px;font-size:15px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;border:1.5px solid rgba(255,255,255,0.3);border-radius:8px;transition:all .2s}
+.btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,0.05)}
+.hero-proof{display:inline-flex;align-items:center;gap:16px;margin-top:44px;padding:14px 22px;background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.1);border-radius:100px;font-size:13.5px;color:#c1c1c8}
+.hero-proof .stars{color:#facc15;letter-spacing:2px}
+.hero-proof b{color:var(--white)}
+.hero-proof .divider{width:1px;height:16px;background:rgba(255,255,255,0.15)}
+
+/* === USP BAR === */
+.usp-bar{background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:22px 40px}
+.usp-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.usp-item{display:flex;align-items:center;gap:12px;justify-content:center}
+.usp-icon{font-size:24px}
+.usp-text{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px}
+.usp-text small{display:block;font-size:11px;font-weight:500;color:var(--gray-500);text-transform:none;letter-spacing:0;margin-top:2px}
+
+/* === SECTION BASE === */
+.section{padding:80px 40px;max-width:1200px;margin:0 auto}
+.section-dark{background:var(--black);color:var(--white);padding:80px 40px}
+.section-dark-inner{max-width:1200px;margin:0 auto}
+.section-alt{background:var(--gray-50);padding:80px 40px}
+.section-alt-inner{max-width:1200px;margin:0 auto}
+.eyebrow{font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+.section-title{font-family:var(--font-display);font-size:40px;font-weight:600;text-transform:uppercase;letter-spacing:1px;line-height:1.1;margin-bottom:12px}
+.section-lede{font-size:16px;color:var(--gray-500);max-width:640px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header .section-lede{margin:12px auto 0}
+.section-header .line{width:60px;height:3px;background:var(--accent);margin:22px auto 0}
+.section-dark .eyebrow{color:#facc15}
+
+/* === CATEGORY GRID === */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cat-card{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--gray-100);border:1px solid var(--gray-200);cursor:pointer;transition:transform .25s,box-shadow .25s}
+.cat-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.12)}
+.cat-img{position:absolute;inset:0;background:linear-gradient(135deg,#374151 0%,#111827 100%);display:flex;align-items:center;justify-content:center;font-size:56px;opacity:0.4}
+.cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 55%,transparent 100%)}
+.cat-content{position:absolute;bottom:0;left:0;right:0;padding:28px;color:var(--white)}
+.cat-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#facc15;margin-bottom:8px}
+.cat-name{font-family:var(--font-display);font-size:26px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.cat-desc{font-size:14px;color:#d1d5db;margin-bottom:16px}
+.cat-arrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--white)}
+.cat-arrow::after{content:'→';font-size:16px;transition:transform .2s}
+.cat-card:hover .cat-arrow::after{transform:translateX(4px)}
+
+/* === PRODUCT SPOTLIGHT === */
+.spotlight{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.spotlight-reverse{direction:rtl}
+.spotlight-reverse > *{direction:ltr}
+.spotlight-img{aspect-ratio:1;background:linear-gradient(135deg,#1f2937,#0a0a0b);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:14px;padding:24px;text-align:center;position:relative;overflow:hidden}
+.spotlight-img::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,49,50,0.10),transparent 70%)}
+.spotlight-badge{position:absolute;top:20px;left:20px;background:var(--red);color:var(--white);font-size:11px;font-weight:800;padding:6px 12px;border-radius:100px;text-transform:uppercase;letter-spacing:1px;z-index:2}
+.spotlight-rating{display:flex;align-items:center;gap:10px;margin-bottom:16px;font-size:14px;color:var(--gray-600)}
+.spotlight-rating .stars{color:#facc15;letter-spacing:2px;font-size:16px}
+.spotlight-rating b{color:var(--ink);font-weight:700}
+.spotlight-title{font-family:var(--font-display);font-size:44px;font-weight:600;text-transform:uppercase;letter-spacing:1px;line-height:1.05;margin-bottom:14px}
+.spotlight-sub{font-size:17px;color:var(--gray-600);margin-bottom:24px;line-height:1.5}
+.spotlight-bullets{list-style:none;margin-bottom:28px}
+.spotlight-bullets li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--gray-200);font-size:15px;color:var(--gray-700)}
+.spotlight-bullets li:last-child{border-bottom:none}
+.spotlight-bullets li::before{content:'✓';color:var(--accent);font-weight:800;font-size:16px;flex-shrink:0}
+.spotlight-price{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
+.spotlight-price .sale{font-size:32px;font-weight:800;color:var(--ink)}
+.spotlight-price .compare{font-size:18px;color:var(--gray-500);text-decoration:line-through}
+.spotlight-price .save{background:var(--red);color:var(--white);font-size:11px;font-weight:800;padding:5px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:1px}
+.spotlight-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dark{background:var(--black);color:var(--white);padding:14px 30px;font-size:14px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;border:none;border-radius:8px;transition:background .2s}
+.btn-dark:hover{background:var(--gray-800)}
+.btn-outline{background:transparent;color:var(--ink);padding:14px 26px;font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;border:1.5px solid var(--gray-300);border-radius:8px;transition:all .2s}
+.btn-outline:hover{border-color:var(--ink)}
+
+/* === COMPATIBILITY === */
+.compat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:20px}
+.compat-card{background:var(--white);border:1px solid var(--gray-200);border-radius:10px;padding:20px 12px;text-align:center;transition:all .2s;cursor:pointer}
+.compat-card:hover{border-color:var(--ink);transform:translateY(-2px)}
+.compat-icon{font-size:32px;margin-bottom:6px}
+.compat-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--gray-700)}
+.compat-note{text-align:center;margin-top:32px;font-family:var(--font-display);font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--gray-700)}
+.compat-note b{color:var(--ink)}
+
+/* === STORY === */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story-img{aspect-ratio:4/5;background:linear-gradient(135deg,#374151 0%,#0a0a0b 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:14px;text-align:center;padding:24px;position:relative;overflow:hidden}
+.story-img::after{content:'EST. 2015 · GREENSBORO, NC';position:absolute;bottom:20px;left:20px;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.4);font-weight:600}
+.story-content .eyebrow{color:#facc15}
+.story-content h2{font-family:var(--font-display);font-size:44px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;line-height:1.1;margin-bottom:20px;color:var(--white)}
+.story-content p{font-size:15.5px;color:#c1c1c8;line-height:1.75;margin-bottom:18px}
+.story-content p b{color:var(--white)}
+.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1)}
+.story-stat .num{font-family:var(--font-display);font-size:38px;font-weight:600;color:var(--white);line-height:1}
+.story-stat .label{font-size:11px;color:#a1a1a8;text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
+
+/* === PILLARS === */
+.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pillar-card{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:32px 24px;text-align:left;transition:all .2s}
+.pillar-card:hover{border-color:var(--ink);box-shadow:0 12px 24px rgba(0,0,0,0.06)}
+.pillar-num{font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--accent);letter-spacing:2px;margin-bottom:16px}
+.pillar-title{font-family:var(--font-display);font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
+.pillar-desc{font-size:14px;color:var(--gray-600);line-height:1.65}
+
+/* === REVIEWS === */
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;padding:32px}
+.review-stars{color:#facc15;font-size:16px;letter-spacing:2px;margin-bottom:14px}
+.review-quote{font-size:16px;color:var(--gray-800);line-height:1.6;margin-bottom:20px;font-weight:500}
+.review-author{display:flex;align-items:center;gap:12px}
+.review-avatar{width:44px;height:44px;border-radius:50%;background:var(--black);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.review-name{font-weight:700;font-size:14px}
+.review-role{font-size:12px;color:var(--gray-500);margin-top:2px}
+.review-verified{color:var(--accent);font-size:11px;font-weight:700;margin-top:2px}
+
+/* === TRUSTED BY === */
+.trusted-bar{background:var(--gray-100);padding:36px 40px;border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+.trusted-inner{max-width:1200px;margin:0 auto;text-align:center}
+.trusted-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--gray-500);margin-bottom:20px}
+.trusted-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;font-family:var(--font-display);font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray-700)}
+.trusted-list span::before{content:'●';color:var(--accent);margin-right:12px;font-size:8px;vertical-align:middle}
+
+/* === GUARANTEE === */
+.guarantee{background:linear-gradient(135deg,#FF3132 0%,#a01d1e 100%);color:var(--white);padding:80px 40px;text-align:center}
+.guarantee-inner{max-width:820px;margin:0 auto}
+.guarantee-eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,0.8);margin-bottom:20px}
+.guarantee h2{font-family:var(--font-display);font-size:48px;font-weight:600;text-transform:uppercase;letter-spacing:1px;line-height:1.1;margin-bottom:22px}
+.guarantee p{font-size:17px;line-height:1.6;color:rgba(255,255,255,0.92);margin-bottom:32px}
+.btn-white{background:var(--white);color:var(--accent);padding:16px 34px;font-size:14px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;border:none;border-radius:8px;transition:all .2s}
+.btn-white:hover{background:var(--gray-100)}
+
+/* === NEWSLETTER === */
+.newsletter{background:var(--black);color:var(--white);padding:60px 40px;text-align:center}
+.newsletter-inner{max-width:600px;margin:0 auto}
+.newsletter h3{font-family:var(--font-display);font-size:30px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.newsletter p{font-size:14px;color:#a1a1a8;margin-bottom:24px}
+.newsletter-form{display:flex;gap:8px;max-width:440px;margin:0 auto}
+.newsletter-input{flex:1;padding:14px 18px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:var(--white);font-size:14px;font-family:inherit}
+.newsletter-input::placeholder{color:#a1a1a8}
+.newsletter-btn{padding:14px 24px;background:var(--accent);color:var(--white);border:none;border-radius:8px;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+
+/* === FOOTER === */
+footer{background:var(--black);color:#a1a1a8;padding:60px 40px 30px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand .logo{color:var(--white);margin-bottom:12px}
+.footer-brand p{font-size:13.5px;line-height:1.7;max-width:280px}
+.footer-col h4{color:var(--white);font-family:var(--font-display);font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;font-weight:600}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col a{font-size:13.5px;color:#a1a1a8}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{max-width:1200px;margin:20px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#6b6b73;flex-wrap:wrap;gap:12px}
+.footer-payments{display:flex;gap:8px}
+.pay-icon{background:rgba(255,255,255,0.06);padding:4px 10px;border-radius:4px;font-size:10px;font-weight:700;color:#c1c1c8;letter-spacing:0.5px}
+
+/* === RESPONSIVE === */
+@media(max-width:900px){
+  .hero{padding:70px 20px 90px}
+  .hero h1{font-size:42px}
+  .hero-sub{font-size:16px}
+  .header{padding:14px 20px}
+  .nav{display:none}
+  .usp-inner{grid-template-columns:repeat(2,1fr);gap:18px}
+  .section,.section-dark,.section-alt{padding:56px 20px}
+  .section-title,.story-content h2,.spotlight-title,.guarantee h2{font-size:32px}
+  .cat-grid{grid-template-columns:1fr;gap:16px}
+  .spotlight,.story-grid{grid-template-columns:1fr;gap:32px}
+  .spotlight-reverse{direction:ltr}
+  .pillar-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .review-grid{grid-template-columns:1fr}
+  .compat-grid{grid-template-columns:repeat(3,1fr)}
+  .story-stats{grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .story-stat .num{font-size:28px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .newsletter-form{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- =========== ANNOUNCEMENT =========== -->
+<div class="announce">
+  🇺🇸 <b>USA250</b> — 25% OFF PRE-JULY 4TH SALE · FREE U.S. SHIPPING ON EVERY ORDER
+</div>
+
+<!-- =========== HEADER =========== -->
+<header class="header">
+  <div class="logo">SOUTHEDC</div>
+  <nav class="nav">
+    <a href="#holsters">Holsters</a>
+    <a href="#shirts">Concealed Shirts</a>
+    <a href="#briefs">Briefs</a>
+    <a href="#story">Our Story</a>
+  </nav>
+  <div class="header-right">
+    <a href="#">Account</a>
+    <button class="cart-btn">Cart · 0</button>
+  </div>
+</header>
+
+<!-- =========== HERO =========== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="dot"></span> Veteran-Owned · Handcrafted in Greensboro, NC</div>
+    <h1>Carry Like It's<br>Not Even <em>There.</em></h1>
+    <p class="hero-sub">
+      Designed for concealed carriers who are done with holsters that dig, print, and bite into skin all day.
+      Precision-built in the USA. Trusted by 12,500+ everyday carriers, off-duty LEOs, and CCW instructors.
+    </p>
+    <div class="hero-cta">
+      <button class="btn-primary">Shop Phantom 2.0 — Save 50%</button>
+      <button class="btn-secondary">See It In Action</button>
+    </div>
+    <div class="hero-proof">
+      <span class="stars">★★★★★</span>
+      <b>4.7 / 5</b>
+      <span class="divider"></span>
+      <span>368 verified reviews on the Phantom 2.0</span>
+    </div>
+  </div>
+</section>
+
+<!-- =========== USP BAR =========== -->
+<div class="usp-bar">
+  <div class="usp-inner">
+    <div class="usp-item">
+      <div class="usp-icon">🇺🇸</div>
+      <div class="usp-text">Made in U.S.A<small>Handcrafted in NC</small></div>
+    </div>
+    <div class="usp-item">
+      <div class="usp-icon">🎖️</div>
+      <div class="usp-text">Veteran Owned<small>Family built since 2015</small></div>
+    </div>
+    <div class="usp-item">
+      <div class="usp-icon">✈️</div>
+      <div class="usp-text">Free U.S. Shipping<small>On every order</small></div>
+    </div>
+    <div class="usp-item">
+      <div class="usp-icon">🛡️</div>
+      <div class="usp-text">30-Day Fit Guarantee<small>Or your money back</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- =========== CATEGORY GRID =========== -->
+<section class="section">
+  <div class="section-header">
+    <div class="eyebrow">Shop The Line</div>
+    <h2 class="section-title">Built For How You Actually Carry</h2>
+    <p class="section-lede">Three purpose-built systems — one goal: disappear the gun, keep the comfort.</p>
+    <div class="line"></div>
+  </div>
+
+  <div class="cat-grid">
+    <a href="/products/phantom-2-0-iwb-holster" class="cat-card" id="holsters">
+      <div class="cat-img">🔫</div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-tag">IWB Holster</div>
+        <div class="cat-name">Phantom 2.0 Holster</div>
+        <div class="cat-desc">Patented Breakout Channel design. Draw in a flick — even when pinned.</div>
+        <div class="cat-arrow">Shop Holsters</div>
+      </div>
+    </a>
+
+    <a href="/products/2tac-ghost-tee" class="cat-card" id="shirts">
+      <div class="cat-img">👕</div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-tag">Concealed Carry Shirt</div>
+        <div class="cat-name">Ghost Tee</div>
+        <div class="cat-desc">Dual built-in holsters. Zero printing. Wears like a normal crew-neck.</div>
+        <div class="cat-arrow">Shop Shirts</div>
+      </div>
+    </a>
+
+    <a href="/products/phantom-brief" class="cat-card" id="briefs">
+      <div class="cat-img">🩲</div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-tag">Deep Concealment</div>
+        <div class="cat-name">Phantom Brief</div>
+        <div class="cat-desc">Carry under gym shorts, sweats, or a suit. No belt. No clips. No print.</div>
+        <div class="cat-arrow">Shop Briefs</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- =========== SPOTLIGHT 1: PHANTOM 2.0 =========== -->
+<div class="section-alt">
+  <div class="section-alt-inner">
+    <div class="spotlight">
+      <div class="spotlight-img">
+        <div class="spotlight-badge">Save 50% · Bestseller</div>
+        📸 [HERO] Phantom 2.0 IWB Holster — hand-buffed edges, breakout channel visible
+      </div>
+      <div>
+        <div class="eyebrow">The Bestseller · Phantom 2.0 IWB</div>
+        <div class="spotlight-rating">
+          <span class="stars">★★★★★</span>
+          <b>4.7 / 5</b>
+          <span>· 368 verified reviews</span>
+        </div>
+        <h2 class="spotlight-title">The IWB You Actually Forget You're Wearing.</h2>
+        <p class="spotlight-sub">
+          A faux-leather IWB engineered around the one thing most holsters can't solve: all-day comfort against skin. Covers the grip, wicks sweat, flexes with your body — not against it.
+        </p>
+        <ul class="spotlight-bullets">
+          <li>No printing, even under a T-shirt</li>
+          <li>Patented Breakout Channel — draw instantly, even when pinned</li>
+          <li>Full-grip back panel so metal never bites skin</li>
+          <li>Dual reinforced clips — no swing, no shift, no re-adjusting</li>
+          <li><b>FREE mag carrier included</b> ($20 value)</li>
+        </ul>
+        <div class="spotlight-price">
+          <span class="sale">$89.99</span>
+          <span class="compare">$179.98</span>
+          <span class="save">Save 50%</span>
+        </div>
+        <div class="spotlight-cta">
+          <a href="/products/phantom-2-0-iwb-holster"><button class="btn-dark">Shop Phantom 2.0 →</button></a>
+          <button class="btn-outline">Watch The Draw</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========== SPOTLIGHT 2: GHOST TEE =========== -->
+<section class="section">
+  <div class="spotlight spotlight-reverse">
+    <div class="spotlight-img">
+      <div class="spotlight-badge">35,000+ Sold</div>
+      📸 [HERO] Ghost Tee — worn under button-up, concealed handgun on hip, zero print
+    </div>
+    <div>
+      <div class="eyebrow">Bestseller · Concealed Carry Shirt</div>
+      <div class="spotlight-rating">
+        <span class="stars">★★★★★</span>
+        <b>4.8 / 5</b>
+        <span>· Loved by 35,000+ carriers</span>
+      </div>
+      <h2 class="spotlight-title">Looks Like A Tee. Carries Like A Holster.</h2>
+      <p class="spotlight-sub">
+        Ghost Tee is built for daily carriers who want zero attention and zero printing.
+        Dual built-in holsters — one on each side — so it works for right or left-hand draws.
+        4-way stretch MicroPoly/Lycra keeps you cool, dry, and locked in.
+      </p>
+      <ul class="spotlight-bullets">
+        <li>Dual universal holsters — right or left-hand shooters</li>
+        <li>Fits Compact, Subcompact, and Full-Size handguns</li>
+        <li>4-way stretch fabric — no bouncing, no shifting</li>
+        <li>Wear standalone or as a base layer under any outer</li>
+        <li>Trusted by federal agents, LEO, and executive protection</li>
+      </ul>
+      <div class="spotlight-price">
+        <span class="sale">$39.95</span>
+        <span class="compare">$69.99</span>
+        <span class="save">Save 42%</span>
+      </div>
+      <div class="spotlight-cta">
+        <a href="/products/2tac-ghost-tee"><button class="btn-dark">Shop Ghost Tee →</button></a>
+        <button class="btn-outline">See Bundle Pricing</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== COMPATIBILITY =========== -->
+<div class="section-alt">
+  <div class="section-alt-inner">
+    <div class="section-header">
+      <div class="eyebrow">Fits Your Firearm</div>
+      <h2 class="section-title">Built To Fit 99% Of Handguns</h2>
+      <p class="section-lede" style="margin:12px auto 0">Compatible with the carry pistols people actually run — compact, subcompact, and mid-size defense platforms.</p>
+      <div class="line"></div>
+    </div>
+    <div class="compat-grid">
+      <div class="compat-card"><div class="compat-icon">🔫</div><div class="compat-label">Glock 19 / 43</div></div>
+      <div class="compat-card"><div class="compat-icon">🔫</div><div class="compat-label">Sig P365</div></div>
+      <div class="compat-card"><div class="compat-icon">🔫</div><div class="compat-label">S&W Shield</div></div>
+      <div class="compat-card"><div class="compat-icon">🔫</div><div class="compat-label">Springfield Hellcat</div></div>
+      <div class="compat-card"><div class="compat-icon">🔫</div><div class="compat-label">Ruger Max-9</div></div>
+      <div class="compat-card"><div class="compat-icon">🔫</div><div class="compat-label">1911 Compact</div></div>
+    </div>
+    <div class="compat-note">Zero Print · <b>Zero Shift</b> · Zero Bounce</div>
+  </div>
+</div>
+
+<!-- =========== STORY =========== -->
+<div class="section-dark" id="story">
+  <div class="section-dark-inner">
+    <div class="story-grid">
+      <div class="story-img">
+        📸 [BW PORTRAIT] Kevin & sons in the Greensboro workshop, holsters on the bench
+      </div>
+      <div class="story-content">
+        <div class="eyebrow">Veteran-Owned · Family Built</div>
+        <h2>Started By A Vet. Built Around One Question.</h2>
+        <p>
+          In 2015, Kevin moved his family to Chicago, where protecting them stopped being theoretical.
+          The holsters on the market either dug into his side all day, or slowed his draw when it mattered.
+          So he built his own — and invented the <b>breakout channel</b> that lets you draw with a flick of the wrist, even when pinned.
+        </p>
+        <p>
+          Ten years later, <b>SouthEDC is still veteran-owned and family-operated</b> — handcrafting every holster in Greensboro, North Carolina. Same workshop. Same standard. No shortcuts.
+        </p>
+        <div class="story-stats">
+          <div class="story-stat">
+            <div class="num">12,500+</div>
+            <div class="label">Daily carriers</div>
+          </div>
+          <div class="story-stat">
+            <div class="num">4.7★</div>
+            <div class="label">Verified rating</div>
+          </div>
+          <div class="story-stat">
+            <div class="num">10 yrs</div>
+            <div class="label">Handcrafted in USA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========== PILLARS =========== -->
+<section class="section">
+  <div class="section-header">
+    <div class="eyebrow">Why SouthEDC</div>
+    <h2 class="section-title">Four Standards. Zero Compromise.</h2>
+    <div class="line"></div>
+  </div>
+  <div class="pillar-grid">
+    <div class="pillar-card">
+      <div class="pillar-num">01</div>
+      <div class="pillar-title">Zero Printing</div>
+      <div class="pillar-desc">Slim, hip-hugging profile pulls the grip flat to the body. Invisible under a T-shirt, sweats, or a suit.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-num">02</div>
+      <div class="pillar-title">All-Day Comfort</div>
+      <div class="pillar-desc">Every edge is hand-buffed. Faux-leather back panel wicks sweat and keeps steel off skin — from dawn to shift change.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-num">03</div>
+      <div class="pillar-title">Instant Access</div>
+      <div class="pillar-desc">The Breakout Channel lets you present your weapon with a flick of the wrist — even if you're pinned or overpowered.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-num">04</div>
+      <div class="pillar-title">Built In The U.S.A.</div>
+      <div class="pillar-desc">Handcrafted one at a time in Greensboro, NC. No overseas contract manufacturing. Built to last, not to break in.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== REVIEWS =========== -->
+<div class="section-alt">
+  <div class="section-alt-inner">
+    <div class="section-header">
+      <div class="eyebrow">The Range Says It Better</div>
+      <h2 class="section-title">12,500+ Carriers. 4.7-Star Average.</h2>
+      <div class="line"></div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"As a concealed carry instructor, I recommend the Phantom 2.0 to my students — it's the only IWB that truly delivers all-day comfort and reliable concealment."</div>
+        <div class="review-author">
+          <div class="review-avatar">RS</div>
+          <div>
+            <div class="review-name">Ryan S.</div>
+            <div class="review-role">CCW Instructor</div>
+            <div class="review-verified">✓ Verified Buyer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"Best shop around for your tactical needs. Quality is exactly what I expect from reliable gear — my Ghost Tee has been in daily rotation for 6 months and still holds shape."</div>
+        <div class="review-author">
+          <div class="review-avatar">JM</div>
+          <div>
+            <div class="review-name">Joe M.</div>
+            <div class="review-role">Off-Duty Carrier</div>
+            <div class="review-verified">✓ Verified Buyer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"I've tried Kydex, hybrid, and every 'comfort' holster on the market. The Phantom 2.0 is the first one I don't take off the second I get home."</div>
+        <div class="review-author">
+          <div class="review-avatar">MK</div>
+          <div>
+            <div class="review-name">Marcus K.</div>
+            <div class="review-role">Daily Carrier · TX</div>
+            <div class="review-verified">✓ Verified Buyer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========== TRUSTED BY =========== -->
+<div class="trusted-bar">
+  <div class="trusted-inner">
+    <div class="trusted-label">Trusted daily by</div>
+    <div class="trusted-list">
+      <span>Federal Agents</span>
+      <span>Law Enforcement</span>
+      <span>Special Forces Vets</span>
+      <span>Executive Protection</span>
+      <span>CCW Instructors</span>
+      <span>Range Officers</span>
+    </div>
+  </div>
+</div>
+
+<!-- =========== GUARANTEE =========== -->
+<div class="guarantee">
+  <div class="guarantee-inner">
+    <div class="guarantee-eyebrow">The SouthEDC Promise</div>
+    <h2>Wear It 30 Days. If It's Not The Most Comfortable You've Owned, We Buy It Back.</h2>
+    <p>
+      We build every SouthEDC piece the way we'd want to carry it — quiet, invisible, and ready.
+      Carry it for 30 days. Sweat in it. Sit in it. Drive in it. If it doesn't disappear on your hip, ship it back for a full refund.
+    </p>
+    <button class="btn-white">Shop The Bestsellers</button>
+  </div>
+</div>
+
+<!-- =========== NEWSLETTER =========== -->
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <h3>Get Range-Tested Drops First</h3>
+    <p>New products, restocks, and carrier-only pricing — direct to your inbox. No spam.</p>
+    <form class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+      <button type="submit" class="newsletter-btn">Enlist</button>
+    </form>
+  </div>
+</div>
+
+<!-- =========== FOOTER =========== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">SOUTHEDC</div>
+      <p>Veteran-owned. Family-built. Handcrafted concealed carry gear from Greensboro, North Carolina — since 2015.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="/products/phantom-2-0-iwb-holster">Phantom 2.0 Holster</a></li>
+        <li><a href="/products/2tac-ghost-tee">Ghost Tee</a></li>
+        <li><a href="/products/phantom-brief">Phantom Brief</a></li>
+        <li><a href="/collections/all">All Products</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Fit & Sizing</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">30-Day Guarantee</a></li>
+        <li><a href="mailto:support@southedc.store">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 SouthEDC · Handcrafted in Greensboro, NC 🇺🇸</div>
+    <div class="footer-payments">
+      <span class="pay-icon">VISA</span>
+      <span class="pay-icon">MC</span>
+      <span class="pay-icon">AMEX</span>
+      <span class="pay-icon">PAYPAL</span>
+      <span class="pay-icon">SHOP</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1012 @@
+
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:var(--g-s-l);--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="goE65l6kCF gp-custom-code">
+      <div>
+    <!-- ═══ HTML Structure ═══════════════════════════════════════════════ -->
+<div class="im8-variant-selects-wrapper">
+  <!-- 2. Plan Cards -->
+  <fieldset>
+    <span class="vs-label">2. Subscribe &amp; Save:</span>
+    <section class="plan-cards-wrapper" data-plan-cards></section>
+    <div
+      class="one-time-purchase-standalone"
+      data-otp-container
+      style="display: none"
+    >
+      <a href="#" class="one-time-purchase-link" data-otp-link>
+        One Time Purchase <span class="otp-price" data-otp-price></span>
+      </a>
+    </div>
+
+    <!-- Add to cart button -->
+    <div class="im8-add-to-cart-container">
+      <button type="button" class="im8-add-to-cart-btn" data-add-to-cart-btn>
+        ADD TO CART
+      </button>
+    </div>
+  </fieldset>
+</div>
+
+<!-- ═══ JavaScript ══════════════════════════════════════════════════ -->
+    </div>
+    </div>
+  
+      <style id="custom-css-goE65l6kCF">
+        @font-face {
+  font-family: 'Aeonik';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/Aeonik-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/Aeonik-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/Aeonik-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/Aeonik-Black.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NB Architekt';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/NBArchitekt-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCArizonaFlare';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/ABCArizonaFlare-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCArizonaFlare';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/ABCArizonaFlare-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCArizonaFlare';
+  src: url('https://im8health.com/cdn/shop/t/121/assets/ABCArizonaFlare-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design Tokens ──────────────────────────────────────────────────── */
+.im8-variant-selects-wrapper {
+  --im8-red: #a40011;
+  --im8-maroon: #50000b;
+  --im8-border-warm: #e1cbb9;
+  --im8-text-primary: #50000b;
+  --im8-text-secondary: rgba(80, 0, 11, 0.6);
+  --im8-text-muted: rgba(80, 0, 11, 0.35);
+  --im8-border-active: #a40011;
+  --im8-shadow-sm:
+    0 2px 8px rgba(80, 0, 11, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --im8-shadow-md:
+    0 4px 16px rgba(80, 0, 11, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --im8-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --im8-radius-lg: 14px;
+
+  font-family:
+    "Aeonik",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif !important;
+  color: var(--im8-text-primary) !important;
+  width: 100% !important;
+}
+
+.im8-variant-selects-wrapper *,
+.im8-variant-selects-wrapper *::before,
+.im8-variant-selects-wrapper *::after {
+  box-sizing: border-box !important;
+}
+
+.im8-variant-selects-wrapper fieldset {
+  border: none !important;
+  margin: 0 0 24px !important;
+  padding: 0 !important;
+}
+
+.im8-variant-selects-wrapper .vs-label {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--im8-text-primary) !important;
+  margin-bottom: 12px !important;
+  display: block !important;
+}
+
+/* ── Flavor Dropdown ────────────────────────────────────────────────── */
+.im8-flavor-dropdown {
+  position: relative !important;
+  width: 100% !important;
+
+  z-index: 10 !important;
+  overflow: hidden !important;
+}
+
+.im8-flavor-dropdown.is-expanded {
+
+  z-index: 20 !important;
+  overflow: visible !important;
+}
+
+.im8-flavor-dropdown.is-expanded .im8-flavor-dropdown__trigger {
+  border-color: var(--im8-border-active) !important;
+  border-radius: var(--im8-radius-lg) var(--im8-radius-lg) 0 0 !important;
+  box-shadow: none !important;
+}
+
+.im8-flavor-dropdown .im8-flavor-dropdown__trigger:hover {
+
+  border-color: rgba(80, 0, 11, 0.25) !important;
+  box-shadow: var(--im8-shadow-md) !important;
+}
+
+.im8-flavor-dropdown__trigger {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 16px 0 0 !important;
+  gap: 14px !important;
+  min-height: 80px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  border: 1px solid var(--im8-border-warm) !important;
+  border-radius: var(--im8-radius-lg) !important;
+  background: #fff !important;
+  box-shadow: var(--im8-shadow-sm) !important;
+  transition:
+    border-color 0.3s var(--im8-ease-out),
+    box-shadow 0.3s var(--im8-ease-out),
+    border-radius 0.3s ease !important;
+}
+
+.im8-flavor-dropdown__thumb {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: var(--im8-radius-lg) 0 0 var(--im8-radius-lg) !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  flex-shrink: 0 !important;
+}
+
+.im8-flavor-dropdown.is-expanded .im8-flavor-dropdown__thumb {
+  border-bottom-left-radius: 0 !important;
+}
+
+.im8-flavor-dropdown__selected-info {
+  flex: 1 !important;
+  min-width: 0 !important;
+  padding: 4px 0 !important;
+}
+
+.im8-flavor-dropdown__selected-name {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--im8-text-primary) !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.02em !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.im8-flavor-dropdown__selected-sub {
+  font-size: 13px !important;
+  color: var(--im8-text-secondary) !important;
+  margin-top: 2px !important;
+}
+
+.im8-flavor-dropdown__chevron {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.35s var(--im8-ease-out) !important;
+  color: var(--im8-text-muted) !important;
+}
+
+.im8-flavor-dropdown.is-expanded .im8-flavor-dropdown__chevron {
+  transform: rotate(180deg) !important;
+  color: var(--im8-text-secondary) !important;
+}
+
+.im8-flavor-dropdown__options {
+  position: absolute !important;
+  top: 100% !important;
+  width: 100% !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  background: #fff !important;
+  border: 1px solid transparent !important;
+  border-top: none !important;
+  border-radius: 0 0 var(--im8-radius-lg) var(--im8-radius-lg) !important;
+  transition:
+    max-height 0.35s var(--im8-ease-out),
+    opacity 0.25s ease !important;
+  z-index: 20 !important;
+}
+
+.im8-flavor-dropdown.is-expanded .im8-flavor-dropdown__options {
+  max-height: 500px !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  border-color: var(--im8-border-active) !important;
+  box-shadow:
+    0 16px 48px rgba(80, 0, 11, 0.16),
+    0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.im8-flavor-dropdown__option {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 0 16px 0 0 !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease !important;
+  min-height: 76px !important;
+  overflow: hidden !important;
+  border-top: 1px solid rgba(80, 0, 11, 0.05) !important;
+}
+
+.im8-flavor-dropdown__option:last-child {
+  border-radius: 0 0 var(--im8-radius-lg) var(--im8-radius-lg) !important;
+}
+
+.im8-flavor-dropdown__option:hover {
+  background: rgba(80, 0, 11, 0.035) !important;
+}
+
+.im8-flavor-dropdown__option.is-selected {
+  background: rgba(164, 0, 17, 0.06) !important;
+}
+
+.im8-flavor-dropdown__option-thumb {
+  width: 76px !important;
+  height: 76px !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}
+
+.im8-flavor-dropdown__option:last-child .im8-flavor-dropdown__option-thumb {
+  border-bottom-left-radius: var(--im8-radius-lg) !important;
+}
+
+.im8-flavor-dropdown__option-info {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.im8-flavor-dropdown__option-name {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--im8-text-primary) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.im8-flavor-dropdown__check {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0 !important;
+  color: transparent !important;
+  transition: color 0.2s ease !important;
+}
+
+.im8-flavor-dropdown__option.is-selected .im8-flavor-dropdown__check {
+  color: var(--im8-red) !important;
+}
+
+[data-flavor-radios] {
+  display: none !important;
+}
+
+/* ── Plan Cards ─────────────────────────────────────────────────────── */
+.plan-cards-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+.plan-card {
+  position: relative !important;
+  border-radius: 10px !important;
+  border-color: rgba(80, 0, 11, 0.12) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 14px 16px !important;
+  cursor: pointer !important;
+  border: 1px solid #A40011 !important;
+  overflow: visible !important;
+  transition: background 0.18s, box-shadow 0.18s !important;
+}
+
+.plan-card.selected {
+  background: linear-gradient(120deg, rgba(245, 234, 234, 0.80) 0%, rgba(255, 242, 237, 0.60) 100%) !important;
+  box-shadow: 0 4px 12px 0 rgba(164, 0, 17, 0.15) !important;
+  border-color: #A40011 !important;
+  opacity: 0.85 !important;
+}
+
+.plan-card.selected .plan-card__badge-offer {
+  box-shadow: 0 2px 6px -2px #a4001140 !important;
+  filter: saturate(1.15) brightness(1.05) !important;
+}
+
+.plan-card.selected .plan-card__badge-best {
+  box-shadow: 0 2px 6px -2px #a4001140 !important;
+  filter: saturate(1.15) brightness(1.05) !important;
+}
+
+.plan-card__badges {
+  position: absolute !important;
+  top: -5px !important;
+  left: 14px !important;
+  right: 14px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  pointer-events: none !important;
+}
+
+.plan-card__badge-offer {
+  font-family: "nb_architekt_bold-webfont", "Montserrat", sans-serif !important;
+  background: linear-gradient(135deg, #D4A84B 0%, #C49A3F 100%) !important;
+  color: #3D1F00 !important;
+  border: none !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 3px 10px 4px !important;
+  border-radius: 999px !important;
+  line-height: 1 !important;
+}
+
+.plan-card__badge-best {
+  font-family: "nb_architekt_bold-webfont", "Montserrat", sans-serif !important;
+  background: linear-gradient(135deg, #B8001A 0%, #8A000E 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 3px 10px rgba(164, 0, 17, 0.25) !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 3px 10px 4px !important;
+  border-radius: 999px !important;
+  line-height: 1 !important;
+}
+
+.plan-card__header {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+}
+
+.plan-card__left {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+}
+
+.plan-card__radio-wrap {
+  margin-top: 2px !important;
+  flex-shrink: 0 !important;
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.plan-card__radio-wrap input[type="radio"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.plan-card__radio-icon {
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  cursor: pointer !important;
+  background: url("https://im8health.com/cdn/shop/t/121/assets/radio_blank.svg") center / cover no-repeat !important;
+}
+
+.plan-card__radio-wrap input[type="radio"]:checked+.plan-card__radio-icon {
+  background: url("https://im8health.com/cdn/shop/t/121/assets/radio_fill.svg") center / cover no-repeat !important;
+}
+
+.plan-card__title {
+  font-family: "ABCArizonaFlare", sans-serif !important;
+  color: #50000b !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+}
+
+.plan-card__save-label {
+  color: #50000b !important;
+  font-weight: 700 !important;
+  margin-left: 4px !important;
+}
+
+.plan-card.selected .plan-card__save-label {
+  color: #16A34A !important;
+}
+
+.plan-card__billing {
+  font-family: "Aeonik", sans-serif !important;
+  font-size: 11px !important;
+  color: rgba(80, 0, 11, 0.6) !important;
+  margin-top: 2px !important;
+  font-weight: 400 !important;
+}
+
+.plan-card__right {
+  text-align: right !important;
+  flex-shrink: 0 !important;
+  margin-left: 12px !important;
+}
+
+.plan-card__price {
+  font-family: "Aeonik", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #50000b !important;
+  white-space: nowrap !important;
+}
+
+.plan-card__price-mo {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  color: rgba(80, 0, 11, 0.6) !important;
+}
+
+.plan-card__price-strike {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: rgba(80, 0, 11, 0.45) !important;
+  text-decoration: line-through !important;
+  margin: 0 2px !important;
+}
+
+.plan-card__price-day {
+  font-family: "Aeonik", sans-serif !important;
+  font-size: 11px !important;
+  color: rgba(80, 0, 11, 0.6) !important;
+  margin-top: 2px !important;
+}
+
+.plan-card__divider {
+  border: none !important;
+  border-top: 1px solid rgba(80, 0, 11, 0.12) !important;
+  margin: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  transition: margin 0.35s cubic-bezier(0.22, 1, 0.36, 1), height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.plan-card.selected .plan-card__divider {
+  margin: 11px 0 10px !important;
+  height: 1px !important;
+  opacity: 1 !important;
+}
+
+.plan-card__features {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  padding-top: 0 !important;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease-in-out, padding 0.35s ease-in-out !important;
+}
+
+.plan-card.selected .plan-card__features {
+  max-height: 350px !important;
+  padding-top: 2px !important;
+  opacity: 1 !important;
+}
+
+.plan-card__feature {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  font-family: "Aeonik", sans-serif !important;
+  font-size: 12.5px !important;
+  color: #50000b !important;
+  line-height: 1.45 !important;
+}
+
+.plan-card__feature-icon {
+  font-size: 14px !important;
+  flex-shrink: 0 !important;
+  line-height: 1.35 !important;
+}
+
+@media (max-width: 767px) {
+  .im8-flavor-dropdown__trigger {
+    padding: 0 12px 0 0 !important;
+    min-height: 68px !important;
+    gap: 12px !important;
+  }
+
+  .im8-flavor-dropdown__thumb {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  .im8-flavor-dropdown__selected-name {
+    font-size: 15px !important;
+  }
+
+  .im8-flavor-dropdown__option {
+    min-height: 64px !important;
+    padding: 0 12px 0 0 !important;
+  }
+
+  .im8-flavor-dropdown__option-thumb {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .plan-card__features {
+    padding-top: 4px !important;
+  }
+}
+
+/* ── One Time Purchase ──────────────────────────────────────────────── */
+.one-time-purchase-standalone {
+  text-align: center !important;
+  margin: 0 !important;
+  padding-top: 20px !important;
+}
+
+.one-time-purchase-link {
+  display: inline-block !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #50000b !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.one-time-purchase-link:hover {
+  opacity: 0.7 !important;
+}
+
+.one-time-purchase-link .otp-price {
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  display: inline-block !important;
+}
+
+.im8-add-to-cart-container {
+  margin-top: 24px !important;
+  width: 100% !important;
+}
+
+.im8-add-to-cart-btn {
+  display: block !important;
+  width: 100% !important;
+  padding: 14px 24px !important;
+  color: #fff !important;
+  border: none !important;
+  font-family: "Aeonik", sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  transition: box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background: linear-gradient(160deg, #C1001D 0%, #A40011 45%, #8A000E 100%) !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 6px 20px rgba(164, 0, 17, 0.35), 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  letter-spacing: 0.06em !important;
+  font-size: 15px !important;
+  min-height: 54px !important;
+}
+
+.im8-add-to-cart-btn::before {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent) !important;
+  transition: left 0.6s ease !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.im8-add-to-cart-btn:hover {
+  box-shadow: 0 8px 28px rgba(164, 0, 17, 0.4), 0 3px 8px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+  background: linear-gradient(160deg, #D0001F 0%, #B10013 45%, #960010 100%) !important;
+}
+
+.im8-add-to-cart-btn:hover::before {
+  left: 100% !important;
+}
+
+.im8-add-to-cart-btn.is-loading {
+  opacity: 0.7 !important;
+  pointer-events: none !important;
+}
+      </style>
+    
+      <script id="custom-js-goE65l6kCF">
+        try {
+          // ╔═══════════════════════════════════════════════════════════════╗
+// ║  CHANGE THIS to your Shopify product handle                  ║
+// ╚═══════════════════════════════════════════════════════════════╝
+var PRODUCT_HANDLE = "fusiforce-creatine-gummies";
+var ALLOWED_PLAN_INDICES = [0, 2];
+
+// ── State ──
+var _allVariants = [];
+var _allGroups = [];
+var _variantMap = {}; // { "Green Apple": 51023198847291, ... }
+
+// ── Helpers ──
+function activeCurrency() {
+  return (window.Shopify && window.Shopify.currency && window.Shopify.currency.active) || 'USD';
+}
+var ZERO_DECIMAL = ['BIF','CLP','DJF','GNF','JPY','KMF','KRW','MGA',
+                    'PYG','RWF','UGX','VND','VUV','XAF','XOF','XPF'];
+function isZeroDecimal(c) { return ZERO_DECIMAL.indexOf(c.toUpperCase()) !== -1; }
+
+function fmt(shopifyCents) {
+  var currency = activeCurrency();
+  var amount = shopifyCents / 100;
+  var decimals = isZeroDecimal(currency) ? 0 : 2;
+  try {
+    return new Intl.NumberFormat(navigator.language || 'en-US', {
+      style: 'currency', currency: currency,
+      minimumFractionDigits: decimals, maximumFractionDigits: decimals
+    }).format(amount);
+  } catch(e) { return amount.toFixed(decimals) + ' ' + currency; }
+}
+
+function fmtShort(shopifyCents) {
+  var currency = activeCurrency();
+  var amount = shopifyCents / 100;
+  try {
+    return new Intl.NumberFormat(navigator.language || 'en-US', {
+      style: 'currency', currency: currency,
+      minimumFractionDigits: 0, maximumFractionDigits: 0
+    }).format(amount);
+  } catch(e) { return amount.toFixed(0) + ' ' + currency; }
+}
+
+function fmtPerDay(shopifyCents, days) {
+  if (!days) return "";
+  return fmt(shopifyCents / days);
+}
+
+function esc(s) {
+  var d = document.createElement("div");
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// ── Get active variant from DOM ──
+function getActiveVariant() {
+  var checked = document.querySelector('input[name*="-options-Flavor"]:checked');
+  var flavorName = checked ? checked.value : null;
+  if (flavorName && _variantMap[flavorName]) {
+    for (var i = 0; i < _allVariants.length; i++) {
+      if (_allVariants[i].id === _variantMap[flavorName]) return _allVariants[i];
+    }
+  }
+  return _allVariants[0];
+}
+
+function getActiveVariantId() {
+  var v = getActiveVariant();
+  return v ? v.id : null;
+}
+
+// ── Fetch ──
+fetch("/products/" + PRODUCT_HANDLE + ".js")
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    _allVariants = data.variants;
+    _allGroups = data.selling_plan_groups || [];
+
+    // Build flavor → variant id map
+    data.variants.forEach(function(v) {
+      var name = v.option1 || v.title;
+      _variantMap[name] = v.id;
+    });
+
+    buildPlans();
+    buildOTP();
+    initAddToCartBtn();
+  })
+  .catch(function(e) { console.error("[PlanWidget] fetch failed:", e); });
+
+// ── Listen to flavor change → re-render ──
+document.addEventListener('change', function(e) {
+  if (e.target && e.target.name && e.target.name.indexOf('-options-Flavor') !== -1) {
+    console.log('[flavor changed]', e.target.value, '→ variantId:', _variantMap[e.target.value]);
+    buildPlans();   // re-render plans với giá của variant mới
+    updateOTPPrice();
+  }
+});
+document.addEventListener('gp:variantChanged', function(e) {
+  if (e.detail && e.detail.variantId) {
+    buildPlans();
+    updateOTPPrice();
+  }
+});
+document.addEventListener('variantChanged', function(e) {
+  if (e.detail && e.detail.variant && e.detail.variant.id) {
+    buildPlans();
+    updateOTPPrice();
+  }
+});
+
+// ── Plan Cards ──
+function buildPlans() {
+  var c = document.querySelector("[data-plan-cards]");
+  if (!c || !_allGroups.length) return;
+
+  // Get currently selected plan days to restore selection after re-render
+  var selectedCard = c.querySelector(".plan-card.selected");
+  var prevDays = selectedCard ? selectedCard.dataset.planDays : null;
+
+  c.innerHTML = "";
+
+  var v0 = getActiveVariant(); // ← dùng active variant, không hardcode variants[0]
+  var allocs = v0.selling_plan_allocations || [];
+
+  var plans = _allGroups
+    .map(function(g) {
+      var sp = g.selling_plans[0];
+      var alloc = null;
+      for (var i = 0; i < allocs.length; i++) {
+        if (allocs[i].selling_plan_id === sp.id) { alloc = allocs[i]; break; }
+      }
+      var qty = 1;
+      g.options.forEach(function(o) {
+        if (o.name === "Product Quantity") qty = parseInt(o.values[0]) || 1;
+      });
+      var save = sp.price_adjustments && sp.price_adjustments[0]
+        ? sp.price_adjustments[0].value : 0;
+      return {
+        originalIndex: _allGroups.indexOf(g),
+        plan: sp, alloc: alloc, qty: qty, save: save,
+        price: alloc ? alloc.price : v0.price,
+        compare: alloc ? alloc.compare_at_price : v0.price,
+        spId: sp.id,
+      };
+    })
+    .filter(function(p) {
+      if (ALLOWED_PLAN_INDICES && ALLOWED_PLAN_INDICES.length > 0)
+        return ALLOWED_PLAN_INDICES.indexOf(p.originalIndex) !== -1;
+      return true;
+    });
+
+  plans.sort(function(a, b) { return b.qty - a.qty; });
+
+  var bestIdx = 0, maxS = 0;
+  plans.forEach(function(p, i) { if (p.save > maxS) { maxS = p.save; bestIdx = i; } });
+
+  plans.forEach(function(p, idx) {
+    var best = idx === bestIdx;
+    var days = p.qty * 30;
+    // Restore previous selection, else default to first
+    var def = prevDays ? String(days) === String(prevDays) : idx === 0;
+    var weeks = p.qty * 4;
+    var billing = "Billed " + fmt(p.price * p.qty) + " every " + weeks + " weeks";
+    var perDay = fmtPerDay(p.price, 30) + " / DAY";
+    var saveLabelHtml = p.save > 0
+      ? ' <span class="plan-card__save-label">(Save ' + p.save + "%)</span>" : "";
+    var badges = best
+      ? '<div class="plan-card__badges">' +
+        '<span class="plan-card__badge-offer">Launch Offer</span>' +
+        '<span class="plan-card__badge-best">Best Value</span></div>' : "";
+    var priceHtml = fmtShort(p.price);
+    if (p.compare && p.compare > p.price)
+      priceHtml += ' <span class="plan-card__price-strike">' + fmtShort(p.compare) + "</span>";
+    priceHtml += '<span class="plan-card__price-mo">/mo</span>';
+
+    var feats = [];
+    if (p.qty >= 3) {
+      feats = [
+        { i: "🎯", t: "Exclusive Access to " + days + " Day Transformation Program" },
+        { i: "💰", t: "Maximum savings – lowest price per serving" },
+        { i: "🔵", t: days + "-Day Money-Back Guarantee" },
+        { i: "🧡", t: "Share with family and friends" },
+        { i: "🎁", t: "Free Mystery Gift" },
+        { i: "🚚", t: "Free Shipping to US, UK, CA, and most of EU and APAC" },
+        { i: "📋", t: "Cancel or pause anytime" },
+      ];
+    } else if (p.qty >= 2) {
+      feats = [
+        { i: "💰", t: "Great savings per serving" },
+        { i: "🚚", t: "Free Shipping to US, UK, CA, and most of EU and APAC" },
+        { i: "📋", t: "Cancel or pause anytime" },
+        { i: "🎁", t: "Free Mystery Gift" },
+      ];
+    } else {
+      feats = [
+        { i: "💰", t: "Save " + p.save + "% vs one-time purchase" },
+        { i: "🚚", t: "Free Priority Shipping" },
+        { i: "📋", t: "Cancel or pause anytime" },
+        { i: "🎁", t: "Free Mystery Gift" },
+      ];
+    }
+    var fHtml = '<div class="plan-card__features">';
+    feats.forEach(function(f) {
+      fHtml += '<div class="plan-card__feature"><span class="plan-card__feature-icon">' +
+        f.i + "</span><span>" + esc(f.t) + "</span></div>";
+    });
+    fHtml += "</div>";
+
+    c.insertAdjacentHTML("beforeend",
+      '<div class="plan-card' + (def ? " selected" : "") +
+      '" data-plan-days="' + days +
+      '" data-selling-plan-id="' + p.spId +
+      '" data-plan-qty="' + p.qty +
+      '" data-monthly-price="' + p.price + '">' +
+      badges +
+      '<div class="plan-card__header"' + (best ? ' style="padding-top:4px"' : "") + ">" +
+      '<div class="plan-card__left"><div class="plan-card__radio-wrap">' +
+      '<input type="radio" name="im8-plan" ' + (def ? "checked " : "") + "/>" +
+      '<span class="plan-card__radio-icon"></span></div><div>' +
+      '<div class="plan-card__title">' + esc(days + "-Day Supply") + saveLabelHtml + "</div>" +
+      '<div class="plan-card__billing">' + billing + "</div></div></div>" +
+      '<div class="plan-card__right"><div class="plan-card__price">' + priceHtml + "</div>" +
+      '<div class="plan-card__price-day">' + perDay + "</div></div></div>" +
+      '<hr class="plan-card__divider"/>' + fHtml + "</div>"
+    );
+  });
+
+  // Click handlers
+  var cards = c.querySelectorAll(".plan-card");
+  cards.forEach(function(card) {
+    card.addEventListener("click", function() {
+      cards.forEach(function(c2) {
+        c2.classList.remove("selected");
+        var r = c2.querySelector('input[type="radio"]');
+        if (r) r.checked = false;
+      });
+      card.classList.add("selected");
+      var r = card.querySelector('input[type="radio"]');
+      if (r) r.checked = true;
+      updateAddToCartBtnPrice();
+    });
+  });
+  updateAddToCartBtnPrice();
+}
+
+// ── OTP (Buy One Time) ──
+function buildOTP() {
+  var ctr = document.querySelector("[data-otp-container]");
+  var link = document.querySelector("[data-otp-link]");
+  if (!ctr || !_allVariants.length) return;
+  ctr.style.display = "";
+  updateOTPPrice();
+
+  if (link && !link._otpBound) {
+    link._otpBound = true; // prevent duplicate listeners on re-render
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      var vid = getActiveVariantId();
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: [{ id: parseInt(vid), quantity: 1 }] }),
+      })
+        .then(function() { window.location.href = "/checkout"; })
+        .catch(function(err) {
+          console.error("[OTP] failed:", err);
+          window.location.href = "/cart/add?id=" + vid + "&quantity=1";
+        });
+    });
+  }
+}
+
+function updateOTPPrice() {
+  var priceEl = document.querySelector("[data-otp-price]");
+  if (!priceEl || !_allVariants.length) return;
+  var v = getActiveVariant();
+  priceEl.textContent = fmt(v.price);
+}
+
+// ── Add to Cart (Subscription) ──
+function initAddToCartBtn() {
+  var btn = document.querySelector("[data-add-to-cart-btn]");
+  if (!btn) return;
+
+  btn.addEventListener("click", function() {
+    var variantId = getActiveVariantId();
+    if (!variantId) { alert("Please select a variant"); return; }
+
+    var selectedCard = document.querySelector(".plan-card.selected");
+    if (!selectedCard) { alert("Please select a plan"); return; }
+
+    var sellingPlanId = selectedCard.dataset.sellingPlanId;
+    var qty = parseInt(selectedCard.dataset.planQty || 1, 10);
+    var payload = { id: parseInt(variantId, 10), quantity: qty };
+    if (sellingPlanId && sellingPlanId !== "undefined" && sellingPlanId !== "null") {
+      payload.selling_plan = parseInt(sellingPlanId, 10);
+    }
+
+    btn.classList.add("is-loading");
+    btn.textContent = "ADDING...";
+
+    fetch("/cart/clear.js", { method: "POST" })
+      .then(function() {
+        return fetch("/cart/add.js", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ items: [payload] }),
+        });
+      })
+      .then(function(r) { return r.json(); })
+      .then(function() { window.location.href = "/checkout"; })
+      .catch(function(err) {
+        console.error("Cart error:", err);
+        alert("Error adding to cart. Please try again.");
+        btn.classList.remove("is-loading");
+        updateAddToCartBtnPrice();
+      });
+  });
+}
+
+function updateAddToCartBtnPrice() {
+  var btn = document.querySelector("[data-add-to-cart-btn]");
+  var selectedCard = document.querySelector(".plan-card.selected");
+  if (!btn || !selectedCard) return;
+  if (btn.classList.contains("is-loading")) return;
+  var priceCents = parseInt(selectedCard.dataset.monthlyPrice || 0, 10);
+  btn.textContent = priceCents > 0
+    ? "ADD TO CART - " + fmtShort(priceCents) + " /MO"
+    : "ADD TO CART";
+}
+        } catch(err){}
+      </script>
+    

@@ -1,0 +1,113 @@
+{% comment %}
+  Quiz Funnel — Step 15: Recovery Timeline Chart
+  SVG area chart with JS-driven animation.
+{% endcomment %}
+
+<div class="qf-step" data-step="15">
+  <h2 class="qf-q" style="text-align:left;font-size:22px;line-height:1.4;">The last solution you'll ever need to feel like a man again.</h2>
+  <p class="qf-sub" style="text-align:center;font-size:14px;line-height:1.7;">
+    Based on your answers, we expect you to visibly increase energy, strength and masculine drive by <strong style="color:#54b94a;" id="targetMo"></strong>
+  </p>
+
+  <!-- T-Level Recovery Chart -->
+  <div class="rc-chart-wrap" id="rcChartWrap">
+    <!-- Y-axis labels -->
+    <div class="rc-yaxis">
+      <span class="rc-yaxis__label">HIGH<br>T-LEVELS</span>
+      <span class="rc-yaxis__label">NORMAL<br>T-LEVELS</span>
+      <span class="rc-yaxis__label">LOW<br>T-LEVELS</span>
+    </div>
+
+    <!-- Chart area -->
+    <div class="rc-chart-area">
+      <div class="rc-chart-box" id="rcChartBox">
+        <!-- Grid lines -->
+        <div class="rc-gridline" style="top:0"></div>
+        <div class="rc-gridline" style="top:50%"></div>
+
+        <!-- SVG Curve -->
+        <svg class="rc-svg" viewBox="0 0 400 200" preserveAspectRatio="none" id="rcSvg">
+          <defs>
+            <linearGradient id="rcGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#54b94a" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#54b94a" stop-opacity="0.15"/>
+            </linearGradient>
+          </defs>
+          <path id="rcAreaPath" d="M0,190 C60,185 120,160 200,120 C280,80 340,40 400,20 L400,200 L0,200 Z" fill="url(#rcGrad)" opacity="0"/>
+          <path id="rcLinePath" d="M0,190 C60,185 120,160 200,120 C280,80 340,40 400,20" fill="none" stroke="#54b94a" stroke-width="3" stroke-dasharray="600" stroke-dashoffset="600"/>
+        </svg>
+
+        <!-- Dots overlay SVG (separate so preserveAspectRatio works for circles) -->
+        <svg class="rc-dots-svg" viewBox="0 0 400 200" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:visible;">
+          <!-- Start dot at curve start (0, 190) -->
+          <circle id="rcDotStart" cx="0" cy="190" r="7" fill="#333" opacity="0"/>
+          <!-- Goal dot at curve end (380, 28) — slightly inset from edge -->
+          <circle id="rcDotGoal" cx="380" cy="28" r="9" fill="#fff" stroke="#54b94a" stroke-width="3" opacity="0"/>
+        </svg>
+
+        <!-- "YOU ARE HERE" label -->
+        <div class="rc-badge rc-badge--here" id="rcBadgeHere">
+          <span>YOU ARE HERE</span>
+        </div>
+
+        <!-- "GOAL" label -->
+        <div class="rc-badge rc-badge--goal" id="rcBadgeGoal">
+          <span>GOAL: 60% INCREASE IN T</span>
+        </div>
+      </div>
+
+      <!-- X-axis labels -->
+      <div class="rc-xaxis">
+        <span>TODAY</span>
+        <span id="rcMonth1"></span>
+        <span id="rcMonth2"></span>
+        <span id="rcMonth3"></span>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="qf-btn" onclick="qfGoStep(16)">Continue &rarr;</button>
+</div>
+
+<style>
+  .rc-chart-wrap { display:flex !important; gap:8px !important; align-items:stretch !important; margin:24px 0 20px !important; width:100% !important; }
+  .rc-yaxis { display:flex !important; flex-direction:column !important; justify-content:space-between !important; padding:0 0 32px !important; flex-shrink:0 !important; }
+  .rc-yaxis__label { font-size:11px !important; font-weight:800 !important; color:#333 !important; text-align:right !important; line-height:1.3 !important; text-transform:uppercase !important; letter-spacing:0.5px !important; }
+  .rc-chart-area { flex:1 !important; min-width:0 !important; }
+  .rc-chart-box {
+    position:relative !important; width:100% !important; aspect-ratio:2/1 !important;
+    border:2px solid #333 !important; border-radius:4px !important; overflow:visible !important; background:#fff !important;
+  }
+  .rc-gridline { position:absolute !important; left:0 !important; right:0 !important; height:0 !important; border-top:1px dashed #ddd !important; }
+  .rc-svg { position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; overflow:visible !important; }
+
+  /* Dots SVG overlay */
+  .rc-dots-svg { z-index:4 !important; }
+
+  /* Badges */
+  .rc-badge {
+    position:absolute !important; z-index:5 !important;
+    opacity:0; transition:opacity 0.5s ease !important;
+  }
+  .rc-badge span {
+    display:inline-block !important; font-size:11px !important; font-weight:800 !important;
+    padding:6px 14px !important; border-radius:4px !important; letter-spacing:0.5px !important; white-space:nowrap !important;
+  }
+  /* "YOU ARE HERE" — above start dot, bottom-left area */
+  .rc-badge--here { bottom:18% !important; left:1% !important; }
+  .rc-badge--here span { background:#333 !important; color:#fff !important; }
+  /* "GOAL" — above goal dot, top-right area */
+  .rc-badge--goal { top:2% !important; right:2% !important; }
+  .rc-badge--goal span { background:#54b94a !important; color:#fff !important; }
+
+  .rc-xaxis {
+    display:flex !important; justify-content:space-between !important; padding-top:8px !important;
+    font-size:12px !important; font-weight:800 !important; color:#333 !important; text-transform:uppercase !important; letter-spacing:0.5px !important;
+  }
+
+  @media(max-width:480px){
+    .rc-yaxis__label { font-size:9px !important; }
+    .rc-xaxis { font-size:9px !important; }
+    .rc-badge span { font-size:8px !important; padding:4px 8px !important; }
+  }
+</style>

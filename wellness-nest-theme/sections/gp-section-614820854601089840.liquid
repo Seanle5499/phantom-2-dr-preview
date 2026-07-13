@@ -1,0 +1,576 @@
+
+    
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-614820854601089840.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-614820854601089840.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-614820854601089840.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-614820854601089840.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-614820854601089840.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-614820854601089840.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-614820854601089840.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-614820854601089840.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-614820854601089840.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-614820854601089840.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-614820854601089840.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-614820854601089840.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-614820854601089840.gps.gpsil [style*="--bl:"]{border-left:var(--bl)}.gps-614820854601089840.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-614820854601089840.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-614820854601089840.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-614820854601089840.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-614820854601089840.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-614820854601089840.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-614820854601089840.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-614820854601089840.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-614820854601089840.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-614820854601089840.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-614820854601089840.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-614820854601089840.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-614820854601089840.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-614820854601089840.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-614820854601089840.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-614820854601089840.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-614820854601089840.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-614820854601089840.gps.gpsil [style*="--rg:"]{row-gap:var(--rg)}.gps-614820854601089840.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-614820854601089840.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-614820854601089840.gps.gpsil [style*="--w:"]{width:var(--w)}@media only screen and (max-width:1024px){.gps-614820854601089840.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-614820854601089840.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-614820854601089840.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}}@media only screen and (max-width:767px){.gps-614820854601089840.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-614820854601089840.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-614820854601089840.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}}.gps-614820854601089840 .gp-relative{position:relative}.gps-614820854601089840 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-614820854601089840 .gp-mb-0{margin-bottom:0}.gps-614820854601089840 .gp-flex{display:flex}.gps-614820854601089840 .gp-grid{display:grid}.gps-614820854601089840 .\!gp-hidden{display:none!important}.gps-614820854601089840 .gp-hidden{display:none}.gps-614820854601089840 .gp-max-w-full{max-width:100%}.gps-614820854601089840 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-614820854601089840 .gp-flex-col{flex-direction:column}.gps-614820854601089840 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-614820854601089840 .gp-duration-200{transition-duration:.2s}.gps-614820854601089840 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-614820854601089840 .tablet\:\!gp-hidden{display:none!important}.gps-614820854601089840 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-614820854601089840 .mobile\:\!gp-hidden{display:none!important}.gps-614820854601089840 .mobile\:gp-hidden{display:none}}.gps-614820854601089840 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}</style>
+    
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--w-mobile:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"type":"color","color":"transparent","image":{"src":"","width":0,"height":0},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll"}},"uid":"ge983GPNma"}' data-id="ge983GPNma" id="ge983GPNma" data-same-height-subgrid-container class="ge983GPNma gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--pt:var(--g-s-2xl);--pb:var(--g-s-2xl);--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--cg:16px;--rg:0px;--gtc:minmax(0, 12fr);--w:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="g7EkiZ9tTB gp-relative gp-flex gp-flex-col"
+    >
+      
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gtEydUcJPD gp-custom-code">
+      <div>
+    <!--
+  WellnessNest Tracking Widget — GemPages Custom HTML Embed
+
+  NOTE: For GemPages, CSS and JS must be inlined (no external file loading).
+  These files are split for development readability only.
+  When pasting into GemPages, combine: index.html + <style>style.css</style> + <script>index.js</script>
+-->
+
+<div id="wn-tracking-root">
+  <!-- Form -->
+  <div id="wn-form-section" style="max-width:500px;width:100%;margin:0 auto;padding:0 20px;box-sizing:border-box;">
+    <h1 style="font-size:26px;font-weight:400;line-height:32px;text-align:center;margin-bottom:24px;color:#000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+      Track Your Order</h1>
+    <label style="display:block;font-size:14px;font-weight:600;margin-bottom:8px;color:#000;">Tracking Number</label>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <input id="wn-input" placeholder="Enter your tracking number"
+        style="flex:1;padding:10px 14px;border-radius:4px;border:1px solid #ccc;font-size:14px;line-height:20px;outline:none;box-sizing:border-box;min-width:200px;" />
+      <button id="wn-track-btn" onclick="wnTrack()"
+        style="background:#007a5c;color:#fff;border:none;border-radius:4px;padding:10px 28px;font-size:14px;font-weight:600;cursor:pointer;line-height:20px;white-space:nowrap;width:auto;">Track</button>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div id="wn-loading" style="display:none;margin-top:40px;color:#707070;font-size:14px;text-align:center;">Loading...</div>
+
+  <!-- Error -->
+  <div id="wn-error" style="display:none;margin-top:40px;color:red;font-size:14px;font-weight:500;text-align:center;"></div>
+
+  <!-- Results -->
+  <div id="wn-results" style="display:none;max-width:1200px;margin:0 auto;width:100%;">
+    <div id="wn-progress" style="margin:40px 0;"></div>
+    <div id="wn-content" style="min-height:100px;display:flex;flex-direction:column;">
+      <div class="wn-tracking-content" style="margin-bottom:20px;width:100%;overflow:hidden;">
+        <div id="wn-timeline" class="wn-tracking-timeline" style="float:left;width:68%;box-sizing:border-box;padding:0 16px 16px;"></div>
+        <div id="wn-sidebar" class="wn-tracking-sidebar" style="float:right;width:30%;"></div>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="style.css">
+<script src="index.js"></script>
+    </div>
+    </div>
+  
+      <style id="custom-css-gtEydUcJPD">
+        #wn-tracking-root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #303030;
+}
+
+#wn-tracking-root * {
+  box-sizing: border-box !important;
+}
+
+#wn-tracking-root a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Reset only lists — avoid breaking inline styles on other elements */
+#wn-tracking-root ul, #wn-tracking-root li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#wn-tracking-root .wn-progress-bar {
+  height: 5px !important;
+  border-radius: 8px !important;
+  flex: 1 !important;
+  margin: 12px 4px 0 !important;
+  display: block !important;
+  min-height: 5px !important;
+}
+
+#wn-tracking-root .wn-timeline-line {
+  position: absolute !important;
+  left: 13px !important;
+  top: 28px !important;
+  bottom: 0 !important;
+  width: 2px !important;
+  background: #efefef !important;
+  z-index: 0 !important;
+  display: block !important;
+}
+
+#wn-tracking-root .wn-event-row {
+  position: relative !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+
+/* Timeline scrollbar */
+.wn-timeline-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wn-timeline-scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 2px;
+}
+
+.wn-timeline-scroll:hover::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+
+/* Float widget content scrollbar hide */
+.wn-float-content {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.wn-float-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .wn-tracking-content {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+
+  .wn-tracking-timeline {
+    float: none !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .wn-tracking-sidebar {
+    float: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .wn-timeline-scroll {
+    max-height: none !important;
+  }
+
+  #wn-float-panel,
+  #wn-float-btn {
+    display: none !important;
+  }
+
+  #wn-track-btn {
+    width: 100% !important;
+  }
+
+  /* Mobile progress: hide desktop, show mobile */
+  .wn-progress-desktop {
+    display: none !important;
+  }
+
+  .wn-progress-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .wn-progress-desktop {
+    display: flex !important;
+  }
+
+  .wn-progress-mobile {
+    display: none !important;
+  }
+}
+
+      </style>
+    
+      <script id="custom-js-gtEydUcJPD">
+        try {
+          (function () {
+  // ============================================================
+  // CONFIGURATION — CHANGE THIS TO YOUR VERCEL DEPLOYMENT URL
+  // ============================================================
+  var API_BASE = 'https://wellnessnest-tracking-order.vercel.app';
+  // ============================================================
+
+  var SHOPIFY_DOMAIN = '';
+  var _trackingData = null;
+  var _products = [];
+  var _widgetOpen = true;
+  var _widgetMinimized = false;
+
+  var STATUS_MAP = {
+    NotFound: 'Not Found', InfoReceived: 'Info Received', InTransit: 'In Transit',
+    Expired: 'Expired', AvailableForPickup: 'Pick Up', OutForDelivery: 'Out for Delivery',
+    Delivered: 'Delivered', Undelivered: 'Undelivered', Exception: 'Exception', Alert: 'Alert'
+  };
+  var STAGE_ORDER = ['InfoReceived', 'PickedUp', 'InTransit', 'OutForDelivery', 'Delivered'];
+  var STAGE_LABELS = {
+    InfoReceived: 'Info Received', PickedUp: 'Picked Up', InTransit: 'In Transit',
+    OutForDelivery: 'Out for Delivery', Delivered: 'Delivered', Exception: 'Exception'
+  };
+  var STATUS_TO_STAGE = {
+    InfoReceived: 0, PickedUp: 1, InTransit: 2, OutForDelivery: 3, Delivered: 4,
+    AvailableForPickup: 3, Expired: 2, Undelivered: 3, Alert: 2
+  };
+
+  // SVG Icons
+  var PROGRESS_ICONS = {
+    InfoReceived: function (c) { return '<svg width="28" height="28" viewBox="0 0 24 24" fill="' + c + '"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>'; },
+    PickedUp: function (c) { return '<svg width="28" height="28" viewBox="0 0 1024 1024" fill="' + c + '"><path d="M922.9 335.2H304.5l-27.6-138H128v69h86.4l110.5 552.3h493.3v-69H387.4l-13.8-69h480.4l68.9-345.3zM806.7 611.5H359.8l-41.4-207.3h535.2l-46.9 207.3z"/><path d="M359.8 818.5m-55.2 0a55.2 55.2 0 1 0 110.4 0 55.2 55.2 0 1 0-110.4 0Z"/><path d="M731.8 818.5m-55.2 0a55.2 55.2 0 1 0 110.4 0 55.2 55.2 0 1 0-110.4 0Z"/></svg>'; },
+    InTransit: function (c) { return '<svg width="28" height="28" viewBox="0 0 24 24" fill="' + c + '"><path d="M20 8h-3V4H1v13h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>'; },
+    OutForDelivery: function (c) { return '<svg width="28" height="28" viewBox="0 0 24 24" fill="' + c + '"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/><path d="M12 17l-5-5 1.41-1.41L12 14.17l3.59-3.58L17 12z"/></svg>'; },
+    Delivered: function (c) { return '<svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="12" fill="' + c + '"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19.69 6.62a1.07 1.07 0 010 1.51l-9.24 9.24a1.07 1.07 0 01-1.51 0l-4.62-4.62a1.07 1.07 0 011.51-1.51l3.87 3.87 8.49-8.49a1.07 1.07 0 011.5 0z" fill="white"/></svg>'; },
+    Exception: function (c) { return '<svg width="28" height="28" viewBox="0 0 24 24" fill="' + c + '"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>'; },
+    default: function (c) { return '<svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="white" stroke="' + c + '" stroke-width="2"/></svg>'; }
+  };
+
+  function getProgressIcon(stage, color) {
+    return (PROGRESS_ICONS[stage] || PROGRESS_ICONS.default)(color);
+  }
+
+  function getEventBadge(stage, subStatus, isFirst) {
+    var desc = (subStatus || '').toLowerCase();
+    if (stage === 'Delivered' || desc.includes('delivered'))
+      return '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#22c55e"/><path d="M8 14.5l3.5 3.5L20 10" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    if (stage === 'OutForDelivery' || desc.includes('out_for_delivery') || desc.includes('outfordelivery'))
+      return '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#f59e0b"/><path d="M8 10h6v6H8z M14 12h3l2 2v2h-5z M10.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z M17.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    if (stage === 'Exception' || desc.includes('exception') || desc.includes('undelivered') || desc.includes('alert'))
+      return '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#ef4444"/><rect x="13" y="8" width="2" height="8" rx="1" fill="#fff"/><circle cx="14" cy="19.5" r="1.2" fill="#fff"/></svg>';
+    if (stage === 'PickedUp' || desc.includes('pickup') || desc.includes('picked_up') || desc.includes('collected'))
+      return '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#22c55e" stroke-width="2" fill="#fff"/><path d="M10 11l4-2 4 2v6l-4 2-4-2z M14 9v8 M10 11l4 2 4-2" stroke="#22c55e" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    if (isFirst)
+      return '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="8" fill="#3b82f6"/><circle cx="14" cy="14" r="13" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.3"/></svg>';
+    return '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#d1d5db" stroke-width="2" fill="#fff"/></svg>';
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return '';
+    var d = new Date(iso);
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  }
+
+  function fmtPrice(price) {
+    if (!price) return '0.00';
+    var s = String(price);
+    var n = parseFloat(s);
+    if (is1(n)) return price;
+    if (s.indexOf('.') === -1 && n > 100) return (n / 100).toFixed(2);
+    return n.toFixed(2);
+  }
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function shouldHideLocation(loc) {
+    if (!loc) return true;
+    if (/[\u4e00-\u9fff]/.test(loc)) return true;
+    if (/\b(Guangzhou|Shenzhen|Shanghai|Beijing|Hangzhou|Dongguan|Foshan|Zhongshan|Xiamen|Chengdu|Wuhan|Nanjing|Tianjin|Chongqing|Suzhou|Qingdao|Dalian|Ningbo|Hefei|Changsha|Kunming|Fuzhou|Zhengzhou|Jinan|Sorting Centre|CN|China)\b/i.test(loc)) return true;
+    return false;
+  }
+
+  function isChinaCarrier(carrier) {
+    return carrier && carrier.country === 'CN';
+  }
+
+  // ── Main track function ──
+  window.wnTrack = function () {
+    var input = document.getElementById('wn-input');
+    var val = (input.value || '').trim();
+    if (!val) return;
+
+    var url = new URL(window.location.href);
+    url.searchParams.set('tracking_number', val);
+    window.history.replaceState({}, '', url.toString());
+
+    document.getElementById('wn-loading').style.display = 'block';
+    document.getElementById('wn-error').style.display = 'none';
+    document.getElementById('wn-results').style.display = 'none';
+    var _fb = document.getElementById('wn-float-btn');
+    var _fp = document.getElementById('wn-float-panel');
+    if (_fb) _fb.style.display = 'none';
+    if (_fp) _fp.style.display = 'none';
+
+    fetch(API_BASE + '/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ tracking_number: val })
+    })
+      .then(function (res) { return res.json().then(function (j) { return { ok: res.ok, json: j }; }); })
+      .then(function (r) {
+        document.getElementById('wn-loading').style.display = 'none';
+        if (!r.ok) {
+          document.getElementById('wn-error').textContent = r.json.error || 'Could not find tracking info.';
+          document.getElementById('wn-error').style.display = 'block';
+          return;
+        }
+        _trackingData = r.json.data;
+        _products = r.json.products || [];
+        SHOPIFY_DOMAIN = r.json.shopifyDomain || '';
+        renderResults();
+      })
+      .catch(function () {
+        document.getElementById('wn-loading').style.display = 'none';
+        document.getElementById('wn-error').textContent = 'An error occurred. Please try again later.';
+        document.getElementById('wn-error').style.display = 'block';
+      });
+  };
+
+  // ── Render all results ──
+  function renderResults() {
+    if (!_trackingData) return;
+    var info = _trackingData.track_info;
+    var status = info.latest_status.status;
+
+    renderProgress(info.milestone, status);
+    renderTimeline(info.tracking.providers && info.tracking.providers[0] ? info.tracking.providers[0].events : [], status);
+    renderSidebar(_trackingData.number, info.tracking.providers && info.tracking.providers[0] ? info.tracking.providers[0].provider : null, _products);
+    document.getElementById('wn-results').style.display = 'block';
+  }
+
+  // ── Progress bar ──
+  function renderProgress(milestones, currentStatus) {
+    var isException = currentStatus === 'Exception' || currentStatus === 'Undelivered' || currentStatus === 'Alert';
+    var milestoneMap = {};
+    (milestones || []).forEach(function (m) {
+      milestoneMap[m.key_stage] = m;
+      if ((m.key_stage === 'Departure' || m.key_stage === 'Arrival') && m.time_iso) {
+        if (!milestoneMap['InTransit'] || !milestoneMap['InTransit'].time_iso) milestoneMap['InTransit'] = m;
+      }
+    });
+
+    var stages = STAGE_ORDER.slice();
+    if (isException) stages.push('Exception');
+
+    var highestIdx = -1;
+    for (var i = stages.length - 1; i >= 0; i--) {
+      var m = milestoneMap[stages[i]];
+      if ((m && m.time_iso) || (stages[i] === 'Exception' && isException)) { highestIdx = i; break; }
+    }
+    var statusIdx = STATUS_TO_STAGE[currentStatus] !== undefined ? STATUS_TO_STAGE[currentStatus] : -1;
+    if (statusIdx > highestIdx) highestIdx = statusIdx;
+
+    var stageData = stages.map(function (stage, idx) {
+      var isLast = idx === stages.length - 1;
+      var ms = milestoneMap[stage];
+      var reached = idx <= highestIdx;
+      var nextReached = !isLast && (idx + 1) <= highestIdx;
+      var color = reached ? (stage === 'Exception' ? '#e53935' : '#008000') : '#CDCDCD';
+      return { stage: stage, isLast: isLast, m: ms, reached: reached, nextReached: nextReached, color: color, idx: idx };
+    });
+
+    var latest = highestIdx >= 0 ? stageData[highestIdx] : stageData[0];
+    var latestLabel = STAGE_LABELS[latest.stage] || STATUS_MAP[latest.stage] || latest.stage;
+    var latestDate = latest.m && latest.m.time_iso ? fmtDate(latest.m.time_iso) : '';
+
+    // Desktop progress
+    var desktopHtml = '<div class="wn-progress-desktop" style="display:flex;flex-direction:row;align-items:flex-start;justify-content:space-between;margin:20px auto;width:100%;">';
+    stageData.forEach(function (s) {
+      desktopHtml += '<div style="display:flex;align-items:flex-start;flex:' + (s.isLast ? '0 0 auto' : '1') + '">';
+      desktopHtml += '<div style="display:flex;flex-direction:column;align-items:center;min-width:100px;max-width:160px;">';
+      desktopHtml += getProgressIcon(s.stage, s.color);
+      desktopHtml += '<span style="font-size:14px;font-weight:550;line-height:1.25;color:' + s.color + ';margin-top:4px;text-align:center;white-space:nowrap;">' + (STAGE_LABELS[s.stage] || s.stage) + '</span>';
+      if (s.m && s.m.time_iso) desktopHtml += '<span style="font-size:13px;margin-top:4px;color:#707070;text-align:center;max-width:130px;display:block;line-height:1.4;">' + fmtDate(s.m.time_iso) + '</span>';
+      desktopHtml += '</div>';
+      if (!s.isLast) {
+        var bg = s.reached && s.nextReached ? '#008000' : s.reached ? 'linear-gradient(to right, #008000, #efefef)' : '#efefef';
+        desktopHtml += '<div class="wn-progress-bar" style="background:' + bg + ';"></div>';
+      }
+      desktopHtml += '</div>';
+    });
+    desktopHtml += '</div>';
+
+    // Mobile progress (collapsible card)
+    var mobileHtml = '<div class="wn-progress-mobile" style="display:none;width:100%;margin-bottom:20px;">';
+    mobileHtml += '<div id="wn-progress-card" onclick="wnToggleProgress()" style="border:1px solid #e5e5e5;border-radius:12px;padding:16px 20px;cursor:pointer;background:#fff;">';
+    mobileHtml += '<div style="display:flex;align-items:center;justify-content:space-between;">';
+    mobileHtml += '<div style="display:flex;align-items:center;gap:12px;">';
+    mobileHtml += getProgressIcon(latest.stage, latest.color);
+    mobileHtml += '<div><div style="font-size:16px;font-weight:600;color:' + latest.color + ';">' + esc(latestLabel) + '</div>';
+    if (latestDate) mobileHtml += '<div style="font-size:12px;color:#999;margin-top:2px;">' + esc(latestDate) + '</div>';
+    mobileHtml += '</div></div>';
+    mobileHtml += '<svg id="wn-progress-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;transition:transform 0.2s;"><path d="M4 6l4 4 4-4" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    mobileHtml += '</div>';
+    mobileHtml += '<div id="wn-progress-expanded" style="display:none;margin-top:20px;padding-top:16px;border-top:1px solid #f0f0f0;">';
+    var reversed = stageData.slice().reverse();
+    reversed.forEach(function (s, idx) {
+      var isLastItem = idx === reversed.length - 1;
+      mobileHtml += '<div style="display:flex;align-items:stretch;">';
+      mobileHtml += '<div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">';
+      mobileHtml += getProgressIcon(s.stage, s.color);
+      if (!isLastItem) mobileHtml += '<div style="width:3px;flex:1;min-height:20px;background:' + (s.reached ? '#008000' : '#efefef') + ';border-radius:2px;"></div>';
+      mobileHtml += '</div>';
+      mobileHtml += '<div style="margin-left:12px;padding-bottom:' + (isLastItem ? '0' : '14px') + '">';
+      mobileHtml += '<span style="font-size:14px;font-weight:600;color:' + s.color + ';line-height:1.3;">' + (STAGE_LABELS[s.stage] || s.stage) + '</span>';
+      if (s.m && s.m.time_iso) mobileHtml += '<div style="font-size:12px;color:#999;margin-top:2px;">' + fmtDate(s.m.time_iso) + '</div>';
+      mobileHtml += '</div></div>';
+    });
+    mobileHtml += '</div></div></div>';
+
+    document.getElementById('wn-progress').innerHTML = desktopHtml + mobileHtml;
+  }
+
+  var _progressExpanded = false;
+  window.wnToggleProgress = function () {
+    _progressExpanded = !_progressExpanded;
+    var el = document.getElementById('wn-progress-expanded');
+    var chev = document.getElementById('wn-progress-chevron');
+    if (el) el.style.display = _progressExpanded ? 'block' : 'none';
+    if (chev) chev.style.transform = _progressExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+  };
+
+  // ── Timeline ──
+  function renderTimeline(events, statusLabel) {
+    var html = '<h2 style="font-size:25px;margin:16px 0 0;font-weight:550;margin-bottom:30px;position:sticky;top:0;background:#fff;z-index:2;padding-bottom:8px;">' + (STATUS_MAP[statusLabel] || esc(statusLabel)) + '</h2>';
+    html += '<div class="wn-timeline-scroll" style="max-height:500px;overflow-y:auto;position:relative;"><div style="display:flex;flex-direction:column;">';
+
+    (events || []).forEach(function (ev, idx) {
+      html += '<div class="wn-event-row" style="display:flex;gap:8px;position:relative;margin:0;padding:0;">';
+      if (idx < events.length - 1)
+        html += '<div class="wn-timeline-line"></div>';
+      html += '<div style="position:relative;z-index:1;width:28px;min-width:28px;height:28px;background:#fff;border-radius:50%;align-self:flex-start;flex-shrink:0;margin:0;padding:0;">' + getEventBadge(ev.stage, ev.sub_status, idx === 0) + '</div>';
+      html += '<div style="flex:1;padding-bottom:16px;padding-left:12px;"><div style="box-shadow:0px 4px 6px -2px rgba(26,26,26,0.2);border-radius:8px;position:relative;">';
+      html += '<div style="padding:10px 14px;background:#f5f6fa;border-radius:8px;display:flex;flex-direction:column;gap:2px;">';
+      html += '<div style="position:absolute;top:2px;left:-5px;width:0;height:0;border-style:solid;border-width:8px 8px 8px 0;border-color:transparent #f5f6fa transparent transparent;"></div>';
+      var desc = esc(ev.description || '');
+      if (ev.location && !shouldHideLocation(ev.location)) desc += '<span style="color:#999;">, ' + esc(ev.location) + '</span>';
+      html += '<div style="color:#303030;font-size:14px;font-weight:400;line-height:22px;word-wrap:break-word;">' + desc + '</div>';
+      html += '<div style="color:#616161;font-size:13px;font-weight:400;line-height:20px;">' + fmtDate(ev.time_iso) + '</div>';
+      html += '</div></div></div></div>';
+    });
+
+    html += '</div></div>';
+    document.getElementById('wn-timeline').innerHTML = html;
+  }
+
+  // ── Sidebar ──
+  function renderSidebar(trackingNumber, carrier, products) {
+    var showCarrier = carrier && !isChinaCarrier(carrier);
+    var html = '<ul style="margin:0;display:flex;flex-direction:column;padding:0 20px;list-style:none;">';
+
+    html += '<li style="margin-bottom:20px;width:100%;margin-top:20px;">';
+    html += '<div style="font-size:14px;color:#303030;margin-bottom:10px;font-weight:bold;">Tracking Number</div>';
+    html += '<div style="font-size:14px;font-weight:400;color:#303030;word-break:break-word;display:flex;align-items:center;gap:8px;">';
+    html += '<span>' + esc(trackingNumber) + '</span>';
+    html += '<button onclick="wnCopy(\'' + esc(trackingNumber) + '\')" style="background:none;border:none;cursor:pointer;padding:0;display:flex;" aria-label="Copy">';
+    html += '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
+    html += '</button></div></li>';
+
+    if (showCarrier && carrier.name) {
+      html += '<li style="margin-bottom:20px;width:100%;">';
+      html += '<div style="font-size:14px;color:#303030;margin-bottom:10px;font-weight:bold;">Carrier</div>';
+      html += '<div style="font-size:14px;font-weight:400;color:#303030;">';
+      if (carrier.homepage) html += '<a href="' + esc(carrier.homepage) + '" target="_blank" rel="noopener" style="color:#007a5c;">' + esc(carrier.name) + '</a>';
+      else html += esc(carrier.name);
+      html += '</div></li>';
+    }
+
+    if (products && products.length) {
+      html += '<li style="margin-bottom:20px;width:100%;">';
+      html += '<div style="font-size:14px;color:#303030;margin-bottom:10px;font-weight:bold;">Product</div>';
+      html += '<div style="display:flex;flex-direction:column;gap:12px;">';
+      products.forEach(function (p) {
+        html += '<div style="position:relative;overflow:visible;display:flex;gap:10px;">';
+        if (p.image) {
+          html += '<div style="position:relative;width:60px;min-width:60px;max-height:75px;">';
+          html += '<img src="' + esc(p.image) + '" alt="' + esc(p.title) + '" style="max-height:75px;width:100%;object-fit:cover;border-radius:4px;">';
+          if (p.quantity > 0) html += '<span style="display:inline-block;position:absolute;top:-6px;right:-6px;padding:2px 5px;background:#808080;color:#fff;border-radius:50%;font-size:11px;line-height:14px;z-index:10;min-width:14px;text-align:center;">' + p.quantity + '</span>';
+          html += '</div>';
+        } else if (p.quantity > 0) {
+          html += '<div style="width:60px;min-width:60px;height:60px;background:#f0f0f0;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#999;font-size:12px;">x' + p.quantity + '</div>';
+        }
+        html += '<div style="flex:1;min-width:0;"><span style="overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-height:24px;color:#303030;">' + esc(p.title) + '</span></div>';
+        html += '</div>';
+      });
+      html += '</div></li>';
+    }
+
+    html += '</ul>';
+    document.getElementById('wn-sidebar').innerHTML = html;
+  }
+
+  window.wnCopy = function (text) {
+    navigator.clipboard.writeText(text);
+  };
+
+  // ── Auto-track from URL on page load ──
+  function init() {
+    var params = new URLSearchParams(window.location.search);
+    var tn = params.get('tracking_number') || params.get('nums') || '';
+    if (tn.trim()) {
+      document.getElementById('wn-input').value = tn.trim();
+      wnTrack();
+    }
+
+    window.addEventListener('popstate', function () {
+      var p = new URLSearchParams(window.location.search);
+      var t = p.get('tracking_number') || p.get('nums') || '';
+      if (t.trim()) {
+        document.getElementById('wn-input').value = t.trim();
+        wnTrack();
+      }
+    });
+
+    document.getElementById('wn-input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') wnTrack();
+      if ((e.ctrlKey || e.metaKey) && e.key === 'a') {
+        e.stopPropagation();
+        this.select();
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+        } catch(err){}
+      </script>
+    
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    
+    "name": "Section 1",
+    "tag": "section",
+    "class": "gps-614820854601089840 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/e49d78-3/apps/gempages-cro/app/shopify/edit?pageType=GP_STATIC&editorId=614820669263184539&sectionId=614820854601089840)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}

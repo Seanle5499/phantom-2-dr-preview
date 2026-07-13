@@ -1,0 +1,245 @@
+/* Scroll Lock */
+.inveterate__scroll-lock {
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.inveterate a[onclick],
+.inveterate__popup a[onclick] {
+  cursor: pointer;
+}
+
+/* Popup */
+.inveterate__popup {
+  align-items: center;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.inveterate__popup.inveterate__visible {
+  display: flex !important;
+}
+
+.inveterate__popup__inner {
+  background-color: #ffffff;
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 50px;
+  max-height: 90vh;
+  max-width: 95%;
+  text-align: center;
+  width: 850px;
+}
+
+.inveterate__popup__heading {
+  color: black;
+  font-size: 22px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.inveterate__popup__body {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 36px;
+  margin-top: 0;
+}
+
+.inveterate__popup__link__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.inveterate__popup__link__group p {
+  margin: 0;
+  padding: 0;
+}
+
+.inveterate__popup__link {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 5px 20px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.inveterate__popup__landing_link {
+  text-decoration: underline;
+}
+
+.inveterate__popup__account-text {
+  margin: 0;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.inveterate__popup__account-text a {
+  text-decoration: none;
+}
+
+.inveterate__popup__link span {
+  padding-right: 2px;
+}
+
+.inveterate__popup__account-text-signin a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.inveterate__popup__account-text a:hover {
+  text-decoration: underline;
+}
+.inveterate__popup__body__tiers {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+.inveterate__popup__cards {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  /* grid-template-columns: 1fr 1fr; */
+}
+
+.inveterate__popup_tier-card {
+  padding: 16px;
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.inveterate__popup_tier-card:only-child {
+  flex: 2;
+}
+.inveterate__popup_card_bordered {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inveterate__popup_card_current {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inveterate__popup_tier-card h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.inveterate__popup_tier-card h2 {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.inveterate__popup_tier-card ul {
+  padding-left: 24px;
+  margin-bottom: 0px;
+}
+
+.inveterate__popup_tier-card ul li {
+  list-style-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.75 5.25L3.75 8.25L11.25 0.75' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+  font-size: 14px;
+  text-align: left;
+}
+
+.inveterate__popup__card_current_plan {
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.inveterate__popup__card_next_plan {
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+/* Manage Membership Link */
+.inveterate-manage-membership {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.inveterate-manage-membership.inveterate-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inveterate__popup__progress_container {
+  margin-bottom: 24px;
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.inveterate__popup__progress {
+  height: 5px;
+  z-index: 1;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.inveterate__popup__progress_text {
+  text-align: end;
+}
+
+.inveterate__popup_loader_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 60px;
+}
+.inveterate__popup_loader_line {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 17px;
+}
+.inveterate__popup_loader {
+  border: 3px solid #d4d4d4;
+  border-top: 3px solid #000000;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: inveteratespin 2s linear infinite;
+}
+
+@keyframes inveteratespin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* KEEP START  */
+/*
+  The `invetearte` typo is something that is also in the
+  documentation merchants have used when adding the
+  manage membership link. Due to this, we need to keep
+  this code for legacy reasons even though we have the
+  corrected version above.
+*/
+.invetearte-manage-membership {
+  opacity: 0;
+  visibility: hidden;
+}
+.invetearte-manage-membership.inveterate-visible {
+  opacity: 1;
+  visibility: visible;
+}
+/* KEEP END */

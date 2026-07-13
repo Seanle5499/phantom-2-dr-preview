@@ -1,0 +1,207 @@
+{% comment %}
+  Quiz Funnel — Reusable Quiz-to-Product Funnel
+  ==============================================
+  A 16-step quiz funnel that collects user answers, shows personalized
+  results, and redirects to a product page. Fully configurable via
+  Shopify section settings (Theme Customizer).
+
+  HOW TO DEPLOY:
+    1. Upload image assets to Settings > Files in Shopify admin
+    2. Copy this file to sections/quiz-funnel-2c.liquid
+    3. Copy all qf2c-*.liquid files to snippets/
+    4. Copy templates/page.quiz2c.json to templates/
+    5. Create a new Page (Online Store > Pages) and assign template "quiz2c"
+    6. Open Theme Customizer on that page to configure settings
+
+  REQUIRED ASSETS (upload to Settings > Files):
+    quiz-user1.png   — avatar for age option "Under 30"
+    quiz-user2.png   — avatar for age option "30-39"
+    quiz-user3.png   — avatar for age option "40-49"
+    quiz-user4.png   — avatar for age option "50+"
+    quiz-users.png   — social proof group photo
+    quiz-shield-warning.svg
+    quiz-graph.svg
+    quiz-bolt.svg
+    quiz-magnifying-glass.svg
+
+  SNIPPET MAP:
+    qf2c-styles.liquid         — CSS (scoped under .qf)
+    qf2c-header.liquid          — Progress bar
+    qf2c-steps-basic.liquid     — Steps 1-5 (age, confidence, duration, stress, tried)
+    qf2c-step-goals.liquid      — Step 6  (multi-select goals)
+    qf2c-step-social.liquid     — Step 7  (social proof)
+    qf2c-steps-emotional.liquid — Steps 8-10 (partner, mirror, drive)
+    qf2c-step-validation.liquid — Step 11 (transition break)
+    qf2c-steps-closing.liquid   — Steps 12-13 (caffeine, commitment)
+    qf2c-step-summary.liquid    — Step 14 (results dashboard)
+    qf2c-step-recovery.liquid   — Step 15 (bar chart)
+    qf2c-step-loading.liquid    — Step 16 (loading bars + submit)
+    qf2c-popups.liquid          — Commitment gate popups
+    qf2c-scripts.liquid         — All JavaScript logic
+{% endcomment %}
+
+{%- comment -%} ── Resolve image URLs (uploaded via Settings > Files) ── {%- endcomment -%}
+{%- assign img_user1  = 'quiz-user1.png'              | file_url -%}
+{%- assign img_user2  = 'quiz-user2.png'              | file_url -%}
+{%- assign img_user3  = 'quiz-user3.png'              | file_url -%}
+{%- assign img_user4  = 'quiz-user4.png'              | file_url -%}
+{%- assign img_users  = 'quiz-users.png'              | file_url -%}
+{%- assign img_shield = 'quiz-shield-warning.svg'     | file_url -%}
+{%- assign img_graph  = 'quiz-graph.svg'              | file_url -%}
+{%- assign img_bolt   = 'quiz-bolt.svg'               | file_url -%}
+{%- assign img_glass  = 'quiz-magnifying-glass.svg'   | file_url -%}
+{%- assign img_summary_man = 'Screenshot_2026-03-27_at_16.21.10.png'    | file_url -%}
+{%- assign social_images = 'https://assets.prd.heyflow.com/flows/5U9hkq9MFvvXQA8VV654/www/assets/f26dc033-ef6a-4a1d-a2a7-875cc67dbcdc/original.avif,https://assets.prd.heyflow.com/flows/5U9hkq9MFvvXQA8VV654/www/assets/904e08be-90db-45ba-a484-c5c04d5c6f4c/original.avif,https://assets.prd.heyflow.com/flows/5U9hkq9MFvvXQA8VV654/www/assets/1f773ce0-d825-4f76-b96a-d28b4ba3c560/original.avif' | split: ',' -%}
+{%- assign img_final = 'resin-copy.png'    | file_url -%}
+
+{%- comment -%} ── Shorthand settings ── {%- endcomment -%}
+{%- assign skip_url     = section.settings.redirect_url -%}
+{%- assign terms_url    = section.settings.terms_url -%}
+{%- assign privacy_url  = section.settings.privacy_url -%}
+
+{%- comment -%} ── STYLES ── {%- endcomment -%}
+{% render 'qf2c-styles' %}
+
+{%- comment -%} ── QUIZ CONTAINER ── {%- endcomment -%}
+<div class="qf" id="quizFunnel">
+
+  {%- comment -%} ── HEADER + PROGRESS BAR ── {%- endcomment -%}
+  {% render 'qf2c-header' %}
+
+  <div class="qf-wrap">
+
+    {%- comment -%} ── STEPS 1-5: Basic Questions ── {%- endcomment -%}
+    {% render 'qf2c-steps-basic',
+       img_user1: img_user1,
+       img_user2: img_user2,
+       img_user3: img_user3,
+       img_user4: img_user4,
+       skip_url: skip_url,
+       terms_url: terms_url,
+       privacy_url: privacy_url
+    %}
+
+    {%- comment -%} ── STEP 6: Goals (Multi-Select) ── {%- endcomment -%}
+    {% render 'qf2c-step-goals' %}
+
+    {%- comment -%} ── STEP 7: Social Proof ── {%- endcomment -%}
+    {%- assign social_proof_blocks = section.blocks | where: 'type', 'social_proof_image' -%}
+    {% render 'qf2c-step-social', 
+       img_users: img_users,
+       social_proof_blocks: social_proof_blocks,
+       social_images: social_images
+    %}
+
+    {%- comment -%} ── STEPS 8-10: Emotional Depth Questions ── {%- endcomment -%}
+    {% render 'qf2c-steps-emotional' %}
+
+    {%- comment -%} ── STEP 11: Validation Break ── {%- endcomment -%}
+    {% render 'qf2c-step-validation' %}
+
+    {%- comment -%} ── STEP 14: Summary Dashboard ── {%- endcomment -%}
+    {% render 'qf2c-step-summary',
+       img_shield: img_shield,
+       img_graph: img_graph,
+       img_bolt: img_bolt,
+       img_glass: img_glass,
+       img_summary_man: img_summary_man
+    %}
+
+    {%- comment -%} ── STEP 15: Recovery Chart ── {%- endcomment -%}
+    {% render 'qf2c-step-recovery' %}
+
+    {%- comment -%} ── STEP 16: Final Product Page ── {%- endcomment -%}
+    {% render 'qf2c-step-loading', img_final: img_final %}
+
+  </div>
+
+  {%- comment -%} ── POPUP OVERLAYS (REMOVED) ── {%- endcomment -%}
+
+</div>
+
+{%- comment -%} ── FAKE LOADING OVERLAY (triggered after processed foods step) ── {%- endcomment -%}
+<div class="qf-fake-loading" id="qfFakeLoading">
+  <div class="qf-fake-loading__content">
+    <div class="qf-fake-loading__title">Building your profile...</div>
+    <div class="qf-fake-loading__spinner">
+      <svg viewBox="0 0 50 50">
+        <circle class="qf-fake-loading__arc" cx="25" cy="25" r="20" fill="none" stroke="#FF7A00" stroke-width="4" stroke-dasharray="82 44"></circle>
+      </svg>
+    </div>
+    <div class="qf-fake-loading__sub" id="qfFakeLoadingSub">Analysing your profile</div>
+  </div>
+</div>
+
+{%- comment -%} ── JAVASCRIPT ── {%- endcomment -%}
+{% render 'qf2c-scripts',
+   pixel_prefix: section.settings.pixel_prefix,
+   redirect_url: section.settings.redirect_url
+%}
+
+{% schema %}
+{
+  "name": "Quiz Funnel 2C",
+  "tag": "section",
+  "class": "quiz-funnel-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "text",
+      "id": "pixel_prefix",
+      "label": "Analytics Event Prefix",
+      "default": "Quiz",
+      "info": "Prefix for dataLayer events. E.g. 'Quiz' fires 'Quiz_Step_01'."
+    },
+    {
+      "type": "url",
+      "id": "redirect_url",
+      "label": "Redirect URL after quiz",
+      "info": "Product page (or any URL) the user lands on after completing the quiz."
+    },
+    {
+      "type": "header",
+      "content": "Legal Links (Step 1)"
+    },
+    {
+      "type": "url",
+      "id": "terms_url",
+      "label": "Terms of Service URL"
+    },
+    {
+      "type": "url",
+      "id": "privacy_url",
+      "label": "Privacy Policy URL"
+    },
+    {
+      "type": "header",
+      "content": "Final Step (Step 16)"
+    },
+    {
+      "type": "image_picker",
+      "id": "final_product_image",
+      "label": "Final Product Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "social_proof_image",
+      "name": "Social Proof Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quiz Funnel 2C"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,363 @@
+{%- comment -%}cachebust:1779154559{%- endcomment -%}
+
+{% comment %}
+  AgeAura Pure Urolithin A — Custom Product Template
+  Layout strictly mirrors Rosabella reference.
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'ageaura-product.css' | asset_url }}">
+
+{%- assign p = product -%}
+{%- assign images = p.images -%}
+
+<section class="aap-wrap">
+
+  <!-- ============== S1: HERO (50/50 Rosabella layout) ============== -->
+  <div class="aap-hero">
+
+    <!-- LEFT COLUMN: gallery + testimonial -->
+    <div class="aap-gallery">
+      <div class="aap-main-img">
+        <img id="aapMainImg" src="{{ images[0] | image_url: width: 1000 }}" alt="{{ p.title | escape }}" loading="eager">
+      </div>
+
+      <div class="aap-thumb-strip">
+        <button type="button" class="aap-thumb-arrow aap-thumb-arrow--left" aria-label="Previous">&#x2039;</button>
+        <div class="aap-thumbs" id="aapThumbs">
+          {%- for img in images limit: 8 -%}
+            <button type="button" class="aap-thumb {% if forloop.first %}is-active{% endif %}"
+                    data-src="{{ img | image_url: width: 1000 }}"
+                    aria-label="Image {{ forloop.index }}">
+              <img src="{{ img | image_url: width: 200 }}" alt="{{ img.alt | default: p.title | escape }}" loading="lazy">
+            </button>
+          {%- endfor -%}
+        </div>
+        <button type="button" class="aap-thumb-arrow aap-thumb-arrow--right" aria-label="Next">&#x203A;</button>
+      </div>
+
+      <!-- Hero testimonial card BELOW thumbs -->
+      <div class="aap-hero-review">
+        <div class="aap-hero-review-stars">★★★★★</div>
+        <p class="aap-hero-review-quote">"I'm 54 and used to dread my afternoon workouts — sluggish, achy, just done by 3pm. Three months on AgeAura Urolithin A and I genuinely feel like my mitochondria woke up again. Steady energy from morning to night and my recovery between sessions is night-and-day."</p>
+        <div class="aap-hero-review-footer">
+          <span class="aap-hero-review-who">— Daniel R. US.</span>
+          <span class="aap-hero-review-verified">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#111" aria-hidden="true">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Verified Customer
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: buy box -->
+    <div class="aap-buybox-wrap">
+      <div class="aap-buybox">
+
+        <div class="aap-rating">
+          <span class="aap-stars">★★★★★</span>
+          <span class="aap-rating-text">Trusted by Over 1 Million Happy Customers</span>
+        </div>
+
+        <h1 class="aap-h1">
+          The Mitochondrial Renewal Compound: Clinically-Dosed Urolithin A That Targets Aging At The Cellular Level
+        </h1>
+
+        <div class="aap-price-block">
+          <span class="aap-price-old">${{ p.variants[2].compare_at_price | money_without_currency }}</span>
+          <span class="aap-price-new" id="aapPriceNew">${{ p.selected_or_first_available_variant.price | money_without_currency }}</span>
+          <span class="aap-price-save" id="aapPriceSave">SAVE 50%</span>
+        </div>
+
+        <p class="aap-buybox-intro"><strong>Mitochondrial Support For Cellular Energy &amp; Healthy Aging</strong></p>
+        <p class="aap-buybox-desc">
+          Urolithin A is the only postbiotic compound shown to trigger mitophagy — your cells' built-in recycling system that clears out worn-out mitochondria and rebuilds healthy ones. AgeAura Pure Urolithin A delivers <strong>500&nbsp;mg of ≥98% pure Urolithin A</strong> per single daily vegan capsule — the clinical dose your gut probably can't make on its own.
+        </p>
+
+        <ul class="aap-bullets">
+          <li>Supports mitochondrial renewal and cellular energy*</li>
+          <li>Helps maintain muscle strength and endurance as you age*</li>
+          <li>One capsule daily — clinical 500&nbsp;mg dose, ≥98% purity</li>
+          <li>Vegan · Gluten / Dairy / Soy / GMO free</li>
+        </ul>
+
+        <div class="aap-tier-label">SUBSCRIBE &amp; SAVE (AUTO-DELIVERY)</div>
+
+        {%- form 'product', p, class: 'aap-form', id: 'aapProductForm' -%}
+          <div class="aap-tiers" role="radiogroup">
+            {%- for v in p.variants -%}
+              {%- assign save = v.compare_at_price | minus: v.price -%}
+              {%- assign badge = '' -%}
+              {%- if forloop.index0 == 1 -%}{%- assign badge = 'MOST POPULAR' -%}{%- endif -%}
+              {%- if forloop.last -%}{%- assign badge = 'BEST DEAL' -%}{%- endif -%}
+
+              <label class="aap-tier {% if forloop.index0 == 1 %}is-popular is-selected{% endif %}"
+                     data-variant-id="{{ v.id }}"
+                     data-price="${{ v.price | money_without_currency }}">
+                {%- if badge != '' -%}<span class="aap-tier-badge">{{ badge }}</span>{%- endif -%}
+                <input type="radio" name="id" value="{{ v.id }}" {% if forloop.index0 == 1 %}checked{% endif %}>
+                <div class="aap-tier-info">
+                  <div class="aap-tier-title">{{ v.title }}</div>
+                  <div class="aap-tier-meta">
+                    {% if forloop.first %}1 Bottle in Total
+                    {% elsif forloop.index0 == 1 %}2 Bottles in Total · FREE Shipping
+                    {% else %}3 Bottles in Total · FREE Shipping
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="aap-tier-pricing">
+                  <span class="aap-tier-save">Save ${{ save | money_without_currency }}</span>
+                  <span class="aap-tier-price">${{ v.price | money_without_currency }}</span>
+                  <span class="aap-tier-old">${{ v.compare_at_price | money_without_currency }}</span>
+                </div>
+              </label>
+            {%- endfor -%}
+          </div>
+
+          <button type="submit" class="aap-atc" name="add" id="aapATC">
+            <span class="aap-atc-text">CLAIM YOUR BOTTLE</span>
+            <span class="aap-atc-arrow">→</span>
+          </button>
+
+          <div class="aap-atc-sub">Zero commitment · Cancel anytime · 2 clicks</div>
+
+          <div class="aap-trust-row">
+            <div>🚚 FREE US Shipping</div>
+            <div>🛡 90-Day MBG</div>
+            <div>🧪 Third-Party Tested</div>
+          </div>
+
+          <div class="aap-pay-row">
+            <span class="aap-pay">VISA</span>
+            <span class="aap-pay">MC</span>
+            <span class="aap-pay">AMEX</span>
+            <span class="aap-pay">PAYPAL</span>
+            <span class="aap-pay">SHOP&nbsp;PAY</span>
+            <span class="aap-pay">G&nbsp;PAY</span>
+          </div>
+        {%- endform -%}
+
+        <!-- MINI FAQ (inline below CTA) -->
+        <div class="aap-mini-faq">
+
+          <details><summary>How does it work?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Urolithin A activates <strong>mitophagy</strong> — the natural cleanup process where your cells recycle old, damaged mitochondria and replace them with new, healthier ones. As we age, mitophagy slows down and damaged mitochondria pile up, which contributes to the energy decline, muscle loss, and slower recovery we associate with getting older. Urolithin A directly targets that mechanism.</p>
+          </details>
+
+          <details><summary>Why choose AgeAura Pure Urolithin A?<span class="aap-mini-faq-icon">›</span></summary>
+          <p><strong>500&nbsp;mg of Urolithin A at ≥98% purity</strong>, third-party tested for identity and potency. <strong>One single compound — no fillers, no proprietary blends, no co-stars stealing the spotlight</strong>. <strong>The exact dose used in published mitochondrial human trials</strong> — not a token amount on the label.</p>
+          </details>
+
+          <details><summary>When will I see results?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Week 1–4: The quiet shift. Mitochondrial turnover is biology — you usually don't feel it the first week. Week 4–8: Energy that doesn't crash. Workouts feel less punishing. Month 3+: The "I didn't realise" moment — strength, stamina, and recovery you'd quietly written off as "getting older."</p>
+          </details>
+
+          <details><summary>What to expect with AgeAura?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>One capsule, every morning, with or without food. Pair it with the basics — sleep, walking, lifting, protein. Give it 90 days. That's why our guarantee is 90 days, not 30.</p>
+          </details>
+
+          <details><summary>How long until I get it?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Ships from our US fulfillment center within 1–2 business days. Standard US delivery 3–6 business days. Tracking number emailed the moment your label is created.</p>
+          </details>
+
+          <details><summary>Who can use it?<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Adults 35+ who want to take mitochondrial aging seriously without building a 15-supplement stack. Particularly relevant if you're active, training, or feel that your recovery and stamina aren't what they used to be. Not intended for pregnant or nursing women, children under 18, or people on prescription medications without consulting their healthcare provider.</p>
+          </details>
+
+          <details><summary>Results or full refund guarantee<span class="aap-mini-faq-icon">›</span></summary>
+          <p>Try a full bottle. If within 90 days you don't feel a meaningful shift in energy, strength, or recovery, email us — we'll refund the full purchase price. No restocking fees. No "send the empty bottle back at your expense."</p>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== S2: HIDDEN COST OF MODERN LIVING ============== -->
+  <section class="aap-split aap-split--soft">
+    <div class="aap-split-inner">
+      <div class="aap-split-text">
+        <h2 class="aap-h2 aap-h2--left">The Hidden Cost of Modern Living</h2>
+        <p>Modern life is busier than ever. Between work demands, family responsibilities, and packed schedules, many adults 35+ are feeling something shift inside their bodies — the afternoon energy crash that won't go away, recovery that takes longer than it used to, workouts that feel harder for the same effort.</p>
+        <p>Here's what most people don't realise: the problem usually isn't your willpower or your diet. It's your <strong>mitochondria</strong> — the tiny power plants inside every cell that turn food into usable energy. As we age, the old, damaged mitochondria pile up faster than your body can recycle them. Less clean energy production, slower repair, the familiar "feeling older than I should."</p>
+        <p>For years, the only proven way to reach the clinical dose of Urolithin A was eating roughly six pomegranates a day and hoping your gut bacteria converted enough — most people's don't. AgeAura is built for the person who wants the actual compound, in the actual dose, in one daily capsule — without becoming the kind of person who manages 15 supplement bottles every morning.</p>
+      </div>
+      <div class="aap-split-img">
+        <img src="{{ images[12] | image_url: width: 900 }}" alt="A daily AgeAura ritual" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== S3: SIMPLE DAILY NUTRITION ============== -->
+  <section class="aap-split aap-split--soft aap-split--reverse">
+    <div class="aap-split-inner">
+      <div class="aap-split-img">
+        <img src="{{ images[10] | image_url: width: 900 }}" alt="AgeAura Pure Urolithin A daily ritual" loading="lazy">
+      </div>
+      <div class="aap-split-text">
+        <h2 class="aap-h2 aap-h2--left">AgeAura Pure Urolithin A: Simple Daily Nutrition</h2>
+        <p>Mitochondrial research has moved fast in the last decade. What started as obscure pomegranate biochemistry is now one of the most-studied compounds in healthy aging — with human trials showing measurable improvements in muscle strength, endurance, and mitochondrial gene expression at the 500&nbsp;mg daily dose.</p>
+        <p>The role of a daily supplement, in that picture, is to do the one thing that diet and lifestyle <em>cannot</em> easily do. Only about 4 in 10 people produce meaningful amounts of Urolithin A naturally from food — for everyone else, supplementing is the only way to reach the clinically-studied range. <strong>That's the whole job.</strong></p>
+        <p>AgeAura Pure Urolithin A delivers <strong>500&nbsp;mg of ≥98% pure Urolithin A</strong> in every vegan capsule — making it perfect for adults who want to:</p>
+        <ul class="aap-green-list">
+          <li>Support healthy mitochondrial renewal and cellular energy*</li>
+          <li>Maintain muscle strength and endurance through their 40s, 50s and beyond*</li>
+          <li>Take longevity seriously without 15-supplement stacks</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== S4: BUILT AROUND ONE COMPOUND ============== -->
+  <section class="aap-split">
+    <div class="aap-split-inner">
+      <div class="aap-split-text">
+        <h2 class="aap-h2 aap-h2--left">Built Around One Compound</h2>
+        <p>Many supplements pack in dozens of ingredients — but AgeAura takes a different approach.</p>
+        <p>Our formula is built around a single clinically-dosed compound:</p>
+        <ul class="aap-bullet-dots">
+          <li><strong>500&nbsp;mg pure Urolithin A</strong> (postbiotic metabolite, ≥98% purity, USP grade)</li>
+          <li><strong>Vegan HPMC capsule shell</strong> — no fillers, dyes, or proprietary blends</li>
+        </ul>
+        <p>One compound. No "proprietary blend" loophole. The dose printed on the label is the dose in the capsule.</p>
+        <h3 class="aap-h3">What You'll Find in Every Serving:</h3>
+        <p><strong>Pure Urolithin A (500&nbsp;mg)</strong> — The mitochondrial-renewal postbiotic at the center of the modern longevity conversation. Triggers mitophagy and supports the rebuilding of healthy mitochondrial networks in muscle and brain tissue.</p>
+        <p><strong>≥98% Purity, USP Grade</strong> — Lab-synthesised so every batch hits the same identity and potency standard. Third-party tested. No pomegranate extract loophole, no inactive isomers, no surprise heavy metals.</p>
+        <p><strong>Vegan HPMC Capsule</strong> — No gluten, dairy, soy, or GMO ingredients. Manufactured in a US cGMP-registered facility.</p>
+      </div>
+      <div class="aap-split-img">
+        <img src="{{ images[1] | image_url: width: 900 }}" alt="500mg Urolithin A callouts" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== S5: TESTIMONIALS ============== -->
+  <section class="aap-section">
+    <h2 class="aap-h2">What customers are actually saying</h2>
+    <div class="aap-reviews" id="aapReviews">
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[8] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"I've tried every NAD⁺ booster, every adaptogen — nothing actually changed how I felt at the gym. Six weeks on Pure Urolithin A and my recovery between training sessions is genuinely faster. I'm not making it up."</p>
+        <div class="aap-review-who">Marcus T. · age 47<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[9] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"I'm 45 and have two kids under 10. By 4pm I used to be cooked. Two months in, I have steady energy from morning straight through dinner. No crash, no caffeine top-ups. Genuinely noticeable."</p>
+        <div class="aap-review-who">Priya R. · age 45<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[13] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"Started training again at 54 after a long break. The first month back was brutal — soreness for days. Added AgeAura Urolithin A in week three and within a month I was recovering between sessions like I was in my 30s."</p>
+        <div class="aap-review-who">James W. · age 54<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[14] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"I'd already stripped my stack down to creatine, omega-3 and vitamin D. AgeAura was the only longevity-specific addition I was willing to test. Three months in I'm not going off it — my workouts feel like I'm 35 again."</p>
+        <div class="aap-review-who">Sarah K. · age 51<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[15] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"Honestly the difference snuck up on me. Around week 6 I noticed I was carrying laundry up two flights without my legs burning, which had been quietly bothering me for a year. Small thing, big signal."</p>
+        <div class="aap-review-who">Linda H. · age 49<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+      <div class="aap-review">
+        <img class="aap-review-img" src="{{ images[11] | image_url: width: 300 }}" alt="Verified buyer">
+        <div class="aap-review-stars">★★★★★</div>
+        <p class="aap-review-quote">"At 56 my biggest fear was losing muscle. Eight weeks in and I'm pushing weights I haven't touched in five years — and my mid-afternoon energy slump just isn't a thing anymore. Best longevity investment I've made."</p>
+        <div class="aap-review-who">Robert F. · age 56<br><span class="aap-verified">✓ Verified buyer</span></div>
+      </div>
+
+    </div>
+    <div class="aap-review-dots" id="aapReviewDots"></div>
+  </section>
+
+  <!-- ============== S6: BOTTOM FULL FAQ ============== -->
+  <section class="aap-bottom-faq">
+    <div class="aap-bottom-faq-inner">
+      <h2 class="aap-bottom-faq-title">Frequently Asked Questions</h2>
+
+      <div class="aap-bottom-faq-list">
+
+        <details class="aap-bfaq-item"><summary>Can I buy AgeAura Pure Urolithin A in stores?<span class="aap-bfaq-icon">›</span></summary>
+        <p>AgeAura is sold exclusively online and shipped directly from our US fulfillment center. By keeping distribution direct-to-consumer, we control every batch from manufacture to delivery — so the dose printed on the label is the dose you actually get.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What ingredients are in AgeAura Pure Urolithin A?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Each vegan HPMC capsule contains 500&nbsp;mg of Urolithin A (≥98% purity, USP grade). Other ingredients: HPMC vegetable capsule, microcrystalline cellulose, vegetable magnesium stearate, silicon dioxide. Free from gluten, dairy, soy, GMO, stevia, and artificial sweeteners.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>Is AgeAura safe to take with my current medications?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Most adults pair Pure Urolithin A with basics like creatine, omega-3, and vitamin D without issue. If you're on prescription medication — especially blood thinners or immunosuppressants — please consult your healthcare provider before adding any supplement to your routine.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How should I store AgeAura?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Store in a cool, dry place away from direct sunlight. Keep the cap tightly closed. No refrigeration required. Once opened, the capsules stay fresh for the full shelf-life printed on the bottle.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What is AgeAura Pure Urolithin A intended for?<span class="aap-bfaq-icon">›</span></summary>
+        <p>A daily ritual for adults 35+ who want to support healthy mitochondrial renewal, cellular energy, and muscle strength as they age. Built for people who already take their basics seriously and want a focused longevity supplement — not another 15-pill stack.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How should I use AgeAura?<span class="aap-bfaq-icon">›</span></summary>
+        <p>One capsule daily, with or without food. Morning is most popular because of the energy support, but it's not stimulating — you can take it any time. Consistency over time matters far more than timing.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How often should I take the supplement?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Once a day, every day. Urolithin A supplementation is a consistency story, not a loading-dose story. The most consistent customers describe a quiet shift around week 4–8, with cumulative benefits at month 3+.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>How many capsules are in each container?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Each bottle contains 30 vegan capsules — a 30-day supply at the recommended one-capsule-daily intake. Our 60-day and 90-day subscription bundles include 2 and 3 bottles respectively.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>Are there any age or health restrictions?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Not intended for use by pregnant or nursing women, children under 18, or people on prescription medications without first consulting their healthcare provider. If you have a medical condition, please speak with your doctor before adding any new supplement.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What if the supplement doesn't work for me?<span class="aap-bfaq-icon">›</span></summary>
+        <p>Try a full bottle. If within 90 days of your purchase date you don't feel a meaningful shift, email our support team — we'll refund the full purchase price. No restocking fees. No "send the empty bottle back at your expense." We don't sell supplements we'd be afraid to back.</p>
+        </details>
+
+        <details class="aap-bfaq-item"><summary>What is your return policy?<span class="aap-bfaq-icon">›</span></summary>
+        <p>90-day money-back guarantee. Email support within 90 days of your purchase date and we'll refund the full purchase price. You don't need to return the bottle. To cancel a subscription, log into your account and cancel in two clicks — no calls, no chat queues.</p>
+        </details>
+
+      </div>
+
+      <div class="aap-bottom-cta">
+        <a href="#aapProductForm" class="aap-buynow">BUY NOW &amp; SAVE</a>
+        <div class="aap-bottom-mbg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#111"><path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/></svg>
+          90-Day Money Back Guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} Disclaimer removed — theme footer already carries the FDA + company line. {%- endcomment -%}
+
+</section>
+
+<!-- ============== STICKY MOBILE CTA ============== -->
+<div class="aap-sticky" id="aapSticky">
+  <div class="aap-sticky-info">
+    <div class="aap-sticky-title">AgeAura Pure Urolithin A</div>
+    <div class="aap-sticky-price"><span id="aapStickyPrice">${{ p.selected_or_first_available_variant.price | money_without_currency }}</span></div>
+  </div>
+  <button type="button" class="aap-sticky-btn" id="aapStickyBtn">CLAIM</button>
+</div>
+
+<script src="{{ 'ageaura-product.js' | asset_url }}" defer></script>

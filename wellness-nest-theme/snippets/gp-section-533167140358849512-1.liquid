@@ -1,0 +1,197 @@
+
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    {%- liquid
+      assign inventory_quantity = variant.inventory_quantity | default: 0
+      assign is_in_stock = variant.available
+    -%}
+    <gp-product-button
+      
+      gp-data-wrapper="true"
+      gp-href="{{ request.origin }}{{ routes.root_url | split: '/' | join: '/' }}/cart"
+      class="gp-product-button"
+      gp-label-out-of-stock="{{ section.settings.ggTWgOPoWv9_outOfStockLabel }}"
+      gp-label-unavailable="{{ section.settings.ggTWgOPoWv9_unavailableLabel }}"
+      gp-data='{"styles":{"errorTypo":{"attrs":{"color":"error"},"type":"paragraph-2"},"successTypo":{"attrs":{"color":"success"},"type":"paragraph-2"}},"setting":{"errorType":"built-in","actionEffect":"continue-shopping","enableMessage":true,"label":"GET MINE NOW","errorMessage":"Cannot add product to cart","successMessage":"Add product to cart successfully","outOfStockLabel":"Out of stock","customURL":{"link":"/cart","target":"_self"}},"variantID":"{{variant.id}}","disabled":"{{variant.available}}","totalVariant":"{{total_combinations}}"}'
+      data-variant-selection-required-message=""
+      gp-enable-third-partycart="{{shop.metafields.GEMPAGES.enableThirdPartyCart}}"
+    >
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--op-tablet:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:24px;--mb:24px;--mt-mobile:24px;--mb-mobile:12px;--ta:center" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+        <style>[data-id="gTWgOPoWv9"].gp-button-base::before, [data-id="gTWgOPoWv9-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="gTWgOPoWv9"]:hover::before, [data-id="gTWgOPoWv9-interaction"]:hover::before {
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+  }</style>
+        
+        <button
+          data-id="gTWgOPoWv9" dataId="gTWgOPoWv9" data-state="idle" aria-label="GET MINE NOW"
+          name="add" gp-data-hidden="{% unless variant.available %}true{% endunless %}"
+          type="submit"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:16px;--pb:16px;--pl-tablet:12px;--pr-tablet:12px;--pt-tablet:12px;--pb-tablet:12px;--pl-mobile:12px;--pr-mobile:12px;--pt-mobile:12px;--pb-mobile:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--hvr-bblr:8px;--hvr-bbrr:8px;--hvr-btlr:8px;--hvr-btrr:8px;--shadow:none;--bgi:;--hvr-bgi:;--hvr-bg:#FFD604;--bg:#FFD604;--hvr-c:#252525;--c:#252525;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%"
+          class="gp-button-atc tcustomizer-submit-button gTWgOPoWv9 gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30  undefined"
+        >
+        
+  <svg
+    class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="gp-opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="gp-opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    ></path>
+  </svg>
+
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+    <span
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ts:none;word-break:break-word;--ml:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <?xml version="1.0" encoding="iso-8859-1"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg data-id="509979108701111516" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+<g transform="translate(1 1)">
+	<g>
+		<path d="M468.333,169.789H274.627c32.427-18.773,49.493-63.147,36.693-95.573c-0.853-4.267-3.413-7.68-5.973-11.947    c-8.533-12.8-19.627-11.947-23.04-11.947c-5.12-0.853-5.973,0-19.627,11.093c-17.067,15.36-52.907,46.933-88.747,66.56    c-1.707,1.707-39.253,24.747-67.413,50.347H84.333C37.4,178.323-1,216.723-1,263.656v85.333c0,36.693,30.72,75.093,66.56,83.627    c10.24,2.56,17.92,5.12,21.333,8.533c10.24,8.533,34.133,18.773,65.707,18.773h136.533c23.893,0,42.667-18.773,42.667-42.667    c0-9.387-3.413-18.773-8.533-25.6h8.533c23.893,0,42.667-18.773,42.667-42.667c0-9.387-3.413-18.773-8.533-25.6    c23.893,0,42.667-18.773,42.667-42.667c0-9.387-3.413-18.773-8.533-25.6h68.267c23.893,0,42.667-18.773,42.667-42.667    S492.227,169.789,468.333,169.789z M468.333,238.056H331.8H229.4c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533h102.4    h34.133c14.507,0,25.6,11.093,25.6,25.6c0,14.507-11.093,25.6-25.6,25.6H331.8h-93.867c-5.12,0-8.533,3.413-8.533,8.533    s3.413,8.533,8.533,8.533H331.8c14.507,0,25.6,11.093,25.6,25.6c0,14.507-11.093,25.6-25.6,25.6h-42.667H229.4    c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533h59.733c14.507,0,25.6,11.093,25.6,25.6c0,14.507-11.093,25.6-25.6,25.6    H152.6c-23.762,0-40.649-6.867-49.268-12.166c-4.656-5.402-6.964-14.246-10.466-27.087l-0.853-5.12    c-0.853-4.267-5.973-6.827-10.24-5.973s-6.827,5.973-5.973,10.24l1.707,4.267c1.036,3.798,2.039,7.594,3.146,11.293    c-3.346-1.058-6.967-1.988-10.826-2.76c-29.013-5.973-53.76-37.547-53.76-66.56v-85.333c0-37.547,30.72-68.267,68.267-68.267h8.36    c-1.438,1.946-2.809,3.919-4.093,5.973c-3.413,5.12-5.973,9.387-10.24,14.507c-3.413,3.413-2.56,8.533,0.853,11.947    c1.707,0.853,3.413,1.707,5.12,1.707c2.56,0,5.12-0.853,6.827-3.413c5.12-5.12,8.533-10.24,11.947-15.36    c4.224-5.914,8.451-11.828,13.504-17.742c26.455-25.358,65.856-49.671,65.856-49.671c36.693-20.48,73.387-52.907,91.307-68.267    c3.413-2.56,7.68-5.973,9.387-7.68c2.56,0,4.267,0,7.68,5.12c1.707,3.413,3.413,5.973,4.267,8.533    c7.68,22.187-2.56,58.88-30.72,75.093l-21.317,14.211c-0.293,0.084-0.583,0.181-0.87,0.295l-17.067,8.533    c-3.413,1.707-5.12,6.827-3.413,11.093s9.387,5.12,11.093,3.413l13.653-6.827h221.867c14.507,0,25.6,11.093,25.6,25.6    C493.933,226.963,482.84,238.056,468.333,238.056z"/>
+	</g>
+</g>
+</svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggTWgOPoWv9_label }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--op-mobile:100%;--op-tablet:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:24px;--mb:24px;--mt-mobile:24px;--mb-mobile:12px;--ta:center" class="{% if variant.available %} !gp-hidden {% endif %}">
+        <style>[data-id="gTWgOPoWv9-sold-out"].gp-button-base::before, [data-id="gTWgOPoWv9-sold-out-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  
+  
+    
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+  
+    }
+  
+      
+  [data-id="gTWgOPoWv9-sold-out"]:hover::before, [data-id="gTWgOPoWv9-sold-out-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="gTWgOPoWv9-sold-out" dataId="gTWgOPoWv9-sold-out" data-state="idle" aria-label="{{ section.settings.ggTWgOPoWv9_outOfStockLabel }}"
+          gp-data-hidden="{% if variant.available %}true{% endif %}"
+          type="button"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:16px;--pb:16px;--pl-tablet:12px;--pr-tablet:12px;--pt-tablet:12px;--pb-tablet:12px;--pl-mobile:12px;--pr-mobile:12px;--pt-mobile:12px;--pb-mobile:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--hvr-bblr:8px;--hvr-bbrr:8px;--hvr-btlr:8px;--hvr-btrr:8px;--shadow:none;--bgi:;--hvr-bgi:;--bg:#FFD604;--hvr-bg:#FFD604;--c:#252525;--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%"
+          class="gp-cursor-default gp-opacity-30 btn-disabled gp-button-sold-out gTWgOPoWv9-sold-out gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+    <span
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ts:none;word-break:break-word;--ml:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <?xml version="1.0" encoding="iso-8859-1"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg data-id="509979108701111516" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+<g transform="translate(1 1)">
+	<g>
+		<path d="M468.333,169.789H274.627c32.427-18.773,49.493-63.147,36.693-95.573c-0.853-4.267-3.413-7.68-5.973-11.947    c-8.533-12.8-19.627-11.947-23.04-11.947c-5.12-0.853-5.973,0-19.627,11.093c-17.067,15.36-52.907,46.933-88.747,66.56    c-1.707,1.707-39.253,24.747-67.413,50.347H84.333C37.4,178.323-1,216.723-1,263.656v85.333c0,36.693,30.72,75.093,66.56,83.627    c10.24,2.56,17.92,5.12,21.333,8.533c10.24,8.533,34.133,18.773,65.707,18.773h136.533c23.893,0,42.667-18.773,42.667-42.667    c0-9.387-3.413-18.773-8.533-25.6h8.533c23.893,0,42.667-18.773,42.667-42.667c0-9.387-3.413-18.773-8.533-25.6    c23.893,0,42.667-18.773,42.667-42.667c0-9.387-3.413-18.773-8.533-25.6h68.267c23.893,0,42.667-18.773,42.667-42.667    S492.227,169.789,468.333,169.789z M468.333,238.056H331.8H229.4c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533h102.4    h34.133c14.507,0,25.6,11.093,25.6,25.6c0,14.507-11.093,25.6-25.6,25.6H331.8h-93.867c-5.12,0-8.533,3.413-8.533,8.533    s3.413,8.533,8.533,8.533H331.8c14.507,0,25.6,11.093,25.6,25.6c0,14.507-11.093,25.6-25.6,25.6h-42.667H229.4    c-5.12,0-8.533,3.413-8.533,8.533s3.413,8.533,8.533,8.533h59.733c14.507,0,25.6,11.093,25.6,25.6c0,14.507-11.093,25.6-25.6,25.6    H152.6c-23.762,0-40.649-6.867-49.268-12.166c-4.656-5.402-6.964-14.246-10.466-27.087l-0.853-5.12    c-0.853-4.267-5.973-6.827-10.24-5.973s-6.827,5.973-5.973,10.24l1.707,4.267c1.036,3.798,2.039,7.594,3.146,11.293    c-3.346-1.058-6.967-1.988-10.826-2.76c-29.013-5.973-53.76-37.547-53.76-66.56v-85.333c0-37.547,30.72-68.267,68.267-68.267h8.36    c-1.438,1.946-2.809,3.919-4.093,5.973c-3.413,5.12-5.973,9.387-10.24,14.507c-3.413,3.413-2.56,8.533,0.853,11.947    c1.707,0.853,3.413,1.707,5.12,1.707c2.56,0,5.12-0.853,6.827-3.413c5.12-5.12,8.533-10.24,11.947-15.36    c4.224-5.914,8.451-11.828,13.504-17.742c26.455-25.358,65.856-49.671,65.856-49.671c36.693-20.48,73.387-52.907,91.307-68.267    c3.413-2.56,7.68-5.973,9.387-7.68c2.56,0,4.267,0,7.68,5.12c1.707,3.413,3.413,5.973,4.267,8.533    c7.68,22.187-2.56,58.88-30.72,75.093l-21.317,14.211c-0.293,0.084-0.583,0.181-0.87,0.295l-17.067,8.533    c-3.413,1.707-5.12,6.827-3.413,11.093s9.387,5.12,11.093,3.413l13.653-6.827h221.867c14.507,0,25.6,11.093,25.6,25.6    C493.933,226.963,482.84,238.056,468.333,238.056z"/>
+	</g>
+</g>
+</svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="--ff:var(--g-font-Poppins, 'Poppins'), var(--g-font-body, body);--weight:700;--size:20px;--size-tablet:16px;--size-mobile:16px;--lh:150%;--lh-tablet:150%;--lh-mobile:150%;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggTWgOPoWv9_outOfStockLabel }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </gp-product-button>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
