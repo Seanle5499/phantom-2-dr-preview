@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phantom 2.0 — LP v1 (copy-inserted mockup)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#FF3132; --brand-dark:#c92325; --brand-soft:#fff2f2;
+    --ok:#22a13a; --ink:#0f0f0f; --ink2:#4a4a4a; --line:#e5e5e5;
+    --soft:#f5f4f1; --cream:#f7f3ec; --dark:#0e0e0e;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:'Poppins',system-ui,sans-serif; color:var(--ink); line-height:1.55; font-size:16px; background:#fff}
+  img{max-width:100%; display:block}
+  h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif; margin:0; line-height:1.15; color:var(--ink); font-weight:800}
+  h1{font-size:44px; letter-spacing:-.02em}
+  h2{font-size:34px; letter-spacing:-.015em}
+  h3{font-size:22px}
+  p{margin:0 0 14px}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px}
+  .kicker{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.14em; color:var(--brand); text-transform:uppercase; margin-bottom:14px}
+  .stars{color:var(--brand); letter-spacing:2px; font-size:14px}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--brand); color:#fff; font-weight:800; font-size:15px; letter-spacing:.04em; padding:16px 30px; border-radius:8px; text-decoration:none; text-transform:uppercase; border:none; cursor:pointer; box-shadow:0 4px 14px rgba(255,49,50,.35); transition:.2s}
+  .btn:hover{background:var(--brand-dark); transform:translateY(-1px)}
+  .btn.green{background:var(--ok); box-shadow:0 4px 14px rgba(34,161,58,.3)}
+  .btn.wide{width:100%}
+  .btn-sub{font-size:12px; color:var(--ink2); margin-top:10px; text-align:center}
+
+  /* === B1 Announcement === */
+  .announce{background:var(--dark); color:#fff; text-align:center; font-size:13px; font-weight:700; letter-spacing:.06em; padding:10px 16px}
+  .announce b{color:var(--brand)}
+
+  /* === Header === */
+  .site-hd{border-bottom:1px solid var(--line); padding:14px 0}
+  .site-hd .wrap{display:flex; align-items:center; justify-content:space-between}
+  .site-hd img{max-height:44px; width:auto}
+
+  /* === B2 Hero === */
+  .hero{padding:44px 0 56px; background:#fff}
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center}
+  .hero .rating{font-size:13px; color:var(--ink2); margin-bottom:14px; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+  .hero h1{margin-bottom:16px}
+  .hero .sub{font-size:16px; color:var(--ink2); margin-bottom:20px}
+  .hero .sub p:first-child{color:var(--ink); font-weight:600}
+  .hero ul{list-style:none; padding:0; margin:0 0 22px; border-top:1px solid var(--line)}
+  .hero ul li{padding:10px 0 10px 26px; border-bottom:1px solid var(--line); font-size:14px; position:relative; color:var(--ink2)}
+  .hero ul li:before{content:"✓"; position:absolute; left:0; color:var(--ok); font-weight:800}
+  .hero .sale-callout{background:var(--brand-soft); border-left:4px solid var(--brand); padding:14px 16px; border-radius:6px; margin-bottom:20px; font-size:14px}
+  .hero .sale-callout .lbl{font-weight:800; color:var(--brand); font-size:11px; letter-spacing:.1em; display:block; margin-bottom:6px}
+  .hero .sale-callout ul{border:none; margin:0}
+  .hero .sale-callout li{border:none; padding:2px 0 2px 20px; font-size:13px; color:var(--ink)}
+  .hero .sale-callout li:before{content:"•"; color:var(--brand)}
+  .hero-cta-wrap{margin-bottom:18px}
+  .hero-img{position:relative}
+  .hero-img img{width:100%; border-radius:16px; background:var(--soft)}
+  .hero-review{display:grid; grid-template-columns:56px 1fr auto; gap:14px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; box-shadow:0 4px 16px rgba(0,0,0,.05); margin-top:18px}
+  .hero-review .av{width:56px; height:56px; border-radius:50%; background:#ddd; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700; color:#999}
+  .hero-review .q{font-style:italic; font-size:13px; color:var(--ink); margin-bottom:4px; line-height:1.4}
+  .hero-review .name{font-weight:700; color:var(--brand); font-size:12px}
+  .hero-review .st{white-space:nowrap}
+
+  /* === B3 Trust === */
+  .trust{background:var(--soft); padding:22px 0}
+  .trust-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center}
+  .trust-item{display:flex; align-items:center; justify-content:center; gap:10px; font-size:13px; font-weight:600; color:var(--ink2)}
+  .trust-item .ic{width:32px; height:32px; border-radius:50%; background:var(--brand-soft); color:var(--brand); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px}
+
+  /* === B4 Authority === */
+  .authority{background:var(--cream); overflow:hidden}
+  .authority-grid{display:grid; grid-template-columns:.85fr 1.15fr; align-items:stretch; min-height:460px}
+  .authority-img{background:#d8d0c1; display:flex; align-items:center; justify-content:center; color:#7a6f5c; font-size:13px; text-align:center; padding:20px; font-weight:600}
+  .authority-body{padding:60px 60px 60px 50px; display:flex; flex-direction:column; justify-content:center}
+  .authority-body .kicker{color:var(--brand); margin-bottom:20px}
+  .authority-body blockquote{font-style:italic; font-size:20px; line-height:1.5; color:var(--ink); font-weight:500; margin:0 0 22px; padding:0; border:none}
+  .authority-body .attr{font-size:14px; color:#5a4f3d; margin-bottom:6px; font-weight:600}
+  .authority-body .stars{margin-bottom:22px}
+
+  /* === B5 Pain === */
+  .pain{padding:80px 0; background:#fff}
+  .pain-body{max-width:780px; margin:0 auto}
+  .pain-body h2{margin-bottom:22px}
+  .pain-body p{font-size:16px; color:var(--ink2); line-height:1.7}
+  .pain-body p.emph{color:var(--ink); font-weight:600}
+  .pain-close{margin-top:28px; padding:22px 24px; background:var(--brand-soft); border-radius:10px}
+  .pain-close p{margin-bottom:10px; font-size:15px}
+  .pain-close p:last-child{margin-bottom:0; font-weight:600; color:var(--ink)}
+
+  /* === B6 Marquee === */
+  .marquee{background:var(--dark); color:#fff; padding:16px 0; text-align:center; font-size:13px; letter-spacing:.1em; font-weight:600}
+  .marquee span{margin:0 20px; color:#d0d0d0}
+  .marquee .sep{color:var(--brand)}
+
+  /* === B7 Mechanism === */
+  .mech{padding:80px 0; background:var(--soft)}
+  .mech-head{text-align:center; max-width:820px; margin:0 auto 60px}
+  .mech-head .sub{font-size:16px; color:var(--ink2); margin-top:16px}
+  .mech-row{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; margin-bottom:56px}
+  .mech-row:last-of-type{margin-bottom:0}
+  .mech-row.flip .mech-img{order:2}
+  .mech-img{border-radius:14px; overflow:hidden; background:#fff; aspect-ratio:4/3; box-shadow:0 4px 20px rgba(0,0,0,.06)}
+  .mech-img img{width:100%; height:100%; object-fit:cover}
+  .mech-body{position:relative}
+  .mech-body .num{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:var(--brand); color:#fff; font-weight:800; font-size:16px; margin-bottom:16px; box-shadow:0 4px 12px rgba(255,49,50,.3)}
+  .mech-body h3{margin:0 0 20px; font-size:24px; line-height:1.25}
+  .mech-body .lbl{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin:16px 0 8px}
+  .mech-body .lbl.prob{color:var(--brand)}
+  .mech-body .lbl.fix{color:var(--ok)}
+  .mech-body p{font-size:15px; color:var(--ink2); line-height:1.65; margin:0}
+  .mech-close{text-align:center; margin-top:60px; font-size:15px; color:var(--ink2); max-width:720px; margin-left:auto; margin-right:auto; font-style:italic}
+
+  /* === B8 Three Ways === */
+  .ways{padding:80px 0; background:#fff}
+  .ways-head{text-align:center; max-width:760px; margin:0 auto 46px}
+  .ways-head .opener{font-style:italic; color:var(--brand); font-weight:600; margin-top:16px; font-size:15px}
+  .ways-head .sub{font-size:16px; color:var(--ink2); margin-top:10px}
+  .ways-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px}
+  .way{border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff}
+  .way-img{aspect-ratio:1/1; background:var(--soft); display:flex; align-items:center; justify-content:center; overflow:hidden}
+  .way-img img{width:100%; height:100%; object-fit:cover}
+  .way-body{padding:24px}
+  .way h3{margin-bottom:10px; font-size:20px}
+  .way .best{font-size:12px; font-weight:700; color:var(--brand); letter-spacing:.06em; text-transform:uppercase; margin-bottom:12px}
+  .way p{font-size:14px; color:var(--ink2); line-height:1.6; margin:0}
+  .ways-close{text-align:center; margin-top:36px; font-size:15px; color:var(--ink); font-weight:600}
+
+  /* === B9 Compare === */
+  .compare{padding:80px 0; background:var(--soft)}
+  .compare-head{text-align:center; max-width:760px; margin:0 auto 40px}
+  .compare-head .opener{font-style:italic; font-weight:700; color:var(--ink); font-size:20px; margin-top:14px}
+  .compare-head .sub{font-size:15px; color:var(--ink2); margin-top:12px}
+  .cmp-table{width:100%; border-collapse:separate; border-spacing:0; background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.04)}
+  .cmp-table th,.cmp-table td{padding:16px 20px; border-bottom:1px solid var(--line); font-size:14px; text-align:left; color:var(--ink2)}
+  .cmp-table th{background:var(--dark); color:#fff; font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:700}
+  .cmp-table th.pc, .cmp-table td.pc{background:var(--brand); color:#fff; font-weight:600; text-align:center}
+  .cmp-table th.pc{background:var(--brand)}
+  .cmp-table td.pc{background:var(--brand-soft); color:var(--ink)}
+  .cmp-table td.kx{text-align:center}
+  .cmp-table tr:last-child td{border-bottom:none}
+
+  /* === B9.5 Mid CTA === */
+  .mid-cta{padding:60px 0; background:var(--cream); text-align:center}
+  .mid-cta p{font-size:15px; color:var(--ink2); margin:14px 0 0}
+
+  /* === B10 Story === */
+  .story{padding:80px 0; background:#fff}
+  .story-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:56px; align-items:start}
+  .story-img{position:sticky; top:24px}
+  .story-img .ph{aspect-ratio:4/5; background:#d8d0c1; border-radius:14px; display:flex; align-items:center; justify-content:center; color:#7a6f5c; font-size:13px; text-align:center; padding:20px; font-weight:600}
+  .story-body h2{margin-bottom:24px}
+  .story-body p{font-size:15px; color:var(--ink2); line-height:1.75}
+  .story-body p:first-of-type{font-size:17px; color:var(--ink); font-weight:600}
+  .story-trust{display:flex; flex-wrap:wrap; gap:20px 30px; margin-top:24px; font-size:13px; color:var(--ink); font-weight:600}
+  .story-trust span{display:flex; align-items:center; gap:8px}
+
+  /* === B11 Guarantee === */
+  .guarantee{padding:60px 0; background:var(--dark); color:#fff}
+  .guarantee-grid{display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center; max-width:900px; margin:0 auto}
+  .g-seal{width:140px; height:140px; border-radius:50%; background:var(--brand); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:32px; box-shadow:0 8px 30px rgba(255,49,50,.4); text-align:center; line-height:1.05; padding:16px}
+  .g-seal small{display:block; font-size:11px; letter-spacing:.1em; margin-top:4px; opacity:.9}
+  .guarantee h2{color:#fff; margin-bottom:18px; font-size:28px}
+  .guarantee p{color:#d0d0d0; font-size:15px; line-height:1.7}
+
+  /* === B11.5 Timeline === */
+  .timeline{padding:80px 0; background:#fff}
+  .tl-head{text-align:center; max-width:740px; margin:0 auto 46px}
+  .tl-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px}
+  .tl-step{background:var(--soft); border-radius:12px; padding:24px 18px; position:relative}
+  .tl-step .day{font-size:11px; font-weight:800; color:var(--brand); letter-spacing:.08em; text-transform:uppercase; margin-bottom:10px}
+  .tl-step p{font-size:13px; color:var(--ink2); line-height:1.55; margin:0}
+  .tl-disc{margin-top:32px; font-size:12px; color:#999; text-align:center; font-style:italic; max-width:640px; margin-left:auto; margin-right:auto}
+
+  /* === B12 Offer === */
+  .offer{padding:80px 0; background:var(--brand-soft)}
+  .offer-head{text-align:center; margin-bottom:44px}
+  .offer-stack{max-width:640px; margin:0 auto; background:#fff; border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,.08); overflow:hidden; border:2px solid var(--brand)}
+  .offer-row{display:flex; justify-content:space-between; align-items:center; padding:16px 24px; border-bottom:1px solid var(--line); font-size:14px}
+  .offer-row:last-of-type{border-bottom:none}
+  .offer-row .lbl{display:flex; align-items:center; gap:12px; color:var(--ink)}
+  .offer-row .lbl .em{font-size:18px}
+  .offer-row .val{font-weight:700; color:var(--ink2); font-size:13px; text-align:right}
+  .offer-row .val.free{color:var(--ok); font-weight:800}
+  .offer-total{background:var(--dark); color:#fff; padding:20px 24px; text-align:center}
+  .offer-total .row{display:flex; justify-content:space-between; margin-bottom:6px; font-size:13px}
+  .offer-total .row.big{font-size:16px; font-weight:800; margin-top:8px; padding-top:10px; border-top:1px solid #333; margin-bottom:0}
+  .offer-total .row.big .save{color:var(--brand)}
+  .offer-cta{padding:24px}
+  .offer-urgency{text-align:center; margin-top:16px; font-size:13px; color:var(--ink2)}
+
+  /* === B13 Testimonials === */
+  .testi{padding:80px 0; background:#fff}
+  .testi-head{text-align:center; margin-bottom:46px}
+  .testi-head .sub{font-size:15px; color:var(--ink2); margin-top:12px}
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px}
+  .testi-card{background:var(--soft); border-radius:14px; padding:28px}
+  .testi-card .stars{margin-bottom:14px}
+  .testi-card blockquote{font-style:italic; font-size:14px; color:var(--ink); line-height:1.65; margin:0 0 18px; padding:0; border:none}
+  .testi-card .attr{display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid var(--line)}
+  .testi-card .av{width:44px; height:44px; border-radius:50%; background:#ccc; flex:0 0 44px}
+  .testi-card .who{font-size:13px}
+  .testi-card .who b{color:var(--ink); display:block}
+  .testi-card .who span{color:var(--ink2); font-size:12px}
+  .testi-card .who .v{color:var(--ok); font-size:11px; margin-left:6px; font-weight:700}
+
+  /* === B13.5 For / Not === */
+  .fornot{padding:80px 0; background:var(--soft)}
+  .fn-head{text-align:center; margin-bottom:46px}
+  .fn-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; margin:0 auto}
+  .fn-col{padding:32px; border-radius:14px}
+  .fn-col.for{background:#eaf7ec; border:1px solid #9ccb9c}
+  .fn-col.not{background:#fdecec; border:1px solid #f0b0b0}
+  .fn-col h3{margin-bottom:16px; font-size:18px}
+  .fn-col.for h3{color:#1a7d2e}
+  .fn-col.not h3{color:#b32526}
+  .fn-col ul{list-style:none; padding:0; margin:0}
+  .fn-col li{padding:8px 0 8px 26px; position:relative; font-size:14px; color:var(--ink); line-height:1.5}
+  .fn-col.for li:before{content:"✓"; position:absolute; left:0; color:var(--ok); font-weight:800}
+  .fn-col.not li:before{content:"✕"; position:absolute; left:0; color:var(--brand); font-weight:800}
+
+  /* === B14 FAQ === */
+  .faq{padding:80px 0; background:#fff}
+  .faq-head{text-align:center; margin-bottom:40px}
+  .faq-list{max-width:800px; margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--line); padding:0}
+  .faq-q{padding:20px 0; font-weight:700; font-size:16px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; color:var(--ink); list-style:none}
+  .faq-q::-webkit-details-marker{display:none}
+  .faq-q:after{content:"+"; font-size:24px; color:var(--brand); font-weight:400; margin-left:20px; transition:.2s}
+  details[open] .faq-q:after{content:"−"}
+  .faq-a{padding:0 0 20px; font-size:14px; color:var(--ink2); line-height:1.7}
+  .faq-disc{margin-top:32px; padding:20px; background:var(--soft); border-radius:10px; font-size:12px; color:#666; line-height:1.6; font-style:italic; max-width:800px; margin-left:auto; margin-right:auto}
+
+  /* === B16 Final CTA === */
+  .final{padding:80px 0; background:var(--dark); color:#fff; text-align:center}
+  .final h2{color:#fff; max-width:820px; margin:0 auto 24px; font-size:34px}
+  .final p{color:#d0d0d0; font-size:15px; max-width:680px; margin:0 auto 30px; line-height:1.7}
+  .final .btn-sub{color:#999; margin-top:14px}
+
+  /* === Sticky ATC === */
+  .sticky{position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:3px solid var(--brand); padding:12px 20px; display:flex; gap:16px; align-items:center; justify-content:space-between; box-shadow:0 -4px 20px rgba(0,0,0,.1); z-index:50}
+  .sticky .p{font-size:13px; color:var(--ink2)}
+  .sticky .p b{color:var(--ink); font-size:16px; margin-right:6px}
+  .sticky .p s{color:#999; margin-right:6px}
+
+  /* === Mobile === */
+  @media (max-width: 900px){
+    body{font-size:15px}
+    h1{font-size:30px}
+    h2{font-size:24px}
+    h3{font-size:18px}
+    .hero{padding:28px 0 40px}
+    .hero-grid{grid-template-columns:1fr; gap:28px}
+    .hero-img{order:-1}
+    .authority-grid{grid-template-columns:1fr; min-height:auto}
+    .authority-img{min-height:240px}
+    .authority-body{padding:32px 24px}
+    .authority-body blockquote{font-size:17px}
+    .trust-grid{grid-template-columns:1fr 1fr; gap:14px}
+    .pain{padding:50px 0}
+    .pain-grid{grid-template-columns:1fr; gap:32px}
+    .mech{padding:50px 0}
+    .mech-row, .mech-row.flip{grid-template-columns:1fr; gap:20px; margin-bottom:40px}
+    .mech-row.flip .mech-img{order:0}
+    .mech-img{aspect-ratio:4/3}
+    .mech-body h3{font-size:20px}
+    .ways{padding:50px 0}
+    .ways-grid{grid-template-columns:1fr; gap:20px}
+    .compare{padding:50px 0}
+    .cmp-table th, .cmp-table td{padding:12px; font-size:12px}
+    .story{padding:50px 0}
+    .story-grid{grid-template-columns:1fr; gap:28px}
+    .story-img{position:static}
+    .timeline{padding:50px 0}
+    .tl-grid{grid-template-columns:1fr; gap:12px}
+    .offer{padding:50px 0}
+    .testi{padding:50px 0}
+    .testi-grid{grid-template-columns:1fr; gap:18px}
+    .fornot{padding:50px 0}
+    .fn-grid{grid-template-columns:1fr}
+    .faq{padding:50px 0}
+    .final{padding:50px 0}
+    .guarantee-grid{grid-template-columns:1fr; text-align:center; gap:24px}
+    .g-seal{margin:0 auto}
+    body{padding-bottom:80px}
+  }
+</style>
+</head>
+<body>
+
+<!-- B1 ANNOUNCEMENT BAR -->
+<div class="announce">SUMMER SALE: <b>50% OFF + BOGO + FREE MAG HOLSTER</b></div>
+
+<!-- HEADER -->
+<header class="site-hd">
+  <div class="wrap">
+    <img src="https://southedc.store/cdn/shop/files/Untitled_design_10.png?v=1781860809&width=500" alt="SouthEDC">
+    <div style="font-size:13px; color:var(--ink2)">Veteran Owned · Greensboro, NC</div>
+  </div>
+</header>
+
+<!-- B2 HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="rating"><span class="stars">★★★★★</span> <b>4.7/5</b> · 368 verified reviews</div>
+        <div class="kicker">For carriers on holster #3+</div>
+        <h1>The IWB Holster For Men Who Refuse To Trade Their Back For Carrying.</h1>
+        <div class="sub">
+          <p>Every Kydex holster digs one hard edge into the same spot on your hip. Day after day. For years.</p>
+          <p>Phantom 2.0 is built around the four things that make carrying hurt — so you can keep the promise you made your family without your body paying the bill.</p>
+        </div>
+        <ul>
+          <li>Full-grip PU leather foam back — soft where it touches you, no hard edge digging in</li>
+          <li>Two steel clips instead of one — splits the weight so your belt holds it, not your hip</li>
+          <li>Slim shape — hides under a T-shirt, no need to hunch to cover it</li>
+          <li>Handcrafted in Greensboro, NC by a veteran family, backed for life</li>
+        </ul>
+        <div class="sale-callout">
+          <span class="lbl">Summer Sale</span>
+          <ul>
+            <li>Buy One, Get One Free</li>
+            <li>Free Mag Holster included ($20 value)</li>
+            <li>50% off — today only</li>
+          </ul>
+        </div>
+        <div class="hero-cta-wrap">
+          <a href="#offer" class="btn wide">↓ Carry Another 20 Years</a>
+          <div class="btn-sub">30-day risk-free return · Free U.S. shipping · Ships from Greensboro, NC</div>
+        </div>
+        <div class="hero-review">
+          <div class="av">RS</div>
+          <div>
+            <div class="q">"First holster in 20 years I've forgotten I was wearing. Back pain gone in a week."</div>
+            <div class="name">Ryan S. <span style="color:var(--ok); font-weight:700">✓ verified</span></div>
+          </div>
+          <div class="st stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://southedc.store/cdn/shop/files/9_44f9932c-ec8d-4b18-834a-6eaf573bae0b.png?v=1782114041" alt="Phantom 2.0 IWB Holster">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B3 TRUST -->
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item"><span class="ic">✓</span> 30-Day Fit Guarantee</div>
+      <div class="trust-item"><span class="ic">★</span> Veteran Owned</div>
+      <div class="trust-item"><span class="ic">🇺🇸</span> Made In U.S.A</div>
+      <div class="trust-item"><span class="ic">♾</span> Lifetime Warranty</div>
+    </div>
+  </div>
+</section>
+
+<!-- B4 AUTHORITY (full-bleed Fujobi-style) -->
+<section class="authority">
+  <div class="authority-grid">
+    <div class="authority-img">[ Portrait — CCW instructor,<br>half-body, natural light,<br>outdoor range ]<br><small style="opacity:.7; font-weight:400">Asset to shoot</small></div>
+    <div class="authority-body">
+      <div class="kicker">From a 15-Year CCW Instructor</div>
+      <blockquote>"As a CCW instructor, I've had more students quit carrying from pain than from laws. Phantom 2.0 is the only IWB I recommend to guys who've cycled three or four holsters and are one bad hip away from leaving the gun at home for good."</blockquote>
+      <div class="attr">— Ryan S., CCW Instructor (18 years)</div>
+      <div class="stars">★★★★★</div>
+      <div><a href="#offer" class="btn">See The Offer →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- B5 PAIN -->
+<section class="pain">
+  <div class="wrap">
+    <div class="pain-body">
+      <div class="kicker">If you've carried a Kydex holster 2+ years</div>
+      <h2>You're Not The First Guy To Blame Everything Except The Holster.</h2>
+      <p>It doesn't start as pain.</p>
+      <p>It starts as a bruise you can't explain.</p>
+      <p>Then a callus. Then something duller in your lower back — on the opposite side of the gun.</p>
+      <p>You blame the car seat. Your posture. That old injury from the service.</p>
+      <p class="emph">Not the $60 shell of Kydex sitting in the same spot for 10 hours a day.</p>
+      <p>Why does it always start on the hip? Because that's where the hard edge lives.</p>
+      <p>Then one morning you skip the holster. Just for the long day. The drive day. The day you knew you'd be sitting a lot.</p>
+      <p>And your body thanks you for it.</p>
+      <p class="emph">That's not a comfort problem anymore. That's a readiness problem — the exact thing carrying was supposed to solve.</p>
+      <div class="pain-close">
+        <p>You're not the only one. Every day, another guy tells the same story: same holster brands, same 3–4 o'clock bruise, same doctor's visit, same conclusion.</p>
+        <p>A gun you don't carry can't protect anyone. And a body wrecked by the holster can't carry another 20 years.</p>
+        <p>Here's the good news: this is fixable. It's not your body. It's the shell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B6 MARQUEE -->
+<div class="marquee">
+  Handcrafted in USA <span class="sep">•</span> Ships from NC <span class="sep">•</span> Lifetime Warranty <span class="sep">•</span> Veteran Owned <span class="sep">•</span> 30-Day Fit Guarantee
+</div>
+
+<!-- B7 MECHANISM -->
+<section class="mech">
+  <div class="wrap">
+    <div class="mech-head">
+      <div class="kicker">The Mechanism</div>
+      <h2>Four Reasons Carrying Hurts Your Body. Phantom Is Built To Handle All Four.</h2>
+      <p class="sub">Most Kydex holsters solve one of these. Phantom is built to handle all four — which is why carriers who've cycled through 3, 4, 5 holsters finally stop cycling.</p>
+    </div>
+    <!-- Cause 1: image L -->
+    <div class="mech-row">
+      <div class="mech-img">
+        <img src="https://southedc.store/cdn/shop/files/1.png?v=1782109040" alt="PU foam back panel">
+      </div>
+      <div class="mech-body">
+        <div class="num">1</div>
+        <h3>One hard edge pressing on the same spot</h3>
+        <div class="lbl prob">The problem</div>
+        <p>A Kydex holster presses one hard edge into a 2-inch strip on your hip. Ten hours a day, five days a week, for years. That's the spot carriers point to when they say they've started walking a little different.</p>
+        <div class="lbl fix">How Phantom handles it</div>
+        <p>Full-grip PU leather foam back panel. Every part that touches your skin is soft foam — no hard edge. The pressure spreads out across your whole hip instead of digging into one line.</p>
+      </div>
+    </div>
+
+    <!-- Cause 2: image R -->
+    <div class="mech-row flip">
+      <div class="mech-img">
+        <img src="https://southedc.store/cdn/shop/files/10_c4b93dcd-6b0e-4be2-a22b-927bdfea4e60.png?v=1782114042" alt="Dual steel clips">
+      </div>
+      <div class="mech-body">
+        <div class="num">2</div>
+        <h3>One clip pulling on one side of your body</h3>
+        <div class="lbl prob">The problem</div>
+        <p>Most IWBs hang from your belt on one clip. That means a loaded pistol pulls sideways on one point of your waistband — and your lower back takes the imbalance for the next 8 hours. One daily carrier went from a 400lb squat down to 225lb after 5 years of one-sided carry.</p>
+        <div class="lbl fix">How Phantom handles it</div>
+        <p>Two steel clips instead of one. The weight splits across two belt points, so no single side of your spine has to hold it. Steel — doesn't crack in a hot car, doesn't soften in July.</p>
+      </div>
+    </div>
+
+    <!-- Cause 3: image L -->
+    <div class="mech-row">
+      <div class="mech-img">
+        <img src="https://southedc.store/cdn/shop/files/12_3.webp?v=1781862260&width=550" alt="Slim concealed carry">
+      </div>
+      <div class="mech-body">
+        <div class="num">3</div>
+        <h3>The "carry hunch" — hiding a print by changing how you stand</h3>
+        <div class="lbl prob">The problem</div>
+        <p>A bulky Kydex holster shows through a T-shirt. To hide it, carriers slowly start rolling a shoulder, twisting the hip, or wearing a bigger shirt — anything to keep the print down. Do that for five years and it turns into upper-back and neck pain that keeps coming back as long as you keep hunching.</p>
+        <div class="lbl fix">How Phantom handles it</div>
+        <p>Slim, hip-hugging shape. Sits close enough to disappear under a fitted shirt — so you don't have to change the way you stand to hide it. You keep your posture. You keep the way you walk.</p>
+      </div>
+    </div>
+
+    <!-- Cause 4: image R -->
+    <div class="mech-row flip">
+      <div class="mech-img">
+        <img src="https://southedc.store/cdn/shop/files/12_5.webp?v=1781862261&width=550" alt="Full-wrap PU leather sweat guard">
+      </div>
+      <div class="mech-body">
+        <div class="num">4</div>
+        <h3>Bare grip on bare skin + trapped sweat</h3>
+        <div class="lbl prob">The problem</div>
+        <p>The rough grip on your pistol rubs your skin raw — you'll hear every skinny guy who carries talk about it every summer. On top of that, sweat gets trapped between a Kydex holster and your body, and eventually eats the finish off your gun and pushes rust back onto your skin.</p>
+        <div class="lbl fix">How Phantom handles it</div>
+        <p>Full-wrap PU leather sweat guard. The grip never touches your skin. Sweat never reaches your gun. Your skin doesn't rash. Your slide doesn't scratch. Your finish stays clean.</p>
+      </div>
+    </div>
+    <p class="mech-close">No wedges. No moleskin. No pillow accessory glued to the back of a $60 shell. Every fix is built into the same holster, in the same shop, by the same veteran family.</p>
+  </div>
+</section>
+
+<!-- B8 THREE WAYS -->
+<section class="ways">
+  <div class="wrap">
+    <div class="ways-head">
+      <div class="kicker">How To Carry It</div>
+      <h2>Three Ways To Wear The Phantom. Pick The One Your Body Likes Best.</h2>
+      <p class="opener">Wait — where do most guys actually wear it?</p>
+      <p class="sub">Phantom works anywhere from 10 o'clock to 5 o'clock on your waistband. Most carriers try two positions in the first week — and settle on the one their body picks.</p>
+    </div>
+    <div class="ways-grid">
+      <div class="way">
+        <div class="way-img"><img src="https://southedc.store/cdn/shop/files/12_2.webp?v=1781862260&width=550" alt="Appendix carry"></div>
+        <div class="way-body">
+          <h3>Appendix (12 o'clock)</h3>
+          <div class="best">Best for: Fastest draw · Long days sitting</div>
+          <p>The gun sits at the front of your waistband. Easiest to conceal under a jacket, fastest to draw from. If strong-side hip has started hurting, this is where most carriers move next.</p>
+        </div>
+      </div>
+      <div class="way">
+        <div class="way-img"><img src="https://southedc.store/cdn/shop/files/12_3.webp?v=1781862260&width=550" alt="Strong-side carry"></div>
+        <div class="way-body">
+          <h3>Strong-side (3–4 o'clock)</h3>
+          <div class="best">Best for: On your feet all day · Larger frames</div>
+          <p>The classic hip position. Works great when you're standing and walking. The foam back is what makes this position tolerable again after years of hard-shell pain — no more red line at end of day.</p>
+        </div>
+      </div>
+      <div class="way">
+        <div class="way-img"><img src="https://southedc.store/cdn/shop/files/12_4.webp?v=1781862261&width=550" alt="Kidney carry"></div>
+        <div class="way-body">
+          <h3>Kidney (5 o'clock)</h3>
+          <div class="best">Best for: Older carriers · Shoulders that don't rotate as far back</div>
+          <p>Sits just behind the hip. Easier to reach if your shoulder mobility has changed. Same holster, no adjustments — just move it around your belt.</p>
+        </div>
+      </div>
+    </div>
+    <p class="ways-close">One holster. Three positions. No screws to adjust, no parts to swap. Try each. Keep the one your body picks.</p>
+  </div>
+</section>
+
+<!-- B9 COMPARE -->
+<section class="compare">
+  <div class="wrap">
+    <div class="compare-head">
+      <div class="kicker">Side By Side</div>
+      <h2>Why Carriers On Holster #4 Finally Stop Cycling.</h2>
+      <p class="opener">Leather wicks. Kydex traps. That's the whole difference your body feels.</p>
+      <p class="sub">Kydex wins on one thing: draw speed out of the box. Everything your body actually lives with for the next 10 years, PU leather foam wins — and that's the whole reason carriers keep switching after holster #3.</p>
+    </div>
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th>What your body actually feels</th>
+          <th class="pc">Phantom 2.0</th>
+          <th>Kydex Holster</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Against your skin</td><td class="pc">Full-grip PU leather foam</td><td class="kx">Rigid plastic shell</td></tr>
+        <tr><td>Pressure on your hip</td><td class="pc">Spread across a wide patch</td><td class="kx">Concentrated on one hard edge</td></tr>
+        <tr><td>How the weight hangs</td><td class="pc">Dual metal clips, split load</td><td class="kx">Single clip, pulls to one side</td></tr>
+        <tr><td>Standing / sitting posture</td><td class="pc">Slim — no need to hunch</td><td class="kx">Prints — makes you shift how you stand</td></tr>
+        <tr><td>Sweat / gun contact</td><td class="pc">Full-wrap PU barrier</td><td class="kx">Direct — finish wear + skin rash</td></tr>
+        <tr><td>Break-in</td><td class="pc">1–2 days, foam molds to gun</td><td class="kx">2–3 weeks or never</td></tr>
+        <tr><td>Clips in a 120°F car</td><td class="pc">Steel — won't crack</td><td class="kx">Plastic — cracks, drops the gun</td></tr>
+        <tr><td>Warranty</td><td class="pc">Lifetime</td><td class="kx">30 days – 1 year</td></tr>
+        <tr><td>Made in</td><td class="pc">Greensboro, NC — veteran family</td><td class="kx">Often overseas / drop-shipped</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- B9.5 MID CTA -->
+<section class="mid-cta">
+  <div class="wrap">
+    <a href="#offer" class="btn">↓ Carry Another 20 Years</a>
+    <p>Try it 30 days, risk-free. BOGO + free mag holster today. Ships from Greensboro, NC.</p>
+  </div>
+</section>
+
+<!-- B10 STORY -->
+<section class="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-img">
+        <div class="ph">[ Kevin — Chicago veteran,<br>in the Greensboro workshop ]<br><small style="opacity:.7; font-weight:400">Asset to shoot</small></div>
+      </div>
+      <div class="story-body">
+        <div class="kicker">Who Built It</div>
+        <h2>Built By A Chicago Veteran Who Got Tired Of His Own Back Giving Out.</h2>
+        <p>Hey — I'm Kevin. Chicago veteran, family man, and the guy who kept ruining his own back trying to stay ready.</p>
+        <p>In 2015 I needed a way to protect my family in a city where police response gets measured in casualties. So I carried every day.</p>
+        <p>I also went through five off-the-shelf Kydex holsters in two years. Every one dug into the same 3-inch strip of hip. Every one loaded the same side of my lower back.</p>
+        <p>Here's the problem: by year two, my back was telling me what every daily carrier hears eventually — "stop carrying, or fix the gear."</p>
+        <p><b>I wasn't going to stop.</b></p>
+        <p>So I started modifying my own. PU foam scavenged from a leather shop. Dual metal clips instead of one. Sitting profile instead of standing.</p>
+        <p>My sons Mike and Musk joined me. What started as one man's answer to "how do I stay armed for the next 20 years without wrecking my body?" became SouthEDC.</p>
+        <p>Today every Phantom 2.0 is handcrafted and QC-inspected in our Greensboro, North Carolina shop — by the same family, in the same shop. Not drop-shipped. Not white-labeled. Not a social-media brand. If something goes wrong, you talk to us, not a chatbot.</p>
+        <div class="story-trust">
+          <span>🇺🇸 Made in USA</span>
+          <span>⭐ Veteran Owned</span>
+          <span>👨‍👨‍👦 Family Operated</span>
+          <span>🛠️ Greensboro, NC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B11 GUARANTEE -->
+<section class="guarantee">
+  <div class="wrap">
+    <div class="guarantee-grid">
+      <div class="g-seal">30<small>DAY<br>GUARANTEE</small></div>
+      <div>
+        <h2>🛡️ 30-Day "Your Body Will Thank You" Guarantee</h2>
+        <p>Carry Phantom 2.0 every day for 30 days. If your hip still bruises. If your lower back still tightens by 2pm. If you're still leaving the gun at home on long days — send it back for a full refund of the product price. Shipping is non-refundable.</p>
+        <p>That's it. No restocking games. No "prove it didn't work" hoops. We built this to carry you into your 60s. We stand behind it for life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B11.5 TIMELINE -->
+<section class="timeline">
+  <div class="wrap">
+    <div class="tl-head">
+      <div class="kicker">What Carriers Notice</div>
+      <h2>What Changes When The Holster Stops Fighting Your Body.</h2>
+    </div>
+    <div class="tl-grid">
+      <div class="tl-step"><div class="day">Day 1</div><p>The foam starts molding to your gun. No hard edge yet, but you'll feel the difference immediately.</p></div>
+      <div class="tl-step"><div class="day">Week 1</div><p>No red line on your hip at the end of the day.</p></div>
+      <div class="tl-step"><div class="day">Month 1</div><p>No shoulder roll or hunch needed to keep it concealed under a fitted shirt.</p></div>
+      <div class="tl-step"><div class="day">Month 3</div><p>Sitting through a full shift or a long drive doesn't mean planning around the holster anymore.</p></div>
+      <div class="tl-step"><div class="day">Year 1</div><p>Same holster, still carrying. No fifth one waiting in a drawer.</p></div>
+    </div>
+    <p class="tl-disc">Individual experience varies. Phantom doesn't treat or fix existing pain — see your doctor for that. What changes is what a Kydex holster does to your body every day, day after day.</p>
+  </div>
+</section>
+
+<!-- B12 OFFER -->
+<section class="offer" id="offer">
+  <div class="wrap">
+    <div class="offer-head">
+      <div class="kicker">What You Get Today</div>
+      <h2>Everything Included When You Order Now.</h2>
+    </div>
+    <div class="offer-stack">
+      <div class="offer-row"><div class="lbl"><span class="em">✅</span> Phantom 2.0 IWB Holster — Right or Left hand</div><div class="val">$89.99 <s style="color:#aaa">$179.98</s></div></div>
+      <div class="offer-row"><div class="lbl"><span class="em">🎁</span> BUY ONE, GET ONE FREE — Second Phantom included</div><div class="val free">FREE ($89.99)</div></div>
+      <div class="offer-row"><div class="lbl"><span class="em">🎁</span> Free Mag Holster — auto-included with every order</div><div class="val free">FREE ($20)</div></div>
+      <div class="offer-row"><div class="lbl"><span class="em">🚚</span> Free U.S. Shipping</div><div class="val free">FREE</div></div>
+      <div class="offer-row"><div class="lbl"><span class="em">↩️</span> 30-Day Risk-Free Return</div><div class="val">Included</div></div>
+      <div class="offer-row"><div class="lbl"><span class="em">♾️</span> Lifetime Warranty</div><div class="val">Included</div></div>
+      <div class="offer-total">
+        <div class="row"><span>Total value:</span><span>$199.97</span></div>
+        <div class="row"><span>Your price today:</span><span>$89.99</span></div>
+        <div class="row big"><span>You save:</span><span class="save">$109.98</span></div>
+      </div>
+      <div class="offer-cta">
+        <button class="btn green wide">Carry Another 20 Years</button>
+      </div>
+    </div>
+    <p class="offer-urgency">📦 Order today → delivered in 3–7 business days. Ships from Greensboro, NC.</p>
+  </div>
+</section>
+
+<!-- B13 TESTIMONIALS -->
+<section class="testi">
+  <div class="wrap">
+    <div class="testi-head">
+      <div class="kicker">Real Carriers</div>
+      <h2>Carriers Who Stopped Cycling Through Holsters.</h2>
+      <p class="sub"><span class="stars">★★★★★</span> 4.7/5 from 368 verified reviews</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I was on my fifth IWB in three years — big names, custom builds, all of it. Every one of them left the same bruise. Phantom is the first one my hip doesn't hate by lunch. Ordered a second for my Sig 365 the same week."</blockquote>
+        <div class="attr">
+          <div class="av"></div>
+          <div class="who"><b>Mike R.</b><span>Corrections Officer</span><span class="v">✓ verified</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I'd basically stopped carrying on my long delivery routes because sitting 8 hours with a stiff shell in the truck was killing my lower back. Been carrying Phantom for 90 days now — every day, no exceptions. Wife noticed I stopped complaining about my back before I noticed."</blockquote>
+        <div class="attr">
+          <div class="av"></div>
+          <div class="who"><b>Jason T.</b><span>Long-haul driver</span><span class="v">✓ verified</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"This holster is exactly what I needed. I wear it all day, no problems at all. Very concealable. Half the time I forget it's on me — which is exactly the point."</blockquote>
+        <div class="attr">
+          <div class="av"></div>
+          <div class="who"><b>Chris S.</b><span>HVAC contractor</span><span class="v">✓ verified</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B13.5 FOR / NOT -->
+<section class="fornot">
+  <div class="wrap">
+    <div class="fn-head">
+      <div class="kicker">Is This You?</div>
+      <h2>Who Phantom Is For — And Who It's Not.</h2>
+    </div>
+    <div class="fn-grid">
+      <div class="fn-col for">
+        <h3>Who Phantom Is For:</h3>
+        <ul>
+          <li>Daily carriers on holster #3 or more</li>
+          <li>40+ carriers whose back or hip has started talking back</li>
+          <li>LEOs and blue-collar guys who carry through a full work day</li>
+        </ul>
+      </div>
+      <div class="fn-col not">
+        <h3>Who Phantom Is NOT For:</h3>
+        <ul>
+          <li>Range-day carriers — a stiff shell is fine for 2 hours</li>
+          <li>Guys who need a light-bearing setup (not our config)</li>
+          <li>Anyone looking for the cheapest holster on the shelf</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B14 FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="faq-head">
+      <div class="kicker">Straight Answers</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open><summary class="faq-q">I already have hip / lower-back pain from years of carrying. Will Phantom actually help?</summary><div class="faq-a">Phantom 2.0 is built around the four things that make carrying hurt in the first place — the hard edge, the one-sided pull, the hunch to hide it, and the trapped sweat. Removing those is what the design does. What it can't do is undo damage that's already there — that's a doctor conversation. What carriers report is that Phantom stops adding to it. And you have 30 days risk-free to find out on your own body.</div></details>
+      <details class="faq-item"><summary class="faq-q">My chiropractor told me to stop carrying strong-side IWB. Is Phantom different enough to be worth trying?</summary><div class="faq-a">Daily carriers get told the same thing every week. What their doctor is usually reacting to is how a stiff Kydex holster + one clip pulls on one side — not carrying itself. Phantom changes both: soft foam instead of stiff Kydex, two clips instead of one. Some carriers also move the holster to the front (appendix, 12 o'clock) and get further relief. We're not a fix for an injury — we're a better holster. Try it 30 days.</div></details>
+      <details class="faq-item"><summary class="faq-q">I have a small hernia / had abdominal surgery. Can I still carry appendix with this?</summary><div class="faq-a">That's a doctor question, not a holster question — talk to yours before carrying anything up front. That said, carriers with a hernia history have told us they switched to Phantom because the soft foam back doesn't dig a hard edge into that spot the way stiff Kydex does. If your doctor clears you to carry up front at all, Phantom is the one to try first.</div></details>
+      <details class="faq-item"><summary class="faq-q">I'm 60+. Is Phantom designed for older carriers?</summary><div class="faq-a">Yes — Kevin built it for himself first, and he's not 30. The dual clips + foam back handle exactly the two things that get harder to carry with age: hip pressure and the one-sided pull on your belt. The 10 o'clock–5 o'clock carry range also means you can move it to the front if your shoulder doesn't reach back like it used to. Multiple positions, one holster.</div></details>
+      <details class="faq-item"><summary class="faq-q">I'm on holster #4 and I'm losing faith. What makes this the last one?</summary><div class="faq-a">Nothing on paper — you've heard it before. What you have on your side: 30 days risk-free, lifetime warranty, and a BOGO order so if the first one doesn't work for you, you're only out shipping. And if it does work, you already have your carry rotation covered.</div></details>
+      <details class="faq-item"><summary class="faq-q">Retention — does it loosen over time?</summary><div class="faq-a">Fixed steel-riveted retention. No adjustment screws. No plastic grommets that wear out. Holds a consistent medium draw for years — audible click on holstering, positive resistance on drawing. Covered by lifetime warranty either way.</div></details>
+      <details class="faq-item"><summary class="faq-q">What about red dots, night sights, threaded barrels?</summary><div class="faq-a">Red dots + night sights + top-mounted optics — ✅ fully compatible. Rail-mounted lights / lasers — ❌ non-light-bearing configuration only. Threaded barrels — ❌ flush-fit only at this time.</div></details>
+      <details class="faq-item"><summary class="faq-q">How long does it take to arrive, and where does it ship from?</summary><div class="faq-a">Ships from our Greensboro, NC workshop within 1–2 business days. Standard U.S. delivery is 3–7 business days after dispatch. Tracking number emailed as soon as your holster leaves the shop. Not overseas. Not drop-shipped.</div></details>
+      <details class="faq-item"><summary class="faq-q">What's the return policy exactly?</summary><div class="faq-a">30 days from delivery. Product refund is full. Shipping is non-refundable. Send it back in original condition, we process the refund on receipt. Contact support@southedc.store to start a return — one business-day response.</div></details>
+      <details class="faq-item"><summary class="faq-q">Will this work with a revolver (J-frame, LCR, etc.)?</summary><div class="faq-a">Phantom is molded for semi-autos (Glock, Sig, S&W M&P, HK and similar compacts/sub-compacts). Revolvers don't seat cleanly against the foam back — the cylinder gap means retention is inconsistent. If you carry a J-frame or snub as your EDC, email support@southedc.store before ordering and we'll tell you straight whether your specific revolver seats safely. We won't sell you a holster that doesn't hold.</div></details>
+      <details class="faq-item"><summary class="faq-q">How do I clean it? (Sweat, salt, summer.)</summary><div class="faq-a">Wipe the PU leather back with a damp cloth and mild soap — no soaking, no machine wash, no solvents. Let it air-dry away from direct heat (don't bake it to speed it up, that cracks the foam). A 30-second wipe-down once a week in summer is enough to stop salt buildup before it touches your skin.</div></details>
+    </div>
+    <p class="faq-disc">Phantom 2.0 is a holster, not a medical device. It is not intended to diagnose, treat, cure, or prevent any injury or medical condition. If you have an existing back, hip, or nerve condition, talk to your doctor before changing how you carry.</p>
+  </div>
+</section>
+
+<!-- B16 FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--brand)">One Last Thing</div>
+    <h2>Carry Another 20 Years. Without Your Body Paying For It.</h2>
+    <p>You didn't start carrying so you could quit at 55. You started because your family is worth being ready for. Phantom 2.0 is the holster built by a veteran who refused to trade the promise he made to his family for the health of his own back — and engineered it so you don't have to either.</p>
+    <p><b>30 days risk-free · Lifetime warranty · BOGO + free mag holster today.</b></p>
+    <a href="#offer" class="btn" style="margin-top:14px">Carry Another 20 Years</a>
+    <div class="btn-sub">30-day risk-free return · Free U.S. shipping · Ships from Greensboro, NC · Veteran-owned since 2015</div>
+  </div>
+</section>
+
+<!-- STICKY -->
+<div class="sticky">
+  <div class="p"><b>$89.99</b> <s>$179.98</s> · BOGO + Free Mag</div>
+  <a href="#offer" class="btn">Carry Another 20 Years</a>
+</div>
+
+</body>
+</html>
